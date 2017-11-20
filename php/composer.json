@@ -1,0 +1,11 @@
+{
+  "require": {
+    "mikehaertl/php-shellcommand": "*"
+  },
+  "scripts": {
+    "test": [
+      "@php 10-basics/10-hello-world/test.php"
+    ]
+
+  }
+}
