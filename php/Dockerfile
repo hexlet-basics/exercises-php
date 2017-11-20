@@ -1,5 +1,5 @@
-FROM php:7
+FROM composer
 
 COPY composer.json composer.json
-COPY composer-lock.json composer-lock.json
+COPY composer.lock composer.lock
 RUN composer install

@@ -3,6 +3,3 @@ test:
 
 build:
 	docker-compose build
-
-install:
-	composer install
