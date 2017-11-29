@@ -18,8 +18,8 @@ print_r('I am the King'); // For lanisters!
 <?php
 
 /*
- * Night is dark
- * and full of ужасов
+ * The night is dark and
+ * full of terrors.
  */
 print_r('I am the King');
 ```
