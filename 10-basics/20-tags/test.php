@@ -8,7 +8,7 @@ final class TagsTest extends TestCase
 {
     public function testIndex()
     {
-        $expected = 'The King Of North!';
+        $expected = 'King in the North!';
         $this->expectOutputString($expected);
         require __DIR__ . '/index.php';
     }

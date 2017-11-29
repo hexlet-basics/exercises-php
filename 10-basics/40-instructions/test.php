@@ -8,7 +8,7 @@ final class InstructionsTest extends TestCase
 {
     public function testIndex()
     {
-        $expected = "RobertStannisRenli";
+        $expected = "RobertStannisRenly";
         $this->expectOutputString($expected);
         require __DIR__ . '/index.php';
     }
