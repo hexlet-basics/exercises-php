@@ -1,10 +1,12 @@
 {
   "require": {
-    "mikehaertl/php-shellcommand": "*"
+    "mikehaertl/php-shellcommand": "*",
+    "phpunit/phpunit": "*"
   },
   "scripts": {
+    "phpunit": "phpunit",
     "test": [
-      "@php 10-basics/10-hello-world/test.php"
+      "phpunit"
     ]
 
   }

@@ -1,11 +1,15 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+namespace HexletBasics;
 
-use mikehaertl\shellcommand\Command;
+use PHPUnit\Framework\TestCase;
 
-$command = new Command("php " . __DIR__ . "/10-hello-world.php");
-$command->execute();
-echo $command->getOutput();
-echo $command->getError();
-exit($command->getExitCode());
+final class TagsTest extends TestCase
+{
+    public function testIndex()
+    {
+        $expected = 'The King Of North!';
+        $this->expectOutputString($expected);
+        require __DIR__ . '/index.php';
+    }
+}
