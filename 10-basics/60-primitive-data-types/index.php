@@ -1,3 +1,3 @@
 <?php
 
-print_r('King Of North');
+print_r(-0.304);

@@ -1,11 +1,15 @@
 <?php
 
-require __DIR__ . '/../../vendor/autoload.php';
+namespace HexletBasics;
 
-use mikehaertl\shellcommand\Command;
+use PHPUnit\Framework\TestCase;
 
-$command = new Command("php " . __DIR__ . "/index.php");
-$command->execute();
-echo $command->getOutput();
-echo $command->getError();
-exit($command->getExitCode());
+final class PrimitiveDataTypesTest extends TestCase
+{
+    public function testIndex()
+    {
+        $expected = '-0.304';
+        $this->expectOutputString($expected);
+        require __DIR__ . '/index.php';
+    }
+}
