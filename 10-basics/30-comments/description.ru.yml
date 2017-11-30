@@ -3,26 +3,26 @@
 theory: |
   Практически все языки программирования позволяют оставлять в коде комментарии. Они никак не используются интерпретатором и нужны лишь для того, чтобы программист оставлял пометки либо для себя, либо для других программистов. Комментарии в php бывают двух видов:
 
-Однострочные
+  Однострочные
 
-```php
-<?php
+  ```php
+  <?php
 
-// For Winterfall!
-print_r('I am the King'); // For Lannisters!
-```
+  // For Winterfall!
+  print_r('I am the King'); // For Lannisters!
+  ```
 
-Многострочные
+  Многострочные
 
-```php
-<?php
+  ```php
+  <?php
 
-/*
- * The night is dark and
- * full of terrors.
- */
-print_r('I am the King');
-```
+  /*
+   * The night is dark and
+   * full of terrors.
+   */
+  print_r('I am the King');
+  ```
 
 instructions: |
   Создайте однострочный комментарий с текстом: `You know nothing, John Snow!`
