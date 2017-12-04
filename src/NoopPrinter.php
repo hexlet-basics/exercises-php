@@ -12,4 +12,8 @@ class NoopPrinter extends \PHPUnit\TextUI\ResultPrinter implements \PHPUnit\Fram
     public function endTest(\PHPUnit\Framework\Test $test, $time)
     {
     }
+
+    public function printResult(\PHPUnit\Framework\TestResult $result)
+    {
+    }
 }

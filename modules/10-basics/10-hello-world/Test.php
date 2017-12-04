@@ -2,14 +2,15 @@
 
 namespace HexletBasics;
 
-use PHPUnit\Framework\TestCase;
+require __DIR__ . '/../../../vendor/autoload.php';
 
-final class HelloWorldTest extends TestCase
-{
-    public function testIndex()
-    {
-        require __DIR__ . '/index.php';
-        $expected = 'Winter is coming!';
-        $this->expectOutputString($expected);
-    }
-}
+use function HexletBasics\Asserts\expectOutputString;
+
+$path = __DIR__ . '/index.php';
+
+$expected = 'Winter is coming!';
+require $path;
+
+expectOutputString($expected, function () use ($path) {
+    require $path;
+});

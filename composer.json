@@ -1,14 +1,16 @@
 {
   "require": {
     "mikehaertl/php-shellcommand": "*",
-    "phpunit/phpunit": "*"
+    "phpunit/phpunit": "*",
+    "beberlei/assert": "^2.8"
   },
   "autoload": {
-    "psr-4": {"HexletBasics\\": "src/"}
+    "psr-4": {"HexletBasics\\": "src/"},
+    "files": [
+      "src/Asserts.php"
+    ]
   },
   "scripts": {
-    "phpunit": "phpunit",
-    "test": "phpunit"
-
+    "phpunit": "phpunit"
   }
 }

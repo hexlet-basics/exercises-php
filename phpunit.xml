@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
   bootstrap="vendor/autoload.php"
-  printerClass="HexletBasics\NoopPrinter"
   colors="true"
   convertErrorsToExceptions="true"
   convertNoticesToExceptions="true"
   convertWarningsToExceptions="true"
   processIsolation="true"
   >
-  <testsuites>
-    <testsuite name="basics">
-      <directory>modules/10-basics</directory>
-    </testsuite>
-  </testsuites>
   <php>
     <ini name="error_reporting" value="E_ALL" />
     <ini name="display_errors" value="On" />

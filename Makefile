@@ -1,11 +1,14 @@
-test:
-	docker-compose run php composer test
+compose-test:
+	docker-compose run php make test -s
 
-install:
+compose-install:
 	docker-compose run php composer install
 
-bash:
+compose-bash:
 	docker-compose run php bash
 
-build:
+compose-build:
 	docker-compose build
+
+test:
+	make -C modules/10-basics/10-hello-world test
