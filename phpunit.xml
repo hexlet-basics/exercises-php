@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
   bootstrap="vendor/autoload.php"
+  printerClass="HexletBasics\NoopPrinter"
   colors="true"
   convertErrorsToExceptions="true"
   convertNoticesToExceptions="true"
@@ -9,7 +10,7 @@
   >
   <testsuites>
     <testsuite name="basics">
-      <directory>10-basics</directory>
+      <directory>modules/10-basics</directory>
     </testsuite>
   </testsuites>
   <php>

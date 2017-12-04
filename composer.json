@@ -3,11 +3,12 @@
     "mikehaertl/php-shellcommand": "*",
     "phpunit/phpunit": "*"
   },
+  "autoload": {
+    "psr-4": {"HexletBasics\\": "src/"}
+  },
   "scripts": {
     "phpunit": "phpunit",
-    "test": [
-      "phpunit"
-    ]
+    "test": "phpunit"
 
   }
 }
