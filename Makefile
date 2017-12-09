@@ -12,3 +12,9 @@ compose-build:
 
 test:
 	make -C modules/10-basics/10-hello-world test
+
+docker-build:
+	docker build . -t hexet-basics-exercises-php
+
+docker-push:
+	docker push hexlet-basics-exercises-php

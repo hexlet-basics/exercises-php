@@ -1,4 +1,5 @@
 language:
+  docker_image: "hexlet/hexlet-basics-exercises-php"
   extension: php
   exercise_filename: index.php
   exercise_test_filename: Test.php
