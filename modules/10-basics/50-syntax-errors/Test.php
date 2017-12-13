@@ -2,14 +2,15 @@
 
 namespace HexletBasics;
 
-use PHPUnit\Framework\TestCase;
+require __DIR__ . '/../../../vendor/autoload.php';
 
-final class SyntaxErrorsTest extends TestCase
-{
-    public function testIndex()
-    {
-        $expected = 'What Is Dead May Never Die';
-        $this->expectOutputString($expected);
-        require __DIR__ . '/index.php';
-    }
-}
+use function HexletBasics\Asserts\expectOutputString;
+
+$path = __DIR__ . '/index.php';
+
+$expected = 'What Is Dead May Never Die';
+require $path;
+
+expectOutputString($expected, function () use ($path) {
+    require $path;
+});

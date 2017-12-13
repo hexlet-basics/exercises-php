@@ -11,7 +11,7 @@ compose-build:
 	docker-compose build
 
 test:
-	make -C modules/10-basics/10-hello-world test
+	find modules/**/* -type d -exec printf "\n{}\n" \; -exec make -C {} \;
 
 docker-build:
 	docker build -t hexlet/hexlet-basics-exercises-php .

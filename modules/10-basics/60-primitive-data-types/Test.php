@@ -2,14 +2,15 @@
 
 namespace HexletBasics;
 
-use PHPUnit\Framework\TestCase;
+require __DIR__ . '/../../../vendor/autoload.php';
 
-final class PrimitiveDataTypesTest extends TestCase
-{
-    public function testIndex()
-    {
-        $expected = '-0.304';
-        $this->expectOutputString($expected);
-        require __DIR__ . '/index.php';
-    }
-}
+use function HexletBasics\Asserts\expectOutputString;
+
+$path = __DIR__ . '/index.php';
+
+$expected = '-0.304';
+require $path;
+
+expectOutputString($expected, function () use ($path) {
+    require $path;
+});

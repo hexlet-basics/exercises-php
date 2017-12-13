@@ -2,13 +2,6 @@
 
 namespace HexletBasics;
 
-use PHPUnit\Framework\TestCase;
+$path = __DIR__ . '/index.php';
 
-final class CommentsTest extends TestCase
-{
-    public function testIndex()
-    {
-        $actual = require __DIR__ . '/index.php';
-        $this->assertEquals($actual, 1);
-    }
-}
+require $path;
