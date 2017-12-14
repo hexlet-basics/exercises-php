@@ -13,6 +13,8 @@ compose-build:
 test:
 	find modules/**/* -type d -exec printf "\n{}\n" \; -exec make -C {} \;
 
+docker-release: docker-build docker-push
+
 docker-build:
 	docker build -t hexlet/hexlet-basics-exercises-php .
 
