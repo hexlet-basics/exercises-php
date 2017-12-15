@@ -10,9 +10,6 @@ compose-bash:
 compose-build:
 	docker-compose build
 
-test:
-	find modules/**/* -type d -exec printf "\n{}\n" \; -exec make -C {} \;
-
 docker-release: docker-build docker-push
 
 docker-build:
@@ -20,3 +17,13 @@ docker-build:
 
 docker-push:
 	docker push hexlet/hexlet-basics-exercises-php
+
+SUBDIRS := $(wildcard modules/**/*/.)
+
+test: $(SUBDIRS)
+$(SUBDIRS):
+	@echo
+	make -C $@ test
+	@echo
+
+.PHONY: all $(SUBDIRS)
