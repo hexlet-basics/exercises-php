@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r("\\tValar\"\"\n\\n' Morghulis");
+print_r('khal "\'" drogo \'"\'');
 // END

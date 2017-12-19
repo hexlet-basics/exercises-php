@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r(81 / 9);
+print_r("\\tValar\"\"\n\\n' Morghulis");
 // END

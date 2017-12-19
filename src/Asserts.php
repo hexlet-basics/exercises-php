@@ -11,5 +11,9 @@ function expectOutputString($expected, $f)
     $actual = ob_get_contents();
     ob_end_clean();
     /* Assertion::same($actual, $expected); */
+    /* try { */
     Assert::that($actual)->contains($expected);
+    /* } catch (Exception $e) { */
+    /*     print_r($e->getMessage()); */
+    /* } */
 }

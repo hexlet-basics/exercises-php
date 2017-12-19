@@ -8,7 +8,7 @@ use function HexletBasics\Asserts\expectOutputString;
 
 $path = __DIR__ . '/index.php';
 
-$expected = "\\tValar\"\"\n\\n' Morghulis";
+$expected = "20";
 require $path;
 
 expectOutputString($expected, function () use ($path) {
