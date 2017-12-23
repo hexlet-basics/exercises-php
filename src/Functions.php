@@ -7,7 +7,8 @@ function parentFor($childName, $who = 'mother')
     switch ($childName) {
         case 'Daenerys Targaryen':
             $parents = [
-                'mother' => 'Rhaella Targaryen'
+                'mother' => 'Rhaella Targaryen',
+                'father' => 'Aerys II Targaryen'
             ];
             return $parents[$who];
         case 'Cersei Lannister':

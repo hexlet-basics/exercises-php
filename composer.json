@@ -1,5 +1,6 @@
 {
   "require": {
+    "felixfbecker/language-server": "*",
     "mikehaertl/php-shellcommand": "*",
     "phpunit/phpunit": "*",
     "beberlei/assert": "^2.8"
