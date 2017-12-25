@@ -2,6 +2,11 @@
 
 namespace HexletBasics\Functions;
 
+function isLannisterSoldier($color, $shield)
+{
+    return ($color === 'red' && $shield === null) || ($shield === 'lion');
+}
+
 function parentFor($childName, $who = 'mother')
 {
     switch ($childName) {
