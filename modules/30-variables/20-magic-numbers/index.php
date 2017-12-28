@@ -6,4 +6,4 @@ $queen = 'Daenerys';
 // END
 
 print_r($king . ' + ' . $queen . ' = Love');
-// => John + Daineris = love
+// => John + Daenerys = Love

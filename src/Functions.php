@@ -40,11 +40,17 @@ function calculateDistanceFromTirion($param)
 
 function calculateDistance($source, $dest)
 {
-    if ($source === 'Winterfell' && $dest === 'The Twins') {
+    $w = 'Winterfell';
+    $t = 'The Twins';
+    $e = 'The Eyrie';
+    $q = 'Qarth';
+    $d = 'Vaes Dothrak';
+
+    if ($source === $w && $dest === $t || $source === $t && $dest === $w) {
         return 60;
-    } elseif ($source === 'The Twins' && $dest === 'The Eyrie') {
+    } elseif ($source === $t && $dest === $e || $source === $e && $dest === $t) {
         return 20;
-    } elseif ($source === 'Qarth' && $dest === 'Vaes Dothrak') {
+    } elseif ($source === $q && $dest === $d || $source === $d && $dest === $q) {
         return 125;
     }
 
