@@ -11,7 +11,7 @@ theory: |
   function printNumbers($lastNumber)
   {
       $i = 1;
-      // В отличие от определения функций, после while ставится пробел
+      // Обратите внимание на пробел после слова while
       while ($i <= $lastNumber) {
           print_r("{$i}\n");
           $i = $i + 1;
