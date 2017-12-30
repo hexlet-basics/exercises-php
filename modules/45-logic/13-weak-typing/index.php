@@ -1,8 +1,8 @@
 <?php
 
 // BEGIN
-function isOld($age)
+function isFalsy($value)
 {
-    return $age >= 60;
+    return $value == false;
 }
 // END
