@@ -18,7 +18,7 @@ theory: |
   ```php
   <?php
 
-  print_r('Mother of dragons'); print_r('Drakarias!');
+  print_r('Mother of Dragons'); print_r('Drakarys!');
   ```
 
   но на практике такой подход считается плохим.
