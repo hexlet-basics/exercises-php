@@ -9,9 +9,7 @@ use Assert\Assert;
 $path = __DIR__ . '/index.php';
 require $path;
 
-Assert::that(isFalsy(''))->true();
-Assert::that(isFalsy(' '))->false();
-Assert::that(isFalsy(null))->true();
-Assert::that(isFalsy(false))->true();
-Assert::that(isFalsy(true))->false();
-Assert::that(isFalsy(3))->false();
+Assert::that(isOld(23))->false();
+Assert::that(isOld(70))->true();
+Assert::that(isOld(60))->true();
+Assert::that(isOld(59))->false();
