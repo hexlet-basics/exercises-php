@@ -11,10 +11,10 @@ theory: |
   function abs($number)
   {
       if ($number >= 0) {
-          return 0;
+          return $number;
       }
 
-      return -$n;
+      return -$number;
   }
   ```
 
@@ -25,7 +25,7 @@ theory: |
 
   function abs($number)
   {
-      return $n >= 0 ? $n : -$n;
+      return $number >= 0 ? $number : -$number;
   }
   ```
 
@@ -35,6 +35,6 @@ theory: |
 
 instructions: |
 
-  Реализуйте функцию `convertString`, которая принимает на вход строчку и возвращает ее перевернутый вариант при условии что первая буква не заглавная, если она заглавная, то возвращается сама строчка. Перевернуть строчку можно используя функцию [strrev](http://php.net/manual/es/function.strrev.php).
+  Реализуйте функцию `convertString`, которая принимает на вход строчку и возвращает ее перевернутый вариант при условии что первая буква не заглавная, если она заглавная, то возвращается сама строчка. Перевернуть строчку можно используя функцию [strrev](http://php.net/manual/en/function.strrev.php).
 
 tips: []
