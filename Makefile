@@ -20,6 +20,9 @@ docker-push:
 
 SUBDIRS := $(wildcard modules/**/*/.)
 
+lint:
+	yamllint modules
+
 test: $(SUBDIRS)
 $(SUBDIRS):
 	@echo
