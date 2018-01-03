@@ -1,3 +1,3 @@
 <?php
 
-print_r('Winter is coming!');
+print_r('Hello, World!');
