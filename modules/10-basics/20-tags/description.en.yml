@@ -1,0 +1,20 @@
+---
+
+name: Tags
+theory: |
+  PHP — its, probably, the only one coding language, where you can't type your code from the first row, because interpreter (program that executes code) will be interpreted it as an usual text. All PHP code should covered by `<?php ?>` construction.
+
+  PHP позволяет не указывать закрывающую часть `?>`. В наших уроках мы не будем указывать её, и это ни на что не повлияет. Но стандарты кодирования в организациях (правила того, как нужно писать код) требуют указывать закрывающую часть `?>`.
+
+instructions: |
+  Type your code, and don't forget to add `<?php` in the beginning.
+
+  ```php
+  <?php
+
+  print_r('King in the North!');
+  ```
+
+tips:
+  - "[Basic Coding Standard (psr-1)](http://www.php-fig.org/psr/psr-1/)"
+  
