@@ -1,0 +1,43 @@
+---
+
+name: Comments
+theory: |
+  Almost all the programming languages allow you to add comments to your code. Interpreter doesn't use them, they are only for people so programmers can leave notes for themselves and for other programmers. There are two types of comments in php:
+
+  **Single line comments** start with `//`. Following any text or symbols, all of it will not be evaluated or executed.
+
+  A comment can take up the whole line:
+
+  ```php
+  <?php
+
+  // For Winterfell!
+  ```
+
+  or can stay on the same line after some code:
+
+  ```php
+  <?php
+
+  print_r('I am the King'); // For Lannisters!
+  ```
+
+  **Multiline comments** start with `/*` and end with `*/`. Each line between them should start with the `*`.
+
+  ```php
+  <?php
+
+  /*
+   * The night is dark and
+   * full of terrors.
+   */
+  print_r('I am the King');
+  ```
+
+instructions: |
+  Create a single line comment with the folowing text: `You know nothing, John Snow!`.
+
+tips: []
+
+definitions:
+  - "A comment is just a text and it doesn't affect program execution. Programmers use it to add notes for themselves and for their colleagues"
