@@ -1,0 +1,19 @@
+---
+
+name: Tags
+theory: |
+  PHP is probably the only language where you can't start coding right away, because the interpreter (a program executing your code) will evaluate your code as plain text. Any code in PHP should be wrapped in `<?php ?>`.
+
+  PHP allows you not to specify the closing part `?>`. In our lessons we will be omitting it and it won't affect anything. But coding standards (rules on how to write code) in different companies require adding the closing part `?>`.
+
+instructions: |
+  Type in the code and don't forget that it should start with `<?php`.
+
+  ```php
+  <?php
+
+  print_r('King in the North!');
+  ```
+
+tips:
+  - "[Coding standards (psr-1)](http://www.php-fig.org/psr/psr-1/)"
