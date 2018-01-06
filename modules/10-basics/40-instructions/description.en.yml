@@ -1,0 +1,32 @@
+---
+
+name: Statements
+theory: |
+  Statement is an instruction for a computer. PHP code is a set of statements separated by `;`.
+
+  Here is the example of the code with two statements. When you run this code you will see two sentences on the screen, one after the other.
+
+  ```php
+  <?php
+
+  print_r('Mother of Dragons');
+  print_r('Dracarys!');
+  ```
+
+  Actually, it's possible to put a few statements in one line:
+
+  ```php
+  <?php
+
+  print_r('Mother of Dragons'); print_r('Drakarys!');
+  ```
+
+  but it's considered a bad practice.
+
+instructions: |
+  Put these three names on the screen, one after the other: "Robert", "Stannis", "Renly".
+
+tips: []
+
+definitions:
+  - "Statement is an instruction for a computer. PHP code is a set of statements separated by `;`"
