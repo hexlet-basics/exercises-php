@@ -8,7 +8,7 @@ use function HexletBasics\Asserts\expectOutputString;
 
 $path = __DIR__ . '/index.php';
 
-$expected = "\\tValar\"\"\n\\n' Morghulis";
+$expected = "— Did Joffrey agree?\n— He did. He also said \"I love using \\n\".";
 require $path;
 
 expectOutputString($expected, function () use ($path) {
