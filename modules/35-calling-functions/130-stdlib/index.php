@@ -1,7 +1,7 @@
 <?php
 
-$moto = 'Family, Duty, Honor';
+$motto = 'Family, Duty, Honor';
 
 // BEGIN
-print_r(gettype($moto));
+print_r(gettype($motto));
 // END
