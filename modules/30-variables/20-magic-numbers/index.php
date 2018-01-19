@@ -3,5 +3,7 @@
 $king = 'King Balon the 6th';
 
 // BEGIN
-print_r($king . ' has ' . (6 * 17) . ' rooms.');
+$numberOfCastles = 6;
+$roomsPerCastle = 17;
+print_r($king . ' has ' . ($numberOfCastles * $roomsPerCastle) . ' rooms.');
 // END
