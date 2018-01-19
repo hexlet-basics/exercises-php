@@ -1,9 +1,7 @@
 <?php
 
-// BEGIN
-$king = 'John';
-$queen = 'Daenerys';
-// END
+$king = 'King Balon the 6th';
 
-print_r($king . ' + ' . $queen . ' = Love');
-// => John + Daenerys = Love
+// BEGIN
+print_r($king . ' has ' . (6 * 17) . ' rooms.');
+// END
