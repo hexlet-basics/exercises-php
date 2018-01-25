@@ -18,7 +18,7 @@ function parentFor($childName, $who = 'mother')
             return $parents[$who];
         case 'Cersei Lannister':
             $parents = [
-                'father' => 'Taiwan Lannister'
+                'father' => 'Tywin Lannister'
             ];
             return $parents[$who];
         case 'Joffrey Baratheon':
@@ -32,7 +32,7 @@ function parentFor($childName, $who = 'mother')
     }
 }
 
-function calculateDistanceFromTirion($param)
+function calculateDistanceByTirion($param)
 {
     list($from, $to) = explode('-', $param);
     return calculateDistance($from, $to);
