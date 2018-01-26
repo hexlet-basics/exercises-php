@@ -27,7 +27,7 @@ instructions: |
   <?php
 
   customParentFor('Cersei Lannister');
-  // => Taiwan Lannister
+  // => Tywin Lannister
   ```
 
   Реализуйте эту функцию.

@@ -9,6 +9,6 @@ require __DIR__ . '/../../../vendor/autoload.php';
 $path = __DIR__ . '/index.php';
 require $path;
 
-$expected = 'Taiwan Lannister';
+$expected = 'Tywin Lannister';
 $actual = customParentFor('Cersei Lannister');
 Assert::that($actual)->contains($expected);
