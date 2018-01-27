@@ -24,5 +24,7 @@ instructions: |
 tips: []
 
 definitions:
-  - "Syntax error — violation of grammar rules in a programming language"
-  - "Parse error — type of errors in PHP, which occur when there are syntax errors in the code"
+  - name: "Syntax error"
+    description: "violation of grammar rules in a programming language"
+  - name: "Parse error"
+    description: "type of errors in PHP, which occur when there are syntax errors in the code"

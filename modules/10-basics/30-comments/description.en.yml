@@ -40,4 +40,5 @@ instructions: |
 tips: []
 
 definitions:
-  - "A comment is just a text and it doesn't affect program execution. Programmers use it to add notes for themselves and for their colleagues"
+  - name: "Comment"
+    description: "A comment is just a text and it doesn't affect program execution. Programmers use it to add notes for themselves and for their colleagues"
