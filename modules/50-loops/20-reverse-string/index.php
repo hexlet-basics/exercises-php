@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function mysubstr($str, $length)
 {
     $index = 0;
@@ -12,3 +13,4 @@ function mysubstr($str, $length)
 
     return $result;
 }
+// END
