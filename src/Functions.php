@@ -32,7 +32,7 @@ function parentFor($childName, $who = 'mother')
     }
 }
 
-function calculateDistanceByTirion($param)
+function calculateDistanceBetweenTowns($param)
 {
     list($from, $to) = explode('-', $param);
     return calculateDistance($from, $to);
