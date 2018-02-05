@@ -46,11 +46,9 @@ theory: |
 
   ```php
   <?php
-  
   $rubPerDollars = 48;
   $rubPerEuros = 60;
   $dolPerEuros = 1 / $rubPerDollars * $rubPerEuros; // => 1.25
-  
   print_r($dolPerEuros);
   ```
 
