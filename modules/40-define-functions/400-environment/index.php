@@ -1,9 +1,9 @@
 <?php
 
 // BEGIN
-function getLastChar($str)
+function getAgeDifference($yearOne, $yearTwo)
 {
-    $indexOfLastChar = strlen($str) - 1;
-    return $str[$indexOfLastChar];
+		$difference = abs($yearOne - $yearTwo);
+    return "The age difference is ${difference}";
 }
 // END

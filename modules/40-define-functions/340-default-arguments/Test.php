@@ -11,4 +11,5 @@ require $path;
 
 $expected = 'Tywin Lannister';
 $actual = customParentFor('Cersei Lannister');
+print_r(customParentFor('Cersei Lannister'));
 Assert::that($actual)->contains($expected);

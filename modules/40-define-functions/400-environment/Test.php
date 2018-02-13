@@ -10,10 +10,9 @@ use function HexletBasics\Asserts\expectOutputString;
 $path = __DIR__ . '/index.php';
 require $path;
 
-$actual = getLastChar('how?');
+$expected = 'The age difference is 17';
+$actual = getAgeDifference(2001, 2018);
 
-Assert::that($actual)->eq('?');
+print_r($actual);
+Assert::that($actual)->contains($expected);
 
-$actual = getLastChar('Bob');
-
-Assert::that($actual)->eq('b');

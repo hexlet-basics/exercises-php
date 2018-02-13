@@ -7,28 +7,28 @@ function isLannisterSoldier($color, $shield)
     return ($color === 'red' && $shield === null) || ($shield === 'lion');
 }
 
-function parentFor($childName, $who = 'mother')
+function parentFor($child, $parent = 'mother')
 {
-    switch ($childName) {
+    switch ($child) {
         case 'Daenerys Targaryen':
             $parents = [
                 'mother' => 'Rhaella Targaryen',
                 'father' => 'Aerys II Targaryen'
             ];
-            return $parents[$who];
+            return $parents[$parent];
         case 'Cersei Lannister':
             $parents = [
                 'father' => 'Tywin Lannister'
             ];
-            return $parents[$who];
+            return $parents[$parent];
         case 'Joffrey Baratheon':
             $parents = [
                 'mother' => 'Cersei Lannister'
             ];
-            return $parents[$who];
+            return $parents[$parent];
 
         default:
-            throw new \Exception("Wrong child's name '{$childName}");
+            throw new \Exception("Wrong child's name '{$child}");
     }
 }
 

@@ -9,9 +9,9 @@ use function HexletBasics\Asserts\expectOutputString;
 $path = __DIR__ . '/index.php';
 require $path;
 
-$expected = 'phhh';
-dracarys();
+$expected = 'JAIME: Farewell, my friend...';
+printJaimesLine('Farewell, my friend...');
 
 expectOutputString($expected, function () use ($path) {
-    dracarys();
+    printJaimesLine('Farewell, my friend...');
 });
