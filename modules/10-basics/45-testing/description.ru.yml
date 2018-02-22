@@ -22,3 +22,7 @@ theory: |
 
 instructions: |
   Выведите на экран `9780262531962`.
+
+tips:
+  - |
+    [assert](http://php.net/manual/en/function.assert.php)
