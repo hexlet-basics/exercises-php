@@ -3,5 +3,5 @@
 use function HexletBasics\Functions\parentFor;
 
 // BEGIN
-print_r(parentFor('Daenerys Targaryen', 'mother'));
+print_r(parentFor(parentFor('Joffrey Baratheon'), 'father'));
 // END
