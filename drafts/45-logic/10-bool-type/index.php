@@ -1,7 +1,7 @@
 <?php
 
 // BEGIN
-function isOld($age)
+function isPensioner($age)
 {
     return $age >= 60;
 }
