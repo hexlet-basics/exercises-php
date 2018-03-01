@@ -1,11 +1,11 @@
 <?php
 
 // BEGIN
-function whoIsThisHouseForStarks($houseName)
+function whoIsThisHouseToStarks($houseName)
 {
-    if ($houseName === 'karstark' || $houseName === 'tally') {
-        return 'friend';
-    } elseif ($houseName === 'lannister' || $houseName === 'frey') {
+    if ($houseName === 'Karstark' || $houseName === 'Tally') {
+        return 'Friend';
+    } elseif ($houseName === 'Lannister' || $houseName === 'Frey') {
         return 'enemy';
     }
 
