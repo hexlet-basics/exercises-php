@@ -34,7 +34,7 @@ instructions: |
   ```php
   <?php
 
-  $result = sprintf('Today is $s %d', 'February, 8);
+  $result = sprintf('Today is %s %d', 'February', 8);
   print_r($result);
   ```
 
@@ -49,7 +49,7 @@ instructions: |
   ```php
   <?php
 
-  $result = sprintf('Today is $s %02d', 'February, 8);
+  $result = sprintf('Today is %s %02d', 'February', 8);
   print_r($result);
   ```
 
@@ -60,7 +60,7 @@ instructions: |
   ```php
   <?php
 
-  $result = sprintf('Today is $s %04d', 'February, 8);
+  $result = sprintf('Today is %s %04d', 'February', 8);
   print_r($result);
   ```
 
