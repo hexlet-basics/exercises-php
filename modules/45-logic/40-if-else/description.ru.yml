@@ -46,13 +46,7 @@ instructions: |
 
   ```php
   normalizeUrl('google.com'); // => 'https://google.com'
-  normalizeUrl('https://google.com'); // => 'https://google.com'
-
-  normalizeUrl('hexlet.io'); // => 'https://hexlet.io'
-
   normalizeUrl('https://ai.fi'); // => 'https://ai.fi'
-
-  normalizeUrl('amazon.co.uk'); // => 'https://amazon.co.uk'
   ```
 
 tips: []
