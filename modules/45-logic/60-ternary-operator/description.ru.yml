@@ -1,0 +1,95 @@
+---
+
+name: Тернарный оператор
+theory: |
+
+  Посмотрите на определение функции, которая возвращает модуль переданного числа:
+
+  ```php
+  <?php
+
+  function abs($number)
+  {
+      if ($number >= 0) {
+          return $number;
+      }
+
+      return -$number;
+  }
+  ```
+
+  Можно ли записать её лаконичнее? Что-то вроде `return ОТВЕТ В ЗАВИСИМОСТИ ОТ УСЛОВИЯ`? Для этого справа от return должно быть выражение, но `if` — это инструкция, а не выражение.
+
+  В PHP существует конструкция, которая по своему действию аналогична конструкции *if-else*, но при этом является выражением. Она называется **тернарный оператор**.
+
+  Тернарный оператор — единственный в своем роде оператор, требующий три операнда:
+
+  ```php
+  <?php
+
+  function abs($number)
+  {
+      return $number >= 0 ? $number : -$number;
+  }
+  ```
+
+  Общий паттерн выглядит так: `<predicate> ? <expression on true> : <expression on false>`.
+
+  Давайте перепишем начальный вариант `getTypeOfSentence` аналогично:
+
+  Было:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence($sentence)
+  {
+      $lastChar = substr($sentence, -1);
+
+      if ($lastChar === '?') {
+        return 'question';
+      }
+
+      return 'normal';
+  }
+
+  getTypeOfSentence('Hodor'); // => normal
+  getTypeOfSentence('Hodor?'); // => question
+  ```
+
+  Стало:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence($sentence)
+  {
+      $lastChar = substr($sentence, -1);
+
+      return ($lastChar === '?') ? 'question'  : 'normal';
+  }
+
+  getTypeOfSentence('Hodor'); // => normal
+  getTypeOfSentence('Hodor?'); // => question
+  ```
+
+  ---
+
+  Если вы помните, в чём сила выражений, то вероятно уже догадались, что тернарный оператор можно вкладывать в тернарный оператор. **Не делайте этого :)** Такой код тяжело и читать и отлаживать, это очень плохая практика.
+
+instructions: |
+
+  Реализуйте функцию `convertString`, которая принимает на вход строку и, если первая буква не заглавная, возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
+
+  Перевернуть строчку можно используя функцию [strrev](http://php.net/manual/ru/function.strrev.php). Перевести букву в верхний регистр можно функцией [strtoupper](http://php.net/manual/ru/function.strtoupper.php).
+
+  Попробуйте написать два варианта функции: с обычным if-else, и с тернарным оператором.
+
+  Примеры вызова:
+
+  ```php
+  convertString('Hello'); // => 'Hello'
+  convertString('hello'); // => 'olleh'
+  ```
+
+tips: []
