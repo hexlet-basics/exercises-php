@@ -4,7 +4,7 @@
 function whoIsThisHouseToStarks($houseName)
 {
     if ($houseName === 'Karstark' || $houseName === 'Tally') {
-        return 'Friend';
+        return 'friend';
     } elseif ($houseName === 'Lannister' || $houseName === 'Frey') {
         return 'enemy';
     }
