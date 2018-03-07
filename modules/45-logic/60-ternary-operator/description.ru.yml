@@ -81,15 +81,17 @@ instructions: |
 
   Реализуйте функцию `convertString`, которая принимает на вход строку и, если первая буква не заглавная, возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
 
-  Перевернуть строчку можно используя функцию [strrev](http://php.net/manual/ru/function.strrev.php). Перевести букву в верхний регистр можно функцией [strtoupper](http://php.net/manual/ru/function.strtoupper.php).
-
-  Попробуйте написать два варианта функции: с обычным if-else, и с тернарным оператором.
-
   Примеры вызова:
 
   ```php
   convertString('Hello'); // => 'Hello'
   convertString('hello'); // => 'olleh'
   ```
+
+  Перевернуть строчку можно используя функцию [strrev](http://php.net/manual/ru/function.strrev.php).
+
+  Есть разные подходы к решению этой задачи. Возможно, вам пригодятся функции [ucfirst](http://php.net/manual/en/function.ucfirst.php), [strtoupper](http://php.net/manual/ru/function.strtoupper.php) и возможность получения символа из строки (например, `$str[0]`).
+
+  Попробуйте написать два варианта функции: с обычным if-else, и с тернарным оператором.
 
 tips: []

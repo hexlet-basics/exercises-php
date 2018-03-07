@@ -1,8 +1,8 @@
 <?php
 
 // BEGIN
-function isLannisterSoldier($color, $shield)
+function isNeutralSoldier($color, $shield)
 {
-    return ($color === 'red' && $shield === null) || ($shield === 'lion');
+    return ($color != 'red' && $shield === 'black');
 }
 // END
