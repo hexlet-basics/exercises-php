@@ -1,9 +1,9 @@
 <?php
 
-function isContain($str, $char)
+function doesContain($str, $char)
 {
-    $index = strlen($str) - 1;
-    while ($index >= 0) {
+    $index = 0;
+    while ($index <= strlen($str) - 1) {
         if ($str[$index] === $char) {
             return true;
         }

@@ -9,7 +9,7 @@ use Assert\Assert;
 $path = __DIR__ . '/index.php';
 require $path;
 
-Assert::that(isContain('Renly', 'R'))->true();
-Assert::that(isContain('Renly', 'r'))->false();
-Assert::that(isContain('Tommy', 'm'))->true();
-Assert::that(isContain('Tommy', 'd'))->false();
+Assert::that(doesContain('Renly', 'R'))->true();
+Assert::that(doesContain('Renly', 'r'))->false();
+Assert::that(doesContain('Tommy', 'm'))->true();
+Assert::that(doesContain('Tommy', 'd'))->false();
