@@ -1,5 +1,0 @@
-<?php
-
-// BEGIN
-// TODO
-// END
