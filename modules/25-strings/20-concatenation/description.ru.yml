@@ -69,4 +69,5 @@ instructions: |
 
 definitions:
   - name: "Конкатенация"
-    description: "операция соединения двух строк."
+    description: |
+      операция соединения двух строк. Например, `print_r("King's " . " Landing");`
