@@ -112,5 +112,5 @@ instructions: |
 tips: []
 
 definitions:
-- name: "else if"
-  description: "способ задать несколько альтернативных условий"
+  - name: "else if"
+    description: "способ задать несколько альтернативных условий"

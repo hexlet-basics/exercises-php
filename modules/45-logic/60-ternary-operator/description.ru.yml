@@ -108,5 +108,5 @@ instructions: |
 tips: []
 
 definitions:
-- name: "Тернарный оператор"
+  - name: "Тернарный оператор"
   description: "Способ превратить простую условную инструкцию в выражение, например, `$number >= 0 ? $number : -$number`"
