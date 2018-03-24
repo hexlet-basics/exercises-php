@@ -8,7 +8,7 @@ function doesContain($str, $char)
             return true;
         }
 
-        $index--;
+        $index++;
     }
 
     return false;
