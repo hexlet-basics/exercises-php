@@ -3,7 +3,7 @@
 $euros = 1000;
 
 // BEGIN
-$dollars = 1 / 0.8 * $euros;
+$dollars = $euros * 1.25;
 print_r($dollars);
 print_r("\n");
 $rubles = $dollars * 60;
