@@ -35,10 +35,7 @@ theory: |
   printNumbers(3);
   ```
 
-  <pre class='hexlet-basics-output'>1
-  2
-  3
-  finished!</pre>
+  <pre class='hexlet-basics-output'>1<br/>2<br/>3<br/>finished!</pre>
 
   Конструкция читается так: «делать то, что указано в теле цикла пока истинно условие (предикат) `$i <= $lastNumber`».
 
