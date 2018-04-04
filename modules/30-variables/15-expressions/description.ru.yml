@@ -48,7 +48,7 @@ theory: |
   <?php
 
   $rublesPerDollars = 60;
-  $dollars = 50 * 1.25; // => 67.5
+  $dollars = 50 * 1.25; // => 62.5
   $rubles = $dollars * $rublesPerDollars; // => 3750
 
   print_r($rubles);
@@ -60,7 +60,7 @@ theory: |
   <?php
 
   $rublesPerDollars = 60;
-  $dollars = 50 * 1.25; // => 67.5
+  $dollars = 50 * 1.25; // => 62.5
   $rubles = $dollars * $rublesPerDollars; // => 3750
 
   print_r('The price is ' . $rubles . 'rubles');
