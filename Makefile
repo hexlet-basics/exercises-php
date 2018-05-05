@@ -1,3 +1,5 @@
+compose: compose-build compose-install compose-test
+
 compose-test:
 	docker-compose run php make test -s
 
