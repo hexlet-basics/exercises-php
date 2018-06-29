@@ -6,6 +6,8 @@ theory: |
   Мы уже знаем о математической операции сложения. Такая программа:
 
   ```php
+  <?php
+
   print_r(5 + 3);
   ```
 
@@ -14,6 +16,8 @@ theory: |
   У строк есть свои операции. Можно «сложить» две строки. Такая программа:
 
   ```php
+  <?php
+
   print_r('Dragon' . 'stone');
   ```
 
@@ -28,9 +32,9 @@ theory: |
 
   print_r('Kings' . 'wood');     // => Kingswood
 
-  print_r('Kings' . "road");     // => Kingsroad
+  print_r('Kings' . 'road');     // => Kingsroad
 
-  print_r("King's" . "Landing"); // => King'sLanding
+  print_r("King's" . 'Landing'); // => King'sLanding
   ```
 
   Как видите, строки можно склеивать даже если они записаны с разными кавычками.
@@ -42,9 +46,9 @@ theory: |
   ```php
   <?php
 
-  print_r("King's " . "Landing"); //  => Kings Landing
+  print_r("King's " . 'Landing'); //  => King's Landing
 
-  print_r("King's" . " Landing"); //  => Kings Landing
+  print_r("King's" . ' Landing'); //  => King's Landing
   ```
 
   Пробел — такой же символ, как и другие, поэтому сколько пробелов поставить в строке — столько и получится:
@@ -52,9 +56,9 @@ theory: |
   ```php
   <?php
 
-  print_r("King's " . " Landing");   // => Kings  Landing
+  print_r("King's " . ' Landing');   // => Kings  Landing
 
-  print_r("King's  " . "  Landing"); // => Kings    Landing
+  print_r("King's  " . '  Landing'); // => Kings    Landing
   ```
 
 instructions: |
@@ -70,4 +74,4 @@ instructions: |
 definitions:
   - name: "Конкатенация"
     description: |
-      операция соединения двух строк. Например, `print_r("King's " . " Landing");`
+      операция соединения двух строк. Например, `print_r("King's " . ' Landing');`
