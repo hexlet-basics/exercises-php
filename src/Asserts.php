@@ -12,7 +12,7 @@ function expectOutputString($expected, $f)
     ob_end_clean();
     /* Assertion::same($actual, $expected); */
     /* try { */
-    Assert::that($actual)->contains($expected);
+    Assert::that($actual)->same($expected);
     /* } catch (Exception $e) { */
     /*     print_r($e->getMessage()); */
     /* } */
