@@ -8,7 +8,7 @@ use function HexletBasics\Asserts\expectOutputString;
 
 $path = __DIR__ . '/index.php';
 
-$expected = "~^&%";
+$expected = "~^%";
 require $path;
 
 expectOutputString($expected, function () use ($path) {
