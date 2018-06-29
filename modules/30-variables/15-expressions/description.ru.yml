@@ -63,7 +63,7 @@ theory: |
   $dollars = 50 * 1.25; // => 62.5
   $rubles = $dollars * $rublesPerDollar; // => 3750
 
-  print_r('The price is ' . $rubles . 'rubles');
+  print_r('The price is ' . $rubles . ' rubles');
   ```
 
   <pre class='hexlet-basics-output'>The price is 3750 rubles</pre>
