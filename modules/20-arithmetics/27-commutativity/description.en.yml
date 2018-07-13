@@ -1,0 +1,24 @@
+---
+
+name: Commutative operation
+theory: |
+
+  We learn this in grade one: two plus three is the same as three plus two. This is one the basic laws of arithmetics. It's called a **commutative property** of an operation.
+
+  A binary operation is commutative if changing the order of operands doesn't affect the outcome. Obviously, addition is commutative: `3 + 2 = 2 + 3`.
+
+  Is substraction commutative? Of course not: `2 - 3 ≠ 3 - 2`. Operators in programming obey the same rules.
+
+  Actually, most of the operations you'll use aren't commutative. So make sure to notice the order of operands.
+
+instructions: |
+
+  Write a program, that calculates and prints out on the screen the answers to the following mathematical expressions: "3 to the power of 5" and "-8 divided by -4".
+
+  The results will be printed together, in a single line without any space between them. We'll learn how to fix this problem later.
+
+tips: []
+
+definitions:
+  - name: "Commutativity"
+    description: "property of an operation: changing the order of the operands does not change the result. E.g. addition is a commutative operation."
