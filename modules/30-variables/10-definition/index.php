@@ -1,4 +1,4 @@
 <?php
 
-$moto = 'What Is Dead May Never Die!';
-print_r($moto);
+$motto = 'What Is Dead May Never Die!';
+print_r($motto);
