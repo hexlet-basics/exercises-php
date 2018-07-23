@@ -1,0 +1,33 @@
+---
+
+name: Function composition
+theory: |
+  What if you need to solve something like this: `3 * 5 - 2`?
+
+  ```php
+  <?php
+
+  print_r(3 * 5 - 2);
+  ```
+
+  Another exmaple:
+
+  ```php
+  <?php
+
+  print_r(2 * 4 * 5 * 10);
+  ```
+
+  As you see, operations can be connected. This allows us to solve ever more complex expressions. To understand what happens inside the interpreter during the calculation, let's take a look at this example: `2 * 4 * 5 * 10`.
+
+  1. First, `2 * 4` is calculated, which leads to this expression: `8 * 5 * 10`
+  1. Then `8 * 5`. We get to `40 * 10`.
+  3. In the end the last multiplication is done, and we get the result: `400`.
+
+instructions: |
+
+  Write a program that calculates the result of `8 / 2 + 5 - -3 / 2`. Do not calculate anything by hand, all the calculations must be done by your code.
+
+  Note that the interpreter does the calculations in the correct order: division and multiplication first, only then addition and substraction. Sometimes we need to modify this order, and we'll talk about the ways to do it later.
+
+tips: []
