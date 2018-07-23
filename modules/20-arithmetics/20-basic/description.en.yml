@@ -52,7 +52,7 @@ theory: |
 
 instructions: |
 
-Print out the result of dividing `81` by `9`.
+  Print out the result of dividing `81` by `9`.
 
 tips:
   - Put spaces between the operators and actual number (operands). This is good programming style. This is why our examples are like `print_r(3 + 4)`, and not `print_r(3+4)`.
