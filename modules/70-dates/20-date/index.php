@@ -1,10 +1,8 @@
 <?php
 
-const SECONDS_IN_YEAR = 60 * 60 * 24 * 365;
-
-function getYear($timestamp)
+function getCustomDate($timestamp)
 {
     // BEGIN
-    return 1970 + floor($timestamp / SECONDS_IN_YEAR);
+    return date('d/m/Y', $timestamp);
     // END
 }

@@ -1,33 +1,26 @@
 ---
 
-name: Date
+name: mktime
 theory: |
 
-  Одна из главных функций по работе с датами в PHP - [date](http://php.net/manual/en/function.date.php). Она конвертирует timestamp в человекочетаемый формат.
+  [mktime](http://php.net/manual/ru/function.mktime.php) функция, которая генерирует timestamp по информации о времени: секундах, часах, минутах и дате.
+
+  ```
+  int mktime ([ int $hour = date("H") [, int $minute = date("i") [, int $second = date("s") [, int $month = date("n") [, int $day = date("j") [, int $year = date("Y") ]]]]]] )
+  ```
+
+  `mktime` многословная функция, каждая часть даты и времени передается как отдельный параметр.
 
   ```php
   <?php
 
-  date('Y'); // 2018
+  mktime(0, 0, 0, 7, 1, 2000); // 962409600
   ```
 
-  `date`, по-умолчанию, использует текущее время. Но если нужно то ей можно передать конкретный timestamp.
-
-  ```php
-  <?php
-
-  date('Y', 123123123); // 1972
-  ```
 
 instructions: |
 
-  Реализуйте функцию `getYear`, которая возвращает год переданного timestamp
-
-  ```php
-  <?php
-
-  getYear(1532435204); // 2018
-  ```
+  Реализуйте функцию `getHexletBirthday()`, которая возвращает дату основания Хекслета в виде timestamp. Хекслет был основан 01.01.2012.
 
 tips: []
 
