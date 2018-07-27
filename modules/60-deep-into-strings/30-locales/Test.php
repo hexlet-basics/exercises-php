@@ -4,11 +4,13 @@ namespace HexletBasics;
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
-use Assert\Assert;
-
-Assert::that(sprintf('%f', 1.234))->eq('1.234');
+/* use function HexletBasics\Asserts\expectOutputString; */
 
 $path = __DIR__ . '/index.php';
+
+$expected = 'UTC';
 require $path;
 
-Assert::that(sprintf('%f', 1.234))->eq('1,234000');
+/* expectOutputString($expected, function () use ($path) { */
+/*     require $path; */
+/* }); */

@@ -1,3 +1,5 @@
 <?php
 
-setlocale(LC_NUMERIC, 'ru_RU');
+// BEGIN
+setlocale(LC_ALL, 0);
+// END
