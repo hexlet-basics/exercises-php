@@ -75,7 +75,7 @@ theory: |
   showDate('January 29');
   ```
 
-  <pre class='hexlet-basics-output'>The date is: January 29</pre>
+  <pre class='hexlet-basics-output'>Today is: January 29</pre>
 
   Вот иллюстрация того, как аргумент из вызова попадает в тело функции и используется там:
 
@@ -115,7 +115,7 @@ theory: |
   showDate('January', '29');
   ```
 
-  <pre class='hexlet-basics-output'>The date is: January 29</pre>
+  <pre class='hexlet-basics-output'>Today is: January 29</pre>
 
   Главное — помнить про порядок: в каком порядке аргументы стоят при определении функции, в таком же порядке они должны передаваться при вызове.
 
