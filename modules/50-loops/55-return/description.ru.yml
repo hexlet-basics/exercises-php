@@ -17,6 +17,10 @@ theory: |
 
   function isPrime($number)
   {
+      if ($number < 2) {
+        return false;
+      }
+
       $divider = 2;
 
       while ($divider < $number / 2) {
@@ -30,6 +34,7 @@ theory: |
       return true;
   }
 
+  isPrime(1); // false
   isPrime(2); // true
   isPrime(3); // true
   isPrime(4); // false
@@ -58,4 +63,5 @@ instructions: |
   ```
 
 
-tips: []
+tips:
+  - "[Список простых чисел](https://ru.wikipedia.org/wiki/Список_протых_чисел)"
