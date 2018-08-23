@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-echo date_default_timezone_get();
+print_r(date_default_timezone_get());
 // END
