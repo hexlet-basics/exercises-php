@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function isArgumentsForSubstrCorrect($str, $index, $length)
 {
     if ($index < 0) {
@@ -14,3 +15,4 @@ function isArgumentsForSubstrCorrect($str, $index, $length)
 
     return true;
 }
+// END
