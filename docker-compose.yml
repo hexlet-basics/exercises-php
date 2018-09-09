@@ -1,9 +1,7 @@
 version: '3'
 
 services:
- php:
+  test:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - .:/exercises-php
