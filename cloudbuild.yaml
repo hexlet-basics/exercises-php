@@ -13,8 +13,6 @@ steps:
     ]
   - name: 'docker/compose:1.15.0'
     args: [
-      # '--project-directory', 'services/app',
-      # '-f', 'services/app/docker-compose.yml',
       'up',
     ]
 

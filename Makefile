@@ -15,14 +15,6 @@ compose-bash:
 compose-build:
 	docker-compose build
 
-# docker-release: docker-build docker-push
-
-# docker-build:
-# 	docker build -t hexlet/hexlet-basics-exercises-php .
-
-# docker-push:
-# 	docker push hexlet/hexlet-basics-exercises-php
-
 SUBDIRS := $(wildcard modules/**/*/.)
 
 lint:
