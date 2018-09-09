@@ -1,7 +1,7 @@
 compose: compose-build compose-install compose-test
 
 gcloud-builds-submit:
-	gcloud builds submit --config cloudbuild.yml .
+	gcloud builds submit --config cloudbuild.yaml .
 
 compose-test:
 	docker-compose -f docker-compose.test.yml up

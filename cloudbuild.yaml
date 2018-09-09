@@ -1,5 +1,8 @@
 ---
 
+substitutions:
+  _SLACK_WEBHOOK: 'key'
+
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [
@@ -9,11 +12,11 @@ steps:
       '.'
     ]
   - name: 'docker/compose:1.15.0'
-    # args: [
-    #   # '--project-directory', 'services/app',
-    #   # '-f', 'services/app/docker-compose.yml',
-    #   # 'run',
-    # ]
+    args: [
+      # '--project-directory', 'services/app',
+      # '-f', 'services/app/docker-compose.yml',
+      'up',
+    ]
 
   - name: 'technosophos/slack-notify'
     env:
