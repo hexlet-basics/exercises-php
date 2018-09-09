@@ -9,16 +9,13 @@ steps:
       '.'
     ]
   - name: 'docker/compose:1.15.0'
-    args: [
-      # '--project-directory', 'services/app',
-      # '-f', 'services/app/docker-compose.yml',
-      'run',
-      'test'
-    ]
+    # args: [
+    #   # '--project-directory', 'services/app',
+    #   # '-f', 'services/app/docker-compose.yml',
+    #   # 'run',
+    # ]
 
   - name: 'technosophos/slack-notify'
-    args: [
-    ]
     env:
       - 'SLACK_WEBHOOK=${_SLACK_WEBHOOK}'
       - 'SLACK_MESSAGE=Nginx was built (${SHORT_SHA})'

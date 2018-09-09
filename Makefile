@@ -4,7 +4,7 @@ gcloud-builds-submit:
 	gcloud builds submit --config cloudbuild.yml .
 
 compose-test:
-	docker-compose run exercises make test -s
+	docker-compose -f docker-compose.test.yml up
 
 compose-install:
 	docker-compose run exercises composer install

@@ -1,7 +1,9 @@
+---
+
 version: '2'
 
 services:
-  sut:
+  test:
     build:
       context: .
       dockerfile: Dockerfile
