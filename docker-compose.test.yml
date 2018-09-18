@@ -3,7 +3,7 @@
 version: '2'
 
 services:
-  test:
+  sut:
     build:
       context: .
       dockerfile: Dockerfile
