@@ -1,4 +1,5 @@
-compose: compose-build compose-install compose-test compose-lint
+compose:
+	docker-compose up
 
 gcloud-builds-submit:
 	gcloud builds submit --config cloudbuild.yaml .

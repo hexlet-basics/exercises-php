@@ -19,7 +19,7 @@ steps:
   - name: 'technosophos/slack-notify'
     env:
       - 'SLACK_WEBHOOK=${_SLACK_WEBHOOK}'
-      - 'SLACK_MESSAGE=Nginx was built (${SHORT_SHA})'
+      - 'SLACK_MESSAGE=exercises-php was built (${SHORT_SHA})'
       - 'SLACK_TITLE="${PROJECT_ID}:${BRANCH_NAME}"'
       - 'SLACK_USERNAME=cloudbuild'
 

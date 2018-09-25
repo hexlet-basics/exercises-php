@@ -7,3 +7,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - .:/exercises-php
+    command: make lint test
