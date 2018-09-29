@@ -2,7 +2,6 @@
 
 function sumOfSeries($start, $finish)
 {
-    $i = $start;
     /*
     * Обратите внимание: мы создали новую переменную,
     * и не используем аргумент в качестве счётчика.
@@ -16,7 +15,7 @@ function sumOfSeries($start, $finish)
     */
 
     $sum = 0;
-    for ($i; $i <= $finish; $i++) {
+    for ($i = $start; $i <= $finish; $i++) {
         $sum += $i;
     }
 
