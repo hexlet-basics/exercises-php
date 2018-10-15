@@ -24,7 +24,7 @@ theory: |
 
   function getTypeOfSentence($sentence)
   {
-      $lastChar = substr($sentence, -1);
+      $lastChar = $sentence[-1];
 
       if ($lastChar === '?') {
         $sentenceType = 'question';
