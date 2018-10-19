@@ -23,8 +23,7 @@ theory: |
 
       $divider = 2;
 
-      // Можно оптимизировать алгоритм и проверять только до $number / 2
-      while ($divider < $number) {
+      while ($divider <= $number / 2) {
           if ($number % $divider === 0) {
             return false;
           }
