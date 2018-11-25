@@ -100,6 +100,15 @@ instructions: |
 
   Эта функция позволяет извлечь начало подстроки такой же длины как и слово `Targaryen`, а затем проверить равно ли оно `Targaryen`. Напомню что индексы начинаются с нуля.
 
+  ```php
+  <?php
+
+  hasTargaryenReference(''); // => false
+  hasTargaryenReference('Targari'); // => false
+  hasTargaryenReference('targaryen'); // => false
+  hasTargaryenReference('Targaryen'); // => true
+  ```
+
 tips:
   - |
     [strpos](http://php.net/manual/en/function.strpos.php)
