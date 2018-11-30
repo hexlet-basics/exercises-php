@@ -25,7 +25,7 @@ theory: |
 
   * `Spaces must be used to indent lines; tabs are not alowed` — PSR-2 рекомендует делать отступ, размером в четыре пробела, а в примере выше использована табуляция
   * `A closing tag is not permitted at the end of a PHP file` — стандарт содержит требование опускать завершающий тег `?>`
-  * `Space before opening parenthesis of function call prohibited` — при вызове функции между именем функции и круглыми скобками не должно быть пробельных символов, а в проверяемом коду после имени `print_r` стоит один пробел
+  * `Space before opening parenthesis of function call prohibited` — при вызове функции между именем функции и круглыми скобками не должно быть пробельных символов, а в проверяемом коде после имени `print_r` стоит один пробел
 
   Исправим код, убрав закрывающий тег, отступы и пробел после имени функции:
 
