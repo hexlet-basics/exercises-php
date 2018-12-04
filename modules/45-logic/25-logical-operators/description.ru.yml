@@ -20,7 +20,7 @@ theory: |
 
   function isCorrectPassword($password)
   {
-      const $length = strlen($password);
+      $length = strlen($password);
       return $length > 8 && $length < 20;
   }
 
