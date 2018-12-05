@@ -28,7 +28,7 @@ function parentFor($child, $parent = 'mother')
             return $parents[$parent];
 
         default:
-            throw new \Exception("Wrong child's name '{$child}");
+            throw new \Exception("Wrong child's name '{$child}'");
     }
 }
 
