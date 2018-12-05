@@ -58,7 +58,7 @@ theory: |
       $lastChar = substr($sentence, -1);
 
       if ($lastChar === '?') {
-        return 'question';
+          return 'question';
       }
 
       return 'normal';
@@ -77,7 +77,7 @@ theory: |
   {
       $lastChar = substr($sentence, -1);
 
-      return ($lastChar === '?') ? 'question'  : 'normal';
+      return ($lastChar === '?') ? 'question' : 'normal';
   }
 
   getTypeOfSentence('Hodor'); // => normal

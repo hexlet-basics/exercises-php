@@ -56,8 +56,7 @@ theory: |
 
       if ($length > 5) {
           $counter = 0;
-          while ($counter !== 100)
-          {
+          while ($counter !== 100) {
               print_r($str);
               $counter += 1;
           }

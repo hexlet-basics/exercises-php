@@ -6,7 +6,7 @@ function getEvenNumbersUpTo($num)
     $result = '';
 
     while ($counter <= $num) {
-        if ($counter % 2 === 0){
+        if ($counter % 2 === 0) {
             $result = "{$result}{$counter},";
         }
 

@@ -14,6 +14,7 @@ function invertCase($text)
             $result .= $lowerSymbol;
         }
     }
+
     return $result;
     // END
 }

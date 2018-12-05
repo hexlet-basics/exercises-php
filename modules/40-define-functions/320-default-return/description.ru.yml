@@ -10,7 +10,7 @@ theory: |
 
   function sub($a, $b)
   {
-    $result = $a - $b;
+      $result = $a - $b;
   }
 
   $result = sub(10, 7);
@@ -32,7 +32,7 @@ theory: |
 
   function sub($a, $b)
   {
-    $result = $a - $b;
+      $result = $a - $b;
   }
 
   $result = sub(10, 7);
@@ -48,8 +48,8 @@ theory: |
 
   function sub($a, $b)
   {
-    $result = $a - $b;
-    return $result;
+      $result = $a - $b;
+      return $result;
   }
 
   $result = sub(10, 7);
