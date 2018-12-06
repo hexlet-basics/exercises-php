@@ -10,7 +10,7 @@ function sumOfSeries($start, $finish)
 
     * Note: we create a new variable here,
     * rather than use the argument as a counter.
-    * Counter will be chaning as the function works,
+    * Counter will be changing as the function works,
     * and changing arguments is considered harmful.
     */
 

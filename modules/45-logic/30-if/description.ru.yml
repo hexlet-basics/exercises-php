@@ -25,7 +25,7 @@ theory: |
   {
       $lastChar = substr($sentence, -1); // простой способ извлечь последний символ
       if ($lastChar === '?') {
-        return 'question';
+          return 'question';
       }
 
       return 'normal';
@@ -52,7 +52,7 @@ theory: |
   {
       $lastChar = substr($sentence, -1);
       if ($lastChar === '?')
-        return 'question';
+          return 'question';
 
       return 'normal';
   }

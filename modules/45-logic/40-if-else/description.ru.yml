@@ -27,9 +27,9 @@ theory: |
       $lastChar = $sentence[-1];
 
       if ($lastChar === '?') {
-        $sentenceType = 'question';
+          $sentenceType = 'question';
       } else {
-        $sentenceType = 'normal';
+          $sentenceType = 'normal';
       }
 
       return "Sentence is {$sentenceType}";

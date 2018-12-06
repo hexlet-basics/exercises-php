@@ -4,16 +4,14 @@ function shouter($str)
 {
     $length = strlen($str);
     $result = '';
-    $counterLimit = 10;
-
 
     if ($length > 0 && $length < 5) {
         return $str;
     } elseif ($length === 5) {
         $counter = 0;
+        $counterLimit = 10;
 
-        while ($counter !== $counterLimit)
-        {
+        while ($counter !== $counterLimit) {
             $result = "{$result}{$str}";
             $counter += 1;
         }
@@ -21,8 +19,7 @@ function shouter($str)
         $counter = 0;
         $counterLimit = 100;
 
-        while ($counter !== $counterLimit)
-        {
+        while ($counter !== $counterLimit) {
             $result = "{$result}{$str}";
             $counter += 1;
         }

@@ -7,12 +7,12 @@ theory: |
 
   ```php
   for (счётчик; предикат; изменение счётчика) {
-    // тело цикла
+      // тело цикла
   }
 
   // например
   for ($index; $index >= 0; $index--) {
-    ...
+      ...
   }
   ```
 
@@ -27,15 +27,15 @@ theory: |
 
   function reverseString($str)
   {
-    $index = strlen($str) - 1;
-    $result = '';
+      $index = strlen($str) - 1;
+      $result = '';
 
-    for ($index; $index >= 0; $index--) {
-      $currChar = $str[$index];
-      $result = "{$result}{$currChar}";
-    }
+      for ($index; $index >= 0; $index--) {
+          $currChar = $str[$index];
+          $result = "{$result}{$currChar}";
+      }
 
-    return $result;
+      return $result;
   }
   ```
 

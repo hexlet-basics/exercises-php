@@ -14,8 +14,8 @@ theory: |
 
   function sub($a, $b)
   {
-    $result = $a - $b;
-    return $result;
+      $result = $a - $b;
+      return $result;
   }
 
   print_r(sub(10, 7));
@@ -32,7 +32,7 @@ theory: |
 
   function sub($a, $b)
   {
-    return $a - $b;
+      return $a - $b;
   }
 
   print_r(sub(2018, 1975));
@@ -55,8 +55,8 @@ theory: |
 
   function foo()
   {
-    return 7;
-    return 10;
+      return 7;
+      return 10;
   }
 
   print_r(foo());
