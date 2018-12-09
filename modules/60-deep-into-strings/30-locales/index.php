@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-setlocale(LC_ALL, 0);
+print_r(setlocale(LC_CTYPE, 0));
 // END
