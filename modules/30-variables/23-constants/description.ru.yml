@@ -29,7 +29,7 @@ instructions: |
 
 tips:
   - |
-    [Список встроенных в PHP констант](http://php.net/manual/en/reserved.constants.php)
+    [Список встроенных в PHP констант](http://php.net/manual/ru/reserved.constants.php)
 
 definitions:
   - name: "Константа"
