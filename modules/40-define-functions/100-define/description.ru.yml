@@ -132,10 +132,10 @@ instructions: |
   ```php
   <?php
 
-  printJaimesLine("JAIME: Farewell, my friend...");
+  printJaimesLine("Farewell, my friend...");
   ```
 
-  <pre class='hexlet-basics-output'>Farewell, my friend...</pre>
+  <pre class='hexlet-basics-output'>JAIME:  Farewell, my friend...</pre>
 
 tips:
   - |
