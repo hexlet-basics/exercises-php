@@ -1,3 +1,3 @@
 <?php
 
-// You know nothing, John Snow!
+// You know nothing, Jon Snow!
