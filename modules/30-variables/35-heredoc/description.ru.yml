@@ -29,7 +29,7 @@ theory: |
 
 instructions: |
 
-  Запишите в переменную `$str` текст, который приведен ниже. Используйте HEREDOC синтаксис.
+  Запишите в переменную `$str` текст, который приведен ниже. Используйте heredoc-синтаксис.
 
         Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
         This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.

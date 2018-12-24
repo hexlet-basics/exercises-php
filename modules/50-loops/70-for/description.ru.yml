@@ -12,7 +12,7 @@ theory: |
 
   // например
   for ($index; $index >= 0; $index--) {
-      ...
+      // ...
   }
   ```
 

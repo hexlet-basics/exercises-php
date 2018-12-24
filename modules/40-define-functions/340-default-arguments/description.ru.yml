@@ -19,7 +19,7 @@ theory: |
   ```php
   function parentFor($child, $parent = 'mother')
   {
-    // какой-то код
+      // какой-то код
   }
   ```
 
