@@ -9,7 +9,7 @@ theory: |
   <?php
 
   $what = "Kings" . "road";
-  print_r($what); //=> "Kingsroad"
+  print_r($what); // => "Kingsroad"
   ```
 
   … а значит сумеем конкатенировать строку и одну переменную, в которой записана строка:
@@ -20,7 +20,7 @@ theory: |
   $first = "Kings";
   $what = $first . "road";
 
-  print_r($what); //=> "Kingsroad"
+  print_r($what); // => "Kingsroad"
   ```
 
   … и даже конкатенировать две переменные, в которых записаны строки:
