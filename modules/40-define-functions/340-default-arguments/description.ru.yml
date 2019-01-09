@@ -10,6 +10,8 @@ theory: |
   Эти два вызова равнозначны:
 
   ```php
+  <?php
+
   parentFor('Jon Snow');
   parentFor('Jon Snow', 'mother');
   ```
@@ -17,6 +19,8 @@ theory: |
   Каким образом там сделаны аргументы по умолчанию? Давайте заглянем в определение этой функции:
 
   ```php
+  <?php
+
   function parentFor($child, $parent = 'mother')
   {
       // какой-то код
