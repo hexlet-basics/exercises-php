@@ -1,6 +1,6 @@
 <?php
 
-$euros = 1000;
+$euros = 100;
 
 // BEGIN
 $dollars = $euros * 1.25;
