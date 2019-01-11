@@ -38,15 +38,7 @@ function calculateDistanceBetweenTowns($param)
     return calculateDistance($from, $to);
 }
 
-function isValidCityName($city, $knownCitiesList)
-{
-    foreach ($knownCitiesList as &$known) {
-        if ($city === $known) return true;
-    }
-    return false;
-}
-
-function calcDistance($source, $dest)
+function calculateDistance($source, $dest)
 {
     $w = 'Winterfell';
     $t = 'The Twins';
@@ -73,4 +65,12 @@ function calcDistance($source, $dest)
     }
 
     throw new \Exception("Unknown distance between cities '{$source}' and '{$dest}'. Please ask for a distance between some other pair of cities.");
+}
+
+function isValidCityName($city, $knownCitiesList)
+{
+    foreach ($knownCitiesList as &$known) {
+        if ($city === $known) return true;
+    }
+    return false;
 }
