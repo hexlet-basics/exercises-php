@@ -46,13 +46,13 @@ function calculateDistance($source, $dest)
     $q = 'Qarth';
     $d = 'Vaes Dothrak';
 
-    $arr = array($w, $t, $e, $q, $d);
+    $knownCities = array($w, $t, $e, $q, $d);
 
-    if (!isValidCityName($source, $arr)) {
+    if (!isValidCityName($source, $knownCities)) {
         throw new \Exception("Unknown city: '{$source}'. Please check city name.");
     }
 
-    if (!isValidCityName($dest, $arr)) {
+    if (!isValidCityName($dest, $knownCities)) {
         throw new \Exception("Unknown city: '{$dest}'. Please check city name.");
     }
     
@@ -67,10 +67,10 @@ function calculateDistance($source, $dest)
     throw new \Exception("Unknown distance between cities '{$source}' and '{$dest}'. Please ask for a distance between some other pair of cities.");
 }
 
-function isValidCityName($city, $knownCitiesList)
+function isValidCityName($city, $knownCities)
 {
-    foreach ($knownCitiesList as &$known) {
-        if ($city === $known) return true;
+    foreach ($knownCities as &$knownCity) {
+        if ($city === $knownCity) return true;
     }
     return false;
 }
