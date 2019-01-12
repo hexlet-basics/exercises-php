@@ -40,17 +40,16 @@ function calculateDistanceBetweenTowns($param)
 
 function calculateDistance($source, $dest)
 {
+    if ($source === $dest) return 0;
+
     $cities = ['Winterfell', 'The Twins', 'The Eyrie', 'Qarth', 'Vaes Dothrak'];
+    
+    $wrongName = lookForUnknownElement([$source, $dest], $cities);
+    if ($wrongName !== '') {
+        throw new \Exception("Unknown city: '{$wrongName}'. Please check city name.");
+    }
+
     [$w, $t, $e, $q, $d] = $cities;
-
-
-    if (!in_array($source, $cities)) {
-        throw new \Exception("Unknown city: '{$source}'. Please check city name.");
-    }
-
-    if (!in_array($dest, $cities)) {
-        throw new \Exception("Unknown city: '{$dest}'. Please check city name.");
-    }
 
     if ($source === $w && $dest === $t || $source === $t && $dest === $w) {
         return 60;
@@ -63,4 +62,12 @@ function calculateDistance($source, $dest)
     $text = "Unknown distance between cities '{$source}' and '{$dest}'.
         Please ask for a distance between some other pair of cities.";
     throw new \Exception($text);
+}
+
+function lookForUnknownElement($elements, $knownElements)
+{
+    foreach ($elements as $element) {
+        if (!in_array($element, $knownElements)) return $element;
+    }
+    return '';
 }
