@@ -8,7 +8,7 @@ use function HexletBasics\Asserts\expectOutputString;
 
 $path = __DIR__ . '/index.php';
 
-$expected = "1250\n75000";
+$expected = "125\n7500";
 require $path;
 
 expectOutputString($expected, function () use ($path) {
