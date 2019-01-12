@@ -15,4 +15,3 @@ $actual = getAgeDifference(2001, 2018);
 
 print_r($actual);
 Assert::that($actual)->contains($expected);
-

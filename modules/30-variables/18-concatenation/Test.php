@@ -8,7 +8,12 @@ use function HexletBasics\Asserts\expectOutputString;
 
 $path = __DIR__ . '/index.php';
 
-$expected = "Hello, Joffrey!\nHere is important information about your account security.\nWe couldn't verify you mother's maiden name.";
+$expected = <<<HERE
+Hello, Joffrey!
+Here is important information about your account security.
+We couldn't verify you mother's maiden name.
+HERE;
+
 require $path;
 
 expectOutputString($expected, function () use ($path) {

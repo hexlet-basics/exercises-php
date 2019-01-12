@@ -7,6 +7,12 @@ gcloud-builds-submit:
 compose-test:
 	docker-compose -f docker-compose.test.yml up
 
+compose-lint-code:
+	docker-compose run exercises make lint-code
+
+compose-lint-yaml:
+	docker-compose run exercises make lint-yaml
+
 compose-lint:
 	docker-compose run exercises make lint
 
@@ -21,8 +27,13 @@ compose-build:
 
 SUBDIRS := $(wildcard modules/**/*/.)
 
-lint:
+lint: lint-yaml lint-code
+
+lint-yaml:
 	yamllint modules
+
+lint-code:
+	./vendor/bin/phpcs src modules
 
 test: $(SUBDIRS)
 $(SUBDIRS):

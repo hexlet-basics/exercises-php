@@ -40,22 +40,18 @@ function calculateDistanceBetweenTowns($param)
 
 function calculateDistance($source, $dest)
 {
-    $w = 'Winterfell';
-    $t = 'The Twins';
-    $e = 'The Eyrie';
-    $q = 'Qarth';
-    $d = 'Vaes Dothrak';
+    $cities = ['Winterfell', 'The Twins', 'The Eyrie', 'Qarth', 'Vaes Dothrak'];
+    [$w, $t, $e, $q, $d] = $cities;
 
-    $knownCities = array($w, $t, $e, $q, $d);
 
-    if (!isValidCityName($source, $knownCities)) {
+    if (!in_array($source, $cities)) {
         throw new \Exception("Unknown city: '{$source}'. Please check city name.");
     }
 
-    if (!isValidCityName($dest, $knownCities)) {
+    if (!in_array($dest, $cities)) {
         throw new \Exception("Unknown city: '{$dest}'. Please check city name.");
     }
-    
+
     if ($source === $w && $dest === $t || $source === $t && $dest === $w) {
         return 60;
     } elseif ($source === $t && $dest === $e || $source === $e && $dest === $t) {
@@ -64,13 +60,7 @@ function calculateDistance($source, $dest)
         return 125;
     }
 
-    throw new \Exception("Unknown distance between cities '{$source}' and '{$dest}'. Please ask for a distance between some other pair of cities.");
-}
-
-function isValidCityName($city, $knownCities)
-{
-    foreach ($knownCities as &$knownCity) {
-        if ($city === $knownCity) return true;
-    }
-    return false;
+    $text = "Unknown distance between cities '{$source}' and '{$dest}'.
+        Please ask for a distance between some other pair of cities.";
+    throw new \Exception($text);
 }
