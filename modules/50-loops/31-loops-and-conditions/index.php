@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function shouter($str)
 {
     $length = strlen($str);
@@ -27,3 +28,4 @@ function shouter($str)
 
     return $result;
 }
+// END

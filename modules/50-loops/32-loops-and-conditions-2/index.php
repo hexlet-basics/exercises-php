@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function getEvenNumbersUpTo($num)
 {
     $counter = 1;
@@ -15,3 +16,4 @@ function getEvenNumbersUpTo($num)
 
     return $result;
 }
+// END
