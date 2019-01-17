@@ -1,0 +1,33 @@
+---
+
+name: How do we verify solutions
+theory: |
+
+  Our website verifies your solutions automatically. You may wonder how does it work?
+
+  The simplest case only means to run your code and look at the screen output. The system checks then if the output is the same as expected.
+
+  The following lessons deal with more complex matters. You will be writing functions: a kind of mini-programs which take their data from the outside and perform some operations on it. Solutions verification gets a little more complicated in that case. The system runs your code and sends it some input prepared beforehand. Knowing the right answer for that very input, the system checks if it matches the value returned by your function.
+
+  Let's assume your task is to program a fuction summing two numbers. The verification system would send it several combinations of numbers and compare your function's answers with the known correct ones. Had all the answers match the true values for given combinations, your solution would be considered valid.
+
+  This approach is named testing. The real life day-to-day development process uses it extensively. A developer usually writes the tests first, and the desired program itself afterwards. Thus she can run tests at every turn looking if the program gets closer to completion.
+
+  That is why our website says “Tests passed”, have you solved the task aright.
+
+  One of your tasks in the following lessons will be to write a function which performs some calculations and return the result. As an example, let's assume you would make a small mistake and the function returned a wrong answer. The system's comment would be like that:
+
+  <pre class='hexlet-basics-output'>Fatal error: Uncaught Assert\InvalidArgumentException: Value "10" does not equal expected value "35".</pre>
+
+  The main thing comes after the colon: “Value ‘10’ вoes not equal expected value ‘35’”. This means the proper function would have returned 35, and yet the proposed solution works unduly and returns 10.
+
+instructions: |
+  Make the following digits appear on the screen: `9780262531962`.
+
+definitions:
+  - name: Tests
+    description: "the code specially designed to check if the written program works correctly; it does so by comparing a set of known valid results with the actual output of the program."
+
+tips:
+  - |
+    [assert](http://php.net/manual/en/function.assert.php)
