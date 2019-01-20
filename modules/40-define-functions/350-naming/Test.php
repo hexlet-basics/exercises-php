@@ -2,15 +2,14 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
-use function HexletBasics\Asserts\expectOutputString;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-$expected = '01-01-2001';
-$actual = getFormattedBirthday(1, 1, 2001);
-
-Assert::that($actual)->contains($expected);
+test(function () {
+    $expected = '01-01-2001';
+    $actual = getFormattedBirthday(1, 1, 2001);
+    print_r($actual);
+    Assert::eq($actual, $expected);
+});

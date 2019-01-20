@@ -2,12 +2,16 @@
   "require": {
     "mikehaertl/php-shellcommand": "*",
     "beberlei/assert": "^2.8",
-    "squizlabs/php_codesniffer": "3.*"
+    "squizlabs/php_codesniffer": "3.*",
+    "filp/whoops": "^2.3",
+    "webmozart/assert": "^1.4"
   },
   "autoload": {
     "psr-4": {"HexletBasics\\": "src/"},
     "files": [
+      "bootstrap.php",
       "src/Asserts.php",
+      "src/Tests.php",
       "src/Functions.php"
     ]
   },

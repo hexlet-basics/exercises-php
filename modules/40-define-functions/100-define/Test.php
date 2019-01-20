@@ -2,16 +2,16 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-require $path;
+use function HexletBasics\Tests\expectOutput;
 
 $expected = 'JAIME: Farewell, my friend...';
-printJaimesLine('Farewell, my friend...');
-
-expectOutputString($expected, function () use ($path) {
+expectOutput($expected, function () {
     printJaimesLine('Farewell, my friend...');
+});
+
+$expected = 'JAIME: attack!';
+expectOutput($expected, function () {
+    printJaimesLine('attack!');
 });

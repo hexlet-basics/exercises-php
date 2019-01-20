@@ -2,16 +2,11 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-require $path;
+use function HexletBasics\Tests\expectOutput;
 
 $expected = '0-0-0-0-0-';
-printSeq('0-', 5);
-
-expectOutputString($expected, function () use ($path) {
+expectOutput($expected, function () {
     printSeq('0-', 5);
 });

@@ -2,15 +2,14 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-
-Assert::that(getAge(10))->eq(10);
-Assert::that(getAge(9.1))->eq(9);
-Assert::that(getAge(8.9))->eq(9);
-Assert::that(getAge(8.5))->eq(8);
+test(function () {
+    Assert::eq(getAge(10), 10);
+    Assert::eq(getAge(9.1), 9);
+    Assert::eq(getAge(8.9), 9);
+    Assert::eq(getAge(8.5), 8);
+});

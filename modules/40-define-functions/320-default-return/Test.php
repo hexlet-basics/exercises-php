@@ -2,13 +2,12 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
-use function HexletBasics\Asserts\expectOutputString;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-$actual = getNull();
-Assert::that($actual)->null();
+test(function () {
+    $actual = getNull();
+    Assert::eq($actual, null);
+});

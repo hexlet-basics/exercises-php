@@ -32,4 +32,6 @@ COPY composer.json composer.json
 COPY composer.lock composer.lock
 RUN composer install
 
+RUN echo "include_path = \".:/exercises-php\"" > /usr/local/etc/php/conf.d/code-basics.ini
+
 COPY . /exercises-php

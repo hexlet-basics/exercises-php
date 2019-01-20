@@ -2,15 +2,10 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\expectOutput;
 
 $expected = 'What Is Dead May Never Die';
-require $path;
-
-expectOutputString($expected, function () use ($path) {
-    require $path;
-});
+expectOutput($expected);

@@ -2,6 +2,9 @@
 
 namespace HexletBasics;
 
-$path = __DIR__ . '/index.php';
+require 'vendor/autoload.php';
 
-require $path;
+use function HexletBasics\Tests\expectOutput;
+
+$expected = '';
+expectOutput($expected);

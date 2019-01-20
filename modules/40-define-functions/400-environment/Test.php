@@ -2,16 +2,14 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
-use function HexletBasics\Asserts\expectOutputString;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-$expected = 'The age difference is 17';
-$actual = getAgeDifference(2001, 2018);
-
-print_r($actual);
-Assert::that($actual)->contains($expected);
+test(function () {
+    $expected = 'The age difference is 17';
+    $actual = getAgeDifference(2001, 2018);
+    print_r($actual);
+    Assert::eq($actual, $expected);
+});

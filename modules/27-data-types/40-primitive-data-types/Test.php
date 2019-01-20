@@ -2,15 +2,9 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
+use function HexletBasics\Tests\expectOutput;
 
 $expected = '-0.304';
-require $path;
-
-expectOutputString($expected, function () use ($path) {
-    require $path;
-});
+expectOutput($expected);
