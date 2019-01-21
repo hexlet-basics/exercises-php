@@ -2,12 +2,19 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
+test(function () {
+    $expected1 = 'https://yandex.ru';
+    $actual1 = normalizeUrl('yandex.ru');
+    dump($actual1);
+    Assert::eq($actual1, $expected1);
 
-Assert::that(normalizeUrl('yandex.ru'))->eq('https://yandex.ru');
-Assert::that(normalizeUrl('https://yandex.ru'))->eq('https://yandex.ru');
+    $expected2 = 'https://yandex.ru';
+    $actual2 = normalizeUrl('http://yandex.ru');
+    dump($actual2);
+    Assert::eq($actual2, $expected2);
+});

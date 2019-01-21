@@ -1,12 +1,14 @@
 <?php
 
 // BEGIN
-function normalizeUrl($site)
+function normalizeUrl($url)
 {
-    if (strpos($site, 'https://') === false) {
-        return "https://{$site}";
+    if (strpos($url, 'http://') === 0) {
+        $domain = substr($url, 7);
+    } else {
+        $domain = $url;
     }
 
-    return $site;
+    return "https://{$domain}";
 }
 // END
