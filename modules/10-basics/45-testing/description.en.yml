@@ -1,13 +1,13 @@
 ---
 
-name: How do we verify solutions
+name: How do we verify solutions?
 theory: |
 
   Our website verifies your solutions automatically. You may wonder how does it work?
 
   The simplest case only means to run your code and look at the screen output. The system checks then if the output is the same as expected.
 
-  The following lessons deal with more complex matters. You will be writing functions: a kind of mini-programs which take their data from the outside and perform some operations on it. Verifying solutions gets a little more complicated in that case. The system runs your code and sends it some input prepared beforehand. Knowing the right answer for that very input, the system checks if it matches the value returned by your function.
+  The following lessons deal with the matters more complex. You will be writing functions: a kind of mini-programs that take their data from the outside and perform some operations on it. Verifying solutions gets a little more complicated in that case. The system runs your code and sends it some input prepared beforehand. Knowing the right answer for that very input, the system checks if it matches the value returned by your function.
 
   Let's assume your task is to program a function summing two numbers. The verification system would send it several combinations of numbers and compare your function's answers with the known correct ones. Had all the answers match the true values for given combinations, your solution would be considered valid.
 
@@ -15,7 +15,7 @@ theory: |
 
   That is why our website says “Tests passed”, have you solved the task aright.
 
-  One of your tasks in the following lessons will be to write a function which performs some calculations and returns the result. As an example, let's assume you would make a small mistake and the function returned a wrong answer. The system's comment would be like that:
+  One of your tasks in the following lessons will be to write a function that performs some calculations and returns the result. As an example, let's assume you would make a small mistake and the function returned a wrong answer. The system's comment would be like that:
 
   <pre class='hexlet-basics-output'>Fatal error: Uncaught Assert\InvalidArgumentException: Value "10" does not equal expected value "35".</pre>
 
