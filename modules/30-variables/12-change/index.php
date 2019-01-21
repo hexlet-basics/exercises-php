@@ -6,4 +6,4 @@ $name = 'Brienna';
 $name = 'anneirB';
 // END
 
-print_r(name);
+print_r($name);
