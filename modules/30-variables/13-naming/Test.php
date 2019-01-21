@@ -6,5 +6,5 @@ require 'vendor/autoload.php';
 
 use function HexletBasics\Tests\expectOutput;
 
-$expected = 'What Is Dead May Never Die!';
+$expected = "-110";
 expectOutput($expected);
