@@ -34,4 +34,4 @@ RUN composer install
 
 RUN echo "include_path = \".:/exercises-php\"" > /usr/local/etc/php/conf.d/code-basics.ini
 
-COPY . /exercises-php
+COPY . .
