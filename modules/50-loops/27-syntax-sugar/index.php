@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function countChars($str, $char)
 {
     $index = strlen($str) - 1;
@@ -13,3 +14,4 @@ function countChars($str, $char)
 
     return $result;
 }
+// END
