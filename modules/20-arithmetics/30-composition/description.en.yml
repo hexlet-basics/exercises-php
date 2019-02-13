@@ -20,7 +20,7 @@ theory: |
 
   As you see, operations can be connected. This allows us to solve ever more complex expressions. To understand what happens inside the interpreter during the calculation, let's take a look at this example: `2 * 4 * 5 * 10`.
 
-  1. First, `2 * 4` is calculated, which leads to this expression: `8 * 5 * 10`
+  1. First, `2 * 4` is calculated, which leads to this expression: `8 * 5 * 10`.
   1. Then `8 * 5`. We get to `40 * 10`.
   3. In the end the last multiplication is done, and we get the result: `400`.
 
