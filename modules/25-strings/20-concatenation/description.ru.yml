@@ -58,9 +58,9 @@ theory: |
   ```php
   <?php
 
-  print_r("King's " . ' Landing');   // => Kings  Landing
+  print_r("King's " . ' Landing');   // => King's  Landing
 
-  print_r("King's  " . '  Landing'); // => Kings    Landing
+  print_r("King's  " . '  Landing'); // => King's    Landing
   ```
 
 instructions: |
