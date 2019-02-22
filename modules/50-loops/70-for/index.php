@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function sumOfSeries($start, $finish)
 {
     /*
@@ -21,3 +22,4 @@ function sumOfSeries($start, $finish)
 
     return $sum;
 }
+// END

@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function doesContain($str, $char)
 {
     $index = 0;
@@ -13,3 +14,4 @@ function doesContain($str, $char)
 
     return false;
 }
+// END

@@ -1,5 +1,6 @@
 <?php
 
+// BEGIN
 function filterString($str, $char)
 {
     $index = 0;
@@ -15,3 +16,4 @@ function filterString($str, $char)
 
     return $result;
 }
+// END
