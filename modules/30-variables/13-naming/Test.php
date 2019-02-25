@@ -6,5 +6,5 @@ require 'vendor/autoload.php';
 
 use function HexletBasics\Tests\expectOutput;
 
-$expected = "-110";
+$expected = "-98.9";
 expectOutput($expected);
