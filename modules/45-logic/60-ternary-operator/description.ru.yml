@@ -99,7 +99,7 @@ instructions: |
   convertString('hello'); // => 'olleh'
   ```
 
-  Перевернуть строчку можно используя функцию [strrev](http://php.net/manual/ru/function.strrev.php).
+  Перевернуть строчку можно, используя функцию [strrev](http://php.net/manual/ru/function.strrev.php).
 
   Есть разные подходы к решению этой задачи. Возможно, вам пригодятся функции [ucfirst](http://php.net/manual/ru/function.ucfirst.php), [strtoupper](http://php.net/manual/ru/function.strtoupper.php) и возможность получения символа из строки (например, `$str[0]`).
 
