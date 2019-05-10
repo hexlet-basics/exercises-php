@@ -20,6 +20,7 @@ theory: |
   // greeting - переводится как приветствие
   $greeting = 'Father!';
   print_r($greeting);
+  print_r("\n");
   print_r($greeting);
   ```
 
@@ -43,7 +44,7 @@ theory: |
   print_r($greeting1);
   print_r($greeting1);
 
-  greeting2 = 'Mother!';
+  $greeting2 = 'Mother!';
   print_r($greeting2);
   print_r($greeting2);
   ```
