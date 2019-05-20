@@ -94,6 +94,15 @@ instructions: |
 
   Напишите функцию `isFalsy`, которая проверяет, трактуется ли переданное значение как ложное с точки зрения PHP. Для выполнения этой проверки вам понадобится сравнить `false` с переданным значением, используя `==`.
 
+  ```php
+  <?php
+
+  isFalsy(false); // true
+  isFalsy(0); // true
+  isFalsy('help'); // false
+  isFalsy(10); // false
+  ```
+
 tips:
   - |
     [Booleans](http://php.net/manual/ru/language.types.boolean.php)
