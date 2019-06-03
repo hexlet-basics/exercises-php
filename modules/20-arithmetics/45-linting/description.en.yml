@@ -2,7 +2,7 @@
 
 name: Linter
 theory: |
-  Code must be written in a certain way to be easy to read and maintain. Standards are sets of rules that describe different aspects of coding. The most commonly used PHP  standards are **PSR** (PHP Standards Recommendations) by [PHP-GIF] (https://www.php-fig.org/psr/). A recommendation is a set of rules aimed to facilitate a certain aspect of development (or solve a certain problem). Presently, several official recommendations are in use, each of them marked by a number: PSR-1, PSR-2, PSR-3 and [others] (https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). You will learn those recommendations  in the process of study and work. For now, we are going to focus at the first two.
+  Code must be written in a certain way to be easy to read and maintain. Standards are sets of rules that describe different aspects of coding. The most commonly used PHP standards are **PSR** (PHP Standards Recommendations) by [PHP-GIF] (https://www.php-fig.org/psr/). A recommendation is a set of rules aimed to facilitate a certain aspect of development (or solve a certain problem). Presently, several official recommendations are in use, each of them marked by a number: PSR-1, PSR-2, PSR-3 and [others] (https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). You will learn those recommendations in the process of study and work. For now, we are going to focus at the first two.
 
   * PSR-1: [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)  is a set  of rules concerning coding style: how to write PHP tags, naming of classes, class methods and constants. It also covers different aspects of coding, autoloading, namespacing and file structures. The PSR-2 standard extends these rules. 
   * PSR-2: [PSR-2: Coding Style Guide](https://www.php-fig.org/psr/psr-2/). PSR-2 requires developers to follow PSR-1, and also introduces new requirements concerning indentation, files, strings, key words, classes, control structures, scopes and other elements.
@@ -17,7 +17,7 @@ theory: |
   ?>
   ```
   
-  Having analyzed this file, linter will display the following errors: 
+  After analyzing this file, linter will display the following errors: 
   
   * `Spaces must be used to indent lines; tabs are not alowed`  - in the example above we used tabulation, while PSR-1 recommends to indent lines with four spaces. 
   * `A closing tag is not permitted at the end of a PHP file` - the standard requires to omit the closing tag `?>` 
@@ -43,7 +43,7 @@ instructions: |
   ?>
   ```
   This code breaks two rules that we saw in the previous example. Rewrite the code, fixing the styling errors. 
-  At this stage your code is not analyzed by linter, however in your future practice on [Hexlet] (https://ru.hexlet.io) and in the actual development process, you will use linter and it will warn you about violation of standards. 
+  At this stage your code is not checked by linter, however in your future practice on [Hexlet] (https://ru.hexlet.io) and in the actual development process, you will use linter and it will warn you about violation of standards. 
   
 tips: [] 
   
