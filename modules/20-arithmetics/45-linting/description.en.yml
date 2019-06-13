@@ -11,10 +11,13 @@ theory: |
 
   Let’s say we have a file with the following PHP code. 
 
- ```php
+  ```php
   <?php
-    print_r (((8 / 2) + 5) - (-3 / 2)); //tab is used to indent this line.
+
+    print_r (((8 / 2) + 5) - (-3 / 2)); //this line is indented with tab.
+
   ?>
+
   ```
   
   After analyzing this file, linter will display the following errors: 

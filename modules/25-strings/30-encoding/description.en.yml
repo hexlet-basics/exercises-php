@@ -1,0 +1,65 @@
+---
+
+name: Encoding
+theory: |
+
+  On very deep levels computers operate with just numbers '0' and '1'. It's so-called [binary code](https://en.wikipedia.org/wiki/Binary_code). Zeros and ones are called 'bits' - short for 'binary digit'.
+
+  The numbers in decimal numeral system we are used to, are encoded in binary digits:
+
+  - 0 ← 0
+  - 1 ← 1
+  - 2 ← 10
+  - 3 ← 11
+  - 4 ← 100
+  - 5 ← 101
+
+  What about text then? In fact, computer doesn't know anything about letters, punctuation and other symbols. All these characters are represented by digits as well. 
+
+  We could assign a number to each letter of the Latin alphabet starting from 1:
+
+  - a ← 1
+  - b ← 2
+  - c ← 3
+  - d ← 4
+  - ...
+  - z ← 26
+
+  That would be an example of **encoding**.
+
+  When executed, programs use encoding standards to transform digits into symbols and back. The program itself has no idea about meaning of those symbols.
+
+  - `hello` → `8` `5` `12` `12` `15`
+  - `7` `15` `15` `4` → `good`
+
+  Besides letters, encoding tables also include punctuation symbols and other useful characters. You have probably already dealt with encoding standards like [ASCII](https://en.wikipedia.org/wiki/ASCII) or [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+
+  Different encoding systems cover different number of symbols. Originally small tables like ASCII were sufficient to deal with most of tasks. However it only has Latin letters, some simple symbols like '%' of '?' and non-printable control characters like line break.
+  
+  As computers spread across the world, other countries had need for their own bigger tables. They needed to encode Cyrillic letters, Chinese hieroglyphs, Arabic writing, additional mathematical and typographical symbols, and later even emoji smiles.
+ 
+  Most used encoding system today is [Unicode](https://en.wikipedia.org/wiki/Unicode) and its modifications with most of the world languages symbols represented in it.
+  
+instructions: |
+
+  In php we can "enquire" and print to the screen any symbol from the ASCII encoding standard. 
+    For example:
+
+  ```php
+  print_r(chr(63));
+  ```
+
+  This program will output the symbol encoded with number 63 - the question mark '?'. You can print any other symbol this way.
+  
+  Find the ASCII table on the Internet. Google 'ascii codes table'. Usually in such tables include codes written in several numeral systems: decimal, binary, octal and hexadecimal. We need the **decimal** one.
+  
+  Follow the example above and print '~^%' to the screen.
+
+  (You could cheat the tests and just write print_r('~^%'), but it wouldn't be that interesting :)
+
+tips: []
+
+
+definitions:
+  - name: "Encoding"
+    description: "set of characters, encoded in numbers for digital representation of a text"

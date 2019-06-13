@@ -1,0 +1,79 @@
+---
+
+name: Concatenation
+theory: |
+
+  We are already familiar with the mathematical operation of addition. This program:
+
+  ```php
+  <?php
+
+  print_r(5 + 3);
+  ```
+
+  will print '8' to the screen, which is the result of operation of binary operator '+' with operands '5' and '3'.
+
+  Strings can be manipulated too. You can "add" two strings. This program:
+
+  ```php
+  <?php
+
+  print_r('Dragon' . 'stone');
+  ```
+
+  will output `Dragonstone` to the screen - the result of operation of binary operator '+' with operands 'Dragon' and 'stone'.
+
+  Such operation is called **concatenation**. Roughly speaking, it's 'glueing' strings together. Such glueing always happens in the same order as the operands follow each other, in other words, the left operands becomes the left part of the string, and the right operand - the right part.
+
+  Here are some more examples:
+
+  ```php
+  <?php
+
+  print_r('Kings' . 'wood');     // => Kingswood
+
+  print_r('Kings' . 'road');     // => Kingsroad
+
+  print_r("King's" . 'Landing'); // => King'sLanding
+  ```
+
+  As you see from examples above, strings can be concatenated even if they are specified with different quotation marks.
+
+  In the last example we got the name of the city printed incorrectly: *King's Landing* must have a space between words! The original strings, however, didn't have spaces, and the spaces to the right and left of `.` are not interpreted as part of strings.
+  
+  We can fix this in several ways:
+
+  ```php
+  <?php
+
+  //Adding a space at the end of the left part
+  print_r("King's " . 'Landing'); //  => King's Landing
+
+  //Adding a space at the end of the right part
+  print_r("King's" . ' Landing'); //  => King's Landing
+  ```
+
+  The more spaces we add, the wider interval we get:
+
+  ```php
+  <?php
+
+  print_r("King's " . ' Landing');   // => King's  Landing
+
+  print_r("King's  " . '  Landing'); // => King's    Landing
+  ```
+
+instructions: |
+
+  Print to the screen
+
+  ```
+  Winter came for the House of Frey.
+  ```
+
+  using word concatenation.
+
+definitions:
+  - name: "Concatenation"
+    description: |
+      operation of joining two strings. For example, print_r("King's " . ' Landing');`
