@@ -1,0 +1,52 @@
+---
+
+name: Data Types
+theory: |
+
+  There are different ways to represent data in a program.
+
+  There are **strings** - sets of characters inside quotation marks like `"Hello, World!"`. There are **integers**, for example, `7`, `-198`, `0`. These are two different kinds of infomation - two different **data types**.
+  
+  Multiplication makes sense for numbers, but doesn't make sense for strings. You can't multiply "mother" by "notebook".
+  
+  **Data type defines the operations that can be done on the elements of a particular set of elements**
+ 
+  Programming languages recognise types. Therefore PHP won't let us multiply strings by strings ("multiply text by text"). It will let us, however, multiply integer by another integer. Types and their limits protect a program from accidental errors.
+  
+  Unlike strings, we don't need to enclose integers in quotes. To print number 5, it's sufficient to write this:
+  
+  ```php
+  <?php
+
+  print_r(5);
+  ```
+
+  Note that integer `5` and string `'5'` - are two absolutely different things, although they look identical when printed with print_r.
+  
+  Integers (`1`, `34`, `-19` etc.) and floating point numbers (`1.3`, `1.0`, `-14.324` etc.) are two distinct **types of data**. Such disctinction is based on the specific way computers are designed. **There are other types as well**, and we will get to know them later.
+  
+  Here's another example, this time with a float:
+ 
+  ```php
+  <?php
+
+  print_r(10.234);
+  ```
+
+  "String", "integer", "float" are examples of **primitive** types inbuilt in PHP itself. PHP also has inbuilt some compound data types, but at this moment we're going to work only with primitive types. Programmers can create their own data types.
+  
+  
+instructions: |
+  Print number `-0.304` to screen.
+ 
+tips:
+  - |
+
+definitions:
+  - name: "Data type"
+    description: "set of data in code (type of information). Type defines operations on a particular set of data. For example, integers, floats, strings - are different types of data."
+  - name: "Primitive data types"
+    description: "elementary types inbuilt in the programming language"
+  - name: "String"
+    description: |
+      data type represented by a set of characters (i.e. text); for example. `'text'` or `"text"`. 
