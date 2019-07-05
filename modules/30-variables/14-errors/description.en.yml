@@ -1,0 +1,27 @@
+---
+
+name: Variable errors
+theory: |
+
+  The main rule is that a variable must be declared before the code where it is used. If you do it after, the program simply won't work.
+
+  ```php
+  <?php
+
+  print_r($greeting);
+  $greeting = 'Father!';
+  ```
+
+  Execution of the program above will exit with error _PHP Notice:  Undefined variable: greeting_. _Undefined variable_ is a reference error, it means that the code uses a name (identificator) that is not defined. And the error ouput points us to the error: _greeting_. Other possible mistakes include trivial typos, at the times when we use a variable or when we declare it.
+
+  You can reduce the number of similar errors by using a correctly set editor. Such editor highlights names used without being previously declared and warns you of possible problems.
+
+instructions: |
+
+  Find an undeclared variable in the program in declare it with the value 'Dragon';
+
+tips: []
+
+definitions:
+  - name: Variable
+    description: a way to store information and give it a name to be reused in code later.
