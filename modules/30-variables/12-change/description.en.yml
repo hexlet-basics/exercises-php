@@ -30,4 +30,4 @@ tips: []
 
 definitions:
   - name: Variable
-    description: a way to store information and give it a name to be reused in code later.
+    description: "a way to store information and give it a name to be reused in code later."

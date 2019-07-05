@@ -1,0 +1,63 @@
+---
+
+name: What's a variable
+theory: |
+
+  Imagine we have a task to output the phrase _Father!_ two or even five times. We can approach it in a straightforward way:
+
+  ```php
+  <?php
+
+  print_r('Father!');
+  print_r('Father!');
+  ```
+
+  That's the way to go in a simple case, but if the phrase _Father!_ starts to appear again and again and in different parts of program, we would have to duplicate it. And imagine we need to change the phrase, which happens quite often. That's where problems begin. We would have to find all bits of code where the phrase _Father!_ was used and replace it. We could approach it differently though. Instead of duplicating out phrase, it's sufficient to create a variable to store this phrase.
+
+  ```php
+  <?php
+
+  $greeting = 'Father!';
+  print_r($greeting);
+  print_r("\n");
+  print_r($greeting);
+  ```
+
+  Look at the line `$greeting = 'Father!'`. We assign the value `'Father!' to the variable named `$greeting`. In PHP variable names always start with dollar sign _$_.
+
+  Once the variable is created, we can start using it. We replace with all occurences of our phrase. While the code is being executed, the interpreter (the one that executes the php code) reaches the line `print_r($greeting)` and pulls the content out of the variable, and then executes that code. As result, we'll have the following output:
+
+  <pre class='hexlet-basics-output'>
+    Father!
+    Father!
+  </pre>
+
+  To name a variable you can use any set of valid characters which includes latin alphabet, numbers, hyphen `-` and underscore `_`. Note that a variable name can't start with a number. Variable names are case sensitive, i.e. `hello` and `heLLo` are two different names and therefore two different variables.
+
+  The number of varibles is unlimited and big programs contain dozens and even hundreds of thousands variable names:
+
+  ```php
+  <?php
+
+  $greeting1 = 'Father!';
+  print_r($greeting1);
+  print_r($greeting1);
+
+  $greeting2 = 'Mother!';
+  print_r($greeting2);
+  print_r($greeting2);
+  ```
+
+  To make code easier to read, there is a convention to create variables as close as possible to the code that uses them. 
+
+instructions: |
+
+  Create a variable with name `$motto` and assign to it `What Is Dead May Never Die!`. Output the content of the variable.
+  Создайте переменную с именем `$motto` и содержимым `What Is Dead May Never Die!`. Распечайте содержимое переменной.
+
+
+tips: []
+
+definitions:
+  - name: Variable
+    description: "a way to store information and give it a name to be reused in code later."
