@@ -1,0 +1,34 @@
+---
+
+name: Naming of variables
+theory: |
+
+  Naming of variables is an important aspect of programming. Names not only must convey the meaning, but also comply with certain syntax rules, which is not checked on the language level, but is very important in the course of development. The process of program development in the modern world is team work and in order to facilitate interaction of the team the code is must have a unified style, as if the code was written by a single person.
+
+  Each language has its own rules. For a long time PHP rules were somehow messed. To tell the truth, the language itself has lots of contradictions and not only on the level of naming. You will face it in our lessons later and in actual development. Recently PHP has adopted a general standard [coding standard](http://www.php-fig.org/psr/psr-1/) followed by everyone. Such standard describe differen coding aspects. We advise you to make it your habit to consult the standard and write you code according to its rules from the beginning.
+
+  We can distinguish three basic ways of naming variables, that sometimes can be combined. All of these approaches take place when a variable name consists of several words:
+
+  * kebab-case — words are separated by hyphen. For example: `my-super-var`.
+  * snake_case — words are separated by underscore. For example `my_super_var`.
+  * CamelCase — each word starts with a capital letter. For example: `MySuperVar`.
+
+  In PHP developers use CamelCase and it's variation - lowerCamelCase, when the first letter of the first word stays lowercase.
+
+  Other convention mandates English rather than transliteration. If you are not sure how to name a variable in English, it's best to use a translator. With time, having read lots of other people's code you will form the right image of how to name variables.
+
+  Luckily, we don't have to memorize all the standard rules, because there are special programs that automatically check our code and notify us about any violation. Such programs are called **linters** and you will start using them later when you are a little bit more experienced.
+
+  We start using linters on [Hexlet] (https://ru.hexlet.io/) almost from the very beginning.
+
+instructions: |
+
+  Create two variables with names "number one" and "number two" in English using lowerCamelCase. Assign the value `1.10` to the first variable, and `-100` to the second variable. Output the product of two numbers referred by the corresponding variables.
+
+  Code will work with any names, and our system too, checks only the output on the screen, so we believe you will approach this exercise responsibly.
+
+tips: []
+
+definitions:
+  - name: Coding standard
+    description: "set of coding rules regarding syntax and style."
