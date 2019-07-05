@@ -1,5 +1,5 @@
 ---
 
-name: Переменные
+name: Variables
 description:
-  Информацию можно помещать в специальные «хранилища», а потом использовать сколько угодно раз. Эти хранилища называются переменными, и они помогают упростить код и сократить лишние повторения.
+  Information can be put into special "containers" and reused as many times as we want. Such containers are called variables. They help to make code easier to read and avoid unneccessary repetition.
