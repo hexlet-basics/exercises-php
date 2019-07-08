@@ -3,7 +3,8 @@
 // BEGIN
 function hasTargaryenReference($string)
 {
-    $prefix = substr($string, 0, 9);
+    $lengthKeyword = 9;
+    $prefix = substr($string, 0, $lengthKeyword);
     return $prefix === 'Targaryen';
 }
 // END
