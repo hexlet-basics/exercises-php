@@ -20,7 +20,7 @@ theory: |
 
   The name hasn't changed, but the information inside is different. We should note that it's not required to declare variables in PHP. A variable is declared at the moment of its initial use in the program instead.
 
-  Variables is a powerful and at the same time dangerous thing. We can't be sure what value is assigned to the variable without analyzing the preceeding code. That's exactly what developers do when they are trying to find out why their program is not working, or not working the way it's supposed to, in the process of debugging.
+  Variables is a powerful and at the same time dangerous thing. We can't be sure what value is stored in the variable without analyzing the preceeding code. That's exactly what developers do when they are trying to find out why their program is not working, or not working the way it's supposed to, in the process of debugging.
 
 instructions: |
 

@@ -24,7 +24,7 @@ theory: |
   print_r($what); // => "Kingsroad"
   ```
 
-  … and even concatenate two variables that store strings inside:
+  … and even concatenate two variables with string values:
 
   ```php
   <?php
@@ -38,9 +38,9 @@ theory: |
 
 instructions: |
 
-  Websites constantly send emails to their users. They routinely send automatically formed personal emails with users' name in the header. If the person's name is stored somewhere in the website database, the generation of a header comes down to concatenation, for example, joining the string `Hello` with the string that represents the user's name.
+  Websites constantly send emails to their users. They routinely send automatically formed personal emails with user's name in the header. If the person's name is stored somewhere in the website database, the generation of a header comes down to concatenation, for example, joining the string `Hello` with the string that represents the user's name.
 
-  Write a program that generates the header and the body of the email using variables, and prints the resulting strings on screen.
+  Write a program that generates the header and the body of the email using variables, and prints the resulting strings to screen.
 
   For the header use variables `$firstName` and `$greeting`, a coma and a exclamation sign. Output in in the correct order.
   

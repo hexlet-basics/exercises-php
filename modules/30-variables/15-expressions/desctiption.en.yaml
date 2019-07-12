@@ -75,7 +75,7 @@ theory: |
 
 instructions: |
 
-  Write a program that uses the given amount of euro assigned to the variable `$euros~, converts euro to dollars and outputs the result. Then it converts the result into rubles and prints it on a new line.
+  Write a program that takes the given amount of euro assigned to the variable `$euros~, converts euro to dollars and outputs the result. Then it converts the result into rubles and prints it on a new line.
   
   An output example for 100 euro:
 

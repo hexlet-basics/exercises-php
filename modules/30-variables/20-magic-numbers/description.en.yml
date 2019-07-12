@@ -35,13 +35,13 @@ theory: |
 
   Please note the following:
 
-  * Variable names use _lowerCamelCase_ 
+  * Variable names are in _lowerCamelCase_ 
   * The two new variables are separated from the calculations that follow them by an empty line. Those variables make sense even without calculations, so separating them we'll increase the code readability. 
   * As result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow. 
 
 instructions: |
 
-  You saw code, that prints the overall number of rooms owned by the current king:
+  Look at the code that outputs the overall number of rooms owned by the current king:
 
   ```php
   $king = 'King Balon the 6th';
@@ -60,7 +60,7 @@ instructions: |
   King Balon the 6th has 102 rooms.
   ```
 
-  A variable name must convey the meaning of the number and stay short enough, but at the same time it must comprehensible so it's easy to read.
+  A variable name must convey the meaning of the number and stay short enough, but at the same time it must be comprehensible so it's easy to read.
 
   Remember: code will work with any naming, and our system only checks the output result, so we rely on you to do this exercise properly.
 

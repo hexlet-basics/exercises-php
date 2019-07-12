@@ -46,7 +46,7 @@ instructions: |
   4. the fifth character from the second string;
   5. the third character from the second string.
 
-  Try using interpolation: in addition to usual variables, you can specify variables with an index in square brackets that refers to a separate character inside the curly braces
+  Try using interpolation: in addition to usual variables, you can put inside curly braces variables with an index in square brackets that refers to a separate character
 
 
 tips: []

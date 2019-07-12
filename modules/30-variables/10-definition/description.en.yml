@@ -12,7 +12,7 @@ theory: |
   print_r('Father!');
   ```
 
-  That's the way to go in a simple case, but if the phrase _Father!_ starts to appear again and again and in different parts of program, we would have to duplicate it. And imagine we need to change the phrase, which happens quite often. That's where problems begin. We would have to find all bits of code where the phrase _Father!_ was used and replace it. We could approach it differently though. Instead of duplicating out phrase, it's sufficient to create a variable to store this phrase.
+  That's the way to go in a simple case, but if the phrase _Father!_ starts to appear again and again and in different parts of the program, we would have to duplicate it. And imagine we need to change the phrase, which happens quite often. That's where problems begin. We would have to find all bits of code where the phrase _Father!_ was used and replace it. We could approach it differently though. Instead of duplicating our phrase, it's sufficient to create a variable to store it.
 
   ```php
   <?php
@@ -23,9 +23,9 @@ theory: |
   print_r($greeting);
   ```
 
-  Look at the line `$greeting = 'Father!'`. We assign the value `'Father!' to the variable named `$greeting`. In PHP variable names always start with dollar sign _$_.
+  Look at the line `$greeting = 'Father!'`. We assign the value `'Father!' to the variable named `$greeting`. In PHP variable names always start with the dollar sign _$_.
 
-  Once the variable is created, we can start using it. We replace with all occurences of our phrase. While the code is being executed, the interpreter (the one that executes the php code) reaches the line `print_r($greeting)` and pulls the content out of the variable, and then executes that code. As result, we'll have the following output:
+  Once the variable is created, we can start using it. We replace with it all occurences of our phrase. While the code is being executed, the interpreter (the one that executes the php code) reaches the line `print_r($greeting)`, pulls the content out of the variable and executes the code. As result, we'll have the following output:
 
   <pre class='hexlet-basics-output'>
     Father!
@@ -53,7 +53,7 @@ theory: |
 instructions: |
 
   Create a variable with name `$motto` and assign to it `What Is Dead May Never Die!`. Output the content of the variable.
-  Создайте переменную с именем `$motto` и содержимым `What Is Dead May Never Die!`. Распечайте содержимое переменной.
+
 
 
 tips: []
