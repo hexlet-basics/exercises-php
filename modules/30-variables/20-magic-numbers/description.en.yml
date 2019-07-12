@@ -1,0 +1,67 @@
+---
+
+name: Magic numbers
+theory: |
+
+  Let's refresh one of the previous lessons:
+
+  ```php
+  <?php
+
+  $euros = 1000;
+  $dollars = $euros * 1.25; // => 1250
+  $rubles = $dollars * 60; // => 75000
+
+  print_r($rubles);
+  ```
+
+  As far as professional development is concerned, such code "smells". This expression describes a code that deviates from the so-called best practices. And here is why: at this point already looking at numbers `60` and `1.25`, you'll probably wonder: what are those numbers? Imagine looking at them in a month. How is another developer that has never seen that code before supposed to understand them? In the example above we can recover the context by correctly naming variables. In real life, however, code is much more complex, and often it's impossible to guess what some numbers could possibly mean.
+
+  Such "smell" is called magic numbers. Numbers, origins of which are impossible to guess without a thorough knowledge of what's happening in a particular bit of the code.
+
+
+  ```php
+  <?php
+
+  $dollarsInEuro = 1.25;
+  $rublesInDollar = 60;
+
+  $euros = 1000;
+  $dollars = $euros * $dollarsInEuro; // => 1250
+  $rubles = $dollars * $rublesInDollar; // => 75000
+
+  print_r($rubles);
+  ```
+
+  Please note the following:
+
+  * Variable names use _lowerCamelCase_ 
+  * The two new variables are separated from the calculations that follow them by an empty line. Those variables make sense even without calculations, so separating them we'll increase the code readability. 
+  * As result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow. 
+
+instructions: |
+
+  You saw code, that prints the overall number of rooms owned by the current king:
+
+  ```php
+  $king = 'King Balon the 6th';
+  print_r($king . ' has ' . (6 * 17) . ' rooms.');
+  ```
+
+  As you see, these are magic numbers - it's not clear what 6 and 17 refer to. If you knew the history of the royal family, however, you would know that every new king inherits all castles from ansestors and builds a new one - the exact copy of his parents' castle.
+
+  This weird dynasty just produces identical castles...
+
+  Get rid of magic numbers, creating new variables, and print the following text to the screen.
+
+  Like this:
+
+  ```
+  King Balon the 6th has 102 rooms.
+  ```
+
+  A variable name must convey the meaning of the number and stay short enough, but at the same time it must comprehensible so it's easy to read.
+
+  Remember: code will work with any naming, and our system only checks the output result, so we rely on you to do this exercise properly.
+
+tips: []

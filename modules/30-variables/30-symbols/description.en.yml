@@ -1,0 +1,52 @@
+---
+
+name: Extracting characters from string
+theory: |
+
+  Sometimes we need to get one character from a string. For example, if a website stores user's name and last name, and at some moment we need to display this infomation in the abbreviated format, like `A. Ivanov`, we would need to extract the first character of the user's name.
+  
+  ```php
+  <?php
+
+  $firstName = 'Alexander';
+
+  print_r($firstName[0]); // => A
+  ```
+
+  The square braces with a number in it - is a special operator used to extract a character from a string. The number inside is called an **index** or an **offset** - the character position inside the string. In almost all programming languages, the index numeration starts from 0. Therefore, we can access the first character by referring to it with the `0` index.
+  
+  PHP also supports negative string offsets. In that case, we refer to characters from the end of the string. `-1` is the index of the last character, `-2` is refers to the second last character and so on. Unlike the zero-based forward offsets, in case of inverted offset the first character's index  is  `-1`.
+  
+  ```php
+  <?php
+
+  $firstName = 'Alexander';
+
+  print_r($firstName[-1]); // => r
+  ```
+
+  An index can be represented not only by a number, but also by a variable value. The following example will produce the same result - the output of the character `A`, even though it's index inside the square brackets is specified by a variable, rather than a specific number.
+  
+  ```php
+  <?php
+
+  $firstName = 'Alexander';
+  $index = 0;
+
+  print_r($firstName[$index]); // => A
+  ```
+
+instructions: |
+
+  You have three variables with last names of three different persons. Combine the characters and print them to screen in the following order:
+
+  1. the third character from the first string;
+  2. the second character from the second string;
+  3. the forth character from the third string;
+  4. the fifth character from the second string;
+  5. the third character from the second string.
+
+  Try using interpolation: in addition to usual variables, you can specify variables with an index in square brackets that refers to a separate character inside the curly braces
+
+
+tips: []

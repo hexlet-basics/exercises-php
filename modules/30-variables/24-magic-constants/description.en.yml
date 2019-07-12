@@ -1,0 +1,28 @@
+---
+
+name: Magic constants
+theory: |
+
+  Apart from regular constants, PHP also has a separate constant type - **magic constants**. We can sum up their difference as follows:
+
+  * Magic constants can't be defined by us, we only can use the exsisting ones.
+  * Magic constant enclosed in a double underscore `__`. 
+  * The magic is that such constants have the same value only when used in the same part of the program.
+
+  The last point may sound weird to you. It doesn't sound like a constant, right? They may not be permanent, but the way they change is strictly regulated and it doesn't cause us any troubles. Examples of such constants are:
+
+  * `__LINE__` — contains the currenf line of the file in which this constant is used
+  * `__FILE__` — path to the current file
+  * `__DIR__` — path to the directory of the current file 
+
+instructions: |
+
+  Print the path to the current directory using a magic constant.
+
+tips:
+  - |
+    [Magic constant](http://php.net/manual/en/language.constants.predefined.php)
+
+definitions:
+  - name: "Magic constant"
+    description: "a special constant predefined in the PHP core; it's value depends on the context"

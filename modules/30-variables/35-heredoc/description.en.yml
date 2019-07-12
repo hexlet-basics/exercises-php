@@ -1,0 +1,38 @@
+---
+
+name: Heredoc
+theory: |
+
+  The third method to delimit a string is using the heredoc syntax: <<<. After this operator an indentifier is provided, then a newline. The string itself follows, and then the same identifier again to close the quotation. The identifier name is chosen randomly. Such method is handy for long strings with line breaks and quote marks of different sorts.
+ 
+  ```php
+  <?php
+
+  $str = <<<EOT
+  An example of a string
+  that stretches to several lines,
+  using the heredoc syntax.
+  This way you don't need to escape single ' and double " quotes
+  EOT;
+  print_r($str);
+  ```
+
+  <pre class='hexlet-basics-output'>
+  An example of a string
+  that stretches to several lines,
+  using the heredoc syntax.
+  This way you don't need to escape single ' and double " quotes
+  </pre>
+
+  Note that there must be no whitespaces before the closing identifier (in this case 'EOT'). Otherwise the interpreter will exit with a syntax error.
+
+instructions: |
+
+  Assign the below text to the variable `$str`. Use the heredoc syntax.
+  
+        Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
+        This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
+
+definitions: []
+
+tips: []

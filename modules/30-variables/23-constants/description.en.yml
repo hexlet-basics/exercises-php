@@ -1,0 +1,34 @@
+---
+
+name: Constants
+theory: |
+
+  Some data, such as mathematical constants, never change. Take, for example, π. It's aproximately equal to `3.14` and it can't change.
+  
+  Such data is usually stored in constants.
+
+    ```php
+    <?php
+
+    const PI = 3.14;
+    print_r(PI); // 3.14
+    ```
+
+  The syntax of creating a constant is different from that of a variable. It starts with the key word `const` and the name of the constant. The dollar sign is ommited. Then we assigned to it the desired value. The convention tells us to name constant in upper case with underscore `_` as a separator. A constant can be used in any expression in the same way as a variable. The only limitation is that a constant can't be changed, which sounds quite logical.
+
+  PHP has different inbuilt constant that can be used anytime in a program. Here are some of them:
+ 
+  * `PHP_VERSION` — the current PHP version
+  * `PHP_MAXPATHLEN` — the maximum supported length of file names
+  * `PHP_INT_MAX` — the maximum value of integers
+instructions: |
+
+  Create the constant `DRAGONS_BORN_COUNT` and assign to it number 3 - the number of dragons Daenerys has.
+
+tips:
+  - |
+    [The list of PHP core predefined constants](https://www.php.net/manual/en/reserved.constants.php)
+
+definitions:
+  - name: "Constant"
+    description: "a way to store information and give it a name to be reused in code later; unlike variables, constants can't be changed"
