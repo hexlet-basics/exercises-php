@@ -1,0 +1,64 @@
+---
+
+name: Variables and concatenation
+theory: |
+
+  This time we will reinforce the previous topic by using variables together with concatenation. Syntax is going to be the same as we used when we were concatenating (joining) two strings together:
+  
+
+  ```php
+  <?php
+
+  $what = "Kings" . "road";
+  print_r($what); // => "Kingsroad"
+  ```
+
+  … it means we would be able to concatenate a string with a variable that refers to another string:
+  
+  ```php
+  <?php
+
+  $first = "Kings";
+  $what = $first . "road";
+
+  print_r($what); // => "Kingsroad"
+  ```
+
+  … and even concatenate two variables with string values:
+
+  ```php
+  <?php
+
+  $first = "Kings";
+  $last = 'road';
+
+  $what = $first . $last;
+  print_r($what); //=> "Kingsroad"
+  ```
+
+instructions: |
+
+  Websites constantly send emails to their users. They routinely send automatically formed personal emails with user's name in the header. If the person's name is stored somewhere in the website database, the generation of a header comes down to concatenation, for example, joining the string `Hello` with the string that represents the user's name.
+
+  Write a program that generates the header and the body of the email using variables, and prints the resulting strings to screen.
+
+  For the header use variables `$firstName` and `$greeting`, a coma and a exclamation sign. Output it in the correct order.
+  
+  For the body of the email use variables `$info` and `$intro`, with the second sentence displayed on a new line.
+  
+  Here is the expected result:
+
+  ```
+  Hello, Joffrey!
+  Here is important information about your account security.
+  We couldn't verify you mother's maiden name.
+  ```
+
+  Make it work using `print_r` only two times. 
+
+tips:
+  - |
+    Think how to get a two line output. Which strings should be variables concatenated to and in which order?
+  - |
+    Remember that you can create a string that would only contain the control sequence `\n\.
+

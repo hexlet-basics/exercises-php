@@ -2,7 +2,7 @@
 
 name: Comments
 theory: |
-  Almost all the programming languages allow you to add comments to your code. Interpreter doesn't use them, they are only for people so programmers can leave notes for themselves and for other programmers. There are two types of comments in php:
+  Almost all the programming languages allow you to add comments to your code. Interpreter doesn't evaluate them, their only purpose is to give programmers opportunity leave notes for themselves and for other programmers. There are two types of comments in php:
 
   **Single line comments** start with `//`. Following any text or symbols, all of it will not be evaluated or executed.
 
@@ -14,7 +14,7 @@ theory: |
   // For Winterfell!
   ```
 
-  or can stay on the same line after some code:
+  or can follow some code on the same line:
 
   ```php
   <?php

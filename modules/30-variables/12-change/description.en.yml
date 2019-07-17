@@ -1,0 +1,33 @@
+---
+
+name: Changing a variable
+theory: |
+
+  The word 'variable' itself implies that it can be changed. And indeed, with time, the value of a variable inside the program can change.
+
+  ```php
+  <?php
+
+
+  $greeting = 'Father!';
+  print_r($greeting);
+  print_r($greeting);
+
+  $greeting = 'Mother!';
+  print_r($greeting);
+  print_r($greeting);
+  ```
+
+  The name hasn't changed, but the information inside is different. We should note that it's not required to declare variables in PHP. A variable is declared at the moment of its initial use in the program instead.
+
+  Variables is a powerful and at the same time dangerous thing. We can't be sure what value is stored in the variable without analyzing the preceeding code. That's exactly what developers do when they are trying to find out why their program is not working, or not working the way it's supposed to, in the debugging process.
+
+instructions: |
+
+  There is a variable with value `'Brienna' in the code. Redefine the value of the variable and assign to it the same string in reversed order.
+
+tips: []
+
+definitions:
+  - name: Variable
+    description: "a way to store information and give it a name to be reused in code later."
