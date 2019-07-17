@@ -14,7 +14,7 @@ theory: |
   print_r($dollars);
   ```
 
-  In the previous lesson we assigned a specific value to a variable. However in the code above `$dollars = 50 * 1.25;` we find an **expression** on the right side of the equal sign. The interpreter will calculate the result - `62.5` and will keep it behind that variable. As far as interpreter is concerned, it doesn't matter whether it's `62.2` or `50 * 1.25`. It treats both as expressions that need to be evaluated. Having evaluated them, it produces the same result - `62.5'.
+  In the previous lesson we assigned a specific value to a variable. However in the code above `$dollars = 50 * 1.25;` we find an **expression** on the right side of the equal sign. The interpreter will calculate the result - `62.5` and will keep it behind that variable. From the interpreter's point of view, it doesn't matter whether it's `62.2` or `50 * 1.25`. It treats both as expressions that need to be evaluated. Having evaluated them, it produces the same result - `62.5'.
   
   Every string represents an expression. String concatenation is an expression too. Whenever the interpreter sees an expression, it evaluates it and generates the result - **the value of the expression**. You will find some examples of expressions below with the final value of each expression in the comments:
  
