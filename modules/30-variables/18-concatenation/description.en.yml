@@ -61,4 +61,3 @@ tips:
     Think how to get a two line output. Which strings should be variables concatenated to and in which order?
   - |
     Remember that you can create a string that would only contain the control sequence `\n\.
-
