@@ -6,7 +6,7 @@ theory: |
   Apart from regular constants, PHP also has a separate constant type - **magic constants**. We can sum up their difference as follows:
 
   * Magic constants can't be defined by us, we only can use the exsisting ones.
-  * Magic constant is enclosed in double underscores `__`. 
+  * Magic constant is wrapped in double underscores `__`. 
   * The magic is that such constants have the same value only when used in the same part of the program.
 
   The last point may sound weird to you. It doesn't sound like a constant, right? They may not be permanent, but the way they change is strictly regulated and it doesn't cause us any troubles. Examples of such constants are:

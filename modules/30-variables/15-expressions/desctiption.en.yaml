@@ -28,7 +28,7 @@ theory: |
   "Good" . "will"  // => "Goodwill"
   ```
 
-  The rules of code building (grammar of the language) are such, that we can give a program a calculation (not only a mathematical one, but also a string calculation like concatenation) anywhere where an expression is expected, and the program will remain workable. As a result, it's impossible to describe and show every possible case of every possible operation.
+  The rules of code building (grammar of the language) are such, that we can give a program a calculation (not only a mathematical one, but also a string calculation like concatenation) anywhere an expression is expected, and the program will remain workable. As a result, it's impossible to describe and show every possible case of every possible operation.
 
   Any program consists of a set of expression combinations and understanding of this concept is one of the key steps on you path to becoming a developer. 
 
@@ -69,13 +69,13 @@ theory: |
 
   <pre class='hexlet-basics-output'>The price is 3750 rubles</pre>
 
-  Any variable can be part of any expression. At the time of it evaluation, the variable name is replaced by it's value.
+  Any variable can be part of any expression. At the moment of its evaluation, the variable name is replaced by its value.
   
   PHP interpreter calculates the value of `$dollars` before this variable is used in other expressions. Once it's time to use that variable, PHP already "knows" the value because it has already calculated it.
 
 instructions: |
 
-  Write a program that takes the given amount of euro assigned to the variable `$euros~, converts euro to dollars and outputs the result. Then it converts the result into rubles and prints it on a new line.
+  Write a program that takes the given amount of euro assigned to the variable `$euros`, converts euro to dollars and outputs the result. Then it converts the result into rubles and prints it on a new line.
   
   An output example for 100 euro:
 

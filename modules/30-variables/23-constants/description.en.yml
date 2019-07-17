@@ -14,7 +14,7 @@ theory: |
     print_r(PI); // 3.14
     ```
 
-  The syntax of creating a constant is different from that of a variable. It starts with the key word `const` and the name of the constant. The dollar sign is ommited. Then we assign to it the desired value. The convention tells us to name constant in upper case with underscore `_` as a separator. A constant can be used in any expression in the same way as a variable. The only limitation is that a constant can't be changed, which sounds quite logical.
+  The syntax of creating a constant is different from that of a variable. It starts with the key word `const` and the name of the constant. The dollar sign is ommited. Then we assign to it the desired value. The convention tells us to name constant in upper case with an underscore `_` as a separator. A constant can be used in any expression in the same way as a variable. The only limitation is that a constant can't be changed, which sounds quite logical.
 
   PHP has different inbuilt constants that can be used anytime in a program. Here are some of them:
  

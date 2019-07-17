@@ -23,7 +23,7 @@ theory: |
   print_r("{$greeting}, {$firstName}!");
   ```
 
-  We created just one string and "inserted" variables in it using curly braces (`{ }`) where we expect that variable. It can be compared to a form that is filled in with the required values. Now we don't have to care about punctuation marks or whiespaces - all symbols are already located in this template string where we want them to appear.
+  We created just one string and "inserted" variables in it using curly braces (`{ }`) where we expect that variable. It can be compared to a form that is filled in with the required values. Now we don't have to care about punctuation marks or whitespaces - all symbols are already located in this template string where we want them to appear.
   
   You can create as many curly braces blocks as you want in one string.
 

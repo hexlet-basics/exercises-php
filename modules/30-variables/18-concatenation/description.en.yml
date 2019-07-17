@@ -42,7 +42,7 @@ instructions: |
 
   Write a program that generates the header and the body of the email using variables, and prints the resulting strings to screen.
 
-  For the header use variables `$firstName` and `$greeting`, a coma and a exclamation sign. Output in in the correct order.
+  For the header use variables `$firstName` and `$greeting`, a coma and a exclamation sign. Output it in the correct order.
   
   For the body of the email use variables `$info` and `$intro`, with the second sentence displayed on a new line.
   

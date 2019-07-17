@@ -24,11 +24,11 @@ theory: |
   This way you don't need to escape single ' and double " quotes
   </pre>
 
-  Note that there must be no whitespaces before the closing identifier (in this case 'EOT'). Otherwise the interpreter will exit with a syntax error.
+  Note that there must be no whitespaces before the closing identifier (in this case 'EOT'). Otherwise the code execution will exit with a syntax error.
 
 instructions: |
 
-  Assign the below text to the variable `$str`. Use the heredoc syntax.
+  Assign the text below to the variable `$str`. Use the heredoc syntax.
   
         Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
         This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.

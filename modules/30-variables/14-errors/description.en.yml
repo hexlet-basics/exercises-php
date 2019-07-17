@@ -12,7 +12,7 @@ theory: |
   $greeting = 'Father!';
   ```
 
-  Execution of the program above will exit with error _PHP Notice:  Undefined variable: greeting_. _Undefined variable_ is a reference error, it means that the code uses a name (identificator) that is not defined. And the error output points us to the exact place where the error occured: _greeting_. Other possible mistakes include trivial typos which may happen when a variable is used or declared.
+  Execution of the program above will exit with error _PHP Notice:  Undefined variable: greeting_. _Undefined variable_ is a reference error, it means that the code uses a name (identificator) that is not defined. And the error output points us to the exact place where the error occured: _greeting_. Other possible mistakes include trivial typos that may occur when a variable is used or declared.
   You can reduce the number of similar errors by using a correctly set editor. Such editor highlights names used without being previously declared and warns you of possible problems.
 
 instructions: |

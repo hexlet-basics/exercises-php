@@ -17,7 +17,10 @@ theory: |
 
   As far as professional development is concerned, such code "smells". This expression describes a code that deviates from the so-called best practices. And here is why: at this point already looking at numbers `60` and `1.25`, you'll probably wonder: what are those numbers? Imagine looking at them in a month. How is another developer that has never seen that code before supposed to understand them? In the example above we can recover the context by correctly naming variables. In real life, however, code is much more complex, and often it's impossible to guess what some numbers could possibly mean.
 
-  Such "smell" is called magic numbers. Numbers, origins of which are impossible to guess without a thorough knowledge of what's happening in a particular bit of the code.
+  Such "smell" is called magic numbers. Numbers, origins of which are impossible to guess without a thorough knowledge of what's happening in a particular part of the code.
+
+  It's easy to fix it though: once you created properly named variables, all pieces fall into place.
+
 
 
   ```php
@@ -37,7 +40,7 @@ theory: |
 
   * Variable names are in _lowerCamelCase_ 
   * The two new variables are separated from the calculations that follow them by an empty line. Those variables make sense even without calculations, so separating them we'll increase the code readability. 
-  * As result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow. 
+  * As a result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow. 
 
 instructions: |
 
@@ -48,7 +51,7 @@ instructions: |
   print_r($king . ' has ' . (6 * 17) . ' rooms.');
   ```
 
-  As you see, these are magic numbers - it's not clear what 6 and 17 refer to. If you knew the history of the royal family, however, you would know that every new king inherits all castles from ansestors and builds a new one - the exact copy of his parents' castle.
+  As you see, these are magic numbers - it's not clear what 6 and 17 refer to. If you knew the history of the royal family, however, you would know that every new king inherits all castles from ancestors and builds a new one - the exact copy of his parents' castle.
 
   This weird dynasty just produces identical castles...
 
