@@ -19,7 +19,7 @@ theory: |
 
   Such "smell" is called magic numbers. Numbers, origins of which are impossible to guess without a thorough knowledge of what's happening in a particular part of the code.
 
-  It's easy to fix it though: once you created properly named variables, all pieces fall into place.
+  It's easy to fix it though: once you created properly named variables, all the pieces fall into place.
 
 
 
