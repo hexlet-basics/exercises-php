@@ -3,30 +3,30 @@
 name: How do we verify solutions?
 theory: |
 
-  Our website verifies your solutions automatically. You may wonder how does it work?
+  Our website verifies your solutions automatically. You may wonder how it works.
 
-  The simplest case only means to run your code and look at the screen output. The system checks then if the output is the same as expected.
+  In the simplest case the system runs your code and analyzes the screen output. Then it compares the actual output against the expected output.
 
-  The following lessons deal with the matters more complex. You will be writing functions: a kind of mini-programs that take their data from the outside and perform some operations on it. Verifying solutions gets a little more complicated in that case. The system runs your code and sends it some input prepared beforehand. Knowing the right answer for that very input, the system checks if it matches the value returned by your function.
+  The following lessons deal with more complex matters. You will be writing functions: a kind of mini-programs that receive some data from outside and perform operations on it. Verifying solutions gets a little more complicated in that case. The system runs your code sending some data to it. The system knows what result a correctly written function would receive with that particular data and "expects" it.
 
-  Let's assume your task is to program a function summing two numbers. The verification system would send it several combinations of numbers and compare your function's answers with the known correct ones. Had all the answers match the true values for given combinations, your solution would be considered valid.
+  Let's assume your task is to program a function that adds two numbers. The verification system would give it several combinations of numbers and compare your function's answers with correctly calculated ones. If all actual values match the expected ones, your solution would be considered valid.
 
-  This approach is named testing. The real life day-to-day development process uses it extensively. A developer usually writes the tests _first_, and only afterward proceed to the desired program itself. Thus she can run tests at every turn looking if the program gets closer to completion.
+  This approach is named testing. It is used extensively in the real life day-to-day development process. Developers usually write tests _first_, and only after proceed to writing the program itself. During that process he runs tests multiple time to check how close he got to the desired solution. 
 
-  That is why our website says “Tests passed”, have you solved the task aright.
+  That is why our website says “Tests passed” once you solved the task correctly.
 
-  One of your tasks in the following lessons will be to write a function that performs some calculations and returns the result. As an example, let's assume you would make a small mistake and the function returned a wrong answer. The system's comment would be like that:
+  One of your tasks in the following lessons will be to write a function that performs certain calculations and returns the result. As an example, let's assume you made a small mistake and the function returned a wrong value. In that case, the system will give you the following message:
 
   <pre class='hexlet-basics-output'>Fatal error: Uncaught Assert\InvalidArgumentException: Value "10" does not equal expected value "35".</pre>
 
-  The main thing comes after the colon: “Value ‘10’ does not equal expected value ‘35’”. This means the proper function would have returned 35, and yet the proposed solution unduly returned 10 — which means it works incorrectly.
+  The main thing comes after the colon: “Value ‘10’ does not equal expected value ‘35’”. This means the correctly designed function would have returned 35, and yet the current function returns 10 — which means it works incorrectly.
 
 instructions: |
-  Make the following digits appear on the screen: `9780262531962`.
+  Print the following to screen: `9780262531962`.
 
 definitions:
   - name: Tests
-    description: "the code specially designed to check if the written program works correctly; it does so by comparing a set of known valid results with the actual output of the program."
+    description: "code designed to check if a program works correctly; it does so by comparing a set of known valid results against the actual output of the program."
 
 tips:
   - |
