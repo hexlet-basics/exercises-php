@@ -2,9 +2,9 @@
 
 name: Comments
 theory: |
-  Almost all the programming languages allow you to add comments to your code. Interpreter doesn't evaluate them, their only purpose is to give programmers opportunity leave notes for themselves and for other programmers. There are two types of comments in php:
+  Almost all the programming languages allow you to add comments to your code. Comments are read only by humans - the interpreter doesn't evaluate them. Comments serve as notes for those who wrote them and other developers. There are two types of comments in php:
 
-  **Single line comments** start with `//`. Following any text or symbols, all of it will not be evaluated or executed.
+  **Single line comments** start with `//`. Whatever follows after will not be evaluated or executed.
 
   A comment can take up the whole line:
 
@@ -22,7 +22,7 @@ theory: |
   print_r('I am the King'); // For Lannisters!
   ```
 
-  **Multiline comments** start with `/*` and end with `*/`. Each line between them should start with the `*`.
+  **Multiline comments** start with `/*` and end with `*/`. Each line between them should start with a `*`.
 
   ```php
   <?php

@@ -2,7 +2,7 @@
 
 name: Arithmetic Operators
 theory: |
-  When we mean to add two numbers, we write `3 + 4`, for example. The same works in PHP programming. Here is the program that adds two numbers.
+  In math, for example, to add two numbers we write `3 + 4`. The same works in programming. Here is the program that adds two numbers.
 
   ```php
   <?php
@@ -11,13 +11,13 @@ theory: |
   3 + 4;
   ```
 
-  (Remember comments? In the code above `//` is a comment from the teacher).
+  (Remember about comments? In the code above `//` is a comment from the teacher).
 
-  Arithmetic in programming is almost identical to what you've learned in school.
+  Arithmetics in programming is almost identical to what you've learned in school.
 
-  Line `3 + 4;` will make the interpreter add two numbers and calculate the answer. This program will work, but it's not particularly useful. We aren't giving commands really, all we're doing is telling the interpreter "here, sum of 3 and 4". In the real world it's not enough to  tell the interpreter, for instance, to calculate the sum of all the items in a cart. We usually need something like "caulcate the sum AND show the answer to the user".
+  The line `3 + 4;` will make the interpreter add two numbers and calculate the value. This program will work, but it's not particularly useful. We aren't giving commands really, all we're doing is telling the interpreter "here, sum of 3 and 4". In the real world it's not enough to  tell the interpreter, for instance, to calculate the sum of all the items in a cart. We usually need something like "caulcate the sum AND show the answer to the user".
 
-  We need to ask the interpreter to add numbers **AND** give it a command to do something with the result. Let's print in on the screen:
+  We need to ask the interpreter to add numbers **AND** give it a command to do something with the result. Let's display it on the screen:
 
   ```php
   <?php
@@ -25,7 +25,7 @@ theory: |
   print_r(3 + 4);
   ```
 
-  This is what's on the screen after we run the program:
+  This is the output we get on the screen after we run the program:
 
   ```
   7
@@ -39,22 +39,22 @@ theory: |
   * `%` — [modulo](https://en.wikipedia.org/wiki/Modulo_operation) (remainder after division)
   * `**` — power
 
-  Let's print some other stuff:
+  Now let's display the result of division and then the result of exponentiation.
 
   ```php
   print_r(8 / 2);  // => 4
   print_r(3 ** 2); // => 9
   ```
 
-  Somtimes we will show the result of running a line of code right in the line as a comment, like so:  `=> RESULT`. For example, `// => 4`.
-
-  The first instruction will print `4` on the screen (since `8 / 2` is `4`), and the second instruction will print 9 (since 3<sup>2</sup> is 9).
+  Sometimes we will show you the result of code execution at the end of a line as a comment, like so:  `=> RESULT`. For example, `// => 4`.
+  
+  The first instruction will output `4` to the screen (since `8 / 2` is `4`), and the second instruction will output 9 (since 3<sup>2</sup> is 9).
 
 instructions: |
 
-  Print out the result of dividing `81` by `9`.
+  Print the quotient of `81` and `9` to screen.
 
 tips:
-  - Put spaces between the operators and actual number (operands). This is good programming style. This is why our examples are like `print_r(3 + 4)`, and not `print_r(3+4)`.
+  - Always separate operators from numbers (operands). It's a good programming style. This is why our examples we wrote `print_r(3 + 4)`, and not `print_r(3+4)`.
   - Dividing by zero will produce an error. We'll learn how to handle errors like that later.
-  - If there are lines `// BEGIN` and `// END` in the editor, write your code between them.
+  - If you find lines `// BEGIN` and `// END` in the editor, write your code between them.

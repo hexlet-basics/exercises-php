@@ -1,10 +1,10 @@
 ---
 
-name: Statements
+name: Instructions
 theory: |
-  Statement is an instruction for a computer. PHP code is a set of statements separated by `;`.
+  Instruction is an command given to computer. PHP code is a set of instructions separated by `;`.
 
-  Here is an example of code with two statements. When you run this code you will see two sentences on the screen, one after the other.
+  Here is an example of code with two instructions. When you run this code you will see two sentences on the screen, one after the other.
 
   ```php
   <?php
@@ -13,7 +13,7 @@ theory: |
   print_r('Dracarys!');
   ```
 
-  Actually, it's possible to put a few statements in one line:
+  Actually, it's possible to put multiple instructions on the same line:
 
   ```php
   <?php
@@ -21,13 +21,13 @@ theory: |
   print_r('Mother of Dragons'); print_r('Drakarys!');
   ```
 
-  but it's considered a bad practice.
+  but it's considered bad practice.
 
 instructions: |
-  Put these three names on the screen, one after the other: "Robert", "Stannis", "Renly".
+  Output these three names on the screen, one after the other: "Robert", "Stannis", "Renly".
 
 tips: []
 
 definitions:
-  - name: "Statement"
-    description: "an instruction for a computer. PHP code is a set of statements separated by `;`"
+  - name: "Instruction"
+    description: "a command given to computer. PHP code is a set of instructions separated by `;`"
