@@ -2,7 +2,7 @@
 
 name: Syntax errors
 theory: |
-  If a PHP program isn't syntactically correct, the interpreter will show a relevant message and point you to the file and the line where the error have possibly occured. **Syntax errors** occur when the code has grammar mistakes. Grammar rules are important in human languages, grammar mistakes won't affect your ability to read or understand any text. In programming, however, we must follow rules to the letter. Even a tiny mistake can halt your program. A wrong parenthesis order, forgetting to add a semicolon  `;` — these are just few examples of such mistakes.
+  If a PHP program isn't syntactically correct, the interpreter will show a relevant message and point you to the file and the line where the error has possibly occured. **Syntax errors** occur when the code has grammar mistakes. Grammar rules are important in human languages, grammar mistakes won't affect your ability to read or understand any text. In programming, however, we must follow rules to the letter. Even a tiny mistake can halt your program. A wrong parenthesis order, forgetting to add a semicolon  `;` — these are just few examples of such mistakes.
 
   Here is an example of code with a syntax error:
 
