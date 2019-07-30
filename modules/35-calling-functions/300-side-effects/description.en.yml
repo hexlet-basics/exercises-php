@@ -1,0 +1,32 @@
+---
+
+name: Side effects
+theory: |
+
+  You have probably noticed (subconsciously maybe) that `print_r` is a function too. It receives data of any type and prints it to screen.
+
+  Now, here is a question for you: **what does `print_r` return?** Answer: whatever it returns is not used in any way.
+
+  `print_r` prints something to screen, but it is just some action that a function does, rather than return of some value.
+
+  Screen output and value return from a function are different and independent operations. Technically, screen output amounts to writing a file (a special one, but nevertheless a file). This subject is be better understood when one knows how an operating system works, which is very important for a programmer.
+
+  For a program, screen output is a so-called **side effect**. A side effect is an action that change the outer environment (runtime environment). Such actions include any network interactions, interaction with the file system (reading and writing files), screen output of data, printing out from a printer etc. Understanding the basic idea of side effects affects the programming style and ability to build high quality programs. We teach the practical application of those principles on [Hexlet](https://en.hexlet.io/).
+
+  Side effects are one of the main sources of problems and errors in program systems. A code with side effects is difficult to test and not reliable. Programming without side effects, however, doesn't make any sense. Without them it would be impossible to get any tangible result from a program (creating a database entry, printing to screen, send some data via a network etc.).
+
+instructions: |
+
+  This exercise is not directly related to the subject of the lesson, but doing it without creating variables is a very important step in your professional development.
+
+  Print to screen the name of `Daenerys Targaryen`'s mother, using the `parentFor` function and without creating variables.
+
+  As you remember, `parentFor` receives a child's name as the first parameter and returns a parent's name. As the second parameter it receives either `father` or `mother`. This way it knows which parent to return. By default, the second argument is set to 'mother'.
+
+tips:
+  - |
+    [Side Effect](https://en.wikipedia.org/wiki/Side_effect_(computer_science))
+
+definitions:
+  - name: Side Effect
+    description: "and action that changes the outer environment (runtime environment). For example, screen output of sending an email."

@@ -1,0 +1,69 @@
+---
+
+name: Functions as arguments
+theory: |
+
+  Let's continue the subject of expressions. As you remember, **a function call is an expression**, which means that we can put a function call in a function call (..in a function call in a function call... a-a-a-!)
+
+  ```php
+  <?php
+
+  $number = 100.234203;
+  $result = round(abs($number), 2);
+  ```
+
+  We are invoking 'round' with two arguments:
+
+  - result of invokation of `abs` with the argument `$number`
+  - number `2`.
+
+  We can do the same using intermediate steps:
+
+  ```php
+  <?php
+
+  $number = 100.234203;
+  $module = abs($number);
+
+  $result = round($module, 2);
+  ```
+
+  Which way is better? If a calculation is very simple and not too deep (not more than one nested function), then feel free to nest functions. In other cases, however, it's better to break down function calls to simple steps.
+
+  The reason for that is the same as always. Code would be easier to read. Firstly, an intermediate variable's name will help to understand what the operation is about. Secondly, it's easier to follow intermediate data and read such code. And lastly, deeply nested calls are difficult to read. In advanced languages it is solved by the mechanism called _function composition_, but, unfortunately, PHP doesn't have it.
+ 
+  Let's take a look at the code and figure out the order of calculations:
+  
+  ```php
+  <?php
+
+  $number = -100.234203;
+  $result = round(abs($number), round(2.43));
+  ```
+
+  PHP, like most other languages, is a language with **eager evaluation** stategy** (some languages may have **lazy evaluation strategy**). PHP tries to evaluate the deepest level first, and then moves upwards until it evaluates the whole expression.
+
+  In the example above, PHP will first evaluate arguments and only than invoke `round` with them.
+
+  Nested function calls may confuse beginners. There is no magic here, it's just the matter of practice. It would be a good exercise to break down the process to steps and write them down, simulating the computer's course of action, like so:
+
+  1. `$result = round(abs($number), round(2.43));`
+  2. `$result = round(100.234203, round(2.43));`
+  3. `$result = round(100.234203, 2);`
+  4. `$result = 100.23;`
+
+instructions: |
+
+  In order to build a genealogical tree of the Starks, Sam wrote a function named `parentFor`. It receives a child's full name as the first parameter, and returns parent's name. As the second parameter, we can pass it either 'mother' or 'father'. This way we let it know which one of the parents to return. By default, the second argument is `mother`. It means that if you need to know the mother's name, you can omit the second argument, and just pass it the child's name.
+
+  Write a progam that prints to screen the name of Joffrey's maternal **grandfather**. The child's full name is `Joffrey Baratheon`. 
+
+  Usage example of `parentFor`:
+
+  ```php
+  <?php
+  $mother = parentFor('Joffrey Baratheon');
+  print_r($mother); // Cersei Lannister
+  ```
+
+tips: []

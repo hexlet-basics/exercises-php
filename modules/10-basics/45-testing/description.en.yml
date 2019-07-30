@@ -11,7 +11,8 @@ theory: |
 
   Let's assume your task is to program a function that adds two numbers. The verification system would give it several combinations of numbers and compare your function's answers with correctly calculated ones. If all actual values match the expected ones, your solution would be considered valid.
 
-  This approach is named testing. It is used extensively in the real life day-to-day development process. Developers usually write tests _first_, and only after proceed to writing the program itself. During that process he runs tests multiple time to check how close he got to the desired solution. 
+  This approach is named testing. It is used extensively in the real life day-to-day development process. A developer usually writes tests _first_, and only after proceeds to writing the program itself. During that process he runs tests multiple times to check how close he got to the desired solution. 
+
 
   That is why our website says “Tests passed” once you solved the task correctly.
 

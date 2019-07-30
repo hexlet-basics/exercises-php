@@ -1,0 +1,44 @@
+---
+
+name: Default arguments
+theory: |
+
+  Let's take a look at the `round` function. It rounds a float number passed to it:
+
+  ```php
+  <?php
+
+  $result = round(10.25, 0); // 10
+  ```
+
+  We passed two arguments to the function: a number and a rounding precision. `0` means that the number will be rounded to an integer.
+  
+  Typically we want to round to an integer (rather then to a one decimal place, for example), so the creators of the `round` function made the second argument **optional* and gave it `0` as **default value**. It means that result will be the same even if you don't pass the second argument:
+
+
+  ```php
+  <?php
+
+  $result = round(10.25); // 10
+  ```
+
+  In case you need some other precision, pass it as the second argument:
+
+  ```php
+  <?php
+
+  $result = round(10.25, 1); // 10.3
+  ```
+
+  When a PHP function has optional arguments, they usually follow the required ones. There can be any number of optional arguments, but all of them must be placed in the end of the argument list.
+
+instructions: |
+
+  Round the float number assigned to `$number` to two decimal places and print the result to screen.
+
+
+tips: []
+
+definitions:
+  - name: Default argument
+    description: an optional function argument.

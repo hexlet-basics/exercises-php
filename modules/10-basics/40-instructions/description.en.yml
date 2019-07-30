@@ -2,7 +2,8 @@
 
 name: Instructions
 theory: |
-  Instruction is an command given to computer. PHP code is a set of instructions separated by `;`.
+
+  Instruction is a command given to computer. PHP code is a set of instructions separated by `;`.
 
   Here is an example of code with two instructions. When you run this code you will see two sentences on the screen, one after the other.
 
