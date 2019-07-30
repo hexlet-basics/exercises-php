@@ -13,6 +13,7 @@ theory: |
 
   This approach is named testing. It is used extensively in the real life day-to-day development process. A developer usually writes tests _first_, and only after proceeds to writing the program itself. During that process he runs tests multiple times to check how close he got to the desired solution. 
 
+
   That is why our website says “Tests passed” once you solved the task correctly.
 
   One of your tasks in the following lessons will be to write a function that performs certain calculations and returns the result. As an example, let's assume you made a small mistake and the function returned a wrong value. In that case, the system will give you the following message:
