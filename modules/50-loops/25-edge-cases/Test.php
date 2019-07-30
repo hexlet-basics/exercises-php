@@ -18,5 +18,7 @@ $result3 = isArgumentsForSubstrCorrect($str, 10, 10); // => false
 Assert::that($result3)->false();
 $result4 = isArgumentsForSubstrCorrect($str, 11, 1); // => false
 Assert::that($result4)->false();
-$result5 = isArgumentsForSubstrCorrect($str, 3, 3); // => true
-Assert::that($result5)->true();
+$result5 = isArgumentsForSubstrCorrect($str, 11, 0); // => false
+Assert::that($result5)->false();
+$result6 = isArgumentsForSubstrCorrect($str, 3, 3); // => true
+Assert::that($result6)->true();
