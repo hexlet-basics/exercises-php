@@ -114,7 +114,7 @@ instructions: |
 
 definitions:
   - name: "Escape Sequence"
-  - description: "a special combination of characters in the text. _\\n_, for example, specifies a line break"
+  - description: "a special combination of characters in the text. `\\n`, for example, specifies a line break"
   
 tips:
   - Make sure you experiment with string input on [https://repl.it/languages/php](https://repl.it/languages/php)
