@@ -10,11 +10,11 @@ theory: |
   ```php
   <?php
 
-  $dollars = 50 * 1.25;
-  print_r($dollars);
+  $dollarsCount = 50 * 1.25;
+  print_r($dollarsCount);
   ```
 
-  In the previous lesson we assigned a specific value to a variable. However in the code above `$dollars = 50 * 1.25;` we find an **expression** on the right side of the equal sign. The interpreter will calculate the result - `62.5` and will keep it behind that variable. From the interpreter's point of view, it doesn't matter whether it's `62.2` or `50 * 1.25`. It treats both as expressions that need to be evaluated. Having evaluated them, it produces the same result - `62.5'.
+  In the previous lesson we assigned a specific value to a variable. However in the code above `$dollarsCount = 50 * 1.25;` we find an **expression** on the right side of the equal sign. The interpreter will calculate the result - `62.5` and will keep it behind that variable. From the interpreter's point of view, it doesn't matter whether it's `62.2` or `50 * 1.25`. It treats both as expressions that need to be evaluated. Having evaluated them, it produces the same result - `62.5'.
   
   Every string represents an expression. String concatenation is an expression too. Whenever the interpreter sees an expression, it evaluates it and generates the result - **the value of the expression**. You will find some examples of expressions below with the final value of each expression in the comments:
  
@@ -49,10 +49,10 @@ theory: |
   <?php
 
   $rublesPerDollar = 60;
-  $dollars = 50 * 1.25; // => 62.5
-  $rubles = $dollars * $rublesPerDollar; // => 3750
+  $dollarsCount = 50 * 1.25; // => 62.5
+  $rublesCount = $dollarsCount * $rublesPerDollar; // => 3750
 
-  print_r($rubles);
+  print_r($rublesCount);
   ```
 
   Now let's add a text to the input using concatenation:
@@ -61,17 +61,17 @@ theory: |
   <?php
 
   $rublesPerDollar = 60;
-  $dollars = 50 * 1.25; // => 62.5
-  $rubles = $dollars * $rublesPerDollar; // => 3750
+  $dollarsCount = 50 * 1.25; // => 62.5
+  $rublesCount = $dollarsCount * $rublesPerDollar; // => 3750
 
-  print_r('The price is ' . $rubles . ' rubles');
+  print_r('The price is ' . $rublesCount . ' rubles');
   ```
 
   <pre class='hexlet-basics-output'>The price is 3750 rubles</pre>
 
   Any variable can be part of any expression. At the moment of its evaluation, the variable name is replaced by its value.
   
-  PHP interpreter calculates the value of `$dollars` before this variable is used in other expressions. Once it's time to use that variable, PHP already "knows" the value because it has already calculated it.
+  PHP interpreter calculates the value of `$dollarsCount` before this variable is used in other expressions. Once it's time to use that variable, PHP already "knows" the value because it has already calculated it.
 
 instructions: |
 

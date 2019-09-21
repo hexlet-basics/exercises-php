@@ -1,11 +1,11 @@
 <?php
 
-$euros = 100;
+$eurosCount = 100;
 
 // BEGIN
-$dollars = $euros * 1.25;
-print_r($dollars);
+$dollarsCount = $eurosCount * 1.25;
+print_r($dollarsCount);
 print_r("\n");
-$rubles = $dollars * 60;
-print_r($rubles);
+$rublesCount = $dollarsCount * 60;
+print_r($rublesCount);
 // END
