@@ -53,6 +53,13 @@ instructions: |
 
   Напишите функцию `isMister`, которая принимает строку и проверяет, является ли она словом `'Mister'`.
 
+  ```php
+  <?php
+
+  isMister('Mister'); // => true
+  isMister('Missis'); // => false
+  ```
+
 tips:
   - |
     [Именование в программировании](https://ru.hexlet.io/blog/posts/naming-in-programming)
