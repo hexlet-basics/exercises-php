@@ -62,6 +62,5 @@ instructions: |
   doesContain('Tommy', 'd'); // false
   ```
 
-
 tips:
   - "[Список простых чисел](https://ru.wikipedia.org/wiki/Список_простых_чисел)"

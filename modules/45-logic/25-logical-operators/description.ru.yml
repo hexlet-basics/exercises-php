@@ -106,6 +106,15 @@ instructions: |
 
   Функция возвращает `true`, если распознан Ланнистер, и `false`, если не распознан.
 
+  Примеры вызова:
+
+  ```php
+  <?php
+
+  isLannisterSoldier('red', 'man');   // => false
+  isLannisterSoldier('blue', 'lion'); // => true
+  ```
+
 tips:
   - |
     [Булева алгебра](https://ru.wikipedia.org/wiki/Булева_алгебра)

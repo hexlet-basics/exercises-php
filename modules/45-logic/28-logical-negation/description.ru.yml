@@ -43,6 +43,15 @@ instructions: |
 
   Вам доступна уже готовая к использованию функция `isLannisterSoldier`. Можете воспользоваться ей, чтобы не писать все логические условия заново.
 
+  Примеры вызова:
+
+  ```php
+  <?php
+
+  isNotLannisterSoldier('red', 'man');   // => true
+  isNotLannisterSoldier('blue', 'lion'); // => false
+  ```
+
 tips:
   - |
     [Законы Де Моргана](https://ru.wikipedia.org/wiki/Законы_де_Моргана)
