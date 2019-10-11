@@ -4,7 +4,7 @@ name: Extracting characters from string
 theory: |
 
   Sometimes we need to get one character from a string. For example, if a website stores user's name and last name, and at some moment we need to display this infomation in the abbreviated format, like `A. Ivanov`, we would need to extract the first character of the user's name.
-  
+
   ```php
   <?php
 
@@ -14,9 +14,9 @@ theory: |
   ```
 
   The square braces with a number in it - is a special operator used to extract a character from a string. The number inside is called an **index** or an **offset** - the character position inside the string. In almost all programming languages, the index numeration starts from 0. Therefore, we can access the first character by referring to it with the `0` index.
-  
+
   PHP also supports negative string offsets. In that case, we refer to characters from the end of the string. `-1` is the index of the last character, `-2` is refers to the second last character and so on. Unlike the zero-based forward offsets, in case of inverted offset the first character's index  is  `-1`.
-  
+
   ```php
   <?php
 
@@ -26,7 +26,7 @@ theory: |
   ```
 
   An index can be represented not only by a number, but also by a variable value. The following example will produce the same result - the output of the character `A`, even though it's index inside the square brackets is specified by a variable, rather than a specific number.
-  
+
   ```php
   <?php
 

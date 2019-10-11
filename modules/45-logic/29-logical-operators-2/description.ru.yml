@@ -15,9 +15,9 @@ theory: |
       return $year % 400 === 0 || ($year % 4 === 0 && $year % 100 !== 0);
   }
 
-  isLeapYear(2018); // => false
-  isLeapYear(2017); // => false
-  isLeapYear(2016); // => true
+  isLeapYear(2018); // false
+  isLeapYear(2017); // false
+  isLeapYear(2016); // true
   ```
 
   Разберём по частям:
@@ -42,8 +42,8 @@ instructions: |
   Примеры вызова:
 
   ```php
-  isNeutralSoldier('yellow', 'black'); // => true
-  isNeutralSoldier('red', 'black');    // => false
-  isNeutralSoldier('red', 'red');      // => false
+  isNeutralSoldier('yellow', 'black'); // true
+  isNeutralSoldier('red', 'black');    // false
+  isNeutralSoldier('red', 'red');      // false
   ```
 

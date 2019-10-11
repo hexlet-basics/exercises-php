@@ -40,7 +40,7 @@ theory: |
   '\n' is an example of **escape sequences**. They are also called control structures. Such control structures are not visible in the result string, as they are not displayed the way they were typed in.
 
   When you type a text in an editor like Word and press Enter at the end of each line, the editor inserts there a special invisible character called LINE FEED (LF). In some editors you can even turn on the display of such non-printable characters. It will look like this:
-  
+
   ```
   - Hi!¶
   - Oh, hi!¶
@@ -48,7 +48,7 @@ theory: |
   ```
 
   Device that will output this text will react to that symbol. When printers encounter the LF symbol, they advance the paper by one line, and editors move all the subsequent text down one line.
-  
+
   There are dozens of such symbols, but in programming, however, you will deal with few of them. Apart from line break, such sequences include tab space '\t' and carriage return '\r\' (only in Windows). A controlling structure can be easily recognized by the backlash '\'. We, programmers, often use the line break sequence '\n' for correct display of the text.
 
   ```php
@@ -71,7 +71,7 @@ theory: |
   A couple of details to pay attention to:
 
   1\. It doesn't matter if the '\n' sequence is followed by a character or an empty string. The line break will be recognized and executed in any case.
- 
+
   2\. Do you remember that a string can contain just one character or no characters at all? A string can also contain just '\n':
 
   ```
@@ -102,7 +102,7 @@ theory: |
   ```
 
   A small but important note on Windows. In Windows by default the sequence used to create a line break is '\r\n'. Such combination works perfectly in Windows, but creates problems when transferred to other systems (e.g. when developers in one team use both Windows and Linux). It happens that the sequence '\r\n' is interpreted differently depending on the chosen charset (we will see it later). This is why it is a common practice among developers to always use '\n' without '\r', because LF is interpreted in the same way and works in any system. Don't forget to change your editor line break settings to '\n'.
-  
+
 instructions: |
 
   Write a program that prints the following to the screen:
@@ -115,7 +115,7 @@ instructions: |
 definitions:
   - name: "Escape Sequence"
   - description: "a special combination of characters in the text. `\\n`, for example, specifies a line break"
-  
+
 tips:
   - Make sure you experiment with string input on [https://repl.it/languages/php](https://repl.it/languages/php)
 

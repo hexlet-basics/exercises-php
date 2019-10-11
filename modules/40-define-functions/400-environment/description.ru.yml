@@ -36,7 +36,7 @@ theory: |
 
   changeAge();
 
-  print_r($age); // 5
+  print_r($age); // => 5
   ```
 
   Переменная, созданная внутри функции `changeAge`, никак не влияет на внешнюю переменную `$age`, поэтому после вызова функции значение внешней `$age` не изменилось и осталось `5`.
@@ -51,7 +51,7 @@ instructions: |
     <?php
 
     $actual = getAgeDifference(2001, 2018);
-    print_r($actual); // 17
+    print_r($actual); // => 17
     ```
 
 tips:

@@ -24,8 +24,7 @@ theory: |
       return $reversedString;
   }
 
-  reverseString('Game Of Thrones');
-  // => senorhT fO emaG
+  reverseString('Game Of Thrones'); // senorhT fO emaG
   ```
 
   Разберём функцию построчно:
@@ -55,8 +54,8 @@ instructions: |
   <?php
 
   $str = 'If I look back I am lost';
-  mysubstr($str, 1); // => 'I'
-  mysubstr($str, 7); // => 'If I lo'
+  mysubstr($str, 1); // 'I'
+  mysubstr($str, 7); // 'If I lo'
   ```
 
   Используйте тот же подход, что в функции для переворота строки из урока: собирайте строку-результат в цикле, перебирая начальную строку до определенного момента.

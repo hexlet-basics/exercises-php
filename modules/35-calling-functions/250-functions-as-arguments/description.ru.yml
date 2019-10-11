@@ -63,7 +63,7 @@ instructions: |
   ```php
   <?php
   $mother = parentFor('Joffrey Baratheon');
-  print_r($mother); // Cersei Lannister
+  print_r($mother); // => Cersei Lannister
   ```
 
 tips: []

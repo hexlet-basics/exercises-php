@@ -56,8 +56,8 @@ instructions: |
   ```php
   <?php
 
-  isMister('Mister'); // => true
-  isMister('Missis'); // => false
+  isMister('Mister'); // true
+  isMister('Missis'); // false
   ```
 
 tips:

@@ -4,9 +4,9 @@ name: Standard Library
 theory: |
 
   PHP, like any other language has a set of useful functions out of the box. All of them are part of so-called **standard library**. It usually contains thousands of functions that are impossible to memorize, and you don't need to do so. It is assumed that any programmer knows where to find documentation on them and has an idea of what he wants his code to do. All he has to do is to find an appropriate function for it. It's extremely difficult to code without access to internet.
-    
+
   For beginners, it usually sounds very confusing. They don't know what to look for, because they don't know anything at all. Funny enough, there is no way to know everything you need to know. Any developer in the process of his professional growth explores more and more interesting functions that accomplish his tasks in a more elegant way, extending this way his knowledge base.
-  
+
   Here are some tips on how to explore new functions:
 
   *Always be aware of what type of data you are working with. You will most likely find the desired function in the corresponding section of the documentation. If you work with strings, for example, search for functions that work with strings.

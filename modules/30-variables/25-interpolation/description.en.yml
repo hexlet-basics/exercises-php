@@ -4,7 +4,7 @@ name: Interpolation
 theory: |
 
   In the lesson on concatenation our task was to create an email header using two variables and punctuation marks. Most likely you did something like this:
- 
+
   ```php
   $firstName = 'Joffrey';
   $greeting = 'Hello';
@@ -13,9 +13,9 @@ theory: |
   ```
 
   It's quite a simple case, but you'd probably agree that it looks a little clumsy. We have to manage several quotes and whitespaces, and it's difficult to understand where each part begins and ends without looking closely.
-  
+
   There is a better and more elegant way to complete this task - **interpolation**. Here is what it looks like:
-  
+
   ```php
   $firstName = 'Joffrey';
   $greeting = 'Hello';
@@ -24,17 +24,16 @@ theory: |
   ```
 
   We created just one string and "inserted" variables in it using curly braces (`{ }`) where we expect that variable. It can be compared to a form that is filled in with the required values. Now we don't have to care about punctuation marks or whitespaces - all symbols are already located in this template string where we want them to appear.
-  
+
   You can create as many curly braces blocks as you want in one string.
 
   **Interpolation will only work in double quoted strings.**
 
   Almost in any language interpolation is preferred to concatenation when it comes to joining strings. We have the same result, and at the same time we can clearly see whitespaces and other symbols in it.
- 
+
 instructions: |
 
   Output the string `Do you want to eat, <name>?`. Instead of `<name>` use the variable `$stark`.
-
 
 tips: []
 

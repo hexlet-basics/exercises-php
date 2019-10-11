@@ -8,11 +8,11 @@ theory: |
   ```php
   <?php
 
-  $euros = 1000;
-  $dollars = $euros * 1.25; // => 1250
-  $rubles = $dollars * 60; // => 75000
+  $eurosCount = 1000;
+  $dollarsCount = $eurosCount * 1.25; // 1250
+  $rublesCount = $dollarsCount * 60;  // 75000
 
-  print_r($rubles);
+  print_r($rublesCount);
   ```
 
   As far as professional development is concerned, such code "smells". This expression describes a code that deviates from the so-called best practices. And here is why: at this point already looking at numbers `60` and `1.25`, you'll probably wonder: what are those numbers? Imagine looking at them in a month. How is another developer that has never seen that code before supposed to understand them? In the example above we can recover the context by correctly naming variables. In real life, however, code is much more complex, and often it's impossible to guess what some numbers could possibly mean.
@@ -29,18 +29,18 @@ theory: |
   $dollarsInEuro = 1.25;
   $rublesInDollar = 60;
 
-  $euros = 1000;
-  $dollars = $euros * $dollarsInEuro; // => 1250
-  $rubles = $dollars * $rublesInDollar; // => 75000
+  $eurosCount = 1000;
+  $dollarsCount = $eurosCount * $dollarsInEuro;   // 1250
+  $rublesCount = $dollarsCount * $rublesInDollar; // 75000
 
-  print_r($rubles);
+  print_r($rublesCount);
   ```
 
   Please note the following:
 
-  * Variable names are in _lowerCamelCase_ 
-  * The two new variables are separated from the calculations that follow them by an empty line. Those variables make sense even without calculations, so separating them we'll increase the code readability. 
-  * As a result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow. 
+  * Variable names are in _lowerCamelCase_
+  * The two new variables are separated from the calculations that follow them by an empty line. Those variables make sense even without calculations, so separating them we'll increase the code readability.
+  * As a result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow.
 
 instructions: |
 

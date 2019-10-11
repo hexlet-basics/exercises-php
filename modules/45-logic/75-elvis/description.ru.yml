@@ -28,8 +28,8 @@ theory: |
       }
   }
 
-  generateGreeting('Bob', 'CoolBob86'); // => 'Hello, Bob!'
-  generateGreeting('', 'CoolBob86'); // => 'Hello, CoolBob86!'
+  generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
+  generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
   ```
 
   Мы воспользовались тем фактом, что PHP преобразовывает типы. В коде `if ($name)` PHP превратит `$name` в тип `bool` — если была пустая строка, то получится `false`, в ином случае получится `true`.
@@ -42,8 +42,8 @@ theory: |
       return $name ? "Hello, {$name}!" : "Hello, {$nickname}!";
   }
 
-  generateGreeting('Bob', 'CoolBob86'); // => 'Hello, Bob!'
-  generateGreeting('', 'CoolBob86'); // => 'Hello, CoolBob86!'
+  generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
+  generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
   ```
 
   Это частый случай: мы оперируем значениями `bool` и получаем первое значение если оно `true`, или второе в ином случае.
@@ -57,8 +57,8 @@ theory: |
       return "Hello, {$user}!";
   }
 
-  generateGreeting('Bob', 'CoolBob86'); // => 'Hello, Bob!'
-  generateGreeting('', 'CoolBob86'); // => 'Hello, CoolBob86!'
+  generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
+  generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
   ```
 
   **`?:` — бинарный оператор, который возвращает первый операнд если он истинен, и второй в ином случае.**
@@ -76,10 +76,10 @@ instructions: |
   Примеры вызова:
 
   ```php
-  generateAmount(0, 2); // => 6
-  generateAmount(0, 5); // => 15
-  generateAmount(1, 2); // => 1
-  generateAmount(12, 49); // => 12
+  generateAmount(0, 2);   // 6
+  generateAmount(0, 5);   // 15
+  generateAmount(1, 2);   // 1
+  generateAmount(12, 49); // 12
   ```
 
 definitions:

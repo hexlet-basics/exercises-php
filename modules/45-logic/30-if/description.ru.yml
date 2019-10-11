@@ -31,8 +31,8 @@ theory: |
       return 'normal';
   }
 
-  getTypeOfSentence('Hodor'); // => normal
-  getTypeOfSentence('Hodor?'); // => question
+  getTypeOfSentence('Hodor');  // normal
+  getTypeOfSentence('Hodor?'); // question
   ```
 
   `if` — инструкция. В скобках ей передается выражение-предикат, а затем описывается блок кода в фигурных скобках. Этот **блок кода будет выполнен, только если предикат — истина**.
@@ -57,7 +57,7 @@ theory: |
       return 'normal';
   }
 
-  print_r(getTypeOfSentence('Hodor')); // => normal
+  print_r(getTypeOfSentence('Hodor'));  // => normal
   print_r("\n");
   print_r(getTypeOfSentence('Hodor?')); // => question
   ```
@@ -73,8 +73,8 @@ instructions: |
   ```php
   <?php
 
-  getSentenceTone('Hello'); // => normal
-  getSentenceTone('WOW!');   // => scream
+  getSentenceTone('Hello'); // normal
+  getSentenceTone('WOW!');  // scream
   ```
 
   Алгоритм:

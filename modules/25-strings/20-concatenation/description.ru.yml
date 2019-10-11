@@ -1,4 +1,4 @@
----
+--
 
 name: Конкатенация
 theory: |
@@ -47,10 +47,10 @@ theory: |
   <?php
 
   // Ставим пробел в левой части
-  print_r("King's " . 'Landing'); //  => King's Landing
+  print_r("King's " . 'Landing'); // => King's Landing
 
   // Ставим пробел в правой части
-  print_r("King's" . ' Landing'); //  => King's Landing
+  print_r("King's" . ' Landing'); // => King's Landing
   ```
 
   Чем больше пробелов, тем шире отступы:

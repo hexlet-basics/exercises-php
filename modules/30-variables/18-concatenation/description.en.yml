@@ -4,7 +4,7 @@ name: Variables and concatenation
 theory: |
 
   This time we will reinforce the previous topic by using variables together with concatenation. Syntax is going to be the same as we used when we were concatenating (joining) two strings together:
-  
+
 
   ```php
   <?php
@@ -14,7 +14,7 @@ theory: |
   ```
 
   … it means we would be able to concatenate a string with a variable that refers to another string:
-  
+
   ```php
   <?php
 
@@ -33,7 +33,7 @@ theory: |
   $last = 'road';
 
   $what = $first . $last;
-  print_r($what); //=> "Kingsroad"
+  print_r($what); // => "Kingsroad"
   ```
 
 instructions: |
@@ -43,9 +43,9 @@ instructions: |
   Write a program that generates the header and the body of the email using variables, and prints the resulting strings to screen.
 
   For the header use variables `$firstName` and `$greeting`, a coma and a exclamation sign. Output it in the correct order.
-  
+
   For the body of the email use variables `$info` and `$intro`, with the second sentence displayed on a new line.
-  
+
   Here is the expected result:
 
   ```
@@ -54,11 +54,10 @@ instructions: |
   We couldn't verify you mother's maiden name.
   ```
 
-  Make it work using `print_r` only two times. 
+  Make it work using `print_r` only two times.
 
 tips:
   - |
     Think how to get a two line output. Which strings should be variables concatenated to and in which order?
   - |
     Remember that you can create a string that would only contain the control sequence `\n\.
-

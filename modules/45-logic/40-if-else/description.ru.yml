@@ -46,7 +46,7 @@ instructions: |
   ```php
   <?php
 
-  normalizeUrl('google.com'); // 'https://google.com'
+  normalizeUrl('google.com');   // 'https://google.com'
   normalizeUrl('http://ai.fi'); // 'https://ai.fi'
   ```
 

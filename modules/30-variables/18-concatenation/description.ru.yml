@@ -32,7 +32,7 @@ theory: |
   $last = 'road';
 
   $what = $first . $last;
-  print_r($what); //=> "Kingsroad"
+  print_r($what); // => "Kingsroad"
   ```
 
 instructions: |
