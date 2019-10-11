@@ -12,9 +12,8 @@ theory: |
   ```
 
   We passed two arguments to the function: a number and a rounding precision. `0` means that the number will be rounded to an integer.
-  
-  Typically we want to round to an integer (rather then to a one decimal place, for example), so the creators of the `round` function made the second argument **optional* and gave it `0` as **default value**. It means that result will be the same even if you don't pass the second argument:
 
+  Typically we want to round to an integer (rather then to a one decimal place, for example), so the creators of the `round` function made the second argument **optional* and gave it `0` as **default value**. It means that result will be the same even if you don't pass the second argument:
 
   ```php
   <?php
@@ -35,7 +34,6 @@ theory: |
 instructions: |
 
   Round the float number assigned to `$number` to two decimal places and print the result to screen.
-
 
 tips: []
 

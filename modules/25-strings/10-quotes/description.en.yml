@@ -18,7 +18,7 @@ theory: |
   strings, as we've learnt that a string is a set of characters.
 
   Any single symbol wrapped in quotation marks is a string. An empty string `''` is a string too. We consider a string anything enclosed in quotes, even a space or no symbols at all.
-  
+
   In the earlier lessons we used single quotes, but it's not the only way to specify strings. You can also use double quotes.
 
   ```php
@@ -36,9 +36,9 @@ theory: |
   ```
 
   Such code is not going to work. According to PHP, the string started with a single quote and ended after the letter **n**. It was followed by `s mother` without quotation marks, which means it wasn't a string. And then there was an opening quote that wasn't closed: `');`. Such code is syntaсtically incorrect (you can even see it from the way the code is highlighted).
-  
+
   In such case we should use double quotes. The following code will work correctly:
-  
+
   ```php
   <?php
 
@@ -48,7 +48,7 @@ theory: |
   Now the interpreter knows that the string started with a double quote, that means it must end with a matching double quote. And the single quote inside (apostrophe) becomes part of the string.
 
   It works the other way round too. If we want to use double quotes inside the string, we must enclose the string in single quotes. This way it doesn't matter how many quotation marks of the other type we insert inside the string.
-  
+
   Now, what about a string like this:
 
   ```
@@ -66,7 +66,7 @@ theory: |
   ```
 
   Note that we had to escape the double quote rather than single quote with '\', because the string itself is enclosed in double quotes. If it was wrapped in single quotes, then we would have to escape the apostrophe instead of double quotes.
-  
+
 instructions: |
 
   Write a program that will print the following phrase to the screen:
@@ -76,6 +76,5 @@ instructions: |
   ```
 
   The program must print this exact symbols. Pay attention to the type of quotes in the beginning and end of the string.
-
 
 tips: []

@@ -74,14 +74,14 @@ theory: |
 
   ```php
   $answer = true;
-  var_dump(!$answer);  // => false
+  var_dump(!$answer); // => false
   ```
 
   При двойном отрицании `!!` итоговое значение равно начальному:
 
   ```php
   $answer = true;
-  var_dump(!!$answer);  // => true
+  var_dump(!!$answer); // => true
   ```
 
   Но здесь дополнительно происходят преобразования типа. Поэтому результатом двойного отрицания всегда будет _bool_. Этим приемом пользуются, чтобы поменять тип данных.
@@ -97,10 +97,10 @@ instructions: |
   ```php
   <?php
 
-  isFalsy(false); // true
-  isFalsy(0); // true
+  isFalsy(false);  // true
+  isFalsy(0);      // true
   isFalsy('help'); // false
-  isFalsy(10); // false
+  isFalsy(10);     // false
   ```
 
 tips:

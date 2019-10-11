@@ -17,8 +17,8 @@ theory: |
       return $number % 2 === 0;
   }
 
-  isEven(10);  // => true
-  !isEven(10); // => false
+  isEven(10);  // true
+  !isEven(10); // false
   ```
 
   То есть мы просто добавили `!` слева от вызова функции и получили обратное действие.
@@ -28,9 +28,9 @@ theory: |
   А что если написать так `!!isEven(10)`? Внезапно, но код сработает. В логике двойное отрицание подобно отсутствию отрицания вообще.
 
   ```php
-  isEven(10);  // => true
-  !isEven(10); // => false
-  !!isEven(10); // => true
+  isEven(10);   // true
+  !isEven(10);  // false
+  !!isEven(10); // true
   ```
 
 
@@ -48,8 +48,8 @@ instructions: |
   ```php
   <?php
 
-  isNotLannisterSoldier('red', 'man');   // => true
-  isNotLannisterSoldier('blue', 'lion'); // => false
+  isNotLannisterSoldier('red', 'man');   // true
+  isNotLannisterSoldier('blue', 'lion'); // false
   ```
 
 tips:

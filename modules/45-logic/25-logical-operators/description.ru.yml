@@ -24,9 +24,9 @@ theory: |
       return $length > 8 && $length < 20;
   }
 
-  isCorrectPassword('qwerty'); // => false
-  isCorrectPassword('qwerty1234'); // => true
-  isCorrectPassword('zxcvbnmasdfghjkqwertyui'); // => false
+  isCorrectPassword('qwerty'); // false
+  isCorrectPassword('qwerty1234'); // true
+  isCorrectPassword('zxcvbnmasdfghjkqwertyui'); // false
   ```
 
   `&&` - означает «И» (в математической логике это называют конъюнкцией). Всё выражение считается истинным, только если истинен каждый операнд — каждое из составных выражений. Иными словами, `&&` означает «и то, и другое».
@@ -51,13 +51,13 @@ theory: |
       return $area >= 100 || ($area >= 80 && $street === 'Main Street');
   }
 
-  var_dump(isGoodApartment(91, 'Queens Street')); // => false
-  var_dump(isGoodApartment(78, 'Queens Street')); // => false
-  var_dump(isGoodApartment(70, 'Main Street')); // => false
+  var_dump(isGoodApartment(91, 'Queens Street'));  // => false
+  var_dump(isGoodApartment(78, 'Queens Street'));  // => false
+  var_dump(isGoodApartment(70, 'Main Street'));    // => false
 
   var_dump(isGoodApartment(120, 'Queens Street')); // => true
-  var_dump(isGoodApartment(120, 'Main Street')); // => true
-  var_dump(isGoodApartment(80, 'Main Street')); // => true
+  var_dump(isGoodApartment(120, 'Main Street'));   // => true
+  var_dump(isGoodApartment(80, 'Main Street'));    // => true
   ```
 
   Область математики, в которой изучаются логические операторы, называется булевой алгеброй. Ниже показаны «таблицы истинности» — по ним можно определить, каким будет результат применения оператора:

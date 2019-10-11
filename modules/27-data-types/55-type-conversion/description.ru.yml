@@ -33,9 +33,9 @@ theory: |
   ```php
   <?php
 
-  (int) '4'; // => 4
-  5 + 4; // => 9
-  (string) 9; // => '9'
+  (int) '4';  // 4
+  5 + 4;      // 9
+  (string) 9; // '9'
   ```
 
 instructions: |

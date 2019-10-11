@@ -20,7 +20,7 @@ theory: |
   ```php
   <?php
 
-  print_r('I am the King'); // For Lannisters!
+  print_r('I am the King'); // => For Lannisters!
   ```
 
   **Многострочные комментарии** начинаются с `/*` и заканчиваются на `*/`. Между ними каждая строчка должна начинаться с символа `*`.

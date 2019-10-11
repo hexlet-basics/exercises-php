@@ -40,7 +40,7 @@ instructions: |
   ```php
   <?php
 
-  getAge(10); // 10
+  getAge(10);  // 10
   getAge(9.1); // 9
   getAge(8.9); // 9
   getAge(8.5); // 8

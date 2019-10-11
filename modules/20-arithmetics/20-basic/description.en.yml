@@ -47,7 +47,7 @@ theory: |
   ```
 
   Sometimes we will show you the result of code execution at the end of a line as a comment, like so:  `=> RESULT`. For example, `// => 4`.
-  
+
   The first instruction will output `4` to the screen (since `8 / 2` is `4`), and the second instruction will output 9 (since 3<sup>2</sup> is 9).
 
 instructions: |

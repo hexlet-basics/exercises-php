@@ -40,17 +40,17 @@ theory: |
   As you see from examples above, strings can be concatenated even if they are specified with different quotation marks.
 
   In the last example we got the name of the city printed incorrectly: *King's Landing* must have a space between words! The original strings, however, didn't have spaces, and the spaces to the right and left of `.` are not interpreted as part of strings.
-  
+
   We can fix this in several ways:
 
   ```php
   <?php
 
   //Adding a space at the end of the left part
-  print_r("King's " . 'Landing'); //  => King's Landing
+  print_r("King's " . 'Landing'); // => King's Landing
 
   //Adding a space at the end of the right part
-  print_r("King's" . ' Landing'); //  => King's Landing
+  print_r("King's" . ' Landing'); // => King's Landing
   ```
 
   The more spaces we add, the wider interval we get:

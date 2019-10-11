@@ -10,7 +10,7 @@ theory: |
   ```
 
   What can we say about it? What conclusions can we draw? Finish the following statemens:
-  
+
   - `$distance` — is a \_\_\_\_\_\_\_\_\_\_
   - the function `calculateDistance` is called with \_\_\_\_\_\_\_\_\_\_\_ `'Lannisport'` and `'Bayasabhad'`
   - the function `calculateDistance` returns a value, type of which is - \_\_\_\_\_.
@@ -32,7 +32,7 @@ theory: |
   Now, look at number four! It is an expression too! One reason why programming languages are so powerful and flexible is the fact that a **function call** is an **expression**.
 
   Let's go back to the first example:
-  
+
   ```php
   $distance = calculateDistance('Lannisport', 'Bayasabhad');
   ```

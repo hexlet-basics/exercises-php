@@ -4,7 +4,7 @@ name: Heredoc
 theory: |
 
   The third method to delimit a string is using the heredoc syntax: <<<. After this operator an indentifier is provided, then a newline. The string itself follows, and then the same identifier again to close the quotation. The identifier name is chosen randomly. Such method is useful when we deal with long strings with line breaks and quote marks of different sorts.
- 
+
   ```php
   <?php
 
@@ -29,7 +29,7 @@ theory: |
 instructions: |
 
   Assign the text below to the variable `$str`. Use the heredoc syntax.
-  
+
         Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
         This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
 

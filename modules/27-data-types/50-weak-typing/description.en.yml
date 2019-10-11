@@ -4,27 +4,27 @@ name: Weak typing
 theory: |
 
   We know about two different data types: integers and strings. We could add integers to each other, because addition is an operation for the type "integer".
-  
+
   What if we apply this operation to an integer and a string, instead of two integers?
- 
+
   ```php
   print_r(1 + '7'); // => 8
   ```
 
   Despite of `'7'` being a string rather than integer, the PHP interpreter printed '8' as result, as if we were adding two integers. When PHP encounters conflicting types, it tries to convert information on its own. In the above example it converted string `'7'` into integer `7` and then easily added `1` to `7`.
-  
+
   Not all languages support this. PHP is a **weakly typed** language. It knows about different types (integers, strings etc.), but it doesn't enforce them, trying to convert data when it seems reasonable.
-  
+
   In a **strongly typed** language it's not possible to add a string to a number.
-  
+
   PHP was created to cater to the Internet environment, and all information on the Internet is strings. Even when you input your phone number or birth date on some website, this information arrives to server as strings rather than numbers. This is why the creators of the language decided that the automatic type conversion would come in handy.
-  
+
   Such automatic non-explicit type conversion is indeed handy. When put into practice, however, it can create tons of errors and problems that are difficult to locate. The code can be workable or not workable sometimes, depending on"luck" in each case. It will take time for a programmer to notice that.
-  
+
   In the future exercises you will encounter such behavior. Very often you will ask yourself "why is my code not working the way I'm expecting?".
- 
+
   Weak typing is a very important aspect in PHP development.
-  
+
 instructions: |
 
   Output the result of the expression: `7 - (-8 - -2)`. Try making 7 a string instead of number. Experiment with other numbers as well.

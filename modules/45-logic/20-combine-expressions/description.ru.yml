@@ -26,8 +26,8 @@ theory: |
       return $number % 2 === 0;
   }
 
-  isEven(10); // => true
-  isEven(3);  // => false
+  isEven(10); // true
+  isEven(3);  // false
   ```
 
   В одном выражении мы скомбинировали логический оператор `===` (проверка равенства) и арифметический оператор `%`.
@@ -56,8 +56,8 @@ theory: |
       return $isSame;
   }
 
-  isFirstLetterInUpperCase('marmont'); // => false
-  isFirstLetterInUpperCase('Robb'); // => true
+  isFirstLetterInUpperCase('marmont'); // false
+  isFirstLetterInUpperCase('Robb'); // true
   ```
 
   Мы использовали [функцию `strtoupper` из стандартной библиотеки PHP](http://php.net/manual/ru/function.strtoupper.php). Она принимает строку и возвращает строку, в которой все буквы стали заглавными. Мы передаём ей всего один символ — первый символ строки.
@@ -73,7 +73,7 @@ theory: |
 
   $firstName = 'Alexander';
 
-  $firstName[0]; // => A
+  $firstName[0]; // A
   ```
 
 instructions: |
@@ -93,10 +93,10 @@ instructions: |
   ```php
   <?php
 
-  hasTargaryenReference(''); // => false
-  hasTargaryenReference('Targari'); // => false
-  hasTargaryenReference('targaryen'); // => false
-  hasTargaryenReference('Targaryen'); // => true
+  hasTargaryenReference('');          // false
+  hasTargaryenReference('Targari');   // false
+  hasTargaryenReference('targaryen'); // false
+  hasTargaryenReference('Targaryen'); // true
   ```
 
 tips:

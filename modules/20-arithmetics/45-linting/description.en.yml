@@ -4,49 +4,48 @@ name: Linter
 theory: |
   Code must be written in a certain way to be easy to read and maintain. Standards are sets of rules that describe different aspects of coding. The most commonly used PHP standards are **PSR** (PHP Standards Recommendations) by [PHP-GIF] (https://www.php-fig.org/psr/). A recommendation is a set of rules aimed to facilitate a certain aspect of development (or solve a certain problem). Presently, several official recommendations are in use, each of them marked by a number: PSR-1, PSR-2, PSR-3 and [others] (https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). You will learn those recommendations in the process of study and work. For now, we are going to focus at the first two.
 
-  * PSR-1: [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)  is a set  of rules concerning coding style: how to write PHP tags, naming of classes, class methods and constants. It also covers different aspects of coding, autoloading, namespacing and file structures. The PSR-2 standard extends these rules. 
+  * PSR-1: [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)  is a set  of rules concerning coding style: how to write PHP tags, naming of classes, class methods and constants. It also covers different aspects of coding, autoloading, namespacing and file structures. The PSR-2 standard extends these rules.
   * PSR-2: [PSR-2: Coding Style Guide](https://www.php-fig.org/psr/psr-2/). PSR-2 requires developers to follow PSR-1, and also introduces new requirements concerning indentation, files, strings, key words, classes, control structures, scopes and other elements.
 
   Every programming language has special tools called **linters** that check code for compliance with standards. The most commonly used PHP linter is called [PHP_CodeSniffer] (https://github.com/squizlabs/PHP_CodeSniffer).
 
-  Let’s say we have a file with the following PHP code. 
+  Let’s say we have a file with the following PHP code.
 
   ```php
   <?php
 
-    print_r (((8 / 2) + 5) - (-3 / 2)); //this line is indented with tab.
+    print_r (((8 / 2) + 5) - (-3 / 2)); // this line is indented with tab
 
   ?>
 
   ```
-  
-  After analyzing this file, linter will display the following errors: 
-  
-  * `Spaces must be used to indent lines; tabs are not alowed`  - in the example above we used tabulation, while PSR-1 recommends to indent lines with four spaces. 
-  * `A closing tag is not permitted at the end of a PHP file` - the standard requires to omit the closing tag `?>` 
-  * `Space before opening parenthesis of function call prohibited` — linter found a space after ‘print_r’ while the standard says that there must not be any spaces between the function name and the parenthesis. 
-  
-  Let’s remove the closing tag, space after function name and fix indentations. 
-  
+
+  After analyzing this file, linter will display the following errors:
+
+  * `Spaces must be used to indent lines; tabs are not alowed`  - in the example above we used tabulation, while PSR-1 recommends to indent lines with four spaces.
+  * `A closing tag is not permitted at the end of a PHP file` - the standard requires to omit the closing tag `?>`
+  * `Space before opening parenthesis of function call prohibited` — linter found a space after ‘print_r’ while the standard says that there must not be any spaces between the function name and the parenthesis.
+
+  Let’s remove the closing tag, space after function name and fix indentations.
+
   ```php
   <?php
     print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
   ```
-  Linter will be ‘silent’ because this code follows the standard rules. 
-  
-  Don’t be afraid of numerous recommendations and rules. Most of them are simple and clear. Some of them you already now intuitively. And you will master others with time, experience and help of linter ;) 
-  
+  Linter will be ‘silent’ because this code follows the standard rules.
+
+  Don’t be afraid of numerous recommendations and rules. Most of them are simple and clear. Some of them you already now intuitively. And you will master others with time, experience and help of linter ;)
+
 instructions: |
-  
-  Analyze this code: 
-  
+
+  Analyze this code:
+
   ```php
   <?php
   print_r (3 ** (4 - 2));
   ?>
   ```
-  This code breaks two rules that we saw in the previous example. Rewrite the code, fixing the styling errors. 
-  At this stage your code is not checked by linter, however in your future practice on [Hexlet] (https://ru.hexlet.io) and in the actual development process, you will use linter and it will warn you about violation of standards. 
-  
-tips: [] 
-  
+  This code breaks two rules that we saw in the previous example. Rewrite the code, fixing the styling errors.
+  At this stage your code is not checked by linter, however in your future practice on [Hexlet] (https://ru.hexlet.io) and in the actual development process, you will use linter and it will warn you about violation of standards.
+
+tips: []
