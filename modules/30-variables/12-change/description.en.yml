@@ -24,7 +24,7 @@ theory: |
 
 instructions: |
 
-  There is a variable with value `'Brienna' in the code. Redefine the value of the variable and assign to it the same string in reversed order.
+  There is a variable with value `'Brienna'` in the code. Redefine the value of the variable and assign to it the same string in reversed order.
 
 tips: []
 
