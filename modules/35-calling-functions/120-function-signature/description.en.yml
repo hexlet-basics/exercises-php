@@ -3,7 +3,7 @@
 name: Function signature
 theory: |
 
-  Function `pow`, that raises a number to a power, receives two paramters: **a number to raise** and **a power to raise to**. If we called `pow` without parameters, code execution would exit with an error ``PHP Warning:  pow() expects exactly 2 parameters, 0 given in php shell code on line 1`. This is the interpreter telling you that the function expects two parameters and you've passed it none.
+  Function `pow`, that raises a number to a power, receives two paramters: **a number to raise** and **a power to raise to**. If we called `pow` without parameters, code execution would exit with an error `PHP Warning:  pow() expects exactly 2 parameters, 0 given in php shell code on line 1`. This is the interpreter telling you that the function expects two parameters and you've passed it none.
 
   Whoever created the `pow` function, designed it in the way that it requires two parameters, and it's impossible to call it with any other number of parameters.
 
