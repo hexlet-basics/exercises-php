@@ -41,7 +41,7 @@ theory: |
   $result = round(abs($number), round(2.43));
   ```
 
-  PHP, like most other languages, is a language with **eager evaluation** stategy** (some languages may have **lazy evaluation strategy**). PHP tries to evaluate the deepest level first, and then moves upwards until it evaluates the whole expression.
+  PHP, like most other languages, is a language with **eager evaluation stategy** (some languages may have **lazy evaluation strategy**). PHP tries to evaluate the deepest level first, and then moves upwards until it evaluates the whole expression.
 
   In the example above, PHP will first evaluate arguments and only than invoke `round` with them.
 
