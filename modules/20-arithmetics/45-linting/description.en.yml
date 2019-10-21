@@ -46,6 +46,6 @@ instructions: |
   ?>
   ```
   This code breaks two rules that we saw in the previous example. Rewrite the code, fixing the styling errors.
-  At this stage your code is not checked by linter, however in your future practice on [Hexlet] (https://ru.hexlet.io) and in the actual development process, you will use linter and it will warn you about violation of standards.
+  At this stage your code is not checked by linter, however in your future practice on [Hexlet] (https://en.hexlet.io) and in the actual development process, you will use linter and it will warn you about violation of standards.
 
 tips: []
