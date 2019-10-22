@@ -19,7 +19,7 @@ theory: |
 
   Luckily, we don't have to memorize all the standard rules, because there are special programs that automatically check our code and notify us about any violation. Such programs are called **linters** and you will start using them later when you are a little bit more experienced.
 
-  We start using linters on [Hexlet] (https://en.hexlet.io/) almost from the very beginning.
+  We start using linters on [Hexlet](https://en.hexlet.io/) almost from the very beginning.
 
 instructions: |
 
