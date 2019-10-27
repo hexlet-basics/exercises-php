@@ -11,7 +11,7 @@ theory: |
   $result = round(10.25); // 10
   ```
 
-  The `round' function is invoked with the parameter `10.25`.
+  The `round` function is invoked with the parameter `10.25`.
 
   We already know that **expressions are converted into values**. It means that PHP treats values and expressions as something similar. Therefore technically, any value in a program can be replaced by an expression.
 
