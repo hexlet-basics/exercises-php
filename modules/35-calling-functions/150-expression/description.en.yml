@@ -49,7 +49,7 @@ theory: |
   $result = 4 + numberOfKnights("Winterfell");
   ```
 
-  And it will, because we are adding two expressions: the expression `4` and the expression `numberOfKnights("Winterfell"). Eventually it comes down to `4 + some number`.
+  And it will, because we are adding two expressions: the expression `4` and the expression `numberOfKnights("Winterfell")`. Eventually it comes down to `4 + some number`.
 
   It means that the following code will work as well:
 
