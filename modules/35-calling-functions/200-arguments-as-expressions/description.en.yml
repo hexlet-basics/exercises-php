@@ -76,7 +76,7 @@ theory: |
   $result = ucfirst($text . 'ag' . 'on'); // 'Dragon'
   ```
 
-  You have probably noticed the similarity: every time a function is invoked, we pass it some information. Sometimes it's a "ready-to-use" value (`10.25`, `dragon`), and sometimes it's a compound expression - a `raw` value (`8 + 2.25`, `$number + 7 + 2`, `$text .  'ag' . 'on' etc.), with only one argument being passed in all examples. When a function takes several arguments, they are separated by comas.
+  You have probably noticed the similarity: every time a function is invoked, we pass it some information. Sometimes it's a "ready-to-use" value (`10.25`, `dragon`), and sometimes it's a compound expression - a `raw` value (`8 + 2.25`, `$number + 7 + 2`, `$text .  'ag' . 'on'` etc.), with only one argument being passed in all examples. When a function takes several arguments, they are separated by comas.
 
 instructions: |
 
