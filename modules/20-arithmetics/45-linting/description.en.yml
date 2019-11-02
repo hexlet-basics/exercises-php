@@ -22,7 +22,7 @@ theory: |
 
   After analyzing this file, linter will display the following errors:
 
-  * `Spaces must be used to indent lines; tabs are not alowed`  - in the example above we used tabulation, while PSR-1 recommends to indent lines with four spaces.
+  * `Spaces must be used to indent lines; tabs are not allowed`  - in the example above we used tabulation, while PSR-1 recommends to indent lines with four spaces.
   * `A closing tag is not permitted at the end of a PHP file` - the standard requires to omit the closing tag `?>`
   * `Space before opening parenthesis of function call prohibited` — linter found a space after ‘print_r’ while the standard says that there must not be any spaces between the function name and the parenthesis.
 
