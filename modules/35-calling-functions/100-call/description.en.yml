@@ -15,7 +15,7 @@ theory: |
   $result = pow(2, 3); // 8
   ```
 
-  We created a variable named `$result` and instructed the interpreter to store in it the result of the `pow` function. Notation `pow(2, 3) means that we call the function named `pow` with arguments (or parameters) 2 and 3. Upon execution the function _returned_ a result.
+  We created a variable named `$result` and instructed the interpreter to store in it the result of the `pow` function. Notation `pow(2, 3)` means that we call the function named `pow` with arguments (or parameters) 2 and 3. Upon execution the function _returned_ a result.
 
   Arguments are data a function receives when it's called. Functions calculate and return result based on this data.
 
