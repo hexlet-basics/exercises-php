@@ -23,7 +23,7 @@ theory: |
   print_r($greeting);
   ```
 
-  Look at the line `$greeting = 'Father!'`. We assign the value `'Father!' to the variable named `$greeting`. In PHP variable names always start with a dollar sign _$_.
+  Look at the line `$greeting = 'Father!'`. We assign the value `'Father!'` to the variable named `$greeting`. In PHP variable names always start with a dollar sign _$_.
 
   Once the variable is created, we can start using it. We replace with it all occurences of our phrase. While the code is being executed, the interpreter (the one that executes the php code) reaches the line `print_r($greeting)`, replaces the variable with its value and executes the code. As result, we'll have the following output:
 
