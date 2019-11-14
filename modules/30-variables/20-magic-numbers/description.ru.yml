@@ -9,7 +9,7 @@ theory: |
   <?php
 
   $eurosCount = 1000;
-  $dollarsCount = $euros * 1.25;     // 1250
+  $dollarsCount = $eurosCount * 1.25;     // 1250
   $rublesCount = $dollarsCount * 60; // 75000
 
   print_r($rublesCount);
