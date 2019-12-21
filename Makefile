@@ -1,4 +1,5 @@
-compose: compose-build
+compose-setup: compose-build compose-install
+compose:
 	docker-compose up
 
 gcloud-builds-submit:
