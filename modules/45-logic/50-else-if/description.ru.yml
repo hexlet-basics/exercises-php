@@ -12,16 +12,16 @@ theory: |
   {
       $lastChar = $sentence[-1];
 
+      $sentenceType = 'normal';
+      
       if ($lastChar === '?') {
           $sentenceType = 'question';
       }
 
       if ($lastChar === '!') {
           $sentenceType = 'exclamation';
-      } else {
-          $sentenceType = 'normal';
-      }
-
+      } 
+      
       return "Sentence is {$sentenceType}";
   }
 
