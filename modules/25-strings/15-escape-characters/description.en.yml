@@ -57,7 +57,7 @@ theory: |
   print_r("Gregor Clegane\nDunsen\nPolliver\nChiswyck");
   ```
 
-  **Attention! Escape sequences like '\n' only work when enclosed in double quotes.
+  **Attention! Escape sequences like '\n' only work when enclosed in double quotes.**
 
   We'll have the following output:
 
