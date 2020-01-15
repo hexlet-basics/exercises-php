@@ -83,7 +83,7 @@ instructions: |
   <?php
 
   $str = 'If I look back I am lost';
-  echo filterString($str, 'I'); // => 'f  look back am lost'
+  echo filterString($str, 'I'); // => 'f  look back  am lost'
   echo filterString($str, 'o'); // => 'If I lk back I am lst'
   ```
 
