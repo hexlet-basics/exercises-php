@@ -49,4 +49,4 @@ jobs:
         if: success()
         uses: actions-hub/docker@master
         with:
-          args: push ${GITHUB_REPOSITORY}:latest
+          args: push ${GITHUB_REPOSITORY}_exercises:latest
