@@ -20,6 +20,9 @@ jobs:
       
     - name: Run tests
       run: make compose-test
+    
+    - name: Check lint
+      run: make compose-lint
       
   push:
 
