@@ -44,3 +44,7 @@ jobs:
       - name: Build image
         if: success()
         run: make compose-build
+        
+      - name: Push to docker registry
+        if: success()
+        uses: actions-hub/docker@master
