@@ -48,3 +48,5 @@ jobs:
       - name: Push to docker registry
         if: success()
         uses: actions-hub/docker@master
+        with:
+          args: push ${GITHUB_REPOSITORY}:latest
