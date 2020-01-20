@@ -4,34 +4,24 @@ on:
   push:
     branches:
       - master
-
   pull_request:
-      
-
+    
 jobs:
   test:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-   
+    - uses: actions/checkout@v1  
     - name: Setup project
-      run: make
-      
+      run: make     
     - name: Run tests
-      run: make compose-test
-    
+      run: make compose-test 
     - name: Check lint
       run: make compose-lint 
       
   push:
-
     needs: test
-
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-
     steps:
       - uses: actions/checkout@v1
       - name: Publish to Registry
