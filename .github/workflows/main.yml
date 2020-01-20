@@ -34,20 +34,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      
-      - name: Docker Login
-        if: success()
-        uses: actions-hub/docker/login@master
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      
-      - name: Build image
-        if: success()
-        run: docker build -t ${{ secrets.DOCKER_REPOSITORY }}:${IMAGE_TAG} .
-
-      - name: Push to docker registry
-        if: success()
-        uses: actions-hub/docker@master
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          args: push ${{ secrets.DOCKER_REPOSITORY }}:${IMAGE_TAG}
+          name: ${{ secrets.DOCKER_REPOSITORY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
