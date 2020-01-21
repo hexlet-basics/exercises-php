@@ -16,7 +16,8 @@
     ]
   },
   "scripts": {
-    "phpunit": "phpunit"
+    "phpunit": "phpunit",
+    "phpcs": "phpcs"
   },
   "require-dev": {
     "symfony/var-dumper": "^4.2"

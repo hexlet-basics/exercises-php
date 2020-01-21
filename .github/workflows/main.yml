@@ -1,32 +1,47 @@
-name: Main
+name: Docker
 
 on:
   push:
+    # Publish `master` as Docker `latest` image.
     branches:
       - master
+
+    # Publish `v1.2.3` tags as releases.
+    # tags:
+    #   - v*
+
+  # Run tests for any PRs.
   pull_request:
 
+env:
+  # TODO: Change variable to your image's name.
+  IMAGE_NAME: hexletbasics/exercises-php
+
 jobs:
+  # Run tests.
+  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Setup project
-      run: make
-    - name: Run tests
-      run: make compose-test
-    - name: Check lint
-      run: make compose-lint
 
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+            docker-compose --file docker-compose.test.yml build
+            docker-compose --file docker-compose.test.yml run sut
+  # Push image to GitHub Package Registry.
+  # See also https://docs.docker.com/docker-hub/builds/
   push:
+    # Ensure test job passes before pushing image.
     needs: test
+
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
+
     steps:
-      - uses: actions/checkout@v1
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: hexletbasics/exercises-php
+      - uses: elgohr/Publish-Docker-Github-Action@master
+      - with:
+          name: IMAGE_NAME
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}

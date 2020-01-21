@@ -7,4 +7,4 @@ services:
     build: .
     volumes:
       - .:/exercises-php
-    command: make lint test
+    command: make check
