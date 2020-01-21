@@ -1,4 +1,4 @@
-FROM php:7.3.1-cli-stretch
+FROM php:7.4.1-cli
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
