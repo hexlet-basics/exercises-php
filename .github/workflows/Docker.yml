@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - uses: elgohr/Publish-Docker-Github-Action@master
-      - with:
+        with:
           name: IMAGE_NAME
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
