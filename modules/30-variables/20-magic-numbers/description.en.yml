@@ -26,12 +26,12 @@ theory: |
   ```php
   <?php
 
-  $dollarsInEuro = 1.25;
-  $rublesInDollar = 60;
+  $dollarsPerEuro = 1.25;
+  $rublesPerDollar = 60;
 
   $eurosCount = 1000;
-  $dollarsCount = $eurosCount * $dollarsInEuro;   // 1250
-  $rublesCount = $dollarsCount * $rublesInDollar; // 75000
+  $dollarsCount = $eurosCount * $dollarsPerEuro;   // 1250
+  $rublesCount = $dollarsCount * $rublesPerDollar; // 75000
 
   print_r($rublesCount);
   ```
