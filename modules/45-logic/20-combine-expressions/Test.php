@@ -13,3 +13,4 @@ Assert::that(hasTargaryenReference(''))->false();
 Assert::that(hasTargaryenReference('Targari'))->false();
 Assert::that(hasTargaryenReference('targaryen'))->false();
 Assert::that(hasTargaryenReference('Targaryen'))->true();
+Assert::that(hasTargaryenReference('Targaryen Daenerys'))->true();
