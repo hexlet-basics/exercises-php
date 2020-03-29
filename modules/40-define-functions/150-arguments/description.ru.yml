@@ -52,7 +52,7 @@ instructions: |
   Vaes Dothrak ======== Vahar
   ```
 
-  В [документации PHP](http://php.net/manual/ru/function.str-repeat.php) он нашёл функцию `str_repeat`. Она принимает два аргумента: строку и число, и возвращает повторяющуюся строку. Вот как он использует её:
+  В [документации PHP](https://php.net/manual/ru/function.str-repeat.php) он нашёл функцию `str_repeat`. Она принимает два аргумента: строку и число, и возвращает повторяющуюся строку. Вот как он использует её:
 
   ```php
   <?php

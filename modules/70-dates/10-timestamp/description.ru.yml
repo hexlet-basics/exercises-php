@@ -29,7 +29,7 @@ instructions: |
   getYear(1532435204); // 2018
   ```
 
-  Для округления в нижнюю сторону воспользуйтесь функцией [floor](http://php.net/manual/ru/function.floor.php)
+  Для округления в нижнюю сторону воспользуйтесь функцией [floor](https://php.net/manual/ru/function.floor.php)
 
 tips: []
 
