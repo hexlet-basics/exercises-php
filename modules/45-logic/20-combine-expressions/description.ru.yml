@@ -60,7 +60,7 @@ theory: |
   isFirstLetterInUpperCase('Robb'); // true
   ```
 
-  Мы использовали [функцию `strtoupper` из стандартной библиотеки PHP](http://php.net/manual/ru/function.strtoupper.php). Она принимает строку и возвращает строку, в которой все буквы стали заглавными. Мы передаём ей всего один символ — первый символ строки.
+  Мы использовали [функцию `strtoupper` из стандартной библиотеки PHP](https://php.net/manual/ru/function.strtoupper.php). Она принимает строку и возвращает строку, в которой все буквы стали заглавными. Мы передаём ей всего один символ — первый символ строки.
 
   Попробуйте проговорить происходящее по-русски, аналогично тому, как мы расшифровывали процесс в примере с `isEven` в начале урока.
 
@@ -101,4 +101,4 @@ instructions: |
 
 tips:
   - |
-    [strpos](http://php.net/manual/ru/function.strpos.php)
+    [strpos](https://php.net/manual/ru/function.strpos.php)

@@ -23,7 +23,7 @@ instructions: |
 
 tips:
   - |
-    [PHP function reference](http://php.net/manual/en/funcref.php)
+    [PHP function reference](https://php.net/manual/en/funcref.php)
 
 definitions:
   - name: Standard library

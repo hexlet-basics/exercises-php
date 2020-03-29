@@ -21,7 +21,7 @@ instructions: |
 
 tips:
   - |
-    [Magic constant](http://php.net/manual/en/language.constants.predefined.php)
+    [Magic constant](https://php.net/manual/en/language.constants.predefined.php)
 
 definitions:
   - name: "Magic constant"

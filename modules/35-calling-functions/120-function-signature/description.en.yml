@@ -11,7 +11,7 @@ theory: |
 
   Some other function can have a different number and type of parameters. There could be a function that receives three parameters: a number, a string, and another number.
 
-  How do we know how many parameters the `pow` function needs and what type of result it will return? We've looked up the **signature** of this function. Signature defines the input values and their types and also output value and it's type. Let's look up the `pow` function in the [PHP official documentation](http://php.net/manual/en/function.pow.php). You will find the following text in the "Description" section:
+  How do we know how many parameters the `pow` function needs and what type of result it will return? We've looked up the **signature** of this function. Signature defines the input values and their types and also output value and it's type. Let's look up the `pow` function in the [PHP official documentation](https://php.net/manual/en/function.pow.php). You will find the following text in the "Description" section:
 
   ```
   pow ( number $base , number $exp ) : number
@@ -36,7 +36,7 @@ instructions: |
 
   Now it's your turn to look up a function signature in documentation and find out how to use it.
 
-  PHP has a function named `ucfirst`. Study it's signature at the page [http://php.net/manual/en/function.ucfirst.php](http://php.net/manual/en/function.ucfirst.php).
+  PHP has a function named `ucfirst`. Study it's signature at the page [https://php.net/manual/en/function.ucfirst.php](https://php.net/manual/en/function.ucfirst.php).
 
   Write a program that uses the `ucfirst` function on the variable `$text` and print the result to screen.
 
