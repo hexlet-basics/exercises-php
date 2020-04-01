@@ -13,5 +13,5 @@ function getNumberExplanation($number)
         default:
             return null;
     }
-};
+}
 // END

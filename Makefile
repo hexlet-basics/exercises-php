@@ -30,6 +30,9 @@ description-lint:
 code-lint:
 	composer run-script phpcs -- --standard=PSR12 modules
 
+code-lint-fix:
+	composer run-script phpcbf -- --standard=PSR12 modules
+
 test:
 	@(for i in $$(find modules/** -type f -name Makefile); do make test -C $$(dirname $$i) || exit 1; done)
 
