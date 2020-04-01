@@ -2,14 +2,14 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(invertCase('one'))->eq('ONE');
-Assert::that(invertCase('TWO'))->eq('two');
-Assert::that(invertCase('ThRee'))->eq('tHrEE');
-Assert::that(invertCase('ПрИвЕт!'))->eq('пРиВеТ!');
+test(function () {
+  Assert::eq(invertCase('one'), 'ONE');
+  Assert::eq(invertCase('TWO'), 'two');
+  Assert::eq(invertCase('ThRee'), 'tHrEE');
+  Assert::eq(invertCase('ПрИвЕт!'), 'пРиВеТ!');
+});

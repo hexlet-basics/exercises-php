@@ -2,7 +2,7 @@
 
 namespace HexletBasics\Asserts;
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
 
 function expectOutputString($expected, $f)
 {
@@ -10,10 +10,5 @@ function expectOutputString($expected, $f)
     $f();
     $actual = ob_get_contents();
     ob_end_clean();
-    /* Assertion::same($actual, $expected); */
-    /* try { */
-    Assert::that($actual)->same($expected);
-    /* } catch (Exception $e) { */
-    /*     print_r($e->getMessage()); */
-    /* } */
+    Assert::eq($actual, $expected);
 }

@@ -2,15 +2,15 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(isNotLannisterSoldier('blue', null))->true();
-Assert::that(isNotLannisterSoldier('red', 'man'))->true();
-Assert::that(isNotLannisterSoldier('red', 'lion'))->false();
-Assert::that(isNotLannisterSoldier('blue', 'lion'))->false();
-Assert::that(isNotLannisterSoldier('red', null))->false();
+test(function () {
+  Assert::true(isNotLannisterSoldier('blue', null));
+  Assert::true(isNotLannisterSoldier('red', 'man'));
+  Assert::false(isNotLannisterSoldier('red', 'lion'));
+  Assert::false(isNotLannisterSoldier('blue', 'lion'));
+  Assert::false(isNotLannisterSoldier('red', null));
+});

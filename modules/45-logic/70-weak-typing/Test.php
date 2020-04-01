@@ -2,16 +2,16 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(isFalsy(''))->true();
-Assert::that(isFalsy(' '))->false();
-Assert::that(isFalsy(null))->true();
-Assert::that(isFalsy(false))->true();
-Assert::that(isFalsy(true))->false();
-Assert::that(isFalsy(3))->false();
+test(function () {
+  Assert::true(isFalsy(''));
+  Assert::false(isFalsy(' '));
+  Assert::true(isFalsy(null));
+  Assert::true(isFalsy(false));
+  Assert::false(isFalsy(true));
+  Assert::false(isFalsy(3));
+});

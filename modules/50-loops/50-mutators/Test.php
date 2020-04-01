@@ -2,15 +2,15 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-$str = 'If I look back I am lost';
-$result1 = filterString($str, 'I');
-Assert::that($result1)->eq('f  look back  am lost');
-$result2 = filterString($str, 'o');
-Assert::that($result2)->eq('If I lk back I am lst');
+test(function () {
+  $str = 'If I look back I am lost';
+  $result1 = filterString($str, 'I');
+  Assert::eq($result1, 'f  look back  am lost');
+  $result2 = filterString($str, 'o');
+  Assert::eq($result2, 'If I lk back I am lst');
+});

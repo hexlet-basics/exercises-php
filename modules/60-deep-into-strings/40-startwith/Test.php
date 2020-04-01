@@ -2,14 +2,14 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(startsWith('one', 'o'))->true();
-Assert::that(startsWith('one', 'ne'))->false();
-Assert::that(startsWith('one', 'on'))->true();
-Assert::that(startsWith('one', 'one'))->true();
+test(function () {
+  Assert::true(startsWith('one', 'o'));
+  Assert::false(startsWith('one', 'ne'));
+  Assert::true(startsWith('one', 'on'));
+  Assert::true(startsWith('one', 'one'));
+});

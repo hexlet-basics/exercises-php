@@ -2,11 +2,11 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(getHexletBirthday())->eq(1325376000);
+test(function () {
+  Assert::eq(getHexletBirthday(), 1325376000);
+});

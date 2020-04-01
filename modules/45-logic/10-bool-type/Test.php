@@ -2,14 +2,14 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(isPensioner(23))->false();
-Assert::that(isPensioner(70))->true();
-Assert::that(isPensioner(60))->true();
-Assert::that(isPensioner(59))->false();
+test(function () {
+  Assert::false(isPensioner(23));
+  Assert::true(isPensioner(70));
+  Assert::true(isPensioner(60));
+  Assert::false(isPensioner(59));
+});

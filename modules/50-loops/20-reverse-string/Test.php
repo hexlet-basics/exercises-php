@@ -2,13 +2,13 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(mysubstr('got', 3))->eq('got');
-Assert::that(mysubstr('got', 2))->eq('go');
-Assert::that(mysubstr('got', 1))->eq('g');
+test(function () {
+  Assert::eq(mysubstr('got', 3), 'got');
+  Assert::eq(mysubstr('got', 2), 'go');
+  Assert::eq(mysubstr('got', 1), 'g');
+});

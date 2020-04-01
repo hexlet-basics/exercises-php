@@ -2,13 +2,13 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(sumOfSeries(1, 1))->eq(1);
-Assert::that(sumOfSeries(1, 2))->eq(3);
-Assert::that(sumOfSeries(7, 9))->eq(24);
+test(function () {
+  Assert::eq(sumOfSeries(1, 1), 1);
+  Assert::eq(sumOfSeries(1, 2), 3);
+  Assert::eq(sumOfSeries(7, 9), 24);
+});

@@ -4,11 +4,9 @@ namespace HexletBasics;
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
-use Assert\Assert;
-use Assert\Assertion;
+use Webmozart\Assert\Assert;
 
 $path = __DIR__ . '/index.php';
 require $path;
 
-Assertion::defined('DRAGONS_BORN_COUNT');
-Assert::that(DRAGONS_BORN_COUNT)->eq(3);
+Assert::eq(DRAGONS_BORN_COUNT, 3);

@@ -2,15 +2,16 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
+test(function () {
 
-Assert::that(hasTargaryenReference(''))->false();
-Assert::that(hasTargaryenReference('Targari'))->false();
-Assert::that(hasTargaryenReference('targaryen'))->false();
-Assert::that(hasTargaryenReference('Targaryen'))->true();
-Assert::that(hasTargaryenReference('Targaryen Daenerys'))->true();
+  Assert::false(hasTargaryenReference(''));
+  Assert::false(hasTargaryenReference('Targari'));
+  Assert::false(hasTargaryenReference('targaryen'));
+  Assert::true(hasTargaryenReference('Targaryen'));
+  Assert::true(hasTargaryenReference('Targaryen Daenerys'));
+});

@@ -2,13 +2,13 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Assert\Assert;
+use Webmozart\Assert\Assert;
+use function HexletBasics\Tests\test;
 
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::that(getEvenNumbersUpTo(9))->eq("2,4,6,8,");
-Assert::that(getEvenNumbersUpTo(15))->eq("2,4,6,8,10,12,14,");
-Assert::that(getEvenNumbersUpTo(2))->eq("2,");
+test(function () {
+  Assert::eq(getEvenNumbersUpTo(9), "2,4,6,8,");
+  Assert::eq(getEvenNumbersUpTo(15), "2,4,6,8,10,12,14,");
+  Assert::eq(getEvenNumbersUpTo(2), "2,");
+});
