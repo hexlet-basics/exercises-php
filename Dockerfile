@@ -1,4 +1,4 @@
-FROM php:7.4.4-cli
+FROM php:7.4.5-cli
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
@@ -14,7 +14,7 @@ RUN npm install -g ajv-cli
 ENV COMPOSER_NO_INTERACTION 1
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /tmp
-ENV COMPOSER_VERSION 1.9.2
+ENV COMPOSER_VERSION 1.10.5
 
 RUN php -r "readfile('https://getcomposer.org/installer');" > /composer-setup.php
 RUN php /composer-setup.php --install-dir=/usr/local/bin --filename=composer
