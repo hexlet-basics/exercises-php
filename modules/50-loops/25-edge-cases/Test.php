@@ -21,4 +21,6 @@ test(function () {
     Assert::false($result5);
     $result6 = isArgumentsForSubstrCorrect($str, 3, 3); // => true
     Assert::true($result6);
+    $result7 = isArgumentsForSubstrCorrect($str, 10, 1); // => true
+    Assert::true($result7);
 });
