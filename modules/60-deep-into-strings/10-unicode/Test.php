@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DeepIntoStrings\Unicode;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(invertCase('one'), 'ONE');
-    Assert::eq(invertCase('TWO'), 'two');
-    Assert::eq(invertCase('ThRee'), 'tHrEE');
-    Assert::eq(invertCase('ПрИвЕт!'), 'пРиВеТ!');
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(invertCase('one') === 'ONE');
+        assert(invertCase('TWO') === 'two');
+        assert(invertCase('ThRee') === 'tHrEE');
+        assert(invertCase('ПрИвЕт!') === 'пРиВеТ!');
+    }
+}

@@ -1,17 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Loops\WhileLoop;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-require $path;
-
-$expected = "3\n2\n1\nfinished!";
-printNumbers(3);
-
-expectOutputString($expected, function () use ($path) {
-    printNumbers(3);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = "3\n2\n1\nfinished!";
+        $this->expectOutputString($expected);
+        printNumbers(3);
+    }
+}

@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Loops\ReturnInLoop;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::true(doesContain('Renly', 'R'));
-    Assert::false(doesContain('Renly', 'r'));
-    Assert::true(doesContain('Tommy', 'm'));
-    Assert::false(doesContain('Tommy', 'd'));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(doesContain('Renly', 'R'));
+        assert(!doesContain('Renly', 'r'));
+        assert(doesContain('Tommy', 'm'));
+        assert(!doesContain('Tommy', 'd'));
+    }
+}

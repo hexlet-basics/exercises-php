@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Strings\Quotes;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = "\"Khal Drogo's favorite word is \"athjahakar\"\"";
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = "\"Khal Drogo's favorite word is \"athjahakar\"\"";
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

@@ -1,16 +1,17 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Conditionals\IfStatement;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(getSentenceTone('normal'), 'normal');
-    Assert::eq(getSentenceTone('normal?'), 'normal');
-    Assert::eq(getSentenceTone('NoRmal?'), 'normal');
-    Assert::eq(getSentenceTone('SCREAM'), 'scream');
-    Assert::eq(getSentenceTone('SCREAM!'), 'scream');
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(getSentenceTone('normal') === 'normal');
+        assert(getSentenceTone('normal?') === 'normal');
+        assert(getSentenceTone('NoRmal?') === 'normal');
+        assert(getSentenceTone('SCREAM') === 'scream');
+        assert(getSentenceTone('SCREAM!') === 'scream');
+    }
+}

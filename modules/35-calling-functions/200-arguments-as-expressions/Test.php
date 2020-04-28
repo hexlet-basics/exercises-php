@@ -1,16 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\CallingFunctions\ArgumentsAsExpressions;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-
-$expected = "20";
-require $path;
-
-expectOutputString($expected, function () use ($path) {
-    require $path;
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = "20";
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

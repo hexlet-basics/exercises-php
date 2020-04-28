@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Logic\LogicalOperators;
+
 // BEGIN
 function isLannisterSoldier($color, $shield)
 {

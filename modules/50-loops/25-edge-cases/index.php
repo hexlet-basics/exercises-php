@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\EdgeCases;
+
 // BEGIN
 function isArgumentsForSubstrCorrect($str, $index, $length)
 {

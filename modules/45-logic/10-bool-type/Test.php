@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\BoolType;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::false(isPensioner(23));
-    Assert::true(isPensioner(70));
-    Assert::true(isPensioner(60));
-    Assert::false(isPensioner(59));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(!isPensioner(23));
+        assert(isPensioner(70));
+        assert(isPensioner(60));
+        assert(!isPensioner(59));
+    }
+}

@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DefineFunctions\DefaultReturn;
+
 // BEGIN
 function getNull()
 {

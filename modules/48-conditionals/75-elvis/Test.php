@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Conditionals\Elvis;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(generateAmount(0, 2), 6);
-    Assert::eq(generateAmount(0, 5), 15);
-    Assert::eq(generateAmount(1, 2), 1);
-    Assert::eq(generateAmount(15, 16), 15);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(generateAmount(0, 2) === 6);
+        assert(generateAmount(0, 5) === 15);
+        assert(generateAmount(1, 2) === 1);
+        assert(generateAmount(15, 16) === 15);
+    }
+}

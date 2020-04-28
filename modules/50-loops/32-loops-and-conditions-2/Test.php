@@ -1,14 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Loops\LoopAndConditions2;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(getEvenNumbersUpTo(9), "2,4,6,8,");
-    Assert::eq(getEvenNumbersUpTo(15), "2,4,6,8,10,12,14,");
-    Assert::eq(getEvenNumbersUpTo(2), "2,");
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(getEvenNumbersUpTo(9) === "2,4,6,8,");
+        assert(getEvenNumbersUpTo(15) === "2,4,6,8,10,12,14,");
+        assert(getEvenNumbersUpTo(2) === "2,");
+    }
+}

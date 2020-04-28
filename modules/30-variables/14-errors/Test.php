@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Variables\Errors;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = 'Targaryen and Dragon';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 'Targaryen and Dragon';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

@@ -1,3 +1,3 @@
 <?php
 
-print_r('Hello, World!');
+print_r('ello, World!');

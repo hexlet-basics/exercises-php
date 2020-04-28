@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DataTypes\TypeConversion;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = '2 times';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '2 times';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

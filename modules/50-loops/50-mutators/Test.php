@@ -1,16 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Loops\Mutators;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    $str = 'If I look back I am lost';
-    $result1 = filterString($str, 'I');
-    Assert::eq($result1, 'f  look back  am lost');
-    $result2 = filterString($str, 'o');
-    Assert::eq($result2, 'If I lk back I am lst');
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $str = 'If I look back I am lost';
+        assert(filterString($str, 'I') === '   look back  am lost');
+        assert(filterString($str, 'o') === 'If I lk back I am lst');
+    }
+}

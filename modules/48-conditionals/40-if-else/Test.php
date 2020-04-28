@@ -1,20 +1,19 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Conditionals\IfElse;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected1 = 'https://yandex.ru';
+        $actual1 = normalizeUrl('yandex.ru');
+        assert($actual1 === $expected1);
 
-test(function () {
-    $expected1 = 'https://yandex.ru';
-    $actual1 = normalizeUrl('yandex.ru');
-    dump($actual1);
-    Assert::eq($actual1, $expected1);
-
-    $expected2 = 'https://yandex.ru';
-    $actual2 = normalizeUrl('http://yandex.ru');
-    dump($actual2);
-    Assert::eq($actual2, $expected2);
-});
+        $expected2 = 'https://yandex.ru';
+        $actual2 = normalizeUrl('http://yandex.ru');
+        assert($actual2 === $expected2);
+    }
+}

@@ -1,2 +1,2 @@
 test:
-	@ php Test.php
+	@ . ../../../test.sh

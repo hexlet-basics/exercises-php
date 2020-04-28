@@ -1,15 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\DefaultArguments;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    $expected = 'Tywin Lannister';
-    $actual = customParentFor('Cersei Lannister');
-    print_r($actual);
-    Assert::eq($actual, $expected);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 'Tywin Lannister';
+        $actual = customParentFor('Cersei Lannister');
+        assert($actual === $expected);
+    }
+}

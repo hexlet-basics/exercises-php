@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\ReturnInLoop;
+
 // BEGIN
 function doesContain($str, $char)
 {

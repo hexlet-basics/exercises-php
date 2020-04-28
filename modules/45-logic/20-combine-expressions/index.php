@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Logic\CombineExpressions;
+
 // BEGIN
 function hasTargaryenReference($string)
 {

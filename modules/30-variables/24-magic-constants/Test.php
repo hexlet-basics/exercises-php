@@ -2,15 +2,13 @@
 
 namespace HexletBasics;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-
-$expected = 'King Balon the 6th has 102 rooms.';
-require $path;
-
-expectOutputString(__DIR__, function () use ($path) {
-    require $path;
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $this->expectOutputString(__DIR__);
+        require 'index.php';
+    }
+}

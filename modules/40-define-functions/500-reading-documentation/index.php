@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DefineFunctions\ReadingDocumentation;
+
 // BEGIN
 function getAge($val)
 {

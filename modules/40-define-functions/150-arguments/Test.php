@@ -1,12 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\Arguments;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = '0-0-0-0-0-';
-expectOutput($expected, function () {
-    printSeq('0-', 5);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '0-0-0-0-0-';
+        $this->expectOutputString($expected);
+        printSeq('0-', 5);
+    }
+}

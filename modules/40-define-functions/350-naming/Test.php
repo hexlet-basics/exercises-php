@@ -1,15 +1,13 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\Naming;
 
-require 'vendor/autoload.php';
-
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    $expected = '01-01-2001';
-    $actual = getFormattedBirthday(1, 1, 2001);
-    print_r($actual);
-    Assert::eq($actual, $expected);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '01-01-2001';
+        $actual = getFormattedBirthday(1, 1, 2001);
+        assert($actual === $expected);
+    }
+}

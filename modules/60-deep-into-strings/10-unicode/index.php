@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DeepIntoStrings\Unicode;
+
 function invertCase($text)
 {
     // BEGIN

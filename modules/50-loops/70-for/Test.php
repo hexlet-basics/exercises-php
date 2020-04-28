@@ -1,14 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Loops\ForLoop;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(sumOfSeries(1, 1), 1);
-    Assert::eq(sumOfSeries(1, 2), 3);
-    Assert::eq(sumOfSeries(7, 9), 24);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(sumOfSeries(1, 1) === 1);
+        assert(sumOfSeries(1, 2) === 3);
+        assert(sumOfSeries(7, 9) === 24);
+    }
+}

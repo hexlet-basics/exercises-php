@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DefineFunctions\Naming;
+
 // BEGIN
 function getFormattedBirthday($day, $month, $year)
 {

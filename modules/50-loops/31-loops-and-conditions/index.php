@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\LoopAndConditions;
+
 // BEGIN
 function shouter($str)
 {

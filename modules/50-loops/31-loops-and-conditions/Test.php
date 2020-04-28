@@ -1,23 +1,24 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Loops\LoopAndConditions;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
+class Test extends TestCase
+{
+    public function test()
+    {
+        $str1 = 'A';
+        $str2 = 'HELLO';
+        $str3 = 'HELLO!';
 
-test(function () {
-    $str1 = 'A';
-    $str2 = 'HELLO';
-    $str3 = 'HELLO!';
-
-    $shoutStr1 = 'A';
-    $shoutStr2 = 'HELLOHELLOHELLOHELLOHELLOHELLOHELLOHELLOHELLOHELLO';
-    $shoutStr3 = str_repeat('HELLO!', 100);
+        $shoutStr1 = 'A';
+        $shoutStr2 = 'HELLOHELLOHELLOHELLOHELLOHELLOHELLOHELLOHELLOHELLO';
+        $shoutStr3 = str_repeat('HELLO!', 100);
 
 
-    Assert::eq(shouter($str1), $shoutStr1);
-    Assert::eq(shouter($str2), $shoutStr2);
-    Assert::eq(shouter($str3), $shoutStr3);
-});
+        assert(shouter($str1) === $shoutStr1);
+        assert(shouter($str2) === $shoutStr2);
+        assert(shouter($str3) === $shoutStr3);
+    }
+}

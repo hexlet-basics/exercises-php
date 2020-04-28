@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DeepIntoStrings\StartWith;
+
 function startsWith($text, $substr)
 {
     // BEGIN

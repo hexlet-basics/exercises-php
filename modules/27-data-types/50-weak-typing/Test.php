@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DataTypes\WeakTyping;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = '13';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '13';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

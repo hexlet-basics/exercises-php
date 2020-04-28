@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Conditionals\SwitchStatement;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(getNumberExplanation(0), null);
-    Assert::eq(getNumberExplanation(666), 'devil number');
-    Assert::eq(getNumberExplanation(42), 'answer for everything');
-    Assert::eq(getNumberExplanation(7), 'prime number');
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(getNumberExplanation(0) === null);
+        assert(getNumberExplanation(666) === 'devil number');
+        assert(getNumberExplanation(42) === 'answer for everything');
+        assert(getNumberExplanation(7) === 'prime number');
+    }
+}

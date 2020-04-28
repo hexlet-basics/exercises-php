@@ -1,16 +1,17 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\LogicalOperators;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::false(isLannisterSoldier('blue', null));
-    Assert::false(isLannisterSoldier('red', 'man'));
-    Assert::true(isLannisterSoldier('red', 'lion'));
-    Assert::true(isLannisterSoldier('blue', 'lion'));
-    Assert::true(isLannisterSoldier('red', null));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(!isLannisterSoldier('blue', null));
+        assert(!isLannisterSoldier('red', 'man'));
+        assert(isLannisterSoldier('red', 'lion'));
+        assert(isLannisterSoldier('blue', 'lion'));
+        assert(isLannisterSoldier('red', null));
+    }
+}

@@ -1,21 +1,20 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Variables\Concatenation;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-
-$expected = <<<HERE
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = <<<HERE
 Hello, Joffrey!
 Here is important information about your account security.
 We couldn't verify you mother's maiden name.
 HERE;
 
-require $path;
-
-expectOutputString($expected, function () use ($path) {
-    require $path;
-});
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

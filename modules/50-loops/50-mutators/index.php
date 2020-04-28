@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\Mutators;
+
 // BEGIN
 function filterString($str, $char)
 {

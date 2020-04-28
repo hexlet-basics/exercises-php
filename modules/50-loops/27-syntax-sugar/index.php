@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\SyntaxSugar;
+
 // BEGIN
 function countChars($str, $char)
 {

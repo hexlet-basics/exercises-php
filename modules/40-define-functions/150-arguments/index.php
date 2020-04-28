@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DefineFunctions\Arguments;
+
 // BEGIN
 function printSeq($str, $num)
 {

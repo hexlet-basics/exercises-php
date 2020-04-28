@@ -1,16 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Variables\Interpolation;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-
-$expected = 'Do you want to eat, Arya?';
-require $path;
-
-expectOutputString($expected, function () use ($path) {
-    require $path;
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 'Do you want to eat, Arya?';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

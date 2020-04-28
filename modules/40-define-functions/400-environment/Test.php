@@ -1,15 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\Environment;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    $expected = 'The age difference is 17';
-    $actual = getAgeDifference(2001, 2018);
-    print_r($actual);
-    Assert::eq($actual, $expected);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 'The age difference is 17';
+        $actual = getAgeDifference(2001, 2018);
+        assert($actual === $expected);
+    }
+}

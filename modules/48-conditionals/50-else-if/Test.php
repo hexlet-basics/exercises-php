@@ -1,16 +1,17 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\ElseIfStatement;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(whoIsThisHouseToStarks('Tully'), 'friend');
-    Assert::eq(whoIsThisHouseToStarks('Karstark'), 'friend');
-    Assert::eq(whoIsThisHouseToStarks('Lannister'), 'enemy');
-    Assert::eq(whoIsThisHouseToStarks('Martell'), 'neutral');
-    Assert::eq(whoIsThisHouseToStarks('undefined'), 'neutral');
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(whoIsThisHouseToStarks('Tully') === 'friend');
+        assert(whoIsThisHouseToStarks('Karstark') === 'friend');
+        assert(whoIsThisHouseToStarks('Lannister') === 'enemy');
+        assert(whoIsThisHouseToStarks('Martell') === 'neutral');
+        assert(whoIsThisHouseToStarks('undefined') === 'neutral');
+    }
+}

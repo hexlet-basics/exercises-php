@@ -1,12 +1,10 @@
 {
   "require": {
-    "squizlabs/php_codesniffer": "^3.5.4",
-    "webmozart/assert": "^1.7"
+    "squizlabs/php_codesniffer": "^3.5.4"
   },
   "autoload": {
     "psr-4": {"HexletBasics\\": "src/"},
     "files": [
-      "src/Asserts.php",
       "src/Tests.php",
       "src/Functions.php"
     ]
@@ -17,6 +15,9 @@
     "phpcbf": "phpcbf"
   },
   "require-dev": {
-    "symfony/var-dumper": "^4.2"
+    "symfony/var-dumper": "^3.4",
+    "codedungeon/phpunit-result-printer": "^0.27.0",
+    "phpunit/phpunit": "^9.1",
+    "ngyuki/phpower": "dev-master"
   }
 }

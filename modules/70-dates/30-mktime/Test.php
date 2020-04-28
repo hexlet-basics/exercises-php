@@ -1,12 +1,13 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Dates\Mkdtime;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(getHexletBirthday(), 1325376000);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(getHexletBirthday() === 1325376000);
+    }
+}

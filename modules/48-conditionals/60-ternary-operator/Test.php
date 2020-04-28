@@ -1,13 +1,14 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\TernaryOperator;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(convertString('hey'), 'yeh');
-    Assert::eq(convertString('Hey'), 'Hey');
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(convertString('hey') === 'yeh');
+        assert(convertString('Hey') === 'Hey');
+    }
+}

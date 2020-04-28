@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\LogicalOperators2;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::true(isNeutralSoldier('yellow', 'black'));
-    Assert::false(isNeutralSoldier('red', 'yellow'));
-    Assert::false(isNeutralSoldier('red', 'red'));
-    Assert::true(isNeutralSoldier('black', 'black'));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(isNeutralSoldier('yellow', 'black'));
+        assert(!isNeutralSoldier('red', 'yellow'));
+        assert(!isNeutralSoldier('red', 'red'));
+        assert(isNeutralSoldier('black', 'black'));
+    }
+}

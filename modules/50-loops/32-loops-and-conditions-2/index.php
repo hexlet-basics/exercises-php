@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\LoopAndConditions2;
+
 // BEGIN
 function getEvenNumbersUpTo($num)
 {

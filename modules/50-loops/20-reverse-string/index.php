@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\ReverseString;
+
 // BEGIN
 function mysubstr($str, $length)
 {

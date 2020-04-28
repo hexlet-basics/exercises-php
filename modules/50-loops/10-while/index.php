@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\WhileLoop;
+
 function printNumbers($firstNumber)
 {
     // BEGIN

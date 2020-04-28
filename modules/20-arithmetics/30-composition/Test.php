@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Arithmetics\Composition;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = '10.5';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '10.5';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

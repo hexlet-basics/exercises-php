@@ -1,11 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Basics\Testing;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\expectOutput;
-
-$expected = '9780262531962';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '9780262531962';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

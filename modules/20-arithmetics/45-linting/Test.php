@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Arithmetics\Linting;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = '9';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = '9';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

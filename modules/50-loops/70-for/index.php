@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Loops\ForLoop;
+
 // BEGIN
 function sumOfSeries($start, $finish)
 {

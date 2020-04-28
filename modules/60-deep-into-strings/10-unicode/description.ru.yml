@@ -49,6 +49,7 @@ instructions: |
   invertCase($str); // пРиВеТ!
   ```
 
-tips: []
+tips:
+  - (Что такое кодировка)[https://guides.hexlet.io/encoding/]
 
 definitions: []

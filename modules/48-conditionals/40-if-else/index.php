@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Conditionals\IfElse;
+
 // BEGIN
 function normalizeUrl($url)
 {

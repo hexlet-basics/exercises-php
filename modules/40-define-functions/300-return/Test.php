@@ -1,14 +1,14 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    $expected = 35;
-    $actual = getParentNamesTotalLength('Daenerys Targaryen');
-    Assert::eq($actual, $expected);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 35;
+        assert(getParentNamesTotalLength('Daenerys Targaryen') === $expected);
+    }
+}

@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Logic\TernaryOperator;
+
 // BEGIN
 function convertString($string)
 {

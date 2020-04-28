@@ -1,20 +1,18 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Variables\Heredoc;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Asserts\expectOutputString;
-
-$path = __DIR__ . '/index.php';
-
-$expected = <<<EOT
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = <<<EOT
 Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
 This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
 EOT;
-
-require $path;
-
-expectOutputString($expected, function () use ($path) {
-    require $path;
-});
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

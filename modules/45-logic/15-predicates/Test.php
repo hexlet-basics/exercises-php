@@ -1,14 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\Predicates;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::false(isMister('8234782'));
-    Assert::false(isMister('Joker'));
-    Assert::true(isMister('Mister'));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(!isMister('8234782'));
+        assert(!isMister('Joker'));
+        assert(isMister('Mister'));
+    }
+}

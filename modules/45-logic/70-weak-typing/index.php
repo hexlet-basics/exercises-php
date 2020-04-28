@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Logic\WeakTyping;
+
 // BEGIN
 function isFalsy($value)
 {

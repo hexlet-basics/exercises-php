@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\ReadingDocumentation;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::eq(getAge(10), 10);
-    Assert::eq(getAge(9.1), 9);
-    Assert::eq(getAge(8.9), 9);
-    Assert::eq(getAge(8.5), 8);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(getAge(10) === 10);
+        assert(getAge(9.1) === 9);
+        assert(getAge(8.9) === 9);
+        assert(getAge(8.5) === 8);
+    }
+}

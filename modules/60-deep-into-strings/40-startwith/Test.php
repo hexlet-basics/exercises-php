@@ -1,15 +1,16 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DeepIntoStrings\StartWith;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::true(startsWith('one', 'o'));
-    Assert::false(startsWith('one', 'ne'));
-    Assert::true(startsWith('one', 'on'));
-    Assert::true(startsWith('one', 'one'));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(startsWith('one', 'o'));
+        assert(!startsWith('one', 'ne'));
+        assert(startsWith('one', 'on'));
+        assert(startsWith('one', 'one'));
+    }
+}

@@ -1,17 +1,22 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\Define;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
+class Test extends TestCase
+{
+    public function test1()
+    {
+        $expected = 'JAIME: Farewell, my friend...';
+        $this->expectOutputString($expected);
+        printJaimesLine('Farewell, my friend...');
+    }
 
-$expected = 'JAIME: Farewell, my friend...';
-expectOutput($expected, function () {
-    printJaimesLine('Farewell, my friend...');
-});
-
-$expected = 'JAIME: attack!';
-expectOutput($expected, function () {
-    printJaimesLine('attack!');
-});
+    public function test2()
+    {
+        $expected = 'JAIME: attack!';
+        $this->expectOutputString($expected);
+        printJaimesLine('attack!');
+    }
+}

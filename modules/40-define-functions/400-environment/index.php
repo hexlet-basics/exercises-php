@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DefineFunctions\Environment;
+
 // BEGIN
 function getAgeDifference($yearOne, $yearTwo)
 {

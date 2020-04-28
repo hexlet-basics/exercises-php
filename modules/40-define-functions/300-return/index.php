@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\DefineFunctions\ReturnInstruction;
+
 use function HexletBasics\Functions\parentFor;
 
 // BEGIN

@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Conditionals\SwitchStatement;
+
 // BEGIN
 function getNumberExplanation($number)
 {

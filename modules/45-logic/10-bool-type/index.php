@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Logic\BoolType;
+
 // BEGIN
 function isPensioner($age)
 {

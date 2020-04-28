@@ -1,11 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Basics\Tags;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\expectOutput;
-
-$expected = 'King in the North!';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 'King in the North!';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

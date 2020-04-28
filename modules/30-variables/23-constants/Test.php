@@ -1,12 +1,14 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Variables\Constants;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-
-$path = __DIR__ . '/index.php';
-require $path;
-
-Assert::eq(DRAGONS_BORN_COUNT, 3);
+class Test extends TestCase
+{
+    public function test()
+    {
+        require 'index.php';
+        assert(DRAGONS_BORN_COUNT === 3);
+    }
+}

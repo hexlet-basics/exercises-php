@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="true"
+         bootstrap="vendor/autoload.php"
+>
+
+    <!-- <filter> -->
+    <!--     <whitelist addUncoveredFilesFromWhitelist="true"> -->
+    <!--         <!-1- the files included in the clover report -1-> -->
+    <!--         <directory suffix=".php">./src</directory> -->
+    <!--     </whitelist> -->
+    <!-- </filter> -->
+
+    <!-- <logging> -->
+    <!--     <log type="coverage-clover" target="./build/logs/clover.xml"/> -->
+    <!-- </logging> -->
+</phpunit>

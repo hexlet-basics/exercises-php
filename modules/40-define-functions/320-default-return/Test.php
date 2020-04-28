@@ -1,13 +1,14 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\DefineFunctions\DefaultReturn;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    $actual = getNull();
-    Assert::eq($actual, null);
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        $actual = getNull();
+        assert($actual === null);
+    }
+}

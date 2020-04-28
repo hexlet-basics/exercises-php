@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Dates\DateFunction;
+
 function getCustomDate($timestamp)
 {
     // BEGIN

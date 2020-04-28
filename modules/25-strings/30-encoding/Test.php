@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Strings\Encoding;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = "~^%";
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = "~^%";
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

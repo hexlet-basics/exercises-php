@@ -1,17 +1,18 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\WeakTyping;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::true(isFalsy(''));
-    Assert::false(isFalsy(' '));
-    Assert::true(isFalsy(null));
-    Assert::true(isFalsy(false));
-    Assert::false(isFalsy(true));
-    Assert::false(isFalsy(3));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(isFalsy(''));
+        assert(!isFalsy(' '));
+        assert(isFalsy(null));
+        assert(isFalsy(false));
+        assert(!isFalsy(true));
+        assert(!isFalsy(3));
+    }
+}

@@ -1,10 +1,15 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Strings\Concatenation;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use function HexletBasics\Tests\expectOutput;
-
-$expected = 'Winter came for the House of Frey.';
-expectOutput($expected);
+class Test extends TestCase
+{
+    public function test()
+    {
+        $expected = 'Winter came for the House of Frey.';
+        $this->expectOutputString($expected);
+        require 'index.php';
+    }
+}

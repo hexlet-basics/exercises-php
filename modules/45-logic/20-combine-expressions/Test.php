@@ -1,17 +1,17 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\CombineExpressions;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-
-    Assert::false(hasTargaryenReference(''));
-    Assert::false(hasTargaryenReference('Targari'));
-    Assert::false(hasTargaryenReference('targaryen'));
-    Assert::true(hasTargaryenReference('Targaryen'));
-    Assert::true(hasTargaryenReference('Targaryen Daenerys'));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(!hasTargaryenReference(''));
+        assert(!hasTargaryenReference('Targari'));
+        assert(!hasTargaryenReference('targaryen'));
+        assert(hasTargaryenReference('Targaryen'));
+        assert(hasTargaryenReference('Targaryen Daenerys'));
+    }
+}

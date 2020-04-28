@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Conditionals\IfStatement;
+
 // BEGIN
 function getSentenceTone($sentence)
 {

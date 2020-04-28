@@ -1,16 +1,17 @@
 <?php
 
-namespace HexletBasics;
+namespace HexletBasics\Logic\LogicalNegation;
 
-require 'vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
 
-use Webmozart\Assert\Assert;
-use function HexletBasics\Tests\test;
-
-test(function () {
-    Assert::true(isNotLannisterSoldier('blue', null));
-    Assert::true(isNotLannisterSoldier('red', 'man'));
-    Assert::false(isNotLannisterSoldier('red', 'lion'));
-    Assert::false(isNotLannisterSoldier('blue', 'lion'));
-    Assert::false(isNotLannisterSoldier('red', null));
-});
+class Test extends TestCase
+{
+    public function test()
+    {
+        assert(isNotLannisterSoldier('blue', null));
+        assert(isNotLannisterSoldier('red', 'man'));
+        assert(!isNotLannisterSoldier('red', 'lion'));
+        assert(!isNotLannisterSoldier('blue', 'lion'));
+        assert(!isNotLannisterSoldier('red', null));
+    }
+}

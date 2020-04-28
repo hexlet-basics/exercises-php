@@ -1,5 +1,7 @@
 <?php
 
+namespace HexletBasics\Conditionals\ElseIfStatement;
+
 // BEGIN
 function whoIsThisHouseToStarks($houseName)
 {
