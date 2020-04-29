@@ -2,7 +2,6 @@
 <phpunit backupGlobals="false"
          printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
          backupStaticAttributes="false"
-         colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
