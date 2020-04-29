@@ -5,7 +5,6 @@
   "autoload": {
     "psr-4": {"HexletBasics\\": "src/"},
     "files": [
-      "src/Tests.php",
       "src/Functions.php"
     ]
   },
