@@ -4,10 +4,13 @@ namespace HexletBasics\DefineFunctions\Define;
 
 use PHPUnit\Framework\TestCase;
 
-require 'index.php';
-
 class Test extends TestCase
 {
+    protected function setUp(): void
+    {
+        require_once 'index.php';
+    }
+
     public function test1()
     {
         $expected = 'JAIME: Farewell, my friend...';
