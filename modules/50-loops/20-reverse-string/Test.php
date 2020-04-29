@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         assert(mysubstr('got', 3) === 'got');
         assert(mysubstr('got', 2) === 'go');
         assert(mysubstr('got', 1) === 'g');

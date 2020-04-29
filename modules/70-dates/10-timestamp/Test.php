@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         assert(getYear(1532435204) === 2018);
         assert(getYear(532435204) === 1986);
         assert(getYear(5324352) === 1970);

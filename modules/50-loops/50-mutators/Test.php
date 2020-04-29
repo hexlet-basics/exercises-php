@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
         $str = 'If I look back I am lost';
-        assert(filterString($str, 'I') === '   look back  am lost');
+        assert(filterString($str, 'I') === 'f  look back  am lost');
         assert(filterString($str, 'o') === 'If I lk back I am lst');
     }
 }

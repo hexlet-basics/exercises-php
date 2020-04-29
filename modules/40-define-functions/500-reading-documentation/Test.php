@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getAge(10) === 10);
-        assert(getAge(9.1) === 9);
-        assert(getAge(8.9) === 9);
-        assert(getAge(8.5) === 8);
+        assert(getAge(10) === 10.0);
+        assert(getAge(9.1) === 9.0);
+        assert(getAge(8.9) === 9.0);
+        assert(getAge(8.5) === 8.0);
     }
 }

@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         $expected = 'The age difference is 17';
         $actual = getAgeDifference(2001, 2018);
         assert($actual === $expected);
