@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         $str = 'Sansa Stark';
         assert(!isArgumentsForSubstrCorrect($str, -1, 3));
         assert(!isArgumentsForSubstrCorrect($str, 4, 100));

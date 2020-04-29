@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         assert(isNeutralSoldier('yellow', 'black'));
         assert(!isNeutralSoldier('red', 'yellow'));
         assert(!isNeutralSoldier('red', 'red'));

@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         $str = 'If I look back I am lost';
         $result1 = countChars($str, 'I');
         assert($result1 === 3);

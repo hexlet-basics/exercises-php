@@ -4,6 +4,8 @@ namespace HexletBasics\DefineFunctions\Define;
 
 use PHPUnit\Framework\TestCase;
 
+require 'index.php';
+
 class Test extends TestCase
 {
     public function test1()

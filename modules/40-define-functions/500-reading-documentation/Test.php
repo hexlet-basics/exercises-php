@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         assert(getAge(10) === 10);
         assert(getAge(9.1) === 9);
         assert(getAge(8.9) === 9);

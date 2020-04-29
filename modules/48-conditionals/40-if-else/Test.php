@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         $expected1 = 'https://yandex.ru';
         $actual1 = normalizeUrl('yandex.ru');
         assert($actual1 === $expected1);

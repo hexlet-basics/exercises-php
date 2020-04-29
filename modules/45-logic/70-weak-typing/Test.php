@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         assert(isFalsy(''));
         assert(!isFalsy(' '));
         assert(isFalsy(null));

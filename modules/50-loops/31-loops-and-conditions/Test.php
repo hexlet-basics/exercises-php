@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         $str1 = 'A';
         $str2 = 'HELLO';
         $str3 = 'HELLO!';

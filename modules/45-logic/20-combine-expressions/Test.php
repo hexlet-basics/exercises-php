@@ -8,6 +8,8 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
+
         assert(!hasTargaryenReference(''));
         assert(!hasTargaryenReference('Targari'));
         assert(!hasTargaryenReference('targaryen'));

@@ -10,6 +10,6 @@ class Test extends TestCase
     {
         $expected = setlocale(LC_CTYPE, 0);
         $this->expectOutputString($expected);
-        require '/index.php';
+        require 'index.php';
     }
 }

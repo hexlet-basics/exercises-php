@@ -8,6 +8,7 @@ class Test extends TestCase
 {
     public function test()
     {
+        require 'index.php';
         assert(doesContain('Renly', 'R'));
         assert(!doesContain('Renly', 'r'));
         assert(doesContain('Tommy', 'm'));
