@@ -52,6 +52,9 @@ instructions: |
 
     $actual = getAgeDifference(2001, 2018);
     print_r($actual); // => 17
+
+    $actual2 = getAgeDifference(2020, 2002);
+    print_r($actual2); // => 18
     ```
 
 tips:
