@@ -24,6 +24,9 @@ compose-bash:
 compose-build:
 	docker-compose build
 
+compose-test:
+	docker-compose run exercises make test
+	
 description-lint:
 	yamllint modules
 
