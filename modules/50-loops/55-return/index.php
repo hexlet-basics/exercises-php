@@ -5,9 +5,11 @@ namespace HexletBasics\Loops\ReturnInLoop;
 // BEGIN
 function doesContain($str, $char)
 {
+    $length = strlen($str);
     $index = 0;
-    while ($index < strlen($str)) {
-        if ($str[$index] === $char) {
+    while ($index < $length) {
+        $currentChar = $str[$index];
+        if ($currentChar === $char) {
             return true;
         }
 
