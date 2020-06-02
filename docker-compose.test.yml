@@ -5,4 +5,5 @@ version: '2'
 services:
   sut:
     build: .
+    image: exercises-php_exercises:latest
     command: make check

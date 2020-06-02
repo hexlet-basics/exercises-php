@@ -25,17 +25,17 @@ jobs:
             docker-compose --file docker-compose.test.yml run sut
   # Push image to GitHub Package Registry.
   # See also https://docs.docker.com/docker-hub/builds/
-  push:
-    # Ensure test job passes before pushing image.
-    needs: test
-
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-
-    steps:
-      - uses: actions/checkout@master
-      - uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: ${{ env.IMAGE_NAME }}
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+#  push:
+#    # Ensure test job passes before pushing image.
+#    needs: test
+#
+#    runs-on: ubuntu-latest
+#    if: github.event_name == 'push'
+#
+#    steps:
+#      - uses: actions/checkout@master
+#      - uses: elgohr/Publish-Docker-Github-Action@master
+#        with:
+#          name: ${{ env.IMAGE_NAME }}
+#          username: ${{ secrets.DOCKER_USERNAME }}
+#          password: ${{ secrets.DOCKER_PASSWORD }}
