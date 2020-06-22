@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/hexletbasics/base-image/image:base
+FROM hexletbasics/base-image/image:latest
 
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get install -yqq php7.4 php7.4-common php7.4-opcache php7.4-cli php7.4-gd php7.4-curl php7.4-mbstring php7.4-xml
@@ -16,7 +16,7 @@ WORKDIR /exercises-php
 RUN mkdir -p /usr/local/etc/php/conf.d/
 RUN echo "include_path = \".:/exercises-php\"" > /usr/local/etc/php/conf.d/code-basics.ini
 
-COPY --from=docker.pkg.github.com/hexletbasics/base-image/image:base /tmp/basics/common/* ./
+COPY --from=hexletbasics/base-image/image:latest /tmp/basics/common/* ./
 COPY . .
 
 RUN composer install
