@@ -16,7 +16,6 @@ WORKDIR /exercises-php
 RUN mkdir -p /usr/local/etc/php/conf.d/
 RUN echo "include_path = \".:/exercises-php\"" > /usr/local/etc/php/conf.d/code-basics.ini
 
-COPY --from=hexletbasics/base-image:latest /tmp/basics/common/* ./
 COPY . .
 
 RUN composer install
