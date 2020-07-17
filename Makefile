@@ -16,3 +16,9 @@ code-lint:
 
 code-lint-fix:
 	composer run-script phpcbf -- --standard=PSR12 modules
+
+compose-bash:
+	docker-compose run exercises bash
+
+compose-test:
+	docker-compose run exercises make test
