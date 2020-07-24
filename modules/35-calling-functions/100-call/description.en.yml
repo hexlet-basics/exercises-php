@@ -56,7 +56,7 @@ instructions: |
   ```
   The first line is a special code that makes the `calculateDistance` function available in our program. You can use that function whithout knowing what's inside it. It's a common thing in programming: you know **what** a function does and how to use it, but you don't know **how exactly** it works on the inside.
 
-  Use the `calculateDistance` function, find and output the distance between the cities of Quarth and Vaes Dothrak. Don't copy the example, create a variable with a different name and write the code from zero on your own.
+  Use the `calculateDistance` function, find and output the distance between the cities of Qarth and Vaes Dothrak. Don't copy the example, create a variable with a different name and write the code from zero on your own.
 
 tips: []
 
