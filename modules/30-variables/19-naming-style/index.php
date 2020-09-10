@@ -1,8 +1,8 @@
-/* eslint prefer-const: 0 */
+<?php
 
 // BEGIN
-let firstNumber = 11;
-let secondNumber = -100;
+$firstNumber = 1.10;
+$secondNumber = -100;
 
-console.log(firstNumber * secondNumber);
+print_r($firstNumber * $secondNumber);
 // END
