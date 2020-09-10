@@ -53,7 +53,7 @@ instructions: |
   We couldn't verify you mother's maiden name.
   </pre>
 
-  Выполните задание, используя только два `print_r`.
+  Выполните задание, используя только два `print_r()`.
 
 tips:
   - |

@@ -1,8 +1,7 @@
 <?php
 
 // BEGIN
-$firstNumber = 1.10;
-$secondNumber = -100;
+$myBrothersCount = 2;
 
-print_r($firstNumber * $secondNumber);
+print_r($myBrothersCount);
 // END
