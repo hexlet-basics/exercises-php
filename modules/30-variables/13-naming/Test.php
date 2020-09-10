@@ -8,7 +8,7 @@ class Test extends TestCase
 {
     public function test()
     {
-        $expected = "-110";
+        $expected = "2";
         $this->expectOutputString($expected);
         require 'index.php';
     }
