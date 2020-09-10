@@ -35,5 +35,6 @@ instructions: |
 
 definitions: []
 
-tips: |
-  - [Heredoc](https://www.php.net/manual/ru/language.types.string.php#language.types.string.syntax.heredoc)
+tips:
+  - |
+    [Heredoc](https://www.php.net/manual/ru/language.types.string.php#language.types.string.syntax.heredoc)
