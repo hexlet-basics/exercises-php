@@ -64,3 +64,9 @@ function calculateDistance($source, $dest)
         Please ask for a distance between some other pair of cities.";
     throw new \Exception($text);
 }
+
+function runScript()
+{
+    require 'index.php';
+    print_r("\n");
+}

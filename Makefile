@@ -12,10 +12,10 @@ compose-install:
 	docker-compose run exercises composer install
 
 code-lint:
-	composer run-script phpcs -- --standard=PSR12 modules
+	composer exec --verbose phpcs -- modules
 
 code-lint-fix:
-	composer run-script phpcbf -- --standard=PSR12 modules
+	composer exec --verbose phpcbf -- modules
 
 compose-bash:
 	docker-compose run exercises bash
