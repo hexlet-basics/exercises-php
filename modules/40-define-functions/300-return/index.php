@@ -2,13 +2,13 @@
 
 namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
-use function HexletBasics\Functions\parentFor;
+use function HexletBasics\Functions\getParentFor;
 
 // BEGIN
 function getParentNamesTotalLength($child)
 {
-    $mother = parentFor($child, 'mother');
-    $father = parentFor($child, 'father');
+    $mother = getParentFor($child, 'mother');
+    $father = getParentFor($child, 'father');
     return strlen($mother) + strlen($father);
 }
 // END

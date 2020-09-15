@@ -2,11 +2,11 @@
 
 namespace HexletBasics\DefineFunctions\DefaultArguments;
 
-use function HexletBasics\Functions\parentFor;
+use function HexletBasics\Functions\getParentFor;
 
 // BEGIN
-function customParentFor($child, $parent = 'father')
+function getCustomParentFor($child, $parent = 'father')
 {
-    return parentFor($child, $parent);
+    return getParentFor($child, $parent);
 }
 // END

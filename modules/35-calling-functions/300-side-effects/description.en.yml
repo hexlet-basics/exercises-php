@@ -19,9 +19,9 @@ instructions: |
 
   This exercise is not directly related to the subject of the lesson, but doing it without creating variables is a very important step in your professional development.
 
-  Print to screen the name of `Daenerys Targaryen`'s mother, using the `parentFor` function and without creating variables.
+  Print to screen the name of `Daenerys Targaryen`'s mother, using the `getParentFor` function and without creating variables.
 
-  As you remember, `parentFor` receives a child's name as the first parameter and returns a parent's name. As the second parameter it receives either `father` or `mother`. This way it knows which parent to return. By default, the second argument is set to 'mother'.
+  As you remember, `getParentFor` receives a child's name as the first parameter and returns a parent's name. As the second parameter it receives either `father` or `mother`. This way it knows which parent to return. By default, the second argument is set to 'mother'.
 
 tips:
   - |

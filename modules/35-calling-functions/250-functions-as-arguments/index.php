@@ -1,7 +1,7 @@
 <?php
 
-use function HexletBasics\Functions\parentFor;
+use function HexletBasics\Functions\getParentFor;
 
 // BEGIN
-print_r(parentFor(parentFor('Joffrey Baratheon'), 'father'));
+print_r(getParentFor(getParentFor('Joffrey Baratheon'), 'father'));
 // END

@@ -54,15 +54,15 @@ theory: |
 
 instructions: |
 
-  In order to build a genealogical tree of the Starks, Sam wrote a function named `parentFor`. It receives a child's full name as the first parameter, and returns parent's name. As the second parameter, we can pass it either 'mother' or 'father'. This way we let it know which one of the parents to return. By default, the second argument is `mother`. It means that if you need to know the mother's name, you can omit the second argument, and just pass it the child's name.
+  In order to build a genealogical tree of the Starks, Sam wrote a function named `getParentFor`. It receives a child's full name as the first parameter, and returns parent's name. As the second parameter, we can pass it either 'mother' or 'father'. This way we let it know which one of the parents to return. By default, the second argument is `mother`. It means that if you need to know the mother's name, you can omit the second argument, and just pass it the child's name.
 
   Write a progam that prints to screen the name of Joffrey's maternal **grandfather**. The child's full name is `Joffrey Baratheon`.
 
-  Usage example of `parentFor`:
+  Usage example of `getParentFor`:
 
   ```php
   <?php
-  $mother = parentFor('Joffrey Baratheon');
+  $mother = getParentFor('Joffrey Baratheon');
   print_r($mother); // => Cersei Lannister
   ```
 

@@ -6,22 +6,12 @@ use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase
 {
-    protected function setUp(): void
+    public function test()
     {
-        require_once 'index.php';
-    }
+        require 'index.php';
 
-    public function test1()
-    {
-        $expected = 'JAIME: Farewell, my friend...';
+        $expected = 'Winter is coming';
         $this->expectOutputString($expected);
-        printJaimesLine('Farewell, my friend...');
-    }
-
-    public function test2()
-    {
-        $expected = 'JAIME: attack!';
-        $this->expectOutputString($expected);
-        printJaimesLine('attack!');
+        printMotto();
     }
 }

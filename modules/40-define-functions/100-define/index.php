@@ -6,8 +6,8 @@
 namespace HexletBasics\DefineFunctions\Define;
 
 // BEGIN
-function printJaimesLine($text)
+function printMotto()
 {
-    print_r("JAIME: {$text}");
+    print_r("Winter is coming");
 }
 // END
