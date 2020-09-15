@@ -11,7 +11,7 @@ class Test extends TestCase
         require 'index.php';
 
         $expected = 'Tywin Lannister';
-        $actual = customParentFor('Cersei Lannister');
+        $actual = getCustomParentFor('Cersei Lannister');
         assert($actual === $expected);
     }
 }

@@ -7,7 +7,7 @@ function isLannisterSoldier($color, $shield)
     return ($color === 'red' && $shield === null) || ($shield === 'lion');
 }
 
-function parentFor($child, $parent = 'mother')
+function getParentFor($child, $parent = 'mother')
 {
     switch ($child) {
         case 'Daenerys Targaryen':

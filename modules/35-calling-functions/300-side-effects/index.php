@@ -1,7 +1,7 @@
 <?php
 
-use function HexletBasics\Functions\parentFor;
+use function HexletBasics\Functions\getParentFor;
 
 // BEGIN
-print_r(parentFor('Daenerys Targaryen'));
+print_r(getParentFor('Daenerys Targaryen'));
 // END
