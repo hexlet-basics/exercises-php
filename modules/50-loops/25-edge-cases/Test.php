@@ -14,30 +14,30 @@ class Test extends TestCase
 
         $result1 = isArgumentsForSubstrCorrect($str, -1, 3);
         $this->assertIsBool($result1);
-        assert(!$result1);
+        $this->assertFalse($result1);
 
         $result2 = isArgumentsForSubstrCorrect($str, 4, 100);
         $this->assertIsBool($result2);
-        assert(!$result2);
+        $this->assertFalse($result2);
 
         $result3 = isArgumentsForSubstrCorrect($str, 10, 10);
         $this->assertIsBool($result3);
-        assert(!$result3);
+        $this->assertFalse($result3);
 
         $result4 = isArgumentsForSubstrCorrect($str, 11, 1);
         $this->assertIsBool($result4);
-        assert(!$result4);
+        $this->assertFalse($result4);
 
         $result5 = isArgumentsForSubstrCorrect($str, 11, 0);
         $this->assertIsBool($result5);
-        assert(!$result5);
+        $this->assertFalse($result5);
 
         $result6 = isArgumentsForSubstrCorrect($str, 3, 3);
         $this->assertIsBool($result6);
-        assert($result6);
+        $this->assertTrue($result6);
 
         $result7 = isArgumentsForSubstrCorrect($str, 10, 1);
         $this->assertIsBool($result7);
-        assert($result7);
+        $this->assertTrue($result7);
     }
 }
