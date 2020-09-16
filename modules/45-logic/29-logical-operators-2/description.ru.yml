@@ -29,10 +29,9 @@ theory: |
       - `&&` **И**
       - `$year % 100 !== 0`: остаток от деления на 100 не равен 0, значит, число не кратно 100
 
-
 instructions: |
 
-  Напишите функцию `isNeutralSoldier`, которая принимает на вход два аргумента:
+  Напишите функцию `isNeutralSoldier()`, которая принимает на вход два аргумента:
 
   1. Цвет доспехов (строка). Возможные варианты: `red`, `yellow`, `black`.
   2. Цвет щита (строка). Возможные варианты: `red`, `yellow`, `black`.
@@ -42,8 +41,9 @@ instructions: |
   Примеры вызова:
 
   ```php
+  <?php
+
   isNeutralSoldier('yellow', 'black'); // true
   isNeutralSoldier('red', 'black');    // false
   isNeutralSoldier('red', 'red');      // false
   ```
-
