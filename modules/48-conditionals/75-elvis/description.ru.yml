@@ -8,6 +8,8 @@ theory: |
   Попробуем собрать строку с приветствием человека по этим требованиям:
 
   ```php
+  <?php
+
   function generateGreeting($name, $nickname)
   {
       if ($name) {
@@ -26,28 +28,26 @@ theory: |
   С тернарным оператором можно получить более короткую запись:
 
   ```php
+  <?php
+
   function generateGreeting($name, $nickname)
   {
       return $name ? "Hello, {$name}!" : "Hello, {$nickname}!";
   }
-
-  generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
-  generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
   ```
 
-  Это частый случай: мы оперируем значениями `bool` и получаем первое значение если оно `true`, или второе в ином случае.
+  Это частый случай: мы оперируем значениями `bool` и получаем первое значение если, оно `true`, и второе в ином случае.
 
   В PHP для таких случаев есть специальный оператор:
 
   ```php
+  <?php
+
   function generateGreeting($name, $nickname)
   {
       $user = $name ?: $nickname;
       return "Hello, {$user}!";
   }
-
-  generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
-  generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
   ```
 
   **`?:` — бинарный оператор, который возвращает первый операнд если он истинен, и второй в ином случае.**
@@ -56,15 +56,17 @@ theory: |
 
   ![](https://i.imgur.com/eoLgBHN.png)
 
-  А еще слово Elvis напоминает "else if".
+  А ещё слово Elvis напоминает "else if".
 
 instructions: |
 
-  Напишите функцию `generateAmount`, которая принимает два числа: количество товаров и стоимость аудита. Если товаров 0, то функция возвращает стоимость аудита, умноженную на 3. Если товаров не 0, то функция возвращает количество товаров.
+  Напишите функцию `generateAmount()`, которая принимает два числа: количество товаров и стоимость аудита. Если товаров 0, то функция возвращает стоимость аудита, умноженную на 3. Если товаров не 0, то функция возвращает количество товаров.
 
   Примеры вызова:
 
   ```php
+  <?php
+
   generateAmount(0, 2);   // 6
   generateAmount(0, 5);   // 15
   generateAmount(1, 2);   // 1
@@ -73,7 +75,7 @@ instructions: |
 
 definitions:
   - name: "Оператор Элвис"
-    description: "выражение, возвращающее первый операнд если он true, и второй в ином случае. Например, `$name ?: $nickname;`"
+    description: "выражение, возвращающее первый операнд если он true, и второй в ином случае. Например, `$name ?: $nickname;`".
 
 tips:
   - |

@@ -3,7 +3,7 @@
 name: else if
 theory: |
 
-  Функция `getTypeOfSentence` из предыдущего урока различает только вопросительные и обычные предложения. Давайте попробуем добавить поддержку восклицательных предложений:
+  Функция `getTypeOfSentence()` из предыдущего урока различает только вопросительные и обычные предложения. Давайте попробуем добавить поддержку восклицательных предложений:
 
   ```php
   <?php
@@ -54,10 +54,6 @@ theory: |
 
       return "Sentence is {$sentenceType}";
   }
-
-  getTypeOfSentence('Who?'); // 'Sentence is question'
-  getTypeOfSentence('No');   // 'Sentence is normal'
-  getTypeOfSentence('No!');  // 'Sentence is exclamation'
   ```
 
   Теперь все условия выстроены в единую конструкцию. `elseif` — это «если не выполнено предыдущее условие, но выполнено текущее». Получается такая схема:
@@ -72,7 +68,7 @@ instructions: |
 
   На электронной карте Вестероса, которую реализовал Сэм, союзники Старков отображены зеленым кружком, враги — красным, а нейтральные семьи — серым.
 
-  Напишите для Сэма функцию `whoIsThisHouseToStarks`, которая принимает на вход фамилию семьи и возвращает одно из трех значений: `'friend'`, `'enemy'`, `'neutral'`.
+  Напишите для Сэма функцию `whoIsThisHouseToStarks()`, которая принимает на вход фамилию семьи и возвращает одно из трех значений: `'friend'`, `'enemy'`, `'neutral'`.
 
   Правила определения:
 
@@ -83,6 +79,8 @@ instructions: |
   Примеры вызова:
 
   ```php
+  <?php
+
   whoIsThisHouseToStarks('Karstark'); // 'friend'
   whoIsThisHouseToStarks('Frey');     // 'enemy'
   whoIsThisHouseToStarks('Joar');     // 'neutral'
@@ -92,5 +90,5 @@ instructions: |
 tips: []
 
 definitions:
-  - name: "else if"
-    description: "способ задать несколько альтернативных условий"
+  - name: else if
+    description: способ задать несколько альтернативных условий.

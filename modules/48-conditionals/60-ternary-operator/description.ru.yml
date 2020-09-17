@@ -3,17 +3,6 @@
 name: Тернарный оператор
 theory: |
 
-  #### Вкратце
-
-  ```
-  <predicate> ? <expression on true> : <expression on false>
-
-  // например
-  $number >= 0 ? $number : -$number
-  ```
-
-  ---
-
   Посмотрите на определение функции, которая возвращает модуль переданного числа:
 
   ```php
@@ -27,6 +16,9 @@ theory: |
 
       return -$number;
   }
+
+  abs(10);  // 10
+  abs(-10); // 10
   ```
 
   Можно ли записать её лаконичнее? Что-то вроде `return ОТВЕТ В ЗАВИСИМОСТИ ОТ УСЛОВИЯ`? Для этого справа от return должно быть выражение, но `if` — это инструкция, а не выражение.
@@ -46,7 +38,7 @@ theory: |
 
   Общий паттерн выглядит так: `<predicate> ? <expression on true> : <expression on false>`.
 
-  Давайте перепишем начальный вариант `getTypeOfSentence` аналогично:
+  Давайте перепишем начальный вариант `getTypeOfSentence()` аналогично:
 
   Было:
 
@@ -63,9 +55,6 @@ theory: |
 
       return 'normal';
   }
-
-  getTypeOfSentence('Hodor');  // normal
-  getTypeOfSentence('Hodor?'); // question
   ```
 
   Стало:
@@ -90,24 +79,26 @@ theory: |
 
 instructions: |
 
-  Реализуйте функцию `convertString`, которая принимает на вход строку и, если первая буква не заглавная, возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
+  Реализуйте функцию `convertText`, которая принимает на вход строку и, если первая буква не заглавная, возвращает перевернутый вариант исходной строки. Если первая буква заглавная, то строка возвращается без изменений.
 
   Примеры вызова:
 
   ```php
-  convertString('Hello'); // 'Hello'
-  convertString('hello'); // 'olleh'
+  <?php
+
+  convertText('Hello'); // 'Hello'
+  convertText('hello'); // 'olleh'
   ```
 
-  Перевернуть строчку можно, используя функцию [strrev](https://php.net/manual/ru/function.strrev.php).
+  Перевернуть строчку можно, используя функцию [strrev()](https://php.net/manual/ru/function.strrev.php).
 
-  Есть разные подходы к решению этой задачи. Возможно, вам пригодятся функции [ucfirst](https://php.net/manual/ru/function.ucfirst.php), [strtoupper](https://php.net/manual/ru/function.strtoupper.php) и возможность получения символа из строки (например, `$str[0]`).
+  Есть разные подходы к решению этой задачи. Возможно, вам пригодятся функции [ucfirst()](https://php.net/manual/ru/function.ucfirst.php), [strtoupper](https://php.net/manual/ru/function.strtoupper.php) и возможность получения символа из строки (например, `$str[0]`).
 
   Попробуйте написать два варианта функции: с обычным if-else, и с тернарным оператором.
 
 tips: []
 
 definitions:
-  - name: "Тернарный оператор"
+  - name: Тернарный оператор
     description: |
-      cпособ превратить простую условную инструкцию в выражение, например, `$number >= 0 ? $number : -$number`
+      cпособ превратить простую условную инструкцию в выражение, например, `$number >= 0 ? $number : -$number`.

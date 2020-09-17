@@ -9,6 +9,6 @@ function getSentenceTone($sentence)
         return 'scream';
     }
 
-    return 'normal';
+    return 'general';
 }
 // END
