@@ -13,7 +13,7 @@ theory: |
   function getTypeOfSentence($sentence)
   {
       // простой способ извлечь последний символ
-      $lastChar = substr($sentence, -1);
+      $lastChar = $sentence[-1];
       if ($lastChar === '?') {
           return 'question';
       }
@@ -38,7 +38,7 @@ theory: |
 
   function getTypeOfSentence($sentence)
   {
-      $lastChar = substr($sentence, -1);
+      $lastChar = $sentence[-1];
       if ($lastChar === '?')
           return 'question';
 
