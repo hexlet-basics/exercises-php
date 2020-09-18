@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(convertString('hey') === 'yeh');
-        assert(convertString('Hey') === 'Hey');
+        assert(convertText('hey') === 'yeh');
+        assert(convertText('Hey') === 'Hey');
     }
 }

@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getSentenceTone('normal') === 'normal');
-        assert(getSentenceTone('normal?') === 'normal');
-        assert(getSentenceTone('NoRmal?') === 'normal');
+        assert(getSentenceTone('general') === 'general');
+        assert(getSentenceTone('general?') === 'general');
+        assert(getSentenceTone('NoRmal?') === 'general');
         assert(getSentenceTone('SCREAM') === 'scream');
         assert(getSentenceTone('SCREAM!') === 'scream');
     }
