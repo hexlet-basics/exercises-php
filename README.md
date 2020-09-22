@@ -2,11 +2,11 @@
 
 [![Github Actions Status](../../workflows/Docker/badge.svg)](../../exercises-php/actions)
 
-### Участие
+## Участие
 
-* Обсуждение в канале #hexlet-volunteers слака http://slack-ru.hexlet.io
+* Обсуждение в канале #hexlet-volunteers слака https://slack-ru.hexlet.io
 
-## Develop
+## Разработка
 
 ```sh
 # setup
@@ -23,9 +23,7 @@ $ make compose-description-lint
 $ make compose-schema-validate
 ```
 
-### Участие
-
-* Обсуждение в канале #hexlet-volunteers слака http://slack-ru.hexlet.io
+В тестах используется [phpower](https://github.com/ngyuki/phpower). Внимательнее при работе с ассертами.
 
 ##
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/hexletguides.github.io/master/images/hexlet_logo128.png)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=exercises-javascript)
