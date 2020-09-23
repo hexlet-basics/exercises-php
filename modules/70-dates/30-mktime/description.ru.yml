@@ -1,15 +1,15 @@
 ---
 
-name: mktime
+name: mktime()
 theory: |
 
-  Функция [mktime](https://php.net/manual/ru/function.mktime.php) генерирует timestamp по информации о времени: секундах, часах, минутах и дате.
+  Функция [mktime()](https://php.net/manual/ru/function.mktime.php) генерирует timestamp по информации о времени: секундах, часах, минутах и дате.
 
   ```
   int mktime ([ int $hour = date("H") [, int $minute = date("i") [, int $second = date("s") [, int $month = date("n") [, int $day = date("j") [, int $year = date("Y") ]]]]]] )
   ```
 
-  `mktime` — многословная функция, каждая часть даты и времени передается как отдельный параметр.
+  `mktime()` — многословная функция, каждая часть даты и времени передается как отдельный параметр.
 
   ```php
   <?php
