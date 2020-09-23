@@ -1,9 +1,9 @@
 <?php
 
-namespace HexletBasics\Loops\ReturnInLoop;
+namespace HexletBasics\Loops\ReturnFromLoop;
 
 // BEGIN
-function doesContain($str, $char)
+function hasChar($str, $char)
 {
     $length = strlen($str);
     $index = 0;
