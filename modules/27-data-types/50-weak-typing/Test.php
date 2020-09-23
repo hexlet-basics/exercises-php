@@ -1,8 +1,10 @@
-<?php
+<?php // phpcs:ignore PSR1.Files.SideEffects
 
 namespace HexletBasics\DataTypes\WeakTyping;
 
 use PHPUnit\Framework\TestCase;
+
+\HexletBasics\Functions\runScript();
 
 class Test extends TestCase
 {
