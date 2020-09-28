@@ -16,7 +16,7 @@ theory: |
 
       for ($i = 0; $i < strlen($str); $i += 1) {
           $currentChar = $str[$i];
-          $result = "{$result}{$currentChar}";
+          $result = "{$currentChar}{$result}";
       }
 
       return $result;
