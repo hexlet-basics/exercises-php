@@ -27,7 +27,7 @@ theory: |
       while ($i < strlen($str)) {
           $currentChar = $str[$i];
           // Соединяем в обратном порядке
-          $result= "{$reversedString}{$currentChar}";
+          $result= "{$currentChar}{$result}";
           // Тоже самое через конкатенацию
           // $result = $currentChar . $result;
           $i = $i + 1;
