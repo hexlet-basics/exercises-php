@@ -9,15 +9,14 @@ theory: |
   ```php
   <?php
 
-  print_r('Mother of Dragons.');
+  print_r('Mother of Dragons. ');
   print_r('Dracarys!');
   ```
 
   При запуске этого кода на экран последовательно выводятся два предложения:
 
   <pre class='hexlet-basics-output'>
-  Mother of Dragons.
-  Dracarys!
+  Mother of Dragons. Dracarys!
   </pre>
 
   Теоретически инструкции можно написать последовательно друг за другом без переноса на новую строчку:
