@@ -21,14 +21,14 @@ theory: |
           return false;
       }
 
-      $divider = 2;
+      $divisor = 2;
 
-      while ($divider <= $number / 2) {
-          if ($number % $divider === 0) {
+      while ($divisor <= $number / 2) {
+          if ($number % $divisor === 0) {
               return false;
           }
 
-          $divider += 1;
+          $divisor += 1;
       }
 
       return true;
