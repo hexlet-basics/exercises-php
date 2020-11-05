@@ -3,8 +3,8 @@
 namespace HexletBasics\Logic\LogicalOperators2;
 
 // BEGIN
-function isNeutralSoldier($color, $shield)
+function isNeutralSoldier($armorColor, $shieldColor)
 {
-    return ($color !== 'red' && $shield === 'black');
+    return ($armorColor !== 'red' && $shieldColor === 'black');
 }
 // END
