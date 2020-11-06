@@ -115,7 +115,7 @@ instructions: |
   ```php
   <?php
 
-  getNumberExplanation(0); // null
+  getNumberExplanation(8); // null
 
   // Объяснения есть только для указанных ниже чисел
   getNumberExplanation(666); // 'devil number'
