@@ -11,7 +11,7 @@ class Test extends TestCase
         require 'index.php';
 
         $str = 'Hexlet';
-        $expected = 'telxeH';
+        $expected = "t\ne\nl\nx\ne\nH\n";
         $this->expectOutputString($expected);
         printReversedNameBySymbol($str);
     }
