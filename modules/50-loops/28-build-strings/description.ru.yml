@@ -20,7 +20,7 @@ theory: |
 
   function reverse($str)
   {
-      $i = 0
+      $i = 0;
       // Нейтральный элемент для строк это пустая строка
       $result = '';
 
@@ -33,7 +33,7 @@ theory: |
           $i = $i + 1;
       }
 
-      return $results;
+      return $result;
   }
 
   $name = 'Bran';
