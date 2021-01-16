@@ -51,10 +51,10 @@ instructions: |
     <?php
 
     $actual = getAgeDifference(2001, 2018);
-    print_r($actual); // => 17
+    print_r($actual); // => The age difference is 17
 
     $actual2 = getAgeDifference(2020, 2002);
-    print_r($actual2); // => 18
+    print_r($actual2); // => The age difference is 18
     ```
 
 tips:
