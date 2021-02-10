@@ -3,5 +3,6 @@
 use function HexletBasics\Functions\getParentFor;
 
 // BEGIN
-print_r(getParentFor(getParentFor('Joffrey Baratheon'), 'father'));
+$joffreyMom = getParentFor('Joffrey Baratheon');
+print_r(getParentFor($joffreyMom, 'father'));
 // END
