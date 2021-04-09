@@ -44,6 +44,6 @@ instructions: |
 
 tips:
   - |
-    [Примеры форматов дат](https://php.net/manual/ru/datetime.formats.date.php)
+    [Примеры форматов дат](https://www.php.net/manual/ru/datetime.format.php)
 
 definitions: []
