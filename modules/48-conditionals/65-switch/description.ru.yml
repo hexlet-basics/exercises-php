@@ -24,7 +24,7 @@ theory: |
   ```php
   <?php
 
-  switch (status) {
+  switch ($status) {
       case 'processing': // status == processing
           // Делаем раз
           break;
@@ -50,7 +50,7 @@ theory: |
   ```php
   <?php
 
-  switch (count) {
+  switch ($count) {
       case 1:
           // Делаем что-то полезное
           break;
