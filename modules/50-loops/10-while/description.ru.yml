@@ -129,12 +129,15 @@ instructions: |
   <?php
 
   printNumbers(4);
-  // => 4
-  // => 3
-  // => 2
-  // => 1
-  // => finished!
   ```
+
+  <pre class='hexlet-basics-output'>
+  4
+  3
+  2
+  1
+  finished!
+  </pre>
 
 tips:
   - |
