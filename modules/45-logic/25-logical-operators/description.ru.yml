@@ -70,8 +70,8 @@ theory: |
 
   ## И `&&`
 
-  | A   | B   | A && B |
-  | ----- | ----- | -------  |
+  | A     | B     | A `&&` B |
+  | ----- | ----- | -------- |
   | TRUE  | TRUE  | **TRUE** |
   | TRUE  | FALSE | FALSE    |
   | FALSE | TRUE  | FALSE    |
@@ -80,7 +80,7 @@ theory: |
 
   ## ИЛИ `||`
 
-  | A     | B     | A \|\| B |
+  | A     | B     | A `‖` B  |
   | ----- | ----- | -------- |
   | TRUE  | TRUE  | **TRUE** |
   | TRUE  | FALSE | **TRUE** |
