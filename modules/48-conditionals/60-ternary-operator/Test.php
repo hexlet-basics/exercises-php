@@ -12,5 +12,6 @@ class Test extends TestCase
 
         assert(convertText('hey') === 'yeh');
         assert(convertText('Hey') === 'Hey');
+        assert(convertText('') === '');
     }
 }
