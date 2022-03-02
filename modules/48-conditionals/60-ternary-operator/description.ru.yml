@@ -88,6 +88,9 @@ instructions: |
 
   convertText('Hello'); // 'Hello'
   convertText('hello'); // 'olleh'
+
+  // Не забудьте учесть пустую строку
+  convertText(''); // ''
   ```
 
   Перевернуть строчку можно, используя функцию [strrev()](https://php.net/manual/ru/function.strrev.php).
@@ -95,6 +98,10 @@ instructions: |
   Есть разные подходы к решению этой задачи. Возможно, вам пригодятся функции [ucfirst()](https://php.net/manual/ru/function.ucfirst.php), [strtoupper](https://php.net/manual/ru/function.strtoupper.php) и возможность получения символа из строки (например, `$str[0]`).
 
   Попробуйте написать два варианта функции: с обычным if-else, и с тернарным оператором.
+
+  ## Подсказки
+
+  * Подумайте какую проверку нужно написать первым делом: проверку заглавности буквы или является ли пустой строка. Что первичнее?
 
 tips: []
 
