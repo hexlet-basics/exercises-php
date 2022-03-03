@@ -1,5 +1,9 @@
 <?php
 
+$value = 2.9;
+
 // BEGIN
-print_r(((string) 2) . ' times');
+$intValue = (int) $value;
+$strValue = (string) $intValue;
+print_r($strValue . ' times');
 // END
