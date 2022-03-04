@@ -10,11 +10,11 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        $expected1 = 'Tywin Lannister';
-        $actual1 = getCustomParentFor('Cersei Lannister');
+        $expected1 = '****1234';
+        $actual1 = getHiddenCard('1234123412341234');
         assert($actual1 === $expected1);
-        $expected2 = 'Rhaella Targaryen';
-        $actual2 = getCustomParentFor('Daenerys Targaryen', 'mother');
+        $expected2 = '****4321';
+        $actual2 = getHiddenCard('1234123412344321');
         assert($actual2 === $expected2);
     }
 }

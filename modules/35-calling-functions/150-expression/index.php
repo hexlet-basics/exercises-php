@@ -1,8 +1,8 @@
 <?php
 
-use function HexletBasics\Functions\calculateDistance;
+$text = 'Never forget what you are, for surely the world will not';
 
 // BEGIN
-$distance = calculateDistance('Winterfell', 'The Twins') + calculateDistance('The Twins', 'The Eyrie');
-print_r($distance);
+$result = "First: {$text[0]}\nLast: {$text[strlen($text) - 1]}";
+print_r($result);
 // END

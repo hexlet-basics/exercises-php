@@ -2,11 +2,10 @@
 
 namespace HexletBasics\DefineFunctions\DefaultArguments;
 
-use function HexletBasics\Functions\getParentFor;
-
 // BEGIN
-function getCustomParentFor($child, $parent = 'father')
+function getHiddenCard($cardNumber, $starsCount = 4)
 {
-    return getParentFor($child, $parent);
+    $visibleDigitsLine = substr($cardNumber, 12);
+    return str_repeat('*', $starsCount) . $visibleDigitsLine;
 }
 // END

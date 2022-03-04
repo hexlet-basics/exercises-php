@@ -10,10 +10,10 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(!isLannisterSoldier('blue', null));
-        assert(!isLannisterSoldier('red', 'man'));
-        assert(isLannisterSoldier('red', 'lion'));
-        assert(isLannisterSoldier('blue', 'lion'));
-        assert(isLannisterSoldier('red', null));
+        assert(isLeapYear(2016));
+        assert(isLeapYear(2000));
+        assert(!isLeapYear(2017));
+        assert(!isLeapYear(2018));
+        assert(!isLeapYear(1900));
     }
 }

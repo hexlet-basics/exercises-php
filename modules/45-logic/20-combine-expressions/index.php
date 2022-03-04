@@ -3,9 +3,8 @@
 namespace HexletBasics\Logic\CombineExpressions;
 
 // BEGIN
-function hasTargaryenReference($string)
+function isInternationalPhone($phone)
 {
-    $prefix = substr($string, 0, 9);
-    return $prefix === 'Targaryen';
+    return $phone[0] === '+';
 }
 // END
