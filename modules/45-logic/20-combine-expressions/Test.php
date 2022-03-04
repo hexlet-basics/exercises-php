@@ -10,10 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(!hasTargaryenReference(''));
-        assert(!hasTargaryenReference('Targari'));
-        assert(!hasTargaryenReference('targaryen'));
-        assert(hasTargaryenReference('Targaryen'));
-        assert(hasTargaryenReference('Targaryen Daenerys'));
+        assert(!isInternationalPhone('89602223423'));
+        assert(isInternationalPhone('+79602223423'));
     }
 }
