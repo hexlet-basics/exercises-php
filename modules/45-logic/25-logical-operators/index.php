@@ -3,8 +3,10 @@
 namespace HexletBasics\Logic\LogicalOperators;
 
 // BEGIN
-function isLannisterSoldier($color, $shield)
+function isLeapYear($year)
 {
-    return ($color === 'red' && $shield === null) || ($shield === 'lion');
+    $result = $year % 400 === 0 || ($year % 4 === 0 && $year % 100 !== 0);
+
+    return $result;
 }
 // END
