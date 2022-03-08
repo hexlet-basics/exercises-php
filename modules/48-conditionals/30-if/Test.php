@@ -10,10 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getSentenceTone('general') === 'general');
-        assert(getSentenceTone('general?') === 'general');
-        assert(getSentenceTone('NoRmal?') === 'general');
-        assert(getSentenceTone('SCREAM') === 'scream');
-        assert(getSentenceTone('SCREAM!') === 'scream');
+        assert(guessNumber(100500) === 'Try again!');
+        assert(guessNumber(42) === 'You win!');
     }
 }
