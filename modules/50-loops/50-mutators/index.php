@@ -3,17 +3,19 @@
 namespace HexletBasics\Loops\Mutators;
 
 // BEGIN
-function filterString($str, $char)
+function makeItFunny($str, $n)
 {
-    $index = 0;
-    $length = strlen($str);
+    $i = 0;
     $result = '';
-    while ($index < $length) {
-        $currentChar = $str[$index];
-        if ($currentChar !== $char) {
-            $result = "{$result}{$currentChar}";
-        }
-        $index++;
+    while ($i < strlen($str)) {
+      $currentChar = $str[$i];
+      if (($i + 1) % $n === 0) {
+        $upperChar = strtoupper($currentChar);
+        $result = "{$result}{$upperChar}";
+      } else {
+        $result = "{$result}{$currentChar}";
+      }
+      $i++;
     }
 
     return $result;
