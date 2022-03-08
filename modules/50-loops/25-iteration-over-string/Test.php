@@ -13,6 +13,6 @@ class Test extends TestCase
         $str = 'Hexlet';
         $expected = "t\ne\nl\nx\ne\nH\n";
         $this->expectOutputString($expected);
-        printReversedNameBySymbol($str);
+        printReversedWordBySymbol($str);
     }
 }
