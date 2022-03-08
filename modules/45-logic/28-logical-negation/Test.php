@@ -14,6 +14,5 @@ class Test extends TestCase
         assert(isNotPalindrome('hexlet'));
         assert(!isNotPalindrome('asdffdsa'));
         assert(!isNotPalindrome('Wow'));
-
     }
 }
