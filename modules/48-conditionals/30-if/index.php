@@ -3,12 +3,12 @@
 namespace HexletBasics\Conditionals\IfStatement;
 
 // BEGIN
-function getSentenceTone($sentence)
+function guessNumber($guess)
 {
-    if (strtoupper($sentence) === $sentence) {
-        return 'scream';
+    if ($guess === 42) {
+        return 'You win!';
     }
 
-    return 'general';
+    return 'Try again!';
 }
 // END

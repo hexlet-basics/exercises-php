@@ -42,8 +42,8 @@ instructions: |
   ```php
   <?php
 
-  startsWith('Баратеон', 'он'); // false
-  startsWith('Баратеон', 'Бар'); // true
+  startsWith('Хекслет', 'ет'); // false
+  startsWith('Хекслет', 'Хек'); // true
   ```
 
 tips: []

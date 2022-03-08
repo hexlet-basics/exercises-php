@@ -10,12 +10,10 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        $str = 'If I look back I am lost';
-        $result1 = countChars($str, 'I');
-        assert($result1 === 3);
-        $result2 = countChars($str, 'z');
-        assert($result2 === 0);
-        $result3 = countChars($str, 'o');
-        assert($result3 === 3);
+        $text = 'If I look back I am lost';
+        $result1 = filterString($text, 'I');
+        assert($result1 === 'f  look back  am lost');
+        $result2 = filterString('zz zorro', 'z');
+        assert($result2 === ' orro');
     }
 }

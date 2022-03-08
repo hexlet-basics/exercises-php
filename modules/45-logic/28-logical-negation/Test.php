@@ -10,10 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(isNotLannisterSoldier('blue', null));
-        assert(isNotLannisterSoldier('red', 'man'));
-        assert(!isNotLannisterSoldier('red', 'lion'));
-        assert(!isNotLannisterSoldier('blue', 'lion'));
-        assert(!isNotLannisterSoldier('red', null));
+        assert(!isNotPalindrome('wow'));
+        assert(isNotPalindrome('hexlet'));
+        assert(!isNotPalindrome('asdffdsa'));
+        assert(!isNotPalindrome('Wow'));
     }
 }

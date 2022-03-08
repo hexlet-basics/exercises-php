@@ -3,11 +3,11 @@
 namespace HexletBasics\Loops\IterationOverString;
 
 // BEGIN
-function printReversedNameBySymbol($name)
+function printReversedWordBySymbol($word)
 {
-    $i = strlen($name) - 1;
+    $i = strlen($word) - 1;
     while ($i >= 0) {
-        print_r("$name[$i]\n");
+        print_r("$word[$i]\n");
         $i = $i - 1;
     }
 }
