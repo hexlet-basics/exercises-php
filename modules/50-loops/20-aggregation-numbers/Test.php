@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(multiplyNumberFromRange(2, 2) === 2);
-        assert(multiplyNumberFromRange(1, 3) === 6);
-        assert(multiplyNumberFromRange(1, 5) === 120);
+        assert(multiplyNumbersFromRange(2, 2) === 2);
+        assert(multiplyNumbersFromRange(1, 3) === 6);
+        assert(multiplyNumbersFromRange(1, 5) === 120);
     }
 }
