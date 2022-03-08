@@ -56,10 +56,10 @@ instructions: |
   ```php
   <?php
 
-  hasChar('Renly', 'R'); // true
-  hasChar('Renly', 'r'); // false
-  hasChar('Tommy', 'm'); // true
-  hasChar('Tommy', 'd'); // false
+  hasChar('Hexlet', 'H'); // true
+  hasChar('Hexlet', 'h'); // false
+  hasChar('Awesomeness', 'm'); // true
+  hasChar('Awesomeness', 'd'); // false
   ```
 
 tips:

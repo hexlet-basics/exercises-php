@@ -9,9 +9,9 @@ class Test extends TestCase
     public function test()
     {
         require 'index.php';
-        assert(hasChar('Renly', 'R'));
-        assert(!hasChar('Renly', 'r'));
-        assert(hasChar('Tommy', 'm'));
-        assert(!hasChar('Tommy', 'd'));
+        assert(hasChar('Hexlet', 'H'));
+        assert(!hasChar('Hexlet', 'h'));
+        assert(hasChar('Awesomeness', 'm'));
+        assert(!hasChar('Awesomeness', 'd'));
     }
 }
