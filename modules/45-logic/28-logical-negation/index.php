@@ -2,11 +2,17 @@
 
 namespace HexletBasics\Logic\LogicalNegation;
 
-use function HexletBasics\Functions\isLannisterSoldier;
+use function HexletBasics\Functions\mb_strrev;
 
 // BEGIN
-function isNotLannisterSoldier($color, $shield)
+function isPalindrome($word)
 {
-    return !isLannisterSoldier($color, $shield);
+    $lowerWord = strtolower($word);
+    return $lowerWord === strrev($lowerWord);
+}
+
+function isNotPalindrome($word)
+{
+    return !isPalindrome($word);
 }
 // END
