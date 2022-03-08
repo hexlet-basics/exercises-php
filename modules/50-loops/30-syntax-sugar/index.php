@@ -3,15 +3,18 @@
 namespace HexletBasics\Loops\SyntaxSugar;
 
 // BEGIN
-function countChars($str, $char)
+function filterString($str, $char)
 {
-    $index = strlen($str) - 1;
-    $result = 0;
-    while ($index >= 0) {
-        if ($str[$index] === $char) {
-            $result += 1;
+    $i = 0;
+    $result = '';
+    while ($i < strlen($str)) {
+        $currentChar = $str[$i];
+
+        if ($currentChar !== $char) {
+            $result = "{$result}{$currentChar}";
         }
-        $index -= 1;
+
+        $i += 1;
     }
 
     return $result;
