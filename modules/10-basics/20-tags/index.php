@@ -1,3 +1,3 @@
 <?php
 
-print_r('King in the North!');
+print_r('Talk is cheap. Show me the code.');
