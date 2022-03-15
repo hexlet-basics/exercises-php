@@ -1,3 +1,3 @@
 <?php
 
-// You know nothing, Jon Snow!
+// Knowledge is power!
