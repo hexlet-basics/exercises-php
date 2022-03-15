@@ -8,6 +8,6 @@ namespace HexletBasics\DefineFunctions\Define;
 // BEGIN
 function printMotto()
 {
-    print_r("Winter is coming");
+    print_r("Per aspera ad astra");
 }
 // END
