@@ -66,25 +66,23 @@ theory: |
 
 instructions: |
 
-  На электронной карте Вестероса, которую реализовал Сэм, союзники Старков отображены зеленым кружком, враги — красным, а нейтральные семьи — серым.
-
-  Напишите для Сэма функцию `whoIsThisHouseToStarks()`, которая принимает на вход фамилию семьи и возвращает одно из трех значений: `'friend'`, `'enemy'`, `'neutral'`.
+  Напишите функцию `whatIsThis()`, которая принимает на вход название и возвращает одно из трех значений: `'fruit'`, `'vegetable'`, `'other'`.
 
   Правила определения:
 
-    * Друзья (`'friend'`): 'Karstark', 'Tully'
-    * Враги (`'enemy'`): 'Lannister', 'Frey'
-    * Любые другие семьи считаются нейтральными
+    * Фрукты (`'fruit'`): 'orange', 'apple'
+    * Овощи (`'vegetable'`): 'cabbage', 'carrot'
+    * Всё остальное считается 'другим' (`'other'`)
 
   Примеры вызова:
 
   ```php
   <?php
 
-  whoIsThisHouseToStarks('Karstark'); // 'friend'
-  whoIsThisHouseToStarks('Frey');     // 'enemy'
-  whoIsThisHouseToStarks('Joar');     // 'neutral'
-  whoIsThisHouseToStarks('Ivanov');   // 'neutral'
+  whatIsThis('orange');   // 'fruit'
+  whatIsThis('cabbage');  // 'vegetable'
+  whatIsThis('banana');   // 'other'
+  whatIsThis('blueberry');// 'other'
   ```
 
 tips: []
