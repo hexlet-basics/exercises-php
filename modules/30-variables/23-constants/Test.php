@@ -9,6 +9,6 @@ class Test extends TestCase
     public function test()
     {
         require 'index.php';
-        assert(PLANETS_COUNT === 8);
+        assert(DRAGONS_BORN_COUNT === 3);
     }
 }

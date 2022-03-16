@@ -10,7 +10,7 @@ theory: |
   ```php
   <?php
 
-  print_r('Linus Benedict Torvalds')
+  print_r('Hodor')
   ```
 
   Если запустить код выше, то мы увидим следующее сообщение: `$ PHP Parse error:  syntax error, unexpected end of file in /private/var/tmp/index.php on line 4`. Подобные синтаксические ошибки в PHP относятся к разряду "Parse error". Как видно, в конце приводится путь до файла и номер строчки.
@@ -23,7 +23,7 @@ instructions: |
 
   Это задание не связано с уроком напрямую. Но будет полезным потренироваться с выводом на экран.
 
-  Выведите на экран *The best error message is the one that never shows up.*
+  Выведите на экран `What Is Dead May Never Die`.
 
 tips:
   - |

@@ -53,7 +53,7 @@ theory: |
 
 instructions: |
 
-  Создайте переменную с именем `$motto` и содержимым `Everything is interesting if you go into it deeply enough`. Распечайте содержимое переменной.
+  Создайте переменную с именем `$motto` и содержимым `What Is Dead May Never Die!`. Распечайте содержимое переменной.
 
 tips: []
 

@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r('"Toto\'s favorite word is "Hexlet""');
+print_r('"Khal Drogo\'s favorite word is "athjahakar""');
 // END

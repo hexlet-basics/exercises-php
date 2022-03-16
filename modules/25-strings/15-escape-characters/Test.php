@@ -10,7 +10,7 @@ class Test extends TestCase
 {
     public function test()
     {
-        $expected = "- Did Toto agree?\n- He did. He also said \"I love using \\n\".";
+        $expected = "- Did Joffrey agree?\n- He did. He also said \"I love using \\n\".";
         $this->expectOutputString($expected);
         require 'index.php';
     }

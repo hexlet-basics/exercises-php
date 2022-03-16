@@ -10,7 +10,7 @@ class Test extends TestCase
 {
     public function test()
     {
-        $expected = "\"Toto's favorite word is \"Hexlet\"\"";
+        $expected = "\"Khal Drogo's favorite word is \"athjahakar\"\"";
         $this->expectOutputString($expected);
         require 'index.php';
     }

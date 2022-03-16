@@ -1,3 +1,3 @@
 <?php
 
-print_r('The best error message is the one that never shows up.');
+print_r('What Is Dead May Never Die');
