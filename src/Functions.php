@@ -10,20 +10,20 @@ function isLannisterSoldier($color, $shield)
 function getParentFor($child, $parent = 'mother')
 {
     switch ($child) {
-        case 'Daenerys Targaryen':
+        case 'George':
             $parents = [
-                'mother' => 'Rhaella Targaryen',
-                'father' => 'Aerys II Targaryen'
+                'mother' => 'Catherine',
+                'father' => 'William'
             ];
             return $parents[$parent];
-        case 'Cersei Lannister':
+        case 'Charles':
             $parents = [
-                'father' => 'Tywin Lannister'
+                'mother' => 'Elizabeth'
             ];
             return $parents[$parent];
-        case 'Joffrey Baratheon':
+        case 'Henry':
             $parents = [
-                'mother' => 'Cersei Lannister'
+                'father' => 'Charles'
             ];
             return $parents[$parent];
 
