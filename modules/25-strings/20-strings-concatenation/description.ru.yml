@@ -20,10 +20,10 @@ theory: |
   ```php
   <?php
 
-  print_r('Dragon' . 'stone');
+  print_r('Hearth' . 'stone');
   ```
 
-  выведет на экран `Dragonstone` — результат работы бинарного оператора `.` с операндами 'Dragon' и 'stone'.
+  выведет на экран `Hearthstone` — результат работы бинарного оператора `.` с операндами 'Hearth' и 'stone'.
 
   Склеивание строк всегда происходит в том же порядке, в котором записаны операнды. Левый операнд становится левой частью строки, а правый — правой.
 
@@ -32,27 +32,30 @@ theory: |
   ```php
   <?php
 
-  print_r('Kings' . 'wood');     // => Kingswood
+  print_r('Holly' . 'wood');     // => Hollywood
 
-  print_r('Kings' . 'road');     // => Kingsroad
+  // Обратный порядок слов
+  print_r('road' . 'President');     // => roadPresident
 
-  print_r("King's" . 'Landing'); // => King'sLanding
+  // Конкатенировать можно абсолютно любые строки
+  print_r('Washington,' . 'D.C.'); // => Washington,D.C.
   ```
 
   Как видите, строки можно склеивать, даже если они записаны с разными кавычками.
 
-  В последнем примере название города получилось с ошибкой: *King's Landing* нужно писать через пробел! Но в наших начальных строках не было пробелов, а пробелы в самом коде слева и справа от символа `.` не имеют значения, потому что они не являются частью строк.
+  В последнем примере название города получилось с ошибкой: *Washington, D.C.* нужно писать через пробел! Но в наших начальных строках не было пробелов, а пробелы в самом коде слева и справа от символа `.` не имеют значения, потому что они не являются частью строк.
 
   Выхода из этой ситуации два:
 
   ```php
   <?php
 
+  // Оба способа равнозначны
   // Ставим пробел в левой части
-  print_r("King's " . 'Landing'); // => King's Landing
+  print_r('Washington, ' . 'D.C.'); // => King's Landing
 
   // Ставим пробел в правой части
-  print_r("King's" . ' Landing'); // => King's Landing
+  print_r('Washington,' . ' D.C.'); // => King's Landing
   ```
 
   Пробел — такой же символ, как и другие, поэтому сколько пробелов поставить в строке — столько и получится:
@@ -60,9 +63,9 @@ theory: |
   ```php
   <?php
 
-  print_r("King's " . ' Landing');   // => King's  Landing
+  print_r('Washington, ' . ' D.C.');   // => King's  Landing
 
-  print_r("King's  " . '  Landing'); // => King's    Landing
+  print_r('Washington, ' . ' D.C.'); // => King's    Landing
   ```
 
 instructions: |
@@ -70,7 +73,7 @@ instructions: |
   Выведите на экран
 
   ```
-  Winter came for the House of Frey.
+  Coding has over 700 languages.
   ```
 
   используя конкатенацию слов.

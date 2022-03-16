@@ -2,8 +2,8 @@
 
 // BEGIN
 $str = <<<EOT
-Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
-This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
+“I would rather have questions that can’t be answered than answers that can’t be questioned.”
+― Richard Feyman
 EOT;
 // END
 

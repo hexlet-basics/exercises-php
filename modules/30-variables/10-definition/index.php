@@ -1,6 +1,6 @@
 <?php
 
 // BEGIN
-$motto = 'What Is Dead May Never Die!';
+$motto = 'Everything is interesting if you go into it deeply enough';
 print_r($motto);
 // END

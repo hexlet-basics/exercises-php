@@ -8,7 +8,7 @@ theory: |
   ```php
   <?php
 
-  $firstName = 'Joffrey';
+  $firstName = 'Toto';
   $greeting = 'Hello';
 
   print_r($greeting . ", " . $firstName . "!");
@@ -19,7 +19,7 @@ theory: |
   Есть другой, более удобный и изящный способ решения той же задачи — **интерполяция**. Вот как это выглядит:
 
   ```php
-  $firstName = 'Joffrey';
+  $firstName = 'Toto';
   $greeting = 'Hello';
 
   print_r("{$greeting}, {$firstName}!");
@@ -35,10 +35,10 @@ theory: |
 
 instructions: |
 
-  Выведите на экран строку `Do you want to eat, <name>?`. Где вместо `<name>` должна использоваться переменная `$stark`. Вывод должен получиться таким:
+  Выведите на экран строку `Do you want to eat, <name>?`. Где вместо `<name>` должна использоваться переменная `$mascot`. Вывод должен получиться таким:
 
   <pre class='hexlet-basics-output'>
-  Do you want to eat, Arya?
+  Do you want to eat, Toto?
   </pre>
 
 tips: []

@@ -16,15 +16,15 @@ theory: |
   ```php
   <?php
 
-  // For Winterfell!
-  // For Lanisters!
+  // This line needs to be refactored
+  // And this line is not, it is already cool
   ```
 
   Комментарий может находиться на строчке после какого-нибудь кода:
 
   ```php
   <?php
-  print_r('I am the King'); // For Lannisters!
+  print_r('Talk is cheap. Show me the code.'); // What's going on here?
   ```
 
   ## Многострочные комментарии
@@ -34,14 +34,14 @@ theory: |
   ```php
   <?php
   /*
-   * The night is dark and
-   * full of terrors.
+   * Anything one man can imagine,
+   * other men can make real.
    */
-  print_r('I am the King');
+  print_r('Talk is cheap. Show me the code.');
   ```
 
 instructions: |
-  Создайте однострочный комментарий с текстом: `You know nothing, Jon Snow!`.
+  Создайте однострочный комментарий с текстом: *Knowledge is power!*
 
 tips: []
 
