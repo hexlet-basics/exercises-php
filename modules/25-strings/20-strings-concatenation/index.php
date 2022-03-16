@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r('Winter ' . 'came ' . 'for ' . 'the ' . 'House ' . 'of ' . 'Frey.');
+print_r('Coding ' . 'has ' . 'over ' . '700 ' . 'languages.');
 // END
