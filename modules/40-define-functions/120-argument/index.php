@@ -3,8 +3,8 @@
 namespace HexletBasics\DefineFunctions\Argument;
 
 // BEGIN
-function printLine($text)
+function printJaimesLine($text)
 {
-    print_r("LINE: {$text}");
+    print_r("JAIME: {$text}");
 }
 // END
