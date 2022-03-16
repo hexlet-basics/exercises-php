@@ -1,9 +1,9 @@
 <?php
 
-$one = 'Alexander';
-$two = 'Elena';
-$three = 'Ivan';
+$one = 'Naharis';
+$two = 'Mormont';
+$three = 'Sand';
 
 // BEGIN
-print_r("{$one[8]}{$two[2]}{$two[1]}{$three[2]}{$one[3]}");
+print_r("{$one[2]}{$two[1]}{$three[3]}{$two[4]}{$two[2]}");
 // END
