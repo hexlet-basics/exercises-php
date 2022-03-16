@@ -3,14 +3,14 @@
 namespace HexletBasics\Conditionals\ElseIfStatement;
 
 // BEGIN
-function whatIsThis($houseName)
+function whoIsThisHouseToStarks($houseName)
 {
-    if ($houseName === 'orange' || $houseName === 'apple') {
-        return 'fruit';
-    } elseif ($houseName === 'cabbage' || $houseName === 'carrot') {
-        return 'vegetable';
+    if ($houseName === 'Karstark' || $houseName === 'Tully') {
+        return 'friend';
+    } elseif ($houseName === 'Lannister' || $houseName === 'Frey') {
+        return 'enemy';
     }
 
-    return 'other';
+    return 'neutral';
 }
 // END

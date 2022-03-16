@@ -10,10 +10,10 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(whatIsThis('orange') === 'fruit');
-        assert(whatIsThis('apple') === 'fruit');
-        assert(whatIsThis('cabbage') === 'vegetable');
-        assert(whatIsThis('banana') === 'other');
-        assert(whatIsThis('plum') === 'other');
+        assert(whoIsThisHouseToStarks('Tully') === 'friend');
+        assert(whoIsThisHouseToStarks('Karstark') === 'friend');
+        assert(whoIsThisHouseToStarks('Lannister') === 'enemy');
+        assert(whoIsThisHouseToStarks('Martell') === 'neutral');
+        assert(whoIsThisHouseToStarks('undefined') === 'neutral');
     }
 }
