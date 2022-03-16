@@ -10,7 +10,7 @@ class Test extends TestCase
 {
     public function test()
     {
-        $expected = 'What Is Dead May Never Die!';
+        $expected = 'Everything is interesting if you go into it deeply enough';
         $this->expectOutputString($expected);
         require 'index.php';
     }
