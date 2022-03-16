@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-const DRAGONS_BORN_COUNT = 3;
+const PLANETS_COUNT = 8;
 // END
