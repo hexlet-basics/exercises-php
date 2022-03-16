@@ -62,7 +62,7 @@ instructions: |
   ```php
   <?php
 
-  $str = 'Proxima Centauri';
+  $str = 'Sansa Stark';
   isArgumentsForSubstrCorrect($str, -1, 3);  // false
   isArgumentsForSubstrCorrect($str, 4, 100); // false
   isArgumentsForSubstrCorrect($str, 10, 10); // false
