@@ -13,15 +13,15 @@ class Test extends TestCase
 
     public function test1()
     {
-        $expected = 'JAIME: Farewell, my friend...';
+        $expected = 'LINE: Farewell, my friend...';
         $this->expectOutputString($expected);
-        printJaimesLine('Farewell, my friend...');
+        printLine('Farewell, my friend...');
     }
 
     public function test2()
     {
-        $expected = 'JAIME: attack!';
+        $expected = 'LINE: Good morning!';
         $this->expectOutputString($expected);
-        printJaimesLine('attack!');
+        printLine('Good morning!');
     }
 }
