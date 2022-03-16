@@ -9,7 +9,7 @@ instructions: |
 
   ```php
   <?php
-  print_r('Hello, World!');
+  print_r('Winter is coming!');
   ```
 
 tips:

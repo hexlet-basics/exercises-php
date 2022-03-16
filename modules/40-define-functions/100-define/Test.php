@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        $expected = 'Per aspera ad astra';
+        $expected = 'Winter is coming';
         $this->expectOutputString($expected);
         printMotto();
     }
