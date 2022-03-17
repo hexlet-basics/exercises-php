@@ -2,13 +2,10 @@
 
 namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
-use function HexletBasics\Functions\getParentFor;
-
 // BEGIN
-function getParentNamesTotalLength($child)
+function getCurrentYear()
 {
-    $mother = getParentFor($child, 'mother');
-    $father = getParentFor($child, 'father');
-    return strlen($mother) + strlen($father);
+    $now = new \DateTime();
+    return substr($now->format("Y-m-d"), 0, 4);
 }
 // END
