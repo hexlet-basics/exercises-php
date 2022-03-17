@@ -10,17 +10,20 @@
 
 ```sh
 # setup
-$ make
+make
 # run
-$ make compose
+make compose
 
 # run tests
-$ make compose-test
+make compose-test
 
 # run linters and validators
-$ make compose-code-lint
-$ make compose-description-lint
-$ make compose-schema-validate
+make compose-code-lint
+make compose-description-lint
+make compose-schema-validate
+
+
+make ci-check # run CI checks witn docker-compose
 ```
 
 В тестах используется [phpower](https://github.com/ngyuki/phpower). Внимательнее при работе с ассертами.
