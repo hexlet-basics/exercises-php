@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(flip_flop('flip') === 'flop');
-        assert(flip_flop('flop') === 'flip');
-        assert(flip_flop('') === 'flip');
+        assert(flipFlop('flip') === 'flop');
+        assert(flipFlop('flop') === 'flip');
+        assert(flipFlop('') === 'flip');
     }
 }

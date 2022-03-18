@@ -3,7 +3,7 @@
 namespace HexletBasics\Logic\TernaryOperator;
 
 // BEGIN
-function flip_flop($string)
+function flipFlop($string)
 {
     return $string === 'flip' ? 'flop' : 'flip';
 }
