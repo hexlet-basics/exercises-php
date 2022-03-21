@@ -12,7 +12,12 @@ class Test extends TestCase
     {
         require 'index.php';
         $randomSide = $this->getActualOutput();
-        $this->assertLessThanOrEqual(6, $randomSide);
-        $this->assertGreaterThanOrEqual(1, $randomSide);
+        $this->assertThat(
+            $randomSide,
+            $this->logicalAnd(
+                $this->greaterThanOrEqual(1),
+                $this->lessThanOrEqual(6)
+            )
+        );
     }
 }
