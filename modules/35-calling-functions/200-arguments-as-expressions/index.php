@@ -2,10 +2,11 @@
 
 use function HexletBasics\Functions\calculateDistanceBetweenTowns;
 
-$from = 'The Twins';
-$to = 'The Eyrie';
+$year = 'Y';
+$month = 'm';
+$day = 'd';
 
 // BEGIN
-$distance = calculateDistanceBetweenTowns("{$from}-{$to}");
-print_r($distance);
+$date = date("{$year}-{$month}-{$day}");
+print_r($date);
 // END
