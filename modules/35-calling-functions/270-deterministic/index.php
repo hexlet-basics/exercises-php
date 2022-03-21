@@ -1,6 +1,5 @@
 <?php
 
-$text = 'knock!';
 // BEGIN
-print_r(strtoupper($text));
+print_r(rand(1, 6));
 // END

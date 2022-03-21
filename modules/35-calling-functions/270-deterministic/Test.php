@@ -10,8 +10,14 @@ class Test extends TestCase
 {
     public function test()
     {
-        $expected = "KNOCK!";
-        $this->expectOutputString($expected);
         require 'index.php';
+        $randomSide = $this->getActualOutput();
+        $this->assertThat(
+            $randomSide,
+            $this->logicalAnd(
+                $this->greaterThanOrEqual(1),
+                $this->lessThanOrEqual(6)
+            )
+        );
     }
 }

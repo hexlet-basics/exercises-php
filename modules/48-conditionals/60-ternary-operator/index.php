@@ -3,12 +3,8 @@
 namespace HexletBasics\Logic\TernaryOperator;
 
 // BEGIN
-function convertText($string)
+function flipFlop($string)
 {
-    if ($string === '') {
-        return '';
-    }
-
-    return $string[0] === strtoupper($string[0]) ? $string : strrev($string);
+    return $string === 'flip' ? 'flop' : 'flip';
 }
 // END

@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(convertText('hey') === 'yeh');
-        assert(convertText('Hey') === 'Hey');
-        assert(convertText('') === '');
+        assert(flipFlop('flip') === 'flop');
+        assert(flipFlop('flop') === 'flip');
+        assert(flipFlop('') === 'flip');
     }
 }

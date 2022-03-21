@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        $expected = 35;
-        assert(getParentNamesTotalLength('Daenerys Targaryen') === $expected);
+        $expected = date("Y");
+        assert(getCurrentYear() === $expected);
     }
 }
