@@ -1,7 +1,5 @@
 <?php
 
-use function HexletBasics\Functions\getParentFor;
-
 // BEGIN
-print_r(getParentFor('Daenerys Targaryen'));
+print_r(date("j F Y, H:i"));
 // END
