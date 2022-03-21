@@ -10,7 +10,7 @@ class Test extends TestCase
 {
     public function test()
     {
-        $expected = "20";
+        $expected = date("Y-m-d");
         $this->expectOutputString($expected);
         require 'index.php';
     }
