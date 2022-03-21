@@ -1,8 +1,5 @@
 <?php
 
-use function HexletBasics\Functions\getParentFor;
-
 // BEGIN
-$joffreyMom = getParentFor('Joffrey Baratheon');
-print_r(getParentFor($joffreyMom, 'father'));
+print_r(date("Y-m-d H:i:s", mktime(23, 59, 59, 12, 31, 1999)));
 // END
