@@ -1,7 +1,5 @@
 <?php
 
-use function HexletBasics\Functions\calculateDistanceBetweenTowns;
-
 $year = 'Y';
 $month = 'm';
 $day = 'd';
