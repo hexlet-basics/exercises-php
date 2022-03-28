@@ -5,3 +5,6 @@ language:
   extension: php
   exercise_filename: index.php
   exercise_test_filename: Test.php
+  learn_as: first_language
+  progress: completed
+  name: PHP
