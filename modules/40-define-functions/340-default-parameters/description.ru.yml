@@ -92,7 +92,9 @@ instructions: |
 
   Для выполнения задания вам понадобится функция [str_repeat()](https://www.php.net/manual/ru/function.str-repeat.php), которая повторяет строку указанное количество раз
 
-  ```javascript
+  ```php
+  <?php
+
   str_repeat('+', 5); // "+++++"
   str_repeat('o', 3); // "ooo"
   ```
