@@ -25,9 +25,7 @@ instructions: |
 
   Выведите на экран `What Is Dead May Never Die`.
 
-tips:
-  - |
-    [Ошибки в PHP](https://habr.com/ru/post/440744/)
+tips: []
 
 definitions:
   - name: "Синтаксическая ошибка"
