@@ -104,7 +104,7 @@ theory: |
   function greeting()
   {
       $message = 'Hello, Hexlet!';
-      return message;
+      return $message;
   }
   ```
 
