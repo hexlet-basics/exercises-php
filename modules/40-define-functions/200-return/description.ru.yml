@@ -143,8 +143,8 @@ instructions: |
   Реализуйте функцию `getCubeOfThree()`, которая возвращает куб числа 3 (3 в степени 3).
 
   ```php
-  $cubeOfThree = getCubeOfThree()
-  print_r($cubeOfThree) // => 27
+  $cubeOfThree = getCubeOfThree();
+  print_r($cubeOfThree); // => 27
   ```
 
 tips: []
