@@ -49,7 +49,7 @@ theory: |
   function getLastChar($str)
   {
       // Вычисляем индекс последнего символа как длина строки - 1
-      return $str[$strlen(str) - 1];
+      return $str[$strlen($str) - 1];
   }
   ```
 
