@@ -3,9 +3,9 @@
 namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
 // BEGIN
-function getCurrentYear()
+function sayHurrayThreeTimes()
 {
-    $now = date('Y-m-d');
-    return substr($now, 0, 4);
+    $word = 'hurray!';
+    return "{$word} {$word} {$word}";
 }
 // END
