@@ -12,7 +12,7 @@ class Test extends TestCase
 
         assert(getAge(10) === 10.0);
         assert(getAge(9.1) === 9.0);
-        assert(getAge(8.9) === 9.0);
+        assert(getAge(8.9) === 8.0);
         assert(getAge(8.5) === 8.0);
     }
 }
