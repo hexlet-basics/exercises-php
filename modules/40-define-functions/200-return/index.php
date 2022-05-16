@@ -3,9 +3,8 @@
 namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
 // BEGIN
-function getCurrentYear()
+function getCubeOfThree()
 {
-    $now = date('Y-m-d');
-    return substr($now, 0, 4);
+    return 3 * 3 * 3;
 }
 // END

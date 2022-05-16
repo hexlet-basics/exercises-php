@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        $expected = date("Y");
-        assert(getCurrentYear() === $expected);
+        $expected = 27;
+        assert(getCubeOfThree() === $expected);
     }
 }
