@@ -2,11 +2,11 @@
 
 [![Github Actions Status](../../workflows/Docker/badge.svg)](../../exercises-php/actions)
 
-## Участие
+### How to contribute
 
-* Обсуждение в канале #hexlet-volunteers слака https://slack-ru.hexlet.io
+* Discussions at #hexlet-volunteers Slack channel http://slack.hexlet.io
 
-## Разработка
+## Develop
 
 ```sh
 # setup
@@ -26,7 +26,7 @@ make compose-schema-validate
 make ci-check # run CI checks witn docker-compose
 ```
 
-В тестах используется [phpower](https://github.com/ngyuki/phpower). Внимательнее при работе с ассертами.
+Tests utilize [phpower](https://github.com/ngyuki/phpower). Be cautious when working with assertions.
 
 ##
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=exercises-php)
