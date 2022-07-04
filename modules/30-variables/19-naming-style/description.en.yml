@@ -1,0 +1,30 @@
+---
+
+name: Naming a variable
+theory: |
+  `$greeting` is an example of a simple name, although not all of them are that simple. Often, they are a combination of several words. For example, "user password". Different languages have different naming styles for variables.
+
+  Three main variable naming conventions are sometimes combined. These conventions apply to variable names consisting of several words:
+
+  * kebab-case – a hyphen separates the parts of the name. For example, `my-super-var`
+  * snake_case - an underscore is used as a separator. For example, `my_super_var`
+  * CamelCase - each word in the name is capitalized. For example, `MySuperVar`
+  * lowerCamelCase - each word is capitalized except the first. For example, `mySuperVar`
+
+  PHP uses CamelCase and its variation lowerCamelCase, with the first letter of the first word in lowercase. We use lowerCamelCase for variables. It means we concatenate the words, and all the words apart from the first are capitalized: `$userName`. With three words it looks like this: `$mySuperVariable`.
+
+  In addition to having meaning, names should follow syntactic conventions, which are typically not tested at the language level but are necessary throughout development. Modern software development is a collaborative effort, and for improved team communication, the code is written in a uniform manner as if only one person had worked on it. There are laws unique to each language. For a very long time, PHP has been in chaos. And inconsistencies are threaded throughout the language, not just in names. This is something you'll run against in the lessons that come after and at work. A generally agreed [coding standard](https://www.php-fig.org/psr/psr-1/) has lately developed in PHP, towards which everyone is aiming in some way. These standards cover a wide range of topics. We suggest that you make it a practice to review the standard right away and write code in compliance with it.
+
+  Fortunately, there are now specialized tools that automatically examine the code and report problems called **linters**, so you don't need to memorize every standard rule. You'll start using it when you have a little more experience.
+
+instructions: |
+
+  Create two variables named "first number" and "second number" using lowerCamelCase. Assign `1.10` to the first variable and `-100` to the second. Print their product.
+
+  The code will work with any name, and we only check the printed result, so the task is up to you.
+
+tips: []
+
+definitions:
+  - name: Coding standards
+    description: are a list of syntax and style conventions for code writing.

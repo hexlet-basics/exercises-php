@@ -1,0 +1,32 @@
+---
+
+name: Determinacy
+theory: |
+
+  Regardless of the programming language, functions possess certain fundamental properties. Knowing these properties makes it easier to predict the behavior of functions, as well as their testing and their usage. These properties include determinacy. A function is deterministic when it returns the same result for the same input parameters. For example, a function reverting a string:
+
+  ```php
+  <?php
+
+  strrev('cat'); // tac
+  strrev('cat'); // tac
+  ```
+
+  No matter how many times we call this function and pass `'cat'`, it will always return `'tac'` (although technically it's possible to write it differently, but it makes no sense and will cause problems). In turn, a function that returns a random number is not deterministic, as the same input (even if it is empty, i.e. without parameters) will always output a different result. How it differs doesn't matter, even if at least one of a million calls returns something different, this function is deemed non-deterministic.
+
+  ```php
+  <?php
+  // A function that returns a random number
+  rand(); // 827606195
+  rand(); // 635369726
+  ```
+
+  So what use is knowing that to us? Determinacy seriously affects many different aspects. Deterministic functions are easy to work with, easy to optimize, and easy to test. If you can make a function deterministic, it's best to make it one.
+
+instructions: |
+
+  Print a random number from 1 to 6. Use the `rand()` function that takes two numbers: the initial and the final
+
+tips:
+  - |
+    [Deterministic algorithm](https://en.wikipedia.org/wiki/Deterministic_algorithm)
