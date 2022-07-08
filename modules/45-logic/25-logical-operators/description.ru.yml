@@ -104,10 +104,10 @@ theory: |
   <?php
 
   // true || true;
-  3 > 2 && str_starts_with('wow', 'w'); // true
+  3 > 2 || str_starts_with('wow', 'w'); // true
 
   // false || false;
-  'start' === 'Start' && 3 < 3; // false
+  'start' === 'Start' || 3 < 3; // false
   ```
 
 instructions: |
