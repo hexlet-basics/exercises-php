@@ -20,8 +20,10 @@ theory: |
   $firstName = 'Joffrey';
   $greeting = 'Hello';
 
-  print_r("{$greeting}, {$firstName}!");
+  print_r("{$greeting}, {$firstName}!"); // => Hello, Joffrey!
   ```
+
+  https://replit.com/@hexlet/php-basics-interpolation
 
   We created just one string and "inserted" variables in it using curly braces (`{ }`) where we expect that variable. It can be compared to a form that is filled in with the required values. Now we don't have to care about punctuation marks or whitespaces - all symbols are already located in this template string where we want them to appear.
 

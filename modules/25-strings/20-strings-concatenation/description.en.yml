@@ -21,6 +21,8 @@ theory: |
   print_r('Dragon' . 'stone');
   ```
 
+  https://replit.com/@hexlet/php-basics-strings-concatenation
+
   will output `Dragonstone` to the screen - the result of operation of binary operator '+' with operands 'Dragon' and 'stone'.
 
   Such operation is called **concatenation**. Roughly speaking, it's 'glueing' strings together. Such glueing always happens in the same order as the operands follow each other, in other words, the left operands becomes the left part of the string, and the right operand - the right part.
