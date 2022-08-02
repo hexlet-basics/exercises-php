@@ -11,9 +11,9 @@
   "scripts": {
   },
   "require-dev": {
-    "symfony/var-dumper": "^3.4",
-    "codedungeon/phpunit-result-printer": "^0.28.0",
-    "phpunit/phpunit": "^9.3.10",
+    "symfony/var-dumper": "^6.1",
+    "codedungeon/phpunit-result-printer": "^0.32.0",
+    "phpunit/phpunit": "9.5.16",
     "ngyuki/phpower": "dev-master"
   }
 }
