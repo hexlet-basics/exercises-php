@@ -23,9 +23,7 @@ instructions: |
   После выполнения программы результат на экране должен выглядеть так:
 
   <pre class='hexlet-basics-output'>
-  Targaryen
-  and
-  Dragon
+  Targaryen and Dragon
   </pre>
 
 tips: []
