@@ -35,7 +35,7 @@ theory: |
   print_r('Dragon's mother');
   ```
 
-  Such code is not going to work. According to PHP, the string started with a single quote and ended after the letter **n**. It was followed by `s mother` without quotation marks, which means it wasn't a string. And then there was an opening quote that wasn't closed: `');`. Such code is syntaсtically incorrect (you can even see it from the way the code is highlighted).
+  Such code is not going to work. According to PHP, the string started with a single quote and ended after the letter **n**. It was followed by `s mother` without quotation marks, which means it wasn't a string. And then there was an opening quote that wasn't closed: `');`. Such code is syntactically incorrect (you can even see it from the way the code is highlighted).
 
   In such case we should use double quotes. The following code will work correctly:
 
