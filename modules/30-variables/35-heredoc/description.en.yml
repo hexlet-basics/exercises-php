@@ -1,6 +1,6 @@
 ---
 
-name: Heredoc
+name: Heredoc syntax
 theory: |
 
   The third method to delimit a string is using the heredoc syntax: <<<. After this operator an indentifier is provided, then a newline. The string itself follows, and then the same identifier again to close the quotation. The identifier name is chosen randomly. Such method is useful when we deal with long strings with line breaks and quote marks of different sorts.
