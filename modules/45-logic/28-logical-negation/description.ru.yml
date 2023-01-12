@@ -37,31 +37,31 @@ instructions: |
 
   1. Функция `isPalindrome()` определяет, является ли слово палиндромом или нет. Палиндром это слово, которое читается одинаково в обоих направлениях.
 
-    ```php
-    <?php
+      ```php
+      <?php
 
-    isPalindrome('wow'); // true
-    isPalindrome('mom'); // true
-    isPalindrome('hexlet'); // false
+      isPalindrome('wow'); // true
+      isPalindrome('mom'); // true
+      isPalindrome('hexlet'); // false
 
-    // Слова в функцию могут быть переданы в любом регистре
-    // Поэтому сначала нужно привести слово в нижний регистр strtolower()
-    isPalindrome('Wow'); // true
-    ```
+      // Слова в функцию могут быть переданы в любом регистре
+      // Поэтому сначала нужно привести слово в нижний регистр strtolower()
+      isPalindrome('Wow'); // true
+      ```
 
-    Для того чтобы развернуть слово задом наперёд используйте функцию `strrev()`.
+      Для того чтобы развернуть слово задом наперёд используйте функцию `strrev()`.
 
   2. Функция `isNotPalindrome()` проверяет что слово НЕ является палиндромом:
 
-    ```php
-    <?php
+      ```php
+      <?php
 
-    isNotPalindrome('wow'); // false
-    isNotPalindrome('mom'); // false
-    isNotPalindrome('hexlet'); // true
-    ```
+      isNotPalindrome('wow'); // false
+      isNotPalindrome('mom'); // false
+      isNotPalindrome('hexlet'); // true
+      ```
 
-    Для этого, вызовите функцию `isPalindrome()` внутри `isNotPalindrome()` и примените отрицание.
+      Для этого, вызовите функцию `isPalindrome()` внутри `isNotPalindrome()` и примените отрицание.
 
 tips:
   - |
