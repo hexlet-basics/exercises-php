@@ -41,7 +41,7 @@ theory: |
   {
       $length = strlen($password);
       // Скобки задают приоритет. Понятно что к чему относится.
-      return ($length > 8 && $length < 20) || hasSpecialChars($password);
+      return ($length > 8 && $length < 20) && hasSpecialChars($password);
   }
   ```
 
