@@ -1,0 +1,94 @@
+---
+
+name: Конструкция else if
+theory: |
+
+  Функция `getTypeOfSentence()` из предыдущего урока различает только вопросительные и обычные предложения. Давайте попробуем добавить поддержку восклицательных предложений:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence($sentence)
+  {
+      $lastChar = $sentence[-1];
+
+      if ($lastChar === '!') {
+          $sentenceType = 'exclamation';
+      } else {
+          $sentenceType = 'normal';
+      }
+
+      if ($lastChar === '?') {
+          $sentenceType = 'question';
+      }
+
+      return "Sentence is {$sentenceType}";
+  }
+
+  getTypeOfSentence('Who?'); // 'Sentence is question'
+  getTypeOfSentence('No');   // 'Sentence is normal'
+  getTypeOfSentence('No!');  // 'Sentence is exclamation'
+  ```
+
+  Мы добавили еще одну проверку ("exclamation" переводится «восклицание»). Технически функция работает, но с точки зрения семантики есть проблемы.
+
+  - Проверка на наличие вопросительного знака происходит в любом случае, даже если уже был обнаружен восклицательный знак.
+  - Ветка `else` описана именно для первого условия, но не для второго.
+
+  Правильнее будет воспользоваться ещё одной возможностью условной конструкции:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence($sentence)
+  {
+      $lastChar = $sentence[-1];
+
+      if ($lastChar === '?') {
+          $sentenceType = 'question';
+      } elseif ($lastChar === '!') {
+          $sentenceType = 'exclamation';
+      } else {
+          $sentenceType = 'normal';
+      }
+
+      return "Sentence is {$sentenceType}";
+  }
+  ```
+
+  Теперь все условия выстроены в единую конструкцию. `elseif` — это «если не выполнено предыдущее условие, но выполнено текущее». Получается такая схема:
+
+  - если последний символ `?`, то `'question'`
+  - иначе, если последний символ `!`, то `'exclamation'`
+  - иначе `'normal'`
+
+  Выполнится только один из блоков кода, относящихся ко всей конструкции `if`.
+
+instructions: |
+
+  На электронной карте Вестероса, которую реализовал Сэм, союзники Старков отображены зеленым кружком, враги — красным, а нейтральные семьи — серым.
+
+  Напишите для Сэма функцию `whoIsThisHouseToStarks()`, которая принимает на вход фамилию семьи и возвращает одно из трех значений: `'friend'`, `'enemy'`, `'neutral'`.
+
+  Правила определения:
+
+    * Друзья (`'friend'`): 'Karstark', 'Tully'
+    * Враги (`'enemy'`): 'Lannister', 'Frey'
+    * Любые другие семьи считаются нейтральными
+
+  Примеры вызова:
+
+  ```php
+  <?php
+
+  whoIsThisHouseToStarks('Karstark'); // 'friend'
+  whoIsThisHouseToStarks('Frey');     // 'enemy'
+  whoIsThisHouseToStarks('Joar');     // 'neutral'
+  whoIsThisHouseToStarks('Ivanov');   // 'neutral'
+  ```
+
+tips: []
+
+definitions:
+  - name: else if
+    description: способ задать несколько альтернативных условий.
