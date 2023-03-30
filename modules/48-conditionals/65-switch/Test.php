@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getNumberExplanation(0) === null);
+        assert(getNumberExplanation(0) === 'just a number');
         assert(getNumberExplanation(666) === 'devil number');
         assert(getNumberExplanation(42) === 'answer for everything');
         assert(getNumberExplanation(7) === 'prime number');
