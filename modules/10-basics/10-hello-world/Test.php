@@ -4,8 +4,6 @@ namespace HexletBasics\Basics\HelloWorld;
 
 use PHPUnit\Framework\TestCase;
 
-\HexletBasics\Functions\runScript();
-
 class Test extends TestCase
 {
     public function test()
@@ -13,5 +11,10 @@ class Test extends TestCase
         $expected = 'Hello, World!';
         $this->expectOutputString($expected);
         require 'index.php';
+    }
+
+    public function setUp(): void
+    {
+        \HexletBasics\Functions\runScript();
     }
 }
