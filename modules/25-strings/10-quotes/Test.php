@@ -4,14 +4,14 @@ namespace HexletBasics\Strings\Quotes;
 
 use PHPUnit\Framework\TestCase;
 
-\HexletBasics\Functions\runScript();
 
 class Test extends TestCase
 {
-    public function test()
-    {
-        $expected = "\"Khal Drogo's favorite word is \"athjahakar\"\"";
-        $this->expectOutputString($expected);
-        require 'index.php';
-    }
+     public function test()
+      {
+         \HexletBasics\Functions\runScript();
+          $expected = "\"Khal Drogo's favorite word is \"athjahakar\"\"";
+          $this->expectOutputString($expected);
+          require 'index.php';
+      }
 }
