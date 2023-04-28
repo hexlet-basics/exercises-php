@@ -2,7 +2,6 @@
 
 name: Data types
 theory: |
-
   There are different ways to represent data in programs.
 
   There are **strings** — sets of characters in quote marks, like `"Hello, World!"`. There are **integers** — for example, `7`, `-198`, `0`. These are two different categories of information — two different **types of data**.
@@ -43,8 +42,6 @@ instructions: |
 tips:
   - |
     [Literal](https://en.wikipedia.org/wiki/Literal_(computer_programming))
-#  - |
-#    [Статья о дробных числах](https://habrahabr.ru/post/112953/)
 
 definitions:
   - name: "A data type"

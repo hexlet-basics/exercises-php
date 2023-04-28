@@ -55,8 +55,8 @@ instructions: |
   invertCase($str); // HeLlO!
   ```
 
-# tips:
+tips:
   - |
     [What are encodings?](https://guides.hexlet.io/ru/encoding/)
 
-# definitions: []
+definitions: []
