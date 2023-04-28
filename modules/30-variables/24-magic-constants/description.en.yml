@@ -3,17 +3,17 @@
 name: Magic constants
 theory: |
 
-  Apart from regular constants, PHP also has a separate constant type - **magic constants**. We can sum up their difference as follows:
+  In addition to the usual constants, PHP has a separate group of **magic constants**. The differences are as follows:
 
-  * Magic constants can't be defined by us, we only can use the exsisting ones.
-  * Magic constant is wrapped in double underscores `__`.
-  * The magic is that such constants have the same value only when used in the same part of the program.
+  * You can't define magic constants yourself, you can only use existing ones.
+  * Magic constants begin and end with `__` (two underscores).
+  * The magic is that the constants have the same value only within a certain part of the program.
 
-  The last point may sound weird to you. It doesn't sound like a constant, right? They may not be permanent, but the way they change is strictly regulated and it doesn't cause us any troubles. Examples of such constants are:
+  This last point may seem strange. What kind of constants are they if their value changes? To put it bluntly, they're not very constant, but their changes are clearly regulated and in practice don't cause problems. Such constants include, for example, the following:
 
-  * `__LINE__` — contains the current line of the file in which this constant is used
+  * `__LINE__` — contains the current line of the file it's used in
   * `__FILE__` — path to the current file
-  * `__DIR__` — path to the directory of the current file
+  * `__DIR__` — the path to the directory where the current file is located
 
 instructions: |
 
@@ -21,8 +21,8 @@ instructions: |
 
 tips:
   - |
-    [Magic constant](https://php.net/manual/en/language.constants.predefined.php)
+    [Magic constants](https://php.net/manual/ru/language.constants.predefined.php)
 
 definitions:
-  - name: "Magic constant"
-    description: "a special constant predefined in the PHP core; it's value depends on the context"
+  - name: A magic constant
+    description: is a special constant available in PHP; it contains different values in different contexts.

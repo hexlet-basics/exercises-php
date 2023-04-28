@@ -1,11 +1,11 @@
 ---
 
-name: Expressions in variable definition
+name: Expressions in definitions
 theory: |
 
-  Variables are useful not only for storing and reusing infomation, but also for simplifying complex calculations. Let's look at the following example: we need to convert euro to rubles with dollars as intermediary currency. Such convertations are regularly done by banks when we shop abroad.
+  Variables are helpful not only for storing and reusing data, but also for simplifying complex calculations. Consider an example: you need to convert euros into rubles through dollars. Banks often do this kind of conversion via an intermediate currency when shopping abroad.
 
-  Let's first convert 50 euro into dollars. Let's say one euro is 1.25 dollars:
+  First, convert 50 euros into dollars. Let's assume that one euro equals $1.25:
 
   ```php
   <?php
@@ -14,11 +14,13 @@ theory: |
   print_r($dollarsCount);
   ```
 
-  In the previous lesson we assigned a specific value to a variable. However in the code above `$dollarsCount = 50 * 1.25;` we find an **expression** on the right side of the equal sign. The interpreter will calculate the result - `62.5` and will keep it behind that variable. From the interpreter's point of view, it doesn't matter whether it's `62.2` or `50 * 1.25`. It treats both as expressions that need to be evaluated. Having evaluated them, it produces the same result - `62.5`.
+  Last lesson, we assigned a specific value to a variable. And here, in `$dollarsCount = 50 * 1.25;` there's an **expression** to the right of the equals sign. The interpreter calculates the result, `62.5`, and records it in a variable. The interpreter doesn't care about what's in front of it: `62.5` or `50 * 1.25`, both are expressions to compute. Calculating either of them will give `62.5`.
 
-  Every string represents an expression. String concatenation is an expression too. Whenever the interpreter sees an expression, it evaluates it and generates the result - **the value of the expression**. You will find some examples of expressions below with the final value of each expression in the comments:
+  Any string is an expression. Concatenating strings is also an expression. The interpreter processes whatever expression it encounters and produces, as a result, **the value of the expression**. Here are some sample expressions with comments on the right containing the resulting value:
 
   ```php
+  <?php
+
   62.5             // 62.5
   50 * 1.25        // 62.5
   120 / 10 * 2     // 24
@@ -28,11 +30,11 @@ theory: |
   "Good" . "will"  // "Goodwill"
   ```
 
-  The rules of code building (grammar of the language) are such, that we can give a program a calculation (not only a mathematical one, but also a string calculation like concatenation) anywhere an expression is expected, and the program will remain workable. As a result, it's impossible to describe and show every possible case of every possible operation.
+  The rules of code construction (or the grammar of the language) are such that in those places where an expression is expected, you can put any calculation (not only mathematical, but also, for example, string operations, e.g. concatenation) and the program will remain workable. For this reason, it's impossible to describe and show all use cases of all operations.
 
-  Any program consists of a set of expression combinations and understanding of this concept is one of the key steps on you path to becoming a developer.
+  Programs consist of numerous combinations of expressions and understanding this concept is a major step on your journey.
 
-  Based on all the above analyze the code below. Will it work?
+  Based on the above, consider whether this code will work.
 
   ```php
   <?php
@@ -41,9 +43,9 @@ theory: |
   print_r($who);
   ```
 
-  Run it on [repl.it](https://repl.it/languages/php) and experiment.
+  Run it on [repl.it](https://repl.it/languages/php) and experiment a little with it.
 
-  Now back to our currency convertation program. We will create a separate variable and assign to it the value of one dollar in rubles. Now let's calculate the dollar value of 50 euro multiplying it by `1.25`. Let's say 1 dollar is worth 60 rubles:
+  Now, back to our currency program. We'll record the dollar value in rubles as a separate variable. Let's calculate the price of 50 euros in dollars by multiplying it by `1.25`. Let's say that 1 dollar is 60 rubles:
 
   ```php
   <?php
@@ -55,7 +57,7 @@ theory: |
   print_r($rublesCount);
   ```
 
-  Now let's add a text to the input using concatenation:
+  Now, let's merge our output with some text via concatenation:
 
   ```php
   <?php
@@ -67,27 +69,29 @@ theory: |
   print_r('The price is ' . $rublesCount . ' rubles');
   ```
 
-  <pre class='hexlet-basics-output'>The price is 3750 rubles</pre>
+  <pre class='hexlet-basics-output'>
+  The price is 3750 rubles
+  </pre>
 
-  Any variable can be part of any expression. At the moment of its evaluation, the variable name is replaced by its value.
+  Any variable can be part of any expression. At the moment of calculation, its value is substituted for the variable name.
 
-  PHP interpreter calculates the value of `$dollarsCount` before this variable is used in other expressions. Once it's time to use that variable, PHP already "knows" the value because it has already calculated it.
+  The interpreter calculates the value  of `$dollarsCount` before this variable is used in other expressions. When it comes time to use a variable, PHP "knows" the value because it's already computed it.
 
 instructions: |
 
-  Write a program that takes the given amount of euro assigned to the variable `$eurosCount`, converts euro to dollars and outputs the result. Then it converts the result into rubles and prints it on a new line.
+  Write a program that takes the original number of euros from the `$eurosCount` variable, converts euros to dollars, and displays the value on the screen. Then the program converts the received value into rubles and displays the result on a new line.
 
-  An output example for 100 euro:
+  Example output for 100 euros:
 
   ```
   125
   7500
   ```
 
-  Use the following rates:
-  - 1 euro = 1.25 dollars
+  For the purposes of the exercise, we'll say that:
+  - 1 euro = $1.25 
   - 1 dollar = 60 rubles
 
 tips:
   - |
-    For line break use `\n` between dollar and ruble output.
+    You can use `\n` between the withdrawal of dollars and rubles to go to a new line.

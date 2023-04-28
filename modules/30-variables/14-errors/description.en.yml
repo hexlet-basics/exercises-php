@@ -1,9 +1,9 @@
 ---
 
-name: Variable errors
+name: Errors when handling variables
 theory: |
 
-  The main rule is that a variable must be declared before the code where it is used. If you do it after, the program simply won't work.
+  The main rule is that a variable must be declared before it can be used. If you do it later, the program simply won't work.
 
   ```php
   <?php
@@ -12,15 +12,20 @@ theory: |
   $greeting = 'Father!';
   ```
 
-  Execution of the program above will exit with error _PHP Notice:  Undefined variable: greeting_. _Undefined variable_ is a reference error, it means that the code uses a name (identificator) that is not defined. And the error output points us to the exact place where the error occured: _greeting_. Other possible mistakes include trivial typos that may occur when a variable is used or declared.
-  You can reduce the number of similar errors by using a correctly set editor. Such editor highlights names used without being previously declared and warns you of possible problems.
+  Running the program above ends with an error _PHP Notice:  Undefined variable: greeting_. _Undefined variable_ It means that the code uses a name (the proper term is 'identifier') that hasn't been defined. And in the error itself, the variable identifier is explicitly specified: _greeting_. In addition to defining things in the wrong order, there are other, more trivial errors that can occur in PHP, for example, typos, both when using a variable and declaring one
+
+  The number of these errors can be reduced by using a properly configured editor. An editor like this highlights names that are used without announcement and warns of possible problems.
 
 instructions: |
 
-  Find an undeclared variable in the program and declare it with the value 'Dragon';
+  Find an undeclared variable in the program and declare it by assigning the value `'Dragon'` to it.
 
-tips: []
+  After running the program, the result on the screen should look like this:
 
-definitions:
-  - name: Variable
-    description: a way to store information and give it a name to be reused in code later.
+  <pre class='hexlet-basics-output'>
+  Targaryen and Dragon
+  </pre>
+
+# tips: []
+
+# definitions: []
