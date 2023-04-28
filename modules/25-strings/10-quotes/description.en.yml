@@ -1,6 +1,6 @@
 ---
 
-name: Quote marks
+name: Quotes
 theory: |
 
   ```php
@@ -12,14 +12,13 @@ theory: |
   ''
   ```
 
-  Which ones of the five above are strings?
+  Which of these five items are strings?
 
-  We have alread dealt with the first two and we know for sure they are
-  strings, as we've learnt that a string is a set of characters.
+  With the first two, everything is clear, they're strings, we've already worked with similar constructions and said that strings are sets of characters.
 
-  Any single symbol wrapped in quotation marks is a string. An empty string `''` is a string too. We consider a string anything enclosed in quotes, even a space or no symbols at all.
+  Any single character between parentheses is a string. `''`, is also a string (albeit empty). So everything inside the quotation marks can be considered a string, even if it's a space, one character, or no characters at all.
 
-  In the earlier lessons we used single quotes, but it's not the only way to specify strings. You can also use double quotes.
+  In previous lessons, we enclosed strings in single quotes. You can also use double quotes:
 
   ```php
   <?php
@@ -27,17 +26,18 @@ theory: |
   print_r("Dracarys!");
   ```
 
-  Imagine you want to print the phrase _dragon's mother_. The apostrophe before the letter **s** is a symbol identical to the single quotation mark. Let's try:
+  Imagine you want to type the line _dragon's mother_. The apostrophe before the letter **s** and a single quote are the same symbols. Let's print it:
 
   ```php
   <?php
 
   print_r('Dragon's mother');
+  // PHP Parse error: syntax error, unexpected 's' (T_STRING), expecting ',' or ')'
   ```
 
-  Such code is not going to work. According to PHP, the string started with a single quote and ended after the letter **n**. It was followed by `s mother` without quotation marks, which means it wasn't a string. And then there was an opening quote that wasn't closed: `');`. Such code is syntactically incorrect (you can even see it from the way the code is highlighted).
+  This program won't work.  From PHP's perspective, the line started with a single quote and then ended after the letter **n**. Then comes some characters: `s mother` without quotes, which are not a string. And then there's one quote mark that opens a string which is never closed: `');`. This code is syntactically incorrect (you can see it by the way the code is highlighted).
 
-  In such case we should use double quotes. The following code will work correctly:
+  It's a good idea here to use double quotes. This version of the program will work correctly:
 
   ```php
   <?php
@@ -45,36 +45,68 @@ theory: |
   print_r("Dragon's mother");
   ```
 
-  Now the interpreter knows that the string started with a double quote, that means it must end with a matching double quote. And the single quote inside (apostrophe) becomes part of the string.
+  Now the interpreter knows that the string started with a double quote, so it must end with a double quote. And the single quote inside has become the part of the string.
 
-  It works the other way round too. If we want to use double quotes inside the string, we must enclose the string in single quotes. This way it doesn't matter how many quotation marks of the other type we insert inside the string.
+  It works the other way too. If you want to use double quotes inside a string, you should enclose the string in single quotes. And the number of quote marks inside the string itself doesn't matter.
 
-  Now, what about a string like this:
+  Now, what if we want to create a string like this?
 
   ```
   Dragon's mother said "No"
   ```
 
-  It has both single and double quotes. How do we enclose it? We must somehow tell the interpreter that those quotation marks belong to the string rather than open or close strings.
+  It has both single and double quotes. What can we do in this case? We need to somehow tell the interpreter to consider each quote as part of the string, not the beginning or the end.
 
-  In this case the **escape character** '\' is used. If a quotation mark (single or double) is preceeded by '\', it will tell the interpreter that it belongs to the string, rather then specifies the start or end of the string.
+  To do this, you need to use an escape character. In our case, it's the character that marks the start and end of a string, either a single or double quote, depending. Use a backslash `\` before the character you want to escape.
 
   ```php
   <?php
 
+  // Only escape ", since in this situation
+  // double quotes have a special meaning
   print_r("Dragon's mother said \"No\"");
+  // => Dragon's mother said "No"
   ```
 
-  Note that we had to escape the double quote rather than single quote with '\', because the string itself is enclosed in double quotes. If it was wrapped in single quotes, then we would have to escape the apostrophe instead of double quotes.
+  Look closely: we had to use `\` for double quotes to escape them, and not for the single quote (apostrophe) because the string is written in double quotes. If the string were written in single quotes, the escape character would be used before the apostrophe, not before the double quotes.
 
+  ```php
+  <?php
+
+  // \ is displayed if it's followed by a normal character, and
+  // not a special one
+  print_r("Death is \so terribly final");
+  // => Death is \so terribly final
+  ```
+
+  But what if you want to print the backslash? Just like any other special symbol, it escapes using a backslash too.
+
+  ```php
+  <?php
+
+  print_r("\\");
+  // => \
+  ```
+
+  Self-test: what will be printed?
+
+  ```php
+  <?php
+
+  print_r("\\ \\ \\\\ \\\ \'\"");
+  ```
 instructions: |
 
-  Write a program that will print the following phrase to the screen:
+  Write a program that prints:
 
   ```
   "Khal Drogo's favorite word is "athjahakar""
   ```
 
-  The program must print this exact symbols. Pay attention to the type of quotes in the beginning and end of the string.
+  The program should display this exact phrase on the screen. Note the quotes at the beginning and the end of the phrase:
+
+  <pre class='hexlet-basics-output'>
+  "Khal Drogo's favorite word is "athjahakar""
+  </pre>
 
 tips: []

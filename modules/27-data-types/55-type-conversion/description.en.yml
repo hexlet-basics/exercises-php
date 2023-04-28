@@ -1,35 +1,40 @@
 ---
 
-name: Explicit conversion
+name: Explicit type conversion
 theory: |
 
-  Type conversion is a very frequent operation in web development. On one hand, we can count on weak type system, on the other hand, it's often better to convert types explicitly, using special syntax. Such code is easier to understand and more predictable.
+  Type conversion is a fairly common operation in web development. On the one hand, you can rely on weak typing to perform it, on the other hand, in many situations it's better to do the conversion explicitly, using special syntax. This code is clearer and more predictable.
+
   ```php
   <?php
 
-  // These examples are somewhat artificial. In reality this mechanism comes in handy when used on variables.
-
+  // These examples are a bit artificial. In reality, this mechanism is much more useful when using variables
   print_r((string) 5);
   print_r((int) '345');
   ```
 
-  To execute a explicit conversion we cast the desirable type in brackets before the value. As result the value on the right will be converted into type casted in brackets. At this moment we are familiar only with two types, but type casting works with all types.
-
-  Type casting can be used inside compound expressions:
+  Explicit type conversion works like this: the desired type is specified before the value, in parentheses. As a result, the value on the right is converted to a value of the other type specified on the left in brackets. We're currently only familiar with two types, but the conversion works for any type. For example, when converting a fractional number to a whole number, the number will be rounded down
 
   ```php
   <?php
 
-  //Additional brackets help to distinguish parts of expression visually
+  print_r((int) 5.73); // => 5
+  ```
 
-  print_r('This is ' . ((string) 5));
+  Type conversion can be used within compound expressions:
+
+  ```php
+  <?php
+
+  // Additional brackets help to visually separate parts of an expression from each other
+  print_r('Это ' . ((string) 5));
   ```
 
   <pre class='hexlet-basics-output'>
-    This is 5
+    Это 5
   </pre>
 
-  In more complex cases (when used in functions, we will learn about that later) it's common to encounter multiple conversions `(string) (5 + ((int) '4'))`. The calculation order of this expression is as follows:
+  In more complex situations (when using functions that are passed later) multiple conversions are encountered: `(string) (5 + ((int) '4'))`. The procedure for calculating this expression is as follows:
 
   ```php
   <?php
@@ -41,8 +46,8 @@ theory: |
 
 instructions: |
 
-  Output the string `2 times` as result of integer 2 and string `times`, using type casting and concatenation.
+  Output the string 2 times from the number 2.9 and the string `times` using type conversion and concatenation. This requires two conversions: first, to an integer and then to a string
 
-definitions: []
+# definitions: []
 
-tips: []
+# tips: []
