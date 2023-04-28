@@ -1,0 +1,29 @@
+---
+
+name: Syntactic Sugar
+theory: |
+
+  A construction like `$index = $index + 1` is used quite often in PHP, so the creators of the language added a shortened version of the notation: `$index += 1`. This shortcut is usually referred to as **syntactic sugar**, because it simplifies and "sweetens" the process of coding :)
+
+  It is important to understand that the differences are solely in the way they're written The interpreter transforms the abbreviated construction into an expanded one.
+
+  There are shortcuts for all arithmetic operations and for string concatenation:
+
+  - `$a = $a + 1` → `$a += 1`
+  - `$a = $a - 1` → `$a -= 1`
+  - `$a = $a * 2` → `$a *= 2`
+  - `$a = $a / 1` → `$a /= 1`
+  - `$a = $a . 'bla'` → `$a .= 'bla'`
+
+instructions: |
+
+  Write a function, `filterString()`, which takes a string and a character as input and returns a new string, wherein the character passed to it is wholly removed from the word.
+
+  ```php
+  <?php
+
+  $str = 'If I look back I am lost';
+  filterString($str, 'I'); // 'f  look back  am lost'
+  filterString($str, 'o'); // 'If I lk back I am lst'
+  ```
+# tips: []
