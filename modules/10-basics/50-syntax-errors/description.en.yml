@@ -1,6 +1,6 @@
 ---
 
-name:  Syntax errors
+name: Syntax errors
 theory: |
   If a PHP program is written syntactically incorrectly, the interpreter will display a corresponding message on the screen, along with a pointer to the file and line where it thinks the error occurred. _Syntax errors_ occur when the code has grammatical mistakes. Grammar is essential to human language, but a text with grammar mistakes can still be read and understood. However, when it comes to programming, things are much more strict. Any tiny violation and the program won't even start. Maybe you've mixed up your brackets, or there's a `;`, that you forgot to add — these are just some examples of such mistakes.
 
