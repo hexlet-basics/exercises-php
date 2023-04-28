@@ -3,9 +3,9 @@
 name: Constants
 theory: |
 
-  Some data, such as mathematical constants, never change. Take, for example, π. It's aproximately equal to `3.14` and it can't change.
+  Some data, such as mathematical constants, never change. Take the number π. It's always approximately `3.14` and cannot change.
 
-  Such data is usually stored in constants.
+  It's generally accepted in PHP to use constants to refer to this kind of data.
 
     ```php
     <?php
@@ -14,21 +14,22 @@ theory: |
     print_r(PI); // => 3.14
     ```
 
-  The syntax of creating a constant is different from that of a variable. It starts with the key word `const` and the name of the constant. The dollar sign is ommited. Then we assign to it the desired value. The convention tells us to name constant in upper case with an underscore `_` as a separator. A constant can be used in any expression in the same way as a variable. The only limitation is that a constant can't be changed, which sounds quite logical.
+  Creating a constant is different from creating a variable. It starts with the keyword const followed by the constant name. We don't need the dollar sign. Then we assign it the desired value. Constants are usually named with uppercase letters, with `_` as a separator. A constant, like a variable, can be used in any expression. The only limitation is that the constant can't be changed, which sounds pretty logical.
 
-  PHP has different inbuilt constants that can be used anytime in a program. Here are some of them:
+  PHP has a lot of built-in constants that can be used anywhere in the program. Some of them are:
 
-  * `PHP_VERSION` — the current PHP version
-  * `PHP_MAXPATHLEN` — the maximum supported length of file names
-  * `PHP_INT_MAX` — the maximum value of integers
+  * `PHP_VERSION` — the current version of PHP
+  * `PHP_MAXPATHLEN` — maximum file name length
+  * `PHP_INT_MAX` — the maximum possible value of integers
+
 instructions: |
 
-  Create the constant `DRAGONS_BORN_COUNT` and assign to it number 3 - the number of dragons Daenerys has.
+  Create a constant, `DRAGONS_BORN_COUNT` and write the number 3 in it. This is the number of dragons born to Daenerys.
 
 tips:
   - |
-    [The list of PHP core predefined constants](https://www.php.net/manual/en/reserved.constants.php)
+    [List of built-in PHP constants](https://php.net/manual/ru/reserved.constants.php)
 
 definitions:
-  - name: "Constant"
-    description: "a way to store information and give it a name to be reused in code later; unlike variables, constants can't be changed"
+  - name: A constant
+    description: is a way of storing information and naming it for later use in code; constants cannot be changed, unlike variables.

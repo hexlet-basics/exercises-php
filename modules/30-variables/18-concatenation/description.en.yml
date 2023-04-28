@@ -3,8 +3,7 @@
 name: Variables and concatenation
 theory: |
 
-  This time we will reinforce the previous topic by using variables together with concatenation. Syntax is going to be the same as we used when we were concatenating (joining) two strings together:
-
+  Let's try concatenating variables so that we can reinforce the previous topic a little. The syntax is still the same, we know how to concatenate (combine) two strings:
 
   ```php
   <?php
@@ -13,7 +12,7 @@ theory: |
   print_r($what); // => "Kingsroad"
   ```
 
-  … it means we would be able to concatenate a string with a variable that refers to another string:
+  … which means we can concatenate the string and the variable that the string has been written to:
 
   ```php
   <?php
@@ -24,7 +23,7 @@ theory: |
   print_r($what); // => "Kingsroad"
   ```
 
-  … and even concatenate two variables with string values:
+  … and even concatenate two variables with strings in them:
 
   ```php
   <?php
@@ -38,26 +37,26 @@ theory: |
 
 instructions: |
 
-  Websites constantly send emails to their users. They routinely send automatically formed personal emails with user's name in the header. If the person's name is stored somewhere in the website database, the generation of a header comes down to concatenation, for example, joining the string `Hello` with the string that represents the user's name.
+  Websites are constantly sending emails to their users. One common task is to automatically send a personalized email with the user's name in the header. If you store a person's name as a string somewhere in a website database, the task of generating the header boils down to concatenation. For instance, you have to concatenate the string `Hello` with a string containing their name.
 
-  Write a program that generates the header and the body of the email using variables, and prints the resulting strings to screen.
+  Write a program that'll create a header and a body of the email using ready-made variables and print the resulting strings.
 
-  For the header use variables `$firstName` and `$greeting`, a coma and a exclamation sign. Output it in the correct order.
+  For the header, use the `$firstName` and `$greeting` variables for the, and a comma and exclamation point. Print it in the correct order.
 
-  For the body of the email use variables `$info` and `$intro`, with the second sentence displayed on a new line.
+  Use the variables `$info` and `$intro` for the body of the email, with the second sentence on a new line.
 
-  Here is the expected result:
+  The result should look like this:
 
-  ```
+  <pre class='hexlet-basics-output'>
   Hello, Joffrey!
   Here is important information about your account security.
   We couldn't verify you mother's maiden name.
-  ```
+  </pre>
 
-  Make it work using `print_r` only two times.
+  Try and do it using just two `print_r()` statements.
 
 tips:
   - |
-    Think how to get a two line output. Which strings should be variables concatenated to and in which order?
+    Consider how you should concatenate the variables (Which string? What order?) to get the two-line output of the email body.
   - |
-    Remember that you can create a string that would only contain the control sequence `\n`.
+    Remember that you can create a string containing only the escape sequence `\n`.

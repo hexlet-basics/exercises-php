@@ -1,9 +1,9 @@
 ---
 
-name: Functions with variadic parameters
+name: Variable Parameter Functions
 theory: |
 
-  Some functions have the interesting feature of accepting an indefinite number of parameters. And we're not talking about default values. Check out this example:
+  An interesting feature of some functions is that they can accept a varying number of arguments. We're not talking about default values. Check out this example:
 
   ```php
   <?php
@@ -11,13 +11,13 @@ theory: |
   max(1, 10, 3); // 10
   ```
 
-  The function `max()` finds the maximum value among the passed parameters. How many parameters do you think it expects? This function's documentation shows something interesting:
+  The `max()` function finds the maximum value among the passed arguments. How many arguments do you think it expects to receive? This function's documentation shows something interesting:
 
     ```
     max ( mixed $value1 [, mixed $... ] ) : mixed
     ```
 
-    The way it is written means this function accepts any number of parameters (even none). The optional parameters are specified by square brackets _[ ]_, and so are the optional parameters with default values. The ability to pass any number of parameters is encoded with _[, ...]_.
+    This means that this function accepts any number of arguments as input (and can even be called without them). Passed arguments that are optional are shown with _[]_, which is the same as how optional parameters that have default values are described. The ability to pass any number of parameters is encoded with _[, ...]_.
 
     ```php
     <?php
@@ -27,6 +27,10 @@ theory: |
 
 instructions: |
 
-  Write a program to calculate the minimum value of 3, 10, 22, -3, 0, and print it. Use the function `min()`, which works similarly to `max()`.
+  Calculate the minimum number (in PHP) out of 3, 10, 22, -3, 0, and display it. Use the `min()` function, which works in the same way as `max()`.
 
 tips: []
+
+# definitions:
+#   - name: Default argument
+#     description: is an optional function argument.

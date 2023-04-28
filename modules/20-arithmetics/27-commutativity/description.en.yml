@@ -2,23 +2,23 @@
 
 name: Commutative operation
 theory: |
+  Do you remember the basic rule of arithmetic that changing the order of the numbers we're adding doesn't change the sum?  It's one of the most basic and intuitive rules of arithmetics, it's called the **commutative law**.
 
-  We learn this in grade one: two plus three is the same as three plus two. This is one of the basic laws of arithmetics that we know intuitively. It's called a **commutative property** of an operation.
+  A binary operation is considered commutative if you get the same result after swapping operands. Obviously, addition is a commutative operation:  _3 + 2 = 2 + 3_.
 
-  A binary operation is commutative if changing the order of operands doesn't affect the outcome. Obviously, addition is commutative: `3 + 2 = 2 + 3`.
+  But is subtraction a commutative operation? Of course not: _2 - 3 ≠ 3 - 2_. In programming, this law applies in the same way as in arithmetic.
 
-  Is subtraction commutative? Of course not: `2 - 3 ≠ 3 - 2`. Operators in programming follow the same rules.
-
-  Actually, most of the operations you'll use aren't commutative. So make you pay attention to the order of operands.
+  Moreover, most of the operations we face in real life aren't commutative. In conclusion, you should always pay attention to the order of things you're working with.
 
 instructions: |
 
-  Write a program, that calculates and prints to screen results of the following mathematical expressions: "3 to the power of 5" and "-8 divided by -4".
+  Write a program that counts and sequentially displays the values of the following mathematical expressions: "3 to the power of 5" and "-8 divided by -4".
 
-  The results will be displayed together, on a single line without any spaces between them. We'll learn how to fix this problem later.
+  Note that the results will appear stuck together, on one line, and without any spaces. We'll learn how to deal with this problem in future lessons.
 
 tips: []
 
 definitions:
-  - name: "Commutativity"
-    description: "property of an operation: changing the order of the operands does not change the result. E.g. addition is a commutative operation."
+  - name: Commutativity
+    description: |
+      is the property of an operation wherein changing the order of operands doesn't affect the result. For example, addition is a commutative operation; changing the order of the numbers we're adding doesn't change the result.

@@ -1,6 +1,6 @@
 ---
-name: Basics
-description: |
+name: PHP Basics
+description:
+  PHP is one of the most popular programming languages in the world. More than 80% of websites on the Internet are written in this language.
 
-  Learning to program is a hard and a long process. And it's not limited to the syntax of a language. We would say that learning syntax is the easiest and the shortest step on the path, but we can't skip it. This Basics module is devoted to the basics of writing programs in PHP. It will serve as the basis for writing more complex programs later.
-
+  We'll learn PHP from scratch, starting from the very basics. The first module is a springboard for writing meaningful programs. In it, we'll show you how to write your first code in PHP. We'll tell you what comments are and why they're needed. We'll also look at testing by checking your solutions as an example.

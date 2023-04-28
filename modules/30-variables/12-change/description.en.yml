@@ -1,14 +1,14 @@
 ---
 
-name: Changing a variable
+name: Changing a Variable
 theory: |
 
-  The word 'variable' itself implies that it can be changed. And indeed, with time, the value of a variable inside the program can change.
+  The word "variable" itself indicates that it can be changed. Indeed, the value of a variable can change throughout your code.
 
   ```php
   <?php
 
-
+  // greeting 
   $greeting = 'Father!';
   print_r($greeting);
   print_r($greeting);
@@ -18,16 +18,20 @@ theory: |
   print_r($greeting);
   ```
 
-  The name hasn't changed, but the information inside is different. We should note that it's not required to declare variables in PHP. A variable is declared at the moment of its initial use in the program instead.
+  The name remains unchanged, although it stores new data. Note that variables in PHP don't need to be declared. Instead, a variable is declared the first time it's used in a program.
 
-  Variables is a powerful and at the same time dangerous thing. We can't be sure what value is stored in the variable without analyzing the preceeding code. That's exactly what developers do when they are trying to find out why their program is not working, or not working the way it's supposed to, in the debugging process.
+  Variables are a powerful yet dangerous thing. You can never be sure exactly what's written inside it without analyzing the code that comes before the variable. This is what developers do during debugging, when they try to figure out why the program doesn't work, or doesn't work as intended.
+
+  As you'll see later, PHP has more than just variables. Moreover, variables are not often used with the goal of changing them in mind. They're more often used as a storage method.
 
 instructions: |
 
-  There is a variable with value `'Brienna'` in the code. Redefine the value of the variable and assign to it the same string in reversed order.
+  In this exercise, a variable has been defined with a string inside it. Override the value of this variable and assign it a string in which the characters of the original string are arranged in reverse order.
 
-tips: []
+tips:
+  - |
+    Type your code between the `// BEGIN` and `// END` lines in the editor.
 
 definitions:
-  - name: Variable
-    description: "a way to store information and give it a name to be reused in code later."
+  - name: A variable
+    description: is a way to store information and name it for later use in code.

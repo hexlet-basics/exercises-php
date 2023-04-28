@@ -1,38 +1,40 @@
 ---
 
-name: Heredoc syntax
+name: Heredoc
 theory: |
 
-  The third method to delimit a string is using the heredoc syntax: <<<. After this operator an indentifier is provided, then a newline. The string itself follows, and then the same identifier again to close the quotation. The identifier name is chosen randomly. Such method is useful when we deal with long strings with line breaks and quote marks of different sorts.
+  You can use a special syntax called heredoc to define strings in PHP. After the `<<<` operator, you need to specify an identifier with whatever name you like then a line feed, followed by the string itself. The same identifier is added at the end, closing the insertion. This method is convenient for specifying long strings, containing both line feeds and multi-type quotes.
 
   ```php
   <?php
 
   $str = <<<EOT
-  An example of a string
-  that stretches to several lines,
-  using the heredoc syntax.
-  This way you don't need to escape single ' and double " quotes
+  Example of a string,
+  covering several lines,
+  using heredoc syntax.
+  Here we don't need to escape either single ', or double " quotes.
   EOT;
   print_r($str);
   ```
 
   <pre class='hexlet-basics-output'>
-  An example of a string
-  that stretches to several lines,
-  using the heredoc syntax.
-  This way you don't need to escape single ' and double " quotes
+  Example of a string,
+  covering several lines,
+  using heredoc syntax.
+  Here we don't need to escape either single ', or double " quotes.
   </pre>
 
-  Note that there must be no whitespaces before the closing identifier (in this case 'EOT'). Otherwise the code execution will exit with a syntax error.
+  Note that the trailing identifier (in this case `EOT`) must not have spaces, otherwise PHP will tell you off for having a syntax error.
 
 instructions: |
 
-  Assign the text below to the variable `$str`. Use the heredoc syntax.
+  Write the text below to the `$str` variable. Use heredoc syntax.
 
-        Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
-        This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
+      Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
+      This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
 
 definitions: []
 
-tips: []
+tips:
+  - |
+    [Heredoc](https://www.php.net/manual/en/language.types.string.php)

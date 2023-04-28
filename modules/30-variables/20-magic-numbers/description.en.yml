@@ -3,7 +3,7 @@
 name: Magic numbers
 theory: |
 
-  Let's refresh one of the previous lessons:
+  Let's remember one of the previous lessons:
 
   ```php
   <?php
@@ -15,13 +15,11 @@ theory: |
   print_r($rublesCount);
   ```
 
-  As far as professional development is concerned, such code "smells". This expression describes a code that deviates from the so-called best practices. And here is why: at this point already looking at numbers `60` and `1.25`, you'll probably wonder: what are those numbers? Imagine looking at them in a month. How is another developer that has never seen that code before supposed to understand them? In the example above we can recover the context by correctly naming variables. In real life, however, code is much more complex, and often it's impossible to guess what some numbers could possibly mean.
+  From the developer's point of view, such code "smells". This describes code that doesn't conform to so-called best practices. And here's the reason. If you're looking at the numbers `60` and `1.25`, you'll probably be wondering, "What are those numbers? Imagine reading a month from now! How could a new programmer who hasn't seen the code before understand it? In our example, the context is restored through proper naming, but real life code is much more complicated, and therefore it's often impossible to guess the meaning of the numbers.
 
-  Such "smell" is called magic numbers. Numbers, origins of which are impossible to guess without a thorough knowledge of what's happening in a particular part of the code.
+  This "smell" is caused by magic numbers. They're numbers that you can't explain the origin of, unless you dig deeper into the code.
 
-  It's easy to fix it though: once you created properly named variables, all pieces fall into place.
-
-
+  The way out is simple: just create variables with the right names and everything will be as they need to be.
 
   ```php
   <?php
@@ -36,35 +34,37 @@ theory: |
   print_r($rublesCount);
   ```
 
-  Please note the following:
+  Note the following details:
 
-  * Variable names are in _lowerCamelCase_
-  * The two new variables are separated from the calculations that follow them by an empty line. Those variables make sense even without calculations, so separating them we'll increase the code readability.
-  * As a result we got a properly named and structured code, but it's longer then the previous version. It happens, and there's nothing wrong with it. Code must be easy to follow.
+  * lowerCamelCase naming
+  * The two new variables are separated from the following computations by an empty string. These variables are meaningful even without any computation involved, which is why separating them here is good, it makes it easier to read.
+  * The code is well named and structured, but it's longer than the previous version. This is often the case, but it's fine, because the code needs to be readable.
 
 instructions: |
 
-  Look at the code that outputs the overall number of rooms owned by the current king:
+  You've come across this code, which prints the total number of rooms owned by the present king:
 
   ```php
+  <?php
+
   $king = 'King Balon the 6th';
   print_r($king . ' has ' . (6 * 17) . ' rooms.');
   ```
 
-  As you see, these are magic numbers - it's not clear what 6 and 17 refer to. If you knew the history of the royal family, however, you would know that every new king inherits all castles from ancestors and builds a new one - the exact copy of his parents' castle.
+  As you can see, there are some magic numbers here: it's unclear what 6 is and what 17 is. If you know the history of the royal family, you can guess: each new king inherits all his ancestors' castles and builds a new one, an exact copy of his parents'.
 
-  This weird dynasty just produces identical castles...
+  This strange dynasty simply breeds identical castles…
 
-  Get rid of magic numbers, creating new variables, and print the following text to the screen.
+  Get rid of the magic numbers by creating new variables and then displaying the text on the screen.
 
-  Like this:
+  You'll get this:
 
-  ```
+  <pre class='hexlet-basics-output'>
   King Balon the 6th has 102 rooms.
-  ```
+  </pre>
 
-  A variable name must convey the meaning of the number and stay short enough, but at the same time it must be comprehensible so it's easy to read.
+  Variable names should convey the meaning of numbers, but should remain short and succinct enough to be easily read.
 
-  Remember: code will work with any naming, and our system only checks the output result, so we rely on you to do this exercise properly.
+  Note: The code will work with any name, and we only check the printed result, so the task is up to you.
 
-tips: []
+# tips: []

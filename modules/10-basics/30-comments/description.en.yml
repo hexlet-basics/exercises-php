@@ -2,31 +2,37 @@
 
 name: Comments
 theory: |
-  Almost all the programming languages allow you to add comments to your code. Comments are read only by humans - the interpreter doesn't evaluate them. Comments serve as notes for those who wrote them and other developers. There are two types of comments in php:
 
-  **Single line comments** start with `//`. Whatever follows after will not be evaluated or executed.
+  Almost every programming language allows you to add comments to your code. This is text that isn't part of the program and is needed for programmers to make notes. They help explain how the code works, what errors need to be corrected, or what not to forget to add later.
 
-  A comment can take up the whole line:
+  Comments in PHP come in two flavors:
+
+  ## Single line comments
+
+  _Single line comments start with `//`. Any text can go after these characters, the whole line will be left alone when the program is run.
+
+  A comment can take up a whole line. Or you can create several comments if one line isn't enough:
 
   ```php
   <?php
 
   // For Winterfell!
+  // For Lanisters!
   ```
 
-  or can follow some code on the same line:
+  Or it can go after code on the same line:
 
   ```php
   <?php
-
-  print_r('I am the King'); // => For Lannisters!
+  print_r('I am the King'); // For Lannisters!
   ```
 
-  **Multiline comments** start with `/*` and end with `*/`. Each line between them should start with a `*`.
+  ## Multi-line comments
+
+  _Multiline comments_ start with `/*` and end with `*/`. Each line between them must begin with a `*`.
 
   ```php
   <?php
-
   /*
    * The night is dark and
    * full of terrors.
@@ -35,10 +41,20 @@ theory: |
   ```
 
 instructions: |
-  Create a single line comment with the folowing text: `You know nothing, Jon Snow!`.
+  Create a one-line comment with the text: `You know nothing, Jon Snow!`.
 
 tips: []
 
 definitions:
-  - name: "Comment"
-    description: "A comment is just a text and it doesn't affect program execution. Programmers use it to add notes for themselves and for their colleagues"
+  - name: Comment
+    description: |
+      text in program code that doesn't affect functionality, and is added by programmers for themselves and their colleagues.
+
+      `// single-line comment`
+
+      ```
+      /*
+      * multiline comment
+      * multiline comment
+      */
+      ```

@@ -1,9 +1,9 @@
 ---
 
-name: What's a variable
+name: What is a variable
 theory: |
 
-  Imagine we have a task to output the phrase _Father!_ two or even five times. We can approach it in a straightforward way:
+  Imagine we need to type the phrase _Father!_ twice or even five times on the screen. You can solve it via brute force:
 
   ```php
   <?php
@@ -12,29 +12,30 @@ theory: |
   print_r('Father!');
   ```
 
-  That's the way to go in a simple case, but if the phrase _Father!_ starts to appear again and again and in different parts of the program, we would have to duplicate it. And imagine we need to change the phrase, which happens quite often. That's where problems begin. We would have to find all blocks of code where the phrase _Father!_ was used and replace it. We could approach it differently though. Instead of duplicating our phrase, it's sufficient to create a variable to store it.
+  In the simplest case, this is what you should do, but if the phrase _Father!_ starts to be used more and more often, and in different parts of the program, you'll have to repeat it everywhere. Then you'll face even more issues when it turns out that you need to change the phrase. This is a common scenario in development. We have to find all the places where the phrase _Father!_ was used and make the necessary substitutions. There is one other way to do it. Instead of copying our expression, just create a variable containing this phrase.
 
   ```php
   <?php
 
+  // greeting 
   $greeting = 'Father!';
   print_r($greeting);
   print_r("\n");
   print_r($greeting);
   ```
 
-  Look at the line `$greeting = 'Father!'`. We assign the value `'Father!'` to the variable named `$greeting`. In PHP variable names always start with a dollar sign _$_.
+  The line `$greeting = 'Father!'` assigns the value `'Father!'` to a variable named `$greeting`. In PHP, variable names begin with a *$* sign. As a result, the variable points to the data that was written to it.
 
-  Once the variable is created, we can start using it. We replace with it all occurences of our phrase. While the code is being executed, the interpreter (the one that executes the php code) reaches the line `print_r($greeting)`, replaces the variable with its value and executes the code. As result, we'll have the following output:
+  Once the variable's been created, you can start using it. You put it in the places where we originally had our phrase written out in full. At runtime, the interpreter (the program that executes the PHP code), reaches the line `print_r($greeting);` and replaces the variable with its contents, and then executes the code. As a result, the output of our program will be as follows:
 
   <pre class='hexlet-basics-output'>
     Father!
     Father!
   </pre>
 
-  To name a variable you can use any set of valid characters which includes letters of the latin alphabet, numbers, hyphen `-` and underscore `_`. Note that a variable name can't start with a number. Variable names are case sensitive, i.e. `hello` and `heLLo` are two different names and therefore two different variables.
+  Any set of valid characters can be used for a variable name, which includes letters of the English alphabet, numbers, and the `_`. Note that you can't place a digit at the beginning of a name. Variable names are case-sensitive, which means that `hello` and `heLLo` are two different names and thus two distinct variables. Case is important in PHP, never forget it.
 
-  The number of varibles is unlimited and big programs contain dozens and even hundreds of thousands variable names:
+  The number of variables you can create isn't limited in any way, large programs contain tens and hundreds of thousands of variable names:
 
   ```php
   <?php
@@ -48,16 +49,14 @@ theory: |
   print_r($greeting2);
   ```
 
-  There is a convention to create variables as close as possible to the code that uses them, in order to make it easier to analyze the program.
+  For the convenience of program analysis, it's customary to create variables as close as possible to where they're used.
 
 instructions: |
 
-  Create a variable named `$motto` and assign to it `What Is Dead May Never Die!`. Output the value of the variable.
-
-
+  Create a variable named `$motto` containing `What Is Dead May Never Die!`. Print its contents.
 
 tips: []
 
 definitions:
-  - name: Variable
-    description: "a way to store information and give it a name to be reused in code later."
+  - name: A variable
+    description: is a way to store information and name it for later use in code.

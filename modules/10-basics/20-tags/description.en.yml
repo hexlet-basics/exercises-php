@@ -2,12 +2,12 @@
 
 name: Tags
 theory: |
-  PHP is probably the only language where you can't start coding right away, because the interpreter (a program that executes code) will evaluate your code as plain text. Any code in PHP should be wrapped in `<?php ?>`.
+  PHP is probably the only language in which you can't start writing code right away. Such code will be perceived by the interpreter (the program executing the code) as plain text. Any PHP code should be wrapped in a `<?php ?>` construct.
 
-  PHP allows you not to specify the closing tag `?>`. In our lessons we will be omitting it and it won't affect anything. But coding standards (rules on how to write code) in different companies require adding the closing tag `?>`.
+  `<?php` is the opening tag and `?>` is the closing tag. PHP allows you to omit the closing part `?>`. And the PSR-12 code manual doesn't let you include it at all.
 
 instructions: |
-  Type the following code into the editor and don't forget that it should start with `<?php`.
+  Type the code from the example, and put the `<?php` tag at the beginning:
 
   ```php
   <?php
@@ -16,4 +16,9 @@ instructions: |
   ```
 
 tips:
-  - "[Coding standards (psr-1)](https://www.php-fig.org/psr/psr-1/)"
+  - "[Basic Code Writing Standard (PSR-1)](https://www.php-fig.org/psr/psr-1/)"
+  - "[Code Design Guide (PSR-12)](https://www.php-fig.org/psr/psr-12/)"
+
+definitions:
+  - name: Interpreter
+    description: "a program that executes code written in a programming language."
