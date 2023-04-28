@@ -3,28 +3,28 @@
 name: Standard Library
 theory: |
 
-  PHP, like any other language has a set of useful functions out of the box. All of them are part of so-called **standard library**. It usually contains thousands of functions that are impossible to memorize, and you don't need to do so. It is assumed that any programmer knows where to find documentation on them and has an idea of what he wants his code to do. All he has to do is to find an appropriate function for it. It's extremely difficult to code without access to internet.
+  PHP, like any other language, comes with a set of useful features. Altogether, they make up the so-called **standard library**. It usually contains thousands of functions you can't remember, and that you don't have to. It's assumed that any programmer knows where to look for their documentation and has a rough idea of what they want to achieve. And the rest is a matter of technique. Programming without the Internet is extremely difficult.
 
-  For beginners, it usually sounds very confusing. They don't know what to look for, because they don't know anything at all. Funny enough, there is no way to know everything you need to know. Any developer in the process of his professional growth explores more and more interesting functions that accomplish his tasks in a more elegant way, extending this way his knowledge base.
+  To newcomers, it often looks like this: "Go I know not whither and fetch I know not what". In other words, most people have no idea how to learn about these functions when they don't know anything at all. Oddly enough, there's no way to know everything you need to know once and for all. As you grow as a developer, you'll learn all the exciting features that can solve your problems more elegantly, thus expanding your toolbox.
 
-  Here are some tips on how to explore new functions:
+  Here are some tips to learn about new features:
 
-  *Always be aware of what type of data you are working with. You will most likely find the desired function in the corresponding section of the documentation. If you work with strings, for example, search for functions that work with strings.
-  * Once in a while open the function reference and read it focusing on functions' signature and usage.
-  * Read other people's code more often, especially that of libraries you use. It is available on GitHub.
+  * Always keep track of what you're working with at the moment (the data type). You'll almost always find the function you need in the corresponding section of the documentation, e.g. you have to study string functions to work with strings.
+  * Open the standard functions section of the topic you are studying every now and then and just run through them,, learning the signatures and ways to use them.
+  * Read other people's code more often, especially code from the libraries you're using. It's all available on GitHub.
 
-  One more thing to know about standard PHP functions is that they are **globally accessible**. In other words, you can call them at any place in your program (it doesn't work the same way with functions you write yourself). Most standard library functions are focused on functionality of some data type. For example, there are functions that operate with strings, numbers etc. We will study some of them in this course.
+  Another feature of PHP functions from the Standard Library is that they're *available globally*. In other words, you can call them anywhere in your program (this doesn't work with functions you've written yourself). Most standard library functions are centered around some functionality or some type of data. For example, there's a large block of functions for processing strings, working with numbers, and so on. We'll go over some of them as you continue to study.
 
 instructions: |
 
-  The `gettype` function defines the type of the argument we pass in it. The type name is returned as as a string. `gettype(10)` will return `"integer"` - the integer number type.
+  The `gettype()` function allows you to determine the type of the argument being passed. The name of the type is returned as a string. For example, a call to `gettype(10)` will return the string `"integer"`.
 
-  Print to screen the type of the variable `$motto`.
+  Print the type of the value of the variable `$motto`.
 
 tips:
   - |
-    [PHP function reference](https://php.net/manual/en/funcref.php)
+    [Description of string functions](https://www.php.net/manual/en/ref.strings.php)
 
 definitions:
-  - name: Standard library
-    description: "a set of useful functions a programming language has out of the box."
+  - name: Standard Library
+    description: a set of useful features included with the programming language.

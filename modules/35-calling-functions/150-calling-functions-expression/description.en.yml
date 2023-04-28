@@ -1,9 +1,8 @@
 ---
 
-name: Function call as an expression
+name: Function call - expression
 theory: |
-
-  In programming, an expression is something that returns a usable output value. We already know a lot about expressions and their principles of composition. Math operations (addition, subtraction, etc.) and string operations (concatenation) are all expressions:
+  In programming, an expression is something that returns a usable output value. We already know a lot about expressions and how they're made. Math operations (addition, subtraction, etc.) and string operations (concatenation) are all expressions:
 
   ```php
   <?php
@@ -24,25 +23,25 @@ theory: |
   print_r(1 + 5);
   ```
 
-  But not any code can be an expression. The definition of a variable is a statement, it can't be part of an expression and it will lead to an error:
+  But not just any code can be an expression. The definition of a variable is a statement, it can't be part of an expression. And doing so will lead to an error:
 
   ```php
   <?php
 
-  // Pointless code that won't work
+  // Useless code that won't work
   10 + $sum = 1 + 5;
   ```
 
-  Why is this important to know? You can combine expressions to get more and more complex behavior in the most unexpected places and the most surprising ways, as you will see. You will get a better understanding of how you can combine pieces of code to get the desired results.
+  Why is this important to know? You can combine expressions to get more and more complex behavior in the most unexpected places and the most surprising ways, as you will see. You'll get a better understanding of how you can combine pieces of code to get the desired results.
 
-  Let's talk about functions. Is a function call an expression or not? We know that functions return results, which means that, yes, they are expressions. It leads to a lot of interesting possibilities. For example, we can call functions directly in math operations. This is how we can get the last character index in a word:
+  Let's talk about functions. Is a function call an expression or not? We know that functions return results, which means that, yes, they're expressions. This leads to a lot of interesting possibilities. For example, we can call functions directly in math operations. This is how we can get the last character index in a word:
 
   ```php
   <?php
 
   $name = 'php';
-  // Indexes count from zero
-  // Method call and subtraction combined!
+  // Indexes start with zero
+  // Method call and subtraction together!
   $last_index = strlen($name) - 1;
   print_r($last_index); // 2
   ```
@@ -56,19 +55,18 @@ theory: |
   print_r(strlen($name) - 1); // => 2
   ```
 
-  All of this holds for any function, e.g. string functions:
+  All of this applies for any function, e.g., string functions:
 
   ```php
   <?php
 
   $name = 'php';
-  // Using interpolation
+  // Interpolation
   print_r("Last character: {$name[strlen($name) - 1]}");
-  // => Last character: p
+  // => 'Last character: p'
   ```
 
 instructions: |
-
   Print the first and last letters of the sentence stored in the variable `text` using this format:
 
   <pre class='hexlet-basics-output'>
@@ -76,6 +74,6 @@ instructions: |
   Last: t
   </pre>
 
-  Try to create only one variable you want to assign the text to before you print it. In this lesson, we're practicing building a compound expression.
+  Try to only create one variable you want to assign the text to before you print it. In this lesson, we're practising building a compound expression.
 
 # tips: []

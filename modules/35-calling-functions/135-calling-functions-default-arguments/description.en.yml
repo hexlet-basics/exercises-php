@@ -1,9 +1,9 @@
 ---
 
-name: Default arguments
+name: Default Arguments
 theory: |
 
-  Let's take a look at the `round` function. It rounds a float number passed to it:
+  Let's look at the `round()` function. It rounds up the number passed to it:
 
   ```php
   <?php
@@ -11,9 +11,9 @@ theory: |
   $result = round(10.25, 0); // 10
   ```
 
-  We passed two arguments to the function: a number and a rounding precision. `0` means that the number will be rounded to an integer.
+  We passed two arguments to it: the number and the rounding accuracy. `0` means that the rounding will be to an integer value.
 
-  Typically we want to round to an integer (rather then to a one decimal place, for example), so the creators of the `round` function made the second argument **optional** and gave it `0` as **default value**. It means that result will be the same even if you don't pass the second argument:
+  We usually need to round to a whole number (and not to 1 decimal point, for example), so the creators of the `round` function made the second argument **optional** and set the **default value within the function to `0`**. So you can leave out the second argument and the result will be the same:
 
   ```php
   <?php
@@ -21,7 +21,7 @@ theory: |
   $result = round(10.25); // 10
   ```
 
-  In case you need some other precision, pass it as the second argument:
+  And if you need to round it to a number of decimal places, then you can pass the required argument as well:
 
   ```php
   <?php
@@ -29,14 +29,14 @@ theory: |
   $result = round(10.25, 1); // 10.3
   ```
 
-  When a PHP function has optional arguments, they usually follow the required ones. There can be any number of optional arguments, but all of them must be placed in the end of the argument list.
+  If a function in PHP takes optional arguments, they'll alway come after the required ones. Their number varies depending on the function itself, but they always go one after another and at the end of the list of arguments.
 
 instructions: |
 
-  Round the float number assigned to `$number` to two decimal places and print the result to screen.
+  Round up the number written in the $number variable to two decimal places and display the result on the screen.
 
-tips: []
+# tips: []
 
 definitions:
-  - name: Default argument
-    description: an optional function argument.
+  - name: The default argument
+    description: is an optional function argument.

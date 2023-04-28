@@ -1,17 +1,17 @@
 ---
 
-name: Function signature
+name: Сигнатура функции
 theory: |
 
-  Function `pow`, that raises a number to a power, receives two paramters: **a number to raise** and **a power to raise to**. If we called `pow` without parameters, code execution would exit with an error `PHP Warning:  pow() expects exactly 2 parameters, 0 given in php shell code on line 1`. This is the interpreter telling you that the function expects two parameters and you've passed it none.
+  The `pow()`, function, which raises a number to any power, takes two parameters: **which number to raise** and **to what power to raise it to**. If you call `pow()` without parameters, PHP outputs the following: `PHP Warning:  pow() expects exactly 2 parameters, 0 given in php shell code on line 1`. The interpreter has told you that the function expects 2 parameters, and that you called it without parameters.
 
-  Whoever created the `pow` function, designed it in the way that it requires two parameters, and it's impossible to call it with any other number of parameters.
+  Whoever created the `pow()`, function made it a function with two mandatory parameters, so it can't be called with any other number of parameters.
 
-  Besides, only numbers can be acceptable parameters for the `pow` function. Passing it a string, for example, would cause the following error: `PHP Warning:  A non-numeric value encountered in php shell code on line 1`. Result of this function must also be a number.
+  Moreover, the parameters of `pow()` can only be numbers. Attempting to pass, for example, a string to it will result in the following error: `PHP Warning:  A non-numeric value encountered in php shell code on line 1`. The result of this function call will also always be a number.
 
-  Some other function can have a different number and type of parameters. There could be a function that receives three parameters: a number, a string, and another number.
+  Other functions may have different numbers of parameters and different types of parameters. For example, there may be a function that takes three parameters: a number, a string, and another number.
 
-  How do we know how many parameters the `pow` function needs and what type of result it will return? We've looked up the **signature** of this function. Signature defines the input values and their types and also output value and it's type. Let's look up the `pow` function in the [PHP official documentation](https://php.net/manual/en/function.pow.php). You will find the following text in the "Description" section:
+  How do we know how many parameters the `pow` function needs and what sort of result it'll return? We've taken a look at this function's **signature**. The signature defines the input parameters and their types, as well as the output parameter and its type. You can read about the `pow` function in [the official PHP documentation](https://www.php.net/manual/en/function.pow.php). In the "description" section, you can see this this text:
 
   ```
   pow ( number $base , number $exp ) : number
@@ -19,29 +19,28 @@ theory: |
   Returns base raised to the power of exp.
   ```
 
-  It is the function signature and a short description of it.
+  This is a function signature and a short explanation.
 
-  Let's break it down:
-  - the function's name is `pow`
-  - the function receives two parameters: a number (base) and a number (exp)
-  - the function returns a number
-  - function returns base raised to the power of exp.
+  The information is deciphered as follows:
+  - the function is called `pow`
+  - the function takes two parameters: a number (base) and a number (exp)
+  - the function returns a number (number)
+  - the function returns base raised to the power of exp
 
-  You can only pass parameters in exactly the same order as it is defined in the function signature.
+  Parameters can only be passed in the order they're given in the signature.
 
-  Any function returns only one value. Such limitaion exists on the language level and can't be bypassed.
-
+  Any function will always return only one value. This restriction exists at language level and cannot be broken.
 
 instructions: |
 
-  Now it's your turn to look up a function signature in documentation and find out how to use it.
+  Now it's your turn, look at the signature of a function in the documentation and work out how to use it. Now it's your turn to find the function signature in the documentation and figure out how to use it.
 
-  PHP has a function named `ucfirst`. Study it's signature at the page [https://php.net/manual/en/function.ucfirst.php](https://php.net/manual/en/function.ucfirst.php).
+  In PHP, there's a function called `ucfirst()`. Study its signature at[https://www.php.net/manual/en/function.ucfirst.php](https://www.php.net/manual/en/function.ucfirst.php).
 
-  Write a program that uses the `ucfirst` function on the variable `$text` and print the result to screen.
+  Write a program that uses `ucfirst()` with the variable `$text` and displays the result. The value of the `$text` variable is already defined.
 
-tips: []
+# tips: []
 
 definitions:
-  - name: Function signature
-    description: "a formal description of types of arguments and return value of a function."
+  - name: A function signature 
+    description: is a formal description of the types of arguments and the type of return value of a function.

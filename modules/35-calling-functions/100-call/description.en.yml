@@ -1,67 +1,80 @@
 ---
 
-name: Calling functions
+name: Functions and how they're called
 theory: |
-  PHP, like most other programming languages has a small set of inbuilt operators for operations with numbers, strings and some other types of data (we'll discuss them later). The number of operators in PHP is limited and can't be extended. On the other hand, developers always face situations when having other operators would be useful. Let's say we want to raise two to the power of three. We could do it like this:
+
+  Addition, concatenation, and the other operations discussed are all fairly basic features of programming languages. Mathematics isn't limited to arithmetic, but there are many other areas with their own operations, such as geometry. The same goes for strings: you can flip them, change a letter's case, delete extra characters – and that's just the tip of the iceberg. And finally, at a higher level, there's the applied logic of a particular program. Programs withdraw money, calculate taxes, and generate reports. The number of these jobs is endless and different for each program. And they all have to be somehow expressed in code.
+
+  The notion of a *function* expresses any arbitrary operation in programming. Functions can be both built-in and manually written by a programmer. One built-in function we're already familiar with is `print_r()`.
+
+  Functions are fundamental building blocks in programming, and it's impossible to accomplish anything without them. We need to get acquainted with them as soon as possible because future courses will deal almost exclusively with functions. First, we'll learn how to use the functions we've already defined, and we'll also learn to define our own functions.
+
+  We will start with basic functions that handle strings. Below is an example of a call to `strrev()`, that reverses a string:
 
   ```php
   <?php
-  $number = 2 * 2 * 2;
+
+  // Call the strrev function with the argument 'Hello!'
+  $result = strrev('Hello!');
+  print_r($result); // => '!olleH'
   ```
-  However it doesn't look very elegant, and imagine what it would look like in case of a big power. It would be perfect to have a corresponding operator (and PHP has it), but what if we didn't have it? That's when a developer would use a function. Functions can be inbuilt as well, but the beauty of it is that we can create our own. Before we move on to create our own functions, let's first try out some pre-made ones. PHP has a function that raises one number to the power of another. Let's call it:
+
+  We created a variable, `$result` and told the interpreter to write the result of the `strrev()` function to it. In this sense, functions are identical to operations; they always return the result of their work. The entry `strrev('Hello!')`  means that a function named `strrev` is being called, to which the argument (or parameter) `'Hello!'` has been passed. Arguments are needed for functions to work, just like how operators need operands. The `strrev()` function flips the string passed to it in the arguments.
+
+  Another example is the `strlen()` function, which counts the number of characters in a string
 
   ```php
   <?php
-  $result = pow(2, 3); // 8
+
+  $result = strlen('Hello!');
+  print_r($result); // => 6
   ```
 
-  We created a variable named `$result` and instructed the interpreter to store in it the result of the `pow` function. Notation `pow(2, 3)` means that we call the function named `pow` with arguments (or parameters) 2 and 3. Upon execution the function _returned_ a result.
-
-  Arguments are data a function receives when it's called. Functions calculate and return result based on this data.
-
-  The `pow` function raises the first number to the power of the second number. In the example above, we raised 2 in the power of 3, and we got 8 stored in the `$result`.
-
-  Modern PHP has a special power operator, so we can find the exponent in this way:
+  The function being called is always indicated by parentheses `()` following the function name. There can be any number of arguments in brackets, and sometimes none at all. The number depends on the function used, for example, the `pow()` function takes two arguments as input and raises the number passed to the power passed in the second parameter.
 
   ```php
   <?php
+
+  $result = pow(2, 3); // 2 * 2 * 2
+  print_r($result); // => 8
+
+  // Modern PHP now has a special operator for exponentiation:
   $result = 2 ** 3; // 8
   ```
-  A function call is always marked by brackets `()` after the function name. There may be any number of arguments in the brackets, and sometimes functions are called with no arguments at all. The number of arguments depends on the operation. Let's look at the function `abs` that finds the module of a number:
+
+  And here's an example of a function that takes no arguments. The `rand()` function generates and returns a random number:
 
   ```php
   <?php
-  $result = abs(-5); // 5
-  $result = abs(8);  // 8
-  ```
-  As you can see, this function receives one argument (it's often called "parameter") and returns its module. And here is an example of a function call with no arguments:
 
-  ```php
-  <?php
   $result = rand();
   ```
-  The function `rand` generates and returns a random number.
 
-  Mathematical operations - are a tiny part of all possible variety of functions. The power of the function mechanism is that we can create our own functions - and we will do so in the next module. Any action that you could possibly imagine is represented by functions in programming.
-
-instructions: |
-  There was a man in the Seven Kindoms who had access to computers and could program - Sam Tarly. He was doing cartography and to help himself he wrote a function named `calculateDistance`, that calculated distance (in leages) between cities. The function receives two string parameters - names of two cities and returns a number - the distance between them.
-  In the example below we use this function to calculate distance between Lannisport and Bayasabhad:
+  By and large, operators and functions are the same thing. The only key difference is how they're written. If you think of addition as a function, it would look like this:
 
   ```php
   <?php
-  use function HexletBasics\Functions\calculateDistance;
-  $distance = calculateDistance('Lannisport', 'Bayasabhad');
-  print_r($distance);
-  ```
-  The first line is a special code that makes the `calculateDistance` function available in our program. You can use that function whithout knowing what's inside it. It's a common thing in programming: you know **what** a function does and how to use it, but you don't know **how exactly** it works on the inside.
 
-  Use the `calculateDistance` function, find and output the distance between the cities of Qarth and Vaes Dothrak. Don't copy the example, create a variable with a different name and write the code from zero on your own.
+  3 + 5; // 8
+  sum(3, 5); // 8
+
+  // Or even like this
+  +(3, 5);
+
+  // In PHP this syntax isn't possible, but there are languages (e.g. lisp),
+  // where it looks very similar (take a look at the Racket course)
+  ```
+
+  Self-check. How do I know what the `print_r()` call returns? Test it.
+
+instructions: |
+
+  There are two variables defined in the program code that contain the names of companies. Calculate their total character length and print it.
 
 tips: []
 
 definitions:
-  - name: Function
-    description: "an operation that receives data and returns result; functions are called like this: `foo()`."
-  - name: Argument
-    description: "information passed to a function when it's called. For example, in this case: `foo(42)` we pass the argument `42` to the function `foo`. "
+  - name: A function
+    description: "is an operation capable of accepting data and returning a result; a function is called like this: `foo()`."
+  - name: An argument
+    description: "is the information the function receives when it is called. For example, with `foo(42), we pass the argument `42` to `foo()`"
