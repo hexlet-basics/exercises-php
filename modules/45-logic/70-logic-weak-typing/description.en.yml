@@ -14,7 +14,7 @@ theory: |
   * `0`, `'0'`, `''` (empty string), `null` are set to `false`. These values are called *falsy*.
   * Everything else becomes `true`.
 
- This works the other way as well: `true` and `false` are converted to other data types, depending on the situation:
+  This works the other way as well: `true` and `false` are converted to other data types, depending on the situation:
 
   ```php
   <?php
@@ -44,7 +44,7 @@ theory: |
 
   <pre class='hexlet-basics-output'>1</pre>
 
-  ЧWhat happened here:
+  What happened here:
 
   The **OR** operator only works with the *bool* type, but it's also given the numbers `1` and `0`.
 

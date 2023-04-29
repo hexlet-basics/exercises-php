@@ -2,7 +2,6 @@
 
 name: Unicode
 theory: |
-
   Program data is stored in computer memory (either RAM or permanent memory) as a sequence of zeros and ones. At this level, there's no difference between strings, numbers or boolean values, everything looks the same in memory. The difference appears only as a consequence of interpretation. The program knows that there's string a string stored inside a variable, so it takes the zeros and ones and passes them through a code table that specifies which number corresponds to which letter. As a result, the programmer sees a string.
 
   In the beginning, there was exactly one encoding, [ASCII](https://en.wikipedia.org/wiki/ASCII), based on the English alphabet. In this encoding, one character corresponds to 7 bits, and there are 128 characters in total. 95 of them are printable characters, they include letters of the alphabet in upper and lower case, numbers and punctuation marks, as well as 33 non-printable characters or so-called control codes. Most of them aren't relevant now, but some, such as the line feed `\n` are still in use. For example,  the character `i` in lower case corresponds to the binary number `1101001`, which corresponds to the number `105` in decimal notation.
@@ -56,7 +55,7 @@ instructions: |
   ```
 
 # tips:
-  - |
-    [What are encodings?](https://guides.hexlet.io/ru/encoding/)
+  # - |
+    # [What are encodings?](https://guides.hexlet.io/ru/encoding/)
 
 # definitions: []
