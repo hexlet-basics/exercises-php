@@ -28,7 +28,7 @@ instructions: |
 
 tips:
   - |
-    [List of built-in PHP constants](https://php.net/manual/ru/reserved.constants.php)
+    [List of built-in PHP constants](https://www.php.net/manual/en/reserved.constants.php)
 
 definitions:
   - name: A constant
