@@ -68,7 +68,7 @@ theory: |
 
   The area of mathematics dealing with logical operators is called Boolean algebra. The truth tables are shown below, and they can be used to figure out the result of an operator:
 
-  ## И `&&`
+  ## `&&`
 
   | A     | B     | A `&&` B |
   | ----- | ----- | -------- |
