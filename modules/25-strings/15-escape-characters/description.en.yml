@@ -133,7 +133,7 @@ instructions: |
 definitions:
   - name: An escape sequence
     description: |
-      is a special combination of characters in text. For example, `\n` means line feed..
+      is a special combination of characters in text. For example, `\n` means line feed.
 
 tips:
   - |
