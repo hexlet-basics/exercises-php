@@ -1,6 +1,6 @@
 ---
 
-name: Оператор Элвис
+name: Elvis operator
 theory: |
 
   Imagine the following problem: users can have names and pseudonyms on a given website. The name isn't necessary, but a user has one, this person should be addressed by their first name, and if not, you should address them by their pseudonym.
