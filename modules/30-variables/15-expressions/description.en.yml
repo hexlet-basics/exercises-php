@@ -3,7 +3,7 @@
 name: Expressions in definitions
 theory: |
 
-  Variables are helpful not only for storing and reusing data, but also for simplifying complex calculations. Consider an example: you need to convert euros into rubles through dollars. Banks often do this kind of conversion via an intermediate currency when shopping abroad.
+  Variables are helpful not only for storing and reusing data, but also for simplifying complex calculations. Consider an example: you need to convert euros into yuans through dollars. Banks often do this kind of conversion via an intermediate currency when shopping abroad.
 
   First, convert 50 euros into dollars. Let's assume that one euro equals $1.25:
 
@@ -45,16 +45,16 @@ theory: |
 
   Run it on [repl.it](https://repl.it/languages/php) and experiment a little with it.
 
-  Now, back to our currency program. We'll record the dollar value in rubles as a separate variable. Let's calculate the price of 50 euros in dollars by multiplying it by `1.25`. Let's say that 1 dollar is 60 rubles:
+  Now, back to our currency program. We'll record the dollar value in yuans as a separate variable. Let's calculate the price of 50 euros in dollars by multiplying it by `1.25`. Let's say that 1 dollar is 6.91 yuans:
 
   ```php
   <?php
 
-  $rublesPerDollar = 60;
+  $yuansPerDollar = 6.91;
   $dollarsCount = 50 * 1.25; // 62.5
-  $rublesCount = $dollarsCount * $rublesPerDollar; // 3750
+  $yuansCount = $dollarsCount * $yuansPerDollar; // 431.875
 
-  print_r($rublesCount);
+  print_r($yuansCount);
   ```
 
   Now, let's merge our output with some text via concatenation:
@@ -62,15 +62,15 @@ theory: |
   ```php
   <?php
 
-  $rublesPerDollar = 60;
+  $yuansPerDollar = 6.91;
   $dollarsCount = 50 * 1.25; // 62.5
-  $rublesCount = $dollarsCount * $rublesPerDollar; // 3750
+  $yuansCount = $dollarsCount * $yuansPerDollar; // 431.875
 
-  print_r('The price is ' . $rublesCount . ' rubles');
+  print_r('The price is ' . $yuansCount . ' yuans');
   ```
 
   <pre class='hexlet-basics-output'>
-  The price is 3750 rubles
+  The price is 431.875 yuans
   </pre>
 
   Any variable can be part of any expression. At the moment of calculation, its value is substituted for the variable name.
@@ -79,7 +79,7 @@ theory: |
 
 instructions: |
 
-  Write a program that takes the original number of euros from the `$eurosCount` variable, converts euros to dollars, and displays the value on the screen. Then the program converts the received value into rubles and displays the result on a new line.
+  Write a program that takes the original number of euros from the `$eurosCount` variable, converts euros to dollars, and displays the value on the screen. Then the program converts the received value into yuans and displays the result on a new line.
 
   Example output for 100 euros:
 
@@ -90,8 +90,8 @@ instructions: |
 
   For the purposes of the exercise, we'll say that:
   - 1 euro = $1.25 
-  - 1 dollar = 60 rubles
+  - 1 dollar = 6.91 yuans
 
 tips:
   - |
-    You can use `\n` between the withdrawal of dollars and rubles to go to a new line.
+    You can use `\n` between the withdrawal of dollars and yuans to go to a new line.
