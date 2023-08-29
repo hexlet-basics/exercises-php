@@ -1,62 +1,62 @@
 ---
 
-name: Variables and Concatenation
+name: Variables y Concatenación
 theory: |
 
-  To reinforce the previous topic, let's try using variables with concatenation. Syntaxically, nothing changes: we know how to concatenate (join) two strings:
+  Para reforzar el tema anterior, intentemos usar variables con concatenación. Sintácticamente, nada cambia: sabemos cómo concatenar (unir) dos cadenas:
 
   ```php
   <?php
 
-  $what = "Kings" . "road";
-  print_r($what); // => "Kingsroad"
+  $que = "Camino" . "de Reyes";
+  print_r($que); // => "CaminodeReyes"
   ```
 
-  ... and therefore we can concatenate a string and a variable that contains a string:
+  ... y por lo tanto, podemos concatenar una cadena y una variable que contiene una cadena:
 
   ```php
   <?php
 
-  $first = "Kings";
-  $what = $first . "road";
+  $primero = "Caminos";
+  $que = $primero . "de Reyes";
 
-  print_r($what); // => "Kingsroad"
+  print_r($que); // => "CaminodeReyes"
   ```
 
-  ... and even concatenate two variables that contain strings:
+  ... e incluso concatenar dos variables que contienen cadenas:
 
   ```php
   <?php
 
-  $first = "Kings";
-  $last = 'road';
+  $primero = "Caminos";
+  $ultimo = 'de Reyes';
 
-  $what = $first . $last;
-  print_r($what); // => "Kingsroad"
+  $que = $primero . $ultimo;
+  print_r($que); // => "CaminodeReyes"
   ```
 
 instructions: |
 
-  Websites constantly send emails to their users. A typical task is to automatically send a personalized email, where the username will be in the subject. If the user's name is stored somewhere in the website's database as a string, the task of generating the subject comes down to concatenation: for example, you need to join the string `Hello` with the string that contains the name.
+  Los sitios web constantemente envían correos electrónicos a sus usuarios. Una tarea típica es enviar automáticamente un correo electrónico personalizado, donde el nombre de usuario estará en el asunto. Si el nombre del usuario se encuentra en algún lugar de la base de datos del sitio web como una cadena, la tarea de generar el asunto se reduce a la concatenación: por ejemplo, necesitas unir la cadena `Hola` con la cadena que contiene el nombre.
 
-  Write a program that will generate the subject and body of the email, using the provided variables, and display the resulting strings on the screen.
+  Escribe un programa que genere el asunto y el cuerpo del correo electrónico, utilizando las variables proporcionadas, y muestre las cadenas resultantes en la pantalla.
 
-  For the subject, use the variables `$firstName` and `$greeting`, followed by a comma and an exclamation mark. Display this on the screen in the correct order.
+  Para el asunto, utiliza las variables `$nombre` y `$saludo`, seguido de una coma y un signo de exclamación. Muestra esto en la pantalla en el orden correcto.
 
-  For the body of the email, use the variables `$info` and `$intro`, with the second sentence on a new line.
+  Para el cuerpo del correo electrónico, utiliza las variables `$informacion` e `$introduccion`, con la segunda oración en una nueva línea.
 
-  The result on the screen should look like this:
+  El resultado en la pantalla debería lucir así:
 
   <pre class='hexlet-basics-output'>
-  Hello, Joffrey!
-  Here is important information about your account security.
-  We couldn't verify your mother's maiden name.
+  ¡Hola, Joffrey!
+  Aquí tienes información importante sobre la seguridad de tu cuenta.
+  No pudimos verificar el nombre de soltera de tu madre.
   </pre>
 
-  Complete the task using only two `print_r()`.
+  Completa la tarea utilizando solamente dos `print_r()`.
 
 tips:
   - |
-    Think about which string and in what order you need to concatenate the variables to get such a two-line output for the body of the email.
+    Piensa en qué cadena y en qué orden debes concatenar las variables para obtener una salida de dos líneas para el cuerpo del correo electrónico.
   - |
-    Remember that you can create a string that contains only the control sequence `\n`.
+    Recuerda que puedes crear una cadena que contenga solo la secuencia de control `\n`.
