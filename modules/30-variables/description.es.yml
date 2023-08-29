@@ -1,5 +1,5 @@
 ---
 
-name: Variables in PHP language
+name: Variables en PHP
 description:
-  Information can be placed in special "containers" - variables. This allows you to reuse existing data and avoid duplicating it in different parts of the code. In this module, we will cover how to modify variables and name them so that reading your code is understandable to any developer. You will understand that coming up with a variable name is not that simple! We will also explain how to use variables to simplify complex calculations.
+  La información puede ser almacenada en "contenedores" especiales llamados variables. Esto te permite reutilizar datos existentes y evitar duplicarlos en diferentes partes del código. En este módulo, exploraremos cómo modificar variables y nombrarlas de manera que sean comprensibles para cualquier desarrollador. Te darás cuenta de que inventar un nombre para una variable no es tan sencillo. Además, te explicaremos cómo usar variables para simplificar cálculos complejos.
