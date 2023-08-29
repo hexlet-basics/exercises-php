@@ -1,0 +1,5 @@
+---
+
+name: Tipos de datos en PHP
+description:
+  PHP es un lenguaje con tipado débil y tipos de datos primitivos inmutables. ¿Qué sucede si intentamos multiplicar un número por una cadena? ¿Cómo PHP entiende qué tipo de dato tiene delante? ¿Y qué hace PHP cuando encuentra una incompatibilidad de tipos? Encontrarás las respuestas a estas preguntas en el módulo actual.

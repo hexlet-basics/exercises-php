@@ -1,0 +1,75 @@
+---
+name: else
+theory: |
+  Intentemos cambiar la función del ejemplo anterior para que no solo devuelva el tipo de oración, sino toda la frase *La oración es normal* o *La oración es una pregunta*:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence($sentence)
+  {
+      $lastChar = $sentence[-1];
+
+      if ($lastChar === '?') {
+          $sentenceType = 'pregunta';
+      } else {
+          $sentenceType = 'normal';
+      }
+
+      return "La oración es {$sentenceType}";
+  }
+
+  getTypeOfSentence('Hodor');  // La oración es normal
+  getTypeOfSentence('Hodor?'); // La oración es una pregunta
+  ```
+
+  Hemos agregado `else` y un nuevo bloque con llaves. Este bloque se ejecutará solo si la condición en `if` es falsa.
+
+  Hay dos formas de estructurar la construcción *if-else*. Usando la negación `!==` se puede cambiar el orden de los bloques:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence($sentence)
+  {
+      $lastChar = $sentence[-1];
+
+      if ($lastChar !== '?') {
+          $sentenceType = 'normal';
+      } else {
+          $sentenceType = 'pregunta';
+      }
+
+      return "La oración es {$sentenceType}";
+  }
+  ```
+
+  ¿Cuál forma es preferible? Por lo general, a las personas les resulta más fácil pensar de manera directa en lugar de a través de la negación. Trate de elegir la verificación sin negación y ajuste el contenido de los bloques en consecuencia.
+
+instructions: |
+
+  Implementa la función `normalizeUrl()`, que realiza lo que se conoce como normalización de datos. Recibe una dirección de un sitio web y la devuelve con `https://` al principio.
+
+  La función acepta direcciones en forma de `DIRECCIÓN` o `http://DIRECCIÓN`, pero siempre devuelve la dirección en forma de `https://DIRECCIÓN`.
+
+  Hay dos formas de resolverlo:
+
+  1. Puedes comparar los primeros 7 caracteres de la cadena de argumento con la cadena `http://`.
+  2. Puedes usar la función [strpos](https://php.net/manual/es/function.strpos.php) para verificar si la subcadena `http://` está presente en la cadena de argumento.
+
+  Luego, en base a esto, agregar o no agregar `https://`.
+
+  Ejemplos de uso:
+
+  ```php
+  <?php
+
+  normalizeUrl('google.com');   // 'https://google.com'
+  normalizeUrl('http://ai.fi'); // 'https://ai.fi'
+  ```
+
+tips: []
+
+definitions:
+  - name: "else"
+    description: "a way to specify a code block that will be executed if the condition in `if` is not satisfied"

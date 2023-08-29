@@ -1,0 +1,156 @@
+---
+
+name: Return Values
+theory: |
+    Functions that we defined in previous lessons ended their work by printing some data on the screen:
+
+    ```php
+    <?php
+
+    function greeting()
+    {
+        print_r('Hello, Hexlet!');
+    }
+    ```
+
+    Such functions are not very useful because their results cannot be used within the program. In order to be able to do that, we need to return a value from the function, which is what we will learn in this lesson.
+
+    Let's consider the task of processing an email. When a user registers on a website, they can enter their email in any way:
+
+    * Add random spaces at the beginning or end `_support@hexlet.io__`
+    * Use letters in different cases `SUPPORT@hexlet.io`
+
+    If we save the email in this form in the database, the user will not be able to log in to the website. This is possible if they enter the address without spaces and in a different case.
+
+    To prevent this from happening, the email needs to be prepared for storage in the database. It needs to be converted to lowercase and have any leading or trailing whitespace removed. This task can be solved in just a few lines of code:
+
+    ```php
+    <?php
+
+    function saveEmail()
+    {
+        $email = "  SuppORT@hexlet.IO";
+        // Remove whitespace
+        // The trim() function removes whitespace from the beginning and end of a string
+        $trimmedEmail = trim($email);
+        $preparedEmail = strtolower($trimmedEmail);
+        print_r($preparedEmail);
+        // Database write operation will be performed here
+    }
+    ```
+
+    This code became possible only thanks to returning a value. The `trim()` and `strtolower()` functions do not print anything on the screen. They return the result of their work, so we can assign it to variables.
+
+    If the functions printed on the screen instead of returning a result, we would not be able to assign the result of their work to a variable. Just like we cannot do with the `greeting()` function defined above:
+
+    ```php
+    <?php
+
+    $message = greeting();
+    // To see null, we need to use the var_dump() function
+    var_dump($message); // => NULL
+    ```
+
+    Let's modify the `greeting()` function so that it starts returning data instead of printing it. To do this, we need to use the return statement instead of printing on the screen:
+
+    ```php
+    <?php
+
+    function greeting()
+    {
+        return 'Hello, Hexlet!';
+    }
+    ```
+
+    `return` is a special instruction that takes the expression written on the right side. It then passes it to the code that called the method. As soon as PHP encounters `return`, the execution of the function is terminated:
+
+    ![Sum-php](assets/sum-php.jpg)
+
+    ```php
+    <?php
+
+    // Now we can use the result of the function
+    $message = greeting();
+    print_r($message); // => 'Hello, Hexlet!'
+    // And even perform some actions on the result
+    print_r(strtoupper($message)); // => 'HELLO, HEXLET!'
+    ```
+
+    Any code after `return` is not executed:
+
+    ```php
+    <?php
+
+    function greeting()
+    {
+        return 'Hello, Hexlet!';
+        print_r('I will never be executed');
+    }
+    ```
+
+    Even if a function returns data, it does not limit it from printing. In addition to returning data, we can also print:
+
+    ```php
+    <?php
+
+    function greeting()
+    {
+        print_r('I will appear in the console');
+        return 'Hello, Hexlet!';
+    }
+    // It will print the text on the screen and return a value
+    $message = greeting();
+    ```
+
+    It is possible to return not only a specific value. Since `return` works with expressions, almost anything can appear to the right of it. In this case, readability principles should be followed:
+
+    ```php
+    <?php
+
+    function greeting()
+    {
+        $message = 'Hello, Hexlet!';
+        return $message;
+    }
+    ```
+
+    Here we are not returning a variable. We always return the value that is stored in this variable. Below is an example with calculations:
+
+    ```php
+    <?php
+
+    function doubleFive()
+    {
+        // or return 5 + 5
+        $result = 5 + 5;
+        return $result;
+    }
+    ```
+
+    Self-check question. What will this code output?
+
+    ```php
+
+    <?php
+    // Definition
+    function run()
+    {
+        // or return 5 + 5
+        return 5;
+        return 10;
+    }
+    // Usage
+    run(); // => ?
+    ```
+
+instructions: |
+
+    Implement the `sayHurrayThreeTimes()` function, which returns the string 'hurray! hurray! hurray!'.
+
+    ```php
+    $hurray = sayHurrayThreeTimes();
+    print_r($hurray); // => 'hurray! hurray! hurray!'
+
+    You don't need to call your function, just define it.
+
+tips: []

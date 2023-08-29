@@ -1,0 +1,5 @@
+---
+
+name: Fecha y Hora
+description: |
+  El concepto de tiempo en las computadoras. Temporizadores de hardware y de sistema. Funciones para trabajar con fechas y horas en PHP. Zonas horarias.

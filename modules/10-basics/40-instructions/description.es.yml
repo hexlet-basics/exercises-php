@@ -1,0 +1,53 @@
+---
+
+name: Instrucciones
+theory: |
+  ## ¿Qué es una instrucción?
+
+  Una **instrucción** es un comando que el intérprete de PHP ejecuta. Está escrita en un lenguaje de programación. Se puede comparar con una instrucción o receta para cocinar un plato:
+
+  El código en PHP es un conjunto de instrucciones separadas por el símbolo `;`.
+
+  Aquí tienes un ejemplo de código con dos instrucciones:
+
+  ```php
+  <?php
+
+  print_r('Madre de Dragones. ');
+  print_r('¡Dracarys!');
+  // => Madre de Dragones. ¡Dracarys!
+  ```
+
+  Al ejecutar este código, se mostrarán en pantalla dos frases consecutivas: `Madre de Dragones. ¡Dracarys!`.
+
+  Las instrucciones se pueden escribir una tras otra sin saltar de línea:
+
+  ```php
+  <?php
+
+  print_r('Madre de Dragones. '); print_r('Dracarys!');
+  // => Madre de Dragones. ¡Dracarys!
+  ```
+
+  El resultado en pantalla será el mismo. Sin embargo, este código es difícil de leer, por lo que las instrucciones se colocan una debajo de la otra.
+
+instructions: |
+  Muestra en pantalla consecutivamente tres nombres: _Robert_, _Stannis_, _Renly_. El resultado en pantalla debe ser:
+
+  <pre class='hexlet-basics-output'>
+  RobertStannisRenly
+  </pre>
+
+  Utiliza una llamada `print_r()` para cada nombre.
+
+tips:
+  - |
+    [Un poco sobre los intérpretes](https://es.wikipedia.org/wiki/Int%C3%A9rprete)
+
+definitions:
+  - name: Intérprete
+    description: |
+      un programa que ejecuta código en PHP.
+  - name: Instrucción
+    description: |
+      un comando para la computadora escrito en un lenguaje de programación. El código en PHP es un conjunto de instrucciones separadas (generalmente) por el símbolo `;`.
