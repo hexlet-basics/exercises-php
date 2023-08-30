@@ -58,7 +58,7 @@ theory: |
   ```php
   <?php
 
-  echo mb_strlen('Hello'); // => 6
+  echo mb_strlen('Hello!'); // => 6
   ```
 
   https://replit.com/@hexlet/php-strings-deeper-mbstrlen
