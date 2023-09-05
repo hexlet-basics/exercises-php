@@ -46,7 +46,7 @@ theory: |
   ```php
   <?php
 
-  echo strlen('Привет!'); // => 13
+  echo strlen('Hello!'); // => 6
   ```
 
   https://replit.com/@hexlet/php-basics-strings-deeper-strlen
@@ -58,7 +58,7 @@ theory: |
   ```php
   <?php
 
-  echo mb_strlen('Привет!'); // => 7
+  echo mb_strlen('Hello!'); // => 6
   ```
 
   https://replit.com/@hexlet/php-strings-deeper-mbstrlen
