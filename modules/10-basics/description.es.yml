@@ -1,0 +1,6 @@
+---
+name: Fundamentos de PHP
+description:
+  PHP es uno de los lenguajes de programación más populares del mundo. Más del 80% de los sitios web en Internet están escritos en este lenguaje.
+
+  Aprenderemos PHP desde cero, desde los conceptos básicos. El primer módulo es una base para escribir programas significativos. En él, aprenderemos cómo escribir nuestro primer código en PHP. Explicaremos qué son los comentarios y para qué sirven. Usando ejemplos de verificación de sus soluciones, veremos qué es la prueba y cómo leer la salida de las pruebas.

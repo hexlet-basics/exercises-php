@@ -1,0 +1,59 @@
+---
+
+name: Negación
+theory: |
+  Junto con la conjunción (Y) y la disyunción (O), a menudo se utiliza la operación "negación". La negación cambia el valor lógico al opuesto.
+
+  En programación, se corresponde con el operador unario `!`. Si hay una función que verifica si un número es par, se puede realizar una verificación de imparidad utilizando la negación:
+
+  ```php
+  <?php
+
+  function esPar($numero)
+  {
+      return $numero % 2 === 0;
+  }
+
+  esPar(10);  // true
+  !esPar(10); // false
+  // En lógica, la doble negación es similar a la ausencia de negación en absoluto
+  !!esPar(10); // true
+  ```
+
+  Simplemente agregamos `!` antes de llamar a la función y obtenemos la acción opuesta. La negación es una herramienta poderosa que permite expresar reglas previstas de manera concisa en el código sin necesidad de escribir nuevas funciones.
+
+instructions: |
+  
+  En esta lección, deberás implementar dos funciones: `esPalindromo()` y `noEsPalindromo()`
+
+  1. La función `esPalindromo()` determina si una palabra es un palíndromo o no. Un palíndromo es una palabra que se lee igual en ambas direcciones.
+
+      ```php
+      <?php
+
+      esPalindromo('wow'); // true
+      esPalindromo('mom'); // true
+      esPalindromo('hexlet'); // false
+
+      // Las palabras pueden ser pasadas a la función en cualquier caso
+      // Por lo tanto, primero debes convertir la palabra a minúsculas con strtolower()
+      esPalindromo('Wow'); // true
+      ```
+
+      Para invertir una palabra, utiliza la función `strrev()`.
+
+  2. La función `noEsPalindromo()` verifica que una palabra NO sea un palíndromo:
+
+      ```php
+      <?php
+
+      noEsPalindromo('wow'); // false
+      noEsPalindromo('mom'); // false
+      noEsPalindromo('hexlet'); // true
+      ```
+
+      Para hacer esto, llama a la función `esPalindromo()` dentro de `noEsPalindromo()` y aplica la negación.
+
+tips:
+  - |
+    [Leyes de De Morgan](https://es.wikipedia.org/wiki/Leyes_de_De_Morgan)

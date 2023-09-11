@@ -1,0 +1,108 @@
+---
+
+name: Parámetros de funciones
+theory: |
+  Las funciones no solo pueden devolver valores, sino también recibirlos como parámetros. Ya nos hemos encontrado con parámetros de funciones:
+
+  ```php
+  <?php
+
+  // Recibe un parámetro de cualquier tipo
+  print_r('soy un parámetro');
+  // Recibe dos parámetros numéricos:
+  // El primero es el número a redondear
+  // El segundo es el número de decimales a dejar
+  round(10.1245, 3); // 10.125
+  // Recibe tres parámetros de tipo cadena:
+  // El primero es lo que buscamos
+  // El segundo es por qué lo reemplazamos
+  // El tercero es la cadena en la que se realiza el reemplazo
+  str_replace('go', 'mo', 'google'); // 'moogle'
+  ```
+
+  En esta lección aprenderemos a crear funciones que reciben parámetros. Supongamos que tenemos la tarea de implementar la función `getLastChar()`. Esta función devuelve el último carácter de una cadena que se pasa como parámetro. Así es como se usaría esta función:
+
+  ```php
+  <?php
+
+  // Pasando parámetros directamente sin variables
+  getLastChar('Hexlet'); // 't'
+  // Pasando parámetros a través de variables
+  $name1 = 'Hexlet';
+  getLastChar($name1); // 't'
+  $name2 = 'Goo';
+  getLastChar($name2); // 'o'
+  ```
+
+  De la descripción y los ejemplos de código podemos hacer las siguientes conclusiones:
+
+  * Necesitamos definir la función `getLastChar()`
+  * La función debe recibir un parámetro de tipo cadena
+  * La función debe devolver un valor de tipo cadena
+
+  Definición de la función:
+
+  ```php
+  <?php
+
+  function getLastChar($str)
+  {
+      // Calculamos el índice del último carácter como la longitud de la cadena - 1
+      return $str[strlen($str) - 1];
+  }
+  ```
+
+  Vamos a analizarlo. Entre paréntesis se especifica el nombre del parámetro (`$str`). Como dentro de la función no sabemos con qué valor específico estamos trabajando, los parámetros siempre se describen como variables.
+
+  El nombre del parámetro puede ser cualquier cosa, no está relacionado con la forma en que se llama a la función. Lo importante es que este nombre refleje el significado del valor que contiene. El valor específico del parámetro dependerá de cómo se llame a esta función.
+
+  Este parámetro es obligatorio. Si intentamos llamar a la función sin él, el intérprete mostrará un error:
+
+  ```sh
+  getLastChar(); // este código no tiene sentido
+  ArgumentCountError: Too few arguments to function getLastChar(), 0 passed
+  ```
+
+  También se pueden especificar dos, tres o más parámetros. Se separan por comas:
+
+  ```php
+  <?php
+
+  // Función para encontrar el número medio
+  function average($x, $y)
+  {
+      return ($x + $y) / 2;
+  }
+  average(1, 5); // 3
+  average(1, 2); // 1.5
+  ```
+
+instructions: |
+  Implementa la función `truncate()`, que recorta la cadena pasada como argumento hasta el número de caracteres especificado, agrega puntos suspensivos al final y devuelve la cadena resultante. Esta lógica se utiliza a menudo en sitios web para mostrar texto largo de forma abreviada. La función recibe dos parámetros:
+
+  1. La cadena que se debe recortar
+  2. El número de caracteres que se deben dejar
+
+  ```php
+  // Pasando el texto directamente
+  // Recortar el texto dejando 2 caracteres
+  truncate('hexlet', 2)  // 'he...'
+
+  // A través de una variable
+  $text = '¡funciona!'
+  // Recortar el texto dejando 4 caracteres
+  $result = truncate($text, 4);
+  print_r($result); // => '¡fun...'
+  ```
+
+  Puedes implementar esta función de diferentes maneras, solo te daremos una pista. Para resolverlo de esta manera, necesitarás extraer una subcadena de la cadena pasada como primer parámetro a la función `truncate()`. Para hacer esto, utiliza la función [substr()](https://www.php.net/manual/es/function.substr.php). Piensa, en función de la tarea, desde qué índice y con qué longitud debes extraer la subcadena.
+
+    ```php
+    <?php
+    $word = 'bienvenido';
+    // Puedes pasar los parámetros a la función a través de variables
+    $length = 3;
+    substr($word, 0, $length); // 'bie'
+    ```
+
+  Desde el punto de vista del sistema de evaluación, no importa qué método utilices para implementar la función `truncate()` internamente, lo importante es que cumpla con la tarea planteada.

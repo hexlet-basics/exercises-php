@@ -1,0 +1,26 @@
+---
+
+name: Etiquetas
+theory: |
+  ## ¿Por qué usar etiquetas?
+
+  Para que el **intérprete** - el programa que ejecuta el código - lo interprete como código y no como texto normal, es necesario envolver cualquier código en PHP con la construcción `<?php ?>`. Esta es una característica de este lenguaje de programación.
+
+  `<?php` es la etiqueta de apertura y `?>` es la etiqueta de cierre. PHP permite no especificar la parte de cierre `?>`. Y la guía de estilo de código PSR-12 prohíbe su especificación.
+
+instructions: |
+  Escriba el código del ejemplo y coloque la etiqueta `<?php` al principio:
+
+  ```php
+  <?php
+
+  print_r('¡Rey en el Norte!');
+  ```
+
+tips:
+  - "[PSR-1: Estándar básico de codificación](https://www.php-fig.org/psr/psr-1/)"
+  - "[PSR-12: Guía de estilo de codificación](https://www.php-fig.org/psr/psr-12/)"
+
+definitions:
+  - name: Intérprete
+    description: "programa que ejecuta el código escrito en un lenguaje de programación."

@@ -1,0 +1,62 @@
+---
+
+name: Variables y Concatenación
+theory: |
+
+  Para reforzar el tema anterior, intentemos usar variables con concatenación. Sintácticamente, nada cambia: sabemos cómo concatenar (unir) dos cadenas:
+
+  ```php
+  <?php
+
+  $que = "Camino" . "de Reyes";
+  print_r($que); // => "CaminodeReyes"
+  ```
+
+  ... y por lo tanto, podemos concatenar una cadena y una variable que contiene una cadena:
+
+  ```php
+  <?php
+
+  $primero = "Caminos";
+  $que = $primero . "de Reyes";
+
+  print_r($que); // => "CaminodeReyes"
+  ```
+
+  ... e incluso concatenar dos variables que contienen cadenas:
+
+  ```php
+  <?php
+
+  $primero = "Caminos";
+  $ultimo = 'de Reyes';
+
+  $que = $primero . $ultimo;
+  print_r($que); // => "CaminodeReyes"
+  ```
+
+instructions: |
+
+  Los sitios web constantemente envían correos electrónicos a sus usuarios. Una tarea típica es enviar automáticamente un correo electrónico personalizado, donde el nombre de usuario estará en el asunto. Si el nombre del usuario se encuentra en algún lugar de la base de datos del sitio web como una cadena, la tarea de generar el asunto se reduce a la concatenación: por ejemplo, necesitas unir la cadena `Hola` con la cadena que contiene el nombre.
+
+  Escribe un programa que genere el asunto y el cuerpo del correo electrónico, utilizando las variables proporcionadas, y muestre las cadenas resultantes en la pantalla.
+
+  Para el asunto, utiliza las variables `$nombre` y `$saludo`, seguido de una coma y un signo de exclamación. Muestra esto en la pantalla en el orden correcto.
+
+  Para el cuerpo del correo electrónico, utiliza las variables `$informacion` e `$introduccion`, con la segunda oración en una nueva línea.
+
+  El resultado en la pantalla debería lucir así:
+
+  <pre class='hexlet-basics-output'>
+  ¡Hola, Joffrey!
+  Aquí tienes información importante sobre la seguridad de tu cuenta.
+  No pudimos verificar el nombre de soltera de tu madre.
+  </pre>
+
+  Completa la tarea utilizando solamente dos `print_r()`.
+
+tips:
+  - |
+    Piensa en qué cadena y en qué orden debes concatenar las variables para obtener una salida de dos líneas para el cuerpo del correo electrónico.
+  - |
+    Recuerda que puedes crear una cadena que contenga solo la secuencia de control `\n`.

@@ -1,0 +1,5 @@
+---
+
+name: Variables en PHP
+description:
+  La información puede ser almacenada en "contenedores" especiales llamados variables. Esto te permite reutilizar datos existentes y evitar duplicarlos en diferentes partes del código. En este módulo, exploraremos cómo modificar variables y nombrarlas de manera que sean comprensibles para cualquier desarrollador. Te darás cuenta de que inventar un nombre para una variable no es tan sencillo. Además, te explicaremos cómo usar variables para simplificar cálculos complejos.

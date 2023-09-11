@@ -1,0 +1,19 @@
+---
+
+name: Operación conmutativa
+theory: |
+  En programación se utiliza la ley básica de la aritmética: el orden de los sumandos no afecta a la suma. Esto se conoce como la **ley conmutativa**. Si intercambiamos los operandos en una operación binaria y obtenemos el mismo resultado, esa operación es conmutativa. Por lo tanto, la suma es una operación conmutativa: `3 + 2 = 2 + 3`.
+
+  La resta no es una operación conmutativa: `2 - 3 ≠ 3 - 2`. En programación, esta ley también se aplica. La mayoría de las operaciones con las que nos encontramos en la vida real no son conmutativas. Por lo tanto, siempre debemos prestar atención al orden en el que trabajamos.
+
+instructions: |
+  Escriba un programa que calcule y muestre en pantalla de forma secuencial los valores de las siguientes expresiones matemáticas: "3 elevado a la 5" y "-8 dividido por -4".
+
+  Tenga en cuenta que los resultados se mostrarán "pegados" en una sola línea sin espacios. Aprenderemos a solucionar este problema en futuras lecciones.
+
+tips: []
+
+definitions:
+  - name: Conmutatividad
+    description: |
+      propiedad de una operación en la que el cambio de orden de los operandos no afecta al resultado. Por ejemplo, la suma es una operación conmutativa: el orden de los sumandos no afecta a la suma.
