@@ -6,6 +6,11 @@ namespace HexletBasics\Loops\ForLoop;
 function sumOfSeries($start, $finish)
 {
     /*
+    * Обратите внимание: мы создали новую переменную,
+    * и не используем аргумент в качестве счётчика.
+    * Счётчик будет меняться в процессе выполнения функции,
+    * а изменять аргументы — плохая практика.
+
     * Note: we create a new variable here,
     * rather than use the argument as a counter.
     * Counter will be changing as the function works,
