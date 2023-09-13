@@ -1,8 +1,8 @@
 <?php
 
-// Неймспейсы изучаются на Хекслете
-// Здесь они нужны по техническим причинам
-// Просто не обращайте внимания, они не влияют на разработку
+// Namespaces are studied at Hexlet
+// They are needed here for technical reasons
+// Just ignore them, they do not affect development
 namespace HexletBasics\DefineFunctions\Define;
 
 // BEGIN
