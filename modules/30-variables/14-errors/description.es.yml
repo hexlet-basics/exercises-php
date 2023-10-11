@@ -17,12 +17,12 @@ theory: |
   Los errores también pueden ser causados por errores tipográficos al utilizar una variable y al declararla. La cantidad de estos errores se reduce mediante el uso de un editor correctamente configurado. Este editor resalta los nombres que se utilizan sin ser declarados y advierte sobre posibles problemas.
 
 instructions: |
-  Encuentra la variable no declarada en el programa y declárala asignándole el valor `'Dragón'`.
+  Encuentra la variable no declarada en el programa y declárala asignándole el valor `'Dragon'`.
 
   Después de ejecutar el programa, el resultado en la pantalla debería verse así:
 
   <pre class='hexlet-basics-output'>
-  Targaryen y Dragón
+  Targaryen and Dragon
   </pre>
 
 tips: []
