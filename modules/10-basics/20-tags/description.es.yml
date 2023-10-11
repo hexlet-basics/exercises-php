@@ -14,7 +14,7 @@ instructions: |
   ```php
   <?php
 
-  print_r('¡Rey en el Norte!');
+  print_r('King in the North!');
   ```
 
 tips:
