@@ -112,9 +112,9 @@ theory: |
 instructions: |
   Implementa la función `getNumberExplanation()`, que recibe un número como entrada y devuelve una explicación para ese número. Si no hay una explicación para el número, se devuelve `just a number`. Solo hay explicaciones para los siguientes números:
 
-    * 666 - número del diablo
-    * 42 - respuesta para todo
-    * 7 - número primo
+    * 666 - devil number
+    * 42 - answer for everything
+    * 7 - prime number
 
   Ejemplos de llamadas a la función:
 
@@ -122,9 +122,9 @@ instructions: |
   <?php
 
   getNumberExplanation(8); // just a number
-  getNumberExplanation(666); // número del diablo
-  getNumberExplanation(42);  // respuesta para todo
-  getNumberExplanation(7);   // número primo
+  getNumberExplanation(666); // devil number
+  getNumberExplanation(42);  // answer for everything
+  getNumberExplanation(7);   // prime number
   ```
 
 tips:
