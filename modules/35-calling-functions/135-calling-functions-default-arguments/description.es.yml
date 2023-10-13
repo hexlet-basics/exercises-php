@@ -33,7 +33,7 @@ theory: |
 
 instructions: |
 
-  Redondea el número almacenado en la variable `$numero` a dos decimales y muestra el resultado en pantalla.
+  Redondea el número almacenado en la variable `$number` a dos decimales y muestra el resultado en pantalla.
 
 tips: []
 
