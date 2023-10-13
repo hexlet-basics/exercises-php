@@ -38,14 +38,14 @@ theory: |
           print_r("\n");
           $i = $i + 1;
       }
-      print_r('¡terminado!');
+      print_r('finished!');
   }
 
   printNumbers(3);
   // => 1
   // => 2
   // => 3
-  // => ¡terminado!
+  // => finished!
   ```
 
   https://replit.com/@hexlet/php-basics-while
@@ -84,7 +84,7 @@ theory: |
   // El predicado devuelve false, por lo que la ejecución continúa después del ciclo
   while (4 <= 3)
 
-  // print_r('¡terminado!');
+  // print_r('finished!');
   // En este punto, i es igual a 4, pero ya no lo necesitamos
   // La función finaliza
   ```
@@ -109,7 +109,7 @@ theory: |
       while ($i <= $lastNumber) {
           print_r($i);
       }
-      print_r('¡terminado!');
+      print_r('finished!');
   }
   ```
 
@@ -140,8 +140,8 @@ instructions: |
   3
   2
   1
-  ¡terminado!
-  </pre
+  finished!
+  </pre>
 
 tips:
   - |

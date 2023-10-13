@@ -31,7 +31,7 @@ theory: |
 
 instructions: |
 
-  Escribe una función `esSoldadoNeutral()` que reciba dos argumentos:
+  Escribe una función `isNeutralSoldier()` que reciba dos argumentos:
 
   1. El color de la armadura (cadena de texto). Opciones posibles: `red`, `yellow`, `black`.
   2. El color del escudo (cadena de texto). Opciones posibles: `red`, `yellow`, `black`.
@@ -43,7 +43,7 @@ instructions: |
   ```php
   <?php
 
-  esSoldadoNeutral('yellow', 'black'); // true
-  esSoldadoNeutral('red', 'black');    // false
-  esSoldadoNeutral('red', 'red');      // false
+  isNeutralSoldier('yellow', 'black'); // true
+  isNeutralSoldier('red', 'black');    // false
+  isNeutralSoldier('red', 'red');      // false
   ```

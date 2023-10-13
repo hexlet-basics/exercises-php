@@ -38,7 +38,7 @@ theory: |
   No hay límite en la cantidad de variables que se pueden crear. Los programas grandes contienen decenas o incluso cientos de miles de nombres de variables. Para facilitar el análisis del programa, es conveniente crear las variables lo más cerca posible del lugar donde se utilizan.
 
 instructions: |
-  Crea una variable con el nombre `$motto` y el contenido `¡Lo que está muerto no puede morir!`. Imprime el contenido de la variable.
+  Crea una variable con el nombre `$motto` y el contenido `What Is Dead May Never Die!`. Imprime el contenido de la variable.
 
 tips: []
 

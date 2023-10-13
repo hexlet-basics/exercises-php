@@ -57,14 +57,14 @@ theory: |
 
 instructions: |
 
-  Implementa la función `esAñoBisiesto()`, que determina si un año es bisiesto o no. Un año es bisiesto si es divisible (es decir, no tiene residuo) por 400 o si es divisible por 4 y no es divisible por 100. Como puedes ver, toda la lógica necesaria ya está incluida en la definición, solo falta convertirla en código:
+  Implementa la función `isLeapYear()`, que determina si un año es bisiesto o no. Un año es bisiesto si es divisible (es decir, no tiene residuo) por 400 o si es divisible por 4 y no es divisible por 100. Como puedes ver, toda la lógica necesaria ya está incluida en la definición, solo falta convertirla en código:
 
   ```php
   <?php
 
-  esAñoBisiesto(2018); // false
-  esAñoBisiesto(2017); // false
-  esAñoBisiesto(2016); // true
+  isLeapYear(2018); // false
+  isLeapYear(2017); // false
+  isLeapYear(2016); // true
   ```
 
   Puedes verificar la divisibilidad de la siguiente manera:
