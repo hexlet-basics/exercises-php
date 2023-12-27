@@ -1,0 +1,23 @@
+name: Comments
+tips: []
+definitions:
+  - name: Comment
+    description: >
+      text in program code that doesn't affect functionality, and is added by
+      programmers for themselves and their colleagues.
+
+
+      `// single-line comment`
+
+
+      ```
+
+      /*
+
+      * multiline comment
+
+      * multiline comment
+
+      */
+
+      ```

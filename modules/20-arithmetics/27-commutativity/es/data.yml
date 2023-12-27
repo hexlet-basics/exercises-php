@@ -1,0 +1,8 @@
+name: Operación conmutativa
+tips: []
+definitions:
+  - name: Conmutatividad
+    description: >
+      propiedad de una operación en la que el cambio de orden de los operandos
+      no afecta al resultado. Por ejemplo, la suma es una operación conmutativa:
+      el orden de los sumandos no afecta a la suma.

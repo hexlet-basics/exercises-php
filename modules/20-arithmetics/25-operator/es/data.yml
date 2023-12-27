@@ -1,0 +1,13 @@
+name: Operadores
+tips:
+  - |
+    [Operadores en PHP](https://www.php.net/manual/es/language.operators.php)
+definitions:
+  - name: Operación aritmética
+    description: suma, resta, multiplicación y división.
+  - name: Operación unaria
+    description: >-
+      operación con un solo operando. Por ejemplo, `-3` es una operación unaria
+      para obtener el número opuesto al número tres.
+  - name: Operación binaria
+    description: operación con dos operandos. Por ejemplo, `3 + 9`.

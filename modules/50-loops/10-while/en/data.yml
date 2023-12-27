@@ -1,0 +1,9 @@
+name: Цикл While
+tips:
+  - |
+    [While loop](https://www.php.net/manual/en/control-structures.while.php)
+definitions:
+  - name: The While loop
+    description: >-
+      is an instruction to repeat the code as long as a certain condition is
+      met.

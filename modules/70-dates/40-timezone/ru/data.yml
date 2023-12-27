@@ -1,0 +1,6 @@
+name: Часовые пояса (тайм зоны)
+tips:
+  - >
+    [Список поддерживаемых временных зон в
+    PHP](https://php.net/manual/ru/timezones.php)
+definitions: []

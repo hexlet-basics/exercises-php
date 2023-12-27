@@ -1,0 +1,13 @@
+name: Statements
+tips:
+  - >
+    [A little about
+    interpreters](https://en.wikipedia.org/wiki/Interpreter_(computing))
+definitions:
+  - name: The interpreter
+    description: |
+      is a program that runs the code in PHP.
+  - name: An instruction (statement)
+    description: >
+      is a command for a computer written in a programming language. PHP code is
+      a set of instructions separated (most often) by a `;`.

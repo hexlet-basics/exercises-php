@@ -1,0 +1,1 @@
+En el ejercicio se define una variable que contiene una cadena de texto. Reasigne el valor de esta variable y asígnele una cadena de texto en la que los caracteres de la cadena original estén en orden inverso.

@@ -1,0 +1,12 @@
+name: Arithmetic Operations
+tips:
+  - >
+    Always indent arithmetic operators with spaces between the numbers
+    (operands). It's good form when programming. Therefore, in our examples, we
+    have `print_r(3 + 4)` rather than `print_r(3+4)`.
+  - >
+    Dividing by zero causes, unsurprisingly, a `Division by zero` error. To
+    avoid it, you need to know about conditional constructs (you'll learn about
+    them in future 
+  - |
+    Type your code between the`// BEGIN` and `// END` lines in the editor.

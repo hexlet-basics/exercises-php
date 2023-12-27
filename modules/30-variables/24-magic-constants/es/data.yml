@@ -1,0 +1,10 @@
+name: Constantes mágicas
+tips:
+  - >
+    [Constantes
+    mágicas](https://php.net/manual/es/language.constants.predefined.php)
+definitions:
+  - name: Constante mágica
+    description: >-
+      una constante especial disponible en PHP; tiene diferentes valores en
+      diferentes contextos.

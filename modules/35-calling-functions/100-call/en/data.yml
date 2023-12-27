@@ -1,0 +1,11 @@
+name: Functions and how they're called
+tips: []
+definitions:
+  - name: A function
+    description: >-
+      is an operation capable of accepting data and returning a result; a
+      function is called like this: `foo()`.
+  - name: An argument
+    description: >-
+      is the information the function receives when it is called. For example,
+      with `foo(42), we pass the argument `42` to `foo()`

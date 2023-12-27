@@ -1,0 +1,5 @@
+name: Expresiones en definiciones
+tips:
+  - >
+    Para hacer un salto de línea, puedes usar `\n` entre la impresión de los
+    dólares y los yuanes.

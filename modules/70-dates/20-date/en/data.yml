@@ -1,0 +1,5 @@
+name: Date
+tips:
+  - >
+    [Examples of date
+    formats](https://www.php.net/manual/en/datetime.format.php)

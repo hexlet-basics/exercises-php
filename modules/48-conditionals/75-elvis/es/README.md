@@ -1,0 +1,51 @@
+Imaginemos el siguiente escenario: en un sitio web, los usuarios pueden tener nombres y apodos. Si hay un nombre, debemos dirigirnos a la persona por su nombre. Si no hay nombre, nos dirigimos por el apodo. Intentemos construir una cadena de saludo que cumpla con estos requisitos:
+
+```php
+<?php
+
+function generateGreeting($name, $nickname)
+{
+    if ($name) {
+        return "¡Hola, {$name}!";
+    } else {
+        return "¡Hola, {$nickname}!";
+    }
+}
+
+generateGreeting('Bob', 'CoolBob86'); // '¡Hola, Bob!'
+generateGreeting('', 'CoolBob86');    // '¡Hola, CoolBob86!'
+```
+
+Hemos aprovechado el hecho de que PHP realiza conversiones de tipos. En el código `if ($name)`, PHP convertirá `$name` a un tipo `bool`. Si la cadena está vacía, se convertirá en `false`. De lo contrario, se convertirá en `true`.
+
+Con el operador ternario, podemos obtener una forma más corta:
+
+```php
+<?php
+
+function generateGreeting($name, $nickname)
+{
+    return $name ? "¡Hola, {$name}!" : "¡Hola, {$nickname}!";
+}
+```
+
+Este es un caso común: operamos con valores `bool` y obtenemos:
+
+* El primer valor si es `true`
+* El segundo valor en caso contrario
+
+En PHP, para estos casos, existe un operador especial:
+
+```php
+<?php
+
+function generateGreeting($name, $nickname)
+{
+    $user = $name ?: $nickname;
+    return "¡Hola, {$user}!";
+}
+```
+
+El operador `?:` es un operador binario que devuelve el primer operando si es verdadero, y el segundo en caso contrario. También se le llama Elvis, porque suena parecido a _else if_. Y también por su similitud visual con Elvis Presley:
+
+![Operador Elvis](https://i.imgur.com/eoLgBHN.png)

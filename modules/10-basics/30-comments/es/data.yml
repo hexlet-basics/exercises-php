@@ -1,0 +1,23 @@
+name: Comentarios
+tips: []
+definitions:
+  - name: Comentario
+    description: >
+      texto en el código del programa que no afecta la funcionalidad y se agrega
+      por los programadores para ellos mismos y sus colegas.
+
+
+      `// comentario de una línea`
+
+
+      ```
+
+      /*
+
+      * comentario de varias líneas
+
+      * comentario de varias líneas
+
+      */
+
+      ```

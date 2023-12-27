@@ -1,0 +1,7 @@
+name: else
+tips: []
+definitions:
+  - name: else
+    description: >-
+      способ задать блок кода, который будет выполнен, если условие с `if` не
+      удовлетворено

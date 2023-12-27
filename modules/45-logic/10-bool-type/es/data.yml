@@ -1,0 +1,6 @@
+name: Tipo lógico
+definitions:
+  - name: Tipo lógico (bool)
+    description: >-
+      un tipo de dato con dos posibles valores: true (verdadero) y false
+      (falso).

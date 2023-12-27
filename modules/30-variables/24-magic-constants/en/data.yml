@@ -1,0 +1,10 @@
+name: Magic constants
+tips:
+  - >
+    [Magic
+    constants](https://www.php.net/manual/en/language.constants.predefined.php)
+definitions:
+  - name: A magic constant
+    description: >-
+      is a special constant available in PHP; it contains different values in
+      different contexts.

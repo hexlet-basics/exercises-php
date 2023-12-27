@@ -1,0 +1,7 @@
+name: Changing a Variable
+tips:
+  - |
+    Type your code between the `// BEGIN` and `// END` lines in the editor.
+definitions:
+  - name: A variable
+    description: is a way to store information and name it for later use in code.

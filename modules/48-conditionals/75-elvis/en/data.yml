@@ -1,0 +1,9 @@
+name: Elvis operator
+definitions:
+  - name: The Elvis
+    description: >-
+      operator is an expression that returns the first operand if it's true, and
+      the second if it isn't. For example, `$name ?: $nickname;`.
+tips:
+  - |
+    [elvis](https://www.php.net/manual/en/language.operators.comparison.php)

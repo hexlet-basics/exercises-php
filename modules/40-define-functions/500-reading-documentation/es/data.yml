@@ -1,0 +1,8 @@
+name: Lectura de la documentación
+tips:
+  - |
+    [Documentación de PHP en español](https://php.net/manual/es/)
+  - |
+    [Manual de funciones](https://php.net/manual/es/funcref.php)
+  - |
+    [Función floor()](https://www.php.net/manual/es/function.floor.php)

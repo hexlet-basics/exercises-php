@@ -1,0 +1,15 @@
+If a PHP program is written syntactically incorrectly, the interpreter will display a corresponding message on the screen, along with a pointer to the file and line where it thinks the error occurred. _Syntax errors_ occur when the code has grammatical mistakes. Grammar is essential to human language, but a text with grammar mistakes can still be read and understood. However, when it comes to programming, things are much more strict. Any tiny violation and the program won't even start. Maybe you've mixed up your brackets, or there's a `;`, that you forgot to add — these are just some examples of such mistakes.
+
+Here is an example of some code with a syntax error:
+
+```php
+<?php
+
+print_r('Hodor')
+```
+
+If you run the code above, you'll see the following message: `$ PHP Parse error:  syntax error, unexpected end of file in /private/var/tmp/index.php on line 4`. These syntax errors in PHP are classified as "Parse errors". As you can see, the path to the file and the line number are given at the end.
+
+On the one hand, "Parse error" errors are the simplest, because they're ony related to the grammatical rules of code writing, and not to the meaning of the code itself. You can easily fix it once you find it.
+
+On the other hand, the interpreter won't always tell you the correct position of an error. Sometimes you need to add a forgotten bracket to a different place than where the error message says.

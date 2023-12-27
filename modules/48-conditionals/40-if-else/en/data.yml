@@ -1,0 +1,6 @@
+name: else
+definitions:
+  - name: else
+    description: >-
+      else is a way to specify the block of code that will be executed if the
+      `if` condition isn't satisfied

@@ -1,0 +1,7 @@
+name: Interpolation
+tips: []
+definitions:
+  - name: Interpolation
+    description: >-
+      is a way to join strings by inserting variable values into a string
+      template using curly brackets. For example, `\"Hi, {$name}!\"`.

@@ -1,0 +1,9 @@
+name: Syntax errors
+tips: []
+definitions:
+  - name: Syntax errors
+    description: are a violation of the grammatical rules of a programming language.
+  - name: Parse error
+    description: >-
+      is a type of PHP error that occurs when there are syntax errors in the
+      code.

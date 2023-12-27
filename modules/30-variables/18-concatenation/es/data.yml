@@ -1,0 +1,8 @@
+name: Variables y Concatenación
+tips:
+  - >
+    Piensa en qué cadena y en qué orden debes concatenar las variables para
+    obtener una salida de dos líneas para el cuerpo del correo electrónico.
+  - >
+    Recuerda que puedes crear una cadena que contenga solo la secuencia de
+    control `\n`.

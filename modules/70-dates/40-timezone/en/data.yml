@@ -1,0 +1,5 @@
+name: Time Zones (Time Zones)
+tips:
+  - >
+    [List of supported time zones in
+    PHP](https://www.php.net/manual/en/timezones.php)

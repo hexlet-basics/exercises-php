@@ -1,0 +1,5 @@
+name: Конструкция else if
+tips: []
+definitions:
+  - name: else if
+    description: способ задать несколько альтернативных условий.

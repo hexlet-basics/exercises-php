@@ -1,0 +1,7 @@
+name: Цикл While
+tips:
+  - |
+    [Цикл while](https://www.php.net/manual/ru/control-structures.while.php)
+definitions:
+  - name: Цикл While
+    description: инструкция для повторения кода, пока удовлетворяется какое-либо условие.

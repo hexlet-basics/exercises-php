@@ -1,0 +1,49 @@
+
+The task of a predicate is to get an answer to a question, but usually this isn't enough; you often have to perform a certain action depending on the answer.
+
+Let's write a function that determines the type of a sentence that's passed to it. To begin with, it will distinguish between normal sentences and question sentences.
+
+```php
+<?php
+
+function getTypeOfSentence($sentence)
+{
+    // a simple way to extract the last character
+    $lastChar = $sentence[-1];
+    if ($lastChar === '?') {
+        return 'question';
+    }
+
+    return 'normal';
+}
+
+getTypeOfSentence('Hodor');  // normal
+getTypeOfSentence('Hodor?'); // question
+```
+
+`if` is an instruction. You need to pass predicate expression to it in parentheses and then define a block of code in curly brackets. This code block executes only if the predicate is true.
+
+If the predicate is false, we skip the code block in curly brackets, and the function keeps executing. In our case, the next line of code, `return 'normal';` will make the function return the string and terminate.
+
+As you can see, `return` can be anywhere in a function. Including within a conditional code block.
+
+If the curly brackets after `if` contain only one line of code, you can leave out the brackets:
+
+```php
+<?php
+
+function getTypeOfSentence($sentence)
+{
+    $lastChar = $sentence[-1];
+    if ($lastChar === '?')
+        return 'question';
+
+    return 'normal';
+}
+
+print_r(getTypeOfSentence('Hodor'));  // => normal
+print_r("\n");
+print_r(getTypeOfSentence('Hodor?')); // => question
+```
+
+We recommend not doing that and always writing **curly brackets**. That way, you can clearly see where the conditional construction body starts and ends. The code becomes clearer and more readable.
