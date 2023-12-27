@@ -1,0 +1,8 @@
+
+One of the most difficult parts of working with dates is time zones. The entire earth is divided into 24 time zones, meaning that in neighboring zones the time is often different by one hour. Zero time is [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (UTC). Time zones around the globe are expressed as a positive or negative offset from UTC. For example, the time zone in Moscow is +3.
+
+The transition to daylight saving time and winter time adds a little zest to this system. And while the zones are strictly fixed, the transition to winter and summer time is the prerogative of individual states, which periodically introduce or cancel it. UTC time is never translated, shifts occur relative to it. On top of that, there are a thousand and one other problems.
+
+The main rule when working with dates is that storage and comparison should be made in UTC format. But it's better to display the dates in the zone in which the user lives.
+
+You can check the current zone with `date_default_timezone_get()`. Set the zone with the `date_default_timezone_set()`.

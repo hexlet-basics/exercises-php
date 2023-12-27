@@ -1,0 +1,64 @@
+
+Addition, concatenation, and the other operations discussed are all fairly basic features of programming languages. Mathematics isn't limited to arithmetic, but there are many other areas with their own operations, such as geometry. The same goes for strings: you can flip them, change a letter's case, delete extra characters – and that's just the tip of the iceberg. And finally, at a higher level, there's the applied logic of a particular program. Programs withdraw money, calculate taxes, and generate reports. The number of these jobs is endless and different for each program. And they all have to be somehow expressed in code.
+
+The notion of a *function* expresses any arbitrary operation in programming. Functions can be both built-in and manually written by a programmer. One built-in function we're already familiar with is `print_r()`.
+
+Functions are fundamental building blocks in programming, and it's impossible to accomplish anything without them. We need to get acquainted with them as soon as possible because future courses will deal almost exclusively with functions. First, we'll learn how to use the functions we've already defined, and we'll also learn to define our own functions.
+
+We will start with basic functions that handle strings. Below is an example of a call to `strrev()`, that reverses a string:
+
+```php
+<?php
+
+// Call the strrev function with the argument 'Hello!'
+$result = strrev('Hello!');
+print_r($result); // => '!olleH'
+```
+
+We created a variable, `$result` and told the interpreter to write the result of the `strrev()` function to it. In this sense, functions are identical to operations; they always return the result of their work. The entry `strrev('Hello!')`  means that a function named `strrev` is being called, to which the argument (or parameter) `'Hello!'` has been passed. Arguments are needed for functions to work, just like how operators need operands. The `strrev()` function flips the string passed to it in the arguments.
+
+Another example is the `strlen()` function, which counts the number of characters in a string
+
+```php
+<?php
+
+$result = strlen('Hello!');
+print_r($result); // => 6
+```
+
+The function being called is always indicated by parentheses `()` following the function name. There can be any number of arguments in brackets, and sometimes none at all. The number depends on the function used, for example, the `pow()` function takes two arguments as input and raises the number passed to the power passed in the second parameter.
+
+```php
+<?php
+
+$result = pow(2, 3); // 2 * 2 * 2
+print_r($result); // => 8
+
+// Modern PHP now has a special operator for exponentiation:
+$result = 2 ** 3; // 8
+```
+
+And here's an example of a function that takes no arguments. The `rand()` function generates and returns a random number:
+
+```php
+<?php
+
+$result = rand();
+```
+
+By and large, operators and functions are the same thing. The only key difference is how they're written. If you think of addition as a function, it would look like this:
+
+```php
+<?php
+
+3 + 5; // 8
+sum(3, 5); // 8
+
+// Or even like this
++(3, 5);
+
+// In PHP this syntax isn't possible, but there are languages (e.g. lisp),
+// where it looks very similar (take a look at the Racket course)
+```
+
+Self-check. How do I know what the `print_r()` call returns? Test it.

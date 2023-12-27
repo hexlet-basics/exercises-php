@@ -1,0 +1,9 @@
+name: Ciclo While
+tips:
+  - |
+    [Bucle while](https://www.php.net/manual/es/control-structures.while.php)
+definitions:
+  - name: Bucle While
+    description: >-
+      Instrucción para repetir el código mientras se cumple una determinada
+      condición.

@@ -1,0 +1,5 @@
+name: Expressions in definitions
+tips:
+  - >
+    You can use `\n` between the withdrawal of dollars and yuans to go to a new
+    line.

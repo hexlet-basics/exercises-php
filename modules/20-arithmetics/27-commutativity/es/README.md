@@ -1,0 +1,3 @@
+En programación se utiliza la ley básica de la aritmética: el orden de los sumandos no afecta a la suma. Esto se conoce como la **ley conmutativa**. Si intercambiamos los operandos en una operación binaria y obtenemos el mismo resultado, esa operación es conmutativa. Por lo tanto, la suma es una operación conmutativa: `3 + 2 = 2 + 3`.
+
+La resta no es una operación conmutativa: `2 - 3 ≠ 3 - 2`. En programación, esta ley también se aplica. La mayoría de las operaciones con las que nos encontramos en la vida real no son conmutativas. Por lo tanto, siempre debemos prestar atención al orden en el que trabajamos.

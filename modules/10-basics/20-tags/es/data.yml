@@ -1,0 +1,9 @@
+name: Etiquetas
+tips:
+  - '[PSR-1: Estándar básico de codificación](https://www.php-fig.org/psr/psr-1/)'
+  - >-
+    [PSR-12: Guía de estilo de
+    codificación](https://www.php-fig.org/psr/psr-12/)
+definitions:
+  - name: Intérprete
+    description: programa que ejecuta el código escrito en un lenguaje de programación.

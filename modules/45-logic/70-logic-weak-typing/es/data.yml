@@ -1,0 +1,4 @@
+name: Tipado débil - 2
+tips:
+  - |
+    [Booleanos](https://php.net/manual/es/language.types.boolean.php)

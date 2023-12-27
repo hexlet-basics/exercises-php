@@ -1,0 +1,46 @@
+
+Sometimes, you need to get a single character from a string. For example, if a website knows the user's first name and surname, and at some point, it needs to output it as`J. Smith`, you need to take the initial letter from the first name.
+
+```php
+<?php
+
+$firstName = 'Alexander';
+
+print_r($firstName[0]); // => A
+```
+
+Square brackets with a number are a special string extraction operator. This number is called an **index** — the position of the character inside the string. Indexes start with 0 in almost all programming languages, so to get the first character, you must specify index `0`. The index of the last element is equal to the length of the string minus one:
+
+```php
+<?php
+
+$firstName = 'Alexander';
+
+// The length of the string is 9, so the last index is 8
+print_r($firstName[8]);  // => r
+
+// Self-check.  What will this code print?
+$magic = '\nyou';
+print_r($magic[1]); // => ?
+```
+
+You're allowed to use negative indices. In this case there's a reference to characters starting from the end of the string. `-1` is the index of the last character, `-2` of the penultimate, and so on. Unlike direct indexing, reverse indexing counts down from `-1`:
+
+```php
+<?php
+
+$firstName = 'Alexander';
+
+print_r($firstName[-1]); // => r
+```
+
+You can use variables as well as numbers as an index. Here's an example that will have the same result of displaying the character `A`, but the index inside the square brackets is written as a variable instead of a number:
+
+```php
+<?php
+
+$firstName = 'Alexander';
+$index = 0;
+
+print_r($firstName[$index]); // => A
+```

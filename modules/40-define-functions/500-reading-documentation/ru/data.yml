@@ -1,0 +1,8 @@
+name: Чтение документации
+tips:
+  - |
+    [Документация PHP на русском языке](https://php.net/manual/ru/)
+  - |
+    [Справочник функций](https://php.net/manual/ru/funcref.php)
+  - |
+    [Функция floor()](https://www.php.net/manual/ru/function.floor.php)

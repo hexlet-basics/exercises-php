@@ -1,0 +1,44 @@
+Otro uso de los bucles es la formación de cadenas. Este tipo de tarea es común en la programación web. Se reduce a una simple agregación utilizando interpolación o concatenación.
+
+Hay una tarea muy popular en las entrevistas: **invertir una cadena**. Se puede resolver de muchas formas diferentes, pero el enfoque más básico es recorrerla carácter por carácter.
+
+Veamos un ejemplo de cómo funciona esta función:
+
+```php
+<?php
+
+reverse('Hexlet'); // telxeH
+```
+
+La idea general de la inversión es tomar los caracteres uno por uno desde el principio de la cadena y unirlos en orden inverso. Suena bastante simple. Veamos:
+
+```php
+<?php
+
+function reverse($str)
+{
+    $i = 0;
+    // El elemento neutral para las cadenas es una cadena vacía
+    $result = '';
+
+    while ($i < strlen($str)) {
+        $currentChar = $str[$i];
+        // Unir en orden inverso
+        $result = "{$currentChar}{$result}";
+        // Lo mismo utilizando concatenación
+        // $result = $currentChar . $result;
+        $i = $i + 1;
+    }
+
+    return $result;
+}
+
+$name = 'Bran';
+reverse($name); // 'narB'
+// Comprobación del elemento neutral
+reverse(''); // ''
+```
+
+https://replit.com/@hexlet/php-basics-loops-using-reverse
+
+El único aspecto complicado de este código es comprender cómo se construye la cadena. Dado que cada carácter siguiente se adjunta a la cadena resultante desde la izquierda, al final la cadena queda invertida.

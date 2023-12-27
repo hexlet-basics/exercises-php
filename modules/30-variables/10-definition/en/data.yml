@@ -1,0 +1,5 @@
+name: What is a variable
+tips: []
+definitions:
+  - name: A variable
+    description: is a way to store information and name it for later use in code.

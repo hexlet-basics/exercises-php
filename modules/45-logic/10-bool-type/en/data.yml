@@ -1,0 +1,4 @@
+name: Logic Type
+definitions:
+  - name: bool
+    description: 'is a data type with two possible values: true and false.'

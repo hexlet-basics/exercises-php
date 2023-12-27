@@ -1,0 +1,7 @@
+name: Tags
+tips:
+  - '[Basic Code Writing Standard (PSR-1)](https://www.php-fig.org/psr/psr-1/)'
+  - '[Code Design Guide (PSR-12)](https://www.php-fig.org/psr/psr-12/)'
+definitions:
+  - name: Interpreter
+    description: a program that executes code written in a programming language.

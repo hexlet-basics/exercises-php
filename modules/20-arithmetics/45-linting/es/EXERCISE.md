@@ -1,0 +1,1 @@
+Muestra en pantalla el resultado de la siguiente operación: "la diferencia entre el cuadrado de cinco y el producto de tres y siete". Escribe el código de manera que cada operador esté separado de los operandos por espacios.

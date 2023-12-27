@@ -1,0 +1,10 @@
+name: Constants
+tips:
+  - >
+    [List of built-in PHP
+    constants](https://www.php.net/manual/en/reserved.constants.php)
+definitions:
+  - name: A constant
+    description: >-
+      is a way of storing information and naming it for later use in code;
+      constants cannot be changed, unlike variables.

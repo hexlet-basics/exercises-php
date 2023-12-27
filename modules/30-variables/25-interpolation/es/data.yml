@@ -1,0 +1,8 @@
+name: Interpolación
+tips: []
+definitions:
+  - name: Interpolación
+    description: >-
+      método de concatenación de cadenas mediante la inserción de valores de
+      variables en una cadena de plantilla utilizando llaves. Por ejemplo,
+      `\"¡Hola, {$name}!\"`.

@@ -1,0 +1,9 @@
+name: Operador Elvis
+definitions:
+  - name: Operador Elvis
+    description: >-
+      expresión que devuelve el primer operando si es verdadero, y el segundo en
+      caso contrario. Por ejemplo, `$name ?: $nickname;`.
+tips:
+  - >
+    [elvis](https://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary)

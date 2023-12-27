@@ -1,0 +1,6 @@
+name: Conditional constructions (if)
+definitions:
+  - name: A conditional construct
+    description: >-
+      is a way to set a condition for code execution. For example `if ($x > 10)
+      { ... }`

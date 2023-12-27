@@ -1,0 +1,14 @@
+name: Instrucciones
+tips:
+  - >
+    [Un poco sobre los
+    intérpretes](https://es.wikipedia.org/wiki/Int%C3%A9rprete)
+definitions:
+  - name: Intérprete
+    description: |
+      un programa que ejecuta código en PHP.
+  - name: Instrucción
+    description: >
+      un comando para la computadora escrito en un lenguaje de programación. El
+      código en PHP es un conjunto de instrucciones separadas (generalmente) por
+      el símbolo `;`.

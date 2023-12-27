@@ -1,0 +1,5 @@
+name: Heredoc
+definitions: []
+tips:
+  - |
+    [Heredoc](https://www.php.net/manual/en/language.types.string.php)

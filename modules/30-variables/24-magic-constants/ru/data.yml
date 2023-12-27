@@ -1,0 +1,10 @@
+name: Магические константы
+tips:
+  - >
+    [Магические
+    константы](https://php.net/manual/ru/language.constants.predefined.php)
+definitions:
+  - name: Магическая константа
+    description: >-
+      специальная константа, доступная в PHP; содержит разное значение в разных
+      контекстах.

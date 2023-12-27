@@ -1,0 +1,6 @@
+name: Zonas horarias
+tips:
+  - >
+    [Lista de zonas horarias admitidas en
+    PHP](https://php.net/manual/es/timezones.php)
+definitions: []

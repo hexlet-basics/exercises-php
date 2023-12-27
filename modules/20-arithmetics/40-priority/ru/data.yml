@@ -1,0 +1,5 @@
+name: Приоритет операций
+tips:
+  - >
+    [Приоритет
+    операторов](https://www.php.net/manual/ru/language.operators.precedence.php)

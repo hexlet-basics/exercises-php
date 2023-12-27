@@ -1,0 +1,7 @@
+name: ¿Qué es una variable?
+tips: []
+definitions:
+  - name: Variable
+    description: >-
+      una forma de almacenar información y darle un nombre para su uso posterior
+      en el código.

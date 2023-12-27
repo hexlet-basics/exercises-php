@@ -1,0 +1,13 @@
+name: Operaciones aritméticas
+tips:
+  - >
+    Siempre deja espacios entre los operadores aritméticos y los números
+    (operandos) - esto es una buena práctica de programación. Por lo tanto, en
+    nuestros ejemplos es `print_r(3 + 4)`, no `print_r(3+4)`.
+  - >
+    La división por cero resulta en un error `Division by zero`. Para evitarlo,
+    debes conocer las estructuras condicionales (las aprenderás en las próximas
+    lecciones).
+  - >
+    Si en el editor hay una línea que dice `// BEGIN` y `// END`, el código debe
+    escribirse entre esas líneas.

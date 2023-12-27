@@ -1,0 +1,11 @@
+name: Funciones y su llamado
+tips: []
+definitions:
+  - name: Función
+    description: >-
+      operación capaz de recibir datos y devolver un resultado; se llama a una
+      función de esta manera: `foo()`.
+  - name: Argumento
+    description: >-
+      información que una función recibe cuando se llama a ella. Por ejemplo,
+      `foo(42)` es pasar el argumento `42` a la función `foo()`.

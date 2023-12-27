@@ -1,0 +1,9 @@
+name: Errores sintácticos
+tips: []
+definitions:
+  - name: Error de sintaxis
+    description: violación de las reglas gramaticales de un lenguaje de programación.
+  - name: Parse error (error de análisis)
+    description: >-
+      tipo de errores en PHP que ocurren cuando hay errores de sintaxis en el
+      código.

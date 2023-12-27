@@ -1,0 +1,4 @@
+name: Default Arguments
+definitions:
+  - name: The default argument
+    description: is an optional function argument.

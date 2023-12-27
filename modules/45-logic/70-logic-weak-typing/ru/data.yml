@@ -1,0 +1,4 @@
+name: Слабая типизация - 2
+tips:
+  - |
+    [Booleans](https://php.net/manual/ru/language.types.boolean.php)

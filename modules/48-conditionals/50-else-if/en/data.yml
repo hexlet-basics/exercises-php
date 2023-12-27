@@ -1,0 +1,4 @@
+name: Конструкция else if
+definitions:
+  - name: else if
+    description: is a way to set several alternative conditions.

@@ -1,0 +1,6 @@
+name: Concatenación
+definitions:
+  - name: Concatenación
+    description: >
+      operación que une dos cadenas. Por ejemplo, `print_r("King's " . '
+      Landing');`

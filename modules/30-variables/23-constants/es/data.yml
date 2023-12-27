@@ -1,0 +1,11 @@
+name: Constantes
+tips:
+  - >
+    [Lista de constantes integradas en
+    PHP](https://php.net/manual/es/reserved.constants.php)
+definitions:
+  - name: Constante
+    description: >-
+      una forma de almacenar información y darle un nombre para su uso posterior
+      en el código; las constantes no se pueden modificar, a diferencia de las
+      variables.

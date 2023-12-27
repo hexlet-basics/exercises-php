@@ -1,0 +1,4 @@
+name: Determinacy
+tips:
+  - |
+    [Deterministic functions](https://en.wikipedia.org/wiki/Pure_function)

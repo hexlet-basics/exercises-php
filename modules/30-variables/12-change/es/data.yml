@@ -1,0 +1,10 @@
+name: Cambio de variable
+tips:
+  - >
+    Si hay una línea `// BEGIN` y `// END` en el editor, el código debe
+    escribirse entre estas líneas.
+definitions:
+  - name: Variable
+    description: >-
+      una forma de almacenar información y darle un nombre para su uso posterior
+      en el código.

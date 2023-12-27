@@ -1,0 +1,9 @@
+name: How we test your solutions
+definitions:
+  - name: Tests
+    description: >
+      are special code that checks the programs have been made correctly by
+      checking the correct result against the actual one.
+tips:
+  - |
+    [TDD](https://en.wikipedia.org/wiki/Test-driven_development)

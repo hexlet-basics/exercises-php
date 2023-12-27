@@ -1,0 +1,6 @@
+name: Concatenation
+definitions:
+  - name: Concatenation
+    description: >
+      is the operation of joining two strings. For example, `print_r("King's " .
+      ' Landing');`

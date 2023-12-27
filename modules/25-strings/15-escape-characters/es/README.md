@@ -1,0 +1,42 @@
+A veces necesitamos colocar varias líneas una tras otra. Para hacer esto, debemos decirle al intérprete "presiona Enter" - hacer un salto de línea después del signo de interrogación. Esto se puede hacer con el carácter de salto de línea - `\n`:
+
+```php
+<?php
+
+print_r("- ¿Tienes hambre?\n- ¡Aaaarrrgh!");
+```
+
+https://replit.com/@hexlet/php-basics-strings-newline
+
+Resultado:
+
+```php
+- ¿Tienes hambre?
+- ¡Aaaarrrgh!
+```
+
+`\n` es un carácter especial. En la literatura a menudo se le llama *LF* (Line Feed). Desde el punto de vista de la computadora, es un solo carácter de salto de línea invisible:
+
+```php
+<?php
+
+// No hemos estudiado esto, pero debes saber la verdad
+// A continuación, hay un código que devuelve la longitud de una cadena
+strlen("a");    // 1
+strlen("\n");   // 1 !!!
+strlen("\n\n"); // 2 !!!
+```
+
+`\n` es una forma de escribir el carácter de salto de línea, pero el salto de línea en sí es un solo carácter invisible. Dado que la cantidad de caracteres en el teclado es limitada y se destina a los más importantes, todos los caracteres especiales se implementan como tales representaciones.
+
+El carácter de salto de línea no es específico de la programación. En muchos editores hay una opción que permite mostrar caracteres invisibles. Con ella, se puede entender dónde se encuentran. Aunque esto es solo una representación esquemática, estos caracteres no tienen una representación gráfica, son invisibles.
+
+`\n` es un ejemplo de **secuencia de escape**. También se les llama construcciones de control. Hay muchas de estas secuencias de caracteres, pero en programación solo se encuentran algunas de ellas con frecuencia. Los programadores a menudo necesitan usar el salto de línea `\n` para formatear correctamente el texto.
+
+Las secuencias de escape como `\n` solo funcionan dentro de comillas dobles.
+
+Si necesitamos imprimir `\n` como texto, podemos usar el método de escape que ya conocemos: agregar otro `\` al principio. Como resultado, la secuencia `\\n` se mostrará como los caracteres `\` y `n`, que van uno tras otro.
+
+En Windows, se utiliza `\r\n` como salto de línea predeterminado. Esta combinación funciona bien solo en Windows, pero crea problemas al transferir a otros sistemas. Por ejemplo, cuando en un equipo de desarrollo hay usuarios tanto de Windows como de Linux.
+
+La secuencia `\r\n` tiene diferentes interpretaciones según la codificación seleccionada. Esto lo veremos más adelante. Por esta razón, en el entorno de desarrollo, siempre se utiliza `\n` sin `\r`, ya que LF siempre se interpreta de la misma manera y funciona perfectamente en cualquier sistema. Por lo tanto, debes configurar tu editor para usar `\n`.
