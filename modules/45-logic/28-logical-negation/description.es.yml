@@ -23,7 +23,7 @@ theory: |
   Simplemente agregamos `!` antes de llamar a la función y obtenemos la acción opuesta. La negación es una herramienta poderosa que permite expresar reglas previstas de manera concisa en el código sin necesidad de escribir nuevas funciones.
 
 instructions: |
-  
+
   En esta lección, deberás implementar dos funciones: `isPalindrome()` y `isNotPalindrome()`
 
   1. La función `isPalindrome()` determina si una palabra es un palíndromo o no. Un palíndromo es una palabra que se lee igual en ambas direcciones.

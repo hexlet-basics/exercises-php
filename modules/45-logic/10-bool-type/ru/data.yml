@@ -1,3 +1,4 @@
+---
 name: Логический тип
 definitions:
   - name: Логический тип (bool)
