@@ -3,7 +3,7 @@
 name: Comentarios
 theory: |
   ## ¿Para qué sirven los comentarios?
-  
+
   Además del código en los archivos de código fuente, puede haber comentarios. Este texto no es parte del programa. Es útil para los programadores como notas. Con ellos se agregan explicaciones, por ejemplo, cómo funciona el código, qué errores corregir o qué agregar más tarde.
 
   Los comentarios en PHP pueden ser de dos tipos:
