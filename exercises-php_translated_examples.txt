@@ -1,2 +1,0 @@
-c:\Users\danil\Work\exercises-php\modules\40-define-functions\100-define\index.php
-c:\Users\danil\Work\exercises-php\modules\50-loops\70-for\index.php
