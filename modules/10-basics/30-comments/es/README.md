@@ -4,7 +4,7 @@ Además del código en los archivos de código fuente, puede haber comentarios. 
 
 Los comentarios en PHP pueden ser de dos tipos:
 
-* **Comentarios de una línea** - comienzan con `//`. Después de estos caracteres puede seguir cualquier texto, toda la línea no se analizará ni se ejecutará:
+* **Comentarios de una línea** - comienzan con `//` o `#`. Después de estos caracteres puede seguir cualquier texto, toda la línea no se analizará ni se ejecutará:
 
   ```php
   <?php
