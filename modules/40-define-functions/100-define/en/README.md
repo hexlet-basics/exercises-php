@@ -40,7 +40,7 @@ showGreeting(); // => 'Hello, Hexlet!'
 
 Unlike normal data, functions perform actions, so their names almost always have to be verbs: "build something", "draw something", "open something", etc.
 
-Anything described below the indented function name is called the body of the function. It can contain any code. Consider it a small independent program, a set of whatever statements are needed. The body is executed when the function is called. And each function call executes the body independently of other calls.
+Everything that is described in curly braces after the function name is called the body of the function. It can contain any code. Consider it a small independent program, a set of whatever statements are needed. The body is executed when the function is called. And each function call executes the body independently of other calls.
 
 The body of the function can be empty:
 
