@@ -131,7 +131,7 @@ function doubleFive()
 // Определение
 function run()
 {
-    // или return 5 + 5
+    // Возврат
     return 5;
     return 10;
 }

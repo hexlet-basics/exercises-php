@@ -124,7 +124,7 @@ Self-check. What will this code print?
 // Definition
 function run()
 {
-    // or return 5 + 5
+    // Return
     return 5;
     return 10;
 }

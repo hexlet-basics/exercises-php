@@ -46,7 +46,7 @@ showGreeting(); // => '¡Hola, Hexlet!'
 
 A diferencia de los datos normales, las funciones realizan acciones, por lo que sus nombres casi siempre deben ser verbos: "construir algo", "dibujar algo", "abrir algo".
 
-Todo lo que se describe debajo del nombre de la función con sangría se llama cuerpo de la función. Dentro del cuerpo se puede describir cualquier código. Se puede decir que es un pequeño programa independiente, un conjunto de instrucciones arbitrarias.
+Todo lo que se describe entre llaves después del nombre de la función se denomina cuerpo de la función. Dentro del cuerpo se puede describir cualquier código. Se puede decir que es un pequeño programa independiente, un conjunto de instrucciones arbitrarias.
 
 El cuerpo se ejecuta cuando se inicia la función. Y cada llamada a la función inicia el cuerpo independientemente de otras llamadas.
 
