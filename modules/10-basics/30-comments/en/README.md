@@ -5,7 +5,7 @@ Comments in PHP come in two flavors:
 
 ## Single line comments
 
-_Single line comments start with `//`. Any text can go after these characters, the whole line will be left alone when the program is run.
+_Single line comments_ start with `//` or `#`. Any text can go after these characters, the whole line will be left alone when the program is run.
 
 A comment can take up a whole line. Or you can create several comments if one line isn't enough:
 
