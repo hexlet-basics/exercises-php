@@ -131,7 +131,7 @@ Para poner a prueba tus conocimientos, intenta responder esta pregunta. ¿Qué i
 // Definición
 function ejecutar()
 {
-    // o return 5 + 5
+    // Return
     return 5;
     return 10;
 }
