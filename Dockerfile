@@ -1,18 +1,14 @@
 FROM hexletbasics/base-image
 
-ARG PHP_VERSION='8.1'
-
-RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update && \
   apt-get install -yqq \
-  php${PHP_VERSION} \
-  php${PHP_VERSION}-common \
-  php${PHP_VERSION}-opcache \
-  php${PHP_VERSION}-cli \
-  php${PHP_VERSION}-gd \
-  php${PHP_VERSION}-curl \
-  php${PHP_VERSION}-mbstring \
-  php${PHP_VERSION}-xml
+  php \
+  php-common \
+  php-cli \
+  php-gd \
+  php-curl \
+  php-mbstring \
+  php-xml
 
 ENV COMPOSER_NO_INTERACTION 1
 ENV COMPOSER_ALLOW_SUPERUSER 1
@@ -27,8 +23,9 @@ WORKDIR /exercises-php
 RUN mkdir -p /usr/local/etc/php/conf.d/
 RUN echo "include_path = \".:/exercises-php\"" > /usr/local/etc/php/conf.d/code-basics.ini
 
-COPY . .
-
+COPY composer.json composer.lock .
 RUN composer install
+
+COPY . .
 
 ENV PATH=/exercises-php/bin:$PATH

@@ -1,6 +1,6 @@
 {
   "require": {
-    "squizlabs/php_codesniffer": "^3.5.4"
+    "squizlabs/php_codesniffer": "^3.7"
   },
   "autoload": {
     "psr-4": {"HexletBasics\\": "src/"},
@@ -11,9 +11,15 @@
   "scripts": {
   },
   "require-dev": {
-    "symfony/var-dumper": "^6.1",
+    "symfony/var-dumper": "^7.2",
     "codedungeon/phpunit-result-printer": "^0.32.0",
-    "phpunit/phpunit": "9.5.16",
-    "ngyuki/phpower": "dev-master"
-  }
+    "phpunit/phpunit": "^9.5.16",
+    "ngyuki/phpower": "dev-php83"
+  },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/fey/phpower"
+      }
+    ]
 }
