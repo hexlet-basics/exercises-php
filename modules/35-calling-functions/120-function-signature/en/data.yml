@@ -1,5 +1,5 @@
 ---
-name: Сигнатура функции
+name: Function signature
 definitions:
   - name: A function signature
     description: >-
