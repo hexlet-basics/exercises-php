@@ -1,5 +1,5 @@
 ---
-name: Конструкция else if
+name: else if statement
 definitions:
   - name: else if
     description: is a way to set several alternative conditions.
