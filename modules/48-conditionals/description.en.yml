@@ -1,0 +1,5 @@
+---
+
+name: Conditional constructions
+description: |
+  The job of predicate functions is to get the answer to a question. However, this usually isn't enough; you often need to perform a certain action depending on the answer. If and Switch are PHP constructs that allow the programmer to select the desired behavior depending on different conditions, which means skipping some instructions and execute others. We'll analyze them in practice in this module.

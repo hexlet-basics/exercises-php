@@ -1,0 +1,6 @@
+---
+
+name: PHP Data Types
+description:
+  PHP is a language with weak typing and immutable primitive data types. What happens if we try to multiply a number by a string? How does PHP know what type of data it's looking at? And what does PHP do when it sees a type mismatch? You'll find the answers to these questions in this module.
+

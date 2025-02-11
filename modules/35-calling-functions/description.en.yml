@@ -1,0 +1,5 @@
+---
+
+name: Calling functions
+description:
+  Functions exist to express any sort of operation in programming created by the user. Functions are the bricks that programmers use to build systems. In this module, we'll learn how to use the functions that have already been created. We'll look at function signatures in the documentation and figure out how to use them. We'll learn about the standard libraries, which store thousands of functions. It's impossible to learn every single function, but every programmer should know where to look for the function documentation they need.
