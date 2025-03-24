@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(generateAmount(0, 2) === 6);
-        assert(generateAmount(0, 5) === 15);
-        assert(generateAmount(1, 2) === 1);
-        assert(generateAmount(15, 16) === 15);
+        $this->assertEquals(6, generateAmount(0, 2));
+        $this->assertEquals(15, generateAmount(0, 5));
+        $this->assertEquals(1, generateAmount(1, 2));
+        $this->assertEquals(15, generateAmount(15, 16));
     }
 }

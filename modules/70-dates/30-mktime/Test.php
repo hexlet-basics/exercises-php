@@ -10,6 +10,6 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getHexletBirthday() === 1325376000);
+        $this->assertEquals(1325376000, getHexletBirthday());
     }
 }

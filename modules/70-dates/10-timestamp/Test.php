@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getYear(1532435204) === 2018);
-        assert(getYear(532435204) === 1986);
-        assert(getYear(5324352) === 1970);
+        $this->assertEquals(2018, getYear(1532435204));
+        $this->assertEquals(1986, getYear(532435204));
+        $this->assertEquals(1970, getYear(5324352));
     }
 }

@@ -9,9 +9,9 @@ class Test extends TestCase
     public function test()
     {
         require 'index.php';
-        assert(startsWith('one', 'o'));
-        assert(!startsWith('one', 'ne'));
-        assert(startsWith('one', 'on'));
-        assert(startsWith('one', 'one'));
+        $this->assertTrue(startsWith('one', 'o'));
+        $this->assertFalse(startsWith('one', 'ne'));
+        $this->assertTrue(startsWith('one', 'on'));
+        $this->assertTrue(startsWith('one', 'one'));
     }
 }

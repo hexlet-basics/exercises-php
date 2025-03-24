@@ -12,8 +12,9 @@ class Test extends TestCase
 
         $text = 'If I look back I am lost';
         $result1 = filterString($text, 'I');
-        assert($result1 === 'f  look back  am lost');
+        $this->assertEquals('f  look back  am lost', $result1);
+
         $result2 = filterString('zz zorro', 'z');
-        assert($result2 === ' orro');
+        $this->assertEquals(' orro', $result2);
     }
 }

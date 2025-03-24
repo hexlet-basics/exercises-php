@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(!isNotPalindrome('wow'));
-        assert(isNotPalindrome('hexlet'));
-        assert(!isNotPalindrome('asdffdsa'));
-        assert(!isNotPalindrome('Wow'));
+        $this->assertFalse(isNotPalindrome('wow'));
+        $this->assertFalse(isNotPalindrome('asdffdsa'));
+        $this->assertFalse(isNotPalindrome('Wow'));
+        $this->assertTrue(isNotPalindrome('hexlet'));
     }
 }

@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(countChars('axe', 'a') === 1);
-        assert(countChars('', 'a') === 0);
-        assert(countChars('OpPa', 'p') === 2);
-        assert(countChars('OpPa', 'P') === 2);
+        $this->assertEquals(1, countChars('axe', 'a'));
+        $this->assertEquals(0, countChars('', 'a'));
+        $this->assertEquals(2, countChars('OpPa', 'p'));
+        $this->assertEquals(2, countChars('OpPa', 'P'));
     }
 }

@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(mysubstr('got', 3) === 'got');
-        assert(mysubstr('got', 2) === 'go');
-        assert(mysubstr('got', 1) === 'g');
+        $this->assertEquals('got', mysubstr('got', 3));
+        $this->assertEquals('go', mysubstr('got', 2));
+        $this->assertEquals('g', mysubstr('got', 1));
     }
 }

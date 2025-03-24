@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(!isMister('8234782'));
-        assert(!isMister('Joker'));
-        assert(isMister('Mister'));
+        $this->assertFalse(isMister('8234782'));
+        $this->assertFalse(isMister('Joker'));
+        $this->assertTrue(isMister('Mister'));
     }
 }

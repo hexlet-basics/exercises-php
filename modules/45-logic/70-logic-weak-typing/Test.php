@@ -10,11 +10,11 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(isFalsy(''));
-        assert(!isFalsy(' '));
-        assert(isFalsy(null));
-        assert(isFalsy(false));
-        assert(!isFalsy(true));
-        assert(!isFalsy(3));
+        $this->assertTrue(isFalsy(''));
+        $this->assertFalse(isFalsy(' '));
+        $this->assertTrue(isFalsy(null));
+        $this->assertTrue(isFalsy(false));
+        $this->assertFalse(isFalsy(true));
+        $this->assertFalse(isFalsy(3));
     }
 }

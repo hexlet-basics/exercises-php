@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(truncate('Hexlet', 3) === 'Hex...');
-        assert(truncate('Hello world', 5) === 'Hello...');
+        $this->assertEquals('Hex...', truncate('Hexlet', 3) );
+        $this->assertEquals('Hello...', truncate('Hello world', 5));
     }
 }

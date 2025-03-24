@@ -10,10 +10,10 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(whoIsThisHouseToStarks('Tully') === 'friend');
-        assert(whoIsThisHouseToStarks('Karstark') === 'friend');
-        assert(whoIsThisHouseToStarks('Lannister') === 'enemy');
-        assert(whoIsThisHouseToStarks('Martell') === 'neutral');
-        assert(whoIsThisHouseToStarks('undefined') === 'neutral');
+        $this->assertEquals('friend', whoIsThisHouseToStarks('Tully'));
+        $this->assertEquals('friend', whoIsThisHouseToStarks('Karstark'));
+        $this->assertEquals('enemy', whoIsThisHouseToStarks('Lannister'));
+        $this->assertEquals('neutral', whoIsThisHouseToStarks('Martell'));
+        $this->assertEquals('neutral', whoIsThisHouseToStarks('undefined'));
     }
 }

@@ -10,10 +10,10 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(isLeapYear(2016));
-        assert(isLeapYear(2000));
-        assert(!isLeapYear(2017));
-        assert(!isLeapYear(2018));
-        assert(!isLeapYear(1900));
+        $this->assertTrue(isLeapYear(2016));
+        $this->assertTrue(isLeapYear(2000));
+        $this->assertFalse(isLeapYear(2017));
+        $this->assertFalse(isLeapYear(2018));
+        $this->assertFalse(isLeapYear(1900));
     }
 }

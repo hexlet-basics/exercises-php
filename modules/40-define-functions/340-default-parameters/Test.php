@@ -12,9 +12,10 @@ class Test extends TestCase
 
         $expected1 = '****1234';
         $actual1 = getHiddenCard('1234123412341234');
-        assert($actual1 === $expected1);
+        $this->assertEquals($expected1, $actual1);
+
         $expected2 = '**4321';
         $actual2 = getHiddenCard('1234123412344321', 2);
-        assert($actual2 === $expected2);
+        $this->assertEquals($expected2, $actual2);
     }
 }

@@ -10,8 +10,8 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(joinNumbersFromRange(2, 2) === '2');
-        assert(joinNumbersFromRange(1, 5) === '12345');
-        assert(joinNumbersFromRange(10, 12) === '101112');
+        $this->assertEquals('2', joinNumbersFromRange(2, 2));
+        $this->assertEquals('12345', joinNumbersFromRange(1, 5));
+        $this->assertEquals('101112', joinNumbersFromRange(10, 12));
     }
 }

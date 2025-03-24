@@ -11,7 +11,7 @@ class Test extends TestCase
     public function test()
     {
         require 'index.php';
-        $randomSide = $this->getActualOutput();
+        $randomSide = $this->getActualOutputForAssertion();
         $this->assertThat(
             $randomSide,
             $this->logicalAnd(

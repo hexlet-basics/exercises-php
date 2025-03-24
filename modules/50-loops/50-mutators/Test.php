@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
         $text = 'I never look back';
-        assert(makeItFunny($text, 3) === 'I NevEr LooK bAck');
-        assert(makeItFunny('hello', 2) === 'hElLo');
+        $this->assertEquals('I NevEr LooK bAck', makeItFunny($text, 3));
+        $this->assertEquals('hElLo', makeItFunny('hello', 2));
     }
 }

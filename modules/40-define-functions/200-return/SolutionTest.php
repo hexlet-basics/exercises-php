@@ -4,13 +4,13 @@ namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
 use PHPUnit\Framework\TestCase;
 
-class Test extends TestCase
+class SolutionTest extends TestCase
 {
     public function test()
     {
         require 'index.php';
 
         $expected = 'hurray! hurray! hurray!';
-        assert(sayHurrayThreeTimes() === $expected);
+        $this->assertEquals($expected, sayHurrayThreeTimes());
     }
 }

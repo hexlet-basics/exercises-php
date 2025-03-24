@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(getNumberExplanation(0) === 'just a number');
-        assert(getNumberExplanation(666) === 'devil number');
-        assert(getNumberExplanation(42) === 'answer for everything');
-        assert(getNumberExplanation(7) === 'prime number');
+        $this->assertEquals('just a number', getNumberExplanation(0));
+        $this->assertEquals('devil number', getNumberExplanation(666));
+        $this->assertEquals('answer for everything', getNumberExplanation(42));
+        $this->assertEquals('prime number', getNumberExplanation(7));
     }
 }

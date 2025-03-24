@@ -9,9 +9,9 @@ class Test extends TestCase
     public function test()
     {
         require 'index.php';
-        assert(invertCase('one') === 'ONE');
-        assert(invertCase('TWO') === 'two');
-        assert(invertCase('ThRee') === 'tHrEE');
-        assert(invertCase('ПрИвЕт!') === 'пРиВеТ!');
+        $this->assertEquals('ONE', invertCase('one'));
+        $this->assertEquals('two', invertCase('TWO'));
+        $this->assertEquals('tHrEE', invertCase('ThRee'));
+        $this->assertEquals('пРиВеТ!', invertCase('ПрИвЕт!'));
     }
 }

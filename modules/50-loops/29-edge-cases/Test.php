@@ -12,12 +12,12 @@ class Test extends TestCase
 
         $str = 'Sansa Stark';
 
-        assert(isArgumentsForSubstrCorrect($str, -1, 3) === false);
-        assert(isArgumentsForSubstrCorrect($str, 4, 100) === false);
-        assert(isArgumentsForSubstrCorrect($str, 10, 10) === false);
-        assert(isArgumentsForSubstrCorrect($str, 11, 1) === false);
-        assert(isArgumentsForSubstrCorrect($str, 11, 0) === false);
-        assert(isArgumentsForSubstrCorrect($str, 3, 3) === true);
-        assert(isArgumentsForSubstrCorrect($str, 10, 1) === true);
+        $this->assertFalse(isArgumentsForSubstrCorrect($str, -1, 3),);
+        $this->assertFalse(isArgumentsForSubstrCorrect($str, 4, 100),);
+        $this->assertFalse(isArgumentsForSubstrCorrect($str, 10, 10),);
+        $this->assertFalse(isArgumentsForSubstrCorrect($str, 11, 1),);
+        $this->assertFalse(isArgumentsForSubstrCorrect($str, 11, 0),);
+        $this->assertTrue(isArgumentsForSubstrCorrect($str, 3, 3));
+        $this->assertTrue(isArgumentsForSubstrCorrect($str, 10, 1));
     }
 }

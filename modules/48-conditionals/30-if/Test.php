@@ -10,7 +10,7 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(guessNumber(100500) === 'Try again!');
-        assert(guessNumber(42) === 'You win!');
+        $this->assertEquals('Try again!', guessNumber(100500));
+        $this->assertEquals('You win!', guessNumber(42));
     }
 }

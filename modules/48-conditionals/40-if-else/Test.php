@@ -12,10 +12,10 @@ class Test extends TestCase
 
         $expected1 = 'https://yandex.ru';
         $actual1 = normalizeUrl('yandex.ru');
-        assert($actual1 === $expected1);
+        $this->assertEquals($expected1, $actual1);
 
         $expected2 = 'https://yandex.ru';
         $actual2 = normalizeUrl('http://yandex.ru');
-        assert($actual2 === $expected2);
+        $this->assertEquals($expected2, $actual2);
     }
 }

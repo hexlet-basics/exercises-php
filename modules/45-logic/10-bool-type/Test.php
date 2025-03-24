@@ -10,9 +10,9 @@ class Test extends TestCase
     {
         require 'index.php';
 
-        assert(!isPensioner(23));
-        assert(isPensioner(70));
-        assert(isPensioner(60));
-        assert(!isPensioner(59));
+        $this->assertFalse(isPensioner(23));
+        $this->assertFalse(isPensioner(59));
+        $this->assertTrue(isPensioner(60));
+        $this->assertTrue(isPensioner(70));
     }
 }

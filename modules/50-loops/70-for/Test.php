@@ -9,8 +9,9 @@ class Test extends TestCase
     public function test()
     {
         require 'index.php';
-        assert(sumOfSeries(1, 1) === 1);
-        assert(sumOfSeries(1, 2) === 3);
-        assert(sumOfSeries(7, 9) === 24);
+
+        $this->assertEquals(1, sumOfSeries(1, 1));
+        $this->assertEquals(3, sumOfSeries(1, 2));
+        $this->assertEquals(24, sumOfSeries(7, 9));
     }
 }
