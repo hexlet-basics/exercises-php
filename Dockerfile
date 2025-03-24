@@ -31,7 +31,7 @@ RUN mkdir -p /usr/local/etc/php/conf.d/ && \
   echo "zend_extension=xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini && \
   echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/xdebug.ini
 
-COPY composer.json composer.lock .
-RUN composer install
+COPY composer.json composer.lock ./
+RUN composer install --prefer-dist --optimize-autoloader
 
 COPY . .
