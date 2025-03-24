@@ -1,9 +1,5 @@
 {
-  "require": {
-    "squizlabs/php_codesniffer": "^3.7"
-  },
   "autoload": {
-    "psr-4": {"HexletBasics\\": "src/"},
     "files": [
       "src/Functions.php"
     ]
@@ -12,9 +8,10 @@
   },
   "require-dev": {
     "symfony/var-dumper": "^7.2",
+    "phpunit/phpunit": "^11",
+    "squizlabs/php_codesniffer": "^3.7",
     "codedungeon/phpunit-result-printer": "^0.32.0",
-    "phpunit/phpunit": "^9.5.16",
-    "ngyuki/phpower": "dev-php83"
+    "robiningelbrecht/phpunit-pretty-print": "^1.4"
   },
     "repositories": [
       {

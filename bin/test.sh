@@ -1,2 +1,1 @@
-php /exercises-php/vendor/bin/phpunit --colors=always \
-  -c /exercises-php/phpunit.xml .
+php /exercises-php/vendor/bin/phpunit -c /exercises-php/phpunit.xml .
