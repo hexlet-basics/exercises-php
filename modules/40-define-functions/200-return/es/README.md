@@ -60,7 +60,7 @@ function saludo()
 
 La instrucción `return` es especial. Toma la expresión que se encuentra a su derecha y la devuelve al código que llamó a la función. Tan pronto como PHP encuentra `return`, la ejecución de la función termina:
 
-![Sum-php](assets/sum-php.jpg)
+![Sum-php](../assets/sum-php.jpg)
 
 ```php
 <?php
