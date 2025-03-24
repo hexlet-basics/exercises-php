@@ -6,7 +6,7 @@ ENV COMPOSER_NO_INTERACTION=1
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV COMPOSER_HOME=/tmp
 ENV COMPOSER_VERSION=2.8.6
-ENV PATH=/exercises-php/bin:$PATH
+ENV PATH=/exercises-php/bin:/exercises-php/vendor/bin/:$PATH
 
 RUN apt-get update && \
   apt-get install -yqq --no-install-recommends \
