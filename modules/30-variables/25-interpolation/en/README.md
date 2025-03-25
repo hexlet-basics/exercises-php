@@ -15,6 +15,8 @@ It's a pretty simple case, but, and you'll probably agree, it looks a little uns
 There is a more convenient and elegant way to solve the same problem: interpolation. This is what it looks like:
 
 ```php
+<?php
+
 $firstName = 'Joffrey';
 $greeting = 'Hello';
 

@@ -18,6 +18,8 @@ theory: |
   Existe otra forma más conveniente: la **interpolación**. Así es como se ve:
 
   ```php
+  <?php
+
   $firstName = 'Joffrey';
   $greeting = 'Hola';
 

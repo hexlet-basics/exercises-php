@@ -126,8 +126,8 @@ function doubleFive()
 Вопрос на самопроверку. Что выведет этот код?
 
 ```php
-
 <?php
+
 // Определение
 function run()
 {

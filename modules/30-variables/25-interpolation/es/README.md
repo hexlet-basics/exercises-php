@@ -14,6 +14,8 @@ Este es un caso simple, pero incluso aquí se requiere un esfuerzo para ver qué
 Existe otra forma más conveniente: la **interpolación**. Así es como se ve:
 
 ```php
+<?php
+
 $firstName = 'Joffrey';
 $greeting = 'Hola';
 

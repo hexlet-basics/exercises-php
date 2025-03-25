@@ -10,10 +10,10 @@ https://replit.com/@hexlet/php-basics-strings-newline
 
 Результат:
 
-```php
+<pre class='hexlet-basics-output'>
 - Are you hungry?
 - Aaaarrrgh!
-```
+</pre>
 
 `\n` — это специальный символ. В литературе его часто обозначают как *LF* (Line Feed). С точки зрения компьютера — это один невидимый символ перевода строки:
 

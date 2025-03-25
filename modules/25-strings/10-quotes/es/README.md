@@ -5,6 +5,8 @@ En esta lección vamos a hablar sobre las cadenas de texto y por qué necesitamo
 Cualquier carácter individual entre comillas es una **cadena de texto**. Por ejemplo:
 
 ```php
+<?php
+
 'Hola'
 'Adiós'
 'G'
@@ -51,9 +53,9 @@ Lo mismo ocurre al revés. Si queremos usar comillas dobles dentro de una cadena
 
 Ahora imaginemos que queremos crear esta cadena:
 
-```php
+<pre class='hexlet-basics-output'>
 La madre del dragón dijo "No"
-```
+</pre>
 
 En esta cadena hay comillas simples y dobles. En esta situación, debemos indicarle al intérprete que cada comilla debe considerarse parte de la cadena, no como el inicio o el final.
 

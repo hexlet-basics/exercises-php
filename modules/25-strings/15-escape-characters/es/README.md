@@ -10,10 +10,10 @@ https://replit.com/@hexlet/php-basics-strings-newline
 
 Resultado:
 
-```php
+<pre class='hexlet-basics-output'>
 - ¿Tienes hambre?
 - ¡Aaaarrrgh!
-```
+</pre>
 
 `\n` es un carácter especial. En la literatura a menudo se le llama *LF* (Line Feed). Desde el punto de vista de la computadora, es un solo carácter de salto de línea invisible:
 

@@ -5,6 +5,8 @@ Implement a function, `truncate()`, which trims a string passed to the function 
 2. The number of characters to keep.
 
 ```php
+<?php
+
 // Passing text directly
 // Trim the text, leaving 2 characters
 truncate('hexlet', 2)  // 'he...'
@@ -20,6 +22,7 @@ This function can be implemented in different ways, we'll tell you just one of t
 
   ```php
   <?php
+
   $word = 'welcome';
   // You can pass parameters to the function via variables
   $length = 3;

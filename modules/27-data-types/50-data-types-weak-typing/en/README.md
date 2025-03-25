@@ -4,6 +4,8 @@ We know two different data types: numbers and strings. We could, for example, ad
 But what if you add a number to a string?
 
 ```php
+<?php
+
 print_r(1 + '7'); // => 8
 ```
 

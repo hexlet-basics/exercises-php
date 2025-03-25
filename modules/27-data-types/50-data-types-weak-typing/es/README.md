@@ -1,6 +1,8 @@
 Podíamos sumar números porque la operación de suma es una operación para el tipo "número". Y si aplicamos esta operación a un número y una cadena:
 
 ```php
+<?php
+
 print_r(1 + '7'); // => 8
 ```
 

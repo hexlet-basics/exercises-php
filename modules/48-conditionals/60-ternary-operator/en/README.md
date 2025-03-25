@@ -32,7 +32,11 @@ function abs($number)
 }
 ```
 
-It generally looks like this: `<predicate> ? <expression on true> : <expression on false>`.
+It generally looks like this:
+
+```text
+<predicate> ? <expression on true> : <expression on false>
+```
 
 Let's rewrite the initial version of `getTypeOfSentence()` in the same way:
 

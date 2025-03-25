@@ -9,6 +9,8 @@ theory: |
   Cualquier carácter individual entre comillas es una **cadena de texto**. Por ejemplo:
 
   ```php
+  <?php
+
   'Hola'
   'Adiós'
   'G'
@@ -55,9 +57,9 @@ theory: |
 
   Ahora imaginemos que queremos crear esta cadena:
 
-  ```php
+  <pre class='hexlet-basics-output'>
   La madre del dragón dijo "No"
-  ```
+  </pre>
 
   En esta cadena hay comillas simples y dobles. En esta situación, debemos indicarle al intérprete que cada comilla debe considerarse parte de la cadena, no como el inicio o el final.
 

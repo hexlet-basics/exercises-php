@@ -2,6 +2,8 @@
 Реализуйте функцию `sayHurrayThreeTimes()`, которая возвращает строку 'hurray! hurray! hurray!'.
 
 ```php
+<?php
+
 $hurray = sayHurrayThreeTimes();
 print_r($hurray); // => 'hurray! hurray! hurray!'
 ```

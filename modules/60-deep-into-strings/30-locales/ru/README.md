@@ -11,6 +11,8 @@
 В PHP для управления локалью используется функция [setlocale()](https://secure.php.net/manual/ru/function.setlocale.php). Эта функция настраивает локаль глобально. Ее вызов влияет на все последующие функции, опирающиеся на локализацию:
 
 ```php
+<?php
+
 setlocale(int $category, string $locales, string ...$rest): string|false
 ```
 

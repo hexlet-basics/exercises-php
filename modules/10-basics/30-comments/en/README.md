@@ -20,6 +20,7 @@ Or it can go after code on the same line:
 
 ```php
 <?php
+
 print_r('I am the King'); // For Lannisters!
 ```
 
@@ -29,6 +30,7 @@ _Multiline comments_ start with `/*` and end with `*/`. Each line between them m
 
 ```php
 <?php
+
 /*
  * The night is dark and
  * full of terrors.

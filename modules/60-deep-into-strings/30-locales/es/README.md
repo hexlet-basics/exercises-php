@@ -11,6 +11,8 @@ La localización es importante en el software. Los usuarios siempre esperan que 
 En PHP, la función [setlocale()](https://secure.php.net/manual/es/function.setlocale.php) se utiliza para gestionar la localización. Esta función configura la localización de forma global. Su llamada afecta a todas las funciones posteriores que dependen de la localización:
 
 ```php
+<?php
+
 setlocale(int $category, string $locales, string ...$rest): string|false
 ```
 

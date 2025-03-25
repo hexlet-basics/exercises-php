@@ -33,8 +33,8 @@ function abs($number)
 
 Общий паттерн выглядит так:
 
-```php
-<predicate> ? <expression on true> : <expression on false>`
+```text
+<predicate> ? <expression on true> : <expression on false>
 ```
 
 ![Тернарный оператор](assets/ternary-operator.png)

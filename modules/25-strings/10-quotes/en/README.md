@@ -1,5 +1,7 @@
 
 ```php
+<?php
+
 'Hello'
 'Goodbye'
 
@@ -47,9 +49,9 @@ It works the other way too. If you want to use double quotes inside a string, yo
 
 Now, what if we want to create a string like this?
 
-```
+<pre class='hexlet-basics-output'>
 Dragon's mother said "No"
-```
+</pre>
 
 It has both single and double quotes. What can we do in this case? We need to somehow tell the interpreter to consider each quote as part of the string, not the beginning or the end.
 

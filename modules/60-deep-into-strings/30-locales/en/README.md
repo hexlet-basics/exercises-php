@@ -8,6 +8,8 @@ Localization is important in software. The user will always expect software (inc
 PHP uses the  [setlocale()](https://www.php.net/manual/en/function.setlocale.php) function to control the locale. This function configures the locale globally. I.e., calling it affects all subsequent functions that rely on localization.
 
 ```php
+<?php
+
 string setlocale ( int $category , string $locale [, string $... ] )
 ```
 

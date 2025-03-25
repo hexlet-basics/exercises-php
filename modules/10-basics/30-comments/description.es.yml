@@ -23,6 +23,7 @@ theory: |
 
     ```php
     <?php
+
     /*
      * La noche es oscura y
      * está llena de terrores.

@@ -4,6 +4,8 @@ Implementa la función `truncate()`, que recorta la cadena pasada como argumento
 2. El número de caracteres que se deben dejar
 
 ```php
+<?php
+
 // Pasando el texto directamente
 // Recortar el texto dejando 2 caracteres
 truncate('hexlet', 2)  // 'he...'
@@ -19,6 +21,7 @@ Puedes implementar esta función de diferentes maneras, solo te daremos una pist
 
   ```php
   <?php
+
   $word = 'bienvenido';
   // Puedes pasar los parámetros a la función a través de variables
   $length = 3;

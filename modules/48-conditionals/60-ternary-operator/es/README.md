@@ -33,8 +33,8 @@ function abs($number)
 
 El patrón general se ve así:
 
-```php
-<predicado> ? <expresión si verdadero> : <expresión si falso>`
+```text
+<predicado> ? <expresión si verdadero> : <expresión si falso>
 ```
 
 ![Operador ternario](assets/ternary-operator.png)

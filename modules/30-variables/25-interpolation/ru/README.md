@@ -14,6 +14,8 @@ print_r($greeting . ", " . $firstName . "!"); // => 'Hello, Joffrey!'
 Есть другой более удобный способ — **интерполяция**. Так это выглядит:
 
 ```php
+<?php
+
 $firstName = 'Joffrey';
 $greeting = 'Hello';
 

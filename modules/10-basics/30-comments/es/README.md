@@ -19,6 +19,7 @@ Los comentarios en PHP pueden ser de dos tipos:
 
   ```php
   <?php
+
   /*
    * La noche es oscura y
    * está llena de terrores.
