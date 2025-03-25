@@ -38,6 +38,8 @@ It generally looks like this:
 <predicate> ? <expression on true> : <expression on false>
 ```
 
+![Ternary operator](../assets/ternary-operator.png)
+
 Let's rewrite the initial version of `getTypeOfSentence()` in the same way:
 
 Before:

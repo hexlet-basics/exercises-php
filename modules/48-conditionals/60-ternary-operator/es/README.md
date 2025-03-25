@@ -37,7 +37,7 @@ El patrón general se ve así:
 <predicado> ? <expresión si verdadero> : <expresión si falso>
 ```
 
-![Operador ternario](assets/ternary-operator.png)
+![Operador ternario](../assets/ternary-operator.png)
 
 Vamos a reescribir la función `getTypeOfSentence()` de la misma manera. Veamos cómo era antes:
 

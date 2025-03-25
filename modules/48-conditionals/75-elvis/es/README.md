@@ -48,4 +48,4 @@ function generateGreeting($name, $nickname)
 
 El operador `?:` es un operador binario que devuelve el primer operando si es verdadero, y el segundo en caso contrario. También se le llama Elvis, porque suena parecido a _else if_. Y también por su similitud visual con Elvis Presley:
 
-![Operador Elvis](https://i.imgur.com/eoLgBHN.png)
+![Operador Elvis](../assets/elvis.png)

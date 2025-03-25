@@ -50,6 +50,6 @@ function generateGreeting($name, $nickname)
 
 It's called Elvis because:
 
-![Elvis operator](https://i.imgur.com/eoLgBHN.png)
+![Elvis operator](../assets/elvis.png)
 
 Also, Elvis sounds a bit like "else if".

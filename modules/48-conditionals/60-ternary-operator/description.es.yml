@@ -41,8 +41,6 @@ theory: |
   <predicado> ? <expresión si verdadero> : <expresión si falso>
   ```
 
-  ![Operador ternario](assets/ternary-operator.png)
-
   Vamos a reescribir la función `getTypeOfSentence()` de la misma manera. Veamos cómo era antes:
 
     ```php

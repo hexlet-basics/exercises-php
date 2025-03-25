@@ -37,7 +37,7 @@ function abs($number)
 <predicate> ? <expression on true> : <expression on false>
 ```
 
-![Тернарный оператор](assets/ternary-operator.png)
+![Тернарный оператор](../assets/ternary-operator.png)
 
 Давайте перепишем начальный вариант `getTypeOfSentence()` аналогично. Посмотрим, как было:
 
