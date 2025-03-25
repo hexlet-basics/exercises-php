@@ -60,7 +60,7 @@ function greeting()
 
 `return` — особая инструкция, которая берет выражение, записанное справа. Далее она отдает его наружу тому коду, который вызвал метод. Как только PHP натыкается на `return`, выполнение функции на этом завершается:
 
-![how sum function works in PHP](../assets/sum-php.jpg)
+![how sum function works in PHP](./sum-php.jpg)
 
 ```php
 <?php
