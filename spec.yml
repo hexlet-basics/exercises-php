@@ -4,7 +4,7 @@ language:
   docker_image: "hexletbasics/exercises-php"
   extension: php
   exercise_filename: index.php
-  exercise_test_filename: Test.php
+  exercise_test_filename: SolutionTest.php
   learn_as: first_language
   progress: completed
   name: PHP
