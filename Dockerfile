@@ -32,6 +32,10 @@ RUN mkdir -p /usr/local/etc/php/conf.d/ && \
   echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/xdebug.ini
 
 COPY composer.json composer.lock ./
-RUN composer install --prefer-dist --optimize-autoloader
+RUN composer install --prefer-dist --optimize-autoloader && \
+  composer clear-cache && \
+  rm -rf /tmp/* && \
+  # NOTE: Хак на случай, если --prefer-dist не срабатывает и качаются зависимости из исходников
+  find vendor -type d -name '.git' -exec rm -rf \{\} \+
 
 COPY . .
