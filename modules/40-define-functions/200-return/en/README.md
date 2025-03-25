@@ -56,7 +56,7 @@ function greeting()
 `return` is a special instruction that takes the expression written on the right and passes it outside to the code that called the method. As soon as PHP encounters `return`, the function is terminated.
 
 <!-- TODO: translate img -->
-<!-- ![how sum function works in PHP](./assets/sum-php.jpg) -->
+<!-- ./assets/sum-php.jpg -->
 
 ```php
 <?php
