@@ -11,6 +11,5 @@ mysubstr($str, 1); // 'I'
 mysubstr($str, 7); // 'If I lo'
 ```
 
-https://replit.com/@hexlet/php-basics-edge-cases-mysubstr
 
 Use the same approach as you did for the function to flip the string from the lesson: assemble the resulting string in a loop by looping through the initial string up to a certain point.

@@ -18,8 +18,6 @@ function reverseString($str)
 }
 ```
 
-https://replit.com/@hexlet/php-basics-for-reversestring
-
 Этот код можно прочитать так:
 
 > Цикл с индексом `$i` повторяется, пока соблюдается условие `$i < strlen($str)`, и после каждого шага `$i` увеличивается на 1

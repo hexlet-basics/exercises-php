@@ -20,7 +20,6 @@ echo '¡Hola, Mundo!';
 // => ¡Hola, Mundo!
 ```
 
-https://replit.com/@hexlet/php-basics-hello-world-echo
 
 La salida en la pantalla se realiza utilizando el comando especial `echo`. Después de él, se especifica la cadena a mostrar entre comillas simples. Al final, es importante colocar un punto y coma.
 
@@ -37,7 +36,6 @@ print_r('¡Hola, Mundo!');
 // => ¡Hola, Mundo!
 ```
 
-https://replit.com/@hexlet/php-basics-hello-world-printr
 
 En este caso, la cadena se especifica entre paréntesis justo después del nombre de la función. Al final, también es necesario colocar un punto y coma.
 

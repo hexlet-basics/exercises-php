@@ -39,8 +39,6 @@ $who = "dragon's" . 'mother';
 print_r($who);
 ```
 
-Run it on [repl.it](https://repl.it/languages/php) and experiment a little with it.
-
 Now, back to our currency program. We'll record the dollar value in yuans as a separate variable. Let's calculate the price of 50 euros in dollars by multiplying it by `1.25`. Let's say that 1 dollar is 6.91 yuans:
 
 ```php

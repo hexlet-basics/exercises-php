@@ -38,6 +38,5 @@ reverse($name); // 'narB'
 reverse(''); // ''
 ```
 
-https://replit.com/@hexlet/php-basics-loops-using-reverse
 
 Perhaps the only tricky part here is getting a feel of how the string itself is built. Since each next character is attached to the resulting string on the left, the string ends up reversed.

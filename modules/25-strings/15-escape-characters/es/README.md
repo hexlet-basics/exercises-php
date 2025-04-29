@@ -6,7 +6,6 @@ A veces necesitamos colocar varias líneas una tras otra. Para hacer esto, debem
 print_r("- ¿Tienes hambre?\n- ¡Aaaarrrgh!");
 ```
 
-https://replit.com/@hexlet/php-basics-strings-newline
 
 Resultado:
 

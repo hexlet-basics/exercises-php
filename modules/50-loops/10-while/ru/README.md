@@ -44,7 +44,6 @@ printNumbers(3);
 // => finished!
 ```
 
-https://replit.com/@hexlet/php-basics-while
 
 В коде функции использован цикл `while`. Он состоит из трех элементов:
 

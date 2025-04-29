@@ -6,7 +6,6 @@
 print_r("- Are you hungry?\n- Aaaarrrgh!");
 ```
 
-https://replit.com/@hexlet/php-basics-strings-newline
 
 Результат:
 

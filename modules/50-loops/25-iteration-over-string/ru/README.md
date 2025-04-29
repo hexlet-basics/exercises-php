@@ -24,7 +24,6 @@ printNameBySymbol($name);
 // => 'a'
 ```
 
-https://replit.com/@hexlet/php-basics-loops-using-printnamebysymbol
 
 Самое главное в этом коде — поставить правильное условие в `while`. Это можно сделать сразу двумя способами:
 

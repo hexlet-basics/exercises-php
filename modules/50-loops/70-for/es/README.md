@@ -18,7 +18,6 @@ function reverseString($str)
 }
 ```
 
-https://replit.com/@hexlet/php-basics-for-reversestring
 
 Este código se puede leer de la siguiente manera:
 

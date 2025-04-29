@@ -39,6 +39,5 @@ reverse($name); // 'narB'
 reverse(''); // ''
 ```
 
-https://replit.com/@hexlet/php-basics-loops-using-reverse
 
 El único aspecto complicado de este código es comprender cómo se construye la cadena. Dado que cada carácter siguiente se adjunta a la cadena resultante desde la izquierda, al final la cadena queda invertida.

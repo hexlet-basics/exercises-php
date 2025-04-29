@@ -10,6 +10,5 @@ mysubstr($str, 1); // 'I'
 mysubstr($str, 7); // 'If I lo'
 ```
 
-https://replit.com/@hexlet/php-basics-edge-cases-mysubstr
 
 Utiliza el mismo enfoque que en la función de inversión de cadenas del tutorial: construye la cadena resultante en un bucle, recorriendo la cadena original hasta un punto determinado.
