@@ -12,7 +12,6 @@ Output to the screen is done with a special command `echo`, followed by a single
 echo 'Hello, World!'; // => Hello, World!
 ```
 
-https://replit.com/@hexlet/php-basics-hello-world-echo
 
 There are other ways to display a string on the screen. For example, you can use the function (a concept we will get to know later) `print_r()`. In this case, the string is entered in parentheses immediately after the function name. You also need to put `;` at the end.
 
@@ -22,6 +21,5 @@ There are other ways to display a string on the screen. For example, you can use
 print_r('Hello, World!');
 ```
 
-https://replit.com/@hexlet/php-basics-hello-world-printr
 
 In simple situations, there's no difference between these constructions. You can use either one method of output or the other. In more complex cases, where you want to display not just numbers or strings, but, for example, arrays, `echo` won't be able to do this, but `print_r()` will display everything.

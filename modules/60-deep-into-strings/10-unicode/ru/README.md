@@ -45,8 +45,6 @@
 echo strlen('Привет!'); // => 13
 ```
 
-https://replit.com/@hexlet/php-basics-strings-deeper-strlen
-
 Языки разделились на два лагеря. Одни языки встроили поддержку в уже существующие функции — в итоге переход на UTF-8 никак не отразился на процессе программирования. Среди таких языков есть Java, Ruby, JavaScript.
 
 А вот PHP пошел своим путем. Для работы с многобайтовыми кодировками в язык добавили отдельное [расширение по работе с многобайтовыми строками](https://php.net/manual/ru/book.mbstring.php). По большей части оно добавляет множество функций для работы со строками, с той лишь разницей, что каждая функция из них имеет префикс `mb_` (_multibyte_):
@@ -57,8 +55,6 @@ https://replit.com/@hexlet/php-basics-strings-deeper-strlen
 echo mb_strlen('Привет!'); // => 7
 ```
 
-https://replit.com/@hexlet/php-strings-deeper-mbstrlen
-
 А вот достойной альтернативы взятию конкретного символа в строке по индексу не существует. Такую задачу нужно выполнять с помощью функции `mb_substr()`:
 
 ```php
@@ -67,5 +63,3 @@ https://replit.com/@hexlet/php-strings-deeper-mbstrlen
 $str = 'Привет';
 $symbol = mb_substr($str, 2, 1); // и
 ```
-
-https://replit.com/@hexlet/php-basics-strings-deeper-mbsubstr

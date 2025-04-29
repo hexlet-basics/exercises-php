@@ -19,7 +19,6 @@ You can add two strings. This sort of program:
 print_r('Dragon' . 'stone');
 ```
 
-https://replit.com/@hexlet/php-basics-strings-concatenation
 
 will display `Dragonstone` — the result of the binary operator `.` with the operands 'Dragon' and 'stone'.
 

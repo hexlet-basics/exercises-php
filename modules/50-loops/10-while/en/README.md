@@ -39,7 +39,6 @@ function printNumbers($lastNumber)
 printNumbers(3);
 ```
 
-https://replit.com/@hexlet/php-basics-while
 
 <pre class='hexlet-basics-output'>
 1

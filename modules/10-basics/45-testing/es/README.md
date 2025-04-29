@@ -23,8 +23,6 @@ Aquí tienes un ejemplo sencillo: imprimir la cadena `Hello, World!`. Supongamos
 
 En la pantalla aparece una pista. El signo `+` indica lo que imprimió tu código. El signo `-` indica lo que se esperaba. Al comparar estos dos valores, puedes ver el error. En el ejemplo anterior, se puede ver que falta la letra _H_ en la salida.
 
-Además de nuestras pruebas, es muy útil experimentar con el código. Para ello, puedes utilizar el servicio [repl.it](https://repl.it/languages/php). Sería ideal si ejecutas todo el código presente en las lecciones por tu cuenta.
-
 ---
 
 A veces, durante la resolución de una tarea, puede parecer que has hecho todo correctamente, pero el sistema no acepta la solución. Este comportamiento es prácticamente inexistente. Las pruebas no funcionales simplemente no pueden llegar al sitio web, se ejecutan automáticamente después de cada cambio. En la gran mayoría de estos casos (y todos nuestros proyectos en conjunto han realizado millones de verificaciones a lo largo de muchos años), el error se encuentra en el código de la solución. Puede ser muy sutil, como haber ingresado accidentalmente una letra rusa en lugar de una letra en inglés, haber utilizado minúsculas en lugar de mayúsculas o haber olvidado imprimir una coma. Otros casos son más complicados. Es posible que tu solución funcione para un conjunto de datos de entrada, pero no funcione para otro. Por lo tanto, siempre lee atentamente la descripción de la tarea y la salida de las pruebas. Casi seguro que habrá una indicación del error.

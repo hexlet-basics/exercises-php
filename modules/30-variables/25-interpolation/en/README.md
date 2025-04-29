@@ -23,7 +23,6 @@ $greeting = 'Hello';
 print_r("{$greeting}, {$firstName}!"); // => Hello, Joffrey!
 ```
 
-https://replit.com/@hexlet/php-basics-interpolation
 
 We just created one line and inserted variables into it in the right places using curly brackets (`{}`). It's like we have a blank form where we can enter the desired values. And we no longer have to worry about separate strings for punctuation marks and spaces, all of these characters already exist in our template string.
 

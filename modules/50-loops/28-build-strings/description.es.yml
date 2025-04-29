@@ -43,7 +43,6 @@ theory: |
   reverse(''); // ''
   ```
 
-  https://replit.com/@hexlet/php-basics-loops-using-reverse
 
   El único aspecto complicado de este código es comprender cómo se construye la cadena. Dado que cada carácter siguiente se adjunta a la cadena resultante desde la izquierda, al final la cadena queda invertida.
 
@@ -60,7 +59,6 @@ instructions: |
   mysubstr($str, 7); // 'If I lo'
   ```
 
-  https://replit.com/@hexlet/php-basics-edge-cases-mysubstr
 
   Utiliza el mismo enfoque que en la función de inversión de cadenas del tutorial: construye la cadena resultante en un bucle, recorriendo la cadena original hasta un punto determinado.
 

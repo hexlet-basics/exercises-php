@@ -19,7 +19,6 @@ function reverseString($str)
 }
 ```
 
-https://replit.com/@hexlet/php-basics-for-reversestring
 
 You can read it like this: *«the loop with index `$i` repeats until `$i < strlen($str)` and after each step increases `$i` by 1»*.
 

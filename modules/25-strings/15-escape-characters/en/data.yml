@@ -6,8 +6,5 @@ definitions:
       is a special combination of characters in text. For example, `\n` means
       line feed.
 tips:
-  - >
-    Be sure to experiment with the output of different lines on the site
-    [https://repl.it/languages/php](https://repl.it/languages/php)
   - |
     [History of Line Translation](https://en.wikipedia.org/wiki/Newline)

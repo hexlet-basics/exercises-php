@@ -29,7 +29,6 @@ mysubstr($str, 1); // 'i'
 mysubstr($str, 7); // 'Si miro'
 ```
 
-https://replit.com/@hexlet/php-basics-edge-cases-mysubstr
 
 Parece que todo está bien. Pero nuestra función contiene muchos errores porque no tiene en cuenta los llamados **casos límite**. La función funciona correctamente solo con argumentos normales. Pero no sabemos cómo se comportará si le pasamos estas longitudes:
 

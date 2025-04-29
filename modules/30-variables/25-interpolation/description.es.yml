@@ -28,7 +28,6 @@ theory: |
   print_r("{$greeting}, {$firstName}!"); // => Hola, Joffrey!
   ```
 
-  https://replit.com/@hexlet/php-basics-interpolation
 
   En este ejemplo, creamos una sola cadena e insertamos las variables en el orden deseado utilizando llaves (`{}`). Creamos una plantilla donde se insertan los valores necesarios.
 

@@ -16,7 +16,6 @@ After years of popularizing Unicode, a miracle has happened, and now the vast ma
 echo strlen('Hello!'); // => 13
 ```
 
-https://replit.com/@hexlet/php-basics-strings-deeper-strlen
 
 Languages are divided into two camps. Some have built support into existing functions, and the switch to UTF-8 had no effect on programming. Among them are Java, Ruby, and JavaScript. But PHP went its own special way. In order to work with multibyte encodings, a separate [extension for working with multibyte strings](https://www.php.net/manual/en/book.mbstring.php), was added to the language, which for the most part adds many functions for working with strings, with the only difference that each function of them has the prefix `mb_` (multibyte).
 
@@ -26,7 +25,6 @@ Languages are divided into two camps. Some have built support into existing func
 echo mb_strlen('Hello!'); // => 7
 ```
 
-https://replit.com/@hexlet/php-strings-deeper-mbstrlen
 
 But there's no decent alternative to taking a specific character in the string by index. This task should be performed using `mb_substr()`.
 
@@ -36,5 +34,3 @@ But there's no decent alternative to taking a specific character in the string b
 $str = 'Привет';
 $symbol = mb_substr($str, 2, 1); // и
 ```
-
-https://replit.com/@hexlet/php-basics-strings-deeper-mbsubstr

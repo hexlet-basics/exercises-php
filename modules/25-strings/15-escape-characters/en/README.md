@@ -28,7 +28,6 @@ Not what we wanted. The lines are one after the other, not one below the other. 
 print_r("- Are you hungry?\n- Aaaarrrgh!");
 ```
 
-https://replit.com/@hexlet/php-basics-strings-newline
 
 result:
 

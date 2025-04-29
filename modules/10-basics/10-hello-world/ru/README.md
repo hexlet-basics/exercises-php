@@ -20,7 +20,6 @@ echo 'Hello, World!';
 // => Hello, World!
 ```
 
-https://replit.com/@hexlet/php-basics-hello-world-echo
 
 Вывод на экран выполняется с помощью специальной команды `echo`. После нее в одиночных кавычках указывается строка для вывода. В конце обязательно ставим точку с запятой.
 
@@ -37,7 +36,6 @@ print_r('Hello, World!');
 // => Hello, World!
 ```
 
-https://replit.com/@hexlet/php-basics-hello-world-printr
 
 В этом случае строка указывается в скобках сразу после имени функции. В конце также нужно ставить `;`.
 

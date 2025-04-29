@@ -24,7 +24,6 @@ $greeting = 'Hello';
 print_r("{$greeting}, {$firstName}!"); // => Hello, Joffrey!
 ```
 
-https://replit.com/@hexlet/php-basics-interpolation
 
 В этом примере мы создали одну строку и в нужном нам порядке вставили в нее переменные с помощью фигурных скобок (`{}`). Получился шаблон, куда внесены нужные значения.
 

@@ -22,8 +22,6 @@ theory: |
   }
   ```
 
-  https://replit.com/@hexlet/php-basics-for-reversestring
-
   Este código se puede leer de la siguiente manera:
 
   > El ciclo con el índice `$i` se repite mientras se cumpla la condición `$i < strlen($str)`, y después de cada paso, `$i` se incrementa en 1.

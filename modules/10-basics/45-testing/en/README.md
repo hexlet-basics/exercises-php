@@ -23,8 +23,6 @@ Here's a simple example, say you want to print the string `Hello, World!`. Now i
 
 A hint appears on the screen. The `+` sign on it indicates what your code printed. The `-` sign is what was expected. By comparing the two values, you can see the error. In the example above, you can see that the letter _H_ is missing from the output.
 
-In addition to our tests, it'll also be extremely useful to experiment with code. To do this, you can use [repl.it](https://repl.it/languages/php).  Ideally, you should execute all the code in the lessons yourself.
-
 ---
 
 Sometimes, it'll seem that you've done everything correctly, but the system seems to be fickle and won't make a decision. It's nigh on impossible for the system to just decide that it's wrong. Failed tests simply won't get as far as the site, they're automatically run after each change. In the vast majority of cases (all our projects have been run millions of times in total over many years) the error is in the solution code. It can be very imperceptible, maybe you used the wrong punctuation, or you used upper case instead of lower case, or you missed a comma. Other cases are more complicated. Maybe your solution works for one set of inputs, but not for another. So always read the instructions and test your output carefully. There will almost certainly be a sign of an error.

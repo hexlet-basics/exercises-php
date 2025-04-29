@@ -10,7 +10,6 @@ theory: |
   print_r("- ¿Tienes hambre?\n- ¡Aaaarrrgh!");
   ```
 
-  https://replit.com/@hexlet/php-basics-strings-newline
 
   Resultado:
 
@@ -58,7 +57,5 @@ definitions:
       una combinación especial de caracteres en un texto. Por ejemplo, `\n` es un salto de línea.
 
 tips:
-  - |
-    Asegúrate de experimentar con la impresión de diferentes cadenas en el sitio [https://repl.it/languages/php](https://repl.it/languages/php)
   - |
     [Historia del salto de línea](https://es.wikipedia.org/wiki/Salto_de_l%C3%ADnea#Historia)
