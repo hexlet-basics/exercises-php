@@ -3,5 +3,4 @@
 services:
   exercises:
     build: .
-    image: hexletbasics/exercises-php:cached
     command: make check
