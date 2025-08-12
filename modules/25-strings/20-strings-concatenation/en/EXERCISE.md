@@ -1,7 +1,7 @@
 
 Print
 
-```
+```text
 Winter came for the House of Frey.
 ```
 

@@ -54,8 +54,11 @@ El nombre del parámetro puede ser cualquier cosa, no está relacionado con la f
 
 Este parámetro es obligatorio. Si intentamos llamar a la función sin él, el intérprete mostrará un error:
 
-```sh
+```php
 getLastChar(); // este código no tiene sentido
+```
+
+```text
 ArgumentCountError: Too few arguments to function getLastChar(), 0 passed
 ```
 

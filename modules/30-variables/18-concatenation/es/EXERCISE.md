@@ -9,10 +9,10 @@ Para el cuerpo del correo electrónico, utiliza las variables `$info` e `$intro`
 
 El resultado en la pantalla debería lucir así:
 
-<pre class='hexlet-basics-output'>
+```text
 Hello, Joffrey!
 Here is important information about your account security.
 We couldn't verify you mother's maiden name.
-</pre>
+```
 
 Completa la tarea utilizando solamente dos `print_r()`.

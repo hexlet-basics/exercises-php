@@ -53,9 +53,9 @@ Lo mismo ocurre al revés. Si queremos usar comillas dobles dentro de una cadena
 
 Ahora imaginemos que queremos crear esta cadena:
 
-<pre class='hexlet-basics-output'>
+```text
 La madre del dragón dijo "No"
-</pre>
+```
 
 En esta cadena hay comillas simples y dobles. En esta situación, debemos indicarle al intérprete que cada comilla debe considerarse parte de la cadena, no como el inicio o el final.
 

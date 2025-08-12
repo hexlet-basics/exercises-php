@@ -26,9 +26,9 @@ Type conversion can be used within compound expressions:
 print_r('This is ' . ((string) 5));
 ```
 
-<pre class='hexlet-basics-output'>
+```text
   Это 5
-</pre>
+```
 
 In more complex situations (when using functions that are passed later) multiple conversions are encountered: `(string) (5 + ((int) '4'))`. The procedure for calculating this expression is as follows:
 

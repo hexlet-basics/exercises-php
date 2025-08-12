@@ -9,10 +9,10 @@ print_r("- ¿Tienes hambre?\n- ¡Aaaarrrgh!");
 
 Resultado:
 
-<pre class='hexlet-basics-output'>
+```text
 - ¿Tienes hambre?
 - ¡Aaaarrrgh!
-</pre>
+```
 
 `\n` es un carácter especial. En la literatura a menudo se le llama *LF* (Line Feed). Desde el punto de vista de la computadora, es un solo carácter de salto de línea invisible:
 

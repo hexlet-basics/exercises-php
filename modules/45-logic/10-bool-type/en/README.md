@@ -58,7 +58,9 @@ function isInfant($age)
 var_dump(isInfant(3));
 ```
 
-<pre class='hexlet-basics-output'>bool(false)</pre>
+```text
+bool(false)
+```
 
 Now, perform the check on a child who's six months old:
 
@@ -68,4 +70,6 @@ Now, perform the check on a child who's six months old:
 var_dump(isInfant(0.5));
 ```
 
-<pre class='hexlet-basics-output'>bool(true)</pre>
+```text
+bool(true)
+```

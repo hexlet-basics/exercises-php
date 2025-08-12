@@ -63,9 +63,9 @@ $yuansCount = $dollarsCount * $yuansPerDollar; // 431.875
 print_r('The price is ' . $yuansCount . ' yuans');
 ```
 
-<pre class='hexlet-basics-output'>
+```text
 The price is 431.875 yuans
-</pre>
+```
 
 Any variable can be part of any expression. At the moment of calculation, its value is substituted for the variable name.
 

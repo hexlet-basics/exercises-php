@@ -1,7 +1,7 @@
 
 Logical expressions can be combined with each other, creating increasingly tricky checks. One good example is password verification. As you'll likely know, many websites want a password of 8 до 20 characters on signup. Frankly, it's a weird restriction, but whatever, it is what it is. In mathematics, we'd write `8 < x < 20` (where `x` is the length of a particular password), but in PHP, this won't work. We would have to make two separate logical expressions and connect them with the special «AND» operator:
 
-```
+```text
 A password longer than 8 characters **AND** a password shorter than 20 characters.
 ```
 

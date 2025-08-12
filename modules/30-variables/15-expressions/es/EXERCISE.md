@@ -2,7 +2,7 @@ Escribe un programa que tome la cantidad inicial de euros de la variable `$canti
 
 Ejemplo de salida para 100 euros:
 
-```
+```text
 125
 863.75
 ```

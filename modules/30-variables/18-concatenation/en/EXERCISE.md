@@ -9,10 +9,10 @@ Use the variables `$info` and `$intro` for the body of the email, with the secon
 
 The result should look like this:
 
-<pre class='hexlet-basics-output'>
+```text
 Hello, Joffrey!
 Here is important information about your account security.
 We couldn't verify you mother's maiden name.
-</pre>
+```
 
 Try and do it using just two `print_r()` statements.

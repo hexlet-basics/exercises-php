@@ -44,7 +44,7 @@ var_dump($message); // => NULL
 
 Let's change the `greeting()` function so that it starts returning data instead of printing it. To do this, we need to return instead of printing to the screen
 
-```
+```php
 <?php
 
 function greeting()

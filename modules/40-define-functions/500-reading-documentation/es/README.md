@@ -7,7 +7,7 @@ La sección principal a la que los programadores vuelven constantemente es el ma
 
 Para describir las funciones se utiliza una notación propia (su propia sintaxis). Se parece un poco a PHP, pero aún así es diferente, en otras palabras, no es código PHP, sino solo una descripción de la firma de la función. Veamos la función `round()`, que redondea un número:
 
-```
+```php
 round(int|float $num, int $precision = 0, int $mode = PHP_ROUND_HALF_UP): float
 ```
 

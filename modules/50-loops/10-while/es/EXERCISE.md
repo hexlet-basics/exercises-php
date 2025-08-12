@@ -7,10 +7,10 @@ Modifica la función `printNumbers()` para que imprima los números en orden inv
 printNumbers(4);
 ```
 
-<pre class='hexlet-basics-output'>
+```text
 4
 3
 2
 1
 finished!
-</pre>
+```

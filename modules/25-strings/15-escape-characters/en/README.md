@@ -1,7 +1,7 @@
 
 We want to show a dialogue between the Mother of Dragons and her child:
 
-```
+text
 - Are you hungry?
 - Aaaarrrgh!
 ```
@@ -16,7 +16,7 @@ print_r("- Are you hungry?- Aaaarrrgh!");
 
 it goes like this:
 
-```
+```text
 - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -31,7 +31,7 @@ print_r("- Are you hungry?\n- Aaaarrrgh!");
 
 result:
 
-```
+```text
 - Are you hungry?
 - Aaaarrrgh!
 ```
@@ -52,11 +52,11 @@ Why is this done? `\n` is just a way to write the line feed character, but the l
 
 The line feed character isn't something specific to programming. Anyone who has ever typed on a computer has used the line feed by hitting Enter. Many editors have an option to enable the display of invisible characters; you can use it to see where they are (although it's only displayed a schematic display, these characters would otherwise have no graphical representation, they're invisible):
 
-<pre class='hexlet-basics-output'>
+```text
 - Hey!¶
 - Oh, hey!¶
 - How's it going?
-</pre>
+```
 
 The device that outputs the corresponding text takes this character into account. For example, the printer pulls the paper up one line when it encounters the LF, and the text editor pulls all subsequent text below, also by one line.
 
@@ -72,12 +72,12 @@ print_r("Gregor Clegane\nDunsen\nPolliver\nChiswyck");
 
 The screen will display:
 
-<pre class='hexlet-basics-output'>
+```text
 Gregor Clegane
 Dunsen
 Polliver
 Chiswyck
-</pre>
+```
 
 Note the following points:
 
@@ -95,10 +95,10 @@ Note the following points:
 
     Here we output one string with a name, then one string with a line feed and then another string. The program will display this on the screen:
 
-    <pre class='hexlet-basics-output'>
+    ```text
     Gregor Clegane
     Dunsen
-    </pre>
+    ```
 
 3. If we need to output `\n` as text (two separate printable characters), we can use the escape method we already know, adding another `\` at the beginning. I.e., the sequence `\\n` will appear as the characters `\` and `n` following each other.
 
@@ -110,8 +110,8 @@ print_r("Joffrey loves using \\n");
 
 on the screen, you'll see:
 
-<pre class='hexlet-basics-output'>
+```text
 Joffrey loves using \n
-</pre>
+```
 
 A small but important note about Windows. Windows uses `\r\n`. to do line feeds by default. This combination works well only in Windows, but creates problems when migrating to other systems (for example, when the development team has both Windows and Linux users). The point is that the sequence `\r\n` has a different interpretation depending on the chosen encoding (discussed later). For this reason, it's common among developers to always use `\n` without `\r`, since LF is always treated the same and works fine on any system. Remember to configure your editor to use `\n`.

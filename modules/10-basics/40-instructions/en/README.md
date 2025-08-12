@@ -11,9 +11,9 @@ print_r('Dracarys!');
 
 When you run this code, two sentences are displayed in sequence:
 
-<pre class='hexlet-basics-output'>
+```text
 Mother of Dragons. Dracarys!
-</pre>
+```
 
 Theoretically, the instructions can be written one after the other without moving them to a new line:
 

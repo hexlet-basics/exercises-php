@@ -9,7 +9,7 @@ Other functions may have different numbers of parameters and different types of 
 
 How do we know how many parameters the `pow` function needs and what sort of result it'll return? We've taken a look at this function's **signature**. The signature defines the input parameters and their types, as well as the output parameter and its type. You can read about the `pow` function in [the official PHP documentation](https://www.php.net/manual/en/function.pow.php). In the "description" section, you can see this this text:
 
-```
+```text
 pow ( number $base , number $exp ) : number
 
 Returns base raised to the power of exp.

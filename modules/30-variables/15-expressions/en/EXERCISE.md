@@ -3,11 +3,11 @@ Write a program that takes the original number of euros from the `$eurosCount` v
 
 Example output for 100 euros:
 
-```
+```text
 125
 863.75
 ```
 
 For the purposes of the exercise, we'll say that:
-- 1 euro = $1.25 
+- 1 euro = $1.25
 - 1 dollar = 6.91 yuans

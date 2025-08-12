@@ -13,11 +13,11 @@ EOT;
 print_r($str);
 ```
 
-<pre class='hexlet-basics-output'>
+```text
 Example of a string,
 covering several lines,
 using heredoc syntax.
 Here we don't need to escape either single ', or double " quotes.
-</pre>
+```
 
 Note that the trailing identifier (in this case `EOT`) must not have spaces, otherwise PHP will tell you off for having a syntax error.

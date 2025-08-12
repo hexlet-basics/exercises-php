@@ -1,6 +1,6 @@
 Выведите на экран
 
-```
+```text
 Winter came for the House of Frey.
 ```
 

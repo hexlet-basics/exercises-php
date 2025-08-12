@@ -18,7 +18,9 @@ This works the other way as well: `true` and `false` are converted to other data
 print_r(true);
 ```
 
-<pre class='hexlet-basics-output'>1</pre>
+```text
+1
+```
 
 ```php
 <?php
@@ -26,7 +28,9 @@ print_r(true);
 print_r(false);
 ```
 
-<pre class='hexlet-basics-output'></pre>
+```text
+
+```
 
 *(an empty string has been printed)*
 
@@ -38,7 +42,9 @@ Another example:
 print_r(0 || 1);
 ```
 
-<pre class='hexlet-basics-output'>1</pre>
+```text
+1
+```
 
 What happened here:
 

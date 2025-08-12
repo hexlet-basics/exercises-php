@@ -40,12 +40,12 @@ printNumbers(3);
 ```
 
 
-<pre class='hexlet-basics-output'>
+```text
 1
 2
 3
 finished!
-</pre>
+```
 
 Here we use a `while` loop in the function. It has three elements:
 

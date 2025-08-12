@@ -8,10 +8,10 @@ Edit the  `printNumbers()` function so that it prints the numbers in reverse ord
 printNumbers(4);
 ```
 
-<pre class='hexlet-basics-output'>
+```text
 4
 3
 2
 1
 finished!
-</pre>
+```

@@ -19,7 +19,9 @@ A call like this contains a lot of logic. It connects to the mail server, genera
 
 Let's create our first function. Its job is to print out a greeting:
 
-<pre class='hexlet-basics-output'>Hello, Hexlet!</pre>
+```text
+Hello, Hexlet!
+```
 
 ```php
 <?php

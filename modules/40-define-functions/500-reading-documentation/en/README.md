@@ -4,7 +4,7 @@ The main section that programmers come back to all the time is the list of funct
 
 It uses its own syntax to describe functions. It looks a bit like PHP itself, but it's different, in other words, it's not PHP code, only a description of a function signature. Consider the `round()` function, which rounds a number:
 
-```
+```php
 round ( float $val [, int $precision = 0 [, int $mode = PHP_ROUND_HALF_UP ]] ) : float
 ```
 

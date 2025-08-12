@@ -7,10 +7,10 @@
 printNumbers(4);
 ```
 
-<pre class='hexlet-basics-output'>
+```text
 4
 3
 2
 1
 finished!
-</pre>
+```

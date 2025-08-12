@@ -52,7 +52,7 @@ Let's break it down. The name of the parameter (`$str`) is given in parentheses.
 
 This parameter is mandatory. If you try to call a function without a parameter, the interpreter will give an error:
 
-```sh
+```bash
 getLastChar(); // this code doesn't make sense
 ArgumentCountError: Too few arguments to function getLastChar(), 0 passed
 ```

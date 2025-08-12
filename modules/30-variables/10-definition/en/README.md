@@ -13,7 +13,7 @@ In the simplest case, this is what you should do, but if the phrase _Father!_ st
 ```php
 <?php
 
-// greeting 
+// greeting
 $greeting = 'Father!';
 print_r($greeting);
 print_r("\n");
@@ -24,10 +24,10 @@ The line `$greeting = 'Father!'` assigns the value `'Father!'` to a variable nam
 
 Once the variable's been created, you can start using it. You put it in the places where we originally had our phrase written out in full. At runtime, the interpreter (the program that executes the PHP code), reaches the line `print_r($greeting);` and replaces the variable with its contents, and then executes the code. As a result, the output of our program will be as follows:
 
-<pre class='hexlet-basics-output'>
+```text
   Father!
   Father!
-</pre>
+```
 
 Any set of valid characters can be used for a variable name, which includes letters of the English alphabet, numbers, and the `_`. Note that you can't place a digit at the beginning of a name. Variable names are case-sensitive, which means that `hello` and `heLLo` are two different names and thus two distinct variables. Case is important in PHP, never forget it.
 

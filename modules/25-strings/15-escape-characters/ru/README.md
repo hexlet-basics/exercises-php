@@ -9,10 +9,10 @@ print_r("- Are you hungry?\n- Aaaarrrgh!");
 
 Результат:
 
-<pre class='hexlet-basics-output'>
+```text
 - Are you hungry?
 - Aaaarrrgh!
-</pre>
+```
 
 `\n` — это специальный символ. В литературе его часто обозначают как *LF* (Line Feed). С точки зрения компьютера — это один невидимый символ перевода строки:
 

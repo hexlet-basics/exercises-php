@@ -54,8 +54,11 @@ function getLastChar($str)
 
 Этот параметр является обязательным. Если попробовать вызвать функцию без него, то интерпретатор выдаст ошибку:
 
-```sh
+```php
 getLastChar(); // такой код не имеет смысла
+```
+
+```text
 ArgumentCountError: Too few arguments to function getLastChar(), 0 passed
 ```
 

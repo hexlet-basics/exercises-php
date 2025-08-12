@@ -13,13 +13,13 @@ Es por eso que nuestro sitio web muestra "Pruebas superadas" cuando resuelves co
 
 Aquí tienes un ejemplo sencillo: imprimir la cadena `Hello, World!`. Supongamos que cometiste un pequeño error y la función muestra otro valor en la pantalla. El sistema responderá algo así:
 
-<pre class='hexlet-basics-output'>
+```text
   -'Hello, World!'
   +'ello, World!'
 
   ¡FALLOS!
   Pruebas: 1, Afirmaciones: 1, Fallos: 1.
-</pre>
+```
 
 En la pantalla aparece una pista. El signo `+` indica lo que imprimió tu código. El signo `-` indica lo que se esperaba. Al comparar estos dos valores, puedes ver el error. En el ejemplo anterior, se puede ver que falta la letra _H_ en la salida.
 

@@ -13,13 +13,13 @@ That is why our website says, “Tests passed” once you've done the exercise c
 
 Here's a simple example, say you want to print the string `Hello, World!`. Now imagine you make a small mistake and the function displays a different value. In that case, the system will give you the following message:
 
-<pre class='hexlet-basics-output'>
+```text
   -'Hello, World!'
   +'ello, World!'
 
   FAILURES!
   Tests: 1, Assertions: 1, Failures: 1.
-</pre>
+```
 
 A hint appears on the screen. The `+` sign on it indicates what your code printed. The `-` sign is what was expected. By comparing the two values, you can see the error. In the example above, you can see that the letter _H_ is missing from the output.
 

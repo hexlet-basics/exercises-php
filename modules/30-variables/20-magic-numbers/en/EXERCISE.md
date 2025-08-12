@@ -16,9 +16,9 @@ Get rid of the magic numbers by creating new variables and then displaying the t
 
 You'll get this:
 
-<pre class='hexlet-basics-output'>
+```text
 King Balon the 6th has 102 rooms.
-</pre>
+```
 
 Variable names should convey the meaning of numbers, but should remain short and succinct enough to be easily read.
 

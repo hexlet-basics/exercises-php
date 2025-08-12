@@ -4,7 +4,7 @@
 
 Функция `abs()`, которая возвращает абсолютное значение, принимает параметр — число. Если вызывать `abs()` без параметров, то PHP выдаст следующее:
 
-```
+```text
 TypeError: abs() expects exactly 1 argument, 0 given
 ```
 
@@ -12,7 +12,7 @@ TypeError: abs() expects exactly 1 argument, 0 given
 
 Параметрами `abs()` могут быть только числа. Если мы попробуем передать в нее строку, это приведет к следующей ошибке:
 
-```
+```text
 TypeError: abs(): Argument #1 ($num) must be of type int|float, string given
 ```
 

@@ -23,7 +23,7 @@ Internamente, esta llamada realiza bastante lógica. Se conecta al servidor de c
 
 Crearemos nuestra primera función. Su tarea es mostrar un saludo en la pantalla:
 
-```
+```text
 ¡Hola, Hexlet!
 ```
 

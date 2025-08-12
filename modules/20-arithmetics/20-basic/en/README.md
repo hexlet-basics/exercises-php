@@ -26,9 +26,9 @@ print_r(3 + 4);
 
 After we run the program, the result will appear on the screen:
 
-<pre class='hexlet-basics-output'>
+```text
 7
-</pre>
+```
 
 Besides addition, we can also use the following operations:
 

@@ -12,7 +12,9 @@ function isInfant($age)
 var_dump(isInfant(3));
 ```
 
-<pre class='hexlet-basics-output'>bool(false)</pre>
+```text
+bool(false)
+```
 
 This kind of function is called a predicate. Predicate functions answer a question and always (without exception!) return either `true` or `false`.
 
@@ -40,4 +42,6 @@ function isCastle($type)
 var_dump(isCastle('Sea'));
 ```
 
-<pre class='hexlet-basics-output'>bool(false)</pre>
+```text
+bool(false)
+```

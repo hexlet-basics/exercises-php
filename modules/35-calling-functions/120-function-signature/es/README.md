@@ -4,7 +4,7 @@ En esta lección aprenderemos a trabajar con la firma de una función. También 
 
 La función `abs()`, que devuelve el valor absoluto, recibe un parámetro: un número. Si llamamos a `abs()` sin parámetros, PHP mostrará el siguiente mensaje de error:
 
-```
+```text
 TypeError: abs() expects exactly 1 argument, 0 given
 ```
 
@@ -12,7 +12,7 @@ Esto indica que la función espera un parámetro, pero la llamamos sin ninguno.
 
 Los parámetros de `abs()` solo pueden ser números. Si intentamos pasarle una cadena de texto, obtendremos el siguiente error:
 
-```
+```text
 TypeError: abs(): Argument #1 ($num) must be of type int|float, string given
 ```
 

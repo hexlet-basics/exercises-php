@@ -1,8 +1,8 @@
 As is our tradition, we'll begin by writing the 'Hello, World!' program. The program will print the following text:
 
-<pre class='hexlet-basics-output'>
+```text
 Hello, World!
-</pre>
+```
 
 Output to the screen is done with a special command `echo`, followed by a single or double-quoted string to be output. Be sure to put a semicolon at the end.
 
