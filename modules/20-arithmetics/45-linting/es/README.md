@@ -13,7 +13,7 @@ Actualmente existen varias recomendaciones aprobadas, cada una de ellas se ident
 
 ## Linters en PHP
 
-En cualquier lenguaje de programación existen herramientas especiales llamadas **linters**. Verifican el código en busca de cumplimiento de los estándares. El linter ampliamente utilizado en PHP es [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+En cualquier lenguaje de programación existen herramientas especiales llamadas **linters**. Verifican el código en busca de cumplimiento de los estándares. El linter ampliamente utilizado en PHP es [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer).
 
 Supongamos que tenemos un archivo con el siguiente código PHP:
 

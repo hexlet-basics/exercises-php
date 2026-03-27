@@ -5,7 +5,7 @@ Code must be designed in a certain way so that it's clear and easy to maintain. 
 * PSR-1: [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/). This is a set of rules defining how to write PHP code, including how to write PHP tags, and what rules to use for naming classes, methods and class constants. It also touches on encoding, autoloading, namespaces, and sharing responsibility between files. These are basic rules; the PSR-12 standard expands on them.
 * PSR-12: [Extended Coding Style](https://www.php-fig.org/psr/psr-12/). replaces and supplements the obsolete PSR-2. The first thing to mention is that this standard requires compliance with PSR-1 rules. Secondly, it adds many new requirements, for indentations, files, strings, keywords, classes, control structures, scope and other elements.
 
-In any programming language, there are special tools, called **linters**, which check the code for compliance with standards. One commonly used linter in PHP is the [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+In any programming language, there are special tools, called **linters**, which check the code for compliance with standards. One commonly used linter in PHP is the [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer).
 
 Suppose we have a file with this PHP code:
 
