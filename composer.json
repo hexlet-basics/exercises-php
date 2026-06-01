@@ -22,10 +22,9 @@
     ]
   },
   "require-dev": {
-    "codedungeon/phpunit-result-printer": "^0.32.0",
-    "phpunit/phpunit": "^11",
-    "robiningelbrecht/phpunit-pretty-print": "^1.4",
-    "squizlabs/php_codesniffer": "^3.7",
-    "symfony/var-dumper": "^7.2"
+    "phpunit/phpunit": "^13",
+    "robiningelbrecht/phpunit-pretty-print": "^1.5",
+    "squizlabs/php_codesniffer": "^4.0",
+    "symfony/var-dumper": "^8.0"
   }
 }
