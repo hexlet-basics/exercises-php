@@ -1,4 +1,4 @@
-<?php // phpcs:ignore PSR1.Files.SideEffects
+<?php
 
 namespace HexletBasics\Variables\Symbols;
 

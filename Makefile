@@ -15,10 +15,10 @@ compose-code-lint:
 	docker-compose run exercises make code-lint
 
 code-lint:
-	composer exec --verbose phpcs -- modules
+	composer exec --verbose php-cs-fixer -- check --diff
 
 code-lint-fix:
-	composer exec --verbose phpcbf -- modules
+	composer exec --verbose php-cs-fixer -- fix
 
 compose-bash:
 	docker-compose run exercises bash

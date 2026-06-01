@@ -22,9 +22,9 @@
     ]
   },
   "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
     "phpunit/phpunit": "^13",
     "robiningelbrecht/phpunit-pretty-print": "^1.5",
-    "squizlabs/php_codesniffer": "^4.0",
     "symfony/var-dumper": "^8.0"
   }
 }
