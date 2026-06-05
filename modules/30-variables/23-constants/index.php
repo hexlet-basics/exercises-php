@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-const DRAGONS_BORN_COUNT = 3;
+const MAX_LOGIN_ATTEMPTS = 3;
 // END

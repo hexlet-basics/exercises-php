@@ -1,8 +1,8 @@
 <?php
 
 // BEGIN
-$firstNumber = 1.10;
-$secondNumber = -100;
+$itemCount = 20;
+$itemPrice = 100;
 
-print_r($firstNumber * $secondNumber);
+print_r($itemCount * $itemPrice);
 // END

@@ -1,9 +1,9 @@
 <?php
 
-$name = 'Brienna';
+$deliveryStatus = 'в пути';
 
 // BEGIN
-$name = 'anneirB';
+$deliveryStatus = 'доставлен';
 // END
 
-print_r($name);
+print_r($deliveryStatus);
