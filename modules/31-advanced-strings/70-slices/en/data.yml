@@ -1,0 +1,9 @@
+---
+name: Substrings
+tips:
+  - >
+    [substr function](https://www.php.net/manual/en/function.substr.php)
+definitions:
+  - name: Substring
+    description: >-
+      a part of a string extracted by the given parameters: start and length.

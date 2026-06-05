@@ -1,0 +1,9 @@
+---
+name: Подстроки
+tips:
+  - >
+    [Функция substr](https://www.php.net/manual/ru/function.substr.php)
+definitions:
+  - name: Подстрока
+    description: >-
+      часть строки, извлеченная по указанным параметрам: началу и длине.
