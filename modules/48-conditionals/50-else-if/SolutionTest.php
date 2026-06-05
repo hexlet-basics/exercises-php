@@ -10,10 +10,10 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $this->assertEquals('friend', whoIsThisHouseToStarks('Tully'));
-        $this->assertEquals('friend', whoIsThisHouseToStarks('Karstark'));
-        $this->assertEquals('enemy', whoIsThisHouseToStarks('Lannister'));
-        $this->assertEquals('neutral', whoIsThisHouseToStarks('Martell'));
-        $this->assertEquals('neutral', whoIsThisHouseToStarks('undefined'));
+        $this->assertEquals('go', getTrafficLightAction('green'));
+        $this->assertEquals('slow down', getTrafficLightAction('yellow'));
+        $this->assertEquals('stop', getTrafficLightAction('red'));
+        $this->assertEquals('unknown', getTrafficLightAction('blue'));
+        $this->assertEquals('unknown', getTrafficLightAction('purple'));
     }
 }

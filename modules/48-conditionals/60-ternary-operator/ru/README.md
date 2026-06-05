@@ -3,7 +3,7 @@
 ```php
 <?php
 
-function abs($number)
+function abs(int $number): int
 {
     if ($number >= 0) {
         return $number;
@@ -12,8 +12,8 @@ function abs($number)
     return -$number;
 }
 
-abs(10);  // 10
-abs(-10); // 10
+print_r(abs(10) . "\n");  // => 10
+print_r(abs(-10) . "\n"); // => 10
 ```
 
 Можно ли записать ее лаконичнее? Что-то вроде `return ОТВЕТ В ЗАВИСИМОСТИ ОТ УСЛОВИЯ`? Для этого справа от `return` должно быть выражение. Но есть проблема: `if` — это инструкция, а не выражение.
@@ -25,7 +25,7 @@ abs(-10); // 10
 ```php
 <?php
 
-function abs($number)
+function abs(int $number): int
 {
     return $number >= 0 ? $number : -$number;
 }
@@ -41,35 +41,35 @@ function abs($number)
 
 Давайте перепишем начальный вариант `getTypeOfSentence()` аналогично. Посмотрим, как было:
 
-  ```php
-  <?php
+```php
+<?php
 
-  function getTypeOfSentence($sentence)
-  {
-      $lastChar = substr($sentence, -1);
+function getTypeOfSentence(string $sentence): string
+{
+    $lastChar = $sentence[-1];
 
-      if ($lastChar === '?') {
-          return 'question';
-      }
+    if ($lastChar === '?') {
+        return 'question';
+    }
 
-      return 'normal';
-  }
-  ```
+    return 'normal';
+}
+```
 
-  А теперь — как стало:
+А теперь — как стало:
 
-  ```php
-  <?php
+```php
+<?php
 
-  function getTypeOfSentence($sentence)
-  {
-      $lastChar = substr($sentence, -1);
+function getTypeOfSentence(string $sentence): string
+{
+    $lastChar = $sentence[-1];
 
-      return ($lastChar === '?') ? 'question' : 'normal';
-  }
+    return $lastChar === '?' ? 'question' : 'normal';
+}
 
-  getTypeOfSentence('Hodor');  // normal
-  getTypeOfSentence('Hodor?'); // question
-  ```
+print_r(getTypeOfSentence('Hodor') . "\n");  // => normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
+```
 
 Вы уже могли догадаться, что тернарный оператор можно вкладывать в тернарный оператор. Это возможно, но лучше так не делать. Такой код тяжело читать и отлаживать, поэтому вложенные тернарные операторы считаются очень плохой практикой.

@@ -3,19 +3,20 @@
 namespace HexletBasics\Conditionals\IfElse;
 
 // BEGIN
-function normalizeUrl($url)
+function normalizeUrl(string $url): string
 {
-    if (strpos($url, 'https://') === 0) {
+    $prefix = 'https://';
+
+    if (str_starts_with($url, $prefix)) {
         return $url;
     }
 
-    if (strpos($url, 'http://') === 0) {
+    if (str_starts_with($url, 'http://')) {
         $domain = substr($url, 7);
     } else {
         $domain = $url;
     }
 
-    return "https://{$domain}";
+    return "{$prefix}{$domain}";
 }
-
 // END
