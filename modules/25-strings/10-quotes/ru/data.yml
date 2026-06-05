@@ -1,3 +1,5 @@
 ---
 name: Кавычки
-tips: []
+tips:
+  - >
+    [Строки в PHP](https://www.php.net/manual/ru/language.types.string.php)
