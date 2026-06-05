@@ -3,20 +3,20 @@
 namespace HexletBasics\Loops\ForLoop;
 
 // BEGIN
-function sumOfSeries($start, $finish)
+function normalizeFilename(string $filename): string
 {
-    /*
-    * Note: we create a new variable here,
-    * rather than use the argument as a counter.
-    * Counter will be changing as the function works,
-    * and changing arguments is considered harmful.
-    */
+    $result = '';
 
-    $sum = 0;
-    for ($i = $start; $i <= $finish; $i++) {
-        $sum += $i;
+    for ($i = 0; $i < strlen($filename); $i += 1) {
+        $currentChar = $filename[$i];
+
+        if ($currentChar === ' ') {
+            $result .= '_';
+        } else {
+            $result .= $currentChar;
+        }
     }
 
-    return $sum;
+    return $result;
 }
 // END

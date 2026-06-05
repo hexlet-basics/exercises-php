@@ -1,0 +1,5 @@
+---
+name: Bucle foreach y función range
+tips:
+  - |
+    [range](https://www.php.net/manual/es/function.range.php)

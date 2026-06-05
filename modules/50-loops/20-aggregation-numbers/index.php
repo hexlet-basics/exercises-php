@@ -3,7 +3,7 @@
 namespace HexletBasics\Loops\AgregationNumber;
 
 // BEGIN
-function multiplyNumbersFromRange($start, $finish)
+function multiplyNumbersFromRange(int $start, int $finish): int
 {
     $i = $start;
     $result = 1;
