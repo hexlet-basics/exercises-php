@@ -1,6 +1,9 @@
 ---
 name: Комментарии
-tips: []
+tips:
+  - >
+    [Подробнее о
+    комментариях](https://www.w3schools.com/php/php_comments.asp)
 definitions:
   - name: Комментарий
     description: >
