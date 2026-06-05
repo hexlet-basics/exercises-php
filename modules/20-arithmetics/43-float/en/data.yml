@@ -1,0 +1,10 @@
+---
+name: Floating point numbers
+tips:
+  - >
+    [What every computer scientist should know about floating-point
+    arithmetic](https://www.validlab.com/goldberg/paper.pdf)
+definitions:
+  - name: Rational number
+    description: |
+      a number that can be represented as a common fraction.

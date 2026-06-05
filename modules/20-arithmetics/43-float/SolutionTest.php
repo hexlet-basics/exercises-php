@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\Arithmetics\Composition;
+namespace HexletBasics\Arithmetics\FloatingPointNumbers;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = '660';
+        $expected = '5.5511151231258E-17';
         $this->expectOutputString($expected);
         require 'index.php';
     }
