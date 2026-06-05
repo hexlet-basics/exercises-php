@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DataTypes\TypeConversion;
+namespace HexletBasics\DataTypes\PrimitiveDataTypes;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,13 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = '2 times';
+        $expected = <<<HERE
+Name: Anna
+Birth year: 1994
+Age: 32
+Rating: 4.7
+HERE;
+
         $this->expectOutputString($expected);
         require 'index.php';
     }
