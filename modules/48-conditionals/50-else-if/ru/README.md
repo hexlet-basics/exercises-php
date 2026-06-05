@@ -1,11 +1,15 @@
-Функция `getTypeOfSentence()` различает только вопросительные и обычные предложения. Давайте попробуем добавить поддержку восклицательных предложений:
+Функция `getTypeOfSentence()` различает только вопросительные и обычные предложения. Добавим в нее поддержку восклицательных предложений:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+function getTypeOfSentence(string $sentence): string
 {
     $lastChar = $sentence[-1];
+
+    if ($lastChar === '?') {
+        $sentenceType = 'question';
+    }
 
     if ($lastChar === '!') {
         $sentenceType = 'exclamation';
@@ -13,50 +17,59 @@ function getTypeOfSentence($sentence)
         $sentenceType = 'normal';
     }
 
+    return "Sentence is {$sentenceType}";
+}
+
+print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
+print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
+```
+
+Мы добавили проверку восклицательных предложений (_exclamation_ переводится «восклицание»). Технически эта функция работает, но вопросительные предложения трактует неверно. Еще в ней есть проблемы с точки зрения семантики. Наличие восклицательного знака проверяется в любом случае, даже если уже обнаружился вопросительный знак. Ветка `else` описана для второго условия, но не для первого. Поэтому вопросительное предложение становится `normal`.
+
+Чтобы исправить ситуацию, воспользуемся еще одной возможностью условной конструкции:
+
+```php
+<?php
+
+function getTypeOfSentence(string $sentence): string
+{
+    $lastChar = $sentence[-1];
+
     if ($lastChar === '?') {
         $sentenceType = 'question';
+    } elseif ($lastChar === '!') {
+        $sentenceType = 'exclamation';
+    } else {
+        $sentenceType = 'normal';
     }
 
     return "Sentence is {$sentenceType}";
 }
 
-getTypeOfSentence('Who?'); // 'Sentence is question'
-getTypeOfSentence('No');   // 'Sentence is normal'
-getTypeOfSentence('No!');  // 'Sentence is exclamation'
+print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is question
+print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
+print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
 ```
 
-Мы добавили еще одну проверку (_exclamation_ переводится «восклицание»). Технически функция работает, но с точки зрения семантики есть проблемы:
+Теперь все условия выстроились в единую конструкцию. Ключевое слово `elseif` означает «если не выполнено предыдущее условие, но выполнено текущее».
 
-* Проверка на наличие вопросительного знака происходит в любом случае, даже если уже был обнаружен восклицательный знак
-* Ветка `else` описана именно для первого условия, но не для второго
-
-Правильнее будет воспользоваться еще одной возможностью условной конструкции:
-
-```php
-<?php
-
-function getTypeOfSentence($sentence)
-{
-  $lastChar = $sentence[-1];
-
-  if ($lastChar === '?') {
-      $sentenceType = 'question';
-  } elseif ($lastChar === '!') {
-      $sentenceType = 'exclamation';
-  } else {
-      $sentenceType = 'normal';
-  }
-
-  return "Sentence is {$sentenceType}";
-}
+```text
+  ┌─────────────────┐
+  │ условие 1?      │
+  └────┬────────┬───┘
+ true │        │ false
+       ↓        ↓
+┌──────────┐  ┌─────────────────┐
+│ тело if  │  │ условие 2?      │
+└──────────┘  └────┬────────┬───┘
+              true │        │ false
+                    ↓        ↓
+          ┌────────────┐ ┌──────────┐
+          │тело elseif │ │ тело else│
+          └────────────┘ └──────────┘
 ```
 
-Теперь все условия выстроены в единую конструкцию.
+Логика функции устроена так. Если последний символ `?`, возвращается `'question'`. Если последний символ `!`, возвращается `'exclamation'`. Во всех остальных случаях возвращается `'normal'`.
 
-Конструкция `elseif` — это «если не выполнено предыдущее условие, но выполнено текущее». Получается такая схема:
-
-* Если последний символ `?`, то `'question'`
-* Иначе, если последний символ `!`, то `'exclamation'`
-* Иначе `'normal'`
-
-Выполнится только один из блоков кода, относящихся ко всей конструкции `if`.
+Выполнится только один из блоков кода, который относится ко всей конструкции `if`.

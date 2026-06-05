@@ -3,14 +3,16 @@
 namespace HexletBasics\Conditionals\ElseIfStatement;
 
 // BEGIN
-function whoIsThisHouseToStarks($houseName)
+function getTrafficLightAction(string $color): string
 {
-    if ($houseName === 'Karstark' || $houseName === 'Tully') {
-        return 'friend';
-    } elseif ($houseName === 'Lannister' || $houseName === 'Frey') {
-        return 'enemy';
+    if ($color === 'green') {
+        return 'go';
+    } elseif ($color === 'yellow') {
+        return 'slow down';
+    } elseif ($color === 'red') {
+        return 'stop';
     }
 
-    return 'neutral';
+    return 'unknown';
 }
 // END

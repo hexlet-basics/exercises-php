@@ -10,12 +10,21 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $expected1 = 'https://yandex.ru';
-        $actual1 = normalizeUrl('yandex.ru');
-        $this->assertEquals($expected1, $actual1);
-
-        $expected2 = 'https://yandex.ru';
-        $actual2 = normalizeUrl('http://yandex.ru');
-        $this->assertEquals($expected2, $actual2);
+        $this->assertEquals('https://yandex.ru', normalizeUrl('yandex.ru'));
+        $this->assertEquals('https://yandex.ru', normalizeUrl('http://yandex.ru'));
+        $this->assertEquals('https://yandex.ru', normalizeUrl('https://yandex.ru'));
+        $this->assertEquals('https://httpsecurity.com', normalizeUrl('httpsecurity.com'));
+        $this->assertEquals(
+            'https://httpbin.org/redirect-to?url=http://google.com',
+            normalizeUrl('https://httpbin.org/redirect-to?url=http://google.com')
+        );
+        $this->assertEquals(
+            'https://httpbin.org/redirect-to?url=https://google.com',
+            normalizeUrl('httpbin.org/redirect-to?url=https://google.com')
+        );
+        $this->assertEquals(
+            'https://httpbin.org/redirect-to?url=http://google.com',
+            normalizeUrl('httpbin.org/redirect-to?url=http://google.com')
+        );
     }
 }
