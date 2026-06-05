@@ -1,6 +1,9 @@
 ---
 name: Синтаксические ошибки
-tips: []
+tips:
+  - >
+    [Виды ошибок в
+    PHP](https://www.php.net/manual/ru/language.errors.basics.php)
 definitions:
   - name: Синтаксическая ошибка
     description: нарушение грамматических правил языка программирования.
