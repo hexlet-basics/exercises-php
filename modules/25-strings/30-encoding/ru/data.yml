@@ -1,6 +1,10 @@
 ---
 name: Кодировка
-tips: []
+tips:
+  - |
+    [Таблица ASCII кодов](https://www.ascii-code.com/)
+  - |
+    [Что такое кодировки?](https://ru.hexlet.io/blog/posts/encoding)
 definitions:
   - name: Кодировка
     description: >-
