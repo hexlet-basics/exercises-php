@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\Logic\TernaryOperator;
+namespace HexletBasics\Conditionals\TernaryOperator;
 
 use PHPUnit\Framework\TestCase;
 

@@ -3,7 +3,7 @@
 namespace HexletBasics\Conditionals\IfStatement;
 
 // BEGIN
-function guessNumber($guess)
+function guessNumber(int $guess): string
 {
     if ($guess === 42) {
         return 'You win!';
