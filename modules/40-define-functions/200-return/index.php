@@ -3,9 +3,9 @@
 namespace HexletBasics\DefineFunctions\ReturnInstruction;
 
 // BEGIN
-function sayHurrayThreeTimes()
+function truncate($text, $length)
 {
-    $word = 'hurray!';
-    return "{$word} {$word} {$word}";
+    $cuttedString = substr($text, 0, $length);
+    return "{$cuttedString}...";
 }
 // END

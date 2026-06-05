@@ -1,0 +1,7 @@
+---
+name: Модули
+tips:
+  - |
+    [Инструкция require](https://www.php.net/manual/ru/function.require.php)
+  - |
+    [Инструкция include](https://www.php.net/manual/ru/function.include.php)
