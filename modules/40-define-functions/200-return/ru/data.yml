@@ -1,3 +1,5 @@
 ---
 name: Возврат значений
-tips: []
+tips:
+  - |
+    [Инструкция return](https://www.php.net/manual/ru/function.return.php)

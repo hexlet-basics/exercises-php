@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $expected = 'hurray! hurray! hurray!';
-        $this->assertEquals($expected, sayHurrayThreeTimes());
+        $this->assertEquals('he...', truncate('hexlet', 2));
+        $this->assertEquals('it w...', truncate('it works!', 4));
     }
 }

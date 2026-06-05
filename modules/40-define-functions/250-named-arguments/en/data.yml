@@ -1,0 +1,6 @@
+---
+name: Named arguments
+tips:
+  - >
+    [Named arguments in the
+    documentation](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments)
