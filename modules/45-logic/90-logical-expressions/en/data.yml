@@ -1,0 +1,5 @@
+---
+name: Logical expressions output
+tips:
+  - |
+    [Booleans in PHP](https://www.php.net/manual/en/language.types.boolean.php)

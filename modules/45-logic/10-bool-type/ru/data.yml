@@ -1,5 +1,13 @@
 ---
 name: Логический тип
+tips:
+  - |
+    [Тип bool в PHP](https://www.php.net/manual/ru/language.types.boolean.php)
+  - >
+    [Именование в
+    программировании](https://ru.hexlet.io/blog/posts/naming-in-programming?utm_source=code-basics&utm_medium=referral&utm_campaign=blog&utm_content=lesson)
 definitions:
   - name: Логический тип (bool)
-    description: 'тип данных с двумя возможными значениями: true (истина) и false (ложь).'
+    description: 'тип данных с двумя возможными значениями: `true` (истина) и `false` (ложь).'
+  - name: Предикат
+    description: выражение, отвечающее на вопрос «да» или «нет» с помощью типа bool.
