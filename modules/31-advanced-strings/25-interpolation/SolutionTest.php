@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\Variables\Interpolation;
+namespace HexletBasics\AdvancedStrings\Interpolation;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = 'Do you want to eat, Arya?';
+        $expected = 'Здравствуйте, Анна! Ваш заказ #1337 принят.';
         $this->expectOutputString($expected);
         require 'index.php';
     }

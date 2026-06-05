@@ -1,0 +1,5 @@
+---
+
+name: Deeper Into Strings
+description:
+  We continue studying strings and their relationship with variables. We cover interpolation, character extraction, substrings, and multiline strings.
