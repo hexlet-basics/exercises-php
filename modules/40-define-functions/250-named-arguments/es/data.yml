@@ -1,0 +1,6 @@
+---
+name: Argumentos con nombre
+tips:
+  - >
+    [Argumentos con nombre en la
+    documentación](https://www.php.net/manual/es/functions.arguments.php#functions.named-arguments)

@@ -1,0 +1,7 @@
+---
+name: Modules
+tips:
+  - |
+    [The require statement](https://www.php.net/manual/en/function.require.php)
+  - |
+    [The include statement](https://www.php.net/manual/en/function.include.php)

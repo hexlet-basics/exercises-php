@@ -1,0 +1,7 @@
+---
+name: Módulos
+tips:
+  - |
+    [La instrucción require](https://www.php.net/manual/es/function.require.php)
+  - |
+    [La instrucción include](https://www.php.net/manual/es/function.include.php)

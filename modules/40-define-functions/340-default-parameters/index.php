@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DefineFunctions\DefaultArguments;
+namespace HexletBasics\DefineFunctions\DefaultParameters;
 
 // BEGIN
 function getHiddenCard($cardNumber, $starsCount = 4)

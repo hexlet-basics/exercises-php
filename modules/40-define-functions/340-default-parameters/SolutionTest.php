@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DefineFunctions\DefaultArguments;
+namespace HexletBasics\DefineFunctions\DefaultParameters;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,12 +10,8 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $expected1 = '****1234';
-        $actual1 = getHiddenCard('1234123412341234');
-        $this->assertEquals($expected1, $actual1);
-
-        $expected2 = '**4321';
-        $actual2 = getHiddenCard('1234123412344321', 2);
-        $this->assertEquals($expected2, $actual2);
+        $this->assertEquals('****1234', getHiddenCard('1234123412341234'));
+        $this->assertEquals('****4321', getHiddenCard('1234123412344321'));
+        $this->assertEquals('***4321', getHiddenCard('1234123412344321', 3));
     }
 }
