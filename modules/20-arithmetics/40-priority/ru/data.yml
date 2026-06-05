@@ -4,3 +4,8 @@ tips:
   - >
     [Приоритет
     операторов](https://www.php.net/manual/ru/language.operators.precedence.php)
+definitions:
+  - name: Выражение
+    description: >
+      последовательность действий над данными, приводящая к каком-то результату,
+      который можно использовать.

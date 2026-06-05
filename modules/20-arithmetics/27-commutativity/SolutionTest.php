@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = '2432';
+        $expected = '2563';
         $this->expectOutputString($expected);
         require 'index.php';
     }
