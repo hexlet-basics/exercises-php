@@ -1,0 +1,9 @@
+---
+name: Subcadenas
+tips:
+  - >
+    [Función substr](https://www.php.net/manual/es/function.substr.php)
+definitions:
+  - name: Subcadena
+    description: >-
+      una parte de una cadena extraída según los parámetros dados: inicio y longitud.

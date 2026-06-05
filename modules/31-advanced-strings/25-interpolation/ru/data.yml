@@ -1,0 +1,11 @@
+---
+name: Интерполяция
+tips:
+  - >
+    [Интерполяция строк в
+    PHP](https://www.php.net/manual/ru/language.types.string.php#language.types.string.parsing)
+definitions:
+  - name: Интерполяция
+    description: >-
+      способ получения сложной строки из нескольких простых с использованием
+      специальных шаблонов. Например, `\"Hi, {$name}!\"`.

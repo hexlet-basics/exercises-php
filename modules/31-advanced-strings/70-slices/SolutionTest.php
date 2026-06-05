@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\Variables\Symbols;
+namespace HexletBasics\AdvancedStrings\Slices;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = 'hodor';
+        $expected = 'hexlet.io';
         $this->expectOutputString($expected);
         require 'index.php';
     }

@@ -1,0 +1,32 @@
+---
+
+name: Subcadenas
+theory: |
+  Usa `substr()` para extraer parte de una cadena. El formato es `substr(cadena, inicio, longitud)`:
+
+  ```php
+  <?php
+
+  $text = 'Hello, World!';
+  print_r(substr($text, 7));     // => World!
+  print_r(substr($text, 7, 5));  // => World
+  print_r(substr($text, -6));    // => World! (el índice negativo cuenta desde el final)
+  ```
+
+  Si se omite la longitud, PHP toma todo desde el índice inicial hasta el final de la cadena.
+
+instructions: |
+  Dada la variable `$url = 'https://hexlet.io'`, extrae e imprime el dominio sin el protocolo usando `substr()`:
+
+  ```text
+  hexlet.io
+  ```
+
+tips:
+  - >
+    [Función substr](https://www.php.net/manual/es/function.substr.php)
+
+definitions:
+  - name: Subcadena
+    description: >-
+      una parte de una cadena extraída según los parámetros dados: inicio y longitud.
