@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = "First: N\nLast: t";
+        $expected = "First: H\nLast: !";
         $this->expectOutputString($expected);
         require 'index.php';
     }

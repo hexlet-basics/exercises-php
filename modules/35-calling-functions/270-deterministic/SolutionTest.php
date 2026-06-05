@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\CallingFunctions\Call;
+namespace HexletBasics\CallingFunctions\Deterministic;
 
 use PHPUnit\Framework\TestCase;
 
@@ -11,12 +11,12 @@ class SolutionTest extends TestCase
     public function test()
     {
         require 'index.php';
-        $randomSide = $this->getActualOutputForAssertion();
+        $randomRoll = $this->getActualOutputForAssertion();
         $this->assertThat(
-            $randomSide,
+            $randomRoll,
             $this->logicalAnd(
-                $this->greaterThanOrEqual(1),
-                $this->lessThanOrEqual(6)
+                $this->greaterThanOrEqual(0),
+                $this->lessThanOrEqual(10)
             )
         );
     }
