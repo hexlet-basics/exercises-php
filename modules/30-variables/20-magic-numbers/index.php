@@ -1,9 +1,11 @@
 <?php
 
-$king = 'King Balon the 6th';
+$label = 'Ящиков на складе:';
 
 // BEGIN
-$numberOfCastles = 6;
-$roomsPerCastle = 17;
-print_r($king . ' has ' . ($numberOfCastles * $roomsPerCastle) . ' rooms.');
+$palletsCount = 6;
+$boxesPerPallet = 17;
+print_r($label);
+print_r("\n");
+print_r($palletsCount * $boxesPerPallet);
 // END

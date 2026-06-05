@@ -9,6 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         require 'index.php';
-        $this->assertEquals(3, DRAGONS_BORN_COUNT);
+        $this->assertEquals(3, MAX_LOGIN_ATTEMPTS);
     }
 }

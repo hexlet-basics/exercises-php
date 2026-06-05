@@ -1,6 +1,8 @@
 ---
 name: Именование переменных
-tips: []
+tips:
+  - |
+    [CamelCase](https://ru.wikipedia.org/wiki/CamelCase)
 definitions:
   - name: Стандарт кодирования
     description: набор синтаксических и стилистических правил написания кода.
