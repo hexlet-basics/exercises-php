@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = "\"Khal Drogo's favorite word is \"athjahakar\"\"";
+        $expected = 'The file "user\'s_config.json" was not found.';
         $this->expectOutputString($expected);
         require 'index.php';
     }

@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = "~^%";
+        $expected = "~\n^\n%\n";
         $this->expectOutputString($expected);
         require 'index.php';
     }
