@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DataTypes\PrimitiveDataTypes;
+namespace HexletBasics\DataTypes\DataTypesCasting;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = '-0.304';
+        $expected = '36 °C';
         $this->expectOutputString($expected);
         require 'index.php';
     }

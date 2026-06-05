@@ -1,0 +1,47 @@
+---
+
+name: |
+  Inmutabilidad de los tipos primitivos
+
+theory: |
+  ¿Qué sucede cuando «cambiamos» una cadena de texto en PHP? Las funciones integradas como `strtoupper()` no modifican la cadena original, sino que devuelven una nueva:
+
+  ```php
+  <?php
+
+  $firstName = 'Alexander';
+  print_r(strtoupper($firstName)); // => ALEXANDER
+  print_r($firstName); // => Alexander
+  ```
+
+  Esto se debe a la inmutabilidad de los valores primitivos en PHP: una cadena de texto no puede ser cambiada después de su creación. La inmutabilidad de los tipos primitivos es importante por varias razones, siendo la principal el rendimiento.
+
+  Pero a veces necesitamos cambiar una cadena de texto. Para eso existen las variables:
+
+  ```php
+  <?php
+
+  $firstName = 'Alexander';
+  $firstName = strtoupper($firstName);
+  print_r($firstName); // => ALEXANDER
+  ```
+
+  Hay una gran diferencia entre *cambiar el valor de una variable* y *cambiar el valor en sí*. No se puede cambiar un valor primitivo en PHP, pero se puede reemplazar el valor de una variable sin problemas.
+
+instructions: |
+  En los tres nombres de los participantes se esconde una palabra secreta. Componla y muéstrala en pantalla con los caracteres en el siguiente orden:
+
+  1. El segundo carácter de la primera cadena
+  2. El tercer carácter de la tercera cadena
+  3. El tercer carácter de la segunda cadena
+  4. El séptimo carácter de la segunda cadena
+  5. El quinto carácter de la segunda cadena
+
+  Intenta usar interpolación: dentro de las llaves puedes colocar no solo variables enteras, sino también caracteres individuales usando corchetes.
+
+tips: []
+
+definitions:
+  - name: Inmutabilidad
+    description: |
+      estado en el que un objeto o variable no puede ser cambiado después de su creación
