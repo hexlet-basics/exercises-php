@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = 'Winter came for the House of Frey.';
+        $expected = 'https://github.com/hexlet/exercises-php';
         $this->expectOutputString($expected);
         require 'index.php';
     }
