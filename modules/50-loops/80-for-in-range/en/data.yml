@@ -1,0 +1,5 @@
+---
+name: Foreach loop and range function
+tips:
+  - |
+    [range](https://www.php.net/manual/en/function.range.php)

@@ -3,7 +3,7 @@
 namespace HexletBasics\Loops\ConditionsInsideLoops;
 
 // BEGIN
-function countChars($str, $char)
+function countChars(string $str, string $char): int
 {
     $i = 0;
     $count = 0;

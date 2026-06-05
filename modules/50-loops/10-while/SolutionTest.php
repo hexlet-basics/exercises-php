@@ -10,8 +10,8 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $expected = "3\n2\n1\nfinished!";
+        $expected = "4\n3\n2\n1\nGo!";
         $this->expectOutputString($expected);
-        printNumbers(3);
+        printCountdown(4);
     }
 }
