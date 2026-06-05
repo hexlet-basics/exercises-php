@@ -1,0 +1,9 @@
+---
+name: Параметры по умолчанию
+tips:
+  - >
+    [Значения параметров по
+    умолчанию](https://www.php.net/manual/ru/functions.arguments.php#functions.arguments.default)
+definitions:
+  - name: Параметр по умолчанию
+    description: необязательный параметр функции.

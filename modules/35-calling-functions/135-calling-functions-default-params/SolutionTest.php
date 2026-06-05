@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\CallingFunctions\DefaultArguments;
+namespace HexletBasics\CallingFunctions\DefaultParams;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = '10.12';
+        $expected = "37.8\n2426.76\n607\n";
         $this->expectOutputString($expected);
         require 'index.php';
     }
