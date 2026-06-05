@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r('"Khal Drogo\'s favorite word is "athjahakar""');
+print_r('The file "user\'s_config.json" was not found.');
 // END

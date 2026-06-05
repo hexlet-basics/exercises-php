@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\Arithmetics\EscapeCharacters;
+namespace HexletBasics\Strings\EscapeCharacters;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = "- Did Joffrey agree?\n- He did. He also said \"I love using \\n\".";
+        $expected = "Для разделения строк используйте \"\\n\"\nПример: print_r(\"строка1\\nстрока2\")";
         $this->expectOutputString($expected);
         require 'index.php';
     }
