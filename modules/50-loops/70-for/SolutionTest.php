@@ -10,8 +10,9 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $this->assertEquals(1, sumOfSeries(1, 1));
-        $this->assertEquals(3, sumOfSeries(1, 2));
-        $this->assertEquals(24, sumOfSeries(7, 9));
+        $this->assertEquals('my_photo.png', normalizeFilename('my photo.png'));
+        $this->assertEquals('final_report.pdf', normalizeFilename('final report.pdf'));
+        $this->assertEquals('already_ready.txt', normalizeFilename('already_ready.txt'));
+        $this->assertEquals('two__spaces.txt', normalizeFilename('two  spaces.txt'));
     }
 }

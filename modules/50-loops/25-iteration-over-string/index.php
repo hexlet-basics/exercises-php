@@ -3,7 +3,7 @@
 namespace HexletBasics\Loops\IterationOverString;
 
 // BEGIN
-function printReversedWordBySymbol($word)
+function printReversedWordBySymbol(string $word): void
 {
     $i = strlen($word) - 1;
     while ($i >= 0) {

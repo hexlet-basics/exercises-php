@@ -3,7 +3,7 @@
 namespace HexletBasics\Loops\AgregationString;
 
 // BEGIN
-function joinNumbersFromRange($start, $end)
+function joinNumbersFromRange(int $start, int $end): string
 {
     $i = $start;
     $result = '';

@@ -2,14 +2,14 @@
 
 namespace HexletBasics\Loops\WhileLoop;
 
-function printNumbers($firstNumber)
+function printCountdown(int $seconds): void
 {
     // BEGIN
-    $i = $firstNumber;
+    $i = $seconds;
     while ($i >= 1) {
         print_r("{$i}\n");
         $i = $i - 1;
     }
-    print_r('finished!');
+    print_r('Go!');
     // END
 }

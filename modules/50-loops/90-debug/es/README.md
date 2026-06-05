@@ -1,0 +1,123 @@
+Incluso los desarrolladores más experimentados rara vez escriben código que funcione perfectamente a la primera. Cuanto más experimentado es un desarrollador, con más confianza lo **depura**, es decir, analiza los errores y los corrige.
+
+La habilidad de depurar no aparece por sí sola. Hay que desarrollarla, y cuanto antes mejor. A lo largo del aprendizaje realizarás tareas y practicarás, y con el tiempo el análisis de errores se convertirá en un hábito.
+
+## Cómo encontrar un error en el código
+
+Depurar a base de prueba y error lleva mucho tiempo. Es mucho más productivo entender primero qué fue exactamente lo que salió mal y luego eliminar la causa. Todo trabajo con errores comienza con la comprensión.
+
+En primer lugar, estudia el **mensaje de error**. PHP siempre indica en él el archivo y la línea donde surgió el problema. Por ejemplo:
+
+```bash
+Error: Call to undefined function create() in /code/users.php:5
+```
+
+El mensaje dice que la función `create()` no está definida. Este error suele significar una errata en el nombre. Si tu inglés todavía no es muy bueno, un traductor te ayudará.
+
+Junto con el mensaje, PHP muestra la **pila de llamadas** (stack trace). Contiene la lista de todas las llamadas a funciones desde el inicio del programa hasta el lugar del error. En ella se ve qué funciones se ejecutaron con éxito y dónde surgieron los problemas. Cada entrada indica el archivo, la línea y la función en ejecución.
+
+Imagina que escribiste código en el archivo `users.php`: la función `main()` llama a la función `create()`, y la propia llamada a `main()` está en la octava línea. La salida completa del error se verá así:
+
+```bash
+PHP Fatal error:  Uncaught Error: Call to undefined function create() in /code/users.php:5
+Stack trace:
+#0 /code/users.php(8): main()
+#1 {main}
+  thrown in /code/users.php on line 5
+```
+
+Toda la cadena de eventos se ve de inmediato. El programa arrancó (`{main}`), llegó con éxito a `main()` en la octava línea y aquí se topó con un error de nombre en la quinta.
+
+## Tipos de errores
+
+Los errores más comprensibles en PHP se llaman **errores de sintaxis**. Surgen cuando el código está mal formado, por ejemplo por una comilla equivocada o un paréntesis omitido. En la salida siempre aparece `Parse error:`.
+
+Veamos un ejemplo. Aquí hay un error de sintaxis porque la comilla de apertura `"` no coincide con la de cierre `'`:
+
+```bash
+PHP Parse error:  Unclosed '(' on line 3 in /code/users.php on line 4
+```
+
+El intérprete ni siquiera empieza a ejecutar un programa así: no puede analizarlo.
+
+Los más difíciles de corregir son los **errores de programación**. Aquí entran la llamada a una función inexistente, el uso de una variable no declarada o el paso de argumentos de tipo incorrecto. Normalmente surgen en un lugar distinto al de la causa real, lo que complica el diagnóstico.
+
+Contra los que más cuesta luchar es contra los **errores lógicos**. El programa funciona sin fallos, pero produce un resultado incorrecto con algunos datos de entrada. No hay ningún mensaje de error, solo una salida inesperada. Por ejemplo, una función debe calcular la suma, pero calcula la diferencia:
+
+```php
+<?php
+
+// La función debe calcular la suma de los números, pero calcula la diferencia:
+function sum(int $a, int $b): int
+{
+    return $a - $b;
+}
+
+// Con esta llamada el error no es evidente, porque
+// tanto la suma como la resta dan el mismo resultado
+sum(4, 0); // 4
+```
+
+## Métodos de depuración
+
+En la base de cualquier método de depuración está la observación de las variables durante la ejecución. Veamos una función concreta.
+
+Abajo hay una función que calcula la suma de los números desde `$start` hasta `$finish`. Con `$start = 3` y `$finish = 5` debe calcular `3 + 4 + 5`:
+
+```php
+<?php
+
+function sumOfSeries(int $start, int $finish): int
+{
+    $result = 0;
+    $n = $start;
+
+    while ($n < $finish) {
+        $result = $result + $n;
+        $n = $n + 1;
+    }
+
+    return $result;
+}
+```
+
+Las variables clave de la función son `$n` y `$result`. Para encontrar el error, hay que ver qué valores toman en cada iteración.
+
+Para esto existen los **depuradores visuales**, como Xdebug. Se integran en los editores de código populares y permiten ejecutar el programa paso a paso, observando las variables en tiempo real. Puedes encontrar uno adecuado buscando «PHP debuggers» en Google.
+
+En Hexlet, en lugar de un depurador se usa la **impresión de depuración**. El principio es el mismo, solo que los valores de las variables se muestran con un `print_r()` normal. Lo que se imprime aparece en la pestaña `OUTPUT`:
+
+```php
+<?php
+
+function sumOfSeries(int $start, int $finish): int
+{
+    $result = 0;
+    $n = $start;
+
+    while ($n < $finish) {
+        print_r("new iteration !!!!\n");
+        print_r("{$n}\n");
+        $result = $result + $n;
+        $n = $n + 1;
+        print_r("{$result}\n");
+    }
+
+    return $result;
+}
+
+sumOfSeries(3, 5);
+
+// => new iteration !!!!
+// => 3
+// => 3
+// => new iteration !!!!
+// => 4
+// => 7
+```
+
+La salida muestra que hay una iteración menos de las necesarias. El cinco (`$finish`) no entró en la suma. En la condición está `$n < $finish` en lugar de `$n <= $finish`. Hay que sustituir el signo `<` por `<=`.
+
+Los desarrolladores principiantes a menudo se disgustan por los errores y se consideran descuidados. Todos cometemos errores, tanto los juniors como los seniors. La diferencia está en con cuánta confianza los encuentras.
+
+Los principiantes piensan que un buen desarrollador mira el código y entiende de inmediato qué está mal. En la práctica esto rara vez funciona. Un fragmento de código sin contexto dice poco. **Si quieres pedir consejo a un desarrollador experimentado, muéstrale primero el mensaje de error.**
