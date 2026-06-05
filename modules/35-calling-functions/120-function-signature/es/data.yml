@@ -1,8 +1,0 @@
----
-name: Firma de la función
-tips: []
-definitions:
-  - name: Firma de la función
-    description: >-
-      descripción formal de los tipos de argumentos y el tipo de valor devuelto
-      por una función.

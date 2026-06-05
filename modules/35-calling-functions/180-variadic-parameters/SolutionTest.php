@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\CallingFunctions\Call;
+namespace HexletBasics\CallingFunctions\VariadicParameters;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = -3;
+        $expected = '-3';
         $this->expectOutputString($expected);
         require 'index.php';
     }

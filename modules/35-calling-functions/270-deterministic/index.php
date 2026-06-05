@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r(rand(1, 6));
+print_r(rand(0, 10));
 // END
