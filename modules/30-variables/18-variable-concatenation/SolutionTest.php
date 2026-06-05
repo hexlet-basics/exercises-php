@@ -11,9 +11,9 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = <<<HERE
-Hello, Joffrey!
-Here is important information about your account security.
-We couldn't verify you mother's maiden name.
+Здравствуйте, Анна!
+Спасибо за ваш заказ.
+Ожидаемая дата доставки — 3 рабочих дня.
 HERE;
 
         $this->expectOutputString($expected);

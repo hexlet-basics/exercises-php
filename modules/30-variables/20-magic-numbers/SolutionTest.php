@@ -10,7 +10,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = 'King Balon the 6th has 102 rooms.';
+        $expected = "Ящиков на складе:\n102";
         $this->expectOutputString($expected);
         require 'index.php';
     }
