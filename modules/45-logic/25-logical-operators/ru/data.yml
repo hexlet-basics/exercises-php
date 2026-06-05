@@ -4,9 +4,9 @@ tips:
   - |
     [Булева алгебра](https://ru.wikipedia.org/wiki/Булева_алгебра)
   - |
-    [Конъюнкция](https://ru.wikipedia.org/wiki/Конъюнкция)
+    [Логическое «И»](https://ru.wikipedia.org/wiki/Конъюнкция)
   - |
-    [Дизъюнкция](https://ru.wikipedia.org/wiki/Дизъюнкция)
+    [Логическое «ИЛИ»](https://ru.wikipedia.org/wiki/Дизъюнкция)
 definitions:
   - name: Логические операторы
     description: >-
