@@ -3,7 +3,7 @@
 namespace HexletBasics\Logic\BoolType;
 
 // BEGIN
-function isPensioner($age)
+function isPensioner(int $age): bool
 {
     return $age >= 60;
 }
