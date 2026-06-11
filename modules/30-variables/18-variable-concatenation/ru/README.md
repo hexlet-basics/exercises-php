@@ -49,7 +49,7 @@ print_r($full); // => Kings road
 $first = 'Kings'
 $last  = 'road'
 
-$first  +  ' '  +  $last
+$first  .  ' '  .  $last
 └─┬──┘            └──┬─┘
 'Kings' .  ' '  .  'road'
 └─────────┬────────────┘
