@@ -1,18 +1,24 @@
 <?php
 
-namespace HexletBasics\Loops\AgregationNumber;
+namespace HexletBasics\Loops\AggregationNumbers;
 
 // BEGIN
-function multiplyNumbersFromRange(int $start, int $finish): int
+function calculateElectricityBill(int $kwh): int
 {
-    $i = $start;
-    $result = 1;
+    $total = 0;
+    $current = 1;
 
-    while ($i <= $finish) {
-        $result = $result * $i;
-        $i = $i + 1;
+    while ($current <= $kwh) {
+        if ($current <= 100) {
+            $total = $total + 5;
+        } elseif ($current <= 200) {
+            $total = $total + 7;
+        } else {
+            $total = $total + 10;
+        }
+        $current = $current + 1;
     }
 
-    return $result;
+    return $total;
 }
 // END

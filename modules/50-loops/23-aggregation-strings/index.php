@@ -1,15 +1,18 @@
 <?php
 
-namespace HexletBasics\Loops\AgregationString;
+namespace HexletBasics\Loops\AggregationStrings;
 
 // BEGIN
-function joinNumbersFromRange(int $start, int $end): string
+function sanitizePhoneNumber(string $phone): string
 {
-    $i = $start;
+    $i = 0;
     $result = '';
 
-    while ($i <= $end) {
-        $result = "{$result}{$i}";
+    while ($i < strlen($phone)) {
+        $char = $phone[$i];
+        if (!str_contains(' ()-', $char)) {
+            $result = $result . $char;
+        }
         $i = $i + 1;
     }
 

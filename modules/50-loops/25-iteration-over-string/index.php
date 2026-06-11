@@ -3,12 +3,21 @@
 namespace HexletBasics\Loops\IterationOverString;
 
 // BEGIN
-function printReversedWordBySymbol(string $word): void
+function maskCardNumber(string $cardNumber): string
 {
-    $i = strlen($word) - 1;
-    while ($i >= 0) {
-        print_r("$word[$i]\n");
-        $i = $i - 1;
+    $result = '';
+    $i = 0;
+    $visiblePartStart = strlen($cardNumber) - 4;
+
+    while ($i < strlen($cardNumber)) {
+        if ($i < $visiblePartStart) {
+            $result = $result . '*';
+        } else {
+            $result = $result . $cardNumber[$i];
+        }
+        $i = $i + 1;
     }
+
+    return $result;
 }
 // END
