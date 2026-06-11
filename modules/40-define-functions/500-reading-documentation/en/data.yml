@@ -1,7 +1,0 @@
----
-name: Reading documentation
-tips:
-  - |
-    [Function directory](https://www.php.net/manual/en/funcref.php)
-  - |
-    [floor() function](https://www.php.net/manual/en/function.floor.php)
