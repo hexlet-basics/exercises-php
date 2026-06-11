@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\Loops\AgregationString;
+namespace HexletBasics\Loops\AggregationStrings;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,8 +10,8 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $this->assertEquals('2', joinNumbersFromRange(2, 2));
-        $this->assertEquals('12345', joinNumbersFromRange(1, 5));
-        $this->assertEquals('101112', joinNumbersFromRange(10, 12));
+        $this->assertEquals('+79991234567', sanitizePhoneNumber('+7 (999) 123-45-67'));
+        $this->assertEquals('88005553535', sanitizePhoneNumber('8 800 555 35 35'));
+        $this->assertEquals('1234567890', sanitizePhoneNumber('(123) 456-7890'));
     }
 }

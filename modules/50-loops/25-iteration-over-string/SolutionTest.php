@@ -10,9 +10,8 @@ class SolutionTest extends TestCase
     {
         require 'index.php';
 
-        $str = 'Hexlet';
-        $expected = "t\ne\nl\nx\ne\nH\n";
-        $this->expectOutputString($expected);
-        printReversedWordBySymbol($str);
+        $this->assertEquals('************5678', maskCardNumber('1234567812345678'));
+        $this->assertEquals('****5678', maskCardNumber('12345678'));
+        $this->assertEquals('************3333', maskCardNumber('0000111122223333'));
     }
 }
