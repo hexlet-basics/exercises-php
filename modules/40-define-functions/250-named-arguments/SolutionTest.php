@@ -2,14 +2,12 @@
 
 namespace HexletBasics\DefineFunctions\NamedArguments;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertEquals('python', trimAndRepeat('python'));
         $this->assertEquals('on', trimAndRepeat('python', offset: 4));
         $this->assertEquals('pythonpython', trimAndRepeat('python', repetitions: 2));

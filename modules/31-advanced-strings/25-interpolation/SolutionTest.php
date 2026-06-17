@@ -2,9 +2,7 @@
 
 namespace HexletBasics\AdvancedStrings\Interpolation;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -12,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = 'Здравствуйте, Анна! Ваш заказ #1337 принят.';
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

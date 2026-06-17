@@ -2,15 +2,12 @@
 
 namespace HexletBasics\CallingFunctions\Deterministic;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
         $randomRoll = $this->getActualOutputForAssertion();
         $this->assertThat(
             $randomRoll,

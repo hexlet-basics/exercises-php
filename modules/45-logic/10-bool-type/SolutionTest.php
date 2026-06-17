@@ -2,14 +2,12 @@
 
 namespace HexletBasics\Logic\BoolType;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertFalse(isPensioner(23));
         $this->assertFalse(isPensioner(59));
         $this->assertTrue(isPensioner(60));

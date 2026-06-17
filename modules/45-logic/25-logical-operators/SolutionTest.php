@@ -2,14 +2,12 @@
 
 namespace HexletBasics\Logic\LogicalOperators;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertTrue(isLeapYear(2016));
         $this->assertTrue(isLeapYear(2000));
         $this->assertFalse(isLeapYear(2017));

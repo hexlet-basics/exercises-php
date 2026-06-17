@@ -2,9 +2,7 @@
 
 namespace HexletBasics\Strings\EscapeCharacters;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -12,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = "Для разделения строк используйте \"\\n\"\nПример: print_r(\"строка1\\nстрока2\")";
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

@@ -2,14 +2,12 @@
 
 namespace HexletBasics\DefineFunctions\Packages;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $reflection = new \ReflectionFunction(__NAMESPACE__ . '\generatePin');
         $this->assertEquals('string', $reflection->getReturnType()?->getName(), 'You should add a return type declaration!');
 
