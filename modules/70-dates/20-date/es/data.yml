@@ -1,7 +1,0 @@
----
-name: Fecha
-tips:
-  - >
-    [Ejemplos de formatos de
-    fecha](https://www.php.net/manual/ru/datetime.format.php)
-definitions: []
