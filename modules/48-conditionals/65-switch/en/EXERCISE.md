@@ -1,6 +1,10 @@
 
 Write a function, `getNumberExplanation()`, that describes a number passed to it. If there's no explanation available, it returns `null`:
 
+* 666 - devil number
+* 42 - answer for everything
+* 7 - prime number
+
 ```php
 <?php
 
