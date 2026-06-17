@@ -2,7 +2,7 @@
 
 namespace HexletBasics\AdvancedStrings\Unicode;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -10,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = "13\n7\n";
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

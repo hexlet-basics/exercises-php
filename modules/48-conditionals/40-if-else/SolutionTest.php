@@ -2,14 +2,12 @@
 
 namespace HexletBasics\Conditionals\IfElse;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertEquals('https://yandex.ru', normalizeUrl('yandex.ru'));
         $this->assertEquals('https://yandex.ru', normalizeUrl('http://yandex.ru'));
         $this->assertEquals('https://yandex.ru', normalizeUrl('https://yandex.ru'));

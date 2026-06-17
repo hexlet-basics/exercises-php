@@ -2,9 +2,7 @@
 
 namespace HexletBasics\Basics\Instructions;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -12,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = 'RobertStannisRenly';
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

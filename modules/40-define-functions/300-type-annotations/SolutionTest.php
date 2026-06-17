@@ -2,14 +2,12 @@
 
 namespace HexletBasics\DefineFunctions\TypeAnnotations;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $reflection = new \ReflectionFunction(__NAMESPACE__ . '\wordMultiply');
         $parameterTypes = array_map(
             fn ($parameter) => $parameter->getType()?->getName(),

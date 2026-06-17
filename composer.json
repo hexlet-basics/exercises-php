@@ -17,9 +17,9 @@
     }
   ],
   "autoload": {
-    "files": [
-      "src/Functions.php"
-    ]
+    "psr-4": {
+      "HexletBasics\\Exercise\\": "src/"
+    }
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",

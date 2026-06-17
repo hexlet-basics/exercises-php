@@ -2,14 +2,12 @@
 
 namespace HexletBasics\Conditionals\SwitchStatement;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertEquals('just a number', getNumberExplanation(0));
         $this->assertEquals('devil number', getNumberExplanation(666));
         $this->assertEquals('answer for everything', getNumberExplanation(42));
