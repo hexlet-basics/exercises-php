@@ -1,10 +1,5 @@
 <?php
 
-namespace HexletBasics\DeepIntoStrings\StartWith;
-
-function startsWith($text, $substr)
-{
-    // BEGIN
-    return mb_strpos($text, $substr) === 0;
-    // END
-}
+// BEGIN
+print_r(mb_strpos('https://hexlet.io/courses', 'courses'));
+// END

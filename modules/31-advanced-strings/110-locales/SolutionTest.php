@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DeepIntoStrings\Locales;
+namespace HexletBasics\AdvancedStrings\Locales;
 
 use PHPUnit\Framework\TestCase;
 
