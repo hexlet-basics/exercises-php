@@ -1,29 +1,33 @@
-The `switch` construct from the previous lesson is not the only specialized version of `if` in PHP. Starting with PHP 8, the language has the `match` expression. It should also be used where there is an `if else` chain with equality checks:
+The `match` expression appeared in PHP 8 and solves the same task as `switch`: it picks a result based on a variable's value. The constructs are similar, but `match` is shorter and works as an expression. Let's compare them on one example. Here is how you select a text by an order status with `switch`:
 
 ```php
 <?php
 
-if ($status === 'processing') {
-    $statusText = 'Order is being processed';
-} elseif ($status === 'paid') {
-    $statusText = 'Order is paid';
-} elseif ($status === 'new') {
-    $statusText = 'New order';
-} else {
-    $statusText = 'Unknown status';
+switch ($status) {
+    case 'processing':
+        $statusText = 'Order is being processed';
+        break;
+    case 'paid':
+        $statusText = 'Order is paid';
+        break;
+    case 'new':
+        $statusText = 'New order';
+        break;
+    default:
+        $statusText = 'Unknown status';
 }
 ```
 
-This compound check has one distinctive feature. Each branch here is a check of the `$status` variable's value. The `match` expression allows you to write this code in a shorter and more expressive way:
+The same thing with `match` takes less space, and the result goes straight into the variable:
 
 ```php
 <?php
 
 $statusText = match ($status) {
-    'processing' => 'Order is being processed', // $status === 'processing'
-    'paid' => 'Order is paid',                  // $status === 'paid'
-    'new' => 'New order',                       // $status === 'new'
-    default => 'Unknown status',                // else
+    'processing' => 'Order is being processed',
+    'paid' => 'Order is paid',
+    'new' => 'New order',
+    default => 'Unknown status',
 };
 ```
 
@@ -37,11 +41,7 @@ match (value) {
 }
 ```
 
-In terms of the number of elements, `match` is a complex construct. The outer description includes the `match` keyword and the variable whose values `match` uses to choose the behavior. Inside, there are arms, each describing the result for one of the variable's values. Each arm corresponds to an `if` in the example above. The `default` arm is a special case that corresponds to the `else` branch in conditional constructs.
-
-The main difference between `match` and both `switch` and a regular `if` is that it is an **expression**. The whole construct evaluates to a value, so its result can be directly assigned to a variable or returned from a function. No `break` is needed: exactly one arm is executed, and fall-through is impossible here.
-
-Only the syntax shown above is allowed inside `match`. To the left of the `=>` arrow is the value to compare, and to the right is the expression that becomes the result. If several values lead to the same result, they are listed separated by commas:
+To the left of the `=>` arrow is the value to compare, and to the right is any expression that becomes the result. The `default` arm fires when no value matches and plays the role of `else`. If several values lead to the same result, they are listed separated by commas:
 
 ```php
 <?php
@@ -53,12 +53,13 @@ $type = match ($size) {
 };
 ```
 
-There are other differences from `switch`:
+The main difference from `switch` is that `match` is an **expression**. The whole construct evaluates to a value, so the result can be assigned to a variable or returned from a function right away. `switch` cannot do this; it needs a separate variable or a `return` inside a `case`. There are other differences too:
 
-* `match` compares values strictly, like the `===` operator. Meanwhile, `switch` uses loose comparison `==`, which performs automatic type conversion.
-* If no arm matches and `default` is not specified, the program terminates with an `UnhandledMatchError`. In the same situation, `switch` would simply do nothing.
+* `match` compares values strictly, like the `===` operator, with no automatic type conversion. `switch` compares loosely, with `==`.
+* `match` executes exactly one arm, so no `break` is needed. In `switch`, without `break`, control falls through to the next `case`.
+* If nothing matches in `match` and there is no `default`, the program terminates with an `UnhandledMatchError`. In the same case, `switch` does nothing.
 
-Often the result of `match` needs to be returned from the function that contains it. To do this, a regular `return` is placed before `match`:
+Since `match` returns a value, its result is often returned straight from the function with `return`:
 
 ```php
 <?php
@@ -75,4 +76,4 @@ function countItems(int $count): ?string
 print_r(countItems(2)); // => two
 ```
 
-Although the `match` expression appears in code, technically you can always do without it. Its key benefit is that it better expresses the programmer's intent when specific values of a variable need to be checked. Such code is easier to read than `elseif` blocks.
+Technically you can always do without `match`, just as without `switch`. But when you need to pick a result by specific values of a variable, `match` expresses that intent most clearly, and such code is easier to read than a chain of `elseif`.
