@@ -2,9 +2,7 @@
 
 namespace HexletBasics\DataTypes\PrimitiveDataTypes;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -18,6 +16,5 @@ Rating: 4.7
 HERE;
 
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

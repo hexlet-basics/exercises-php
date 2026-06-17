@@ -2,9 +2,7 @@
 
 namespace HexletBasics\DataTypes\DataTypesCasting;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -12,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = '36 °C';
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

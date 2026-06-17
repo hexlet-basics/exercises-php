@@ -2,14 +2,12 @@
 
 namespace HexletBasics\Conditionals\MatchExpression;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertEquals(600, calculateDeliveryCost('canada', 0.5));
         $this->assertEquals(600, calculateDeliveryCost('canada', 1));
         $this->assertEquals(900, calculateDeliveryCost('canada', 2));

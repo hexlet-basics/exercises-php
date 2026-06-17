@@ -2,7 +2,7 @@
 
 namespace HexletBasics\AdvancedStrings\Locales;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -10,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = setlocale(LC_CTYPE, 0);
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

@@ -2,14 +2,12 @@
 
 namespace HexletBasics\Loops\ForInRange;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'Solution.php';
-
         $this->assertEquals('1', fizzbuzz(1));
         $this->assertEquals('1 2 Fizz', fizzbuzz(3));
         $this->assertEquals('1 2 Fizz 4 Buzz', fizzbuzz(5));

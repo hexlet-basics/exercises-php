@@ -2,9 +2,7 @@
 
 namespace HexletBasics\Strings\Quotes;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -12,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = 'The file "user\'s_config.json" was not found.';
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

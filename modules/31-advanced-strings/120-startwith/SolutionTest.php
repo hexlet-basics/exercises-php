@@ -2,7 +2,7 @@
 
 namespace HexletBasics\AdvancedStrings\StartWith;
 
-use PHPUnit\Framework\TestCase;
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -10,6 +10,5 @@ class SolutionTest extends TestCase
     {
         $expected = '18';
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }

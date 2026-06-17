@@ -2,9 +2,7 @@
 
 namespace HexletBasics\Variables\Concatenation;
 
-use PHPUnit\Framework\TestCase;
-
-\HexletBasics\Functions\runScript();
+use HexletBasics\Exercise\TestCase;
 
 class SolutionTest extends TestCase
 {
@@ -17,6 +15,5 @@ class SolutionTest extends TestCase
 HERE;
 
         $this->expectOutputString($expected);
-        require 'Solution.php';
     }
 }
