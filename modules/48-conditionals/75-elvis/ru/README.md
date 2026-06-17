@@ -3,7 +3,7 @@
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     if ($name) {
         return "Hello, {$name}!";
@@ -23,7 +23,7 @@ generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     return $name ? "Hello, {$name}!" : "Hello, {$nickname}!";
 }
@@ -39,7 +39,7 @@ function generateGreeting($name, $nickname)
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     $user = $name ?: $nickname;
     return "Hello, {$user}!";

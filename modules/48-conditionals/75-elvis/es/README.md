@@ -3,7 +3,7 @@ Imaginemos el siguiente escenario: en un sitio web, los usuarios pueden tener no
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     if ($name) {
         return "¡Hola, {$name}!";
@@ -23,7 +23,7 @@ Con el operador ternario, podemos obtener una forma más corta:
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     return $name ? "¡Hola, {$name}!" : "¡Hola, {$nickname}!";
 }
@@ -39,7 +39,7 @@ En PHP, para estos casos, existe un operador especial:
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     $user = $name ?: $nickname;
     return "¡Hola, {$user}!";

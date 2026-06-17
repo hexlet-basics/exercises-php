@@ -3,7 +3,7 @@
 namespace HexletBasics\Logic\LogicalExpressions;
 
 // BEGIN
-function isFalsy($value): bool
+function isFalsy(int|float|string|bool|null $value): bool
 {
     return $value == false;
 }

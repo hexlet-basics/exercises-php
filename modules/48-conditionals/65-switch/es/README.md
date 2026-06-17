@@ -66,7 +66,7 @@ A veces, el resultado obtenido dentro de un `case` es el final de la ejecución 
 ```php
 <?php
 
-function doSomethingGood($count)
+function doSomethingGood(int $count): ?string
 {
     // Llenar
     switch ($count) {
@@ -90,7 +90,7 @@ function doSomethingGood($count)
 ```php
 <?php
 
-function doSomethingGood($count)
+function doSomethingGood(int $count): ?string
 {
     switch ($count) {
         case 1:
