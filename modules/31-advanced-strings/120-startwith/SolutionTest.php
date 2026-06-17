@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DeepIntoStrings\StartWith;
+namespace HexletBasics\AdvancedStrings\StartWith;
 
 use PHPUnit\Framework\TestCase;
 
@@ -8,10 +8,8 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
+        $expected = '18';
+        $this->expectOutputString($expected);
         require 'index.php';
-        $this->assertTrue(startsWith('one', 'o'));
-        $this->assertFalse(startsWith('one', 'ne'));
-        $this->assertTrue(startsWith('one', 'on'));
-        $this->assertTrue(startsWith('one', 'one'));
     }
 }

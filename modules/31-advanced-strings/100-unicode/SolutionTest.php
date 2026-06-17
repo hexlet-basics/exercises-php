@@ -1,6 +1,6 @@
 <?php
 
-namespace HexletBasics\DeepIntoStrings\Unicode;
+namespace HexletBasics\AdvancedStrings\Unicode;
 
 use PHPUnit\Framework\TestCase;
 
@@ -8,10 +8,8 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
+        $expected = "13\n7\n";
+        $this->expectOutputString($expected);
         require 'index.php';
-        $this->assertEquals('ONE', invertCase('one'));
-        $this->assertEquals('two', invertCase('TWO'));
-        $this->assertEquals('tHrEE', invertCase('ThRee'));
-        $this->assertEquals('пРиВеТ!', invertCase('ПрИвЕт!'));
     }
 }
