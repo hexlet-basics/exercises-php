@@ -10,6 +10,6 @@ class SolutionTest extends TestCase
     {
         $expected = "13\n7\n";
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }

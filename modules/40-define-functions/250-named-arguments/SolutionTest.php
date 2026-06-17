@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('python', trimAndRepeat('python'));
         $this->assertEquals('on', trimAndRepeat('python', offset: 4));

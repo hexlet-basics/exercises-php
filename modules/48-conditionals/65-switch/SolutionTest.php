@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('just a number', getNumberExplanation(0));
         $this->assertEquals('devil number', getNumberExplanation(666));

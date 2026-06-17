@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals(2, countHashtags('New post #php #code'));
         $this->assertEquals(0, countHashtags('No tags here'));

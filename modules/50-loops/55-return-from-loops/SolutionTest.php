@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertTrue(hasAtSymbol('support@example.com'));
         $this->assertFalse(hasAtSymbol('wrong-email'));

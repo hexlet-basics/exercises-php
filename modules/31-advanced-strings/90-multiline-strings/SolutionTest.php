@@ -17,6 +17,6 @@ class SolutionTest extends TestCase
 Спасибо, что выбрали нас!
 EOT;
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }

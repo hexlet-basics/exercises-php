@@ -12,6 +12,6 @@ class SolutionTest extends TestCase
     {
         $expected = "Ящиков на складе:\n102";
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }

@@ -12,6 +12,6 @@ class SolutionTest extends TestCase
     {
         $expected = "https://hexlet.io\nhttps://hexlet.io";
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }
