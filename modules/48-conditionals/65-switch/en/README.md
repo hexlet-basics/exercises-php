@@ -65,7 +65,7 @@ The first way. Create a variable before *switch*, fill it with something in *cas
 ```php
 <?php
 
-function doSomethingGood($count)
+function doSomethingGood(int $count): ?string
 {
     // Filling it
     switch ($count) {
@@ -89,7 +89,7 @@ The second way is easier and shorter. Instead of creating a variable, *case* all
 ```php
 <?php
 
-function doSomethingGood($count)
+function doSomethingGood(int $count): ?string
 {
     switch ($count) {
         case 1:

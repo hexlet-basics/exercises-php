@@ -3,7 +3,7 @@
 namespace HexletBasics\Loops\Mutators;
 
 // BEGIN
-function makeItFunny($str, $n)
+function makeItFunny(string $str, int $n): string
 {
     $i = 0;
     $result = '';

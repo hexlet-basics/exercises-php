@@ -66,7 +66,7 @@ switch ($count) {
 ```php
 <?php
 
-function doSomethingGood($count)
+function doSomethingGood(int $count): ?string
 {
     // Заполняем
     switch ($count) {
@@ -90,7 +90,7 @@ function doSomethingGood($count)
 ```php
 <?php
 
-function doSomethingGood($count)
+function doSomethingGood(int $count): ?string
 {
     switch ($count) {
         case 1:

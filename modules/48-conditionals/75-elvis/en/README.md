@@ -6,7 +6,7 @@ Let's try to assemble a string that greets users according to these requirements
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     if ($name) {
         return "Hello, {$name}!";
@@ -26,7 +26,7 @@ You can use a ternary operator to write it in an even shorter way:
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     return $name ? "Hello, {$name}!" : "Hello, {$nickname}!";
 }
@@ -39,7 +39,7 @@ In PHP, there's a special operator for such cases:
 ```php
 <?php
 
-function generateGreeting($name, $nickname)
+function generateGreeting(string $name, string $nickname): string
 {
     $user = $name ?: $nickname;
     return "Hello, {$user}!";
