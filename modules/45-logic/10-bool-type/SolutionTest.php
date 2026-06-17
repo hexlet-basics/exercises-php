@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertFalse(isPensioner(23));
         $this->assertFalse(isPensioner(59));

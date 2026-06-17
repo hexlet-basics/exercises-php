@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $reflection = new \ReflectionFunction(__NAMESPACE__ . '\generatePin');
         $this->assertEquals('string', $reflection->getReturnType()?->getName(), 'You should add a return type declaration!');

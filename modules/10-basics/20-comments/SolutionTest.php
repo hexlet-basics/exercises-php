@@ -9,8 +9,8 @@ class SolutionTest extends TestCase
     public function test()
     {
         $this->expectOutputString('');
-        require 'index.php';
-        $content = file_get_contents('index.php');
+        require 'Solution.php';
+        $content = file_get_contents('Solution.php');
         $this->assertStringContainsString('// TODO: добавить функцию приветствия', $content);
     }
 }

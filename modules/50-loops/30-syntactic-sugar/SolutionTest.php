@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('-----', buildProgressBar(0, 5));
         $this->assertEquals('###--', buildProgressBar(3, 5));

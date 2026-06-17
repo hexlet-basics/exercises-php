@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertFalse(isNotPalindrome('wow'));
         $this->assertFalse(isNotPalindrome('asdffdsa'));

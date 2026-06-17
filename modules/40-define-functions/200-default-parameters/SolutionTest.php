@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('****1234', getHiddenCard('1234123412341234'));
         $this->assertEquals('****4321', getHiddenCard('1234123412344321'));

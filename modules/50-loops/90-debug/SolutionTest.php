@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('a3bc4', compress('aaabcccc'));
         $this->assertEquals('abcd', compress('abcd'));

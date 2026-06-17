@@ -3,7 +3,7 @@
 language:
   docker_image: "ghcr.io/hexlet-basics/exercises-php"
   extension: php
-  exercise_filename: index.php
+  exercise_filename: Solution.php
   exercise_test_filename: SolutionTest.php
   learn_as: first_language
   progress: completed

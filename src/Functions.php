@@ -4,6 +4,6 @@ namespace HexletBasics\Functions;
 
 function runScript()
 {
-    require 'index.php';
+    require 'Solution.php';
     print_r("\n");
 }

@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('https://yandex.ru', normalizeUrl('yandex.ru'));
         $this->assertEquals('https://yandex.ru', normalizeUrl('http://yandex.ru'));
