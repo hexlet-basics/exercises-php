@@ -18,6 +18,6 @@ Rating: 4.7
 HERE;
 
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }

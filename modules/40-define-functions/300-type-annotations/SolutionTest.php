@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $reflection = new \ReflectionFunction(__NAMESPACE__ . '\wordMultiply');
         $parameterTypes = array_map(

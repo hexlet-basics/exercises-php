@@ -12,6 +12,6 @@ class SolutionTest extends TestCase
     {
         $expected = 'The file "user\'s_config.json" was not found.';
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }

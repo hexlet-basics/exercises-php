@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('he...', truncate('hexlet', 2));
         $this->assertEquals('it w...', truncate('it works!', 4));

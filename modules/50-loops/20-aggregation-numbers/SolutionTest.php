@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals(0, calculateElectricityBill(0));
         $this->assertEquals(400, calculateElectricityBill(80));

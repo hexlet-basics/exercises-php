@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('go', getTrafficLightAction('green'));
         $this->assertEquals('slow down', getTrafficLightAction('yellow'));

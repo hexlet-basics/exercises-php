@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        require 'index.php';
+        require 'Solution.php';
 
         $this->assertEquals('************5678', maskCardNumber('1234567812345678'));
         $this->assertEquals('****5678', maskCardNumber('12345678'));

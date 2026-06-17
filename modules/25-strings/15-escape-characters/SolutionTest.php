@@ -12,6 +12,6 @@ class SolutionTest extends TestCase
     {
         $expected = "Для разделения строк используйте \"\\n\"\nПример: print_r(\"строка1\\nстрока2\")";
         $this->expectOutputString($expected);
-        require 'index.php';
+        require 'Solution.php';
     }
 }

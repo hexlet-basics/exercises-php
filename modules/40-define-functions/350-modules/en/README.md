@@ -2,14 +2,14 @@ As a program grows, the code is split into separate files. In PHP, a file is con
 
 ```php
 <?php
-// index.php
+// Solution.php
 
 require 'helpers.php';
 
 sayHi(); // => Hi!
 ```
 
-The tests in this course use the same mechanism: they load your solution with `require 'index.php';`.
+The tests in this course use the same mechanism: they load your solution with `require 'Solution.php';`.
 
 `include` differs from `require` in how a missing file is handled: `include` emits a warning and the program keeps running, while `require` stops with an error. `require_once` loads a file only once, which matters for files with functions: redeclaring a function causes an error.
 
