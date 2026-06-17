@@ -3,7 +3,7 @@
 namespace HexletBasics\Conditionals\SwitchStatement;
 
 // BEGIN
-function getNumberExplanation($number)
+function getNumberExplanation(int $number): string
 {
     switch ($number) {
         case 666:

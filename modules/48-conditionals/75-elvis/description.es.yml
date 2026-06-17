@@ -7,7 +7,7 @@ theory: |
   ```php
   <?php
 
-  function generateGreeting($name, $nickname)
+  function generateGreeting(string $name, string $nickname): string
   {
       if ($name) {
           return "¡Hola, {$name}!";
@@ -27,7 +27,7 @@ theory: |
   ```php
   <?php
 
-  function generateGreeting($name, $nickname)
+  function generateGreeting(string $name, string $nickname): string
   {
       return $name ? "¡Hola, {$name}!" : "¡Hola, {$nickname}!";
   }
@@ -43,7 +43,7 @@ theory: |
   ```php
   <?php
 
-  function generateGreeting($name, $nickname)
+  function generateGreeting(string $name, string $nickname): string
   {
       $user = $name ?: $nickname;
       return "¡Hola, {$user}!";

@@ -3,7 +3,7 @@
 namespace HexletBasics\Conditionals\Elvis;
 
 // BEGIN
-function generateAmount($amount, $price)
+function generateAmount(int $amount, int $price): int
 {
     $result = $amount ?: $price * 3;
 

@@ -70,7 +70,7 @@ theory: |
   ```php
   <?php
 
-  function doSomethingGood($count)
+  function doSomethingGood(int $count): ?string
   {
       // Llenar
       switch ($count) {
@@ -94,7 +94,7 @@ theory: |
   ```php
   <?php
 
-  function doSomethingGood($count)
+  function doSomethingGood(int $count): ?string
   {
       switch ($count) {
           case 1:

@@ -10,7 +10,7 @@
 <?php
 // helpers.php
 
-function sayHi()
+function sayHi(): void
 {
     print_r('Hi!');
 }
@@ -76,7 +76,7 @@ print_r(tripsNeeded(10, 3)); // => 4
 
 namespace App\Custom;
 
-function floor($number)
+function floor(float $number): string
 {
     return 'custom floor';
 }
