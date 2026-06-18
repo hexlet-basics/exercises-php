@@ -1,64 +1,147 @@
-La suma, la concatenación y otras operaciones que hemos visto son capacidades básicas de los lenguajes de programación. Pero con las cadenas de texto se pueden realizar operaciones más complejas. Se pueden invertir, cambiar el caso de las letras, eliminar caracteres innecesarios.
+La programación existe para realizar todo tipo de operaciones. A veces son acciones simples, como sumar números o unir cadenas de texto. Pero con más frecuencia son procesos complejos, como transferir dinero entre cuentas, realizar un pedido en una tienda en línea, calcular impuestos o preparar un informe.
 
-A un nivel más alto, existe la lógica aplicada a una aplicación específica. Los programas pueden realizar transacciones monetarias, calcular impuestos, generar informes. La cantidad de operaciones similares es infinita y depende de cada programa en particular. Y todas ellas deben estar expresadas en código. Para eso, las funciones nos ayudan, y en esta lección aprenderemos sobre ellas.
+Tales operaciones no se pueden expresar con un solo comando. Detrás de una acción como «transferir dinero» pueden esconderse decenas, cientos e incluso miles de líneas de código. Esto incluye la verificación del saldo, el descuento del monto, el cálculo de la comisión, la actualización de la base de datos y el envío de una notificación al usuario.
 
-## Tipos de funciones
+Para gestionar este código y no perderse en los detalles, los programadores utilizan funciones. Una función combina un bloque de código en un todo único, oculta su implementación y permite concentrarse en el significado. Para un programador, basta con llamar a la función y confiarle todo el trabajo interno.
 
-Para expresar cualquier operación arbitraria en programación, existen las **funciones**. Pueden ser funciones incorporadas o agregadas por el programador. Ya estamos familiarizados con una función incorporada: `print_r()`.
+![Función](./assets/function.png)
 
-Las **funciones** son una de las construcciones clave en programación, sin ellas no se puede hacer prácticamente nada. Primero aprenderemos a utilizar las funciones ya creadas y luego aprenderemos a crear las nuestras propias.
-
-## Cómo trabajar con funciones incorporadas
-
-Comenzaremos con funciones sencillas para trabajar con cadenas de texto. A continuación, se muestra un ejemplo de llamado a la función `strrev()`, que invierte una cadena de texto:
+Imaginemos una función que transfiere dinero de una cuenta a otra. En realidad, dentro de ella puede haber cientos de líneas de código, pero no lo vemos. Desde el exterior, todo se ve como un solo comando simple:
 
 ```php
 <?php
 
-// Llamado a la función strrev con el argumento '¡Hola!'
-$resultado = strrev('¡Hola!');
-print_r($resultado); // => '!aloH'
+transferMoney('Alice', 'Bob', 100);
 ```
 
-Hemos creado la variable `$resultado` y le hemos indicado al intérprete que guarde en ella el resultado que devuelve el llamado a la función `strrev()`. En este sentido, las funciones son similares a las operaciones, siempre devuelven un resultado.
+Esta línea llama a la función `transferMoney()`. Recibe al remitente `Alice`, al destinatario `Bob` y el monto `100`.
 
-La expresión `strrev('¡Hola!')` significa que se está llamando a la función con el nombre `strrev`, a la cual se le ha pasado el argumento o parámetro `'¡Hola!'`.
-
-Las funciones necesitan argumentos para funcionar, al igual que los operadores necesitan operandos. La función `strrev()` invierte la cadena de texto que se le pasa como argumento.
-
-El llamado a una función siempre se indica con paréntesis `()`. Estos van justo después del nombre de la función. Entre los paréntesis puede haber cualquier cantidad de argumentos, o incluso ninguno. La cantidad depende de la función que se esté utilizando. Por ejemplo, la función `pow()` recibe dos argumentos y eleva el número pasado como primer parámetro a la potencia indicada como segundo parámetro:
+Aquí hay algunos ejemplos más de llamadas a funciones que podríamos implementar. Cada función tiene su propio nombre y su propio conjunto de datos con los que trabajar.
 
 ```php
 <?php
 
-$resultado = pow(2, 3); // 2 * 2 * 2
-print_r($resultado); // => 8
+// Sí, print_r también es una función
+print_r('¡Hexlet!');
 
-// En PHP moderno, hay un operador especial para elevar a una potencia
-$resultado = 2 ** 3; // 8
+// Envío de un correo a un usuario
+sendEmail('bob@example.com', '¡Bienvenido!');
+
+// Cálculo del impuesto sobre un monto dado
+calculateTax(5000, 'Florida');
+
+// Verificación de si un usuario está en el sistema
+isRegistered('Alice');
+
+// Obtención de un número aleatorio del 1 al 10
+randomNumber(1, 10);
+
+// Creación de una copia de seguridad de la base de datos
+backupDatabase();
+
+// Cálculo de la longitud de una cadena
+strlen('Hexlet'); // Resultado: 6
 ```
 
-Ahora veamos un ejemplo de una función que no recibe argumentos. La función `rand()` genera y devuelve un número aleatorio:
+En una llamada a una función, primero se escribe su **nombre** y luego los **paréntesis**. Los paréntesis indican que se trata precisamente de una llamada. Así entendemos que tenemos delante una función y no una variable.
+
+Dentro de los paréntesis se indican los **argumentos**, es decir, los datos que la función recibe para trabajar. Puede haber varios, uno o ninguno en absoluto.
+
+## ¿De dónde vienen las funciones?
+
+Algunas funciones están incorporadas en el lenguaje (built-in), otras las crean los propios programadores.
+
+Las **funciones incorporadas** son funciones que vienen junto con el lenguaje PHP. Se pueden usar de inmediato, sin acciones adicionales. Como ejemplo se puede citar la función `print_r()`. Como suele decirse, está disponible globalmente.
+
+Las **funciones definidas por los programadores** se crean cuando es necesario organizar la lógica propia en un bloque aparte. A una función así se le puede dar cualquier nombre y usarla en el código igual que las incorporadas. Aprenderemos a hacerlo más adelante.
+
+Además, existen funciones que se encuentran en bibliotecas separadas. Para usarlas, la biblioteca debe instalarse y conectarse al programa. Por ahora no analizamos en detalle este mecanismo. De momento, basta con saber que permite conectar un conjunto externo de funciones y hacerlas disponibles en el programa.
+
+## Una función con un solo parámetro
+
+Una de las funciones incorporadas más utilizadas es `strlen()`. Devuelve la cantidad de caracteres en una cadena.
 
 ```php
 <?php
 
-$resultado = rand();
+$message = 'Hello!';
+$count = strlen($message);
+print_r($count); // => 6
 ```
 
-Los operadores y las funciones son lo mismo. La diferencia está en cómo se escriben. Si consideramos la suma como una función, se vería así:
+Aquí la cadena `'Hello!'` tiene seis caracteres, por lo que la llamada `strlen($message)` devolverá el número `6`.
+
+```text
+Argumentos         Función         Resultado
+┌──────────┐     ┌──────────┐     ┌──────────┐
+│ 'Hello!' │ ──→ │ strlen() │ ──→ │    6     │
+└──────────┘     └──────────┘     └──────────┘
+```
+
+## Devolución de un valor
+
+La devolución de un valor es uno de los principios clave del funcionamiento de las funciones. Gracias a ella, podemos conectar los resultados de diferentes acciones y construir una lógica más compleja. Si una función devuelve un valor, podemos guardarlo en una variable, pasarlo a otra función o usarlo en cálculos. Así es exactamente como funciona `strlen()`. Cuenta la cantidad de caracteres y entrega el resultado hacia afuera.
 
 ```php
 <?php
 
-3 + 5; // 8
-sum(3, 5); // 8
+$message1 = 'Hello!';
+$length1 = strlen($message1); // guardamos el resultado
 
-// Incluso se puede escribir así
-+(3, 5);
+$message2 = 'World!';
+$length2 = strlen($message2);
 
-// En PHP, esta sintaxis no es posible, pero hay lenguajes (como Lisp)
-// donde se ve muy similar
+$combinedLength = $length1 + $length2; // usamos el resultado en una expresión
+print_r($combinedLength); // => 12
 ```
 
-Pregunta de autoevaluación. ¿Cómo se puede saber qué devuelve el llamado a `print_r()`? Compruébalo.
+Si `strlen()` imprimiera el resultado en la pantalla de inmediato (como hace `print_r()`), veríamos el número pero no podríamos usarlo:
+
+```php
+<?php
+
+// una función imaginaria que solo imprime el resultado
+fakeStrlen('Hello!'); // imprime 6
+
+// pero después ese número ya no está disponible
+// no podemos sumarlo, guardarlo ni compararlo
+$result = fakeStrlen('Hello!'); // aquí $result no contiene nada
+```
+
+Por eso la devolución de un valor representa un concepto tan importante. Permite vincular las funciones entre sí. Unas devuelven datos, otras los usan en su trabajo. Así es exactamente como, a partir de pequeños pasos, se construyen programas grandes y complejos.
+
+## Una función con varios parámetros
+
+Algunas funciones aceptan varios datos para trabajar a la vez. Un buen ejemplo es la función incorporada `pow()`, que eleva un número a la potencia necesaria. El primer parámetro toma la base de la potencia, el segundo establece el exponente.
+
+```php
+<?php
+
+// elevamos 2 a la 3.ª potencia: 2 * 2 * 2
+$result = pow(2, 3);
+print_r($result); // => 8
+
+// 5 a la 2.ª potencia: 5 * 5
+print_r(pow(5, 2)); // => 25
+```
+
+En cuanto a su estructura, una llamada con varios parámetros no se diferencia de una llamada con uno solo. El mismo nombre de función, los paréntesis y los argumentos separados por comas dentro.
+
+## Parámetros y argumentos
+
+En las conversaciones sobre funciones aparecen una y otra vez las palabras **parámetros** y **argumentos**. Están relacionadas, pero no son lo mismo.
+
+De los **parámetros** se habla al crear una función. Se llama parámetro a la variable dentro de la función en la que cae el valor pasado. De los **argumentos** se habla al llamarla. Se llama argumento a lo que pasamos a la función. Puede ser un número, una variable o cualquier expresión.
+
+```php
+<?php
+
+// números como argumentos
+print_r(pow(2, 3)); // => 8
+
+$x = 2;
+// un argumento puede ser una expresión, se evalúa antes de pasarse a la función
+print_r(pow($x + 1, 3)); // => 27
+```
+
+No es obligatorio memorizar esto, pero resultará útil al leer literatura en inglés.

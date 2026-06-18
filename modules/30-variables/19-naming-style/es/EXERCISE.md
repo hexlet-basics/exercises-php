@@ -1,3 +1,4 @@
-Crea dos variables con los nombres "primer número" y "segundo número" en inglés, utilizando lowerCamelCase. Asigna el número `1.10` a la primera variable y `-100` a la segunda. Imprime en pantalla el producto de los números almacenados en las variables resultantes.
-
-El código funcionará con cualquier nombre, y nuestro sistema siempre verifica solo el resultado en pantalla, por lo que la ejecución de esta tarea es responsabilidad tuya.
+1. Crea dos variables: la cantidad de productos en un pedido y el precio de un producto. Usa lowerCamelCase. Cómo nombres las variables queda a tu criterio, las pruebas no lo verifican.
+2. Asigna el número `20` a la primera variable y `100` a la segunda.
+3. Calcula el costo total del pedido.
+4. Imprime el resultado en pantalla.

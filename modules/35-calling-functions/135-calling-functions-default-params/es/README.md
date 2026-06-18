@@ -1,28 +1,65 @@
+Algunas funciones en PHP tienen **parámetros opcionales**. Esto significa que para ellos se establece de antemano un valor por defecto, y al llamar a la función ese parámetro se puede omitir.
 
-Veamos la función `round()`. Redondea el número que se le pasa:
+![Taller mecánico](./assets/default-parameters.png)
 
-```php
-<?php
-
-$resultado = round(10.25, 0); // 10
-```
-
-Le pasamos dos argumentos: el número y la precisión de redondeo. El valor `0` significa que se redondeará al número entero más cercano.
-
-En la mayoría de los casos, se necesita redondear al número entero (no a los décimos, por ejemplo), por lo que los creadores de la función `round` hicieron el segundo argumento **opcional** y le dieron un **valor por defecto de `0`**. Esto significa que no es necesario especificar el segundo argumento y el resultado será el mismo:
+Veamos la función incorporada `round()`, que redondea un número:
 
 ```php
 <?php
 
-$resultado = round(10.25); // 10
+$result = round(10.25, 0); // 10
 ```
 
-Y si se necesita una precisión diferente, se puede pasar un argumento:
+Le pasamos dos valores:
+
+- El número que hay que redondear.
+- La precisión del redondeo; `0` significa que el redondeo será al número entero.
+
+Como en la mayoría de los casos se necesita precisamente el redondeo al número entero, los creadores de la función `round()` hicieron el segundo parámetro opcional y le dieron el valor por defecto `0`. Por eso el resultado será el mismo, incluso si no se indica el segundo parámetro:
 
 ```php
 <?php
 
-$resultado = round(10.25, 1); // 10.3
+$result = round(10.25); // 10
 ```
 
-Si una función en PHP tiene argumentos opcionales, siempre se colocan después de los argumentos obligatorios. Pueden ser cualquier cantidad (depende de la función en sí), pero siempre van juntos y al final de la lista de argumentos.
+Si se necesita otra precisión, se puede indicar explícitamente:
+
+```php
+<?php
+
+// redondeo a un decimal
+$result = round(10.25, 1); // 10.3
+```
+
+```text
+round(10.25, 1)  →  argumentos: 10.25, 1    →  10.3
+round(10.25)     →  argumentos: 10.25, (0)  →  10
+                                       └── valor por defecto
+```
+
+La cantidad de parámetros opcionales depende de la función concreta, pero los obligatorios siempre van antes de los opcionales.
+
+## La firma de una función
+
+Cada función tiene una **firma**, que contiene la descripción de su nombre, sus parámetros y el orden en que se usan. La firma ayuda a entender qué datos espera la función y qué ocurrirá si los parámetros no se indican.
+
+Veamos la [documentación](https://www.php.net/manual/es/function.round.php) de la función `round()`. Si la simplificamos un poco, la firma se ve así:
+
+```php
+round(int|float $num, int $precision = 0): float
+```
+
+La función se llama `round`. El parámetro `$num` es obligatorio: recibe el número que se va a redondear (entero o fraccionario). El parámetro `$precision` tiene el valor por defecto `0`, es decir, es opcional; si no se indica, el redondeo se hará al número entero. Después de los dos puntos se indica el tipo del resultado: la función devuelve un número fraccionario (`float`).
+
+En la firma completa de la documentación hay un parámetro opcional más, que controla el modo de redondeo. Se necesita pocas veces, por lo que de momento no lo analizamos.
+
+## Cómo trabajar con funciones nuevas
+
+Cuando te encuentras con una función nueva, puedes usar un patrón sencillo:
+
+1. Abrir la documentación y encontrar la firma de la función.
+2. Mirar ejemplos de uso.
+3. Pasar a la consola interactiva de PHP (se inicia con el comando `php -a`) y probar a llamar a la función con diferentes argumentos.
+
+Este enfoque ayuda a entender rápidamente cómo funciona exactamente la función, cuáles son sus parámetros obligatorios y opcionales, y qué resultados devuelve.

@@ -2,27 +2,41 @@
 
 name: Parámetros opcionales de las funciones
 theory: |
-  En programación, muchas funciones y métodos tienen parámetros que rara vez cambian. En estos casos, se les asignan valores predeterminados que se pueden cambiar según sea necesario. En esta lección aprenderemos cómo asignar valores predeterminados. Esto nos permite reducir la cantidad de código repetitivo:
+  Las funciones pueden recibir parámetros. A veces resulta conveniente asignar un valor directamente en la definición de la función para no tener que indicarlo en cada llamada. Ese valor se llama **valor predeterminado**.
+
+  Si no se pasa un argumento, se utiliza ese valor. Si se especifica un argumento, este reemplaza al predeterminado. Ya nos hemos encontrado con llamadas a funciones de este tipo; por ejemplo, la función incorporada `round()` tiene un segundo parámetro cuyo valor predeterminado es `0`. Ahora aprenderemos a definirlos nosotros mismos.
+
+  ## Ejemplo: repetir texto
+
+  Hagamos una función que repita una cadena de texto varias veces. Por defecto que sea una vez, pero si se desea se puede indicar otra cantidad:
 
   ```php
   <?php
 
-  // Función de potencia
-  // El segundo parámetro tiene un valor predeterminado de 2
-  function myPow($x, $base = 2)
+  function repeat($text, $times = 1)
   {
-      return $x ** $base;
+      return str_repeat($text, $times);
   }
 
-  // Tres al cuadrado (dos es el valor predeterminado)
-  myPow(3); // 3 * 3 = 9
-  // Tres al cubo
-  myPow(3, 3); // 3 * 3 * 3 = 27
+  print_r(repeat('Hi'));    // => Hi
+  print_r(repeat('Hi', 3)); // => HiHiHi
   ```
 
-  El valor predeterminado se asigna como una asignación normal en la definición. Solo se utiliza si el parámetro no se pasa. Hay que acostumbrarse a esto.
+  En este ejemplo se utiliza la función incorporada `str_repeat()`. Funciona así: toma la cadena de texto original y la repite la cantidad de veces indicada. Por ejemplo, `str_repeat('A', 5)` devolverá `'AAAAA'`. Esta función se usa con frecuencia al generar plantillas, separadores y fragmentos de texto que se repiten.
 
-  Incluso puede haber un valor predeterminado cuando solo hay un parámetro:
+  ```text
+  function repeat($text, $times = 2)    ← $times tiene un valor predeterminado
+  {
+      ...
+  }
+
+  repeat('go')        →  $times = 2  (por defecto)
+  repeat('go', 5)     →  $times = 5  (indicado explícitamente)
+  ```
+
+  El valor predeterminado se ve como una asignación normal en la definición. Solo se aplica si el parámetro no se pasa. Hay que acostumbrarse a esto.
+
+  Puede haber un valor predeterminado incluso cuando solo hay un parámetro:
 
   ```php
   <?php
@@ -32,27 +46,52 @@ theory: |
       print_r($text);
   }
 
-  myPrint(); // => "nothing"
-  myPrint("Hexlet"); // => "Hexlet"
+  myPrint();         // => "nothing"
+  myPrint('Hexlet'); // => "Hexlet"
   ```
 
-  Puede haber cualquier cantidad de parámetros con valores predeterminados:
+  ## Ejemplo: unir palabras con un separador
+
+  Por defecto las palabras se unen con un espacio, pero se puede indicar otro carácter:
 
   ```php
   <?php
 
-  function f($a = 5, $b = 10, $c = 100)
+  function joinWords($word1, $word2, $sep = ' ')
   {
-    ...
+      return $word1 . $sep . $word2;
   }
+
+  print_r(joinWords('King', 'Road'));         // => King Road
+  print_r(joinWords('Dragon', 'stone', '-')); // => Dragon-stone
   ```
 
-  Los valores predeterminados tienen una restricción. Deben ir al final de la lista de parámetros. Desde el punto de vista de la sintaxis, no es posible crear una función con un parámetro opcional seguido de uno obligatorio:
+  ## Ejemplo: varios parámetros predeterminados
+
+  Una función puede contener más de un parámetro con valores predeterminados. Por ejemplo, hagamos una función que construya una cadena separadora. Por defecto el carácter es un guion y la longitud es 10:
 
   ```php
   <?php
 
-  // Este código dará un error
+  function makeLine($symbol = '-', $length = 10)
+  {
+      return str_repeat($symbol, $length);
+  }
+
+  print_r(makeLine());       // => ----------
+  print_r(makeLine('*'));    // => **********
+  print_r(makeLine('*', 5)); // => *****
+  print_r(makeLine('#', 3)); // => ###
+  ```
+
+  ## Restricción en el orden de los parámetros
+
+  Los parámetros opcionales siempre se indican al final de la lista de parámetros. Desde el punto de vista de la sintaxis, es imposible crear una función en la que después de un parámetro opcional venga uno obligatorio:
+
+  ```php
+  <?php
+
+  // Este código terminará con un error
   function f($a = 5, $b = 10, $c = 100, $x)
   {
     ...
@@ -77,20 +116,25 @@ theory: |
   }
   ```
 instructions: |
-
   Implementa la función `getHiddenCard()`, que recibe como argumento el número de una tarjeta de crédito (compuesto por 16 dígitos) como una cadena de texto y devuelve su versión oculta, que se puede utilizar en el sitio web para mostrarla. Si la tarjeta original tenía el número *2034399002125581*, entonces la versión oculta se verá así *\*\*\*\*5581*. En otras palabras, la función reemplaza los primeros 12 caracteres por asteriscos. La cantidad de asteriscos se controla mediante un segundo parámetro opcional. El valor predeterminado es 4.
 
   ```php
   <?php
 
   // La tarjeta de crédito se pasa como una cadena de texto
-  getHiddenCard("1234567812345678", 2); // "**5678"
-  getHiddenCard("1234567812345678", 3); // "***5678"
+  // El segundo parámetro no se pasa, así que habrá 4 asteriscos
   getHiddenCard('1234567812345678'); // "****5678"
-  getHiddenCard('2034399002121100', 1); // "*1100"
+
+  getHiddenCard('1234567812345678', 2); // "**5678"
+  getHiddenCard('1234567812345678', 3); // "***5678"
+
+  // O usando variables
+  $cardNumber = '2034399002121100';
+  getHiddenCard($cardNumber); // "****1100"
+  getHiddenCard($cardNumber, 1); // "*1100"
   ```
 
-  Para completar esta tarea, necesitarás la función [str_repeat()](https://www.php.net/manual/es/function.str-repeat.php), que repite una cadena de texto un número determinado de veces.
+  Para completar esta tarea, necesitarás la función [str_repeat()](https://www.php.net/manual/es/function.str-repeat.php), que repite una cadena de texto un número determinado de veces:
 
   ```php
   <?php

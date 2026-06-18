@@ -1,5 +1,13 @@
 ---
-name: Logic Type
+name: Boolean Type
+tips:
+  - |
+    [The bool type in PHP](https://www.php.net/manual/en/language.types.boolean.php)
+  - >
+    [Naming in
+    programming](https://hexlet.io/blog/posts/naming-in-programming?utm_source=code-basics&utm_medium=referral&utm_campaign=blog&utm_content=lesson)
 definitions:
-  - name: bool
-    description: 'is a data type with two possible values: true and false.'
+  - name: Boolean type (bool)
+    description: 'a data type with two possible values: `true` and `false`.'
+  - name: Predicate
+    description: an expression that answers the question "yes" or "no" using the bool type.

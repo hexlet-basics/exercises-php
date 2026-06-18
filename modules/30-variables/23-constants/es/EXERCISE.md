@@ -1,1 +1,1 @@
-Crea la constante `DRAGONS_BORN_COUNT` y asígnale el valor 3, que es la cantidad de dragones nacidos de Daenerys.
+Crea una constante `MAX_LOGIN_ATTEMPTS` y guarda en ella el número `3` — la cantidad máxima de intentos de inicio de sesión en el sistema.

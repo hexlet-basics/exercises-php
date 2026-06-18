@@ -1,5 +1,6 @@
 ---
 name: else if statement
+tips: []
 definitions:
   - name: else if
     description: is a way to set several alternative conditions.

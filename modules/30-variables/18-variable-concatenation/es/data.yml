@@ -6,4 +6,9 @@ tips:
     obtener una salida de dos líneas para el cuerpo del correo electrónico.
   - >
     Recuerda que puedes crear una cadena que contenga solo la secuencia de
-    control `\n`.
+    control `\n`. Puedes concatenar esta cadena con variables para formatear
+    el texto correctamente.
+definitions:
+  - name: Concatenación
+    description: >
+      la operación de unir dos cadenas. Por ejemplo, `print_r("King's " . ' Landing')`

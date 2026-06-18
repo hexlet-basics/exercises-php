@@ -1,5 +1,6 @@
 ---
 name: Ternary operator
+tips: []
 definitions:
   - name: The ternary operator
     description: >

@@ -1,10 +1,9 @@
-
-Implement a function, `printMotto()`, which prints the phrase *Winter is coming*.
+The website displays a greeting for every visitor. Implement a function `sayHello()` that prints the phrase `Hello, World!` to the screen.
 
 ```php
 <?php
 
-printMotto(); // => "Winter is coming"
+sayHello(); // => Hello, World!
 ```
 
-In tasks where you have to implement a function, you don't need to call it. Automated tests will call this function to check if it works. The example call above is shown just to give you an idea of how your function will be used.
+In tasks where you need to implement a function, you do not need to call that function. The function will be called by automated tests that check whether it works. The example with the call above is shown only so that you understand how your function will be used.

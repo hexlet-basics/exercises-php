@@ -1,16 +1,10 @@
+Write a function `maskCardNumber()` that hides a bank card number. The function should replace all characters of the string with `*`, except for the last four.
 
-Write a function, `printReversedWordBySymbol()`, which takes a word as input and prints it by character, just as in the example we gave, but does it in reverse order.
+Example of how it works:
 
 ```php
 <?php
 
-$word = 'Hexlet';
-
-printReversedWordBySymbol($word);
-// => 't'
-// => 'e'
-// => 'l'
-// => 'x'
-// => 'e'
-// => 'H'
+maskCardNumber('1234567812345678'); // '************5678'
+maskCardNumber('12345678');         // '****5678'
 ```

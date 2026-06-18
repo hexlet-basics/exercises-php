@@ -4,11 +4,11 @@ Recordemos una de las lecciones anteriores:
 ```php
 <?php
 
-$cantidadEuros = 1000;
-$cantidadDolares = $cantidadEuros * 1.25; // 1250
-$cantidadRublos = $cantidadDolares * 60;  // 75000
+$eurosCount = 1000;
+$dollarsCount = $eurosCount * 1.25; // 1250
+$rublesCount = $dollarsCount * 60;  // 75000
 
-print_r($cantidadRublos);
+print_r($rublesCount);
 ```
 
 Desde el punto de vista del desarrollo profesional, este código "huele mal". Así es como se describe el código que no cumple con las llamadas mejores prácticas (best practices). Y la razón es la siguiente: en este momento, al ver los números `60` y `1.25`, es probable que te preguntes: "¿qué significan estos números?". ¡Imagínate lo que sucederá en un mes! ¿Y cómo lo entenderá un nuevo programador que no haya visto el código antes? En nuestro ejemplo, el contexto se recupera gracias a una buena nomenclatura, pero en la vida real el código es mucho más complicado, por lo que a menudo es imposible adivinar el significado de los números.
@@ -20,14 +20,14 @@ La solución es simple: basta con crear variables con nombres adecuados y todo e
 ```php
 <?php
 
-$dolaresPorEuro = 1.25;
-$rublosPorDolar = 60;
+$dollarsPerEuro = 1.25;
+$rublesPerDollar = 60;
 
-$cantidadEuros = 1000;
-$cantidadDolares = $cantidadEuros * $dolaresPorEuro;   // 1250
-$cantidadRublos = $cantidadDolares * $rublosPorDolar; // 75000
+$eurosCount = 1000;
+$dollarsCount = $eurosCount * $dollarsPerEuro;   // 1250
+$rublesCount = $dollarsCount * $rublesPerDollar; // 75000
 
-print_r($cantidadRublos);
+print_r($rublesCount);
 ```
 
 Presta atención a los siguientes detalles:

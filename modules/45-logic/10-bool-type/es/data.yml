@@ -1,7 +1,13 @@
 ---
 name: Tipo lógico
+tips:
+  - |
+    [El tipo bool en PHP](https://www.php.net/manual/es/language.types.boolean.php)
+  - >
+    [Nomenclatura en
+    programación](https://hexlet.io/blog/posts/naming-in-programming?utm_source=code-basics&utm_medium=referral&utm_campaign=blog&utm_content=lesson)
 definitions:
   - name: Tipo lógico (bool)
-    description: >-
-      un tipo de dato con dos posibles valores: true (verdadero) y false
-      (falso).
+    description: 'un tipo de dato con dos posibles valores: `true` (verdadero) y `false` (falso).'
+  - name: Predicado
+    description: una expresión que responde a la pregunta «sí» o «no» mediante el tipo bool.

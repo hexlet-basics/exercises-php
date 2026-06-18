@@ -4,3 +4,8 @@ tips:
   - >
     [Funciones
     deterministas](https://es.wikipedia.org/wiki/Funci%C3%B3n_pura#Determinismo_de_la_funci%C3%B3n)
+definitions:
+  - name: Efecto secundario
+    description: >-
+      acción que modifica el entorno externo (el entorno de ejecución). Por
+      ejemplo, la salida en pantalla o el envío de un correo.

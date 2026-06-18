@@ -1,8 +1,3 @@
-Complete la implementación de la función `startsWith()`, que determina si una cadena comienza con una subcadena.
+En el programa, necesitas extraer el nombre de la sección de la dirección `https://hexlet.io/courses`. El primer paso es averiguar dónde comienza.
 
-```php
-<?php
-
-startsWith('Hexlet', 'et'); // false
-startsWith('Hexlet', 'Hex'); // true
-```
+Muestra en pantalla la posición en la que comienza la subcadena `courses` dentro de la cadena `https://hexlet.io/courses`. Usa la función `mb_strpos()`.

@@ -1,22 +1,41 @@
+Some functions have a special feature: they accept a variable number of arguments. This isn't related to default values, as it was with `round()`. The point is that the amount of data passed isn't limited to a fixed number.
 
-An interesting feature of some functions is that they can accept a varying number of arguments. We're not talking about default values. Check out this example:
+Let's look at the `max()` function. It finds the largest value among the passed data.
 
 ```php
 <?php
 
-max(1, 10, 3); // 10
+print_r(max(1, 10, 3)); // => 10
+print_r(max(1, -3, 2, 3, 2)); // => 3
 ```
 
-The `max()` function finds the maximum value among the passed arguments. How many arguments do you think it expects to receive? This function's documentation shows something interesting:
+Let's open the [documentation](https://www.php.net/manual/en/function.max.php) and look at the signature of `max()`:
 
-  ```
-  max ( mixed $value1 [, mixed $... ] ) : mixed
-  ```
+```php
+max(mixed $value, mixed ...$values): mixed
+```
 
-  This means that this function accepts any number of arguments as input (and can even be called without them). Passed arguments that are optional are shown with _[]_, which is the same as how optional parameters that have default values are described. The ability to pass any number of parameters is encoded with _[, ...]_.
+This means:
 
-  ```php
-  <?php
+- the function requires at least one value (`$value`);
+- after that you can pass any number of additional values (`...$values`) — a variable number of arguments is denoted by the ellipsis `...`;
+- the function will return the largest of those passed.
 
-  max(1, -3, 2, 3, 2); // 3
-  ```
+The `mixed` type in the signature means "any type": the function can compare not only numbers, but other values as well.
+
+If there are several identical maximum values among the arguments, the first of them is returned.
+
+```php
+<?php
+
+print_r(max(5, 5, 2)); // => 5
+```
+
+The `min()` function works in the same way, only it looks for the smallest value:
+
+```php
+<?php
+
+print_r(min(1, 10, 3)); // => 1
+print_r(min(1, -3, 2, 3, 2)); // => -3
+```

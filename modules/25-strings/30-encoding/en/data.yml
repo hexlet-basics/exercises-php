@@ -1,6 +1,12 @@
 ---
 name: Encoding
-tips: []
+tips:
+  - |
+    [ASCII code table](https://www.ascii-code.com/)
+  - |
+    [What are encodings?](https://ru.hexlet.io/blog/posts/encoding)
 definitions:
   - name: Encoding
-    description: a set of characters encoded with numbers to represent text electronically.
+    description: >-
+      a set of characters encoded with numbers to represent text
+      electronically.

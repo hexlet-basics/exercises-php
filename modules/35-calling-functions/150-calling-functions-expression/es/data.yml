@@ -1,2 +1,7 @@
 ---
-name: Llamada a una función - expresión
+name: La llamada a una función es una expresión
+definitions:
+  - name: Expresión
+    description: >
+      secuencia de acciones sobre datos que conduce a algún resultado, el cual
+      se puede usar.

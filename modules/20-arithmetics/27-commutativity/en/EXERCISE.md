@@ -1,4 +1,6 @@
+Write a program that solves two problems and sequentially prints the answers to the screen.
 
-Write a program that counts and sequentially displays the values of the following mathematical expressions: "3 to the power of 5" and "-8 divided by -4".
+1. A painter wants to paint 8 sections of a fence, each in one of 2 colors. How many unique coloring options exist? Use the exponentiation operator `**`.
+2. You and two friends (3 people in total) bought 9 pastries and want to split them equally. How many does each person get? Use the division operator `/`.
 
-Note that the results will appear stuck together, on one line, and without any spaces. We'll learn how to deal with this problem in future lessons.
+Note that the results will be printed "stuck together" on one line without a space. We'll learn how to solve this problem in future lessons.

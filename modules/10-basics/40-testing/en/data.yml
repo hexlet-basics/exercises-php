@@ -3,8 +3,10 @@ name: How we test your solutions
 definitions:
   - name: Tests
     description: >
-      are special code that checks the programs have been made correctly by
-      checking the correct result against the actual one.
+      special code that checks programs for correctness by comparing the correct
+      result with the actual one.
 tips:
   - |
     [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
+  - |
+    [Hexlet community in Telegram](https://t.me/hexletcommunity)

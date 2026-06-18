@@ -1,8 +1,8 @@
-Muestra en pantalla la primera y la última letra de la oración que se encuentra en la variable `text`, en el siguiente formato:
+La aplicación muestra un breve resumen de un texto: su primer y último carácter. Muestra en pantalla el primer y el último carácter de la cadena de la variable `$text` en el siguiente formato:
 
 ```text
-First: N
-Last: t
+First: H
+Last: !
 ```
 
-Intenta crear solo una variable en la que se almacene el texto necesario antes de imprimirlo en pantalla. En esta lección, estamos practicando cómo construir una expresión compuesta.
+Intenta crear solo una variable, en la que se almacene de inmediato el texto necesario antes de imprimirlo en pantalla. En esta lección, estamos practicando la habilidad de construir una expresión compuesta.

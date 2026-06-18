@@ -1,5 +1,9 @@
 ---
 name: Concatenation
+tips:
+  - >
+    If the editor has `// BEGIN` and `// END`, then the code should be written
+    between these lines.
 definitions:
   - name: Concatenation
     description: >

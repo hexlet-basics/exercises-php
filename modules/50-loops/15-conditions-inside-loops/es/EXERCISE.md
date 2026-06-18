@@ -1,9 +1,9 @@
-
-La función de la teoría tiene en cuenta el caso de las letras. Es decir, `A` y `a` son considerados caracteres diferentes. Implementa una versión de esta misma función en la que no importe el caso de las letras:
+Implementa la función `countHashtags()`, que recibe el texto de una publicación y cuenta cuántas veces aparece en él el carácter `#`.
 
 ```php
 <?php
 
-countChars('HexlEt', 'e'); // 2
-countChars('HexlEt', 'E'); // 2
+countHashtags('New post #php #code'); // 2
+countHashtags('No tags here');        // 0
+countHashtags('#start and #finish');  // 2
 ```

@@ -2,14 +2,18 @@
 
 name: Estructura else if
 theory: |
-  La función `getTypeOfSentence()` solo distingue entre oraciones interrogativas y oraciones normales. Intentemos agregar soporte para oraciones exclamativas:
+  La función `getTypeOfSentence()` solo distingue entre oraciones interrogativas y oraciones normales. Agreguémosle soporte para oraciones exclamativas:
 
   ```php
   <?php
 
-  function getTypeOfSentence($sentence)
+  function getTypeOfSentence(string $sentence): string
   {
       $lastChar = $sentence[-1];
+
+      if ($lastChar === '?') {
+          $sentenceType = 'question';
+      }
 
       if ($lastChar === '!') {
           $sentenceType = 'exclamation';
@@ -17,77 +21,82 @@ theory: |
           $sentenceType = 'normal';
       }
 
+      return "Sentence is {$sentenceType}";
+  }
+
+  print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is normal
+  print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
+  print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
+  ```
+
+  Agregamos una comprobación de oraciones exclamativas (_exclamation_ se traduce como «exclamación»). Técnicamente esta función funciona, pero trata las oraciones interrogativas de forma incorrecta. Además, tiene problemas desde el punto de vista de la semántica. El signo de exclamación se comprueba en cualquier caso, incluso si ya se encontró un signo de interrogación. La rama `else` está descrita para la segunda condición, pero no para la primera. Por eso una oración interrogativa se vuelve `normal`.
+
+  Para corregir la situación, usemos otra posibilidad de la construcción condicional:
+
+  ```php
+  <?php
+
+  function getTypeOfSentence(string $sentence): string
+  {
+      $lastChar = $sentence[-1];
+
       if ($lastChar === '?') {
           $sentenceType = 'question';
+      } elseif ($lastChar === '!') {
+          $sentenceType = 'exclamation';
+      } else {
+          $sentenceType = 'normal';
       }
 
-      return "La oración es {$sentenceType}";
+      return "Sentence is {$sentenceType}";
   }
 
-  getTypeOfSentence('¿Quién?'); // 'La oración es pregunta'
-  getTypeOfSentence('No');     // 'La oración es normal'
-  getTypeOfSentence('¡No!');   // 'La oración es exclamación'
+  print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is question
+  print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
+  print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
   ```
 
-  Hemos agregado otra condición (_exclamation_ se traduce como "exclamación"). Técnicamente, la función funciona, pero hay problemas desde el punto de vista semántico:
+  Ahora todas las condiciones se han alineado en una sola construcción. La palabra clave `elseif` significa «si la condición anterior no se cumple, pero la actual sí».
 
-  * La verificación de la presencia del signo de interrogación ocurre de todos modos, incluso si ya se ha detectado el signo de exclamación.
-  * La rama `else` se describe específicamente para la primera condición, pero no para la segunda.
-
-  Sería más correcto utilizar otra posibilidad de la estructura condicional:
-
-  ```php
-  <?php
-
-  function getTypeOfSentence($sentence)
-  {
-    $lastChar = $sentence[-1];
-
-    if ($lastChar === '?') {
-        $sentenceType = 'question';
-    } elseif ($lastChar === '!') {
-        $sentenceType = 'exclamation';
-    } else {
-        $sentenceType = 'normal';
-    }
-
-    return "La oración es {$sentenceType}";
-  }
+  ```text
+    ┌─────────────────┐
+    │ ¿condición 1?   │
+    └────┬────────┬───┘
+   true │        │ false
+         ↓        ↓
+  ┌──────────┐  ┌─────────────────┐
+  │ cuerpo if│  │ ¿condición 2?   │
+  └──────────┘  └────┬────────┬───┘
+                true │        │ false
+                      ↓        ↓
+          ┌─────────────┐ ┌──────────┐
+          │cuerpo elseif│ │cuerpo else│
+          └─────────────┘ └──────────┘
   ```
 
-  Ahora todas las condiciones se han unificado en una sola estructura.
+  La lógica de la función está organizada así. Si el último carácter es `?`, se devuelve `'question'`. Si el último carácter es `!`, se devuelve `'exclamation'`. En todos los demás casos se devuelve `'normal'`.
 
-  La estructura `elseif` significa "si la condición anterior no se cumple, pero la condición actual sí se cumple". La estructura resultante es la siguiente:
-
-  * Si el último carácter es `?`, entonces `'question'`
-  * De lo contrario, si el último carácter es `!`, entonces `'exclamation'`
-  * De lo contrario, `'normal'`
-
-  Solo se ejecutará uno de los bloques de código relacionados con toda la estructura `if`.
-
+  Se ejecutará solo uno de los bloques de código que pertenece a toda la construcción `if`.
 instructions: |
 
-  En el mapa electrónico de Westeros implementado por Sam, los aliados de los Stark se representan con un círculo verde, los enemigos con un círculo rojo y las familias neutrales con un círculo gris.
+  Implementa la función `getTrafficLightAction()`, que recibe el color de un semáforo y devuelve qué debe hacer el conductor.
 
-  Escribe una función para Sam llamada `whoIsThisHouseToStarks()` que reciba el apellido de una familia y devuelva uno de los tres valores: `'friend'`, `'enemy'`, `'neutral'`.
+  Reglas:
 
-  Reglas de determinación:
+  * `'green'` → `'go'`
+  * `'yellow'` → `'slow down'`
+  * `'red'` → `'stop'`
+  * Cualquier otro color → `'unknown'`
 
-    * Amigos (`'friend'`): 'Karstark', 'Tully'
-    * Enemigos (`'enemy'`): 'Lannister', 'Frey'
-    * Todas las demás familias se consideran neutrales
-
-  Ejemplos de llamadas:
+  Ejemplos de llamada:
 
   ```php
   <?php
 
-  whoIsThisHouseToStarks('Karstark'); // 'friend'
-  whoIsThisHouseToStarks('Frey');     // 'enemy'
-  whoIsThisHouseToStarks('Joar');     // 'neutral'
-  whoIsThisHouseToStarks('Ivanov');   // 'neutral'
+  getTrafficLightAction('green');  // 'go'
+  getTrafficLightAction('red');    // 'stop'
+  getTrafficLightAction('purple'); // 'unknown'
   ```
-
 tips: []
 
 definitions:

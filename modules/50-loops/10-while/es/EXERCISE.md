@@ -1,16 +1,14 @@
-Modifica la función `printNumbers()` para que imprima los números en orden inverso. Para hacer esto, debes ir desde el límite superior hasta el límite inferior. Es decir, el contador debe inicializarse con el valor máximo y, en el cuerpo del ciclo, debe disminuir hasta el límite inferior.
+Escribe una función `printCountdown()` que simule una cuenta regresiva antes de un inicio. La función recibe una cantidad de segundos e imprime los números desde ese valor hasta `1`.
 
+Después de finalizar la cuenta regresiva, la función debe imprimir en la pantalla la cadena `Go!`.
 
 ```php
 <?php
 
-printNumbers(4);
-```
-
-```text
-4
-3
-2
-1
-finished!
+printCountdown(4);
+// => 4
+// => 3
+// => 2
+// => 1
+// => Go!
 ```

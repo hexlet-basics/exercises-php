@@ -1,1 +1,9 @@
-Create a one-line comment with the text: `You know nothing, Jon Snow!`.
+You are writing a program and realize that one part needs to be finished later. To avoid forgetting, programmers leave themselves notes right in the code — TODO comments.
+
+Add the following comment to the file:
+
+```php
+// TODO: add a greeting function
+```
+
+When you come back to this place later, the comment will remind you that there is still unfinished work here.

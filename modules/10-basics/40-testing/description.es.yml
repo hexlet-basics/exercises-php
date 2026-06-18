@@ -2,45 +2,52 @@
 
 name: Cómo verificamos tus soluciones
 theory: |
-
   Nuestro sitio web verifica automáticamente tus soluciones. ¿Cómo funciona?
 
-  En el caso más simple, el sistema simplemente ejecuta el código y verifica lo que se muestra en la pantalla. Luego lo compara con lo que "esperábamos" según la tarea.
+  En el caso más simple, la verificación ejecuta tu código y compara la salida en pantalla con el resultado esperado. Por ejemplo, si la tarea dice: «Imprime en la pantalla el número 10», entonces tu código en PHP podría verse así:
 
-  En las lecciones más avanzadas, escribirás funciones, que son mini programas que toman información del mundo exterior y realizan operaciones. La verificación de tus soluciones en estos casos es un poco más complicada: el sistema ejecuta tu solución y le pasa cierta información. El sistema también sabe qué respuesta debería dar la función correcta con esos datos de entrada.
+  ```php
+  <?php
 
-  Por ejemplo, si tu tarea es escribir una función que sume dos números, el sistema de verificación le pasará diferentes combinaciones de números y comparará la respuesta de tu función con las sumas reales. Si las respuestas coinciden en todos los casos, se considera que la solución es correcta.
+  print_r(10);
+  ```
 
-  Este enfoque se llama pruebas y se utiliza en el desarrollo diario real. Por lo general, el programador primero escribe una prueba, que es un programa de verificación, y luego escribe el programa que quería escribir. Durante el proceso, se ejecutan las pruebas constantemente y se verifica si se está acercando a la solución.
+  La verificación ejecutará este código y se asegurará de que en la pantalla realmente apareció `10`. Si la salida coincide con la esperada, la solución se acepta. De lo contrario, verás un error:
 
-  Es por eso que nuestro sitio web muestra "Pruebas superadas" cuando resuelves correctamente una tarea.
+  ```text
+  Failed asserting that two strings are equal.
+  --- Expected
+  +++ Actual
+  -'10'
+  +'9'
 
-  Aquí tienes un ejemplo sencillo: imprimir la cadena `Hello, World!`. Supongamos que cometiste un pequeño error y la función muestra otro valor en la pantalla. El sistema responderá algo así:
+  ¡FALLOS!
+  Pruebas: 1, Afirmaciones: 1, Fallos: 1.
+  ```
 
-  <pre class='hexlet-basics-output'>
-    -'Hello, World!'
-    +'ello, World!'
+  La línea con `+` muestra el resultado real que devolvió tu código, y la línea con `-` muestra el valor esperado.
 
-    ¡FALLOS!
-    Pruebas: 1, Afirmaciones: 1, Fallos: 1.
-  </pre>
+  En las siguientes lecciones, más complejas, escribirás funciones. Estas reciben datos y devuelven un resultado. En tales tareas, la verificación funciona un poco diferente: llama a tu función con distintos argumentos y sabe de antemano qué respuesta debe obtenerse en cada caso.
 
-  En la pantalla aparece una pista. El signo `+` indica lo que imprimió tu código. El signo `-` indica lo que se esperaba. Al comparar estos dos valores, puedes ver el error. En el ejemplo anterior, se puede ver que falta la letra _H_ en la salida.
+  Por ejemplo, si necesitas escribir una función que sume dos números, la verificación le pasará distintos pares de números y comparará el resultado con la suma correcta. Si las respuestas coinciden en todos los casos, la solución se considera correcta.
 
-  ---
+  Este enfoque se llama pruebas y se utiliza en el desarrollo real. Las pruebas ayudan a comprobar si el programa funciona correctamente y a detectar rápidamente un error tras los cambios.
 
-  A veces, durante la resolución de una tarea, puede parecer que has hecho todo correctamente, pero el sistema no acepta la solución. Este comportamiento es prácticamente inexistente. Las pruebas no funcionales simplemente no pueden llegar al sitio web, se ejecutan automáticamente después de cada cambio. En la gran mayoría de estos casos (y todos nuestros proyectos en conjunto han realizado millones de verificaciones a lo largo de muchos años), el error se encuentra en el código de la solución. Puede ser muy sutil, como haber ingresado accidentalmente una letra rusa en lugar de una letra en inglés, haber utilizado minúsculas en lugar de mayúsculas o haber olvidado imprimir una coma. Otros casos son más complicados. Es posible que tu solución funcione para un conjunto de datos de entrada, pero no funcione para otro. Por lo tanto, siempre lee atentamente la descripción de la tarea y la salida de las pruebas. Casi seguro que habrá una indicación del error.
+  Es precisamente por eso que nuestro sitio web dice «Pruebas superadas» cuando resuelves correctamente la tarea.
 
-  Sin embargo, si estás seguro de que hay un error o has encontrado alguna imprecisión, siempre puedes señalarlo. Al final de cada teoría hay un enlace al contenido de la lección en GitHub (¡este proyecto es completamente abierto!). Al ir allí, puedes escribir un issue, ver el contenido de las pruebas (donde se muestra cómo se llama tu código) e incluso enviar un pull request. Si esto aún te resulta confuso, únete a nuestra comunidad en [Telegram Hexlet](https://t.me/hexletcommunity/12), allí en el canal de Voluntarios siempre estaremos dispuestos a ayudar.
+  ## ¿Es mi error o no?
 
+  A veces, durante el proceso de resolución, parecerá que hiciste todo correctamente, pero la verificación no acepta la solución. Esto sucede muy raramente. Las pruebas se ejecutan automáticamente después de cada cambio, por lo que una verificación rota normalmente no llega al sitio.
+
+  En la gran mayoría de estos casos, el error se encuentra en el código de la solución. Puede ser muy sutil: en lugar de una letra en inglés, escribiste accidentalmente una rusa; en lugar de mayúsculas, usaste minúsculas; o te olvidaste de imprimir una coma. También hay situaciones más complejas. Por ejemplo, la solución funciona para un conjunto de datos de entrada, pero no para otro.
+
+  Por eso, lee siempre atentamente la descripción de la tarea y la salida de las pruebas. Casi con seguridad hay allí una indicación del error.
+
+  Si, en cambio, estás seguro de que el problema está en la tarea o has encontrado una imprecisión, escribe a nuestra [comunidad](https://t.me/hexletcommunity), en el canal _'Comentarios'_.
 instructions: |
   Imprime en la pantalla `9780262531962`.
-
-definitions:
-  - name: Pruebas
-    description: |
-      código especial que verifica la corrección de los programas, comparando el resultado correcto con el resultado real.
-
 tips:
   - |
     [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
+  - |
+    [Comunidad de Hexlet en Telegram](https://t.me/hexletcommunity)

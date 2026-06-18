@@ -1,2 +1,9 @@
+You received some code from a colleague — it works correctly, but it violates the PSR-12 formatting standard. Fix the spaces around the operators without changing the logic:
 
-Print the result of the difference between five squared and the product of three and seven. Write the code so that each operator is separated from the operands with spaces.
+```php
+<?php
+
+print_r(    (5  **2)-(3*  7));
+```
+
+The result should remain `4`.

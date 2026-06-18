@@ -1,9 +1,11 @@
 ---
 name: Interpolación
-tips: []
+tips:
+  - >
+    [Interpolación de cadenas en
+    PHP](https://www.php.net/manual/es/language.types.string.php#language.types.string.parsing)
 definitions:
   - name: Interpolación
     description: >-
-      método de concatenación de cadenas mediante la inserción de valores de
-      variables en una cadena de plantilla utilizando llaves. Por ejemplo,
-      `\"¡Hola, {$name}!\"`.
+      forma de obtener una cadena compleja a partir de varias simples usando
+      plantillas especiales. Por ejemplo, `\"¡Hola, {$name}!\"`.

@@ -1,64 +1,147 @@
+Programming exists to perform all kinds of operations. Sometimes these are simple actions, like adding numbers or joining strings. But more often they are complex processes, like transferring money between accounts, placing an order in an online store, calculating taxes, or preparing a report.
 
-Addition, concatenation, and the other operations discussed are all fairly basic features of programming languages. Mathematics isn't limited to arithmetic, but there are many other areas with their own operations, such as geometry. The same goes for strings: you can flip them, change a letter's case, delete extra characters – and that's just the tip of the iceberg. And finally, at a higher level, there's the applied logic of a particular program. Programs withdraw money, calculate taxes, and generate reports. The number of these jobs is endless and different for each program. And they all have to be somehow expressed in code.
+Such operations cannot be expressed with a single command. Behind an action like "transfer money" there can be dozens, hundreds, or even thousands of lines of code. This includes checking the balance, withdrawing the amount, accounting for the commission, updating the database, and sending a notification to the user.
 
-The notion of a *function* expresses any arbitrary operation in programming. Functions can be both built-in and manually written by a programmer. One built-in function we're already familiar with is `print_r()`.
+To manage this code and not get lost in the details, programmers use functions. A function combines a block of code into a single whole, hides its implementation, and lets you focus on the meaning. For a programmer, it is enough to call the function and trust it to do all the internal work.
 
-Functions are fundamental building blocks in programming, and it's impossible to accomplish anything without them. We need to get acquainted with them as soon as possible because future courses will deal almost exclusively with functions. First, we'll learn how to use the functions we've already defined, and we'll also learn to define our own functions.
+![Function](./assets/function.png)
 
-We will start with basic functions that handle strings. Below is an example of a call to `strrev()`, that reverses a string:
+Let's imagine a function that transfers money from one account to another. In reality, there might be hundreds of lines of code inside it, but we don't see this. From the outside, everything looks like a single simple command:
 
 ```php
 <?php
 
-// Call the strrev function with the argument 'Hello!'
-$result = strrev('Hello!');
-print_r($result); // => '!olleH'
+transferMoney('Alice', 'Bob', 100);
 ```
 
-We created a variable, `$result` and told the interpreter to write the result of the `strrev()` function to it. In this sense, functions are identical to operations; they always return the result of their work. The entry `strrev('Hello!')`  means that a function named `strrev` is being called, to which the argument (or parameter) `'Hello!'` has been passed. Arguments are needed for functions to work, just like how operators need operands. The `strrev()` function flips the string passed to it in the arguments.
+This line calls the `transferMoney()` function. It receives the sender `Alice`, the recipient `Bob`, and the amount `100`.
 
-Another example is the `strlen()` function, which counts the number of characters in a string
+Here are a few more examples of function calls that we could implement. Each function has its own name and its own set of data to work with.
 
 ```php
 <?php
 
-$result = strlen('Hello!');
-print_r($result); // => 6
+// Yes, print_r is a function too
+print_r('Hexlet!');
+
+// Sending an email to a user
+sendEmail('bob@example.com', 'Welcome!');
+
+// Calculating tax on a given amount
+calculateTax(5000, 'Florida');
+
+// Checking whether a user is in the system
+isRegistered('Alice');
+
+// Getting a random number from 1 to 10
+randomNumber(1, 10);
+
+// Creating a database backup
+backupDatabase();
+
+// Calculating the length of a string
+strlen('Hexlet'); // Result: 6
 ```
 
-The function being called is always indicated by parentheses `()` following the function name. There can be any number of arguments in brackets, and sometimes none at all. The number depends on the function used, for example, the `pow()` function takes two arguments as input and raises the number passed to the power passed in the second parameter.
+In a function call, you first write its **name**, then the **parentheses**. The parentheses show that this is indeed a call. This is how we understand that we are dealing with a function and not a variable.
+
+Inside the parentheses you specify **arguments**, that is, the data the function receives to work with. There can be several of them, one, or none at all.
+
+## Where do functions come from?
+
+Some functions are built into the language (built-in), others are created by programmers themselves.
+
+**Built-in functions** are functions that ship with the PHP language. You can use them right away, without any extra steps. An example would be the `print_r()` function. As they say, it is available globally.
+
+**Functions defined by programmers** are created when you need to wrap your own logic into a separate block. You can give such a function any name and use it in your code just like the built-in ones. We will learn how to do this later.
+
+In addition, there are functions that live in separate libraries. To use them, the library has to be installed and connected to the program. We won't go into this mechanism in detail yet. For now, it is enough to know that it lets you connect an external set of functions and make them available in the program.
+
+## A function with one parameter
+
+One of the most frequently used built-in functions is `strlen()`. It returns the number of characters in a string.
 
 ```php
 <?php
 
-$result = pow(2, 3); // 2 * 2 * 2
+$message = 'Hello!';
+$count = strlen($message);
+print_r($count); // => 6
+```
+
+Here the string `'Hello!'` has six characters, so the call `strlen($message)` will return the number `6`.
+
+```text
+Arguments          Function        Result
+┌──────────┐     ┌──────────┐     ┌──────────┐
+│ 'Hello!' │ ──→ │ strlen() │ ──→ │    6     │
+└──────────┘     └──────────┘     └──────────┘
+```
+
+## Returning a value
+
+Returning a value is one of the key principles of how functions work. Thanks to it, we can combine the results of different actions and build more complex logic. If a function returns a value, we can save it in a variable, pass it to another function, or use it in calculations. This is exactly how `strlen()` works. It counts the number of characters and hands the result back out.
+
+```php
+<?php
+
+$message1 = 'Hello!';
+$length1 = strlen($message1); // save the result
+
+$message2 = 'World!';
+$length2 = strlen($message2);
+
+$combinedLength = $length1 + $length2; // use the result in an expression
+print_r($combinedLength); // => 12
+```
+
+If `strlen()` printed the result to the screen right away (the way `print_r()` does), we would see the number but wouldn't be able to use it:
+
+```php
+<?php
+
+// an imaginary function that only prints the result
+fakeStrlen('Hello!'); // prints 6
+
+// but after that the number is no longer accessible
+// we can't add it, save it, or compare it
+$result = fakeStrlen('Hello!'); // here $result holds nothing
+```
+
+This is why returning a value is such an important concept. It lets us link functions together. Some return data, others use it in their work. This is exactly how big and complex programs are built out of small steps.
+
+## A function with several parameters
+
+Some functions accept several pieces of data to work with at once. A good example is the built-in `pow()` function, which raises a number to the required power. The first parameter takes the base of the power, the second sets the exponent.
+
+```php
+<?php
+
+// raise 2 to the 3rd power: 2 * 2 * 2
+$result = pow(2, 3);
 print_r($result); // => 8
 
-// Modern PHP now has a special operator for exponentiation:
-$result = 2 ** 3; // 8
+// 5 to the 2nd power: 5 * 5
+print_r(pow(5, 2)); // => 25
 ```
 
-And here's an example of a function that takes no arguments. The `rand()` function generates and returns a random number:
+In terms of structure, a call with several parameters is no different from a call with one. The same function name, parentheses, and arguments separated by commas inside.
+
+## Parameters and arguments
+
+In discussions about functions, the words **parameters** and **arguments** come up again and again. They are related, but they are not the same thing.
+
+We talk about **parameters** when creating a function. A parameter is a variable inside the function into which the passed value lands. We talk about **arguments** when calling. An argument is what we pass into the function. It can be a number, a variable, or any expression.
 
 ```php
 <?php
 
-$result = rand();
+// numbers as arguments
+print_r(pow(2, 3)); // => 8
+
+$x = 2;
+// an argument can be an expression, it gets evaluated before being passed to the function
+print_r(pow($x + 1, 3)); // => 27
 ```
 
-By and large, operators and functions are the same thing. The only key difference is how they're written. If you think of addition as a function, it would look like this:
-
-```php
-<?php
-
-3 + 5; // 8
-sum(3, 5); // 8
-
-// Or even like this
-+(3, 5);
-
-// In PHP this syntax isn't possible, but there are languages (e.g. lisp),
-// where it looks very similar (take a look at the Racket course)
-```
-
-Self-check. How do I know what the `print_r()` call returns? Test it.
+You don't have to memorize this, but it will come in handy when reading English-language literature.

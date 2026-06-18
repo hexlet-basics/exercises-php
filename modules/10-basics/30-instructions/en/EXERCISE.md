@@ -1,7 +1,7 @@
-Print these three names, one after the other: _Robert_, _Stannis_, _Renly_. As a result, the editor should print:
+Print three names on the screen one after another: _Robert_, _Stannis_, _Renly_. As a result, the screen should display:
 
 ```text
 RobertStannisRenly
 ```
 
-Use a `print_r()` call for each name.
+For each name, use its own separate call to `print_r()`.

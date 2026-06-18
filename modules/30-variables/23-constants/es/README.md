@@ -1,6 +1,12 @@
-Los desarrolladores a menudo trabajan con datos que nunca cambian. Por ejemplo, el número π, que siempre es igual a `3.14` y no puede cambiar.
+A veces, en un programa aparecen valores que nunca deben cambiar. Por ejemplo:
 
-En PHP, se utilizan constantes para acceder a este tipo de datos:
+- La constante matemática π (pi).
+- El tipo de cambio del dólar en una fecha determinada.
+- Una comisión fija del servicio.
+
+Tales valores se llaman constantes y es habitual distinguirlas de las variables normales para que no surja el deseo de cambiarlas.
+
+## Ejemplo: el número π
 
 ```php
 <?php
@@ -9,24 +15,41 @@ const PI = 3.14;
 print_r(PI); // => 3.14
 ```
 
-La creación de una constante es diferente a la creación de una variable. Comienza con la palabra clave `const` seguida del nombre de la constante. No se necesita el signo de dólar. Luego se le asigna el valor deseado.
+Aquí PI es una constante que almacena el valor del número π. Crear una constante es diferente de crear una variable: comienza con la palabra clave `const`, y no se necesita el signo de dólar antes del nombre. El sentido de una constante es que su valor no cambia durante la ejecución del programa.
 
-Las constantes suelen nombrarse en mayúsculas con `_` como separador. Una constante también se puede utilizar en cualquier expresión. La única restricción es que no se puede modificar.
+## ¿En qué se diferencia una constante de una variable?
 
-PHP tiene muchas constantes integradas que se pueden utilizar en cualquier parte del programa. Aquí hay algunas de ellas:
+El concepto de constantes es común en la mayoría de los lenguajes de programación. En PHP, una constante es una entidad aparte del lenguaje: a diferencia de una variable, su valor no se puede cambiar. Un intento de definir una constante de nuevo provoca un error:
 
-* `PHP_VERSION` — versión actual de PHP
-* `PHP_MAXPATHLEN` — longitud máxima permitida para el nombre de archivo
-* `PHP_INT_MAX` — valor máximo posible para números enteros (integer)
+```php
+<?php
 
-Además de las constantes normales en PHP, existe un grupo separado llamado **constantes mágicas**. Sus diferencias son las siguientes:
+const PI = 3.14;
+const PI = 3.14159; // Error: una constante no se puede definir de nuevo
+```
 
-* No se pueden definir constantes mágicas por uno mismo, solo se pueden utilizar las existentes
-* Las constantes mágicas comienzan y terminan con los caracteres `__` (dos guiones bajos)
-* La magia radica en que estas constantes tienen el mismo valor solo dentro de una parte específica del programa
+Al mismo tiempo, una constante, igual que una variable, puede usarse en cualquier expresión.
 
-El último punto significa que existen constantes que no son muy constantes, pero sus cambios están regulados y no suelen causar problemas en la práctica. Algunas de estas constantes son:
+## Cómo se escriben las constantes
 
-* `__LINE__` — contiene el número de línea actual del archivo en el que se utiliza
-* `__FILE__` — ruta al archivo actual
-* `__DIR__` — ruta al directorio en el que se encuentra el archivo actual
+- Todas las letras en mayúsculas
+- Las palabras se separan con el carácter de guion bajo `_`
+- El estilo se llama UPPER_SNAKE_CASE (también se le llama SCREAMING_SNAKE_CASE)
+
+```php
+<?php
+
+const PI = 3.14;
+const MAX_USERS = 100;
+const DEFAULT_TIMEOUT = 30;
+```
+
+En PHP hay muchas constantes integradas que se pueden usar en cualquier parte del programa. Aquí hay algunas de ellas:
+
+- `PHP_VERSION` — la versión actual de PHP
+- `PHP_MAXPATHLEN` — la longitud máxima permitida del nombre de archivo
+- `PHP_INT_MAX` — el valor máximo posible para los números enteros (integer)
+
+## ¿Para qué sirven las constantes?
+
+Las constantes hacen que el código sea más claro y seguro. Ayudan a ver de inmediato qué valores del programa se consideran fijos y no deben cambiar. Esto es especialmente importante al trabajar con datos como las constantes matemáticas y físicas, los ajustes por defecto o los límites fijos. El uso de constantes reduce el riesgo de errores: por el nombre se entiende de inmediato que se trata de una constante y que no se debe cambiar. Además, si aun así fuera necesario cambiar el valor (por ejemplo, en los ajustes), basta con cambiarlo en un solo lugar, y el cambio se aplica automáticamente en todo el programa.

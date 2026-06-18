@@ -1,38 +1,77 @@
-Look closely at the expression `2 + 2 * 2` and try and work out the answer.
-
-The correct answer is `6`.
-
-If you got `8`, then this lesson is for you. You'll have studied the order of operations in high school math. This concept defines the order in which operations are to be performed. For example, multiplication and division have a higher precedence than addition and subtraction, and exponentiation comes before all other arithmetic operations, e.g., `2 ** 3 * 2` gives us `16`.
-
-But sometimes, we have to perform calculations in a non-standard order. In complex cases, precedence can (and must) be set with parentheses, just like we did in high school, e.g, `(2 + 2) * 2`.
-
-Parentheses fit with any operation. They can be nested into each other as many times as you need. Here are a couple of examples:
-
-  ```php
-  <?php
-
- print_r(3 ** (4 - 2)); // => 9
- print_r(7 * 3 + (4 / 2) - (8 + (2 - 1))); // => 14
-  ```
-
-The main thing is to make sure to close the parentheses in the correct order. This often causes errors not just for beginners but also for experienced programmers. For convenience's sake, do the opening and closing parentheses first, and then write the inside part. The editor on our site (and most other code editors) does this automatically: you write `(`, and the editor immediately adds `)`. This also applies to other paired characters, such as quotation marks. We'll talk about them in future lessons.
-
-Sometimes, an expression can be visually cumbersome. In such cases, parentheses can come in handy without affecting the order of operations. For example, the task from the previous lesson gets clearer if you have parentheses.
-
-Before:
+Consider a simple expression:
 
 ```php
 <?php
 
-print_r(8 / 2 + 5 - -3 / 2); // => 10.5
+print_r(2 + 2 * 2); // => 6
 ```
 
-After:
+The result is 6, not 8. This is explained by the concept of operator precedence in math and programming. It defines the order in which operations are performed:
+
+- Multiplication and division are performed before addition and subtraction.
+- Exponentiation (**) has an even higher precedence.
+
+```text
+Operator precedence (from high to low):
+
+  **         exponentiation
+   ↓
+  * / %      multiplication, division, remainder
+   ↓
+  + -        addition, subtraction
+```
+
+For example:
 
 ```php
 <?php
 
+print_r(2 * 2 ** 3); // => 16, because first 2 ** 3 = 8, then 8 * 2 = 16
+```
+
+If operations with the same precedence are next to each other, they are performed from left to right:
+
+```php
+<?php
+
+print_r(8 / 2 * 3); // => 12, because first 8 / 2 = 4, then 4 * 3 = 12
+```
+
+## Controlling the order of operations
+
+Sometimes you need to change the order of calculations. Parentheses are used for this. They let you specify which operations should be performed first:
+
+```php
+<?php
+
+print_r((2 + 2) * 2); // => 8
+```
+
+Parentheses can be placed around any part of an expression and nested into each other:
+
+```php
+<?php
+
+print_r(3 ** (4 - 2));                   // => 9
+print_r(7 * 3 + (4 / 2) - (8 + (2 - 1))); // => 14
+```
+
+The main rule: always close your parentheses. Unmatched parentheses cause errors: both beginners and experienced programmers sometimes forget about the closing parenthesis.
+
+> Write parentheses as a pair right away. For example, type () and then fill in the inner part. Most code editors (including ours) automatically add the closing parenthesis as soon as you write the opening one. This also applies to other paired characters, such as quotation marks.
+
+## Improving readability
+
+Sometimes an expression works correctly but looks confusing. In such cases, parentheses can be added simply for clarity: they won't change the result, but they will improve readability.
+
+```php
+<?php
+
+// Before
+print_r(8 / 2 + 5 - -3 / 2);       // => 10.5
+
+// After
 print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
 ```
 
-Note: code is written for humans, since they'll be the ones to read it, the machine just executes it. For the machine, code is either valid or invalid, it doesn't recognize "more" or "less" valid code. Explicit prioritization makes it easier for other developers to read your code.
+Programs are written by people, and they are read by people too. The computer doesn't care how clearly the code is written: it just needs to be syntactically correct. For a human, clear and tidy code is the key to convenience, especially when working in a team or debugging errors.

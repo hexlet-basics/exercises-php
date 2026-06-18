@@ -1,3 +1,5 @@
 ---
 name: Quotes
-tips: []
+tips:
+  - >
+    [Strings in PHP](https://www.php.net/manual/en/language.types.string.php)

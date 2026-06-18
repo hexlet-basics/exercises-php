@@ -1,5 +1,5 @@
 ---
-name: Escape equences
+name: Escape sequences
 definitions:
   - name: An escape sequence
     description: >

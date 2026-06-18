@@ -1,26 +1,20 @@
+Suppose we want to print the text below on two lines:
 
-We want to show a dialogue between the Mother of Dragons and her child:
-
-text
+```text
 - Are you hungry?
 - Aaaarrrgh!
 ```
 
-If you display a line with this text on the screen:
+If we simply pass this text to `print_r()`, PHP will print everything on a single line. Technically, we could write two consecutive `print_r()` calls, but let's imagine we want to do it with a single one:
 
 ```php
 <?php
 
 print_r("- Are you hungry?- Aaaarrrgh!");
+// => - Are you hungry?- Aaaarrrgh!
 ```
 
-it goes like this:
-
-```text
-- Are you hungry?- Aaaarrrgh!
-```
-
-Not what we wanted. The lines are one after the other, not one below the other. We need to somehow tell the interpreter to "hit enter", i.e., to go to the next line after the question mark. This can be done by using the line feed character: `\n`.
+For each of them to start on a new line, we need to add a line break, that is, "press Enter". In programming, this is done by adding special characters, in this case `\n`. Yes, that's not a typo. Even though we see two characters here, from PHP's perspective this is a single character:
 
 ```php
 <?php
@@ -28,90 +22,122 @@ Not what we wanted. The lines are one after the other, not one below the other. 
 print_r("- Are you hungry?\n- Aaaarrrgh!");
 ```
 
-
-result:
+The result will be:
 
 ```text
 - Are you hungry?
 - Aaaarrrgh!
 ```
 
-`\n` is a special symbol. In the literature, it's often referred to as the *LF* (Line Feed). You may have thought now that it was a typo because here we can see two characters, `\` and `n`, but that's not the case. From the computer's perspective, this is one invisible line feed character. Proof:
+## What is `\n`?
+
+`\n` is an escape sequence (sometimes called an "escaped sequence"). It denotes a line break, but isn't displayed directly. You won't see `\n` in the program's output, since it only affects the placement of the text.
+
+In text editors, pressing Enter adds the invisible LF (Line Feed) character. That's exactly what `\n` means. Sometimes you can see such characters if you enable the display of special characters:
+
+```text
+- Привет!¶
+- О, привет!¶
+- Как дела?
+```
+
+Printers, editors, and the PHP interpreter understand `\n` as a command to start the text on a new line.
+
+An important feature of PHP: escape sequences like `\n` only work inside double quotes. In single quotes, `\n` is just two ordinary characters, `\` and `n`:
 
 ```php
 <?php
 
-// We didn't study it, but you should know the truth
-// Below is some code that returns the length of a string
-strlen("a");    // 1
-strlen("\n");   // 1 !!!
-strlen("\n\n"); // 2 !!!
+print_r("Hello\nWorld");
+// Hello
+// World
+
+print_r('Hello\nWorld');
+// => Hello\nWorld
 ```
 
-Why is this done? `\n` is just a way to write the line feed character, but the line feed itself is really just one character, it's simply invisible. That's why this challenge arose. It had to be represented somehow on the keyboard. And since the number of characters on the keyboard is limited and given to the most important, all special characters are implemented in the form of these signs.
+## Examples of using `\n`
 
-The line feed character isn't something specific to programming. Anyone who has ever typed on a computer has used the line feed by hitting Enter. Many editors have an option to enable the display of invisible characters; you can use it to see where they are (although it's only displayed a schematic display, these characters would otherwise have no graphical representation, they're invisible):
+Here's how PHP handles the escape sequence `\n`:
 
 ```text
-- Hey!¶
-- Oh, hey!¶
-- How's it going?
+In code      "Hello\nWorld"
+                   ↓
+On screen    Hello
+             World
 ```
 
-The device that outputs the corresponding text takes this character into account. For example, the printer pulls the paper up one line when it encounters the LF, and the text editor pulls all subsequent text below, also by one line.
-
-`\n` is an example of an **escape sequence**. They're also called control constructs. Although there are more than a dozen such characters, there are often only a few such characters in programming. In addition to line feeds, these can include tabs (the break you get when you press the Tab button) and carriage returns (only in Windows). We programmers often need to use line feed `\n` for proper text formatting.
+The position of `\n` changes the resulting output:
 
 ```php
 <?php
 
-print_r("Gregor Clegane\nDunsen\nPolliver\nChiswyck");
+print_r("Hello\nWorld");
+// Hello
+// World
+
+print_r("Hello \nWorld");
+// Hello
+// World  (there is a space at the end of the first line)
+
+print_r("Hello\n World");
+// Hello
+//  World  (there is a space at the start of the second line)
+
+print_r("Hello\n\nWorld");
+// Hello
+//
+// World  (an empty line between them)
 ```
 
-**Warning! Escape sequences like `\n` only work inside double quotes!**
+Spaces before or after `\n` are also taken into account. PHP treats them as ordinary characters and displays them in the output.
 
-The screen will display:
-
-```text
-Gregor Clegane
-Dunsen
-Polliver
-Chiswyck
-```
-
-Note the following points:
-
-1. It does not matter what comes before or after `\n`: a character or an empty string. The line feed will be spotted and executed in any case.
-
-2. Remember that a string can contain a single character or zero characters. Also, a string can only contain `\n`. Analyze the following example:
-
-    ```php
-    <?php
-
-    print_r('Gregor Clegane');
-    print_r("\n");
-    print_r('Dunsen');
-    ```
-
-    Here we output one string with a name, then one string with a line feed and then another string. The program will display this on the screen:
-
-    ```text
-    Gregor Clegane
-    Dunsen
-    ```
-
-3. If we need to output `\n` as text (two separate printable characters), we can use the escape method we already know, adding another `\` at the beginning. I.e., the sequence `\\n` will appear as the characters `\` and `n` following each other.
+You can also insert `\n` into any part of a string — before, after, or even use it on its own:
 
 ```php
 <?php
 
-print_r("Joffrey loves using \\n");
+print_r("First line\n");
+print_r("\n"); // Just an empty line
+print_r("Second line");
 ```
 
-on the screen, you'll see:
+The result will be:
 
 ```text
-Joffrey loves using \n
+First line
+
+Second line
 ```
 
-A small but important note about Windows. Windows uses `\r\n`. to do line feeds by default. This combination works well only in Windows, but creates problems when migrating to other systems (for example, when the development team has both Windows and Linux users). The point is that the sequence `\r\n` has a different interpretation depending on the chosen encoding (discussed later). For this reason, it's common among developers to always use `\n` without `\r`, since LF is always treated the same and works fine on any system. Remember to configure your editor to use `\n`.
+## How to print the `\n` character itself
+
+`\n` in PHP is an escape sequence. It controls the placement of text and isn't displayed on the screen as ordinary characters. If you need to print exactly the characters `\` and `n`, rather than a line break, they need to be escaped. To do this, you add another slash before the backslash:
+
+```php
+<?php
+
+print_r("Hello\\nWorld");
+// => Hello\nWorld
+
+// If you forget to add the second slash
+print_r("Hello\nWorld");
+// Hello
+// World
+```
+
+In this case, PHP understands `\\` as an ordinary backslash and shows the string without a line break.
+
+## Other escape sequences
+
+Besides `\n`, PHP has other escape sequences:
+
+- `\t` denotes a tab (the equivalent of the Tab key)
+- `\r` denotes a carriage return (used in Windows, but rarely applied in PHP code)
+- In programming, `\n` is the most commonly used one, it's enough for most tasks
+
+## Important details
+
+- `\n` is a single character, even though it's written in code as two (`\` and `n`)
+- Escape sequences in PHP only work inside double quotes
+- On Windows, the combination `\r\n` is used by default, but in cross-platform development it's customary to use only `\n` to avoid problems when moving code between systems. That's why it's worth configuring your editor to use `\n`

@@ -1,25 +1,23 @@
-
-Te has encontrado con un código que muestra en pantalla la cantidad total de habitaciones en posesión del actual rey:
+El almacén recibió una entrega. Te has encontrado con un código que cuenta la cantidad total de cajas:
 
 ```php
 <?php
 
-$rey = 'King Balon the 6th';
-print_r($rey . ' has ' . (6 * 17) . ' rooms.');
+$label = 'Ящиков на складе:';
+print_r($label);
+print_r("\n");
+print_r(6 * 17);
 ```
 
-Como puedes ver, estos son números mágicos: no está claro qué significa el 6 y qué significa el 17. Se puede adivinar si se conoce la historia de la familia real: cada nuevo rey hereda todos los castillos de sus antepasados y construye un nuevo castillo, una copia exacta del castillo de sus padres.
-
-Esta extraña dinastía simplemente reproduce castillos idénticos...
-
-Elimina los números mágicos creando nuevas variables y luego muestra el texto en pantalla.
+Los números 6 y 17 aquí son mágicos: no está claro qué significan. Elimínalos creando variables con nombres comprensibles y muestra el resultado en pantalla.
 
 El resultado debería ser:
 
 ```text
-King Balon the 6th has 102 rooms.
+Ящиков на складе:
+102
 ```
 
-Los nombres de las variables deben transmitir el significado de los números, pero al mismo tiempo deben ser lo suficientemente cortos y concisos para una lectura cómoda.
+Los nombres de las variables deben transmitir el significado de los números, pero al mismo tiempo deben ser cortos y concisos.
 
-Recuerda: el código funcionará con cualquier nombre, y nuestro sistema siempre verifica solo el resultado en pantalla, por lo que completar esta tarea es tu responsabilidad.
+Recuerda: el código funcionará con cualquier nombre, y el sistema solo verifica el resultado en pantalla, por lo que completar esta tarea es tu responsabilidad.

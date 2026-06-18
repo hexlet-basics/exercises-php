@@ -1,2 +1,1 @@
-
-There are two variables defined in the program code that contain the names of companies. Calculate their total character length and print it.
+A website checks whether the advertising of two partner companies will fit on a single line. Their names are defined in the code — count the total number of characters in both names using the `strlen()` function and print it to the screen.

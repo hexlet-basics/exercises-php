@@ -1,9 +1,6 @@
 ---
 name: Cambio de variable
-tips:
-  - >
-    Si hay una línea `// BEGIN` y `// END` en el editor, el código debe
-    escribirse entre estas líneas.
+tips: []
 definitions:
   - name: Variable
     description: >-

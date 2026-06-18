@@ -1,5 +1,7 @@
-Imprime en pantalla la cadena `Do you want to eat, <name>?`, donde en lugar de `<name>` se debe utilizar la variable `$stark`. La salida debe ser la siguiente:
+Una tienda en línea envía al cliente una confirmación del pedido. El nombre del cliente y el número de pedido ya están almacenados en variables; necesitas insertarlos en la plantilla del mensaje mediante interpolación.
+
+Usa las variables `$username` y `$orderNumber` para mostrar en pantalla:
 
 ```text
-Do you want to eat, Arya?
+Здравствуйте, Анна! Ваш заказ #1337 принят.
 ```

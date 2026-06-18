@@ -1,10 +1,9 @@
-
-Look at the definition of this function, which returns the modulus of a given number:
+Look at the definition of a function that returns the modulus of a given number:
 
 ```php
 <?php
 
-function abs($number)
+function abs(int $number): int
 {
     if ($number >= 0) {
         return $number;
@@ -13,26 +12,22 @@ function abs($number)
     return -$number;
 }
 
-abs(10);  // 10
-abs(-10); // 10
+print_r(abs(10) . "\n");  // => 10
+print_r(abs(-10) . "\n"); // => 10
 ```
 
-Can we write it more concisely? Something like return `return ОТВЕТ В ЗАВИСИМОСТИ ОТ УСЛОВИЯ`? That would require an expression following return, but if is a statement, not an expression.
-
-In PHP, there's a construct that works like the*if-else* construct, but is an expression. It's called the ternary operator.
-
-The ternary operator is the only JavaScript operator that takes three operands:
+But it can be written more concisely. PHP has a construct that works like *if-else*, but is at the same time an expression — its result can be returned from a function right away. It's called the **ternary operator** and is the only operator in PHP that requires three operands:
 
 ```php
 <?php
 
-function abs($number)
+function abs(int $number): int
 {
     return $number >= 0 ? $number : -$number;
 }
 ```
 
-It generally looks like this:
+The general pattern looks like this:
 
 ```text
 <predicate> ? <expression on true> : <expression on false>
@@ -40,16 +35,14 @@ It generally looks like this:
 
 ![Ternary operator](../assets/ternary-operator.png)
 
-Let's rewrite the initial version of `getTypeOfSentence()` in the same way:
-
-Before:
+Let's rewrite the initial version of `getTypeOfSentence()` in the same way. Here is how it was:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+function getTypeOfSentence(string $sentence): string
 {
-    $lastChar = substr($sentence, -1);
+    $lastChar = $sentence[-1];
 
     if ($lastChar === '?') {
         return 'question';
@@ -59,22 +52,20 @@ function getTypeOfSentence($sentence)
 }
 ```
 
-After:
+And now — how it became:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+function getTypeOfSentence(string $sentence): string
 {
-    $lastChar = substr($sentence, -1);
+    $lastChar = $sentence[-1];
 
-    return ($lastChar === '?') ? 'question' : 'normal';
+    return $lastChar === '?' ? 'question' : 'normal';
 }
 
-getTypeOfSentence('Hodor');  // normal
-getTypeOfSentence('Hodor?'); // question
+print_r(getTypeOfSentence('Hodor') . "\n");  // => normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
 ```
 
----
-
-If you remember the main strength of expressions, then you probably figured out by now that you can nest a ternary operator in another ternary operator. ** Don't do it :)** This sort of code is hard both to read and to debug, it's very bad practice.
+You may already have guessed that a ternary operator can be nested inside a ternary operator. This is possible, but it's better not to do so. Such code is hard to read and debug, so nested ternary operators are considered very bad practice.

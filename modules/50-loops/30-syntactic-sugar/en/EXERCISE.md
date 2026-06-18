@@ -1,10 +1,16 @@
 
-Write a function, `filterString()`, which takes a string and a character as input and returns a new string, wherein the character passed to it is wholly removed from the word.
+Syntactic sugar operators are especially handy when you need to build up a final value step by step.
+
+Implement the function `buildProgressBar()`, which takes the number of completed steps and the total number of steps, and then returns a progress indicator string.
+
+Completed steps are marked with the `#` character, and the remaining ones with the `-` character. Try not to use built-in string functions in your solution.
 
 ```php
 <?php
 
-$str = 'If I look back I am lost';
-filterString($str, 'I'); // 'f  look back  am lost'
-filterString($str, 'o'); // 'If I lk back I am lst'
+buildProgressBar(0, 5); // '-----'
+buildProgressBar(3, 5); // '###--'
+buildProgressBar(5, 5); // '#####'
 ```
+
+You will find the `.=` operator useful for gradually building the new string inside a `while` loop. And the `+=` operator will help you control the loop condition.

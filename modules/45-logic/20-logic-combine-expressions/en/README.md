@@ -1,98 +1,58 @@
+**Logical operations** are expressions, so they can be combined with other expressions. For example, let's say we want to check whether a number is even, that is, whether it's a multiple of two. In programming, to do this we check the remainder of the division by two. If the remainder is `0`, the number is even. If the remainder is not `0`, the number is odd.
 
-Logical operations are expressions. So, **you can combine them with other expressions**.
+![even-or-odd](./assets/even-or-odd.jpg)
 
-Let's say, for example, we want to check if a number is even. In programming, we do this:
+The remainder of a division is a simple but important concept in arithmetic, algebra, number theory, and cryptography. You divide a number into several equal groups, and if anything is left at the end, that is the remainder of the division.
 
-* check the remainder of a division by 2:
-  * if the remainder is 0, then the number was even
-  * if the remainder is not 0, then the number was odd
+Splitting candies equally among people:
 
-The remainder of a division is an elementary but crucial concept in arithmetic and algebra, and even number theory and cryptography. The idea is simple; divide a number into several equal groups, and if anything remains, it's the remainder of the division.
+* 7 candies, 2 people: 2 x 3 + remainder 1 (7 is not a multiple of 2)
+* 21 candies, 3 people: 3 x 7 + remainder 0 (21 is a multiple of 3)
+* 19 candies, 5 people: 5 x 3 + remainder 4 (19 is not a multiple of 5)
 
-Split some candies equally among individuals:
+The `%` operator calculates the remainder of a division:
 
-- 7 candies, 2 people: 2 x 3 + **remainder 1**.
-  So, 7 is not a multiple of 2.
-- 21 candies, 3 people: 3 x 7 + **remainder 0**.
-  So, 21 is a multiple of 3.
-- 19 candies, 5 people: 5 x 3 + **remainder 4**.
-  So, 19 is not a multiple of 5.
+* `7 % 2` → `1`
+* `21 % 3` → `0`
+* `19 % 5` → `4`
 
-The `%` operator calculates the remainder of a division (not to be confused with division itself):
-
-- `7 % 2` → `1`
-- `21 % 3` → `0`
-- `19 % 5` → `4`
+Let's combine the logical operator "equality check" `===` and the arithmetic operator `%` in a single expression and write a function that checks whether a number is even:
 
 ```php
 <?php
 
-7 % 2;  // 1
-21 % 3; // 0
-19 % 5; // 4
-
-// Even/odd check
-
-10 % 2 // 10 is even, because the remainder is 0
-9 % 2  // 9 is odd, because the remainder is 1
-```
-
-Write a function to check whether a number is even:
-
-```php
-<?php
-
-function isEven($number)
+function isEven(int $number): bool
 {
     return $number % 2 === 0;
 }
 
-isEven(10); // true
-isEven(3);  // false
+var_dump(isEven(10)); // => bool(true)
+var_dump(isEven(3));  // => bool(false)
 ```
 
-In one expression, we combined the logical operator `===` (equality check) and the arithmetic operator `%`.
+Arithmetic operations have a higher priority than logical ones. That means the arithmetic expression `$number % 2` is calculated first, and then the result is compared with zero, and the result of the equality check is returned.
 
-Arithmetic operators have higher priority than logical ones. So first the arithmetic expression `$number % 2` is calculated, then the result is involved in a logical comparison.
-
-We can express this in normal words like so: *«calculate the remainder from dividing the number `$number` by 2 and compare whether the remainder is zero; then return the result of the even/odd check»*.
-
----
-
-Another example is to write a function to check if the first letter of a string is uppercase.
+Now let's write a function that takes a string and checks whether this string starts with the Latin letter `a`.
 
 Algorithm:
 
-1. Let's get the first character of the argument string and write it to a variable.
-1. We'll compare whether the symbol is equal to its large (capital) version.
-1. Let's get the result back.
+1. Get the first character of the argument string and store it in a variable
+2. Compare whether the character is equal to the Latin letter `a`
+3. Return the result
 
 ```php
 <?php
 
-function isFirstLetterInUpperCase($string)
+function isFirstLetterAnA(string $text): bool
 {
-    $firstLetter = $string[0];
-    $isSame = strtoupper($firstLetter) === $firstLetter;
-    return $isSame;
+    $firstLetter = $text[0];
+    return $firstLetter === 'a';
 }
 
-isFirstLetterInUpperCase('marmont'); // false
-isFirstLetterInUpperCase('Robb'); // true
+var_dump(isFirstLetterAnA('orange')); // => bool(false)
+var_dump(isFirstLetterAnA('apple'));  // => bool(true)
 ```
 
-We used the [`strtoupper()` function  from the standard PHP library.](https://www.php.net/manual/en/function.strtoupper.php). It takes the string and returns a version of the string in which all the letters have been capitalized. We pass it just one character, the first character of the string.
+To make it clear what's happening here, try to say out loud what's going on, just like we decoded the process in the `isEven()` example.
 
-Try and explain what's happening in simple English, similar to how we decoded the process in the `isEven()` example at the beginning of the lesson.
-
----
-
-*Do you remember how we extract characters from a string with square brackets?*
-
-```php
-<?php
-
-$firstName = 'Alexander';
-
-$firstName[0]; // A
-```
+Now you know that comparison operations are used in programming on a par with arithmetic ones. But remember that equality is denoted by `===`. That way you won't confuse this operation with assigning a value to a variable.

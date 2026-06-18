@@ -1,5 +1,5 @@
 
-En esta lección, deberás implementar dos funciones: `isPalindrome()` y `isNotPalindrome()`
+En un juego de palabras, los participantes verifican si una palabra es un palíndromo. Implementa dos funciones `isPalindrome()` e `isNotPalindrome()` que reciben una cadena como entrada
 
 1. La función `isPalindrome()` determina si una palabra es un palíndromo o no. Un palíndromo es una palabra que se lee igual en ambas direcciones.
 

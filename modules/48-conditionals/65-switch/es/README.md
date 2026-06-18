@@ -1,4 +1,4 @@
-Muchos lenguajes, además de la construcción condicional *if*, incluyen el **switch**. En esta lección, nos familiarizaremos con él.
+En muchos lenguajes, además de la construcción condicional *if*, existe el **switch**. Esta construcción aparece en una enorme cantidad de código PHP existente, por lo que es importante saber leerla.
 
 Es una versión especializada del *if*, creada para algunas situaciones particulares. Por ejemplo, tiene sentido usarlo cuando hay una cadena de *if else* con comprobaciones de igualdad. Por ejemplo:
 

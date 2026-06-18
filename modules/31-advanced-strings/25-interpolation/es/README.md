@@ -1,4 +1,4 @@
-Imaginemos que necesitamos crear un encabezado de correo electrónico a partir de dos variables y signos de puntuación. Podemos resolver esta tarea de la siguiente manera:
+Recordemos cómo funciona la concatenación. Para ello, unimos las cadenas que necesitamos (o variables con cadenas dentro) mediante un punto `.`.
 
 ```php
 <?php
@@ -6,12 +6,13 @@ Imaginemos que necesitamos crear un encabezado de correo electrónico a partir d
 $firstName = 'Joffrey';
 $greeting = 'Hola';
 
-print_r($greeting . ", " . $firstName . "!"); // => 'Hola, Joffrey!'
+print_r($greeting . ", " . $firstName . "!");
+// => Hola, Joffrey!
 ```
 
-Este es un caso simple, pero incluso aquí se requiere un esfuerzo para ver qué cadena se obtendrá al final. Hay que prestar atención a las comillas y los espacios, y a primera vista es difícil entender qué y dónde comienza y termina.
+Pero con expresiones complejas se vuelve difícil ver de inmediato qué texto se obtendrá al final. Especialmente si la cadena usa espacios, comas o comillas: empiezan a dificultar la comprensión. Incluso el ejemplo actual requiere un pequeño esfuerzo para entender qué cadena se obtendrá.
 
-Existe otra forma más conveniente: la **interpolación**. Así es como se ve:
+Por esta razón, muchos lenguajes tienen una operación llamada interpolación. La interpolación es una forma de insertar valores de variables directamente dentro de una cadena. En PHP, funciona en cadenas con comillas dobles. Así:
 
 ```php
 <?php
@@ -19,16 +20,62 @@ Existe otra forma más conveniente: la **interpolación**. Así es como se ve:
 $firstName = 'Joffrey';
 $greeting = 'Hola';
 
-// Ten en cuenta que los delimitadores de la cadena son comillas dobles
-// La interpolación no funciona con comillas simples
-print_r("{$greeting}, {$firstName}!"); // => Hola, Joffrey!
+print_r("{$greeting}, {$firstName}!");
+// => Hola, Joffrey!
 ```
 
+Los nombres de las variables se escriben dentro de la cadena entre llaves, y PHP sustituye automáticamente los valores necesarios:
 
-En este ejemplo, creamos una sola cadena e insertamos las variables en el orden deseado utilizando llaves (`{}`). Creamos una plantilla donde se insertan los valores necesarios.
+```text
+$firstName = 'Joff'
+$greeting  = 'Hello'
 
-Ahora no tenemos que preocuparnos por las cadenas separadas para los signos de puntuación y los espacios. Estos caracteres están escritos en la cadena de la plantilla.
+"{$greeting}, {$firstName}!"
+  └────┬────┘  └────┬─────┘
+   'Hello'      'Joff'
+      └──────┬──────┘
+      'Hello, Joff!'
+```
 
-En una sola cadena se pueden hacer tantos bloques con llaves como se desee. La interpolación solo funciona con cadenas entre comillas dobles.
+Compara estos dos ejemplos uno al lado del otro:
 
-En casi todos los lenguajes, la interpolación es preferible a la concatenación para unir cadenas. La cadena resultante está concatenada y dentro de ella se pueden ver claramente los espacios y otros caracteres.
+```php
+<?php
+
+print_r($greeting . ", " . $firstName . "!");
+print_r("{$greeting}, {$firstName}!");
+```
+
+La segunda opción es más simple y clara.
+
+En una sola cadena se pueden hacer tantos bloques con llaves como se desee. Es importante recordar: la interpolación solo funciona con comillas dobles. Una cadena entre comillas simples se imprime tal cual, sin sustituir los valores:
+
+```php
+<?php
+
+$firstName = 'Joffrey';
+
+print_r('Hola, {$firstName}!');
+// => Hola, {$firstName}!
+```
+
+## Ejemplo
+
+```php
+<?php
+
+$school = 'Hexlet';
+
+$whatIsIt = "{$school} - online courses";
+print_r($whatIsIt); // => Hexlet - online courses
+```
+
+Esta notación se lee con facilidad: los espacios, guiones y símbolos se ven de inmediato. La cadena se ve exactamente como aparecerá en la salida. Esto hace que el código sea claro y fácil de mantener. Por esta razón, en la mayoría de los lenguajes la interpolación es preferible a la concatenación.
+
+## Por qué es importante
+
+La interpolación es preferible a la concatenación en casi todos los lenguajes de programación modernos. Ella:
+
+- Simplifica la estructura de las cadenas.
+- Mejora la legibilidad del código.
+- Reduce la cantidad de errores al trabajar con espacios y signos de puntuación.

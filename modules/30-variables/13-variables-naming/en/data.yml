@@ -2,5 +2,13 @@
 name: Choosing a variable name
 tips:
   - >
-    [Code Complete: Naming in
-    Programming](https://hexlet.io/blog/posts/code-complete-naming-in-programming)
+    [Naming in
+    Programming](https://hexlet.io/blog/posts/naming-in-programming)
+  - >
+    [Variable Naming
+    Errors](https://hexlet.io/blog/posts/naming-errors-1)
+definitions:
+  - name: Variable
+    description: >-
+      a way to store information and give it a name for later use in the
+      code.

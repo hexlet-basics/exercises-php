@@ -1,10 +1,19 @@
 ---
 name: Data types
 tips:
-  - |
+  - >
     [Literal](https://en.wikipedia.org/wiki/Literal_(computer_programming))
+  - |
+    [Article about fractional numbers](https://habr.com/ru/articles/112953/)
 definitions:
-  - name: A data type
+  - name: Data type
     description: >-
-      Primitive data types are simple types built into the programming language
-      itself.
+      a set of data in code (a kind of information). A type defines what you can
+      do with the elements of a particular set. For example, integers, rational
+      numbers, and strings are different data types.
+  - name: Primitive data types
+    description: simple types built into the programming language itself.
+  - name: String (string)
+    description: >
+      a data type describing a set of characters (in other words — text); for
+      example, `'text'` or `"text"`.

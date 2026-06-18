@@ -1,2 +1,5 @@
 ---
-name: Return values
+name: Returning values
+tips:
+  - |
+    [The return statement](https://www.php.net/manual/en/function.return.php)

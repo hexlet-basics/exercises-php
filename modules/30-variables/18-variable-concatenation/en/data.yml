@@ -2,8 +2,13 @@
 name: Variables and concatenation
 tips:
   - >
-    Consider how you should concatenate the variables (Which string? What
-    order?) to get the two-line output of the email body.
+    Consider which string and in what order you need to concatenate the
+    variables to get this two-line output of the email body.
   - >
-    Remember that you can create a string containing only the escape sequence
-    `\n`.
+    Remember that you can create a string that contains only the escape
+    sequence `\n`. You can concatenate this string with variables to format
+    the text correctly.
+definitions:
+  - name: Concatenation
+    description: >
+      the operation of joining two strings. For example, `print_r("King's " . ' Landing')`

@@ -1,9 +1,9 @@
 
-Implementa la función `guessNumber()`, que recibe un número y verifica si es igual al número dado (supongamos que es 42). Si es igual, la función debe devolver la cadena `'You win!'`, de lo contrario, debe devolver la cadena `'Try again!'`.
+En un concurso, el número secreto es 42. Un participante dice un número y el programa le indica de inmediato si acertó o no. Implementa la función `guessNumber()`, que recibe un número y comprueba si es igual a 42. Si es igual, devuelve `'You win!'`, de lo contrario, `'Try again!'`.
 
 ```php
 <?php
 
-guessNumber(42) // 'You win!'
-guessNumber(61) // 'Try again!'
+guessNumber(42); // 'You win!'
+guessNumber(61); // 'Try again!'
 ```

@@ -1,1 +1,17 @@
-Imprime en pantalla la cadena de texto `2 times`, obtenida a partir del número 2.9 y la cadena de texto `times`, utilizando conversiones de tipo y concatenación. Para ello, debes realizar dos conversiones: primero a un número entero y luego a una cadena de texto.
+Un termómetro muestra la temperatura con punto decimal. El programa debe imprimir solo el valor entero con una etiqueta.
+
+Tienes una variable:
+
+```php
+<?php
+
+$temperature = 36.6;
+```
+
+Escribe un programa que:
+
+1. Convierta la temperatura en un número entero.
+2. Convierta el número obtenido en una cadena.
+3. Imprima esa cadena en pantalla, añadiendo, separada por un espacio, la etiqueta `°C`.
+
+Usa los operadores de conversión de tipos `(int)` y `(string)`.

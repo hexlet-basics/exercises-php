@@ -1,5 +1,8 @@
 ---
 name: Variable naming
+tips:
+  - |
+    [CamelCase](https://en.wikipedia.org/wiki/Camel_case)
 definitions:
   - name: A coding standard
-    description: is a set of syntactic and stylistic rules for writing code.
+    description: a set of syntactic and stylistic rules for writing code.

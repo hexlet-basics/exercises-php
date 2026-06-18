@@ -1,156 +1,203 @@
 ---
 
-name: Retorno de Valores
+name: Retorno de valores
 theory: |
-    Las funciones que definimos en lecciones anteriores terminaban su ejecución imprimiendo algún dato en la pantalla:
+  Las funciones que definimos en la lección anterior terminaban su trabajo imprimiendo algunos datos en la pantalla. Tales funciones no son muy útiles, porque su resultado no se puede usar dentro del programa. En esta lección aprenderemos a escribir funciones que **devuelven valores**. Tales funciones responden a una pregunta y entregan el resultado de su trabajo, como si dijeran: «Toma, ya hice el cálculo».
 
-    ```php
-    <?php
+  Por ejemplo, una función puede devolver una cadena con texto procesado o un número calculado por una fórmula. El valor devuelto se puede usar más adelante. Se guarda en una variable, se pasa a otra función o se imprime en la pantalla.
 
-    function saludo()
-    {
-        print_r('¡Hola, Hexlet!');
-    }
-    ```
+  ![Cómo funciona una función de suma en PHP](./assets/sum-php.jpg)
 
-    Sin embargo, este tipo de funciones no son muy útiles, ya que no podemos usar sus resultados dentro del programa. Para poder hacerlo, necesitamos que las funciones retornen un valor, y eso es lo que aprenderemos en esta lección.
+  Para que una función entregue un resultado, en ella se usa una palabra clave especial `return`. Esta finaliza la ejecución de la función e indica exactamente qué se debe devolver.
 
-    Consideremos el caso del procesamiento de correos electrónicos. Cuando un usuario se registra en un sitio web, puede ingresar su correo electrónico de cualquier manera:
+  Aquí tienes un ejemplo de una función que convierte el texto a mayúsculas:
 
-    * Agregar espacios en blanco al principio o al final `_soporte@hexlet.io__`
-    * Usar letras en diferentes casos `SOPORTE@hexlet.io`
+  ```php
+  <?php
 
-    Si almacenamos el correo electrónico en la base de datos en este formato, el usuario no podrá acceder al sitio web si ingresa la dirección sin espacios y en un caso diferente.
+  function shout($name)
+  {
+      return strtoupper($name);
+  }
+  ```
 
-    Para evitar esto, debemos preparar el correo electrónico para ser almacenado en la base de datos. Esto implica convertirlo a minúsculas y eliminar los espacios en blanco alrededor del texto. Esta tarea se resuelve en un par de líneas:
+  Llamamos a `shout()`, le pasamos un nombre y obtenemos una cadena en mayúsculas. Esta cadena es el resultado de la función:
 
-    ```php
-    <?php
+  ```php
+  <?php
 
-    function guardarCorreo()
-    {
-        $correo = "  SoPORTE@hexlet.IO";
-        // Eliminamos espacios en blanco alrededor
-        // La función trim() elimina los espacios en blanco del principio y el final de una cadena
-        $correoRecortado = trim($correo);
-        $correoPreparado = strtolower($correoRecortado);
-        print_r($correoPreparado);
-        // Aquí se realizaría el almacenamiento en la base de datos
-    }
-    ```
+  $result = shout('hexlet');
+  print_r($result); // => HEXLET
 
-    Este código es posible gracias al retorno de valores. Las funciones `trim()` y `strtolower()` no imprimen nada en la pantalla. En cambio, devuelven el resultado de su trabajo, lo que nos permite asignarlo a variables.
+  $result2 = shout('code-basics');
+  print_r($result2); // => CODE-BASICS
+  ```
 
-    Si estas funciones imprimieran en la pantalla en lugar de retornar valores, no podríamos asignar el resultado a una variable, tal como no podemos hacer con la función `saludo()` definida anteriormente:
+  A diferencia de `print_r()`, `return` no imprime nada. Simplemente devuelve un valor. La decisión sobre qué hacer con él la toma el código que llama.
 
-    ```php
-    <?php
+  Al llamar a la función `shout('hexlet')`, primero se evalúa la expresión `strtoupper($name)`. Esta devuelve la cadena `'HEXLET'`. Luego `return` entrega este valor hacia afuera, al lugar desde donde se llamó a la función. En nuestro caso, este valor se guarda en la variable `$result` y luego se imprime en la pantalla mediante `print_r()`.
 
-    $mensaje = saludo();
-    // Para ver "null", necesitamos usar la función var_dump()
-    var_dump($mensaje); // => NULL
-    ```
+  ¿Y qué devuelve una función que no tiene `return`? Comprobémoslo con la función de la lección anterior que solo imprime texto:
 
-    Modificaremos la función `saludo()` para que comience a retornar datos en lugar de imprimirlos. Para hacerlo, necesitamos usar la instrucción de retorno en lugar de imprimir en pantalla:
+  ```php
+  <?php
 
-    ```php
-    <?php
+  function greeting()
+  {
+      print_r('Hello, Hexlet!');
+  }
 
-    function saludo()
-    {
-        return '¡Hola, Hexlet!';
-    }
-    ```
+  $message = greeting();
+  // Para ver null, hay que usar la función var_dump()
+  var_dump($message); // => NULL
+  ```
 
-    La instrucción `return` es especial. Toma la expresión que se encuentra a su derecha y la devuelve al código que llamó a la función. Tan pronto como PHP encuentra `return`, la ejecución de la función termina:
+  Una función sin retorno siempre devuelve `null`, un valor especial que significa «no hay nada».
 
-    ```php
-    <?php
+  ## Retorno de una expresión calculada
 
-    // Ahora podemos usar el resultado de la función
-    $mensaje = saludo();
-    print_r($mensaje); // => '¡Hola, Hexlet!'
-    // También podemos realizar acciones con el resultado
-    print_r(strtoupper($mensaje)); // => '¡HOLA, HEXLET!'
-    ```
+  Las funciones no están obligadas a simplemente devolver un parámetro. Normalmente, en `return` se indica una **expresión** que primero se evalúa y luego el resultado se entrega hacia afuera.
 
-    Cualquier código después de `return` no se ejecuta:
+  ```php
+  <?php
 
-    ```php
-    <?php
+  function fullName($first, $last)
+  {
+      return ucfirst($first) . ' ' . ucfirst($last);
+  }
+  ```
 
-    function saludo()
-    {
-        return '¡Hola, Hexlet!';
-        print_r('Nunca me ejecutaré');
-    }
-    ```
+  En este ejemplo, construimos el nombre completo a partir del nombre y el apellido. La función `ucfirst()` convierte en mayúscula la primera letra de una cadena. Primero se ejecutan ambas llamadas a `ucfirst()`, luego las cadenas se unen mediante `.`, y la cadena ya lista se devuelve:
 
-    Incluso si una función retorna datos, esto no impide que imprima en pantalla. Además de retornar valores, también podemos imprimir:
+  ```php
+  <?php
 
-    ```php
-    <?php
+  $name = fullName('aria', 'stark');
+  print_r($name); // => Aria Stark
+  ```
 
-    function saludo()
-    {
-        print_r('Apareceré en la consola');
-        return '¡Hola, Hexlet!';
-    }
-    // Imprimirá el texto en pantalla y retornará el valor
-    $mensaje = saludo();
-    ```
+  También se puede devolver el valor de una variable. Aquí hay que guiarse por los principios de legibilidad del código:
 
-    No solo podemos retornar un valor específico. Dado que `return` trabaja con expresiones, prácticamente cualquier cosa puede estar a su derecha. Aquí debemos seguir los principios de legibilidad del código:
+  ```php
+  <?php
 
-    ```php
-    <?php
+  function greeting()
+  {
+      $message = 'Hello, Hexlet!';
+      return $message;
+  }
+  ```
 
-    function saludo()
-    {
-        $mensaje = '¡Hola, Hexlet!';
-        return $mensaje;
-    }
-    ```
+  No devolvemos la variable en sí. Siempre se devuelve el valor que está contenido en esa variable.
 
-    Aquí no estamos retornando la variable en sí, siempre estamos retornando el valor que está contenido en esa variable. Aquí tienes un ejemplo con cálculos:
+  ## Funciones multilínea
 
-    ```php
-    <?php
+  A veces, dentro del cuerpo de la función hay que realizar varios pasos antes de obtener el resultado. En tales casos se escriben varias líneas de código, y al final se usa `return` para devolver el valor final.
 
-    function dobleCinco()
-    {
-        // o return 5 + 5
-        $resultado = 5 + 5;
-        return $resultado;
-    }
-    ```
+  Por ejemplo, escribamos una función que formatea un nombre: elimina los espacios de los bordes y convierte todas las letras a mayúsculas.
 
-    Para poner a prueba tus conocimientos, intenta responder esta pregunta. ¿Qué imprimirá este código?
+  ```php
+  <?php
 
-    ```php
-    <?php
+  function formatName($name)
+  {
+      $clean = trim($name);
+      $uppercased = strtoupper($clean);
+      return $uppercased;
+  }
+  ```
 
-    // Definición
-    function ejecutar()
-    {
-        // o return 5 + 5
-        return 5;
-        return 10;
-    }
-    // Uso
-    ejecutar(); // => ?
-    ```
+  Primero quitamos los espacios con la ayuda de la función `trim()`, luego convertimos a mayúsculas con la ayuda de `strtoupper()` y devolvemos el valor final:
 
+  ```php
+  <?php
+
+  print_r(formatName('  hexlet  ')); // => HEXLET
+  ```
+
+  Código como este se encuentra en los programas reales constantemente. Por ejemplo, cuando un usuario se registra en un sitio, puede ingresar un correo con espacios de más o letras en distintos casos: `  SuppORT@hexlet.IO`. Antes de escribir tal correo en la base de datos, se prepara exactamente de la misma manera: se recortan los caracteres de espacio y se convierte a minúsculas.
+
+  ## Código después de `return`
+
+  Cuando PHP llega a la instrucción `return`, la ejecución de la función se detiene. Todo lo que está escrito después de ella dentro de la función **no se ejecutará**:
+
+  ```php
+  <?php
+
+  function greeting()
+  {
+      return 'Hello, Hexlet!';
+      print_r('Nunca me ejecutaré');
+  }
+  ```
+
+  Por eso `return` siempre se escribe al final de la lógica. Sin embargo, puede haber muchos de estos finales dentro de una función. Trataremos esto con más detalle cuando lleguemos a las construcciones condicionales.
+
+  Incluso si una función devuelve datos, esto no la limita en lo que imprime. Además de devolver datos, también podemos imprimir:
+
+  ```php
+  <?php
+
+  function greeting()
+  {
+      print_r('Apareceré en la consola');
+      return 'Hello, Hexlet!';
+  }
+
+  // Imprimirá el texto en la pantalla y devolverá el valor
+  $message = greeting();
+  ```
+
+  Una pregunta de autocomprobación. ¿Qué devolverá la llamada a esta función?
+
+  ```php
+  <?php
+
+  // Definición
+  function run()
+  {
+      // Retorno
+      return 5;
+      return 10;
+  }
+
+  // Uso
+  run(); // => ?
+  ```
 instructions: |
+  Implementa una función `truncate()` que recorta la cadena pasada hasta el número de caracteres indicado, agrega puntos suspensivos al final y devuelve la cadena resultante. Una lógica como esta se usa a menudo en los sitios web para mostrar un texto largo de forma abreviada.
 
-    Implementa una función llamada `sayHurrayThreeTimes()` que retorne la cadena '¡hurray! ¡hurray! ¡hurray!'.
+  La función recibe dos parámetros:
 
-    ```php
-    <?php
+  1. La cadena que se debe recortar
+  2. El número de caracteres que se deben dejar
 
-    $hurray = sayHurrayThreeTimes();
-    print_r($hurray); // => '¡hurray! ¡hurray! ¡hurray!'
+  Un ejemplo de cómo debe funcionar la función que escribas:
 
-    No es necesario llamar a tu función, solo definirla.
+  ```php
+  <?php
 
-tips: []
+  // Pasamos el texto directamente
+  // Recortamos el texto, dejando 2 caracteres
+  truncate('hexlet', 2); // 'he...'
+
+  // A través de una variable
+  $text = 'it works!';
+  // Recortamos el texto, dejando 4 caracteres
+  truncate($text, 4); // 'it w...'
+  ```
+
+  Puedes completar la tarea de varias maneras, solo te sugeriremos una de ellas. Para resolverla de esta manera, necesitarás tomar una subcadena de la cadena pasada como primer parámetro a la función. Usa para ello la función [substr()](https://www.php.net/manual/es/function.substr.php). Basándote en la tarea, piensa, ¿desde qué índice y con qué longitud necesitas extraer la subcadena?
+
+  ```php
+  <?php
+
+  $word = 'welcome!';
+  $length = 3;
+  substr($word, 0, $length); // 'wel'
+  ```
+
+  Desde el punto de vista del sistema de verificación, no importa de cuál de las maneras se implemente la función `truncate()` por dentro. Lo principal es que cumpla la tarea planteada.
+tips:
+  - |
+    [La instrucción return](https://www.php.net/manual/es/function.return.php)

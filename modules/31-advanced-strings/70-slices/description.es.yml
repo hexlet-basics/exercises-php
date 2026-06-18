@@ -2,26 +2,158 @@
 
 name: Subcadenas
 theory: |
-  Usa `substr()` para extraer parte de una cadena. El formato es `substr(cadena, inicio, longitud)`:
+  Al trabajar con cadenas, a menudo nos enfrentamos a la tarea de extraer parte de una cadena. Por ejemplo, obtener el año de una fecha, el nombre de un nombre completo o los primeros caracteres de una dirección de correo electrónico. Para estos casos, PHP tiene una herramienta cómoda: la función incorporada `substr()`.
+
+  ## ¿Qué es una subcadena?
+
+  Una subcadena es una parte de una cadena. Es lo que está contenido dentro de otra cadena. Por ejemplo, en la cadena `'12-08-2034'` una subcadena puede ser `'2034'`, `'12'` o incluso `'-'`. Todo depende de qué información necesitemos extraer.
+
+  Supongamos que tenemos una cadena con una fecha `'12-08-2034'`. Queremos obtener de ella solo el año `'2034'`. En esta cadena, cada carácter tiene un índice (posición), empezando desde cero:
+
+  ```text
+  '1' '2' '-' '0' '8' '-' '2' '0' '3' '4'
+   0   1   2   3   4   5   6   7   8   9
+  ```
+
+  Resulta que el año comienza en el índice 6 y consta de cuatro caracteres. Para extraerlo, usamos `substr()`:
 
   ```php
   <?php
 
-  $text = 'Hello, World!';
-  print_r(substr($text, 7));     // => World!
-  print_r(substr($text, 7, 5));  // => World
-  print_r(substr($text, -6));    // => World! (el índice negativo cuenta desde el final)
+  $value = '12-08-2034';
+  $year = substr($value, 6, 4);
+  print_r($year); // => 2034
   ```
 
-  Si se omite la longitud, PHP toma todo desde el índice inicial hasta el final de la cadena.
-
-instructions: |
-  Dada la variable `$url = 'https://hexlet.io'`, extrae e imprime el dominio sin el protocolo usando `substr()`:
+  La notación `substr($value, 6, 4)` significa: tomar de la cadena `$value` cuatro caracteres, empezando desde el índice 6. El formato:
 
   ```text
-  hexlet.io
+  substr(cadena, inicio, longitud)
   ```
 
+  Ten en cuenta: el tercer parámetro no indica el índice del final, sino la cantidad de caracteres que hay que tomar.
+
+  ```php
+  <?php
+
+  // El último carácter tiene el índice 10, y en total hay 11 caracteres
+  $value = 'code-basics';
+
+  print_r(substr($value, 5, 6)); // => basics (6 caracteres desde el índice 5)
+  print_r(substr($value, 0, 7)); // => code-ba (7 caracteres desde el inicio)
+  print_r(substr($value, 2, 4)); // => de-b
+  ```
+
+  ¿Cómo se cuenta todo esto? Si trabajamos con una cadena concreta, casi siempre se hace a ojo.
+
+  ## Una subcadena es una cadena
+
+  ```php
+  <?php
+
+  $value = '01-12-9873';
+
+  substr($value, 1, 1); // => 1
+  substr($value, 3, 2); // => 12
+  ```
+
+  `substr()` siempre devuelve una cadena, incluso si solo contiene dígitos. Esto significa que el resultado se puede usar como una cadena normal: concatenar, imprimir, interpolar, etc. Incluso se puede extraer una nueva subcadena de él:
+
+  ```php
+  <?php
+
+  $value = '01-12-9873';
+
+  $part = substr($value, 3, 4); // => 12-9
+  print_r(substr($part, 0, 2)); // => 12
+  ```
+
+  Primero obtuvimos la subcadena `'12-9'`, y luego extrajimos de ella una nueva subcadena `'12'`.
+
+  ## Subcadena hasta el final o desde el inicio
+
+  A veces hay que tomar parte de una cadena hasta el final o desde el inicio. Estas situaciones también se manejan con facilidad:
+
+  ```php
+  <?php
+
+  $value = 'Hexlet';
+
+  print_r(substr($value, 3));    // => let (desde el índice 3 hasta el final)
+  print_r(substr($value, 0, 3)); // => Hex (desde el inicio, tres caracteres)
+  ```
+
+  Si no se indica la longitud, PHP toma por sí mismo todos los caracteres desde el índice inicial hasta el final de la cadena.
+
+  ## Índices negativos
+
+  PHP permite contar no solo de izquierda a derecha, sino también desde el final de la cadena. Para ello se usan valores negativos:
+
+  ```php
+  <?php
+
+  $value = 'Hexlet';
+
+  print_r(substr($value, -1));    // => t (el último carácter)
+  print_r(substr($value, -3));    // => let (los últimos tres caracteres)
+  print_r(substr($value, 1, -1)); // => exle (desde el índice 1 hasta el penúltimo carácter)
+  ```
+
+  Un inicio negativo significa contar desde el final de la cadena: `-1` corresponde al último carácter, `-2` al penúltimo, y así sucesivamente. Una longitud negativa significa «tomar todo, excepto la cantidad indicada de caracteres desde el final».
+
+  Esto es cómodo cuando no se conoce de antemano la longitud de la cadena, pero hay que tomar la «cola» o el «medio» de la cadena respecto al final.
+
+  ## Inversión de una cadena
+
+  En algunos lenguajes, como Python, los cortes de cadena tienen un parámetro «paso», con el que se puede tomar cada segundo carácter o invertir una cadena. `substr()` no tiene paso, pero para invertir una cadena en PHP existe una función incorporada aparte, `strrev()`:
+
+  ```php
+  <?php
+
+  $value = 'Hexlet';
+
+  print_r(strrev($value)); // => telxeH
+  ```
+
+  ## Subcadena con variables
+
+  Los parámetros de `substr()` no tienen por qué estar fijados rígidamente con números. Se pueden usar variables:
+
+  ```php
+  <?php
+
+  $start = 1;
+  $length = 4;
+
+  $value = 'Hexlet';
+  print_r(substr($value, $start, $length)); // => exle
+  ```
+
+  Esto es especialmente útil cuando los límites se calculan durante la ejecución del programa.
+
+  ## Cuidado: cirílico
+
+  La función `substr()` trabaja con bytes, no con caracteres. Para el alfabeto latino es lo mismo, pero los caracteres cirílicos y los de otros alfabetos no latinos ocupan más de un byte. Para esas cadenas se usa la función `mb_substr()` — hablaremos más sobre el trabajo con codificaciones al final del curso.
+
+  ## Chuleta rápida
+
+  ```php
+  <?php
+
+  $value = 'Hexlet';
+
+  substr($value, 0);     // Hexlet — toda la cadena
+  substr($value, 5);     // t
+  substr($value, 0, 5);  // Hexle
+  substr($value, -1);    // t — el último carácter
+  substr($value, -3);    // let — los últimos tres caracteres
+  substr($value, 2, -1); // xle — desde el tercer carácter hasta el penúltimo
+  strrev($value);        // telxeH — la cadena en orden inverso
+  ```
+
+  No te preocupes si ahora no recuerdas todas las combinaciones: pronto empezarás a usarlas en la práctica. Lo principal es entender cómo funciona la estructura básica `substr(cadena, inicio, longitud)`.
+instructions: |
+  El programa recibe la dirección completa de un sitio y debe extraer de ella solo el nombre del dominio, sin el protocolo `https://`. La variable `$url` almacena la dirección `https://hexlet.io`. Extrae con `substr()` el nombre de dominio `hexlet.io` y muéstralo en pantalla. La tarea se puede resolver de distintas maneras.
 tips:
   - >
     [Función substr](https://www.php.net/manual/es/function.substr.php)

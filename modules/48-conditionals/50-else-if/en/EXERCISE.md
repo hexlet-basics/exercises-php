@@ -1,21 +1,19 @@
 
-The digital map of Westeros that Sam has made shows Stark allies in green, enemies in red, and neutral families in gray.
-
-Write a function called `whoIsThisHouseToStarks()` for Sam that takes the family name as input and returns one of three values: `'friend'`, `'enemy'`, `'neutral'`.
+Implement the `getTrafficLightAction()` function, which takes a traffic light color and returns what the driver should do.
 
 Rules:
 
-  * Friends (`'friend'`): 'Karstark', 'Tully'
-  * Enemies (`'enemy'`): 'Lannister', 'Frey'
-  * Any other families are considered neutral
+* `'green'` → `'go'`
+* `'yellow'` → `'slow down'`
+* `'red'` → `'stop'`
+* Any other color → `'unknown'`
 
 Call examples:
 
 ```php
 <?php
 
-whoIsThisHouseToStarks('Karstark'); // 'friend'
-whoIsThisHouseToStarks('Frey');     // 'enemy'
-whoIsThisHouseToStarks('Joar');     // 'neutral'
-whoIsThisHouseToStarks('Ivanov');   // 'neutral'
+getTrafficLightAction('green');  // 'go'
+getTrafficLightAction('red');    // 'stop'
+getTrafficLightAction('purple'); // 'unknown'
 ```

@@ -1,42 +1,85 @@
-En esta lección vamos a escribir nuestro primer programa. Aprenderemos qué comandos se necesitan y qué etiquetas se deben utilizar para que el programa que ejecuta el código lo interprete correctamente. También aprenderemos por qué son necesarios los comentarios en el código.
+El aprendizaje de un nuevo lenguaje de programación tradicionalmente comienza con el programa 'Hello, World!'. Es un programa simple que muestra un saludo en la pantalla y nos introduce en la sintaxis y la estructura del nuevo lenguaje.
 
-## Cómo escribir un programa simple
+```text
+Hello, World!
+```
 
-Hay dos formas de escribir un programa y mostrar el resultado en la pantalla:
+![Hola Mundo](./assets/hello-world.png)
 
-* Usando el comando `echo`
-* Usando la función `print_r()`
-
-Veamos cada una en detalle.
-
-### Escribir un programa usando `echo`
-
-Vamos a escribir un programa que muestre "¡Hola, Mundo!" en la pantalla:
+Esta tradición tiene ya más de cuarenta años, y nosotros también comenzaremos con ella. En la primera lección escribiremos el programa `Hello, World!`. En PHP este programa se ve así:
 
 ```php
 <?php
 
-echo '¡Hola, Mundo!';
-// => ¡Hola, Mundo!
+print_r('Hello, World!');
 ```
 
+La línea `<?php` al principio es una etiqueta especial que indica que a continuación viene código en PHP. Hablaremos de ella con más detalle en la próxima lección.
 
-La salida en la pantalla se realiza utilizando el comando especial `echo`. Después de él, se especifica la cadena a mostrar entre comillas simples. Al final, es importante colocar un punto y coma.
-
-Para mayor comodidad, mostraremos el resultado de la ejecución del código de esta manera: `=> RESULTADO`.
-
-### Escribir un programa usando `print_r()`
-
-Otra forma de mostrar una cadena en la pantalla es utilizando la función `print_r()`:
+El comando `print_r()` muestra en la pantalla el texto indicado entre paréntesis. Al final se coloca un punto y coma `;` — así termina cada comando en PHP. En lugar del ejemplo, puedes escribir cualquier otro texto.
 
 ```php
 <?php
 
-print_r('¡Hola, Mundo!');
-// => ¡Hola, Mundo!
+print_r('Хекслет - школа программирования');
 ```
 
+El comando sigue siendo el mismo, solo cambia el contenido de los paréntesis. Para que el programa entienda que se trata de texto, este se encierra entre comillas. Puedes usar comillas simples `'...'` o dobles `"..."`, pero las comillas de apertura y de cierre deben coincidir.
 
-En este caso, la cadena se especifica entre paréntesis justo después del nombre de la función. Al final, también es necesario colocar un punto y coma.
+```php
+<?php
 
-En situaciones simples, no hay diferencia entre estas dos construcciones. Puedes usar cualquier método. Sin embargo, cuando necesitas mostrar en la pantalla algo más que números o cadenas, por ejemplo, matrices, `echo` no podrá hacerlo, pero `print_r()` sí.
+print_r("Хекслет - школа программирования");
+```
+
+En PHP se acostumbra a usar comillas simples para las cadenas. Si dentro de la cadena hay un apóstrofo, las comillas simples romperán la sintaxis, por lo que en esos casos se usan comillas dobles.
+
+```php
+<?php
+
+print_r("it's PHP"); // apóstrofo dentro, por eso comillas dobles
+```
+
+## Formas de mostrar en la pantalla
+
+Además de `print_r()`, en PHP existe otro comando de salida — `echo`:
+
+```php
+<?php
+
+echo 'Hello, World!';
+// => Hello, World!
+```
+
+Para mayor comodidad, mostraremos el resultado de la ejecución de las líneas de código de esta manera: `// => RESULTADO`.
+
+En situaciones simples no hay diferencia entre `echo` y `print_r()` — puedes usar cualquier comando. Pero cuando en la pantalla necesitas mostrar no solo números o cadenas, sino, por ejemplo, matrices, `echo` no podrá hacerlo, mientras que `print_r()` lo mostrará todo.
+
+## El significado de los caracteres
+
+El código está formado por comandos, y cada uno de ellos debe escribirse en una forma determinada. Además de las letras, en el código son importantes las comillas `'` y `"`, los paréntesis `()` y los signos de puntuación. Un signo omitido o confundido hará que el programa no se ejecute. ¿Intenta determinar qué error hay en cada una de las líneas?
+
+```php
+<?php
+
+print_r("it's PHP"
+print_r(it's PHP")
+prin_r("it's PHP")
+print_r('it's PHP")
+print_r["it's PHP"];
+```
+
+Incluso una pequeña diferencia, por ejemplo una letra de más u otro signo, puede hacer que el programa no funcione. Esto también se aplica a las mayúsculas y minúsculas, es decir, a la diferencia entre letras grandes y pequeñas. Si en un texto normal `Hola` y `hola` se ven iguales, para el programa son textos diferentes. Los nombres de las funciones de PHP perdonan las diferencias de mayúsculas y minúsculas, pero los nombres de las variables y muchas otras construcciones que veremos más adelante no. Por eso lo más seguro es escribir el código exactamente como en los ejemplos.
+
+## Dónde practicar
+
+La teoría se asimila mejor cuando al mismo tiempo ejecutas el código y ves el resultado. Para ello sirve un intérprete en línea de PHP, donde el código se ejecuta directamente en el navegador. Todo lo que aparece en la lección conviene probarlo [en el intérprete en línea de PHP](https://3v4l.org/).
+
+¿Cómo funciona esto técnicamente? Cualquier código escrito se pasa al intérprete de PHP, que ejecuta ese código y muestra en la pantalla el resultado de su trabajo.
+
+```text
+Código            Intérprete           Pantalla
+┌────────────┐     ┌─────────────┐     ┌──────────────┐
+│ print_r(…) │ ──→ │     PHP     │ ──→ │ Hello, World!│
+└────────────┘     └─────────────┘     └──────────────┘
+```

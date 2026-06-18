@@ -1,11 +1,7 @@
-Escribe un programa que muestre en la pantalla:
+El programa no encontró el archivo necesario y mostró un mensaje con su nombre. Escribe un programa que muestre el mismo mensaje:
 
 ```text
-"Khal Drogo's favorite word is "athjahakar""
+The file "user's_config.json" was not found.
 ```
 
-El programa debe mostrar exactamente esta frase en la pantalla. Presta atención a las comillas al principio y al final de la frase:
-
-```text
-"Khal Drogo's favorite word is "athjahakar""
-```
+La cadena contiene tanto un apóstrofe como comillas dobles — elige una forma adecuada de escribirlos.

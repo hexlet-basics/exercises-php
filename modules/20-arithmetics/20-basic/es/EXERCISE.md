@@ -1,1 +1,1 @@
-Muestra en pantalla el resultado de dividir el número `81` entre `9`.
+Entraste en una tienda mayorista y viste un paquete de 9 pilas por 81 rublos. En una tienda normal, una pila cuesta 12 rublos. Calcula y muestra el precio de una pila en el paquete mayorista para entender dónde es más conveniente comprar.

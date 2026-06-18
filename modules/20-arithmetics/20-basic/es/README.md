@@ -1,8 +1,12 @@
-A nivel básico, las computadoras operan solo con números. Para sumar dos números en matemáticas, escribimos, por ejemplo, `3 + 4`. En programación, es lo mismo. En esta lección, aprenderemos cómo realizar operaciones aritméticas en el código.
+A nivel básico, las computadoras solo trabajan con números. Incluso si escribes una aplicación compleja en un lenguaje de programación moderno, dentro de ella siempre ocurren numerosos cálculos: suma, resta, división, etc.
 
-## Aritmética en programación
+![Palitos de conteo](./assets/arithmetics.png)
 
-Veamos un ejemplo de un programa que suma dos números:
+Por suerte, para empezar a programar basta con conocer la aritmética escolar habitual. Por ahí empezaremos.
+
+## La suma en PHP
+
+En matemáticas, para sumar escribimos 3 + 4. En PHP es exactamente igual:
 
 ```php
 <?php
@@ -11,25 +15,145 @@ Veamos un ejemplo de un programa que suma dos números:
 3 + 4;
 ```
 
-La aritmética en programación es prácticamente igual a la de la escuela. La instrucción `3 + 4;` hará que el intérprete sume los números y obtenga el resultado. Este programa funcionará, pero no tiene sentido, ya que básicamente no le estamos dando ninguna instrucción al intérprete, simplemente le estamos diciendo "mira, la suma de tres y cuatro".
+Este código realmente se puede ejecutar: el intérprete realizará el cálculo. Pero... no hará nada con el resultado. Es decir, se obtendrá 7, pero no lo verás.
 
-En un trabajo real, no es suficiente informar al intérprete sobre una expresión matemática. Por ejemplo, al crear una tienda en línea, no es suficiente pedirle al intérprete que calcule el costo de los productos en el carrito. En este caso, debemos pedirle que calcule el costo y muestre el precio al comprador.
+## Para ver el resultado, hay que mostrarlo
 
-Necesitamos pedirle al intérprete que sume `3 + 4` y darle una instrucción para hacer algo con el resultado. Por ejemplo, mostrarlo en pantalla:
+En un programa real, simplemente calcular un valor no es suficiente. Hay que hacer algo con el resultado, por ejemplo, mostrárselo al usuario. Al crear una tienda en línea, no basta con pedirle al intérprete que calcule el costo de los productos en el carrito: hay que calcular el costo y mostrarle el precio al comprador.
+
+Para ello usamos el ya conocido comando `print_r()`, que en adelante llamaremos función:
 
 ```php
 <?php
 
-// Nuevamente, no olvides el punto y coma al final de la línea
-print_r(3 + 4); // => 7
+print_r(3 + 4);
 ```
 
-Además de la suma, están disponibles las siguientes operaciones:
+Aquí primero se calcula la suma, luego se pasa a la función de impresión.
 
-* `*` — multiplicación
-* `/` — división
-* `-` — resta
-* `%` — [resto de la división](https://es.wikipedia.org/wiki/Resto_(matem%C3%A1tica))
-* `**` — potenciación
+```text
+print_r(3 + 4)
+        └─┬─┘
+          7
 
-Estos símbolos de operación se llaman operadores.
+print_r(7)  →  7
+```
+
+Resultado de la ejecución:
+
+```text
+7
+```
+
+Si escribimos esta misma expresión en forma de cadena, obtendremos un resultado completamente distinto: se imprimirá la cadena «tal cual»:
+
+```php
+<?php
+
+print_r('3 + 4'); // muestra: 3 + 4
+print_r(3 + 4);   // muestra: 7
+```
+
+## Otras operaciones aritméticas
+
+PHP admite todas las operaciones habituales + algunas específicas, relacionadas con la forma en que se almacenan y procesan los números en la computadora:
+
+| Operación              | Símbolo | Ejemplo      | Resultado |
+|------------------------|---------|--------------|-----------|
+| Suma                   | `+`     | `2 + 3`      | `5`       |
+| Resta                  | `-`     | `7 - 2`      | `5`       |
+| Multiplicación         | `*`     | `4 * 3`      | `12`      |
+| División               | `/`     | `8 / 2`      | `4`       |
+| Exponenciación         | `**`    | `3 ** 2`     | `9`       |
+| División entera        | `intdiv()` | `intdiv(7, 3)` | `2`   |
+| Resto de la división   | `%`     | `7 % 3`      | `1`       |
+
+Estos signos de operación se llaman operadores. Así se puede mostrar el resultado de la división y de la exponenciación:
+
+```php
+<?php
+
+print_r(8 / 2);  // => 4
+print_r(3 ** 2); // => 9
+```
+
+## Números de punto flotante
+
+Además de los números enteros, en PHP existen los números de punto flotante, que se usan para trabajar con fracciones. Estos números se escriben con un punto:
+
+```php
+<?php
+
+print_r(3.5 + 1.2); // => 4.7
+print_r(10 / 4);    // => 2.5
+```
+
+A veces los usamos nosotros mismos, cuando necesitamos trabajar precisamente con valores fraccionarios, por ejemplo al calcular un promedio o al trabajar con dinero y mediciones. Pero los números de punto flotante también pueden aparecer por sí solos, por ejemplo, como resultado de la operación de división `/`:
+
+```php
+<?php
+
+print_r(8 / 2); // => 4
+print_r(7 / 2); // => 3.5
+```
+
+Si el resultado de la división resulta entero, PHP lo mantiene como número entero, mientras que un resultado fraccionario se convierte automáticamente en un número de punto flotante.
+
+La razón de separar esto en un tipo aparte: la computadora necesita almacenar los valores enteros y los valores fraccionarios de manera diferente. Para los enteros reserva unas estructuras en memoria, para los fraccionarios reserva otras. Por eso en PHP, como en otros lenguajes de programación, existen dos tipos distintos de números: int (enteros) y float (de punto flotante).
+
+A nivel básico basta con recordar: los números enteros se necesitan cuando no hay fracciones, y los números de punto flotante se necesitan cuando hay fracciones. Los analizaremos con más detalle más adelante en el curso.
+
+## Qué es el resto de la división (`%`)
+
+Esta operación se llama **tomar el resto de la división**. Muestra **lo que «queda»** cuando un número se divide entre otro *de forma incompleta*. Ejemplo:
+
+```php
+<?php
+
+print_r(7 % 3); // => 1
+```
+
+¿Por qué el resultado es igual a 1?
+
+- 7 se divide entre 3 dos veces: 3 * 2 = 6
+- Hasta 7 queda 1, y eso es el resto.
+
+Otros ejemplos:
+
+```php
+<?php
+
+print_r(10 % 4); // => 2 (10 se divide entre 4 dos veces: 4 * 2 = 8, resto 2)
+print_r(15 % 5); // => 0 (se divide sin resto)
+```
+
+La operación % se usa a menudo en programación, por ejemplo:
+
+- para comprobar si un número se divide exactamente (si el resto es 0)
+- para realizar acciones cíclicas, por ejemplo, comportamientos según índices pares/impares
+
+Nos encontraremos con % muchas más veces en las tareas y analizaremos su aplicación en la práctica.
+
+## Formato de las expresiones aritméticas
+
+Desde el punto de vista de PHP, no hay diferencia entre `3+4` y `3 + 4`. El intérprete entenderá ambas variantes de la misma manera y en ambos casos realizará la suma. La diferencia está solo en el formato del código. En programación, se acostumbra a poner espacios alrededor de los operadores aritméticos, porque así las expresiones son más fáciles de leer:
+
+```php
+<?php
+
+3 + 4;
+8 / 2;
+7 % 3;
+```
+
+La variante sin espacios también funciona:
+
+```php
+<?php
+
+3+4;
+8/2;
+7%3;
+```
+
+Pero ese código se ve menos prolijo y es más difícil de percibir rápidamente. Por eso es mejor acostumbrarse desde el principio a escribir con espacios alrededor de los operadores.

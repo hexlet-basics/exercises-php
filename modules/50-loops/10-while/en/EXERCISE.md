@@ -1,17 +1,14 @@
+Write a function `printCountdown()` that simulates a countdown before a start. The function takes a number of seconds and prints numbers from this value down to `1`.
 
-Edit the  `printNumbers()` function so that it prints the numbers in reverse order. To do this, go from the upper bound to the lower bound. Essentially, the counter needs to be initialized with the maximum value, and in the body of the loop, it must be incremented down to the lower limit.
-
+After the countdown finishes, the function should print the string `Go!` to the screen.
 
 ```php
 <?php
 
-printNumbers(4);
-```
-
-```text
-4
-3
-2
-1
-finished!
+printCountdown(4);
+// => 4
+// => 3
+// => 2
+// => 1
+// => Go!
 ```

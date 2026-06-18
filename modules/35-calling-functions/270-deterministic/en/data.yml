@@ -1,5 +1,10 @@
 ---
-name: Determinacy
+name: Determinism
 tips:
   - |
-    [Deterministic functions](https://en.wikipedia.org/wiki/Pure_function)
+    [Deterministic functions](https://en.wikipedia.org/wiki/Pure_function#Determinism)
+definitions:
+  - name: A side effect
+    description: >-
+      an action that changes the external surroundings (the runtime
+      environment). For example, printing to the screen or sending an email.

@@ -1,3 +1,5 @@
-PHP is probably the only language in which you can't start writing code right away. Such code will be perceived by the interpreter (the program executing the code) as plain text. Any PHP code should be wrapped in a `<?php ?>` construct.
+## Why use tags
 
-`<?php` is the opening tag and `?>` is the closing tag. PHP allows you to omit the closing part `?>`. And the PSR-12 code manual doesn't let you include it at all.
+For the **interpreter** — the program that executes the code — to perceive it not as plain text, any PHP code must be wrapped in the `<?php ?>` construct. This is a feature of this programming language.
+
+`<?php` is the opening tag, and `?>` is the closing tag. PHP allows you to omit the closing part `?>`. And the PSR-12 code style guide forbids specifying it.

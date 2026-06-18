@@ -2,61 +2,109 @@
 
 name: Variables y Concatenación
 theory: |
+  Anteriormente ya unimos cadenas directamente usando la concatenación. Ahora haremos lo mismo, pero con variables. Buenas noticias: la sintaxis sigue siendo la misma. Simplemente se sustituyen los valores de las variables.
 
-  Para reforzar el tema anterior, intentemos usar variables con concatenación. Sintácticamente, nada cambia: sabemos cómo concatenar (unir) dos cadenas:
-
-  ```php
-  <?php
-
-  $que = "Camino" . "de Reyes";
-  print_r($que); // => "CaminodeReyes"
-  ```
-
-  ... y por lo tanto, podemos concatenar una cadena y una variable que contiene una cadena:
+  ## Unimos dos cadenas directamente
 
   ```php
   <?php
 
-  $primero = "Caminos";
-  $que = $primero . "de Reyes";
-
-  print_r($que); // => "CaminodeReyes"
+  $what = 'Kings' . 'road';
+  print_r($what); // => Kingsroad
   ```
 
-  ... e incluso concatenar dos variables que contienen cadenas:
+  Aquí todo es sencillo: dos cadenas se unen en una. Así funciona la concatenación: el operador `.` suma las cadenas, creando una nueva cadena.
+
+  ## Unimos una cadena y una variable
+
+  Si en la variable `$first` está la cadena "Kings", podemos unirla tranquilamente con otra cadena:
 
   ```php
   <?php
 
-  $primero = "Caminos";
-  $ultimo = 'de Reyes';
-
-  $que = $primero . $ultimo;
-  print_r($que); // => "CaminodeReyes"
+  $first = 'Kings';
+  $what = $first . 'road';
+  print_r($what); // => Kingsroad
   ```
 
+  PHP sustituye el valor de la variable, realiza la operación y crea la cadena resultante.
+
+  ## Unimos dos variables
+
+  De la misma manera, se pueden combinar los valores de dos variables si ambas contienen cadenas:
+
+  ```php
+  <?php
+
+  $first = 'Kings';
+  $last = 'road';
+  $what = $first . $last;
+  print_r($what); // => Kingsroad
+  ```
+
+  También se pueden añadir espacios:
+
+  ```php
+  $full = $first . ' ' . $last;
+  print_r($full); // => Kings road
+  ```
+
+  ```text
+  $first = 'Kings'
+  $last  = 'road'
+
+  $first  .  ' '  .  $last
+  └─┬──┘            └──┬─┘
+  'Kings' .  ' '  .  'road'
+  └─────────┬────────────┘
+       'Kings road'
+  ```
+
+  ## ¿Y qué pasa si una variable contiene un número?
+
+  Probemos así:
+
+  ```php
+  <?php
+
+  $age = 42;
+  print_r('Age: ' . $age); // => Age: 42
+  ```
+
+  En PHP este código funciona: el operador `.` siempre une cadenas, por lo que el número se convierte automáticamente en una cadena. No todos los lenguajes funcionan así — por ejemplo, en Python unir una cadena y un número provoca un error, y el número hay que convertirlo explícitamente.
+
+  Lo mismo ocurre con las variables que contienen resultados de cálculos:
+
+  ```php
+  <?php
+
+  $price = 50 * 1.25 * 6.91; // => 431.875
+  print_r('Price in yuans: ' . $price); // => Price in yuans: 431.875
+  ```
+
+  La conversión automática es cómoda, pero requiere atención: a veces se convierte en cadena algo distinto de lo que esperabas. Hablaremos más sobre este comportamiento en las lecciones sobre tipos de datos.
 instructions: |
+  Una tienda en línea le envía al comprador un correo electrónico después de realizar el pedido. El correo se genera automáticamente a partir de los datos del cliente.
 
-  Los sitios web constantemente envían correos electrónicos a sus usuarios. Una tarea típica es enviar automáticamente un correo electrónico personalizado, donde el nombre de usuario estará en el asunto. Si el nombre del usuario se encuentra en algún lugar de la base de datos del sitio web como una cadena, la tarea de generar el asunto se reduce a la concatenación: por ejemplo, necesitas unir la cadena `Hello` con la cadena que contiene el nombre.
+  Escribe un programa que genere un saludo y el cuerpo del correo, utilizando las variables ya proporcionadas, y muestre las cadenas en la pantalla.
 
-  Escribe un programa que genere el asunto y el cuerpo del correo electrónico, utilizando las variables proporcionadas, y muestre las cadenas resultantes en la pantalla.
+  Para el saludo, utiliza las variables `$firstName` y `$greeting`, una coma y un signo de exclamación. Para el cuerpo del correo, utiliza las variables `$intro` e `$info` — la segunda oración debe estar en una nueva línea.
 
-  Para el asunto, utiliza las variables `$firstName` y `$greeting`, seguido de una coma y un signo de exclamación. Muestra esto en la pantalla en el orden correcto.
+  El resultado en la pantalla:
 
-  Para el cuerpo del correo electrónico, utiliza las variables `$info` e `$intro`, con la segunda oración en una nueva línea.
+  ```text
+  Здравствуйте, Анна!
+  Спасибо за ваш заказ.
+  Ожидаемая дата доставки — 3 рабочих дня.
+  ```
 
-  El resultado en la pantalla debería lucir así:
-
-  <pre class='hexlet-basics-output'>
-  Hello, Joffrey!
-  Here is important information about your account security.
-  We couldn't verify you mother's maiden name.
-  </pre>
-
-  Completa la tarea utilizando solamente dos `print_r()`.
-
+  Completa la tarea utilizando solamente dos `print_r()`. No olvides que `print_r()` no agrega un salto de línea por sí mismo — el salto `\n` debes añadirlo en los lugares correctos por tu cuenta.
 tips:
   - |
     Piensa en qué cadena y en qué orden debes concatenar las variables para obtener una salida de dos líneas para el cuerpo del correo electrónico.
   - |
-    Recuerda que puedes crear una cadena que contenga solo la secuencia de control `\n`.
+    Recuerda que puedes crear una cadena que contenga solo la secuencia de control `\n`. Puedes concatenar esta cadena con variables para formatear el texto correctamente.
+definitions:
+  - name: Concatenación
+    description: >
+      la operación de unir dos cadenas. Por ejemplo, `print_r("King's " . ' Landing')`

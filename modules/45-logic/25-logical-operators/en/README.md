@@ -1,107 +1,108 @@
+We already know how to write functions that check single conditions. In this lesson, we'll learn how to build compound conditions.
 
-Logical expressions can be combined with each other, creating increasingly tricky checks. One good example is password verification. As you'll likely know, many websites want a password of 8 до 20 characters on signup. Frankly, it's a weird restriction, but whatever, it is what it is. In mathematics, we'd write `8 < x < 20` (where `x` is the length of a particular password), but in PHP, this won't work. We would have to make two separate logical expressions and connect them with the special «AND» operator:
+Suppose that on signup, a website requires a password to be longer than eight characters and to contain at least one capital letter. Let's try writing two separate logical expressions and connecting them with the special «AND» operator:
 
-```text
-A password longer than 8 characters **AND** a password shorter than 20 characters.
-```
+> A password longer than 8 characters **AND** a password that contains at least one capital letter
 
-Here's a function that takes a password and says whether it meets the conditions or not:
+Here's a function that takes a password and says whether it meets the conditions (`true`) or not (`false`):
 
 ```php
 <?php
 
-function isCorrectPassword($password)
+function hasCapitalLetter(string $text): bool
+{
+    // Checks for at least one capital letter in the string
+}
+
+function isCorrectPassword(string $password): bool
 {
     $length = strlen($password);
-    return $length > 8 && $length < 20;
+    return $length > 8 && hasCapitalLetter($password);
 }
 
-isCorrectPassword('qwerty'); // false
-isCorrectPassword('qwerty1234'); // true
-isCorrectPassword('zxcvbnmasdfghjkqwertyui'); // false
+var_dump(isCorrectPassword('Qwerty'));     // => bool(false)
+var_dump(isCorrectPassword('Qwerty1234')); // => bool(true)
+var_dump(isCorrectPassword('qwerty1234')); // => bool(false)
 ```
 
-`&&` means «AND» (called 'conjunction' in mathematical logic). The whole expression is true only when every operand, all of which are part of the compound expression, is true. In other words, `&&` means «both». This operator's priority is lower than that of comparison operators, so the expression works correctly without parentheses. Another widespread operator alongside `&&` is `||` — «OR» (disjunction). It means "one or the other, or both". Operators can be combined in any number and any sequence, but when `&&` and `||`, appear together, you should label priority with parentheses.
+The `&&` operator means «AND». In mathematical logic, this is called conjunction. The whole expression is considered true if every **operand** is true, that is, each of the compound expressions. In other words, `&&` means «both this and that». This operator's priority is lower than that of comparison operators. That's why the expression `hasCapitalLetter($password) && $length > 8` also works correctly without parentheses.
 
-Below is an example of an advanced function that validates a password:
+Besides `&&`, the `||` operator, which means «OR» (disjunction), is often used. It means «either this, or that, or both». The expression `$a || $b` is considered true if at least one of the operands is true or when both operands are true. Otherwise, the expression is false.
 
 ```php
 <?php
 
-function hasSpecialChars($str)
+function hasDiscount(int $age, bool $isStudent): bool
 {
-    // checks to see if there are special characters in the string
+    return $age < 18 || $isStudent;
 }
 
-function isStrongPassword($password)
+var_dump(hasDiscount(15, false)); // => bool(true)  (younger than 18)
+var_dump(hasDiscount(25, true));  // => bool(true)  (student)
+var_dump(hasDiscount(15, true));  // => bool(true)  (both conditions)
+var_dump(hasDiscount(25, false)); // => bool(false)
+```
+
+Operators can be combined in any number and in any sequence. If `&&` and `||` appear together in the code, it's better to set the priority with parentheses. Below is an example of an extended function that determines whether a password is correct:
+
+```php
+<?php
+
+function hasCapitalLetter(string $text): bool
+{
+    // Checks for at least one capital letter in the string
+}
+
+function hasSpecialChars(string $text): bool
+{
+    // Checks for special characters in the string
+}
+
+function isStrongPassword(string $password): bool
 {
     $length = strlen($password);
-    // The parentheses set the priority, making it clear how each part is related
-    return ($length > 8 && $length < 20) && hasSpecialChars($password);
+    // The parentheses set the priority. It's clear what relates to what.
+    return ($length > 8 && hasCapitalLetter($password)) && hasSpecialChars($password);
 }
 ```
 
-Another example. We want to buy an apartment that meets these conditions: an area of 100 square meters or more on any street OR an area of 80 square meters or more, but on `Main Street`.
+Now let's imagine that we want to buy an apartment that meets these conditions: an area of 100 square meters or more on any street **OR** an area of 80 square meters or more, but on the central `Main Street`.
 
-We'll write a function that checks the apartment. It takes two arguments, the area (a number) and the street name (a string):
+Let's write a function that checks the apartment. It takes two arguments: the area (a number) and the street name (a string):
 
 ```php
 <?php
 
-function isGoodApartment($area, $street)
+function isGoodApartment(int $area, string $street): bool
 {
     return $area >= 100 || ($area >= 80 && $street === 'Main Street');
 }
 
-var_dump(isGoodApartment(91, 'Queens Street'));  // => false
-var_dump(isGoodApartment(78, 'Queens Street'));  // => false
-var_dump(isGoodApartment(70, 'Main Street'));    // => false
+var_dump(isGoodApartment(91, 'Queens Street'));  // => bool(false)
+var_dump(isGoodApartment(78, 'Queens Street'));  // => bool(false)
+var_dump(isGoodApartment(70, 'Main Street'));    // => bool(false)
 
-var_dump(isGoodApartment(120, 'Queens Street')); // => true
-var_dump(isGoodApartment(120, 'Main Street'));   // => true
-var_dump(isGoodApartment(80, 'Main Street'));    // => true
+var_dump(isGoodApartment(120, 'Queens Street')); // => bool(true)
+var_dump(isGoodApartment(120, 'Main Street'));   // => bool(true)
+var_dump(isGoodApartment(80, 'Main Street'));    // => bool(true)
 ```
 
-The area of mathematics dealing with logical operators is called Boolean algebra. The truth tables are shown below, and they can be used to figure out the result of an operator:
+The area of mathematics that studies logical operators is called Boolean algebra. **Truth tables** show what the result will be when each operator is applied.
 
-## `&&`
+#### AND `&&`
 
 | A     | B     | A `&&` B |
 | ----- | ----- | -------- |
-| TRUE  | TRUE  | **TRUE** |
-| TRUE  | FALSE | FALSE    |
-| FALSE | TRUE  | FALSE    |
-| FALSE | FALSE | FALSE    |
+| true  | true  | **true** |
+| true  | false | false    |
+| false | true  | false    |
+| false | false | false    |
 
-A couple of examples:
-
-```php
-<?php
-
-// true && true;
-3 > 2 && str_starts_with('wow', 'w'); // true
-
-// true && false;
-'start' === 'start' && 8 < 3; // false
-```
-
-## OR `||`
+#### OR `||`
 
 | A     | B     | A `‖` B  |
 | ----- | ----- | -------- |
-| TRUE  | TRUE  | **TRUE** |
-| TRUE  | FALSE | **TRUE** |
-| FALSE | TRUE  | **TRUE** |
-| FALSE | FALSE | FALSE    |
-
-A couple of examples:
-
-```php
-<?php
-
-// true || true;
-3 > 2 || str_starts_with('wow', 'w'); // true
-
-// false || false;
-'start' === 'Start' || 3 < 3; // false
-```
+| true  | true  | **true** |
+| true  | false | **true** |
+| false | true  | **true** |
+| false | false | false    |

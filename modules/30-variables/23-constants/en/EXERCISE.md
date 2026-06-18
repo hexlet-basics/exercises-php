@@ -1,2 +1,1 @@
-
-Create a constant, `DRAGONS_BORN_COUNT` and write the number 3 in it. This is the number of dragons born to Daenerys.
+Create a constant `MAX_LOGIN_ATTEMPTS` and store the number `3` in it — the maximum number of login attempts.

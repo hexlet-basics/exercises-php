@@ -1,5 +1,8 @@
+Una tienda en línea guarda en una variable el texto del correo sobre el estado del pedido y lo envía al cliente. Escribe en la variable `$text` el texto del correo que aparece abajo. Usa la sintaxis heredoc. Todos los saltos de línea deben conservarse.
 
-Asigne el siguiente texto a la variable `$str` utilizando la sintaxis de heredoc.
-
-    Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
-    This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
+```text
+Уважаемый пользователь!
+Ваш заказ успешно оформлен.
+Ожидаемая дата доставки: 3-5 рабочих дней.
+Спасибо, что выбрали нас!
+```

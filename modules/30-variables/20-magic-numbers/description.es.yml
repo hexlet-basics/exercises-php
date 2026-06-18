@@ -8,11 +8,11 @@ theory: |
   ```php
   <?php
 
-  $cantidadEuros = 1000;
-  $cantidadDolares = $cantidadEuros * 1.25; // 1250
-  $cantidadRublos = $cantidadDolares * 60;  // 75000
+  $eurosCount = 1000;
+  $dollarsCount = $eurosCount * 1.25; // 1250
+  $rublesCount = $dollarsCount * 60;  // 75000
 
-  print_r($cantidadRublos);
+  print_r($rublesCount);
   ```
 
   Desde el punto de vista del desarrollo profesional, este código "huele mal". Así es como se describe el código que no cumple con las llamadas mejores prácticas (best practices). Y la razón es la siguiente: en este momento, al ver los números `60` y `1.25`, es probable que te preguntes: "¿qué significan estos números?". ¡Imagínate lo que sucederá en un mes! ¿Y cómo lo entenderá un nuevo programador que no haya visto el código antes? En nuestro ejemplo, el contexto se recupera gracias a una buena nomenclatura, pero en la vida real el código es mucho más complicado, por lo que a menudo es imposible adivinar el significado de los números.
@@ -24,14 +24,14 @@ theory: |
   ```php
   <?php
 
-  $dolaresPorEuro = 1.25;
-  $rublosPorDolar = 60;
+  $dollarsPerEuro = 1.25;
+  $rublesPerDollar = 60;
 
-  $cantidadEuros = 1000;
-  $cantidadDolares = $cantidadEuros * $dolaresPorEuro;   // 1250
-  $cantidadRublos = $cantidadDolares * $rublosPorDolar; // 75000
+  $eurosCount = 1000;
+  $dollarsCount = $eurosCount * $dollarsPerEuro;   // 1250
+  $rublesCount = $dollarsCount * $rublesPerDollar; // 75000
 
-  print_r($cantidadRublos);
+  print_r($rublesCount);
   ```
 
   Presta atención a los siguientes detalles:
@@ -39,32 +39,32 @@ theory: |
   * Nomenclatura lowerCamelCase.
   * Las dos nuevas variables están separadas de los cálculos posteriores por una línea en blanco. Estas variables tienen sentido incluso sin los cálculos, por lo que esta separación es apropiada y mejora la legibilidad.
   * El código resultante es más largo que la versión anterior, pero está bien nombrado y estructurado. Esto ocurre a menudo y es normal, porque el código debe ser legible.
-
 instructions: |
-
-  Te has encontrado con un código que muestra en pantalla la cantidad total de habitaciones en posesión del actual rey:
+  El almacén recibió una entrega. Te has encontrado con un código que cuenta la cantidad total de cajas:
 
   ```php
   <?php
 
-  $rey = 'King Balon the 6th';
-  print_r($rey . ' has ' . (6 * 17) . ' rooms.');
+  $label = 'Ящиков на складе:';
+  print_r($label);
+  print_r("\n");
+  print_r(6 * 17);
   ```
 
-  Como puedes ver, estos son números mágicos: no está claro qué significa el 6 y qué significa el 17. Se puede adivinar si se conoce la historia de la familia real: cada nuevo rey hereda todos los castillos de sus antepasados y construye un nuevo castillo, una copia exacta del castillo de sus padres.
-
-  Esta extraña dinastía simplemente reproduce castillos idénticos...
-
-  Elimina los números mágicos creando nuevas variables y luego muestra el texto en pantalla.
+  Los números 6 y 17 aquí son mágicos: no está claro qué significan. Elimínalos creando variables con nombres comprensibles y muestra el resultado en pantalla.
 
   El resultado debería ser:
 
-  <pre class='hexlet-basics-output'>
-  King Balon the 6th has 102 rooms.
-  </pre>
+  ```text
+  Ящиков на складе:
+  102
+  ```
 
-  Los nombres de las variables deben transmitir el significado de los números, pero al mismo tiempo deben ser lo suficientemente cortos y concisos para una lectura cómoda.
+  Los nombres de las variables deben transmitir el significado de los números, pero al mismo tiempo deben ser cortos y concisos.
 
-  Recuerda: el código funcionará con cualquier nombre, y nuestro sistema siempre verifica solo el resultado en pantalla, por lo que completar esta tarea es tu responsabilidad.
-
-tips: []
+  Recuerda: el código funcionará con cualquier nombre, y el sistema solo verifica el resultado en pantalla, por lo que completar esta tarea es tu responsabilidad.
+tips:
+  - >
+    [Número
+    mágico](https://es.wikipedia.org/wiki/Número_mágico_(programación))
+definitions: []

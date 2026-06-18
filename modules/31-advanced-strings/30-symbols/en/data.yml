@@ -1,2 +1,6 @@
 ---
-name: Extracting characters from string
+name: Extracting characters from a string
+tips: []
+definitions:
+  - name: Index
+    description: the position of a character within a string.

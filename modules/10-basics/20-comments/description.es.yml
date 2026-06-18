@@ -2,39 +2,97 @@
 
 name: Comentarios
 theory: |
-  ## ¿Para qué sirven los comentarios?
+  Además del código en sí, los archivos fuente suelen contener comentarios. Son líneas que el intérprete no procesa. Los programadores los escriben para explicar cómo funciona el código, marcar errores o recordar lo que aún queda por hacer.
 
-  Además del código en los archivos de código fuente, puede haber comentarios. Este texto no es parte del programa. Es útil para los programadores como notas. Con ellos se agregan explicaciones, por ejemplo, cómo funciona el código, qué errores corregir o qué agregar más tarde.
+  ```php
+  <?php
 
-  Los comentarios en PHP pueden ser de dos tipos:
+  // Eliminar la línea de abajo después de implementar la tarea de registro
+  print_r(10);
+  ```
 
-  * **Comentarios de una línea** - comienzan con `//`. Después de estos caracteres puede seguir cualquier texto, toda la línea no se analizará ni se ejecutará:
+  Los comentarios de una línea en PHP comienzan con los caracteres `//` o `#`, después de los cuales puede ir cualquier texto. Todo lo que se escribe después de ellos hasta el final de la línea es ignorado por el intérprete.
 
-    ```php
-    <?php
+  ```text
+  // comentario        ──→  [ omitido por el intérprete ]
+  print_r('hello');    ──→  [ ejecutado → hello ]
+  // otro más          ──→  [ omitido por el intérprete ]
+  ```
 
-    // ¡Por Winterfell!
-    // ¡Por Lannisters!
-    // El comentario puede estar en la línea después de algún código
-    print_r('Soy el Rey'); // ¡Por Lannisters!
-    ```
+  Un comentario puede ocupar toda la línea:
 
-  * **Comentarios de varias líneas** - comienzan con `/*` y terminan en `*/`. Entre ellos, cada línea debe comenzar con el carácter `*`:
+  ```php
+  <?php
 
-    ```php
-    <?php
+  // For Winterfell!
+  // For Lanisters!
+  ```
 
-    /*
-     * La noche es oscura y
-     * está llena de terrores.
-     */
-    print_r('Soy el Rey');
-    ```
+  O estar al final de una línea con código:
 
+  ```php
+  <?php
+
+  print_r('I am the King'); // For Lannisters!
+  ```
+
+  Si necesitas dejar una explicación larga, se usan varias líneas con `//`:
+
+  ```php
+  <?php
+
+  // The night is dark and
+  // full of terrors.
+  print_r('I am the King');
+  ```
+
+  Para estos casos, PHP también tiene un tipo especial — los comentarios de varias líneas. Comienzan con `/*` y terminan en `*/`, y cada línea entre ellos suele comenzar con el carácter `*`:
+
+  ```php
+  <?php
+
+  /*
+   * The night is dark and
+   * full of terrors.
+   */
+  print_r('I am the King');
+  ```
+
+  El intérprete ignora los comentarios. Gracias a ellos, los desarrolladores entienden más rápido el código ajeno y no olvidan detalles importantes en el suyo propio.
+
+  ## Comentarios de servicio
+
+  Mientras trabajas, te encontrarás con este tipo de código en nuestro editor:
+
+  ```php
+  // BEGIN
+
+  // END
+  ```
+
+  *BEGIN* y *END* aquí son comentarios ordinarios que no afectan de ninguna manera el funcionamiento del programa. Muestran dónde escribir el código de la tarea.
+
+  ```php
+  // BEGIN
+  <aquí tu solución>
+  // END
+  ```
+
+  Cuando veas *BEGIN* y *END*, escribe tu código entre ellos y deja lo demás sin cambios.
 instructions: |
-  Crea un comentario de una línea con el texto: `¡No sabes nada, Jon Snow!`.
+  Estás escribiendo un programa y te das cuenta de que una parte hay que terminarla más tarde. Para no olvidarlo, los programadores se dejan notas directamente en el código — los comentarios TODO.
 
-tips: []
+  Agrega al archivo el siguiente comentario:
+
+  ```php
+  // TODO: agregar una función de saludo
+  ```
+
+  Cuando vuelvas a este lugar más tarde, el comentario te recordará que aquí todavía hay trabajo sin terminar.
+tips:
+  - >
+    [Más sobre los
+    comentarios](https://www.w3schools.com/php/php_comments.asp)
 
 definitions:
   - name: Comentario

@@ -2,24 +2,63 @@
 
 name: Linter
 theory: |
-  En esta lección aprenderemos qué son los estándares de codificación. Facilitan el desarrollo y hacen que el código sea más comprensible. Vamos a analizar en detalle dos recomendaciones principales para PHP que contienen reglas de codificación.
+  Cuando diferentes desarrolladores escriben código en estilos distintos, el código se vuelve difícil de leer: aquí un espacio de más, allá sangrías diferentes. Para evitar discrepancias, los programadores acordaron seguir un estilo de codificación único. Este conjunto de reglas describe cómo debe verse el código: la colocación de espacios, el formato de las funciones y los nombres de las variables.
 
-  ## Estándares de codificación en PHP
+  Un estilo único significa código igualmente comprensible para todos los miembros del equipo, sin importar quién lo escribió. Esto ahorra tiempo, reduce la cantidad de errores y facilita el trabajo en conjunto.
 
-  El código debe estar formateado de manera que sea comprensible y fácil de mantener. Para ello existen conjuntos de reglas especiales llamados **estándares**. Estos describen varios aspectos de la escritura de código.
+  ## Estándares de codificación
 
-  En PHP, los estándares más comunes son los **PSR** - PHP Standards Recommendations o Recomendaciones de Estándares PHP de [PHP-FIG](https://www.php-fig.org/psr/). Son un conjunto de reglas que facilitan el desarrollo y resuelven problemas específicos.
+  En PHP, los estándares más comunes son los **PSR** — PHP Standards Recommendations o Recomendaciones de Estándares PHP de [PHP-FIG](https://www.php-fig.org/psr/). Son un conjunto de reglas que facilitan el desarrollo y resuelven un problema específico.
 
-  Actualmente existen varias recomendaciones aprobadas, cada una de ellas se identifica con un número: PSR-1, PSR-2, PSR-3 y [otros](https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). Conocerás todas estas recomendaciones durante el aprendizaje y el trabajo. En esta lección, vamos a analizar en detalle las siguientes:
+  Actualmente existen varias recomendaciones aprobadas, cada una de ellas identificada con un número: PSR-1, PSR-2, PSR-3 y [otros](https://es.wikipedia.org/wiki/PHP_Standard_Recommendation). Conocerás todas las recomendaciones durante el aprendizaje y el trabajo.
+  En esta lección vamos a analizar en detalle las siguientes:
 
-  * PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) - estándar básico de codificación. Es un conjunto de reglas que definen cómo formatear el código: cómo escribir etiquetas PHP, cómo nombrar clases, métodos y constantes de clases. También aborda cuestiones de codificación, autoloading, namespaces y separación de responsabilidades entre archivos.
-  * PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) - estándar de estilo de codificación extendido, reemplaza y amplía el obsoleto PSR-2. Este estándar requiere el cumplimiento de las reglas de PSR-1. También agrega muchas nuevas reglas: sangrías, archivos, líneas, palabras clave, clases, estructuras de control, ámbitos y otros elementos.
+  * PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — estándar básico de escritura de código. Es un conjunto de reglas que definen cómo se debe formatear el código del programa: cómo escribir etiquetas PHP, qué reglas usar para nombrar clases, métodos y constantes de clases. También aborda cuestiones de codificación, autoloading, namespaces y separación de responsabilidades entre archivos
+  * PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — estándar de estilo de codificación extendido, reemplaza y amplía el obsoleto PSR-2. Este estándar requiere el cumplimiento de las reglas de PSR-1. También agrega muchas nuevas reglas: sangrías, archivos, líneas, palabras clave, clases, estructuras de control, ámbito de visibilidad y otros elementos
 
-  ## Linters en PHP
+  Todos los desarrolladores PHP conocen y usan estos estándares. A los principiantes les resulta útil consultarlos de vez en cuando y desarrollar buenos hábitos desde el principio. Sin embargo, no es necesario memorizarlo todo de golpe.
 
-  En cualquier lenguaje de programación existen herramientas especiales llamadas **linters**. Verifican el código en busca de cumplimiento de los estándares. El linter ampliamente utilizado en PHP es [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer).
+  ## Linters: verificación automática del código
 
-  Supongamos que tenemos un archivo con el siguiente código PHP:
+  No hace falta memorizar todas las reglas manualmente. Existen programas especiales que lo hacen por ti. Se llaman linters.
+
+  Un linter es una herramienta que analiza tu código e informa sobre las violaciones de los estándares. Ayuda a:
+
+  - Eliminar los espacios sobrantes
+  - Mantener las sangrías
+  - Escribir expresiones legibles y elegantes
+
+  En el mundo de PHP se utilizan ampliamente dos herramientas: [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer), que verifica el código en busca de cumplimiento de los estándares, y [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer), que no solo encuentra las violaciones, sino que también las corrige automáticamente. En este curso se utiliza PHP CS Fixer.
+
+  Veamos un ejemplo:
+
+  ```php
+  <?php
+
+  print_r(1+ 3);
+  ```
+
+  Este código se ve descuidado, y el linter señalará con razón el error. Así es como se ve el proceso de verificación:
+
+  ```text
+  Código            Linter             Resultado
+  ┌────────────┐    ┌──────────────┐    ┌──────────────────────┐
+  │ print_r(   │ →  │ PHP CS Fixer │ →  │ binary_operator_     │
+  │   1+ 3)    │    │              │    │ spaces               │
+  └────────────┘    └──────────────┘    └──────────────────────┘
+  ```
+
+  Esto significa que faltan espacios antes y después de `+`. Según el estándar, debería ser así:
+
+  ```php
+  <?php
+
+  print_r(1 + 3);
+  ```
+
+  ## Las reglas y su sentido
+
+  Cada mensaje del linter está relacionado con una regla concreta. Supongamos que tenemos un archivo con el siguiente código PHP:
 
   ```php
   <?php
@@ -32,9 +71,9 @@ theory: |
 
   Al verificar el archivo, el linter encontrará los siguientes errores:
 
-  * `Spaces must be used to indent lines; tabs are not allowed` - PSR-12 recomienda usar una sangría de cuatro espacios, pero en el ejemplo se utiliza una tabulación.
-  * `A closing tag is not permitted at the end of a PHP file` - el estándar requiere omitir la etiqueta de cierre `?>`.
-  * `Space before opening parenthesis of function call prohibited` - al llamar a una función, no debe haber espacios entre el nombre de la función y los paréntesis. Sin embargo, en el código verificado hay un espacio después del nombre `print_r`.
+  * `Spaces must be used to indent lines; tabs are not allowed` — PSR-12 recomienda usar una sangría de cuatro espacios, mientras que en el ejemplo anterior se utiliza una tabulación
+  * `A closing tag is not permitted at the end of a PHP file` — el estándar contiene el requisito de omitir la etiqueta de cierre `?>`
+  * `Space before opening parenthesis of function call prohibited` — al llamar a una función, no debe haber espacios entre el nombre de la función y los paréntesis, mientras que en el código verificado hay un espacio después del nombre `print_r`
 
   Vamos a corregir el código: eliminaremos la etiqueta de cierre, las sangrías y el espacio después del nombre de la función:
 
@@ -44,9 +83,23 @@ theory: |
   print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
   ```
 
-  Esta versión ya cumple con las reglas y el linter no mostrará ningún mensaje de error.
+  Esta versión ya no infringe las reglas y el linter «guardará silencio». Cuando recién empiezas, estos detalles pueden parecer poco importantes. Pero con el tiempo queda claro que son precisamente ellos los que forman un estilo único y legible.
 
+  ## Uso del linter en tus propios proyectos
+
+  Cuando empieces a escribir tus propios proyectos fuera de la plataforma de aprendizaje, el linter será un ayudante indispensable. Se puede configurar en cualquier editor de código, ejecutar en la terminal o conectar a la compilación del proyecto. El linter muestra los errores, y PHP CS Fixer también sabe corregirlos automáticamente.
 instructions: |
-  Muestra en pantalla el resultado de la siguiente operación: "la diferencia entre el cuadrado de cinco y el producto de tres y siete". Escribe el código de manera que cada operador esté separado de los operandos por espacios.
+  Recibiste código de un colega — funciona correctamente, pero infringe el estándar de formato PSR-12. Corrige los espacios alrededor de los operadores sin cambiar la lógica:
 
-tips: []
+  ```php
+  <?php
+
+  print_r(    (5  **2)-(3*  7));
+  ```
+
+  El resultado debe seguir siendo `4`.
+tips:
+  - |
+    [PSR-12](https://www.php-fig.org/psr/psr-12/)
+  - |
+    [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)

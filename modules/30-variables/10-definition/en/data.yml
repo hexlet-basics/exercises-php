@@ -1,6 +1,10 @@
 ---
 name: What is a variable
-tips: []
+tips:
+  - >
+    [Naming in
+    programming](https://ru.hexlet.io/blog/posts/naming-in-programming?utm_source=code-basics&utm_medium=referral&utm_campaign=blog&utm_content=lesson)
 definitions:
-  - name: A variable
-    description: is a way to store information and name it for later use in code.
+  - name: Variable
+    description: >-
+      a way to store information and give it a name for later use in code.

@@ -1,3 +1,9 @@
 ---
 name: Funciones con número variable de parámetros
-tips: []
+tips:
+  - >
+    [Ejemplo de una función con número variable de
+    parámetros](https://www.php.net/manual/es/function.max.php)
+definitions:
+  - name: Argumento por defecto
+    description: argumento opcional de una función.

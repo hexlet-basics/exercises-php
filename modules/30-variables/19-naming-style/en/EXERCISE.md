@@ -1,4 +1,4 @@
-
-Create two variables named "first number" and "second number" using lowerCamelCase. Write the number `1.10`,  to the first variable and `-100` to the second. Print the product of the numbers written to the resulting variables.
-
-The code will work with any name, and we only check the printed result, so the task is up to you.
+1. Create two variables: the number of items in an order and the price of one item. Use lowerCamelCase. What you name the variables is up to you, the tests don't check it.
+2. Write the number `20` to the first variable, and `100` to the second.
+3. Calculate the total cost of the order.
+4. Print the result to the screen.

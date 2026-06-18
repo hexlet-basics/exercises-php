@@ -1,6 +1,9 @@
 ---
-name: Argumentos por defecto
-tips: []
+name: Parámetros por defecto
+tips:
+  - >
+    [Valores de los parámetros por
+    defecto](https://www.php.net/manual/es/functions.arguments.php#functions.arguments.default)
 definitions:
-  - name: Argumento por defecto
-    description: Argumento opcional de una función.
+  - name: Parámetro por defecto
+    description: parámetro opcional de una función.

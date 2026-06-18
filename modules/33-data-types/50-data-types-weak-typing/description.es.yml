@@ -2,7 +2,7 @@
 
 name: Tipado débil
 theory: |
-  Podíamos sumar números porque la operación de suma es una operación para el tipo "número". Y si aplicamos esta operación a un número y una cadena:
+  Conocemos dos tipos de datos distintos: números y cadenas. Podíamos sumar números, porque la operación de suma es una operación para el tipo "número". ¿Y si aplicamos esta operación a un número y a una cadena?
 
   ```php
   <?php
@@ -10,19 +10,66 @@ theory: |
   print_r(1 + '7'); // => 8
   ```
 
-  `'7'` es una cadena, no un número, pero el intérprete de PHP devuelve `8`, como si estuviéramos sumando dos números. Cuando PHP encuentra una incompatibilidad de tipos, intenta convertir la información por sí mismo. En este caso, convirtió la cadena `'7'` en el número `7` y luego sumó `1` y `7`.
+  `'7'` es una cadena, no un número, pero el intérprete de PHP devolvió la respuesta `8`, como si estuviéramos sumando dos números. Cuando PHP encuentra una incompatibilidad de tipos, intenta convertir la información por sí mismo. En este caso, convirtió la cadena `'7'` en el número `7` y luego sumó `1` y `7`.
 
-  No todos los lenguajes hacen esto. PHP es un lenguaje con **tipado débil**. Conoce la existencia de diferentes tipos, pero no los trata de manera estricta. Intenta convertir la información cuando parece razonable.
+  ## Tipado débil
 
-  En los lenguajes con **tipado fuerte**, no se puede sumar un número y una cadena.
+  No todos los lenguajes hacen esto. PHP es un lenguaje con **tipado débil**. Conoce la existencia de diferentes tipos (números, cadenas y otros), pero trata su uso de forma poco estricta e intenta convertir los datos cuando le parece razonable.
 
-  PHP fue creado para Internet, y en Internet toda la información es una cadena. Incluso cuando ingresamos un número de teléfono o una fecha de nacimiento en un sitio web, esa información llega al servidor como una cadena, no como un número. Por eso, los autores del lenguaje decidieron que convertir automáticamente los tipos es correcto y conveniente.
+  Fíjate: el operador `+` en PHP siempre significa aritmética, mientras que para unir cadenas hay un operador aparte: la concatenación `.`. Por eso, en la expresión `1 + '7'` PHP convierte la cadena en número, y en la expresión `1 . '7'`, al revés, el número en cadena:
 
-  Esta conversión automática e implícita de tipos es realmente conveniente. Pero en la práctica, esta característica del lenguaje crea muchos errores y problemas difíciles de encontrar. El código puede funcionar a veces y otras veces no. Esto depende de si la conversión automática tuvo "suerte" en un caso particular. El programador no se dará cuenta de esto de inmediato.
+  ```php
+  <?php
 
-  En futuras tareas nos encontraremos con este comportamiento más de una vez. A menudo surgirá la pregunta "¿por qué mi código no funciona como espero?".
+  print_r(1 + '7'); // => 8
+  print_r(1 . '7'); // => 17
+  ```
 
+  ```text
+  1 + '7'  →  8     (la cadena se convirtió en número, suma)
+  '7' - 1  →  6     (la cadena se convirtió en número, resta)
+  1 . '7'  →  '17'  (el número se convirtió en cadena, concatenación)
+  ```
+
+  Aun así, PHP tiene un límite de lo permitido. Si una cadena no se puede entender de ninguna manera como un número, el PHP moderno detendrá el programa con un error:
+
+  ```php
+  <?php
+
+  print_r(1 + 'seven');
+  // TypeError: Unsupported operand types: int + string
+  ```
+
+  Pero basta con que la cadena empiece por un dígito para que PHP vuelva a intentar "adivinar": la expresión `1 + '7 samuráis'` devolverá `8`, emitiendo solo una advertencia.
+
+  ## ¿Y cómo es en los lenguajes estrictos?
+
+  En los lenguajes con **tipado estricto (fuerte)** no se puede sumar un número con una cadena: el programa se detendrá con un error. Por ejemplo, en Python o Ruby la expresión `1 + '7'` provocará un error de tipos: el lenguaje exige que el programador indique explícitamente cómo convertir los datos.
+
+  Al mismo tiempo, los lenguajes no se dividen exactamente en dos bandos: "estrictos" y "débiles". Es más correcto decir que los distintos lenguajes tienen un **grado de estrictez diferente**: en unos casi no hay conversiones implícitas, y en otros hay muchas. PHP se sitúa en el extremo "débil" de esta escala, aunque con cada nueva versión se vuelve más estricto.
+
+  ## Tipado estático y dinámico
+
+  Existe otro concepto aparte: el tipado estático y dinámico. Describe **cuándo** se comprueban los tipos. PHP pertenece a los lenguajes de tipado dinámico: los tipos se comprueban durante la ejecución del programa. En los lenguajes de tipado estático la comprobación suele ocurrir antes, incluso antes de ejecutar el código, en la etapa de compilación.
+
+  Es importante no confundir dos cosas:
+
+  - el tipado estático/dinámico responde a la pregunta "**cuándo** se comprueban los tipos";
+  - el tipado fuerte/débil responde a la pregunta "**qué ocurrirá** si se mezclan tipos diferentes sin conversión explícita".
+
+  Son propiedades independientes. PHP es un lenguaje dinámico y de tipado débil.
+
+  ## Por qué PHP es así
+
+  PHP fue creado para Internet, y en Internet toda la información son cadenas. Incluso cuando introducimos en un sitio web un número de teléfono o un año de nacimiento, esa información llega al servidor no como números, sino como cadenas. Por eso los autores del lenguaje decidieron que convertir los tipos automáticamente era correcto y cómodo.
+
+  Hay comodidad, pero tiene un precio alto. En la práctica, las conversiones implícitas crean muchos errores y problemas difíciles de encontrar: el código puede funcionar a veces y otras veces no. Esto depende de si en un caso concreto se tuvo "suerte" con la conversión automática. El programador no lo nota de inmediato.
+
+  En las tareas siguientes nos encontraremos con este comportamiento más de una vez. A menudo surgirá la pregunta "¿por qué mi código no funciona como espero?". El tipado débil recorre como un hilo conductor todo el desarrollo en PHP. Un poco más adelante en este módulo aprenderemos a convertir los tipos de forma explícita, y a hacerlo siempre de forma consciente.
 instructions: |
-  Muestra en pantalla el resultado de la expresión: `7 - (-8 - -2)`. Intenta hacer que el número 7 sea una cadena en lugar de un número. Experimenta también con otros números.
+  Hay dos jugadores en el juego. El primero obtuvo `7` puntos, el segundo perdió puntos: la expresión `(-8 - -2)` describe su resultado. Calcula la diferencia y muéstrala en pantalla: `7 - (-8 - -2)`.
 
-tips: []
+  Intenta hacer que el número 7 sea una cadena en lugar de un número: `'7' - (-8 - -2)`. ¿Funcionará ese código? Experimenta también con otros números.
+tips:
+  - |
+    [Tipado](https://es.wikipedia.org/wiki/Tipado_fuerte_y_d%C3%A9bil)

@@ -2,28 +2,53 @@
 
 name: Funciones con número variable de parámetros
 theory: |
-  En esta lección vamos a analizar una característica de algunas funciones. Pueden aceptar un número variable de parámetros. Pero no estamos hablando de valores por defecto. Veamos este ejemplo:
+  Algunas funciones tienen una particularidad: aceptan un número variable de argumentos. Esto no está relacionado con los valores por defecto, como en el caso de `round()`. Se trata de que la cantidad de datos pasados no está limitada a un número fijo.
+
+  Veamos la función `max()`. Encuentra el mayor valor entre los datos pasados.
 
   ```php
   <?php
 
-  max(1, 10, 3); // 10
-  max(1, -3, 2, 3, 2); // 3
+  print_r(max(1, 10, 3)); // => 10
+  print_r(max(1, -3, 2, 3, 2)); // => 3
   ```
 
-  La función `max()` encuentra el valor máximo entre los parámetros proporcionados. ¿Te preguntas cuántos parámetros espera esta función? Si abrimos la documentación de esta función, veremos esta construcción:
+  Abramos la [documentación](https://www.php.net/manual/es/function.max.php) y veamos la firma de `max()`:
 
-  ```txt
+  ```php
   max(mixed $value, mixed ...$values): mixed
   ```
 
-  Esta notación indica que esta función acepta dos parámetros obligatorios y cualquier número de parámetros opcionales. La opcionalidad de los parámetros se describe con los puntos suspensivos `...`.
+  Esto significa:
 
+  - la función requiere al menos un valor (`$value`);
+  - después se pueden pasar tantos valores adicionales como se quiera (`...$values`); un número variable de argumentos se indica con los puntos suspensivos `...`;
+  - la función devolverá el mayor de los pasados.
+
+  El tipo `mixed` en la firma significa «cualquier tipo»: la función sabe comparar no solo números, sino también otros valores.
+
+  Si entre los argumentos hay varios valores máximos iguales, se devuelve el primero de ellos.
+
+  ```php
+  <?php
+
+  print_r(max(5, 5, 2)); // => 5
+  ```
+
+  De manera análoga funciona la función `min()`, solo que busca el menor valor:
+
+  ```php
+  <?php
+
+  print_r(min(1, 10, 3)); // => 1
+  print_r(min(1, -3, 2, 3, 2)); // => -3
+  ```
 instructions: |
-  Calcule programáticamente (no mentalmente) el número mínimo entre 3, 10, 22, -3, 0, y muéstrelo en pantalla. Utilice la función `min()`, que funciona de manera similar a `max()`.
-
-tips: []
-
-# definitions:
-#   - name: Argumento por defecto
-#     description: argumento opcional de una función.
+  Durante una semana se registraron las siguientes temperaturas del aire: 3, 10, 22, -3, 0 grados. Encuentra el valor mínimo con la ayuda de la función `min()` y muéstralo en pantalla.
+tips:
+  - >
+    [Ejemplo de una función con número variable de
+    parámetros](https://www.php.net/manual/es/function.max.php)
+definitions:
+  - name: Argumento por defecto
+    description: argumento opcional de una función.

@@ -1,11 +1,14 @@
 ---
 name: Comments
-tips: []
+tips:
+  - >
+    [More about
+    comments](https://www.w3schools.com/php/php_comments.asp)
 definitions:
   - name: Comment
     description: >
-      text in program code that doesn't affect functionality, and is added by
-      programmers for themselves and their colleagues.
+      text in the program code that does not affect functionality and is
+      added by programmers for themselves and their colleagues.
 
 
       `// single-line comment`

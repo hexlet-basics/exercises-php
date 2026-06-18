@@ -1,56 +1,92 @@
-Recordemos que las funciones pueden ser incorporadas o agregadas por el programador. Ya nos hemos familiarizado con las primeras. Y en esta lección aprenderemos a crear nuestras propias funciones.
+Hasta ahora solo hemos usado funciones ya preparadas: `print_r()`, `strlen()`, `round()` y otras. Pero en PHP se pueden crear funciones propias, y ha llegado el momento de aprender a hacerlo.
 
-La definición de funciones propias simplifica significativamente la escritura y el mantenimiento de programas. Las funciones permiten combinar operaciones complejas en una sola. Por ejemplo, enviar un correo electrónico en un sitio web es un proceso bastante complicado. Incluye la interacción con sistemas externos.
+## Por qué definir funciones
 
-Gracias a la capacidad de definir funciones, toda la complejidad se puede ocultar detrás de una función simple:
+Supongamos que tenemos varios fragmentos de código parecidos:
 
 ```php
 <?php
 
-// Ejemplo hipotético
-// Lugar donde se encuentra la función
-namespace Some\Email\Package\send;
-
-$email = 'support@hexlet.io';
-$title = 'Ayuda';
-$body = 'He escrito una historia de éxito, ¿cómo puedo obtener un descuento?';
-
-// Una pequeña llamada - y mucha lógica interna
-send($email, $title, $body);
+print_r("Hello, Hexlet!\n");
+print_r("Hello, world!\n");
+print_r("Hello, PHP!\n");
 ```
 
-Internamente, esta llamada realiza bastante lógica. Se conecta al servidor de correo, forma una solicitud correcta basada en el encabezado y el cuerpo del mensaje. Luego lo envía y cierra la conexión.
+Para no repetir la misma plantilla, podemos envolverla en una función propia que reciba un parámetro de entrada e imprima en pantalla la línea necesaria:
 
-Crearemos nuestra primera función. Su tarea es mostrar un saludo en la pantalla:
+```php
+<?php
+
+function sayHello($name)
+{
+    print_r("Hello, {$name}!\n");
+}
+```
+
+Ahora podemos llamarla con distintos argumentos:
+
+```php
+<?php
+
+sayHello('Hexlet'); // => Hello, Hexlet!
+sayHello('world');  // => Hello, world!
+sayHello('PHP');    // => Hello, PHP!
+```
+
+Parece que la cantidad de código no se redujo, pero apareció otra cosa. Si esta función se usa en distintos lugares, cuando necesitemos cambiar el texto bastará con corregir solo la definición de la función. Y cuanto más compleja sea la tarea y más a menudo se use en distintos lugares, más importante es extraer la lógica en funciones propias.
+
+Definir funciones propias simplifica mucho el mantenimiento de los programas, también porque permite combinar operaciones complejas en una sola. Por ejemplo, enviar un correo electrónico en un sitio web es un proceso bastante complejo que incluye la interacción con sistemas externos. Pero toda esa complejidad puede ocultarse detrás de una función simple `send($email, $title, $body)`. Una pequeña llamada, y mucha lógica dentro.
+
+## Sintaxis de la definición
+
+```php
+function nombreDeFuncion(parametros)
+{
+    cuerpo
+}
+```
 
 ```text
-¡Hola, Hexlet!
-```
-
-```php
-<?php
-
-// Definición de la función
-// La definición no llama ni ejecuta la función
-// Solo decimos que ahora existe esta función
-function showGreeting()
+function greet($name)             ← palabra clave, nombre de la función y parámetro
 {
-  $text = '¡Hola, Hexlet!';
-  print_r($text);
-
+    return 'Hello, ' . $name;     ← cuerpo de la función
 }
-
-// Llamada a la función
-showGreeting(); // => '¡Hola, Hexlet!'
 ```
+
+La palabra clave `function` inicia la definición. En `nombreDeFuncion` se admite cualquier nombre, igual que en una variable (pero sin el signo `$`); entre paréntesis se indica la lista de parámetros separados por comas. El cuerpo de la función se encierra entre llaves, y dentro se escribe código PHP ordinario.
 
 A diferencia de los datos normales, las funciones realizan acciones, por lo que sus nombres casi siempre deben ser verbos: "construir algo", "dibujar algo", "abrir algo".
 
-Todo lo que se describe entre llaves después del nombre de la función se denomina cuerpo de la función. Dentro del cuerpo se puede describir cualquier código. Se puede decir que es un pequeño programa independiente, un conjunto de instrucciones arbitrarias.
+Las llaves muestran qué código pertenece al cuerpo de la función. Mira el ejemplo:
 
-El cuerpo se ejecuta cuando se inicia la función. Y cada llamada a la función inicia el cuerpo independientemente de otras llamadas.
+```php
+<?php
 
-El cuerpo de la función puede estar vacío:
+function sayHi()
+{
+    print_r('Hi!');
+}
+
+print_r('El programa continúa…');
+```
+
+Aquí la función `sayHi()` está definida, pero **`print_r('El programa continúa…')`** no pertenece a la función, ya que está fuera de las llaves. Se ejecutará de inmediato al iniciar el programa, independientemente de si se llama a `sayHi()`. La definición en sí no llama ni ejecuta la función; solo decimos que ahora existe tal función.
+
+Para que `sayHi()` funcione, hay que llamarla explícitamente:
+
+```php
+<?php
+
+function sayHi()
+{
+    print_r('Hi!');
+}
+
+sayHi(); // => Hi!
+print_r('El programa continúa…');
+```
+
+El cuerpo se ejecuta en el momento en que se inicia la función. Además, cada llamada a la función ejecuta el cuerpo independientemente de otras llamadas. El cuerpo incluso puede estar vacío:
 
 ```php
 <?php
@@ -63,4 +99,29 @@ noop(); // Hay una llamada, pero no tiene sentido
 // pero esto se refiere a temas avanzados
 ```
 
-La creación de una función también se llama implementación. Estas palabras se encuentran a menudo en la práctica.
+## Ejemplo: una función para imprimir la media aritmética
+
+Ahora implementaremos una función simple que **calcula e imprime la media aritmética** de dos números. La media aritmética es la suma de los números dividida por su cantidad. Por ejemplo, la media de 6 y 4 se calcula así: `(6 + 4) / 2 = 5`.
+
+```php
+<?php
+
+function printAverage($a, $b)
+{
+    $total = $a + $b;
+    $average = $total / 2;
+    print_r($average);
+}
+
+printAverage(6, 4); // => 5
+```
+
+Aquí `$a` y `$b` son los parámetros de entrada, `$total` contiene su suma, `$average` se obtiene dividiendo la suma entre 2, y `print_r()` muestra el resultado.
+
+Al llamar a `printAverage(6, 4)`, se imprime `5` en la pantalla.
+
+## Reutilización y legibilidad
+
+Las funciones ayudan a evitar la duplicación y hacen que los programas sean más comprensibles. El nombre de una función por sí solo dice qué hace. Esto es especialmente importante en proyectos grandes, donde el código lo leen otros programadores (o tú mismo un mes después).
+
+Por cierto, crear una función también se llama realización, definición e implementación. Estas palabras se encuentran a menudo en la práctica.

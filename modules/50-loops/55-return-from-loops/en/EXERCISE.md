@@ -1,16 +1,12 @@
 
-Implement a function called `hasChar()`, which checks if a string contains a letter in the specified case. The function takes two parameters:
+Implement a function `hasAtSymbol()` that checks whether an email contains the `@` symbol.
 
-* A string
-* A letter to be found
-
-Call example:
+The function should return `true` as soon as it finds `@`. If the loop reached the end of the string and the symbol wasn't found, the function should return `false`.
 
 ```php
 <?php
 
-hasChar('Hexlet', 'H'); // true
-hasChar('Hexlet', 'h'); // false
-hasChar('Awesomeness', 'm'); // true
-hasChar('Awesomeness', 'd'); // false
+hasAtSymbol('support@example.com'); // true
+hasAtSymbol('wrong-email');         // false
+hasAtSymbol('@admin');              // true
 ```

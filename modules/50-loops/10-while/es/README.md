@@ -1,121 +1,106 @@
-Los programas que escribimos se vuelven cada vez más complejos y extensos. Aún están muy lejos de ser programas reales, donde la cantidad de líneas de código se mide en decenas y cientos de miles. La complejidad actual puede ser desafiante incluso para personas sin experiencia. A partir de esta lección, nos adentraremos en uno de los temas básicos más complejos de la programación: los **ciclos**.
+Además de las construcciones condicionales, en programación es imposible prescindir de los ciclos. Es un mecanismo especial que permite ejecutar cualquier acción de forma repetida. Sobre su base se construyen prácticamente todos los cálculos: desde calcular la nota media de un grupo hasta procesar las solicitudes entrantes en los sitios web.
 
-Todos los programas de aplicación tienen objetivos pragmáticos. Ayudan a gestionar empleados y finanzas, y también entretienen. A pesar de las diferencias, todos estos programas ejecutan algoritmos incorporados en ellos, que son similares entre sí. ¿Qué es un algoritmo? Un **algoritmo** es una secuencia de acciones o instrucciones que nos lleva a un resultado esperado. Esta descripción se aplica a cualquier programa, pero los algoritmos suelen ser algo más específicos.
+Un ciclo guarda la acción repetitiva en un solo lugar y la ejecuta de nuevo mientras la condición siga siendo verdadera.
 
-Imagina que tenemos un libro y queremos encontrar una frase específica en su interior. Recordamos la frase, pero no sabemos en qué página está. ¿Cómo encontramos la página que buscamos? La forma más sencilla y lenta es revisar las páginas secuencialmente hasta encontrar la frase deseada. En el peor de los casos, tendríamos que revisar todas las páginas, pero de todas formas obtendríamos el resultado. Este proceso se llama **algoritmo**. Incluye la búsqueda de páginas y comprobaciones lógicas para determinar si encontramos la frase o no.
+## Primer ejemplo
 
-No sabemos de antemano cuántas páginas tendremos que revisar, pero el proceso de revisión se repite de la misma manera una y otra vez. Para realizar acciones repetitivas como esta, necesitamos **ciclos**. Cada repetición se llama **iteración**.
+Supongamos que un programa debe imprimir la cadena `Hello!` cinco veces. Para detener la repetición en el momento adecuado, el programa necesita una variable que almacene el número del paso actual. A esa variable se la suele llamar contador.
 
-Supongamos que queremos escribir una función que imprima en pantalla todos los números desde uno hasta un número especificado (a través de argumentos):
+En el ejemplo, el contador se llama `$counter`. Antes del ciclo es igual a `0`. Después de cada impresión de la cadena, lo incrementamos en uno.
 
 ```php
 <?php
 
-printNumbers(3);
-// => 1
-// => 2
-// => 3
+$counter = 0;
+while ($counter < 5) {
+    print_r("Hello!\n");
+    $counter = $counter + 1;
+}
+
+// => Hello!
+// => Hello!
+// => Hello!
+// => Hello!
+// => Hello!
 ```
 
-No es posible implementar esta función con los conocimientos que ya hemos adquirido, ya que no conocemos de antemano la cantidad de impresiones en pantalla. Pero con los ciclos, esto no es un problema:
+Ahora el ciclo puede comprobar el valor del contador antes de cada repetición. Mientras `$counter < 5`, se ejecuta el código entre las llaves después de `while`. A este bloque se le llama cuerpo del ciclo.
+
+Después de ejecutar el cuerpo, el intérprete vuelve a la condición y la comprueba de nuevo. Mientras la condición sea verdadera, el ciclo continúa. Cuando la condición se vuelve falsa (`false`), el programa sale del ciclo y ejecuta el código siguiente.
+
+Sin cambiar el contador, la condición nunca se volverá falsa y el ciclo se convertirá en un ciclo infinito. Desde fuera, parece como si el programa se hubiera colgado.
+
+## El funcionamiento del ciclo paso a paso
+
+Antes de la primera repetición, `$counter` es igual a `0`.
+
+**Paso 1.** El intérprete comprueba `$counter < 5`. El valor `0` es menor que `5`, por lo que se ejecuta el cuerpo del ciclo.
+En la pantalla se imprime `Hello!`, y `$counter` aumenta a `1`.
+
+**Paso 2.** El intérprete comprueba la condición de nuevo. El valor `1` sigue siendo menor que `5`, por lo que el cuerpo del ciclo se ejecuta una vez más.
+En la pantalla se imprime de nuevo `Hello!`, y `$counter` aumenta a `2`.
+
+Esto continúa hasta que `$counter` se vuelve igual a `5`. En la siguiente comprobación, la condición `$counter < 5` será falsa, por lo que el ciclo finalizará. Después, el programa ejecutará el código posterior al ciclo.
+
+La misma secuencia en un diagrama.
+
+```text
+$counter = 0
+┌──→ $counter < 5?
+│     true │
+│          ↓
+│    print_r("Hello!\n")
+│    $counter = $counter + 1
+└──────────┘
+      false → salida del ciclo
+```
+
+Después de finalizar el ciclo, `$counter` es igual a `5`, y la cadena `Hello!` se ha impreso cinco veces.
+
+## El cuerpo del ciclo y la continuación del programa
+
+Al cuerpo del ciclo pertenecen todas las líneas dentro de las llaves después de `while`. Cuando la llave de cierre termina el bloque, también termina el ciclo.
 
 ```php
 <?php
 
-function printNumbers($lastNumber)
-{
-    // La variable i es una abreviatura de "index" (índice)
-    // Se utiliza por convención en muchos lenguajes
-    // como contador del ciclo
-    $i = 1;
+$counter = 0;
+while ($counter < 2) {
+    print_r("Hello!\n");
+    $counter = $counter + 1;
+}
 
-    while ($i <= $lastNumber) {
-        print_r($i);
-        print_r("\n");
+print_r("End of loop\n");
+```
+
+En este ejemplo, `print_r("Hello!\n")` y `$counter = $counter + 1` están dentro del ciclo. La línea `print_r("End of loop\n")` está después de la llave de cierre, por lo que se ejecutará una sola vez después de finalizar el ciclo.
+
+Por las llaves, PHP entiende qué líneas debe repetir y cuáles continúan más adelante en el programa.
+
+## Un ciclo dentro de una función
+
+Ahora traslademos el ciclo a una función. Imprimirá los números desde `1` hasta el valor pasado.
+
+```php
+<?php
+
+function printNumbers(int $n): void
+{
+    $i = 1;
+    while ($i <= $n) {
+        print_r($i . "\n");
         $i = $i + 1;
     }
-    print_r('finished!');
+    print_r("Finished!\n");
 }
 
 printNumbers(3);
 // => 1
 // => 2
 // => 3
-// => finished!
+// => Finished!
 ```
 
+El ciclo `while` imprime números hasta que `$i` se vuelve mayor que `$n`. Después de eso, el programa sale del ciclo y ejecuta `print_r("Finished!\n")`.
 
-En el código de la función se utiliza el ciclo `while`. Está compuesto por tres elementos:
-
-* La palabra clave `while` - a pesar de su similitud con la llamada a funciones, no es una llamada a función.
-* El predicado: una condición que se especifica entre paréntesis después de `while` y se evalúa en cada iteración.
-* El cuerpo del ciclo: un bloque de código entre llaves.
-
-Esta construcción se lee de la siguiente manera: "haz lo que se especifica en el cuerpo del ciclo mientras la condición `$i <= $lastNumber` sea verdadera".
-
-Veamos cómo funciona este código para la llamada `printNumbers(3)`:
-
-```php
-<?php
-
-// Se inicializa la variable i
-$i = 1;
-
-// El predicado devuelve true, por lo que se ejecuta el cuerpo del ciclo
-while (1 <= 3)
-// print_r(1);
-// $i = 1 + 1;
-
-// Se termina el cuerpo del ciclo, por lo que se vuelve al principio
-while (2 <= 3)
-// print_r(2);
-// $i = 2 + 1;
-
-// Se termina el cuerpo del ciclo, por lo que se vuelve al principio
-while (3 <= 3)
-// print_r(3);
-// $i = 3 + 1;
-
-// El predicado devuelve false, por lo que la ejecución continúa después del ciclo
-while (4 <= 3)
-
-// print_r('finished!');
-// En este punto, i es igual a 4, pero ya no lo necesitamos
-// La función finaliza
-```
-
-Lo más importante en un ciclo es su finalización (salida del ciclo). El proceso que genera el ciclo debe detenerse en última instancia. La responsabilidad de detenerlo recae completamente en el programador.
-
-Por lo general, la tarea se reduce a introducir una variable llamada **contador del ciclo**. Primero, se inicializa el contador, es decir, se le asigna un valor inicial. En nuestro ejemplo, esto se hace con la instrucción `$i = 1`, que se ejecuta antes de entrar al ciclo. Luego, en la condición del ciclo, se verifica si el contador ha alcanzado su valor límite. Y finalmente, el contador cambia su valor `$i = $i + 1`.
-
-Los principiantes cometen la mayoría de los errores en este punto. Por ejemplo, olvidar accidentalmente incrementar el contador o realizar una comprobación incorrecta en el predicado puede provocar un **bucle infinito**. Esta es una situación en la que el ciclo se ejecuta infinitamente y el programa nunca se detiene.
-
-En ese caso, es necesario terminarlo forzosamente:
-
-```php
-<?php
-
-function printNumbers($lastNumber)
-{
-    $i = 1;
-
-    // Este ciclo nunca se detendrá
-    // Siempre imprimirá el mismo valor
-    while ($i <= $lastNumber) {
-        print_r($i);
-    }
-    print_r('finished!');
-}
-```
-
-En algunos casos, los bucles infinitos son útiles. No los estamos considerando aquí, pero es útil saber cómo se ve este tipo de código:
-
-```php
-<?php
-
-while (true) {
-    // Hacer algo
-}
-```
-
-En resumen, ¿cuándo se necesitan los ciclos y cuándo se pueden evitar? Es físicamente imposible evitar los ciclos cuando el algoritmo para resolver un problema requiere la repetición de ciertas acciones y la cantidad de estas operaciones es desconocida de antemano, como en nuestro ejemplo del libro.
+La condición y el cambio del contador dependen de la tarea. El contador se puede incrementar en `1`, en `2` o directamente en `10`. Se puede disminuir si el ciclo va de un valor mayor a uno menor. Se puede cambiar el contador no en cada repetición, sino una de cada dos o después de realizar una comprobación adicional. Lo principal es que la condición se vuelva falsa en algún momento. De lo contrario, el ciclo funcionará de forma infinita.

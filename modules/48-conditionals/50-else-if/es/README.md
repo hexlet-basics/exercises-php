@@ -1,11 +1,15 @@
-La función `getTypeOfSentence()` solo distingue entre oraciones interrogativas y oraciones normales. Intentemos agregar soporte para oraciones exclamativas:
+La función `getTypeOfSentence()` solo distingue entre oraciones interrogativas y oraciones normales. Agreguémosle soporte para oraciones exclamativas:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+function getTypeOfSentence(string $sentence): string
 {
     $lastChar = $sentence[-1];
+
+    if ($lastChar === '?') {
+        $sentenceType = 'question';
+    }
 
     if ($lastChar === '!') {
         $sentenceType = 'exclamation';
@@ -13,50 +17,59 @@ function getTypeOfSentence($sentence)
         $sentenceType = 'normal';
     }
 
-    if ($lastChar === '?') {
-        $sentenceType = 'question';
-    }
-
-    return "La oración es {$sentenceType}";
+    return "Sentence is {$sentenceType}";
 }
 
-getTypeOfSentence('¿Quién?'); // 'La oración es pregunta'
-getTypeOfSentence('No');     // 'La oración es normal'
-getTypeOfSentence('¡No!');   // 'La oración es exclamación'
+print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
+print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
 ```
 
-Hemos agregado otra condición (_exclamation_ se traduce como "exclamación"). Técnicamente, la función funciona, pero hay problemas desde el punto de vista semántico:
+Agregamos una comprobación de oraciones exclamativas (_exclamation_ se traduce como «exclamación»). Técnicamente esta función funciona, pero trata las oraciones interrogativas de forma incorrecta. Además, tiene problemas desde el punto de vista de la semántica. El signo de exclamación se comprueba en cualquier caso, incluso si ya se encontró un signo de interrogación. La rama `else` está descrita para la segunda condición, pero no para la primera. Por eso una oración interrogativa se vuelve `normal`.
 
-* La verificación de la presencia del signo de interrogación ocurre de todos modos, incluso si ya se ha detectado el signo de exclamación.
-* La rama `else` se describe específicamente para la primera condición, pero no para la segunda.
-
-Sería más correcto utilizar otra posibilidad de la estructura condicional:
+Para corregir la situación, usemos otra posibilidad de la construcción condicional:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+function getTypeOfSentence(string $sentence): string
 {
-  $lastChar = $sentence[-1];
+    $lastChar = $sentence[-1];
 
-  if ($lastChar === '?') {
-      $sentenceType = 'question';
-  } elseif ($lastChar === '!') {
-      $sentenceType = 'exclamation';
-  } else {
-      $sentenceType = 'normal';
-  }
+    if ($lastChar === '?') {
+        $sentenceType = 'question';
+    } elseif ($lastChar === '!') {
+        $sentenceType = 'exclamation';
+    } else {
+        $sentenceType = 'normal';
+    }
 
-  return "La oración es {$sentenceType}";
+    return "Sentence is {$sentenceType}";
 }
+
+print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is question
+print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
+print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
 ```
 
-Ahora todas las condiciones se han unificado en una sola estructura.
+Ahora todas las condiciones se han alineado en una sola construcción. La palabra clave `elseif` significa «si la condición anterior no se cumple, pero la actual sí».
 
-La estructura `elseif` significa "si la condición anterior no se cumple, pero la condición actual sí se cumple". La estructura resultante es la siguiente:
+```text
+  ┌─────────────────┐
+  │ ¿condición 1?   │
+  └────┬────────┬───┘
+ true │        │ false
+       ↓        ↓
+┌──────────┐  ┌─────────────────┐
+│ cuerpo if│  │ ¿condición 2?   │
+└──────────┘  └────┬────────┬───┘
+              true │        │ false
+                    ↓        ↓
+        ┌─────────────┐ ┌──────────┐
+        │cuerpo elseif│ │cuerpo else│
+        └─────────────┘ └──────────┘
+```
 
-* Si el último carácter es `?`, entonces `'question'`
-* De lo contrario, si el último carácter es `!`, entonces `'exclamation'`
-* De lo contrario, `'normal'`
+La lógica de la función está organizada así. Si el último carácter es `?`, se devuelve `'question'`. Si el último carácter es `!`, se devuelve `'exclamation'`. En todos los demás casos se devuelve `'normal'`.
 
-Solo se ejecutará uno de los bloques de código relacionados con toda la estructura `if`.
+Se ejecutará solo uno de los bloques de código que pertenece a toda la construcción `if`.

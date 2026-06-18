@@ -1,17 +1,25 @@
+Working with loops usually comes down to two scenarios:
 
-Dealing with loops usually comes down to two scenarios:
+1. Aggregation. Accumulating a result over the iterations and working with it after the loop. Reversing a string is exactly this kind of case.
+2. Running the loop until the required result is reached and then exiting. For example, the task of finding prime numbers. Recall that a prime number is a number that is divisible without a remainder only by itself and by one.
 
-1. Aggregation. Accumulating data over multiple iterations and handling it after the loop. String reversal is just one example of this.
-2. Executing a loop until you get the required result and then ending it. For example, if the job of the loop is to find prime numbers. Remember that a prime number is a number that can only be divided by itself and one.
+Let's look at an algorithm for checking whether a number is prime. We'll divide the target number `x` by every number in the range from two to `x - 1` and look at the remainder. If no divisor that divides `x` without a remainder is found in this range, then we have a prime number.
 
-Let's look at a simple algorithm to check prime numbers. We'll divide the number,`x`  by all the numbers in the range from two to `x - 1` and see the remainder. If we don't find a divisor `x` can be divided by without a remainder in this range, then we're looking at a prime number.
+## Checking whether 5 is prime: a step-by-step breakdown
 
-If you think about it, it's actually enough to check numbers not up tov `x - 1`, but up to half the given number. For example, 11 isn't divisible by 2, 3, 4, 5. But it's also guaranteed that it can't be divided by numbers greater than its half. So, we can do a little optimization and check the division only up to `x / 2`.
+1. Take the number x = 5. We look for possible divisors in the range from 2 to x - 1, that is, from 2 to 4.
+2. Divide 5 by 2. The remainder is 1, no divisor found, continue.
+3. Divide 5 by 3. The remainder is 2, no divisor found, continue.
+4. Divide 5 by 4. The remainder is 1, no divisor found, finish the search.
+
+Result. In the range 2…4 there was no number that divides 5 without a remainder. Therefore, 5 is a prime number.
+
+If you think about it, you can notice that it's enough to check numbers not up to `x - 1`, but up to half the number. For example, 11 isn't divisible by 2, 3, 4, 5. But beyond that it's guaranteed not to be divisible by numbers greater than its half either. So we can make a small optimization and check divisibility only up to `x / 2`:
 
 ```php
 <?php
 
-function isPrime($number)
+function isPrime(int $number): bool
 {
     if ($number < 2) {
         return false;
@@ -30,12 +38,25 @@ function isPrime($number)
     return true;
 }
 
-isPrime(1); // false
-isPrime(2); // true
-isPrime(3); // true
-isPrime(4); // false
+var_dump(isPrime(1)); // => bool(false)
+var_dump(isPrime(2)); // => bool(true)
+var_dump(isPrime(3)); // => bool(true)
+var_dump(isPrime(4)); // => bool(false)
 ```
 
-The algorithm is built like so: if during the successive division by numbers up to `x / 2` there is at least one result without a remainder, then the given argument is not a prime number, and therefore further calculations will be pointless. At this point, it returns `false`.
+*To be completely honest, checking numbers up to the square root of `$number` is enough to solve the task, but in our case it's important to focus on understanding how to work with conditions inside a loop.*
 
-And only if the entire loop is completed can we say that the number is prime, since no number by which it can be divided without a remainder can be found.
+```text
+while (...) {
+    if (condition) {
+        return value;  ← exit from the function (and from the loop)
+    }
+    ...
+}
+─────────────────────────
+Without return the loop continues to the end
+```
+
+The algorithm is built in such a way that if, during the sequential division by numbers up to `x / 2`, at least one is found that divides without a remainder, then the passed argument is not a prime number, which means further computations make no sense. This is where `false` is returned.
+
+And only if the loop ran in full can we conclude that the number is prime, since no number was found that divides the number without a remainder.

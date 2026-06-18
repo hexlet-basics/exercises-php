@@ -1,16 +1,13 @@
-
-En PHP, puedes "solicitar" y mostrar en pantalla cualquier carácter de la codificación ASCII. Por ejemplo:
+El programa recibe los códigos numéricos de los caracteres y los muestra en la pantalla — esto resulta cómodo cuando un carácter es difícil de teclear con el teclado. Encuentra los caracteres con los códigos 126, 94 y 37 en la [tabla ASCII](https://www.ascii-code.com) (nos interesa el código decimal — *dec* o *decimal*) y muestra cada uno en una línea aparte usando la función `chr()` y un salto de línea:
 
 ```php
-<?php
-
-print_r(chr(63));
+print_r(chr(...) . "\n");
+print_r(chr(...) . "\n");
+print_r(chr(...) . "\n");
 ```
 
-Esto mostrará en pantalla el carácter con el número 63, que es el signo de interrogación `?`. De esta manera, puedes mostrar cualquier carácter.
+Por ejemplo, el carácter `?` tiene el código 63:
 
-Utiliza la [tabla de códigos ASCII](https://www.ascii-code.com). En esta tabla, nos interesa el código decimal (*dec* o *decimal*) con el que se codifican los caracteres.
-
-Utilizando el ejemplo anterior y la tabla encontrada, muestra en pantalla `~^%`.
-
-(Por supuesto, puedes "engañar" las pruebas y simplemente hacer `print_r('~^%')`, pero eso no sería interesante :)
+```php
+print_r(chr(63)); // salida: ?
+```

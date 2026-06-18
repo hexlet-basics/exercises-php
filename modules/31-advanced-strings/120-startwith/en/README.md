@@ -1,32 +1,27 @@
-
-One of the more frequent tasks when working with strings is to determine whether one string is a part (substring) of another string. Most programming languages have a built-in function for this very task. In PHP, there's no such function, we imitate it by using [mb_strpos()](https://www.php.net/manual/en/function.mb-strpos.php). This function searches for the position of the first occurrence of one string in another.
-
-```php
-<?php
-
-if (mb_strpos('Валар Моргулис', 'Morgulis')) { // 6
-    // ...
-}
-```
-
-In the example above, the function will return 6, which corresponds to the index of the letter M.
+When working with strings, you often need to determine whether one string — a **substring** — is contained in another, and if it is, where. For this, PHP has the [mb_strpos()](https://php.net/manual/en/function.mb-strpos.php) function. It searches for the position of the first occurrence of one string in another:
 
 ```php
 <?php
 
-if (mb_strpos('Valar Morghulis', 'Valar')) { // 0
-    // ...
-}
+print_r(mb_strpos('Валар Моргулис', 'Моргулис')); // => 6
 ```
 
-And in this example, it returns `0`, which corresponds to the first letter of the string. There's a mistake often made by beginners in this kind of code. In PHP `0` is treated as `false`, а значит, условие не выполнится. Правильная проверка выглядит так:
+The function returned `6` — the index of the letter `М`, where the substring begins. Indexes, as usual, are counted from zero:
 
 ```php
 <?php
 
-if (mb_strpos('Valar Morghulis', 'Valar') !== false) {
-    // ...
-}
+print_r(mb_strpos('Валар Моргулис', 'Валар')); // => 0
 ```
 
-The `mb_strpos()` function returns `false` if no substring was found, so you can use a strict comparison with `false`.
+Here it returned `0`: the substring was found at the very beginning of the string.
+
+If the substring isn't found, `mb_strpos()` returns the special value `false` ("false"). When printed with `print_r()`, it looks like an empty string:
+
+```php
+<?php
+
+print_r(mb_strpos('Валар Моргулис', 'Дракарис')); // =>
+```
+
+There's a hidden trap here that beginners often fall into: the result `0` ("found at the beginning of the string") is easy to confuse with `false` ("not found at all"). To tell them apart, you need a strict comparison — we'll cover it in the lessons about logic. For now, just remember: `mb_strpos()` answers the question "where?", not "is there?".

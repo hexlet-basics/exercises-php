@@ -1,6 +1,10 @@
 ---
 name: Codificación
-tips: []
+tips:
+  - |
+    [Tabla de códigos ASCII](https://www.ascii-code.com/)
+  - |
+    [¿Qué son las codificaciones?](https://ru.hexlet.io/blog/posts/encoding)
 definitions:
   - name: Codificación
     description: >-
