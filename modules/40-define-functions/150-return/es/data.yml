@@ -1,3 +1,5 @@
 ---
-name: Retorno de Valores
-tips: []
+name: Retorno de valores
+tips:
+  - |
+    [La instrucción return](https://www.php.net/manual/es/function.return.php)

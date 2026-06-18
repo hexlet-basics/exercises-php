@@ -1,4 +1,4 @@
-Copy the exact code from the instructions into the editor and run it by clicking «Run».
+Type the code from the task in the editor character by character and click "Check".
 
 ```php
 <?php
@@ -6,4 +6,4 @@ Copy the exact code from the instructions into the editor and run it by clicking
 print_r('Hello, World!');
 ```
 
-Note: If you write `heLLo, woRld!` instead of `Hello, World!`, it will be considered different text because upper and lower case letters are different characters. _Case is important!_ This rule affects almost everything in coding, so make sure you get used to paying close attention to the case at all times.
+Attention: if you write `heLLo, woRld!` instead of `Hello, World!`, it will be considered a different text, because uppercase and lowercase letters are different characters. The size of a letter is called _case_, and people say: _case matters!_ This applies to almost everything in code, so get used to always paying attention to case.

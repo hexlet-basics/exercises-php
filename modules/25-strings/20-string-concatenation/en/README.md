@@ -1,63 +1,85 @@
+Often, strings need to be assembled from several parts, for example, to join a first name and a last name, add a unit of measurement, or build text from a template. The concatenation operation, that is, gluing strings together, is used for this.
 
-In web development, programs use strings all the time. Everything we see on websites, in one way or another, is presented as text. This text is most often dynamic, it's made up of different connected pieces. The operation of joining strings in programming is called concatenation.
+## How to join strings
 
-We already know about addition in mathematics. This sort of program:
-
-```php
-<?php
-
-print_r(5 + 3);
-```
-
-will display `8` — the result of the binary operator `+` with operands `5` and `3`.
-
-You can add two strings. This sort of program:
+In PHP, strings are joined using the `.` (dot) operator. The `+` operator is used to add numbers, while for joining strings PHP has a separate binary operator that means gluing the contents together:
 
 ```php
 <?php
 
 print_r('Dragon' . 'stone');
+// => Dragonstone
 ```
 
+Order matters. First comes the left part (`'Dragon'`), then the right part (`'stone'`). The result comes out in the order in which the operands are specified.
 
-will display `Dragonstone` — the result of the binary operator `.` with the operands 'Dragon' and 'stone'.
+Here's how joining several strings works. The code:
 
-Strings are always concatenated in the order in which the operands are written. The left operand becomes the left part of the string, and the right one becomes the right part.
+```php
+<?php
 
-Here are a few more examples:
+print_r('Hello' . ', ' . 'World!');
+```
+
+Execution:
+
+```text
+'Hello' . ', ' . 'World!'
+└──┬──┘   └┬┘   └──┬───┘
+   └────┬───┘       │
+  'Hello, '    .  'World!'
+     └──────┬───────┘
+      'Hello, World!'
+```
+
+Examples:
 
 ```php
 <?php
 
 print_r('Kings' . 'wood');     // => Kingswood
-
 print_r('Kings' . 'road');     // => Kingsroad
-
+// Here the outer quotes are double, because there is a single one inside
 print_r("King's" . 'Landing'); // => King'sLanding
 ```
 
-As you can see, strings can be concatenated even if they're written in different quotes.
+PHP lets you join strings even if they're written in different quotes. The main thing is that both parts are strings.
 
-In the last example, the name of the city has been misspelled: *King's Landing* should be spelled with a space! But there were no spaces in our initial lines, and the spaces in the code itself to the left and right of the `.` character don't matter, because they're not part of the strings.
+## A space is also a character
 
-There are two ways to fix this:
+When joining, PHP doesn't insert spaces automatically. If there should be a space between the parts, it needs to be specified manually:
 
 ```php
 <?php
 
-// Put space at the end of the left part
+// A space at the end of the first string
 print_r("King's " . 'Landing'); // => King's Landing
 
-// Put a space at the start of the right part
+// A space at the start of the second string
 print_r("King's" . ' Landing'); // => King's Landing
 ```
 
-Space is a character like any other, so however many spaces you put in the string is how many you'll get:
+The result will be the same. But if you don't add a space, the words will be glued together.
+
+## Escape sequences
+
+In strings, you can use escape sequences, for example `\n` for a line break or `\t` for a tab. Don't forget that in PHP they only work inside double quotes. During concatenation, they behave just like any other characters:
 
 ```php
 <?php
 
-print_r("King's " . ' Landing');   // => King's  Landing
+print_r('Hello,' . "\n" . 'World!');
+// =>
+// Hello,
+// World!
 
-print_r("King's  " . '  Landing'); // => King's    Landing
+print_r('A' . "\t" . 'B');
+// => A	B
 ```
+
+## Conclusion
+
+Concatenation is the joining of strings via the `.` operator, and strings can be joined regardless of the type of quotes.
+
+- Gluing happens strictly in left-to-right order
+- Spaces aren't added automatically, you need to include them in the strings manually

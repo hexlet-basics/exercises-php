@@ -1,6 +1,11 @@
 ---
 name: Expressions in definitions
 tips:
-  - >
-    You can use `\n` between the withdrawal of dollars and yuans to go to a new
-    line.
+  - |
+    [Expression](https://en.wikipedia.org/wiki/Expression_(computer_science))
+  - |
+    You can use `\n` between the output of dollars and yuans to go to a new line.
+definitions:
+  - name: Variable
+    description: >-
+      a way to store information and give it a name for later use in the code.

@@ -1,7 +1,8 @@
+You are writing a program that shows the user a tip about how to split text into lines. Print the tip with a single `print_r()` call:
 
-Write a program that prints this to the screen:
+```text
+Для разделения строк используйте "\n"
+Пример: print_r("строка1\nстрока2")
+```
 
-    - Did Joffrey agree?
-    - He did. He also said "I love using \n".
-
-This program uses only one `print_r()`, but the result on the screen should look exactly like the one shown above.
+Note: the `\n` in the first line is literal text, not a line break.

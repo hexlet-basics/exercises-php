@@ -21,6 +21,13 @@ print_r(0.1 + 0.2 - 0.3); // => 5.5511151231258E-17
 
 En lugar de cero obtenemos una pequeña «cola»: un número en notación exponencial, aproximadamente igual a 0.000000000000000055. La cuestión es que internamente PHP no almacena exactamente 0.3, sino una aproximación de 0.30000000000000004. Al imprimir, el número se redondea a 14 dígitos significativos, por lo que el error no es visible. Pero no desaparece de los cálculos.
 
+```text
+Expectativa: 0.1 + 0.2        →  0.3
+Realidad:    0.1 + 0.2        →  0.30000000000000004
+                                    └── error de almacenamiento
+Comprobación: 0.1 + 0.2 - 0.3 →  5.5511151231258E-17 (y no 0)
+```
+
 ## ¿Por qué sucede esto?
 
 Este comportamiento es típico de Python, JavaScript y la mayoría de los demás lenguajes de programación.
@@ -47,8 +54,10 @@ Incluso si el resultado parece «bonito», internamente sigue representado como 
 
 ## Dónde es crítico y cómo se trabaja con esto
 
-Normalmente, un pequeño error no molesta. Pero en cálculos financieros, tareas científicas y de ingeniería, así como en la comparación exacta de resultados, puede convertirse en un problema. En los programas reales, el dinero a menudo se almacena en unidades mínimas, por ejemplo en centavos, es decir, se usan números enteros en lugar de fraccionarios. En otros casos, el resultado se redondea a la cantidad necesaria de dígitos, los números se comparan con un margen de error aceptable o se usan tipos de datos y bibliotecas especiales para cálculos exactos.
+Normalmente, un pequeño error no molesta. Pero en cálculos financieros, tareas científicas y de ingeniería, así como en la comparación exacta de resultados, puede convertirse en un problema. Por ejemplo, un error de una fracción de centavo puede dar una suma final incorrecta, y una cadena larga de cálculos puede acumular inexactitud gradualmente.
+
+En los programas reales, esto se maneja de diferentes maneras. El dinero a menudo se almacena en unidades mínimas, por ejemplo en centavos, es decir, se usan números enteros en lugar de fraccionarios. En otros casos, el resultado se redondea a la cantidad necesaria de dígitos, los números se comparan con un margen de error aceptable o se usan tipos de datos y bibliotecas especiales para cálculos exactos.
 
 ## Qué hay que recordar
 
-Las operaciones con números de punto flotante no siempre son exactas, y esto es normal. PHP redondea los números al imprimir, por lo que el error no siempre es visible en la pantalla, pero está presente en los cálculos. La precisión se puede controlar, por ejemplo, mediante el redondeo o la comparación de números con un margen de error dado. Al trabajar con dinero, mediciones precisas o cálculos científicos, es mejor usar tipos de datos especiales que proporcionen control sobre la precisión.
+Las operaciones con números de punto flotante no siempre son exactas, y esto es normal. Este comportamiento es típico de la mayoría de los lenguajes de programación y se explica por el diseño de la memoria de la computadora. PHP redondea los números al imprimir, por lo que el error no siempre es visible en la pantalla, pero está presente en los cálculos. La precisión se puede controlar, por ejemplo, mediante el redondeo o la comparación de números con un margen de error dado. Al trabajar con dinero, mediciones precisas o cálculos científicos, es mejor usar tipos de datos especiales que proporcionen control sobre la precisión.

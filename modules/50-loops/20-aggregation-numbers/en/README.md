@@ -1,9 +1,8 @@
+A separate class of tasks that can't be done without loops is called **data aggregation**. Such tasks include finding the maximum or minimum value, the sum, and the arithmetic mean. In their case, the result depends on the entire set of data. In this lesson, we'll look at how aggregation applies to numbers and strings.
 
-One particular type of task that can't be done without loops is data aggregation. These tasks can include searching for the maximum or minimum number in an array, and finding sums and arithmetic means. Their main thing is that the result depends on the whole set of data. To calculate the sum, you need to add all the numbers together, to calculate the maximum you need to compare **all** the numbers.
+![Loop iterations](./assets/iterations.png)
 
-Anyone who deals with numbers, such as accountants or marketers, will be familiar with these tasks. They're usually done in a spreadsheet like Microsoft Excel or Google Spreadsheets.
-
-Let's look at the simplest example: finding the sum of a set of numbers. We'll implement a function that adds numbers in the specified range, including bounds. A range in this case is a series of numbers from a certain beginning to a certain end. For example, the range [1, 10] includes all integers from 1 to 10.
+Let's say we need to find the sum of a set of numbers. We'll implement a function that adds the numbers in a given range, including the bounds. A **range** is a series of numbers from a specific beginning to a specific end. For example, the range [1, 10] includes the integers from one to ten.
 
 ```php
 <?php
@@ -11,28 +10,22 @@ Let's look at the simplest example: finding the sum of a set of numbers. We'll i
 sumNumbersFromRange(5, 7); // 5 + 6 + 7 = 18
 sumNumbersFromRange(1, 2); // 1 + 2 = 3
 
-// [1, 1] - a range with the same beginning and end is also a range
-// it includes exactly one number - the range boundary itself
+// [1, 1] A range with the same beginning and end is also a range
+// It includes exactly one number – the boundary of the range itself
 sumNumbersFromRange(1, 1); // 1
 sumNumbersFromRange(100, 100); // 100
 ```
 
-To implement this code, we need a loop, because adding numbers is an iterative process (it is repeated for each number), and the number of iterations depends on the size of the range. Before you look at the code, try answering the questions below:
-
-* What value should I initialize the counter with?
-* How will it change?
-* When should the loop stop?
-
-Try thinking about these questions first and then look at the code below:
+To implement this code, we'll need a loop, because adding numbers is an iterative process, that is, it's repeated for each number. The number of iterations depends on the size of the range. Here's the code for this function:
 
 ```php
 <?php
 
-function sumNumbersFromRange ($start, $finish)
+function sumNumbersFromRange(int $start, int $finish): int
 {
-    // Technically, you can change $start
-    // But the input arguments must be left at their original value
-    // This will make the code easier to analyze
+    // Technically you can change $start
+    // But input arguments should be left at their original value
+    // This makes the code easier to analyze
     $i = $start;
     $sum = 0; // Initializing the sum
 
@@ -41,42 +34,66 @@ function sumNumbersFromRange ($start, $finish)
         $i = $i + 1; // Move to the next number in the range
     }
 
-    // Return the result
+    // Return the resulting value
     return $sum;
-};
+}
 ```
 
-  The general structure of the loop here is standard. There's a counter which is initialized with the initial value of the range, there's the loop itself with the condition to stop when the end of the range is reached, and, finally, the counter changes at the end of the loop body. The number of iterations in such a loop is `$finish - $start + 1`. So for a range of 5 to 7, it's 7 - 5 + 1, i.e., 3 iterations.
+The general structure of the loop here is standard. It has three components:
 
-The main differences from normal processing are related to the logic of calculating the result. With aggregation tasks, there's always a variable that stores the result of the loop. In the code above, it's sum. With each iteration of the loop, it gets changed by adding the next number in the range:  `$sum = $sum + $i`. The whole process looks like this:
+* A counter, which is initialized with the initial value of the range
+* The loop itself, with a stop condition when the end of the range is reached
+* Changing the counter at the end of the loop body
+
+The number of iterations in such a loop equals `$finish - $start + 1`. So for the range from 5 to 7, it's 7 - 5 + 1, that is, three iterations.
+
+The main differences from ordinary processing are related to the logic of calculating the result. In aggregation tasks, there's always some variable that stores the result of the loop. In the code above, that's `$sum`. On each iteration of the loop, it gets changed by adding the next number in the range: `$sum = $sum + $i`.
+
+The whole process looks like this:
 
 ```php
 <?php
 
-// To call sumNumbersFromRange(2, 5);
+// For the call sumNumbersFromRange(2, 5);
 $sum = 0;
 $sum = $sum + 2; // 2
 $sum = $sum + 3; // 5
 $sum = $sum + 4; // 9
 $sum = $sum + 5; // 14
-// 14 - result of adding numbers in the range [2, 5]
+// 14 – the result of adding the numbers in the range [2, 5]
 ```
 
-The `$sum` variable has an initial value of 0. Why set a value at all? Any operation that repeats needs to start with a value. You can't just declare a variable and start working with it inside a loop. This can lead to errors:
+Visually, the process of accumulating the sum looks like this:
+
+```text
+sumNumbersFromRange(2, 5):
+
+i=2: sum = 0 + 2 = 2
+i=3: sum = 2 + 3 = 5
+i=4: sum = 5 + 4 = 9
+i=5: sum = 9 + 5 = 14
+                    └── result
+```
+
+The `$sum` variable has an initial value equal to 0. Why set a value at all? Any repeating operation starts with some value. You can't just declare a variable and start working with it inside a loop. This can lead to errors:
 
 ```php
 <?php
 
-// the initial value isn't set
-// PHP automatically sets it to NULL
+// the initial value is not set
+// PHP automatically makes it equal to NULL
 $sum;
 
 // the first iteration of the loop
 $sum = $sum + 2; // ?
 ```
 
-The result of this call will be a valid result inside `$sum` but the interpreter will print the following error: `PHP Notice:  Undefined variable: sum`. It occurs because of an attempt to use an undefined variable. So a value is needed after all. Why is 0 selected in the code above? It's very straightforward to check that all other options will lead to the wrong result. If the initial value is 1, then the result will be 1 more than necessary.
+As a result of such a call, `$sum` will hold the correct result, but the interpreter will print a warning: `PHP Warning:  Undefined variable $sum`. It occurs because of an attempt to use an undefined variable. So some value is needed after all. Why is 0 chosen in the code above? It's very easy to verify that all other options will lead to the wrong result. If the initial value is 1, then the result will be 1 greater than needed.
 
-In mathematics, there's a concept of a neutral or identity element of an operation (each operation has its own element). This concept has a very simple meaning. An operation with this element doesn't change the value on which the operation is performed. In addition, any number plus zero gives the number itself. This is the same for subtraction. Even concatenation has a neutral element, which is an empty string:  `'' + 'one'` will be  'one'.
+In mathematics, every operation has a **neutral element of that operation**. An operation with this element doesn't change the value on which the operation is performed:
 
-Self-check. What is the neutral element of the multiplication operation?
+* Zero for addition: any number + zero = the number itself
+* Zero for subtraction: any number - zero = the number itself
+* The empty string for concatenation: `'' . 'string'` will be `'string'`
+
+Therefore, if we were multiplying, instead of `0` we would use `1`.

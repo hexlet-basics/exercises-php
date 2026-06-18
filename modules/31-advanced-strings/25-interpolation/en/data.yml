@@ -1,8 +1,11 @@
 ---
 name: Interpolation
-tips: []
+tips:
+  - >
+    [String interpolation in
+    PHP](https://www.php.net/manual/en/language.types.string.php#language.types.string.parsing)
 definitions:
   - name: Interpolation
     description: >-
-      is a way to join strings by inserting variable values into a string
-      template using curly brackets. For example, `\"Hi, {$name}!\"`.
+      is a way to build a complex string from several simple ones using
+      special templates. For example, `\"Hi, {$name}!\"`.

@@ -1,5 +1,8 @@
+An online store keeps the text of an order status email in a variable and sends it to the customer. Write the email text below into the `$text` variable. Use the heredoc syntax. All line breaks must be preserved.
 
-Write the text below to the `$str` variable. Use heredoc syntax.
-
-    Lannister, Targaryen, Baratheon, Stark, Tyrell... they're all just spokes on a wheel.
-    This one's on top, then that one's on top, and on and on it spins, crushing those on the ground.
+```text
+Уважаемый пользователь!
+Ваш заказ успешно оформлен.
+Ожидаемая дата доставки: 3-5 рабочих дней.
+Спасибо, что выбрали нас!
+```

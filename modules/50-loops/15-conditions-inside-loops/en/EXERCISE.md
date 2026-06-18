@@ -1,9 +1,9 @@
-
-The function from the theory is case-sensitive. This means that `A` and `a` from its perspective are different characters. Write a version of this function that isn't case-sensitive:
+Implement the function `countHashtags()`, which takes the text of a post and counts how many times the `#` character appears in it.
 
 ```php
 <?php
 
-countChars('HexlEt', 'e'); // 2
-countChars('HexlEt', 'E'); // 2
+countHashtags('New post #php #code'); // 2
+countHashtags('No tags here');        // 0
+countHashtags('#start and #finish');  // 2
 ```

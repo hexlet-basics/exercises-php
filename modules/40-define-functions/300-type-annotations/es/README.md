@@ -1,4 +1,14 @@
-PHP admite **declaraciones de tipos** (también conocidas como type hints): puedes indicar los tipos de los parámetros y del valor de retorno de una función. Los tipos de los parámetros se escriben antes del nombre del parámetro, y el tipo de retorno va después de la lista de parámetros, separado por dos puntos:
+En PHP, se pueden pasar cualquier tipo de valores a una función. A veces esto dificulta la comprensión del código: no siempre queda claro qué espera exactamente una función y qué devuelve. Para hacer el código más claro, PHP ofrece las **declaraciones de tipos** (también llamadas anotaciones de tipos o type hints). Con su ayuda se puede indicar de forma explícita qué valores acepta una función y qué resultado devuelve. De esta manera resolvemos varios problemas a la vez:
+
+- Mejoramos la experiencia del editor de código, obtenemos sugerencias, mejor autocompletado y cosas por el estilo.
+- Ayudamos a los agentes de IA a ver más rápido la estructura y tomar decisiones más correctas, minimizando los errores accidentales.
+- Aparece la posibilidad de comprobar la correctitud del programa sin ejecutarlo, mediante el análisis estático. Esa comprobación no garantiza que la lógica del programa esté escrita correctamente, pero al menos no contendrá errores de tipos.
+
+## Cómo indicar los tipos de los parámetros
+
+Una declaración de tipos describe dos elementos. Los tipos de los parámetros se indican directamente en la definición de la función, antes del nombre de cada parámetro. El tipo del valor de retorno se indica después de la lista de parámetros, separado por dos puntos.
+
+Veámoslo con el ejemplo de una función que calcula la suma de dos valores pasados:
 
 ```php
 <?php
@@ -11,9 +21,60 @@ function add(int $a, int $b): int
 print_r(add(2, 3)); // => 5
 ```
 
-A diferencia de muchos lenguajes, PHP comprueba los tipos en tiempo de ejecución. Un valor incompatible provoca un `TypeError`, mientras que los valores compatibles se convierten automáticamente (`add('2', 3)` devuelve `5`).
+```text
+function concat(string $a, string $b): string
+                │         │            │
+                │         │            └── tipo del valor de retorno
+                │         └── tipo del parámetro $b
+                └── tipo del parámetro $a
+```
 
-En esta etapa, basta con los tipos simples: `int`, `float`, `string`, `bool`. Si una función no devuelve nada, el tipo de retorno es `void`:
+Ahora el editor de código indicará que la función `add()` acepta dos números y devuelve un número. Si intentas pasar un valor inadecuado, el editor lo resaltará como un problema y te avisará.
+
+Por cierto, ya has visto este tipo de notación. En la lección sobre los parámetros opcionales analizamos la firma de la función `round()` de la documentación — `round(int|float $num, int $precision = 0): float`. Eso son precisamente las declaraciones de tipos.
+
+## Los tipos se comprueban durante la ejecución
+
+A diferencia de muchos lenguajes, PHP no solo sugiere los tipos al editor, sino que también los comprueba durante la ejecución del programa. Si pasas un valor de un tipo incompatible, el programa terminará con un error `TypeError`:
+
+```php
+<?php
+
+add('abc', 3);
+// TypeError: add(): Argument #1 ($a) must be of type int, string given
+```
+
+Al mismo tiempo, PHP sigue siendo un lenguaje de tipado débil, y convierte automáticamente los valores compatibles. La cadena `'2'` parece un número, por eso esta llamada funcionará:
+
+```php
+<?php
+
+add('2', 3); // => 5
+```
+
+Este es el mismo comportamiento que analizamos en la lección sobre el tipado débil.
+
+## Qué tipos se usan en las declaraciones
+
+En esta etapa basta con conocer las declaraciones para los tipos de datos simples y primitivos:
+
+- `int` para números enteros, `float` para números de punto flotante
+- `string` para cadenas
+- `bool` para valores lógicos (true o false)
+
+```php
+<?php
+
+function describe(string $name, int $age, float $height): string
+{
+    return "{$name}, {$age} años, altura {$height}";
+}
+
+print_r(describe('Anna', 25, 1.70));
+// => Anna, 25 años, altura 1.7
+```
+
+Si una función no devuelve nada, entonces se indica `void` como tipo de retorno. Por ejemplo, una función puede solo imprimir texto en la pantalla:
 
 ```php
 <?php
@@ -22,6 +83,33 @@ function printGreeting(string $name): void
 {
     print_r("Hello, {$name}!");
 }
+
+printGreeting('Anna');
+// => Hello, Anna!
 ```
 
-Las declaraciones de tipos son opcionales, pero hacen el código más claro para las personas, los editores y las herramientas de análisis estático. Usarlas se considera una buena práctica.
+## Un ejemplo con parámetros por defecto
+
+Las declaraciones de tipos funcionan igual tanto para los parámetros obligatorios como para aquellos que tienen un valor por defecto. Primero se indica el tipo, luego el nombre del parámetro y, a través de `=`, el valor estándar:
+
+```php
+<?php
+
+function greet(string $name, string $greeting = 'Hello'): string
+{
+    return "{$greeting}, {$name}";
+}
+
+print_r(greet('Anna'));         // => Hello, Anna
+print_r(greet('Kirill', 'Hi')); // => Hi, Kirill
+```
+
+En este ejemplo, `$name` es un parámetro obligatorio y `$greeting` tiene un valor por defecto. Las declaraciones muestran los tipos de ambos parámetros y del resultado devuelto.
+
+## Las declaraciones de tipos y la comprobación del código
+
+Además de la comprobación durante la ejecución, existen herramientas de **análisis estático del código**, es decir, comprobaciones realizadas sin ejecutar el programa. «Estático» significa que la comprobación ocurre antes de ejecutar el programa. La herramienta lee el código fuente y verifica si los valores pasados se corresponden con los tipos indicados. Por ejemplo, si una función acepta una cadena y le pasas un número, el análisis estático lo mostrará como un error.
+
+Es especialmente cómodo cuando el editor resalta esos errores justo mientras escribes el código. Esto permite ver el problema de inmediato y corregirlo sin esperar a ejecutar el programa. Gracias a esto, muchos errores inesperados se detectan con antelación y hay menos de ellos en el código en funcionamiento.
+
+Las declaraciones de tipos no son obligatorias. Las funciones pueden escribirse sin ellas y PHP seguirá funcionando. Pero cuando las declaraciones están presentes, el código se vuelve más claro para las personas y más cómodo para los editores. Indicar los tipos en tu código se considera una buena práctica.

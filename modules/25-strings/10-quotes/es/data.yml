@@ -1,3 +1,5 @@
 ---
 name: Comillas
-tips: []
+tips:
+  - >
+    [Cadenas en PHP](https://www.php.net/manual/es/language.types.string.php)

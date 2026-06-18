@@ -17,7 +17,7 @@ theory: |
   ```php
   <?php
 
-  function repeat($text, $times)
+  function repeat(string $text, int $times): string
   {
       // El elemento neutro para las cadenas es una cadena vacía
       $result = '';
@@ -45,16 +45,47 @@ theory: |
   $result = "{$result}hexlet"; // hexlethexlethexlet
   ```
 
-instructions: |
+  De forma visual, el proceso de acumulación de la cadena se ve así:
 
-  Implementa la función `joinNumbersFromRange()`, que une todos los números del rango en una cadena:
+  ```text
+  repeat('hexlet', 3):
+
+  i=1: result = ''             . 'hexlet' = 'hexlet'
+  i=2: result = 'hexlet'       . 'hexlet' = 'hexlethexlet'
+  i=3: result = 'hexlethexlet' . 'hexlet' = 'hexlethexlethexlet'
+                                              └── resultado
+  ```
+
+  ## Elemento neutro
+
+  Para que la acumulación funcione, se necesita un valor inicial. Para las cadenas, ese valor es la **cadena vacía** `''`.
+
+  Se llama elemento neutro porque no cambia nada durante la concatenación:
 
   ```php
   <?php
 
-  joinNumbersFromRange(1, 1); // '1'
-  joinNumbersFromRange(2, 3); // '23'
-  joinNumbersFromRange(5, 10); // '5678910'
+  print_r('' . 'abc');  // => abc
+  print_r('abc' . '');  // => abc
   ```
 
+  Por eso la cadena vacía siempre se usa como valor inicial al agregar cadenas.
+instructions: |
+  Implementa la función `sanitizePhoneNumber()`, que recibe un número de teléfono de un formulario y devuelve una cadena sin espacios, paréntesis ni guiones.
+
+  Los usuarios introducen los números de distintas formas, pero antes de guardarlos suelen normalizarse a un único formato. Recorre la cadena original carácter por carácter y construye un nuevo número solo con los caracteres útiles.
+
+  ```php
+  <?php
+
+  sanitizePhoneNumber('+7 (999) 123-45-67'); // '+79991234567'
+  sanitizePhoneNumber('8 800 555 35 35');    // '88005553535'
+  sanitizePhoneNumber('(123) 456-7890');     // '1234567890'
+  ```
+
+  ### Pistas
+
+  * El resultado final es una cadena.
+  * Usa una cadena vacía como valor inicial.
+  * La función `str_contains()` te ayudará a comprobar si un carácter está en el conjunto `' ()-'`.
 tips: []

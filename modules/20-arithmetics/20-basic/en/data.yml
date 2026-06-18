@@ -1,13 +1,21 @@
 ---
-name: Arithmetic Operations
+name: Arithmetic operations
 tips:
   - >
-    Always indent arithmetic operators with spaces between the numbers
-    (operands). It's good form when programming. Therefore, in our examples, we
-    have `print_r(3 + 4)` rather than `print_r(3+4)`.
+    Always separate arithmetic operators with spaces from the numbers
+    (operands) – this is good programming style. That's why in our examples it's
+    `print_r(3 + 4)`, not `print_r(3+4)`.
   - >
-    Dividing by zero causes, unsurprisingly, a `Division by zero` error. To
-    avoid it, you need to know about conditional constructs (you'll learn about
-    them in future
+    Dividing by zero leads to a `Division by zero` error. To avoid it, you need
+    to know about conditional constructs (you'll learn about them in the
+    following lessons).
   - |
-    Type your code between the`// BEGIN` and `// END` lines in the editor.
+    [Division with remainder](https://en.wikipedia.org/wiki/Euclidean_division)
+  - >
+    If there are `// BEGIN` and `// END` lines in the editor, the code must be
+    written between these lines.
+definitions:
+  - name: Statement
+    description: >
+      the smallest standalone part of a programming language; a command or set
+      of commands. A program is usually a sequence of statements.

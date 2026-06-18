@@ -1,10 +1,11 @@
 ---
 name: Syntax errors
-tips: []
+tips:
+  - >
+    [Types of errors in
+    PHP](https://www.php.net/manual/en/language.errors.basics.php)
 definitions:
-  - name: Syntax errors
-    description: are a violation of the grammatical rules of a programming language.
+  - name: Syntax error
+    description: a violation of the grammatical rules of a programming language.
   - name: Parse error
-    description: >-
-      is a type of PHP error that occurs when there are syntax errors in the
-      code.
+    description: a type of errors in PHP that occur when there are syntax errors in the code.

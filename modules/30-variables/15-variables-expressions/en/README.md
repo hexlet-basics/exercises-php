@@ -1,72 +1,82 @@
+We already know that expressions can be made up of several operations. But if you write the entire calculation in one long line, the code quickly becomes hard to read.
 
-Variables are helpful not only for storing and reusing data, but also for simplifying complex calculations. Consider an example: you need to convert euros into yuans through dollars. Banks often do this kind of conversion via an intermediate currency when shopping abroad.
-
-First, convert 50 euros into dollars. Let's assume that one euro equals $1.25:
+For example, this kind of code works:
 
 ```php
 <?php
 
-$dollarsCount = 50 * 1.25;
-print_r($dollarsCount);
+$yuansCount = 50 * 1.25 * 6.91;
+print_r($yuansCount); // => 431.875
 ```
 
-Last lesson, we assigned a specific value to a variable. And here, in `$dollarsCount = 50 * 1.25;` there's an **expression** to the right of the equals sign. The interpreter calculates the result, `62.5`, and records it in a variable. The interpreter doesn't care about what's in front of it: `62.5` or `50 * 1.25`, both are expressions to compute. Calculating either of them will give `62.5`.
+PHP will easily compute this expression. But it's no longer that convenient for a human to read such code. Questions immediately arise:
 
-Any string is an expression. Concatenating strings is also an expression. The interpreter processes whatever expression it encounters and produces, as a result, **the value of the expression**. Here are some sample expressions with comments on the right containing the resulting value:
+- What does `1.25` mean?
+- What does `6.91` mean?
+- Where does one calculation step end and the next one begin?
+
+To make such calculations clearer, variables can be used inside other expressions. First, the program stores an intermediate result in a variable, and then substitutes the value of that variable into the next calculation.
+
+Variables help break down complex calculations into understandable parts and store intermediate results.
+
+## Currency conversion through an intermediate currency
+
+Imagine that we need to convert euros into yuans, but the direct exchange rate isn't available to us. Then we'll do it in two steps: **euros -> dollars -> yuans**. Banks often work this way when paying for purchases abroad.
+
+## Step 1. Euros -> Dollars
+
+Let's say the rate is: 1 euro = 1.25 dollars. We want to convert 50 euros:
 
 ```php
 <?php
 
-62.5             // 62.5
-50 * 1.25        // 62.5
-120 / 10 * 2     // 24
-(int) '100'      // 100
-
-"hello"          // "hello"
-"Good" . "will"  // "Goodwill"
+$dollarsPerEuro = 1.25;
+$dollarsCount = 50 * $dollarsPerEuro;
+print_r($dollarsCount); // => 62.5
 ```
 
-The rules of code construction (or the grammar of the language) are such that in those places where an expression is expected, you can put any calculation (not only mathematical, but also, for example, string operations, e.g. concatenation) and the program will remain workable. For this reason, it's impossible to describe and show all use cases of all operations.
+In this line, `50 * $dollarsPerEuro` is an expression, and `$dollarsCount` is the variable into which the result is written. PHP first computes the expression and only then stores the result in the variable.
 
-Programs consist of numerous combinations of expressions and understanding this concept is a major step on your journey.
-
-Based on the above, consider whether this code will work.
+The interpreter doesn't care how the expression is written:
 
 ```php
-<?php
-
-$who = "dragon's" . 'mother';
-print_r($who);
+$dollarsCount = 62.5;
 ```
 
-Now, back to our currency program. We'll record the dollar value in yuans as a separate variable. Let's calculate the price of 50 euros in dollars by multiplying it by `1.25`. Let's say that 1 dollar is 6.91 yuans:
+or
+
+```php
+$dollarsCount = 50 * $dollarsPerEuro;
+```
+
+The result will be the same. But for a human, the second option is more useful: the name `$dollarsCount` immediately makes it clear that at this step we got the amount in dollars.
+
+## Step 2. Dollars -> Yuans
+
+Now let's convert 50 euros into yuans, using the dollar as an intermediate currency. Let's say the exchange rates are: 1 dollar = 6.91 yuans, 1 euro = 1.25 dollars.
 
 ```php
 <?php
 
+$dollarsPerEuro = 1.25;
 $yuansPerDollar = 6.91;
-$dollarsCount = 50 * 1.25; // 62.5
-$yuansCount = $dollarsCount * $yuansPerDollar; // 431.875
+
+$dollarsCount = 50 * $dollarsPerEuro;
+$yuansCount = $dollarsCount * $yuansPerDollar;
 
 print_r($yuansCount);
 ```
 
-Now, let's merge our output with some text via concatenation:
+This code is longer than the single line `50 * 1.25 * 6.91`, but it's easier to read:
 
-```php
-<?php
+- you can see that `1.25` is the euro-to-dollar rate
+- you can see that `6.91` is the dollar-to-yuan rate
+- you can see that `$dollarsCount` is an intermediate result
 
-$yuansPerDollar = 6.91;
-$dollarsCount = 50 * 1.25; // 62.5
-$yuansCount = $dollarsCount * $yuansPerDollar; // 431.875
+This becomes especially noticeable if you don't come back to the code for at least a week. Now imagine a project with hundreds of thousands of lines of code. If such projects didn't have intermediate variables and calculations, it would be impossible to make sense of them.
 
-print_r('The price is ' . $yuansCount . ' yuans');
-```
+## What to remember
 
-```text
-The price is 431.875 yuans
-```
-
-Any variable can be part of any expression. At the moment of calculation, its value is substituted for the variable name.
-
-The interpreter calculates the value  of `$dollarsCount` before this variable is used in other expressions. When it comes time to use a variable, PHP "knows" the value because it's already computed it.
+- If an expression turns out too long, it's better to break it into several steps.
+- Variables help store intermediate results and make calculations clearer.
+- When a variable is used in an expression, PHP substitutes its value and continues the calculation.

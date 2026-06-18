@@ -1,5 +1,6 @@
+In many languages, besides the conditional *if* construct, there's also a **switch**. This construct appears in a huge amount of existing PHP code, so it's important to be able to read it.
 
-Many languages include a **switch** in addition to the conditional *if* construct. This is a specialized version of *if*, designed for certain cases. For example, it makes sense for us to have an *if else* chain for equality checks. For example:
+It's a specialized version of *if*, created for certain special situations. For example, it makes sense to use it where there's an *if else* chain with equality checks. For example:
 
 ```php
 <?php

@@ -1,2 +1,6 @@
 ---
 name: Explicit type conversion
+tips:
+  - |
+    [Typing](https://en.wikipedia.org/wiki/Strong_and_weak_typing)
+definitions: []

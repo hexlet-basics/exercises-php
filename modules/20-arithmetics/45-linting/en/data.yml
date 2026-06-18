@@ -1,2 +1,7 @@
 ---
 name: Linter
+tips:
+  - |
+    [PSR-12](https://www.php-fig.org/psr/psr-12/)
+  - |
+    [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)

@@ -1,43 +1,85 @@
-En el desarrollo web, los programas operan constantemente con cadenas de texto. Todo lo que vemos en los sitios web está representado de alguna manera como texto. Este texto suele ser dinámico, obtenido de diferentes partes que se unen entre sí. La operación de unir cadenas en programación se llama **concatenación**.
+A menudo es necesario armar cadenas a partir de varias partes, por ejemplo, unir el nombre y el apellido, añadir una unidad de medida o componer un texto a partir de una plantilla. Para esto se usa la operación de concatenación, es decir, el pegado de cadenas.
 
-Ya conocemos la operación matemática de suma:
+## Cómo unir cadenas
 
-```php
-<?php
-
-print_r(5 + 3); // => 8
-```
-
-Este programa mostrará `8` en la pantalla, que es el resultado de la operación binaria `+` con los operandos `5` y `3`.
-
-También podemos "sumar" dos cadenas. Este programa mostrará `Dragonstone`, que es el resultado de la operación binaria `.` con los operandos 'Dragon' y 'stone':
+En PHP las cadenas se unen mediante el operador `.` (punto). Para sumar números se usa el operador `+`, y para unir cadenas en PHP existe un operador binario aparte que significa pegar el contenido:
 
 ```php
 <?php
 
-print_r('Dragon' . 'stone'); // => Dragonstone
+print_r('Dragon' . 'stone');
+// => Dragonstone
 ```
 
-La concatenación de cadenas siempre ocurre en el mismo orden en el que se escriben los operandos. El operando izquierdo se convierte en la parte izquierda de la cadena, y el operando derecho en la parte derecha. Aquí hay algunos ejemplos más:
+El orden importa. Primero va la parte izquierda (`'Dragon'`), luego la derecha (`'stone'`). El resultado se obtiene en el orden en el que se indican los operandos.
+
+Así funciona la unión de varias cadenas. El código:
+
+```php
+<?php
+
+print_r('Hello' . ', ' . 'World!');
+```
+
+Ejecución:
+
+```text
+'Hello' . ', ' . 'World!'
+└──┬──┘   └┬┘   └──┬───┘
+   └────┬───┘       │
+  'Hello, '    .  'World!'
+     └──────┬───────┘
+      'Hello, World!'
+```
+
+Ejemplos:
 
 ```php
 <?php
 
 print_r('Kings' . 'wood');     // => Kingswood
 print_r('Kings' . 'road');     // => Kingsroad
+// Aquí las comillas exteriores son dobles, porque dentro hay una simple
 print_r("King's" . 'Landing'); // => King'sLanding
 ```
 
-Las cadenas se pueden concatenar incluso si están escritas con diferentes tipos de comillas.
+PHP permite unir cadenas incluso si están escritas con distintos tipos de comillas. Lo principal es que ambas partes sean cadenas.
 
-Un espacio en blanco es un carácter igual que los demás, por lo que la cantidad de espacios en blanco que se coloque en una cadena será la misma en la cadena resultante:
+## El espacio también es un carácter
+
+Al unir, PHP no inserta espacios automáticamente. Si entre las partes debe haber un espacio, hay que indicarlo manualmente:
 
 ```php
 <?php
 
-// Colocamos un espacio en blanco en la parte izquierda
+// Espacio al final de la primera cadena
 print_r("King's " . 'Landing'); // => King's Landing
 
-// Colocamos un espacio en blanco en la parte derecha
+// Espacio al inicio de la segunda cadena
 print_r("King's" . ' Landing'); // => King's Landing
 ```
+
+El resultado será el mismo. Pero si no se añade el espacio, las palabras se pegarán.
+
+## Secuencias de escape
+
+En las cadenas se pueden usar secuencias de escape, por ejemplo `\n` para el salto de línea o `\t` para la tabulación. No olvides que en PHP solo funcionan dentro de comillas dobles. En la concatenación se comportan igual que cualquier otro carácter:
+
+```php
+<?php
+
+print_r('Hello,' . "\n" . 'World!');
+// =>
+// Hello,
+// World!
+
+print_r('A' . "\t" . 'B');
+// => A	B
+```
+
+## Conclusión
+
+La concatenación es la unión de cadenas mediante el operador `.`, y las cadenas se pueden unir independientemente del tipo de comillas.
+
+- El pegado ocurre estrictamente en orden de izquierda a derecha
+- Los espacios no se añaden automáticamente, hay que incluirlos en las cadenas manualmente

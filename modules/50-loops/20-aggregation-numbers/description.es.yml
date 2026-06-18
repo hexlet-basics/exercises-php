@@ -2,11 +2,11 @@
 
 name: Agregación de datos (Números)
 theory: |
-  Hay una clase de problemas que no se puede resolver sin bucles: se llama **agregación de datos**. Estos problemas incluyen la búsqueda del valor máximo y mínimo, el cálculo de la suma y el promedio aritmético, entre otros. Su característica principal es que el resultado depende de todo el conjunto de datos. Para calcular la suma, es necesario sumar **todos** los números; para calcular el máximo, es necesario comparar **todos** los números.
+  Una clase de problemas que no se puede resolver sin bucles se llama **agregación de datos**. Estos problemas incluyen la búsqueda del valor máximo o mínimo, la suma y el promedio aritmético. En su caso, el resultado depende de todo el conjunto de datos. En esta lección, veremos cómo se aplica la agregación a los números y las cadenas.
 
-  Aquellos que trabajan con números, como contadores o especialistas en marketing, están familiarizados con este tipo de problemas. Por lo general, los resuelven en tablas de Microsoft Excel o Google Sheets. En esta lección, estudiaremos este tema.
+  ![Iteraciones del bucle](./assets/iterations.png)
 
-  Comencemos con el ejemplo más simple: buscar la suma de un conjunto de números. Implementaremos una función que sume los números en un rango especificado, incluyendo los límites. En este caso, un rango es una serie de números desde un punto de inicio hasta un punto final. Por ejemplo, el rango [1, 10] incluye todos los números enteros del 1 al 10.
+  Supongamos que necesitamos encontrar la suma de un conjunto de números. Implementaremos una función que sume los números en un rango dado, incluyendo los límites. Un **rango** es una serie de números desde un inicio concreto hasta un final determinado. Por ejemplo, el rango [1, 10] incluye los números enteros del uno al diez.
 
   ```php
   <?php
@@ -14,51 +14,40 @@ theory: |
   sumNumbersFromRange(5, 7); // 5 + 6 + 7 = 18
   sumNumbersFromRange(1, 2); // 1 + 2 = 3
 
-  // [1, 1] Un rango con el mismo punto de inicio y final también es un rango
-  // Incluye exactamente un número: el límite del rango
+  // [1, 1] Un rango con el mismo inicio y final también es un rango
+  // Incluye exactamente un número: el propio límite del rango
   sumNumbersFromRange(1, 1); // 1
   sumNumbersFromRange(100, 100); // 100
   ```
 
-  Para implementar este código, necesitaremos un bucle por dos razones:
-
-  * La suma de números es un proceso iterativo, es decir, se repite para cada número.
-  * El número de iteraciones depende del tamaño del rango.
-
-  Antes de ver el código, intenta responder las siguientes preguntas:
-
-  * ¿Con qué valor inicializar el contador?
-  * ¿Cómo cambiará el contador?
-  * ¿Cuándo debe detenerse el bucle?
-
-  Intenta pensar en estas preguntas primero y luego mira el código a continuación:
+  Para implementar este código, necesitaremos un bucle, ya que la suma de números es un proceso iterativo, es decir, se repite para cada número. El número de iteraciones depende del tamaño del rango. Este es el código de esta función:
 
   ```php
   <?php
 
-    function sumNumbersFromRange ($start, $finish)
-    {
-        // Técnicamente, se puede cambiar el valor de $start
-        // Pero los argumentos de entrada deben mantenerse en su valor original
-        // Esto hace que el código sea más fácil de analizar
-        $i = $start;
-        $sum = 0; // Inicialización de la suma
+  function sumNumbersFromRange(int $start, int $finish): int
+  {
+      // Técnicamente, se puede cambiar $start
+      // Pero los argumentos de entrada deben mantenerse en su valor original
+      // Esto hace que el código sea más fácil de analizar
+      $i = $start;
+      $sum = 0; // Inicialización de la suma
 
-        while ($i <= $finish) { // Avanzar hasta el final del rango
-            $sum = $sum + $i; // Calcular la suma para cada número
-            $i = $i + 1; // Pasar al siguiente número en el rango
-        }
+      while ($i <= $finish) { // Avanzar hasta el final del rango
+          $sum = $sum + $i; // Calcular la suma para cada número
+          $i = $i + 1; // Pasar al siguiente número en el rango
+      }
 
-        // Devolver el resultado obtenido
-        return $sum;
-    };
-    ```
+      // Devolver el resultado obtenido
+      return $sum;
+  }
+  ```
 
   La estructura general del bucle es estándar. Tiene tres componentes:
 
-  * Un contador que se inicializa con el valor inicial del rango.
-  * El bucle en sí con una condición de finalización cuando se alcanza el final del rango.
-  * La modificación del contador al final del cuerpo del bucle.
+  * Un contador que se inicializa con el valor inicial del rango
+  * El bucle en sí con una condición de finalización cuando se alcanza el final del rango
+  * La modificación del contador al final del cuerpo del bucle
 
   El número de iteraciones en este bucle es igual a `$finish - $start + 1`. Es decir, para un rango de 5 a 7, esto es 7 - 5 + 1, lo que da tres iteraciones.
 
@@ -78,7 +67,19 @@ theory: |
   // 14 es el resultado de sumar los números en el rango [2, 5]
   ```
 
-  La variable `$sum` se inicializa con el valor 0. ¿Por qué necesitamos especificar un valor inicial? Cualquier operación repetitiva comienza con un valor inicial. No se puede simplemente declarar una variable y comenzar a trabajar con ella dentro del bucle. Esto puede llevar a errores:
+  De forma visual, el proceso de acumulación de la suma se ve así:
+
+  ```text
+  sumNumbersFromRange(2, 5):
+
+  i=2: sum = 0 + 2 = 2
+  i=3: sum = 2 + 3 = 5
+  i=4: sum = 5 + 4 = 9
+  i=5: sum = 9 + 5 = 14
+                      └── resultado
+  ```
+
+  La variable `$sum` tiene un valor inicial igual a 0. ¿Por qué especificar un valor? Cualquier operación repetitiva comienza con algún valor. No se puede simplemente declarar una variable y comenzar a trabajar con ella dentro del bucle. Esto puede llevar a errores:
 
   ```php
   <?php
@@ -91,23 +92,27 @@ theory: |
   $sum = $sum + 2; // ?
   ```
 
-  Como resultado de esta llamada, `$sum` contendrá el resultado correcto, pero el intérprete mostrará un error: `PHP Notice:  Undefined variable: sum`. Esto ocurre porque se intenta usar una variable no definida. Por lo tanto, necesitamos algún valor. ¿Por qué se eligió 0 en el código anterior? Es muy fácil comprobar que todas las demás opciones darán un resultado incorrecto. Si el valor inicial es 1, el resultado será 1 más de lo esperado.
+  Como resultado de esta llamada, `$sum` contendrá el resultado correcto, pero el intérprete mostrará una advertencia: `PHP Warning:  Undefined variable $sum`. Esto ocurre porque se intenta usar una variable no definida. Por lo tanto, sí se necesita algún valor. ¿Por qué se eligió 0 en el código anterior? Es muy fácil comprobar que todas las demás opciones darán un resultado incorrecto. Si el valor inicial es 1, el resultado será 1 más de lo esperado.
 
-  En matemáticas, cada operación tiene un **elemento neutro**. Una operación con este elemento no cambia el valor sobre el que se realiza la operación:
+  En matemáticas, cada operación tiene un **elemento neutro de esa operación**. Una operación con este elemento no cambia el valor sobre el que se realiza la operación:
 
   * Cero para la suma: cualquier número + cero = el número mismo
   * Cero para la resta: cualquier número - cero = el número mismo
-  * Cadena vacía para la concatenación: `''` + `'string'` será `'string'`
+  * Cadena vacía para la concatenación: `'' . 'string'` será `'string'`
 
+  Por lo tanto, si estuviéramos multiplicando, en lugar de `0` usaríamos `1`.
 instructions: |
-  Implementa la función `multiplyNumbersFromRange()`, que multiplica los números en un rango especificado, incluyendo los límites del rango. Ejemplo de llamada:
+  Implementa la función `calculateElectricityBill()`, que recibe la cantidad de kilovatios-hora consumidos y devuelve el importe de la factura de electricidad.
 
-    ```php
-    <?php
+  En esta tarea se aplica una tarifa escalonada. Los primeros `100` kWh cuestan `5` rublos cada uno, los siguientes `100` kWh cuestan `7` rublos cada uno, y todos los kWh por encima de `200` cuestan `10` rublos cada uno.
 
-    multiplyNumbersFromRange(1, 5); // 1 * 2 * 3 * 4 * 5 = 120
-    multiplyNumbersFromRange(2, 3); // 2 * 3 = 6
-    multiplyNumbersFromRange(6, 6); // 6
-    ```
+  Recorre el consumo con un bucle y acumula gradualmente el importe total.
 
+  ```php
+  <?php
+
+  calculateElectricityBill(80);  // 400
+  calculateElectricityBill(150); // 850
+  calculateElectricityBill(250); // 1700
+  ```
 tips: []

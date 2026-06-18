@@ -1,30 +1,74 @@
+Strings are used very often in programming and in a wide variety of situations. We use them to work with text, display messages on the screen, process user input, and interact with external systems.
+
+![Strings](./assets/strings.png)
+
+From PHP's perspective, a string is simply a set of characters enclosed in quotes. Let's look at some examples:
 
 ```php
 <?php
 
 'Hello'
 'Goodbye'
-
 'G'
 ' '
 ''
 ```
 
-Which of these five items are strings?
+All of these options are strings.
 
-With the first two, everything is clear, they're strings, we've already worked with similar constructions and said that strings are sets of characters.
+- `'Hello'`, `'Goodbye'`, and `'G'` are strings made up of several characters or a single character
+- `' '` is a string consisting of a single space
+- `''` is an empty string, it contains no characters at all. It plays the same role as 0 in mathematics
 
-Any single character between parentheses is a string. `''`, is also a string (albeit empty). So everything inside the quotation marks can be considered a string, even if it's a space, one character, or no characters at all.
+In other words, anything inside quotes is considered a string, even if it's just a space or nothing at all.
 
-In previous lessons, we enclosed strings in single quotes. You can also use double quotes:
+If you display strings on the screen, `'Hello'` and `'Goodbye'` will be clearly visible. But `' '` and `''` can be confusing, because printing an empty string looks like a complete absence of output, while a string with a space shows "empty space" that is visually hard to tell apart. PHP, however, clearly distinguishes between them. An empty string means the absence of characters, whereas a string with a space contains a specific space character.
+
+A check question. Are these the same strings or not?
 
 ```php
 <?php
 
-print_r("Dracarys!");
+'хекслет'
+' хекслет'
 ```
 
-Imagine you want to type the line _dragon's mother_. The apostrophe before the letter **s** and a single quote are the same symbols. Let's print it:
+## Terminology. String or line?
+
+There is a terminological trap in programming.
+
+- A string (string) is a data type (the one we discussed above), for example `'hello'`.
+- A line (line) is a line of text in a file or in code.
+
+For example, the code below contains a line, but not a string.
+
+```php
+<?php
+
+print_r(5);
+```
+
+To avoid confusion, in this course we will use the following wording.
+
+- String, when we talk about the data type.
+- Line, when we talk about lines of code.
+
+## Single and double quotes
+
+In PHP, strings can be written in both single and double quotes:
+
+```php
+<?php
+
+print_r('Hello');
+print_r("Hello");
+```
+
+By default, it is customary to use single quotes `'`, unless you need the capabilities of double quotes inside the string. Many PHP code style standards follow this convention.
+
+## The problem with quotes inside a string
+
+Imagine you want to print the string *Dragon's mother*. It contains an apostrophe (*'s*), which matches the single quote character. Let's try this:
 
 ```php
 <?php
@@ -33,9 +77,7 @@ print_r('Dragon's mother');
 // PHP Parse error: syntax error, unexpected 's' (T_STRING), expecting ',' or ')'
 ```
 
-This program won't work.  From PHP's perspective, the line started with a single quote and then ended after the letter **n**. Then comes some characters: `s mother` without quotes, which are not a string. And then there's one quote mark that opens a string which is never closed: `');`. This code is syntactically incorrect (you can see it by the way the code is highlighted).
-
-It's a good idea here to use double quotes. This version of the program will work correctly:
+PHP will decide that the string ends after the word 'Dragon', and it won't recognize the rest as valid code, which causes a syntax error. To avoid this, we'll wrap the string in double quotes:
 
 ```php
 <?php
@@ -43,53 +85,51 @@ It's a good idea here to use double quotes. This version of the program will wor
 print_r("Dragon's mother");
 ```
 
-Now the interpreter knows that the string started with a double quote, so it must end with a double quote. And the single quote inside has become the part of the string.
+Now PHP understands that the single quote inside the string is an ordinary character, and the string itself begins and ends with double quotes.
 
-It works the other way too. If you want to use double quotes inside a string, you should enclose the string in single quotes. And the number of quote marks inside the string itself doesn't matter.
+If you need double quotes inside the string and single quotes outside, there won't be any problems either:
 
-Now, what if we want to create a string like this?
+```php
+<?php
+
+print_r('He said "No"');
+```
+
+Sometimes a string contains both types of quotes:
 
 ```text
 Dragon's mother said "No"
 ```
 
-It has both single and double quotes. What can we do in this case? We need to somehow tell the interpreter to consider each quote as part of the string, not the beginning or the end.
-
-To do this, you need to use an escape character. In our case, it's the character that marks the start and end of a string, either a single or double quote, depending. Use a backslash `\` before the character you want to escape.
+In this case, to keep PHP from confusing the quotes inside the string with the outer ones, the escape character, the backslash `\`, is used. It tells the interpreter that the character following it is part of the string, not a control character:
 
 ```php
 <?php
 
-// Only escape ", since in this situation
-// double quotes have a special meaning
 print_r("Dragon's mother said \"No\"");
 // => Dragon's mother said "No"
 ```
 
-Look closely: we had to use `\` for double quotes to escape them, and not for the single quote (apostrophe) because the string is written in double quotes. If the string were written in single quotes, the escape character would be used before the apostrophe, not before the double quotes.
+Here we escape the double quotes inside the string that is enclosed in double quotes.
+
+Note that PHP treats `\"` as a single quote character, not two characters. The same applies to `\'`, `\\`, and other similar sequences. They look like two characters in the code, but in the string they count as one.
+
+The same works the other way around:
 
 ```php
 <?php
 
-// \ is displayed if it's followed by a normal character, and
-// not a special one
-print_r("Death is \so terribly final");
-// => Death is \so terribly final
+print_r('Dragon\'s mother said "No"');
+// => Dragon's mother said "No"
 ```
 
-But what if you want to print the backslash? Just like any other special symbol, it escapes using a backslash too.
+## How to print a backslash
+
+To print the backslash itself, it also needs to be escaped:
 
 ```php
 <?php
 
 print_r("\\");
 // => \
-```
-
-Self-test: what will be printed?
-
-```php
-<?php
-
-print_r("\\ \\ \\\\ \\\ \'\"");
 ```

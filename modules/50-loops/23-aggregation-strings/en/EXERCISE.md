@@ -1,10 +1,17 @@
+Implement the `sanitizePhoneNumber()` function, which takes a phone number from a form and returns a string without spaces, parentheses, or hyphens.
 
-Write a function, `joinNumbersFromRange()`, which joins all numbers in a range into a string:
+Users enter numbers in different ways, but before saving they are often normalized to a single format. Go through the original string character by character and assemble a new number from useful characters only.
 
 ```php
 <?php
 
-joinNumbersFromRange(1, 1); // '1'
-joinNumbersFromRange(2, 3); // '23'
-joinNumbersFromRange(5, 10); // '5678910'
+sanitizePhoneNumber('+7 (999) 123-45-67'); // '+79991234567'
+sanitizePhoneNumber('8 800 555 35 35');    // '88005553535'
+sanitizePhoneNumber('(123) 456-7890');     // '1234567890'
 ```
+
+### Hints
+
+* The final result is a string.
+* Use an empty string as the initial value.
+* The `str_contains()` function will help you check whether a character is in the set `' ()-'`.

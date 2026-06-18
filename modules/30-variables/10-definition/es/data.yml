@@ -1,6 +1,9 @@
 ---
 name: ¿Qué es una variable?
-tips: []
+tips:
+  - >
+    [Nomenclatura en
+    programación](https://ru.hexlet.io/blog/posts/naming-in-programming?utm_source=code-basics&utm_medium=referral&utm_campaign=blog&utm_content=lesson)
 definitions:
   - name: Variable
     description: >-

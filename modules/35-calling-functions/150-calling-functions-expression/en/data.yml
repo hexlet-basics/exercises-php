@@ -1,2 +1,7 @@
 ---
-name: Function call - expression
+name: A function call is an expression
+definitions:
+  - name: An expression
+    description: >
+      a sequence of actions on data that leads to some result, which can be
+      used.

@@ -1,5 +1,1 @@
-Dada la variable `$url = 'https://hexlet.io'`, extrae e imprime el dominio sin el protocolo usando `substr()`:
-
-```text
-hexlet.io
-```
+El programa recibe la dirección completa de un sitio y debe extraer de ella solo el nombre del dominio, sin el protocolo `https://`. La variable `$url` almacena la dirección `https://hexlet.io`. Extrae con `substr()` el nombre de dominio `hexlet.io` y muéstralo en pantalla. La tarea se puede resolver de distintas maneras.

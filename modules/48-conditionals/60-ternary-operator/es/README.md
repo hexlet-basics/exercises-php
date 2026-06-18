@@ -3,7 +3,7 @@ Echa un vistazo a la definición de una función que devuelve el módulo de un n
 ```php
 <?php
 
-function abs($number)
+function abs(int $number): int
 {
     if ($number >= 0) {
         return $number;
@@ -12,20 +12,16 @@ function abs($number)
     return -$number;
 }
 
-abs(10);  // 10
-abs(-10); // 10
+print_r(abs(10) . "\n");  // => 10
+print_r(abs(-10) . "\n"); // => 10
 ```
 
-¿Se puede escribir de forma más concisa? Algo como `return RESPUESTA DEPENDIENDO DE LA CONDICIÓN`. Para esto, la expresión a la derecha de `return` debe ser una expresión. Pero hay un problema: `if` es una instrucción, no una expresión.
-
-En PHP existe una construcción que tiene un efecto similar a la construcción *if-else*, pero es una expresión. Se llama **operador ternario**, y es lo que vamos a estudiar en esta lección.
-
-El **operador ternario** es el único operador de su tipo que requiere tres operandos:
+Pero se puede escribir de forma más concisa. En PHP existe una construcción que funciona como *if-else*, pero que a la vez es una expresión: su resultado se puede devolver directamente desde una función. Se llama **operador ternario** y es el único operador de PHP que requiere tres operandos:
 
 ```php
 <?php
 
-function abs($number)
+function abs(int $number): int
 {
     return $number >= 0 ? $number : -$number;
 }
@@ -39,37 +35,37 @@ El patrón general se ve así:
 
 ![Operador ternario](../assets/ternary-operator.png)
 
-Vamos a reescribir la función `getTypeOfSentence()` de la misma manera. Veamos cómo era antes:
+Reescribamos la versión inicial de `getTypeOfSentence()` de la misma manera. Veamos cómo era:
 
-  ```php
-  <?php
+```php
+<?php
 
-  function getTypeOfSentence($sentence)
-  {
-      $lastChar = substr($sentence, -1);
+function getTypeOfSentence(string $sentence): string
+{
+    $lastChar = $sentence[-1];
 
-      if ($lastChar === '?') {
-          return 'question';
-      }
+    if ($lastChar === '?') {
+        return 'question';
+    }
 
-      return 'normal';
-  }
-  ```
+    return 'normal';
+}
+```
 
-  Y ahora, cómo quedó:
+Y ahora, cómo quedó:
 
-  ```php
-  <?php
+```php
+<?php
 
-  function getTypeOfSentence($sentence)
-  {
-      $lastChar = substr($sentence, -1);
+function getTypeOfSentence(string $sentence): string
+{
+    $lastChar = $sentence[-1];
 
-      return ($lastChar === '?') ? 'question' : 'normal';
-  }
+    return $lastChar === '?' ? 'question' : 'normal';
+}
 
-  getTypeOfSentence('Hodor');  // normal
-  getTypeOfSentence('Hodor?'); // question
-  ```
+print_r(getTypeOfSentence('Hodor') . "\n");  // => normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
+```
 
-Es posible anidar operadores ternarios dentro de otros operadores ternarios. Sin embargo, no es recomendable hacerlo. Este tipo de código es difícil de leer y depurar, por lo que los operadores ternarios anidados se consideran una mala práctica.
+Quizás ya hayas adivinado que un operador ternario se puede anidar dentro de otro operador ternario. Esto es posible, pero es mejor no hacerlo. Este tipo de código es difícil de leer y depurar, por lo que los operadores ternarios anidados se consideran una muy mala práctica.

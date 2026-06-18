@@ -1,17 +1,25 @@
-
 El trabajo con bucles generalmente se reduce a dos escenarios:
 
-1. Agregación. Acumulación de resultados durante las iteraciones y trabajo con ellos después del bucle. La inversión de una cadena es un ejemplo de este tipo de escenario.
-2. Ejecución del bucle hasta que se alcance un resultado deseado y luego salir. Por ejemplo, la tarea de buscar números primos. Recordemos que un número primo es aquel que solo se divide exactamente por sí mismo y por uno.
+1. Agregación. Acumulación de resultados durante las iteraciones y trabajo con ellos después del bucle. La inversión de una cadena es justamente un ejemplo de este tipo de escenario.
+2. Ejecución del bucle hasta alcanzar el resultado necesario y salir. Por ejemplo, la tarea de buscar números primos. Recordemos que un número primo es un número que se divide exactamente solo por sí mismo y por uno.
 
-Consideremos un algoritmo simple para verificar la primariedad de un número. Dividiremos el número buscado `x` por todos los números en el rango desde dos hasta `x - 1` y veremos el residuo. Si no se encuentra ningún divisor en este rango que divida al número `x` sin residuo, entonces tenemos un número primo.
+Consideremos un algoritmo para verificar si un número es primo. Dividiremos el número buscado `x` por todos los números en el rango desde dos hasta `x - 1` y observaremos el residuo. Si en este rango no se encuentra ningún divisor que divida al número `x` sin residuo, entonces tenemos un número primo.
 
-Si lo pensamos, podemos notar que es suficiente verificar los números hasta `x - 1/2`, en lugar de `x - 1`. Por ejemplo, 11 no se divide por 2, 3, 4, 5. Pero tampoco se dividirá por números mayores que la mitad de sí mismo. Por lo tanto, podemos realizar una pequeña optimización y verificar la división solo hasta `x / 2`.
+## Verificación de que 5 es primo: análisis paso a paso
+
+1. Tomamos el número x = 5. Buscamos los posibles divisores en el rango desde 2 hasta x - 1, es decir, desde 2 hasta 4.
+2. Dividimos 5 entre 2. El residuo es 1, no encontramos divisor, continuamos.
+3. Dividimos 5 entre 3. El residuo es 2, no encontramos divisor, continuamos.
+4. Dividimos 5 entre 4. El residuo es 1, no encontramos divisor, finalizamos el recorrido.
+
+Resultado. En el rango 2…4 no se encontró ningún número por el que 5 se divida sin residuo. Por lo tanto, 5 es un número primo.
+
+Si lo pensamos, podemos notar que es suficiente verificar los números no hasta `x - 1`, sino hasta la mitad del número. Por ejemplo, 11 no se divide por 2, 3, 4, 5. Pero más allá tampoco se dividirá, con seguridad, por números mayores que su mitad. Así que podemos hacer una pequeña optimización y verificar la división solo hasta `x / 2`:
 
 ```php
 <?php
 
-function isPrime($number)
+function isPrime(int $number): bool
 {
     if ($number < 2) {
         return false;
@@ -30,12 +38,25 @@ function isPrime($number)
     return true;
 }
 
-isPrime(1); // false
-isPrime(2); // true
-isPrime(3); // true
-isPrime(4); // false
+var_dump(isPrime(1)); // => bool(false)
+var_dump(isPrime(2)); // => bool(true)
+var_dump(isPrime(3)); // => bool(true)
+var_dump(isPrime(4)); // => bool(false)
 ```
 
-El algoritmo está construido de tal manera que si durante la división secuencial por números hasta `x / 2` se encuentra al menos uno que divide sin residuo, entonces el argumento pasado no es un número primo y, por lo tanto, los cálculos posteriores no tienen sentido. En este punto, se debe devolver `false`.
+*Para ser completamente honestos, para resolver la tarea basta con verificar los números hasta el valor de la raíz cuadrada de `$number`, pero en nuestro caso es importante centrarse en comprender el trabajo con condiciones dentro del bucle.*
 
-Y solo si el bucle se ejecuta por completo, se puede concluir que el número es primo, ya que no se encontró ningún número que divida al número sin residuo.
+```text
+while (...) {
+    if (condición) {
+        return valor;  ← salida de la función (y del bucle)
+    }
+    ...
+}
+─────────────────────────
+Sin return el bucle continúa hasta el final
+```
+
+El algoritmo está construido de tal manera que si durante la división secuencial por números hasta `x / 2` se encuentra al menos uno que divide sin residuo, entonces el argumento pasado no es un número primo y, por lo tanto, los cálculos posteriores no tienen sentido. En este punto se coloca el retorno de `false`.
+
+Y solo si el bucle se ejecutó por completo, se puede concluir que el número es primo, ya que no se encontró ningún número que divida al número sin residuo.

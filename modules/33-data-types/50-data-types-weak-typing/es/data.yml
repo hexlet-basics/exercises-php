@@ -1,3 +1,5 @@
 ---
 name: Tipado débil
-tips: []
+tips:
+  - |
+    [Tipado](https://es.wikipedia.org/wiki/Tipado_fuerte_y_d%C3%A9bil)

@@ -1,4 +1,6 @@
 ---
 name: Unicode
-tips: []
+tips:
+  - |
+    [What are encodings?](https://guides.hexlet.io/en/encoding/)
 definitions: []

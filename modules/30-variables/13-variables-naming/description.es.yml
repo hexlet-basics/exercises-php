@@ -2,31 +2,63 @@
 
 name: Elección del nombre de la variable
 theory: |
-  En esta lección hablaremos sobre la nomenclatura. Comenzaremos estudiando un ejemplo. Veamos el siguiente programa:
+  Imagina que tenemos el siguiente programa:
 
   ```php
   <?php
 
   $x = '¡Padre!';
   print_r($x);
-  print_r($x);
   ```
 
-  Funciona, pero tiene un nombre de variable extraño: `$x`. A los ordenadores no les importa cómo llamamos a las variables, pero a los programadores sí. Escribimos código mucho menos de lo que lo leemos. Además, a menudo tenemos que leer código escrito por otras personas. La calidad y la comprensibilidad de los nombres de las variables son fundamentales para el éxito en el análisis del código.
+  Desde el punto de vista técnico, todo funciona. Ya hemos visto ejemplos similares, pero aquí se usa una variable con el nombre `$x`. Los nombres malos dificultan leer y entender el código. Aquí tienes algunos ejemplos de variables mal elegidas:
 
-  Es mejor tomarse el tiempo para pensar en un nombre que describa bien la esencia de la variable, en lugar de nombrarla al azar y tener que cambiarla en el futuro. Intente darles nombres que sean lo más comprensibles posible sin contexto y sin estudiar el código circundante.
+  ```php
+  <?php
 
-  Entre los desarrolladores hay un chiste: "lo más difícil de la programación son los nombres de las variables y la invalidación de la caché". De hecho, es difícil inventar nombres. Por ejemplo, ¿qué nombre elegiría para una variable que almacena la cantidad de pedidos impagados de clientes con deudas del trimestre anterior?
+  $a = "John";
+  $n = 42;
+  $ddr = "New York";
+  ```
 
-  Para sumergirse más en el tema, intente hacer una tarea adicional: invente un nombre para una variable que almacene "la cantidad de hermanos y hermanas del rey". Escríbalo en un bloc de notas o envíeselo por correo electrónico. No incluya nada más que el nombre de la variable. Volveremos a este tema en unas lecciones.
+  ¿Qué son estas variables? ¿Qué se almacena en ellas? Para entenderlo, hay que leer todo el resto del código y adivinar por el contexto.
 
+  ![Nomenclatura](./assets/naming.png)
+
+  Al ordenador no le importa cómo se llama una variable. Para él, `$x`, `$abc`, `$message` o `$elephantInTheRoom` son simplemente etiquetas para almacenar datos. A las personas les importa otra cosa. Los programadores leen código mucho más a menudo de lo que lo escriben. Por eso los nombres de las variables son una parte importante de la comunicación a través del código.
+
+  ## Buenos ejemplos
+
+  ```php
+  <?php
+
+  $userName = "Arya Stark";
+  $unpaidOrdersCount = 3;
+  $maxAttempts = 5;
+  ```
+
+  Un buen nombre de variable ayuda a entender qué hace el programa sin tener que leer detenidamente cada línea.
+  Es especialmente importante dar nombres cuyo significado se entienda sin contexto, sin necesidad de leer todo el código que los rodea.
+
+  Aquí tienes algunos consejos:
+
+  - Usa el inglés. Es el estándar internacional. Es mejor escribir `$ordersCount` en lugar de `$kolvoZakazov`. Si el inglés todavía te resulta difícil, usa un traductor, no pasa nada. Con el tiempo será más fácil.
+  - Procura que el nombre refleje el significado de la variable. Que sea un poco más largo, pero comprensible.
+  - No tengas miedo de dedicar tiempo a elegir un buen nombre. Es una inversión en la legibilidad y el mantenimiento del código.
+
+  Entre los programadores incluso hay un chiste: "Algunas de las tareas más difíciles en la programación son el almacenamiento en caché y la elección de nombres para las variables." A veces, inventar un nombre adecuado realmente es difícil. Aquí tienes un ejemplo: ¿cómo llamarías a una variable que almacena la cantidad de pedidos impagados de clientes con deudas del trimestre anterior?
+
+  Y ahora un pequeño ejercicio: Inventa un nombre para una variable que almacene la "cantidad de hermanos y hermanas del rey". Escríbelo en un bloc de notas o envíatelo por correo electrónico. Solo el nombre, sin explicaciones. Volveremos a esta tarea en unas lecciones.
 instructions: |
   Crea una variable que describa la cantidad de mis hermanos y asígnele el valor *2*. Imprime el contenido de la variable. Luego, compara tu nombre con el nombre utilizado en la solución del profesor.
-
 tips:
   - |
     [Nomenclatura en programación](https://codica.la/blog/naming-in-programming)
-  - |
+  - >
     [Errores en la nomenclatura de variables](https://codica.la/blog/naming-errors-1)
 
-definitions: []
+definitions:
+  - name: Variable
+    description: >-
+      una forma de guardar información y darle un nombre para su uso posterior
+      en el código.

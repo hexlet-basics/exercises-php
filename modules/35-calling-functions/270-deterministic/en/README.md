@@ -1,14 +1,24 @@
+Functions in any programming language have fundamental properties. These properties help you understand how a function will behave in different situations, how to test it, and where to use it. One of these properties is **determinism**.
 
-Regardless of the programming language, functions possess certain fundamental properties. Knowing these properties makes it easier to predict the behavior of functions, as well how they can be tested and used. These properties include determinacy. A function is called deterministic when it always returns the same result for the same input arguments. For example, the function that flips a string is deterministic.
+![Two people sitting and talking about a deterministic function](./assets/deterministic.png)
+
+A **deterministic function** always returns the same result for the same input data. For example, a function that counts the number of characters can be called deterministic:
 
 ```php
 <?php
 
-strrev('cat'); // tac
-strrev('cat'); // tac
+strlen('hexlet'); // 6
+strlen('hexlet'); // 6
+
+strlen('wow'); // 3
+strlen('wow'); // 3
 ```
 
-No matter how many times we call it with `'cat'`, it will always return `'tac'` (though you could technically write it differently, but that would make no sense and cause more problems). In turn, a function that returns a random number isn't deterministic, because we'll always get different results for the same input (even if it's empty, i.e., no arguments are passed). How it differs doesn't matter, even if at least one in a million calls returns something different, this function is deemed non-deterministic.
+The `strlen()` function can be called endlessly with the same argument, and it will always return the same result.
+
+## Non-deterministic functions
+
+The opposite type is **non-deterministic functions**. They can return different results for the same input data or in the absence of it (functions without parameters). A good example is the `rand()` function, which returns a random number:
 
 ```php
 <?php
@@ -17,4 +27,21 @@ rand(); // 827606195
 rand(); // 635369726
 ```
 
-So what use is knowing that to us? Determinism significantly affects many aspects. Deterministic functions are easy to work with, easy to optimize, and easy to test. If you can make the function deterministic, then you should absolutely do so.
+This function has no arguments, but its result is different every time. If even one call out of millions gives a different result, the function is considered non-deterministic.
+
+```text
+Deterministic:              Non-deterministic:
+strlen('abc') → always 3    rand() → 827606195
+strlen('abc') → always 3    rand() → 635369726
+strlen('abc') → always 3    rand() → 142503087
+```
+
+## Why this matters
+
+Determinism affects how we work with functions.
+
+- deterministic functions are easy to test and predict;
+- they are easier to optimize and reuse;
+- non-deterministic functions are harder to check, because the result changes.
+
+That's why, wherever possible, it's better to aim for a function to be deterministic.

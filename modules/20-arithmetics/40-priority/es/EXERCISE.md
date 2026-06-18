@@ -1,3 +1,8 @@
-Dada la expresión `70 * 3 + 4 / 8 + 2`.
+Tú y 4 amigos (5 personas en total) habéis pedido 2 pizzas a 300 rublos cada una y 4 bebidas a 50 rublos cada una. Necesitáis dividir la cuenta en partes iguales.
 
-Coloca los paréntesis de manera que ambas sumas (`3 + 4`) y (`8 + 2`) se calculen primero. Imprime el resultado en pantalla.
+Escribe un programa de una sola línea con `print_r()`, colocando los paréntesis de manera que primero se calcule la suma total y luego se divida entre todos:
+
+```text
+sin paréntesis:   2 * 300 + 4 * 50 / 5  =  640  ← incorrecto
+con paréntesis:  (2 * 300 + 4 * 50) / 5  =  160  ← correcto
+```

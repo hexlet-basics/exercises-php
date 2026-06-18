@@ -1,16 +1,13 @@
-
-In PHP you can "request" and display any ASCII character. For instance:
+The program receives the numeric codes of characters and displays them on the screen — this is handy when a character is hard to type on the keyboard. Find the characters with codes 126, 94, and 37 in the [ASCII table](https://www.ascii-code.com) (we're interested in the decimal code — *dec* or *decimal*) and print each one on a separate line using the `chr()` function and a line break:
 
 ```php
-<?php
-
-print_r(chr(63));
+print_r(chr(...) . "\n");
+print_r(chr(...) . "\n");
+print_r(chr(...) . "\n");
 ```
 
-Character 63 will be printed - a question mark `?`. You can print any character this way.
+For example, the character `?` has code 63:
 
-Use [the ASCII code table](https://www.ascii-code.com). In this table, we're interested in the decimal code (*dec* or *decimal*), which is used to encode characters.
-
-Using the example above and the table you found, display `~^%`.
-
-(Of course, you could "cheat" the tests and just write `print_r('~^%')`, but that would be no fun at all :)
+```php
+print_r(chr(63)); // output: ?
+```

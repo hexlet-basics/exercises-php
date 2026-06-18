@@ -1,43 +1,59 @@
+El cuerpo del bucle, al igual que el cuerpo de una función, es el lugar donde se ejecutan las instrucciones. Esto significa que podemos utilizar dentro de él todo lo aprendido anteriormente, por ejemplo, las estructuras condicionales. Así, el programa repite una misma acción varias veces, pero en cada repetición toma una decisión.
 
-El cuerpo del bucle, al igual que el cuerpo de una función, es el lugar donde se ejecutan las instrucciones. Esto significa que podemos utilizar todo lo aprendido anteriormente dentro de él, por ejemplo, estructuras condicionales.
+![Condiciones dentro de un bucle](./assets/conditions-inside-loops.png)
 
-Imagina una función que cuenta cuántas veces aparece una letra en una oración. Aquí tienes un ejemplo de cómo funciona:
+Supongamos que necesitamos recorrer los números del `1` al `10` e imprimir solo los pares. El bucle recorre todos los números uno tras otro, y la condición dentro del bucle decide cuáles de ellos llegan a la pantalla.
+
+Para recorrerlos necesitamos un contador. Este guarda el número actual y se incrementa después de cada repetición. Debemos imprimir un número solo cuando pasa la comprobación:
 
 ```php
 <?php
 
-countChars('El miedo corta más profundo que las espadas.', 'e'); // 4
-// Si no se encuentra ninguna coincidencia, el resultado es 0
-countChars('Sansa', 'y'); // 0
+$number = 1;
+while ($number <= 10) {
+    if ($number % 2 === 0) {
+        print_r("{$number}\n");
+    }
+    $number = $number + 1;
+}
+
+// => 2
+// => 4
+// => 6
+// => 8
+// => 10
 ```
 
-Antes de ver el contenido de la función, intenta responder las siguientes preguntas:
+El bucle `while` recorre los números del `1` al `10`. La condición dentro del bucle comprueba el número actual. Si `$number % 2 === 0`, el número es divisible entre `2` sin resto, y el programa lo imprime en la pantalla.
 
-* ¿Es esta operación una agregación?
-* ¿Cómo se realiza la comprobación de la aparición de un carácter?
+El contador se incrementa después de la comprobación en cualquier caso. Esto es importante. Si incrementas `$number` solo dentro del `if`, el bucle se detendrá en el primer número impar y se ejecutará infinitamente.
+
+## Funcionamiento paso a paso
+
+Antes de la primera repetición, `$number` es igual a `1`.
+
+**Paso 1.** La condición del bucle `$number <= 10` es verdadera, por lo que el programa entra en el cuerpo del bucle. El número `1` es impar, el bloque `if` no se ejecuta. Luego `$number` se incrementa a `2`.
+
+**Paso 2.** La condición del bucle vuelve a ser verdadera. El número `2` es par, por lo que el programa imprime `2`. Luego `$number` se incrementa a `3`.
+
+A continuación, el bucle sigue comprobando cada número. Los números impares los omite, y los pares los imprime en la pantalla. Cuando `$number` se vuelva igual a `11`, la condición `$number <= 10` se volverá falsa, y el bucle terminará.
+
+## Las condiciones cambian la acción, no el movimiento
+
+En este tipo de bucles es conveniente separar las dos partes. El contador lleva el programa al siguiente valor, y el `if` decide qué hacer con el valor actual.
 
 ```php
 <?php
 
-function countChars($str, $char)
-{
-    $i = 0;
-    $count = 0;
-    while ($i < strlen($str)) {
-        if ($str[$i] === $char) {
-            // Solo contamos los caracteres que coinciden
-            $count = $count + 1;
-        }
-        // El contador se incrementa en cualquier caso
-        $i = $i + 1;
+$number = 1;
+while ($number <= 10) {
+    if ($number > 5) {
+        print_r("{$number}\n");
     }
-
-    return $count;
+    $number = $number + 1;
 }
 ```
 
-Este problema es una agregación. Aunque no cuenta todos los caracteres, aún es necesario analizar cada uno para calcular la suma total.
+Aquí el bucle recorre el mismo rango del `1` al `10`, pero la condición dentro es diferente. Por eso el programa imprime solo los números mayores que `5`.
 
-La diferencia clave de este bucle con los que hemos visto anteriormente es la presencia de una condición dentro del cuerpo. La variable `$count` solo se incrementa cuando el carácter actual coincide con el esperado.
-
-En general, esta es una función agregada típica que devuelve la cantidad de caracteres necesarios al código que la llama.
+La condición dentro del bucle puede comprobar cualquier cosa. Por ejemplo, la paridad de un número, la coincidencia de un carácter, la longitud de una cadena o el valor de una variable. Lo importante es que el contador siga cambiando para que el bucle pueda terminar.

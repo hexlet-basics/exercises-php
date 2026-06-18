@@ -1,1 +1,1 @@
-En el código del programa se han definido dos variables que contienen nombres de empresas. Calcula la longitud total de los nombres en caracteres y muéstrala en pantalla.
+Un sitio web comprueba si la publicidad de dos empresas asociadas cabrá en una sola línea. Sus nombres están definidos en el código: cuenta la cantidad total de caracteres en ambos nombres con la ayuda de la función `strlen()` y muéstrala en pantalla.

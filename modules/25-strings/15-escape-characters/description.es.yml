@@ -2,60 +2,158 @@
 
 name: Secuencias de escape
 theory: |
-  A veces necesitamos colocar varias líneas una tras otra. Para hacer esto, debemos decirle al intérprete "presiona Enter" - hacer un salto de línea después del signo de interrogación. Esto se puede hacer con el carácter de salto de línea - `\n`:
+  Supongamos que queremos mostrar el texto de abajo en dos líneas:
+
+  ```text
+  - Are you hungry?
+  - Aaaarrrgh!
+  ```
+
+  Si simplemente le pasamos este texto a `print_r()`, PHP imprimirá todo en una sola línea. Técnicamente, podríamos escribir dos `print_r()` seguidos, pero imaginemos que queremos hacerlo con uno solo:
 
   ```php
   <?php
 
-  print_r("- ¿Tienes hambre?\n- ¡Aaaarrrgh!");
+  print_r("- Are you hungry?- Aaaarrrgh!");
+  // => - Are you hungry?- Aaaarrrgh!
   ```
 
-
-  Resultado:
-
-  <pre class='hexlet-basics-output'>
-  - ¿Tienes hambre?
-  - ¡Aaaarrrgh!
-  </pre>
-
-  `\n` es un carácter especial. En la literatura a menudo se le llama *LF* (Line Feed). Desde el punto de vista de la computadora, es un solo carácter de salto de línea invisible:
+  Para que cada una empiece en una nueva línea, hay que añadir un salto de línea, es decir, "presionar Enter". En programación esto se implementa añadiendo caracteres especiales, en este caso `\n`. Sí, no es un error tipográfico. A pesar de que aquí vemos dos caracteres, desde el punto de vista de PHP es un solo carácter:
 
   ```php
   <?php
 
-  // No hemos estudiado esto, pero debes saber la verdad
-  // A continuación, hay un código que devuelve la longitud de una cadena
-  strlen("a");    // 1
-  strlen("\n");   // 1 !!!
-  strlen("\n\n"); // 2 !!!
+  print_r("- Are you hungry?\n- Aaaarrrgh!");
   ```
 
-  `\n` es una forma de escribir el carácter de salto de línea, pero el salto de línea en sí es un solo carácter invisible. Dado que la cantidad de caracteres en el teclado es limitada y se destina a los más importantes, todos los caracteres especiales se implementan como tales representaciones.
+  El resultado será así:
 
-  El carácter de salto de línea no es específico de la programación. En muchos editores hay una opción que permite mostrar caracteres invisibles. Con ella, se puede entender dónde se encuentran. Aunque esto es solo una representación esquemática, estos caracteres no tienen una representación gráfica, son invisibles.
+  ```text
+  - Are you hungry?
+  - Aaaarrrgh!
+  ```
 
-  `\n` es un ejemplo de **secuencia de escape**. También se les llama construcciones de control. Hay muchas de estas secuencias de caracteres, pero en programación solo se encuentran algunas de ellas con frecuencia. Los programadores a menudo necesitan usar el salto de línea `\n` para formatear correctamente el texto.
+  ## ¿Qué es `\n`?
 
-  Las secuencias de escape como `\n` solo funcionan dentro de comillas dobles.
+  `\n` es una secuencia de escape (en inglés escape sequence, a veces se dice "secuencia escapada"). Denota un salto de línea, pero no se muestra directamente. No verás `\n` en la salida del programa, ya que solo influye en la disposición del texto.
 
-  Si necesitamos imprimir `\n` como texto, podemos usar el método de escape que ya conocemos: agregar otro `\` al principio. Como resultado, la secuencia `\\n` se mostrará como los caracteres `\` y `n`, que van uno tras otro.
+  En los editores de texto, al presionar Enter se añade el carácter invisible LF (Line Feed). Eso es justamente lo que significa `\n`. A veces se pueden ver estos caracteres si se activa la visualización de caracteres especiales:
 
-  En Windows, se utiliza `\r\n` como salto de línea predeterminado. Esta combinación funciona bien solo en Windows, pero crea problemas al transferir a otros sistemas. Por ejemplo, cuando en un equipo de desarrollo hay usuarios tanto de Windows como de Linux.
+  ```text
+  - Привет!¶
+  - О, привет!¶
+  - Как дела?
+  ```
 
-  La secuencia `\r\n` tiene diferentes interpretaciones según la codificación seleccionada. Esto lo veremos más adelante. Por esta razón, en el entorno de desarrollo, siempre se utiliza `\n` sin `\r`, ya que LF siempre se interpreta de la misma manera y funciona perfectamente en cualquier sistema. Por lo tanto, debes configurar tu editor para usar `\n`.
+  Las impresoras, los editores y el intérprete de PHP entienden `\n` como una orden de empezar el texto en una nueva línea.
 
+  Una particularidad importante de PHP: las secuencias de escape como `\n` solo funcionan dentro de comillas dobles. En comillas simples, `\n` son simplemente dos caracteres ordinarios, `\` y `n`:
+
+  ```php
+  <?php
+
+  print_r("Hello\nWorld");
+  // Hello
+  // World
+
+  print_r('Hello\nWorld');
+  // => Hello\nWorld
+  ```
+
+  ## Ejemplos de uso de `\n`
+
+  Así es como PHP procesa la secuencia de escape `\n`:
+
+  ```text
+  En el código  "Hello\nWorld"
+                     ↓
+  En pantalla   Hello
+                World
+  ```
+
+  La ubicación de `\n` cambia la salida final:
+
+  ```php
+  <?php
+
+  print_r("Hello\nWorld");
+  // Hello
+  // World
+
+  print_r("Hello \nWorld");
+  // Hello
+  // World  (al final de la primera línea hay un espacio)
+
+  print_r("Hello\n World");
+  // Hello
+  //  World  (en la segunda línea hay un espacio al inicio)
+
+  print_r("Hello\n\nWorld");
+  // Hello
+  //
+  // World  (una línea vacía entre ellas)
+  ```
+
+  Los espacios antes o después de `\n` también se tienen en cuenta. PHP los percibe como caracteres ordinarios y los muestra en la salida.
+
+  También puedes insertar `\n` en cualquier parte de la cadena — antes, después o incluso usarlo por separado:
+
+  ```php
+  <?php
+
+  print_r("First line\n");
+  print_r("\n"); // Simplemente una línea vacía
+  print_r("Second line");
+  ```
+
+  El resultado será así:
+
+  ```text
+  First line
+
+  Second line
+  ```
+
+  ## Cómo imprimir el propio carácter `\n`
+
+  `\n` en PHP es una secuencia de escape. Controla la disposición del texto y no se muestra en la pantalla como caracteres ordinarios. Si necesitas mostrar precisamente los caracteres `\` y `n`, y no un salto de línea, hay que escaparlos. Para esto, se añade otra barra antes de la barra invertida:
+
+  ```php
+  <?php
+
+  print_r("Hello\\nWorld");
+  // => Hello\nWorld
+
+  // Si olvidas indicar la segunda barra
+  print_r("Hello\nWorld");
+  // Hello
+  // World
+  ```
+
+  En este caso, PHP entiende `\\` como una barra invertida ordinaria y muestra la cadena sin salto de línea.
+
+  ## Otras secuencias de escape
+
+  Además de `\n`, en PHP hay otras secuencias de escape:
+
+  - `\t` denota una tabulación (el equivalente de la tecla Tab)
+  - `\r` denota un retorno de carro (se usa en Windows, pero rara vez se aplica en código PHP)
+  - En programación, lo más habitual es usar precisamente `\n`, basta para la mayoría de las tareas
+
+  ## Detalles importantes
+
+  - `\n` es un solo carácter, a pesar de que en el código se escribe como dos (`\` y `n`)
+  - Las secuencias de escape en PHP solo funcionan dentro de comillas dobles
+  - En Windows se usa por defecto la combinación `\r\n`, pero en el desarrollo multiplataforma se acostumbra usar solo `\n` para evitar problemas al trasladar el código entre sistemas. Por eso conviene configurar tu editor para usar `\n`
 instructions: |
-  Escribe un programa que muestre en la pantalla:
+  Estás escribiendo un programa que le muestra al usuario una pista sobre cómo dividir el texto en líneas. Muestra la pista con una sola llamada a `print_r()`:
 
-      - Did Joffrey agree?
-      - He did. He also said "I love using \n".
-  El programa debe usar solo un `print_r()`, pero el resultado en la pantalla debe verse exactamente como se muestra arriba.
+  ```text
+  Для разделения строк используйте "\n"
+  Пример: print_r("строка1\nстрока2")
+  ```
 
-definitions:
-  - name: Secuencia de escape
-    description: |
-      una combinación especial de caracteres en un texto. Por ejemplo, `\n` es un salto de línea.
-
+  Ten en cuenta: el `\n` de la primera línea es texto literal, no un salto de línea.
 tips:
   - |
     [Historia del salto de línea](https://es.wikipedia.org/wiki/Salto_de_l%C3%ADnea#Historia)

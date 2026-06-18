@@ -1,5 +1,9 @@
 ---
-name: Default Arguments
+name: Default Parameters
+tips:
+  - >
+    [Default parameter
+    values](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.default)
 definitions:
-  - name: The default argument
-    description: is an optional function argument.
+  - name: A default parameter
+    description: an optional function parameter.

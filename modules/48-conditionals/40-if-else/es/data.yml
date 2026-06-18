@@ -4,5 +4,5 @@ tips: []
 definitions:
   - name: else
     description: >-
-      a way to specify a code block that will be executed if the condition in
-      `if` is not satisfied
+      una forma de especificar un bloque de código que se ejecutará si la
+      condición en `if` no se cumple

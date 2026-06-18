@@ -1,6 +1,8 @@
 ---
-name: Heredoc
+name: Cadenas multilínea
 definitions: []
 tips:
   - >
     [Heredoc](https://www.php.net/manual/es/language.types.string.php#language.types.string.syntax.heredoc)
+  - >
+    [Nowdoc](https://www.php.net/manual/es/language.types.string.php#language.types.string.syntax.nowdoc)

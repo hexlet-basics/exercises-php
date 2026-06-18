@@ -1,2 +1,3 @@
+The site URL is used in several places in the program. To avoid duplicating the string, let's store it in a variable.
 
-Create a variable named `$motto` containing `What Is Dead May Never Die!`. Print its contents.
+Create a variable `$url` with the value `https://hexlet.io` and print it to the screen twice — each value on its own line. Use `\n` to break the line.

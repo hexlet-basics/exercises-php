@@ -1,8 +1,8 @@
-Print the first and last letters of the sentence stored in the variable `text` using this format:
+The application shows a short summary of a text: its first and last characters. Print the first and last characters of the string from the variable `$text` to the screen in the following format:
 
 ```text
-First: N
-Last: t
+First: H
+Last: !
 ```
 
-Try to only create one variable you want to assign the text to before you print it. In this lesson, we're practising building a compound expression.
+Try to create only one variable, into which the necessary text is written right away before printing it to the screen. In this lesson, we are practicing the skill of assembling a compound expression.

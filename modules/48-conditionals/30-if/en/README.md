@@ -1,15 +1,55 @@
-
-The task of a predicate is to get an answer to a question, but usually this isn't enough; you often have to perform a certain action depending on the answer.
-
-Let's write a function that determines the type of a sentence that's passed to it. To begin with, it will distinguish between normal sentences and question sentences.
+Logical expressions let you check different conditions. But on their own, they only return `true` or `false`. So that a program can perform different actions depending on the result, PHP has a special `if` construct:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+if (5 > 3) {
+    print_r('Yes, it is true');
+}
+```
+
+Here the string `'Yes, it is true'` is printed, because the condition `5 > 3` is true.
+
+```text
+┌───────────┐
+│ condition?│
+└─────┬─────┘
+ true │
+      ↓
+┌───────────┐
+│ if body   │
+└───────────┘
+```
+
+## Code blocks
+
+After the word `if`, the condition is written in parentheses, and then a block of code is described in curly brackets. All the instructions inside the curly brackets belong to a single block:
+
+```php
+<?php
+
+if (10 === 10) {
+    print_r("First\n");
+    print_r("Second\n");
+}
+
+print_r('Goodbye!');
+```
+
+Here `First` and `Second` are printed, because the condition was satisfied. And `Goodbye!` is printed in any case, since this instruction is already outside the block. The principle is the same as in function definitions.
+
+## Using if inside a function
+
+Let's look at a function that determines the type of a sentence passed to it. If it ends with a question mark, the function returns `'question'`, otherwise it returns `'normal'`:
+
+```php
+<?php
+
+function getTypeOfSentence(string $sentence): string
 {
-    // a simple way to extract the last character
+    // A simple way to extract the last character
     $lastChar = $sentence[-1];
+
     if ($lastChar === '?') {
         return 'question';
     }
@@ -17,33 +57,43 @@ function getTypeOfSentence($sentence)
     return 'normal';
 }
 
-getTypeOfSentence('Hodor');  // normal
-getTypeOfSentence('Hodor?'); // question
+print_r(getTypeOfSentence('Hodor') . "\n");  // => normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
 ```
 
-`if` is an instruction. You need to pass predicate expression to it in parentheses and then define a block of code in curly brackets. This code block executes only if the predicate is true.
+Here two `return` statements are used at once. If the condition inside `if` is satisfied, `return 'question';` fires and the function ends. If the condition isn't satisfied, control passes to the next line with `return 'normal';`.
 
-If the predicate is false, we skip the code block in curly brackets, and the function keeps executing. In our case, the next line of code, `return 'normal';` will make the function return the string and terminate.
+So the function has several possible exit points. This is a common practice. Depending on the conditions, the function can end in different ways.
 
-As you can see, `return` can be anywhere in a function. Including within a conditional code block.
-
-If the curly brackets after `if` contain only one line of code, you can leave out the brackets:
+Even though the `getTypeOfSentence()` function uses `if`, it returns strings, which means it isn't a predicate. As a predicate, let's look at a function that checks whether there's enough money for a purchase:
 
 ```php
 <?php
 
-function getTypeOfSentence($sentence)
+function hasEnoughMoney(int $balance, int $price): bool
 {
-    $lastChar = $sentence[-1];
-    if ($lastChar === '?')
-        return 'question';
+    if ($balance >= $price) {
+        return true;
+    }
 
-    return 'normal';
+    return false;
 }
 
-print_r(getTypeOfSentence('Hodor'));  // => normal
-print_r("\n");
-print_r(getTypeOfSentence('Hodor?')); // => question
+var_dump(hasEnoughMoney(100, 50)); // => bool(true)
+var_dump(hasEnoughMoney(30, 50));  // => bool(false)
 ```
 
-We recommend not doing that and always writing **curly brackets**. That way, you can clearly see where the conditional construction body starts and ends. The code becomes clearer and more readable.
+## if and logical expressions
+
+We wrote the `hasEnoughMoney()` function using `if`. But in this form it could do without it, because the result of the comparison is itself already a logical expression:
+
+```php
+<?php
+
+function hasEnoughMoney(int $balance, int $price): bool
+{
+    return $balance >= $price;
+}
+```
+
+In simple cases, it's better to return such an expression right away. `if` is needed where additional actions are performed inside the block besides returning the result. The more complex the programs we write, the more often such situations will come up.

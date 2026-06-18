@@ -1,2 +1,9 @@
 ---
 name: Combining Operations and Functions
+tips:
+  - |
+    [Expression](https://en.wikipedia.org/wiki/Expression_(computer_science))
+definitions:
+  - name: Expression
+    description: >
+      a sequence of actions on data that produces some result that can be used.

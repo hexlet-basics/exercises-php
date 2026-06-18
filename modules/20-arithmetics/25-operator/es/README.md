@@ -1,8 +1,9 @@
-Un **operador** es un símbolo de operación, como `+`. Los operadores suelen estar representados por uno o varios caracteres, a veces por una palabra. Por lo general, corresponden a operaciones matemáticas.
+En matemáticas y programación, a menudo usamos signos de operación, como `+`, `-`, `*` y otros. En programación, estos signos se llaman operadores.
 
-Los operadores realizan operaciones en valores específicos, llamados **operandos**.
+- Un operador es un símbolo o palabra que denota una acción.
+- Los operandos son los valores a los que se aplica el operador.
 
-Veamos un ejemplo:
+Ejemplo:
 
 ```php
 <?php
@@ -10,13 +11,24 @@ Veamos un ejemplo:
 print_r(8 + 2);
 ```
 
-Aquí, `+` es el operador, y los números `8` y `2` son los operandos.
+Aquí:
 
-Las operaciones que requieren dos operandos se llaman **operaciones binarias**. En el caso de la suma, tenemos dos operandos: uno a la izquierda del signo `+` y otro a la derecha. Si se omite al menos un operando, por ejemplo, `3 + ;`, el programa dará un error de sintaxis.
+- `+` es un operador
+- `8` y `2` son operandos
+- el resultado es `10`
 
-También hay operaciones **unarias**, que tienen un solo operando, y **ternarias**, que tienen tres operandos. Además, los operadores pueden tener la misma apariencia pero representar operaciones diferentes.
+```text
+operando   operador   operando      resultado
+    8          +          2       →      10
+    5          -          3       →      2
+    4          *          3       →      12
+```
 
-Los símbolos `+` y `-` no solo se utilizan como operadores. Cuando se trata de números negativos, el signo menos forma parte del número:
+Las operaciones que requieren dos operandos se llaman **binarias**. En el caso de la suma, tenemos dos operandos: uno a la izquierda del signo `+` y otro a la derecha. Si se omite al menos un operando, por ejemplo, `3 + ;`, el programa terminará con un error de sintaxis.
+
+## Operadores unarios
+
+También existen operaciones unarias, que trabajan con un solo operando. Ejemplo:
 
 ```php
 <?php
@@ -24,20 +36,53 @@ Los símbolos `+` y `-` no solo se utilizan como operadores. Cuando se trata de 
 print_r(-3); // => -3
 ```
 
-En el ejemplo anterior, se aplica una operación unaria al número `3`. El operador `-` antes del tres le indica al intérprete que tome el número `3` y encuentre su opuesto, es decir, `-3`. Esto puede ser confuso, ya que `-3` es tanto un número como un operador con un operando. Pero en los lenguajes de programación, esta es la estructura:
+En este caso, `-` es un operador unario, y `3` es un operando. El intérprete recibe la orden: «toma el número 3 y cambia su signo».
+
+El operador `-` puede usarse de diferentes maneras. Cuando se encuentra **entre dos números**, es una operación de resta:
 
 ```php
 <?php
 
-// Lo mismo que 4 - 3
-print_r(4 + -3); // => 1
+print_r(5 - 2);  // => 3
+print_r(10 - 7); // => 3
 ```
 
-Lo mismo ocurre con el signo más:
+Aquí `-` toma el primer número y le resta el segundo.
+
+Esta diferencia se nota especialmente al trabajar con números negativos. Por ejemplo:
 
 ```php
 <?php
 
-print_r(+3); // => 3
+// menos por menos da más
+print_r(5 - -2); // => 7
+```
+
+Primero, vemos una operación de resta: `5 - (...)`. Pero a la derecha hay un menos unario `-2`, que convierte el `2` en un número negativo. Como resultado, obtenemos: `5 - (-2) = 7`.
+
+Así, el significado de `-` depende del contexto: si hay otro número a su lado, es una resta; de lo contrario, es un cambio de signo del número.
+
+Lo mismo ocurre con el más:
+
+```php
+<?php
+
+print_r(+3);     // => 3
 print_r(1 + +3); // => 4
 ```
+
+Lo principal que hay que recordar aquí es que el comportamiento e incluso la notación misma se corresponden por completo con la forma en que lo hacíamos en la escuela.
+
+## Errores en los cálculos y el análisis
+
+Si percibes `-3` como un único número, podrías no notar que `-` es un operador independiente con su propia prioridad. Por ejemplo:
+
+```php
+<?php
+
+print_r(-3 ** 2);
+```
+
+A primera vista, podría parecer que se eleva al cuadrado `-3`, y que el resultado debería ser `9` (cualquier número al cuadrado se vuelve positivo). Pero el resultado será `-9`.
+
+La razón está en el orden de los cálculos: primero se realiza la exponenciación (`**`), y solo después se aplica el menos unario. Es decir, el programa lo calcula así: `-(3 ** 2) = -9`. Hablaremos sobre la prioridad de las operaciones con más detalle más adelante en el curso.

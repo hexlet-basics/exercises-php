@@ -1,52 +1,108 @@
-Las expresiones lógicas pueden combinarse entre sí para crear verificaciones más complejas.
+Ya sabemos escribir funciones que verifican condiciones individuales. En esta lección aprenderemos a construir condiciones compuestas.
 
-Un buen ejemplo es la verificación de contraseñas. Como sabes, algunos sitios web requieren contraseñas de entre 8 y 20 caracteres de longitud.
+Supongamos que un sitio web, durante el registro, requiere que la contraseña tenga más de ocho caracteres y contenga al menos una letra mayúscula. Intentemos escribir dos expresiones lógicas separadas y unirlas con el operador especial "Y":
 
-En matemáticas, escribiríamos `8 >= x <= 20`, donde `x` es la longitud de una contraseña específica. Pero en PHP, este truco no funciona.
+> La contraseña tiene más de 8 caracteres **Y** la contraseña contiene al menos una letra mayúscula
 
-Tendremos que hacer dos expresiones lógicas separadas y combinarlas con el operador especial "Y":
+Aquí está la función que recibe una contraseña y dice si cumple las condiciones (`true`) o no las cumple (`false`):
 
 ```php
 <?php
 
-function tieneCaracteresEspeciales($str)
+function hasCapitalLetter(string $text): bool
+{
+    // Verifica la presencia de al menos una letra mayúscula en la cadena
+}
+
+function isCorrectPassword(string $password): bool
+{
+    $length = strlen($password);
+    return $length > 8 && hasCapitalLetter($password);
+}
+
+var_dump(isCorrectPassword('Qwerty'));     // => bool(false)
+var_dump(isCorrectPassword('Qwerty1234')); // => bool(true)
+var_dump(isCorrectPassword('qwerty1234')); // => bool(false)
+```
+
+El operador `&&` significa "Y". En lógica matemática esto se llama conjunción. Toda la expresión se considera verdadera si cada **operando** es verdadero, es decir, cada una de las expresiones compuestas. En otras palabras, `&&` significa "tanto esto como aquello". La prioridad de este operador es menor que la de los operadores de comparación. Por eso la expresión `hasCapitalLetter($password) && $length > 8` también funciona correctamente sin paréntesis.
+
+Además de `&&`, se utiliza frecuentemente el operador `||`, que significa "O" (disyunción). Significa "o esto, o aquello, o ambos". La expresión `$a || $b` se considera verdadera si al menos uno de los operandos es verdadero o cuando ambos operandos son verdaderos. En el otro caso, la expresión es falsa.
+
+```php
+<?php
+
+function hasDiscount(int $age, bool $isStudent): bool
+{
+    return $age < 18 || $isStudent;
+}
+
+var_dump(hasDiscount(15, false)); // => bool(true)  (menor de 18)
+var_dump(hasDiscount(25, true));  // => bool(true)  (estudiante)
+var_dump(hasDiscount(15, true));  // => bool(true)  (ambas condiciones)
+var_dump(hasDiscount(25, false)); // => bool(false)
+```
+
+Los operadores se pueden combinar en cualquier cantidad y en cualquier secuencia. Si en el código aparecen al mismo tiempo `&&` y `||`, es mejor establecer la prioridad con paréntesis. A continuación, un ejemplo de una función ampliada que determina si una contraseña es correcta:
+
+```php
+<?php
+
+function hasCapitalLetter(string $text): bool
+{
+    // Verifica la presencia de al menos una letra mayúscula en la cadena
+}
+
+function hasSpecialChars(string $text): bool
 {
     // Verifica si la cadena contiene caracteres especiales
 }
 
-// La función recibe una contraseña y verifica si cumple con las condiciones
-function esContraseñaCorrecta($contraseña)
+function isStrongPassword(string $password): bool
 {
-    $longitud = strlen($contraseña);
-    // Los paréntesis establecen la prioridad para mostrar a qué se refiere cada parte
-    return ($longitud >= 8 && $longitud <= 20) && tieneCaracteresEspeciales($contraseña);
+    $length = strlen($password);
+    // Los paréntesis establecen la prioridad. Queda claro qué se refiere a qué.
+    return ($length > 8 && hasCapitalLetter($password)) && hasSpecialChars($password);
 }
-
-esContraseñaCorrecta('qwerty'); // false
-esContraseñaCorrecta('qwerty1234'); // true
-esContraseñaCorrecta('zxcvbnmasdfghjkqwertyui'); // false
 ```
 
-El operador `&&` significa "Y" - en lógica matemática esto se llama **conjunción**. La expresión completa se considera verdadera solo si cada operando es verdadero, es decir, cada una de las expresiones compuestas. En otras palabras, `&&` significa "y esto, y aquello". La prioridad de este operador es menor que la de los operadores de comparación, por lo que la expresión funciona correctamente sin paréntesis.
+Ahora imaginemos que queremos comprar un apartamento que cumpla con estas condiciones: un área de 100 metros cuadrados o más en cualquier calle **O** un área de 80 metros cuadrados o más, pero en la calle central `Main Street`.
 
-Además de `&&`, se utiliza frecuentemente el operador `||` - "O" (**disyunción**). Significa "o esto, o aquello, o ambos". Los operadores se pueden combinar en cualquier cantidad y en cualquier secuencia, pero cuando se encuentran `&&` y `||` al mismo tiempo, es mejor establecer la prioridad con paréntesis.
+Escribamos una función que verifique el apartamento. Recibe dos argumentos: el área (un número) y el nombre de la calle (una cadena):
 
-El área de las matemáticas que estudia los operadores lógicos se llama álgebra booleana. A continuación, verás las **tablas de verdad** - a partir de ellas se puede determinar el resultado al aplicar los operadores:
+```php
+<?php
 
-### Y `&&`
+function isGoodApartment(int $area, string $street): bool
+{
+    return $area >= 100 || ($area >= 80 && $street === 'Main Street');
+}
+
+var_dump(isGoodApartment(91, 'Queens Street'));  // => bool(false)
+var_dump(isGoodApartment(78, 'Queens Street'));  // => bool(false)
+var_dump(isGoodApartment(70, 'Main Street'));    // => bool(false)
+
+var_dump(isGoodApartment(120, 'Queens Street')); // => bool(true)
+var_dump(isGoodApartment(120, 'Main Street'));   // => bool(true)
+var_dump(isGoodApartment(80, 'Main Street'));    // => bool(true)
+```
+
+El área de las matemáticas que estudia los operadores lógicos se llama álgebra booleana. Las **tablas de verdad** muestran cuál será el resultado al aplicar cada operador.
+
+#### Y `&&`
 
 | A     | B     | A `&&` B |
 | ----- | ----- | -------- |
-| TRUE  | TRUE  | **TRUE** |
-| TRUE  | FALSE | FALSE    |
-| FALSE | TRUE  | FALSE    |
-| FALSE | FALSE | FALSE    |
+| true  | true  | **true** |
+| true  | false | false    |
+| false | true  | false    |
+| false | false | false    |
 
-### O `||`
+#### O `||`
 
 | A     | B     | A `‖` B  |
 | ----- | ----- | -------- |
-| TRUE  | TRUE  | **TRUE** |
-| TRUE  | FALSE | **TRUE** |
-| FALSE | TRUE  | **TRUE** |
-| FALSE | FALSE | FALSE    |
+| true  | true  | **true** |
+| true  | false | **true** |
+| false | true  | **true** |
+| false | false | false    |

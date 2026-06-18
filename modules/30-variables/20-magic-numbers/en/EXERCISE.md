@@ -1,25 +1,23 @@
-
-You've come across this code, which prints the total number of rooms owned by the present king:
+The warehouse received a delivery. You've come across this code, which counts the total number of boxes:
 
 ```php
 <?php
 
-$king = 'King Balon the 6th';
-print_r($king . ' has ' . (6 * 17) . ' rooms.');
+$label = 'Ящиков на складе:';
+print_r($label);
+print_r("\n");
+print_r(6 * 17);
 ```
 
-As you can see, there are some magic numbers here: it's unclear what 6 is and what 17 is. If you know the history of the royal family, you can guess: each new king inherits all his ancestors' castles and builds a new one, an exact copy of his parents'.
-
-This strange dynasty simply breeds identical castles…
-
-Get rid of the magic numbers by creating new variables and then displaying the text on the screen.
+The numbers 6 and 17 here are magic: it's unclear what they mean. Get rid of them by creating variables with meaningful names, and print the result to the screen.
 
 You'll get this:
 
 ```text
-King Balon the 6th has 102 rooms.
+Ящиков на складе:
+102
 ```
 
-Variable names should convey the meaning of numbers, but should remain short and succinct enough to be easily read.
+Variable names should convey the meaning of the numbers, but remain short and concise.
 
-Note: The code will work with any name, and we only check the printed result, so the task is up to you.
+Remember: the code will work with any names, and the system only checks the result on the screen — completing the task is your responsibility.

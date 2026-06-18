@@ -1,9 +1,3 @@
+In the program, you need to cut the section name out of the address `https://hexlet.io/courses`. The first step is to find out where it begins.
 
-Complete the implementation of `startsWith()`, which determines whether a string starts with a given substring.
-
-```php
-<?php
-
-startsWith('Hexlet', 'et'); // false
-startsWith('Hexlet', 'Hex'); // true
-```
+Print the position at which the substring `courses` starts in the string `https://hexlet.io/courses`. Use the `mb_strpos()` function.

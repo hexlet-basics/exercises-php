@@ -2,4 +2,8 @@
 name: |
   Primitive data types immutability
 tips: []
-definitions: []
+definitions:
+  - name: Immutability
+    description: >
+      a state in which an object or variable cannot be changed after it's
+      created

@@ -1,18 +1,46 @@
-Algunos nombres son bastante simples, como `$greeting`. Pero a menudo no es tan obvio. Muchas veces los nombres son compuestos, es decir, incluyen varias palabras. Por ejemplo, "nombre de usuario". En diferentes lenguajes se utilizan diferentes estilos de codificación, por lo que el nombre de la variable será diferente.
+`$greeting` sirve como ejemplo de un nombre de variable simple y claro. Pero a menudo nombres como `$name`, `$email` o `$price` no son suficientes. Por ejemplo, hay que describir el nombre de un usuario, la cantidad total de pedidos o la longitud máxima de un mensaje. Tales nombres ya constan de varias palabras. ¿Cómo se verá el nombre de la variable en ese caso?
 
-En la nomenclatura de variables se pueden distinguir cuatro enfoques principales, que a veces se combinan entre sí. Todos estos enfoques se aplican cuando el nombre de la variable consta de varias palabras:
+En diferentes lenguajes de programación se utilizan diferentes estilos de nomenclatura. De esto depende cómo se verá un nombre de variable compuesto por varias palabras. Por ejemplo, así se puede escribir una variable que almacena la longitud máxima de un mensaje:
 
-* kebab-case: las partes compuestas de la variable se separan con guiones (`my-super-var`)
-* snake_case: se utiliza un guion bajo para separar (`my_super_var`)
-* CamelCase: cada palabra en la variable se escribe con mayúscula inicial (`MySuperVar`)
-* lowerCamelCase: cada palabra en la variable se escribe con mayúscula inicial, excepto la primera (`mySuperVar`)
+1. `$maxmessagelength`
+1. `$maxMessageLength`
+1. `$max-message-length`
+1. `$max_message_length`
 
-En PHP se utiliza CamelCase y su variante lowerCamelCase, donde la primera letra de la primera palabra es minúscula. Es precisamente lowerCamelCase el que se utiliza para las variables. Esto significa que los nombres se unen entre sí, y todas las palabras excepto la primera se escriben con mayúscula inicial: `$userName`. Con tres palabras se vería así: `$mySuperVariable`.
+## Estilos principales
 
-Otra regla generalmente aceptada es no utilizar transliteraciones para los nombres, solo inglés. Si tienes dificultades con el inglés, utiliza un traductor. Con el tiempo, al investigar en el código de otras personas, adquirirás una comprensión adecuada de la nomenclatura.
+Estos son tres enfoques populares para escribir nombres compuestos:
 
-Los nombres no solo deben transmitir significado, sino también cumplir con las reglas sintácticas que generalmente no se verifican en el nivel del lenguaje, pero son necesarias durante el desarrollo. El proceso de escribir programas en el mundo moderno es un trabajo en equipo, y para una mejor interacción en el equipo, el código se escribe en un estilo uniforme, como si fuera realizado por una sola persona.
+- kebab-case: las palabras se separan con guion: `max-message-length`.
 
-Cada lenguaje tiene sus propias reglas. Recientemente, en PHP se ha establecido un [estándar de codificación](https://www.php-fig.org/psr/psr-1/) ampliamente aceptado, al que todos aspiran de una forma u otra. Estos estándares describen muchos aspectos. Recomendamos que desde el principio te acostumbres a consultar el estándar y escribir código de acuerdo con él.
+  No funciona en PHP, ya que el guion (-) se interpreta como el operador de resta.
 
-Afortunadamente, hoy en día no es necesario recordar todas las reglas del estándar, porque existen programas especiales que verifican automáticamente el código y señalan las violaciones. Estos programas se llaman **linter**, y comenzarás a usarlos un poco más adelante, cuando tengas un poco más de experiencia.
+- snake_case: las palabras se separan con guion bajo: `$max_message_length`.
+
+  Es el estándar, por ejemplo, en Python. En PHP muchas funciones integradas se nombran así, pero este estilo no se usa para las variables.
+
+- CamelCase: cada palabra con mayúscula inicial, sin separadores: `MaxMessageLength`. Tiene una variante llamada lowerCamelCase, en la cual la primera palabra se escribe con minúscula inicial: `$maxMessageLength`.
+
+  Es precisamente lowerCamelCase el estándar para las variables en PHP.
+
+## Cómo hacerlo correctamente en PHP
+
+```php
+<?php
+
+$userName = "Daenerys";
+$maxLength = 280;
+$totalOrdersCount = 17;
+```
+
+- La primera palabra se escribe con minúscula inicial
+- Cada palabra siguiente comienza con mayúscula
+- No se usan separadores entre palabras
+
+Cada lenguaje tiene sus propias reglas. En PHP existe un [estándar de codificación](https://www.php-fig.org/psr/psr-1/) ampliamente aceptado que describe muchos aspectos de este tipo. No es necesario recordar todas sus reglas: el código se verifica automáticamente con linters, que ya conocimos anteriormente.
+
+## Cómo no hacerlo
+
+No conviene incluir el tipo de datos en el nombre de la variable. Tales nombres se leen peor y quedan obsoletos rápidamente. Por ejemplo, `$userNameString` o `$messagesNumber` describen no el significado de la variable, sino su implementación técnica.
+
+El nombre debe responder a la pregunta "¿qué se almacena?", y no "¿de qué tipo es?". Por eso es mejor escribir `$userName` en lugar de `$userNameString`, y `$messagesCount` en lugar de `$messagesNumber`.

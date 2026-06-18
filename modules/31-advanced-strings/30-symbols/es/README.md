@@ -1,41 +1,81 @@
-En esta lección aprenderemos a obtener un carácter específico de una cadena. Por ejemplo, si un sitio web conoce el nombre y apellido del usuario, y en algún momento se requiere mostrar esta información en el formato `A. Ivanov`. En este caso, debemos tomar el primer carácter del nombre:
+A veces necesitas obtener un solo carácter de una cadena. Por ejemplo, si un sitio web conoce el nombre y apellido del usuario y necesita mostrarlos en un formato abreviado como A. Ivanov. Para ello, hay que tomar la primera letra del nombre.
+
+![Extracción de caracteres de una cadena](./assets/symbols.png)
+
+En PHP, para acceder a los caracteres de una cadena se usa la indexación. La indexación significa que cada carácter de una cadena tiene su propio número, es decir, un índice. La indexación comienza desde cero: el primer carácter tiene el índice `0`, el segundo `1`, y así sucesivamente. Imaginemos que tenemos una cadena:
 
 ```php
 <?php
 
 $firstName = 'Alexander';
+```
+
+Para obtener la primera letra, indicamos su posición (índice) entre corchetes:
+
+```php
+<?php
 
 print_r($firstName[0]); // => A
 ```
 
-Los corchetes con un número son un operador especial para extraer una cadena. Este número se llama **índice** y representa la posición del carácter dentro de la cadena.
+Los corchetes con un índice dentro son un operador especial para extraer un carácter de una cadena. Los índices en PHP (y en muchos lenguajes) comienzan desde cero:
 
-Los índices comienzan desde cero en casi todos los lenguajes de programación. Para obtener el primer carácter, debemos especificar el índice `0`. El índice del último elemento es igual a la longitud de la cadena menos uno:
+```text
+Carácter	A	l	e	x	a	n	d	e	r
+Índice  	0	1	2	3	4	5	6	7	8
+```
+
+La longitud de la cadena `Alexander` es `9`, por lo que el índice del último carácter es `8`, es decir, `9 - 1`.
+
+Para obtener, por ejemplo, el último carácter, puedes escribir:
+
+```php
+<?php
+
+print_r($firstName[8]); // => r
+```
+
+Si cambia la longitud de la cadena, el último elemento también se desplazará y habrá que indicar el nuevo índice donde se encuentra ese carácter.
+
+Y si te sales de los límites de la cadena, PHP informará del problema:
+
+```php
+<?php
+
+print_r($firstName[9]);
+// Warning: Uninitialized string offset 9
+```
+
+Por eso, en programación es habitual comprobar la longitud de una cadena y acceder a sus caracteres solo cuando es seguro. Llegaremos a eso en lecciones futuras.
+
+## Extracción abreviada desde el final
+
+Para obtener elementos desde el final, es mejor usar índices negativos. En ese caso, el conteo comienza desde el final.
 
 ```php
 <?php
 
 $firstName = 'Alexander';
 
-// La longitud de la cadena es 9, por lo tanto, el último índice es 8
-print_r($firstName[8]);  // => r
-
-// Pregunta de autoevaluación. ¿Qué imprimirá este código?
-$magic = '\nyou';
-print_r($magic[1]); // => ?
+print_r($firstName[-1]); // => r, el último carácter
+print_r($firstName[-2]); // => e, el penúltimo carácter
 ```
 
-También es posible utilizar índices negativos. En este caso, se accede a los caracteres desde el final de la cadena. `-1` es el índice del último carácter, `-2` es el índice del penúltimo carácter, y así sucesivamente. A diferencia de la indexación directa, el conteo inverso comienza desde `-1`:
-
-```php
-<?php
-
-$firstName = 'Alexander';
-
-print_r($firstName[-1]); // => r
+```text
+Cadena:    'H' 'e' 'x' 'l' 'e' 't'
+Índice:     0   1   2   3   4   5
+Desde fin: -6  -5  -4  -3  -2  -1
 ```
 
-El índice puede ser no solo un número específico, sino también el valor de una variable. Aquí hay un ejemplo que dará el mismo resultado, mostrando el carácter `A` en la pantalla:
+Los índices negativos funcionan así:
+
+- -1 corresponde al último carácter
+- -2 corresponde al penúltimo
+- y así sucesivamente
+
+Esto es cómodo y seguro, porque funciona correctamente incluso si la cadena cambia su longitud.
+
+El índice se puede almacenar en una variable:
 
 ```php
 <?php
@@ -46,4 +86,25 @@ $index = 0;
 print_r($firstName[$index]); // => A
 ```
 
-Aquí, el índice dentro de los corchetes no está escrito como un número, sino como una variable.
+Este enfoque es útil cuando el índice se calcula en algún lugar del código y luego se usa para acceder al carácter necesario.
+
+## Caracteres especiales
+
+Al indexar se tienen en cuenta las letras normales, los signos y los caracteres especiales. Todos ellos ocupan una posición en la cadena y tienen su propio índice, incluso si "no se ven" en la pantalla.
+
+Por ejemplo, en la cadena `"\nyou"` el primer carácter es `\n` (un salto de línea), y bajo el índice 1 ya está la letra `y`. Por eso, acceder a `$magic[1]` devolverá precisamente `y`. Fíjate en las comillas dobles: con comillas simples `\n` seguirían siendo dos caracteres separados —una barra invertida y la letra `n`—.
+
+## Piensa: ¿qué imprimirá este código?
+
+```php
+<?php
+
+$magic = "\nyou";
+print_r($magic[1]); // => ?
+```
+
+La salida será:
+
+```text
+y
+```

@@ -1,3 +1,9 @@
 ---
-name: Variable Parameter Functions
-tips: []
+name: Functions with a variable number of parameters
+tips:
+  - >
+    [An example of a function with a variable number of
+    parameters](https://www.php.net/manual/en/function.max.php)
+definitions:
+  - name: A default argument
+    description: an optional function argument.

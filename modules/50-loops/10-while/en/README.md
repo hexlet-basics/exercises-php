@@ -1,117 +1,106 @@
+Besides conditional constructs, programming is impossible without loops. This is a special mechanism that lets you perform any action multiple times. Almost any computation is built on it — from calculating the average grade in a group to processing incoming requests on websites.
 
-Our code is getting more and more complex and extensive. It's still quite far from real applications, which contain tens or hundreds of thousands (sometimes millions) of lines of code. However, our code is already complex enough to make inexperienced programmers feel a bit nervous. Starting with this lesson, we move on to one of the most difficult of the basic topics in programming: *loops*.
+A loop stores a repeating action in one place and runs it again while the condition remains true.
 
-All applications serve very pragmatic purposes. They help manage employees, finances, and entertain, after all. Despite the differences, all these programs contain and execute similar algorithms. What's an algorithm? An algorithm is a sequence of actions (statements) which lead us to an expected result. This description fits any program in general, but with algorithms, we usually mean something more specific.
+## First example
 
-Imagine we have a book, and we want to find a particular phrase within it. We remember the phrase itself, but we don't know what page it is on. How do we find the right page? The easiest (and longest) way is to look through the pages one by one until we find the right one. In the worst case, we'll have to look through all the pages, but we still get the result we want. This very process is called an algorithm. It includes a logical verification (if the phrase is found) and an exhaustive page search. The number of pages you'll have to look through isn't known in advance, but the process itself is repeated again and again in exactly the same way. This is why we need loops to perform repetitive actions. In this case, each repetition is called an iteration.
+Suppose a program needs to print the string `Hello!` five times. To stop repeating at the right moment, the program needs a variable that stores the number of the current step. Such a variable is usually called a counter.
 
-Let's say we want to write a function that prints all numbers between 1 and a given number (via arguments):
+In the example, the counter is called `$counter`. Before the loop, it equals `0`. After each output of the string, we increase it by one.
 
 ```php
 <?php
+
+$counter = 0;
+while ($counter < 5) {
+    print_r("Hello!\n");
+    $counter = $counter + 1;
+}
+
+// => Hello!
+// => Hello!
+// => Hello!
+// => Hello!
+// => Hello!
+```
+
+Now the loop can check the counter value before each repetition. As long as `$counter < 5`, the code in the curly braces after `while` runs. This block is called the loop body.
+
+After the body runs, the interpreter goes back to the condition and checks it again. As long as the condition is true, the loop continues. When the condition becomes false (`false`), the program exits the loop and runs the next code.
+
+Without changing the counter, the condition will never become false, and the loop will turn into an infinite one. From the outside, it looks as if the program has frozen.
+
+## How the loop works step by step
+
+Before the first repetition, `$counter` equals `0`.
+
+**Step 1.** The interpreter checks `$counter < 5`. The value `0` is less than `5`, so the loop body runs.
+`Hello!` is printed to the screen, and `$counter` increases to `1`.
+
+**Step 2.** The interpreter checks the condition again. The value `1` is still less than `5`, so the loop body runs once more.
+`Hello!` is printed to the screen again, and `$counter` increases to `2`.
+
+This continues until `$counter` becomes equal to `5`. On the next check, the condition `$counter < 5` will be false, so the loop will finish. Then the program runs the code after the loop.
+
+The same sequence in a diagram.
+
+```text
+$counter = 0
+┌──→ $counter < 5?
+│     true │
+│          ↓
+│    print_r("Hello!\n")
+│    $counter = $counter + 1
+└──────────┘
+      false → exit the loop
+```
+
+After the loop finishes, `$counter` equals `5`, and the string `Hello!` is printed five times.
+
+## The loop body and continuing the program
+
+The loop body includes all the lines inside the curly braces after `while`. When the closing brace ends the block, the loop also ends.
+
+```php
+<?php
+
+$counter = 0;
+while ($counter < 2) {
+    print_r("Hello!\n");
+    $counter = $counter + 1;
+}
+
+print_r("End of loop\n");
+```
+
+In this example, `print_r("Hello!\n")` and `$counter = $counter + 1` are inside the loop. The line `print_r("End of loop\n")` is after the closing brace, so it runs once after the loop finishes.
+
+By the curly braces, PHP understands which lines to repeat and which ones come next in the program.
+
+## A loop inside a function
+
+Now let's move the loop into a function. It will print numbers from `1` up to the passed value.
+
+```php
+<?php
+
+function printNumbers(int $n): void
+{
+    $i = 1;
+    while ($i <= $n) {
+        print_r($i . "\n");
+        $i = $i + 1;
+    }
+    print_r("Finished!\n");
+}
 
 printNumbers(3);
 // => 1
 // => 2
 // => 3
+// => Finished!
 ```
 
-This function cannot be implemented with the tools we've already learned to use, because the number of outputs on the screen is not known in advance. But with loops this won't be a problem:
+The `while` loop prints numbers until `$i` becomes greater than `$n`. After that, the program exits the loop and runs `print_r("Finished!\n")`.
 
-```php
-<?php
-
-function printNumbers($lastNumber)
-{
-    // i means index
-    // used as a loop counter by common agreement
-    // in many languages
-    $i = 1;
-
-    while ($i <= $lastNumber) {
-        print_r($i);
-        print_r("\n");
-        $i = $i + 1;
-    }
-    print_r('finished!');
-}
-
-printNumbers(3);
-```
-
-
-```text
-1
-2
-3
-finished!
-```
-
-Here we use a `while` loop in the function. It has three elements:
-
-* The key word here is `while`. It's not a function call, although it resembles it.
-* Predicate. A condition given in parentheses after `while`. This condition is computed at each iteration.
-* Loop body. Block of code in curly brackets.
-
-The construction reads like this: "do what's specified in the body of the loop as long as the condition (predicate) `$i <= $lastNumber`». Let's look at how this code works to `printNumbers(3)`:
-
-```php
-<?php
-
-// Initializes the i variable
-$i = 1;
-
-// Predicate is true, so execute loop body
-while (1 <= 3)
-// print_r(1);
-// $i = 1 + 1;
-
-// The loop body is executed, so we return to the beginning
-while (2 <= 3)
-// print_r(2);
-// $i = 2 + 1;
-
-// The loop body is executed, so we return to the beginning
-while (3 <= 3)
-// print_r(3);
-// $i = 3 + 1;
-
-// Predicate is false, so execution goes beyond loop
-while (4 <= 3)
-
-// print_r('finished!');
-// At this point, i is 4, but we don't need it anymore
-// function terminates
-```
-
-The main purpose of a loop is to end it (exit from a loop). The process which generates the loop must eventually stop. It's up to the programmer to stop it. Usually this comes down to introducing a variable called a loop counter.  The counter should first be initialized, that is, you must assign it an initial value.  In our example, it's the instruction `$i = 1`, which is executed before entering the loop. Then the loop condition checks to see if the counter has reached its limiting value. Finally, the counter changes its value `$i = $i + 1`.
-
-This is where beginners make the most mistakes. For example, accidentally forgetting to increment the counter or having an incorrect predicate check can lead to an infinite loop. This is a situation in which the loop runs indefinitely and the program never stops. We then have to end it forcibly (it may sometimes be the case that when real applications freeze, there's an infinite loop running inside them).
-
-```php
-<?php
-
-function printNumbers($lastNumber)
-{
-    $i = 1;
-
-    // This loop will never stop
-    // and will always print one value
-    while ($i <= $lastNumber) {
-        print_r($i);
-    }
-    print_r('finished!');
-}
-```
-
-In some cases, infinite loops are useful. We won't deal with those cases here, but it's useful to see what it looks like:
-
-```php
-<?php
-
-while (true) {
-    // Doing something
-}
-```
-
-To summarize. When do we need loops, and when can we do without them? It's physically impossible to do without loops when a problem-solving algorithm requires actions to be repeated, like with the example with the book, and the number of times you'll need to perform these operations can't be known in advance.
+The condition and the change of the counter depend on the task. The counter can be increased by `1`, by `2`, or by `10` at once. It can be decreased if the loop goes from a larger value to a smaller one. You can change the counter not on every repetition, but on every other one or after performing an additional check. The main thing is that the condition eventually becomes false. Otherwise the loop will run forever.

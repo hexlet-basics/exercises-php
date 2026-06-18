@@ -1,4 +1,6 @@
 ---
 name: Conversión explícita de tipos
+tips:
+  - |
+    [Tipado](https://es.wikipedia.org/wiki/Tipado_fuerte_y_d%C3%A9bil)
 definitions: []
-tips: []

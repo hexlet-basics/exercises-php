@@ -1,16 +1,12 @@
 
-Implementa la función `hasChar()`, que verifica si una cadena contiene una letra en el caso especificado. La función toma dos parámetros:
+Implementa la función `hasAtSymbol()`, que verifica si un email contiene el símbolo `@`.
 
-* Cadena
-* Letra a buscar
-
-Ejemplo de llamada:
+La función debe devolver `true` en cuanto encuentre `@`. Si el bucle llega al final de la cadena y no se encuentra el símbolo, la función debe devolver `false`.
 
 ```php
 <?php
 
-hasChar('Hexlet', 'H'); // true
-hasChar('Hexlet', 'h'); // false
-hasChar('Awesomeness', 'm'); // true
-hasChar('Awesomeness', 'd'); // false
+hasAtSymbol('support@example.com'); // true
+hasAtSymbol('wrong-email');         // false
+hasAtSymbol('@admin');              // true
 ```

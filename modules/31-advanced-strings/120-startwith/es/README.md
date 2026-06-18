@@ -1,33 +1,27 @@
-A menudo, al trabajar con cadenas de texto, es necesario determinar si una cadena es una **subcadena** de otra. La mayoría de los lenguajes de programación tienen una función incorporada diseñada específicamente para esta tarea.
-
-En PHP, esta función solo está disponible a partir de la versión 8. Antes de eso, se simulaba utilizando la función [mb_strpos()](https://php.net/manual/ru/function.mb-strpos.php). Esta función busca la posición de la primera aparición de una cadena dentro de otra. Por ahora, utilizaremos `mb_strpos()`:
+A menudo, al trabajar con cadenas de texto, es necesario determinar si una cadena —una **subcadena**— está contenida en otra y, si lo está, dónde. Para esto, PHP tiene la función [mb_strpos()](https://php.net/manual/es/function.mb-strpos.php). Esta busca la posición de la primera aparición de una cadena dentro de otra:
 
 ```php
 <?php
 
-if (mb_strpos('Valar Morgulis', 'Morgulis')) { // 6
-    // ...
-}
+print_r(mb_strpos('Валар Моргулис', 'Моргулис')); // => 6
 ```
 
-En el ejemplo anterior, la función devolverá 6, que corresponde al índice de la letra M:
+La función devolvió `6`: el índice de la letra `М`, donde comienza la subcadena. Los índices, como de costumbre, se cuentan desde cero:
 
 ```php
 <?php
 
-if (mb_strpos('Valar Morgulis', 'Valar')) { // 0
-    // ...
-}
+print_r(mb_strpos('Валар Моргулис', 'Валар')); // => 0
 ```
 
-En este ejemplo, se devolverá `0`, que corresponde a la primera letra de la cadena. En este código se oculta un error que cometen con frecuencia los principiantes. En PHP, el valor `0` se considera `false`, lo que significa que la condición no se cumplirá. La comprobación correcta se ve así:
+Aquí se devolvió `0`: la subcadena se encontró justo al inicio de la cadena.
+
+Si la subcadena no se encuentra, `mb_strpos()` devuelve el valor especial `false` («falso»). Al imprimirlo con `print_r()`, se ve como una cadena vacía:
 
 ```php
 <?php
 
-if (mb_strpos('Valar Morgulis', 'Valar') !== false) {
-    // ...
-}
+print_r(mb_strpos('Валар Моргулис', 'Дракарис')); // =>
 ```
 
-La función `mb_strpos()` devuelve `false` si no se encuentra la subcadena. Por lo tanto, se puede utilizar una comparación estricta con `false`.
+Aquí se esconde una trampa en la que suelen caer los principiantes: el resultado `0` («encontrado al inicio de la cadena») es fácil de confundir con `false` («no encontrado en absoluto»). Para distinguirlos, se necesita una comparación estricta, que veremos en las lecciones sobre lógica. Por ahora, recuerda: `mb_strpos()` responde a la pregunta «¿dónde?», no «¿existe?».

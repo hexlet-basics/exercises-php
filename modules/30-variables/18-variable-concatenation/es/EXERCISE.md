@@ -1,18 +1,15 @@
+Una tienda en línea le envía al comprador un correo electrónico después de realizar el pedido. El correo se genera automáticamente a partir de los datos del cliente.
 
-Los sitios web constantemente envían correos electrónicos a sus usuarios. Una tarea típica es enviar automáticamente un correo electrónico personalizado, donde el nombre de usuario estará en el asunto. Si el nombre del usuario se encuentra en algún lugar de la base de datos del sitio web como una cadena, la tarea de generar el asunto se reduce a la concatenación: por ejemplo, necesitas unir la cadena `Hello` con la cadena que contiene el nombre.
+Escribe un programa que genere un saludo y el cuerpo del correo, utilizando las variables ya proporcionadas, y muestre las cadenas en la pantalla.
 
-Escribe un programa que genere el asunto y el cuerpo del correo electrónico, utilizando las variables proporcionadas, y muestre las cadenas resultantes en la pantalla.
+Para el saludo, utiliza las variables `$firstName` y `$greeting`, una coma y un signo de exclamación. Para el cuerpo del correo, utiliza las variables `$intro` e `$info` — la segunda oración debe estar en una nueva línea.
 
-Para el asunto, utiliza las variables `$firstName` y `$greeting`, seguido de una coma y un signo de exclamación. Muestra esto en la pantalla en el orden correcto.
-
-Para el cuerpo del correo electrónico, utiliza las variables `$info` e `$intro`, con la segunda oración en una nueva línea.
-
-El resultado en la pantalla debería lucir así:
+El resultado en la pantalla:
 
 ```text
-Hello, Joffrey!
-Here is important information about your account security.
-We couldn't verify you mother's maiden name.
+Здравствуйте, Анна!
+Спасибо за ваш заказ.
+Ожидаемая дата доставки — 3 рабочих дня.
 ```
 
-Completa la tarea utilizando solamente dos `print_r()`.
+Completa la tarea utilizando solamente dos `print_r()`. No olvides que `print_r()` no agrega un salto de línea por sí mismo — el salto `\n` debes añadirlo en los lugares correctos por tu cuenta.

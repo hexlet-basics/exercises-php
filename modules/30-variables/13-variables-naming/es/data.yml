@@ -6,4 +6,8 @@ tips:
   - >
     [Errores en la nomenclatura de
     variables](https://codica.la/blog/naming-errors-1)
-definitions: []
+definitions:
+  - name: Variable
+    description: >-
+      una forma de guardar información y darle un nombre para su uso posterior
+      en el código.

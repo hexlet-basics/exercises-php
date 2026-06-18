@@ -1,7 +1,4 @@
-
-Imagine the following problem: users can have names and pseudonyms on a given website. The name isn't necessary, but a user has one, this person should be addressed by their first name, and if not, you should address them by their pseudonym.
-
-Let's try to assemble a string that greets users according to these requirements:
+Imagine the following problem: on a website, users can have names and nicknames. If there's a name, we need to address the person by their name. If there's no name, we address them by their nickname. Let's try to assemble a greeting string for a person according to these requirements:
 
 ```php
 <?php
@@ -19,9 +16,9 @@ generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
 generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
 ```
 
-We've taken advantage of the fact that PHP converts types. In the `if ($name)` code, PHP will turn `$name` into a `bool` type; if it's an empty string, it will return `false`, otherwise, it'll return `true`.
+We've taken advantage of the fact that PHP converts types. In the `if ($name)` code, PHP turns `$name` into the `bool` type. If it was an empty string, the result is `false`. Otherwise, the result is `true`.
 
-You can use a ternary operator to write it in an even shorter way:
+With a ternary operator you can get a shorter notation:
 
 ```php
 <?php
@@ -32,7 +29,10 @@ function generateGreeting(string $name, string $nickname): string
 }
 ```
 
-This is a common situation: we work with `bool` values and get the first value if it's  `true` and the second if it isn't.
+This is a common case — we operate with `bool` values and get:
+
+* The first value if it's `true`
+* The second value otherwise
 
 In PHP, there's a special operator for such cases:
 
@@ -46,10 +46,7 @@ function generateGreeting(string $name, string $nickname): string
 }
 ```
 
-**`?:` is a binary operator that returns the first operand if it's true, and the second if it isn't.**
-
-It's called Elvis because:
+The `?:` operator is a binary operator that returns the first operand if it's true, and the second otherwise. It's also called Elvis, because this word
+sounds like _else if_. And also because of its visual resemblance to Elvis Presley:
 
 ![Elvis operator](../assets/elvis.png)
-
-Also, Elvis sounds a bit like "else if".

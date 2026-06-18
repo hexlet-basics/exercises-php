@@ -1,2 +1,10 @@
 ---
 name: Combinación de operaciones y funciones
+tips:
+  - |
+    [Expresión](https://es.wikipedia.org/wiki/Expresión_(informática))
+definitions:
+  - name: Expresión
+    description: >
+      una secuencia de acciones sobre los datos que produce algún resultado que
+      se puede utilizar.

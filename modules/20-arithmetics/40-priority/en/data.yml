@@ -1,6 +1,11 @@
 ---
-name: Priority of operations
+name: Operator precedence
 tips:
   - >
-    [Priority of
-    operators](https://www.php.net/manual/en/language.operators.precedence.php)
+    [Operator
+    precedence](https://www.php.net/manual/en/language.operators.precedence.php)
+definitions:
+  - name: Expression
+    description: >
+      a sequence of operations on data that produces some result that can be
+      used.
