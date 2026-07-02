@@ -2,8 +2,6 @@ Las funciones que definimos en la lección anterior terminaban su trabajo imprim
 
 Por ejemplo, una función puede devolver una cadena con texto procesado o un número calculado por una fórmula. El valor devuelto se puede usar más adelante. Se guarda en una variable, se pasa a otra función o se imprime en la pantalla.
 
-![Cómo funciona una función de suma en PHP](./assets/sum-php.jpg)
-
 Para que una función entregue un resultado, en ella se usa una palabra clave especial `return`. Esta finaliza la ejecución de la función e indica exactamente qué se debe devolver.
 
 Aquí tienes un ejemplo de una función que convierte el texto a mayúsculas:

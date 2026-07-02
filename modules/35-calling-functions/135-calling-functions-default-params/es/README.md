@@ -1,7 +1,5 @@
 Algunas funciones en PHP tienen **parámetros opcionales**. Esto significa que para ellos se establece de antemano un valor por defecto, y al llamar a la función ese parámetro se puede omitir.
 
-![Taller mecánico](./assets/default-parameters.png)
-
 Veamos la función incorporada `round()`, que redondea un número:
 
 ```php

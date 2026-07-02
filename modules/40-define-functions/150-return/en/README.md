@@ -2,8 +2,6 @@ The functions we defined in the previous lesson ended their work by printing som
 
 For example, a function can return a string with processed text or a number computed by a formula. The returned value can be used further. It is stored in a variable, passed to another function, or printed to the screen.
 
-![How a summing function works in PHP](./assets/sum-php.jpg)
-
 For a function to hand over a result, it uses a special keyword `return`. It ends the function's execution and indicates exactly what should be returned.
 
 Here is an example of a function that makes text uppercase:

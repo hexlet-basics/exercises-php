@@ -1,7 +1,5 @@
 In real programs, a situation often arises where data of one type needs to be turned into another. This is especially relevant, for example, when processing user input or data from web forms. There everything comes in the form of strings, even if you entered a number.
 
-![Type conversion in PHP](./assets/number-as-string.png)
-
 PHP can convert types automatically — we saw this in the lesson about weak typing. But relying on implicit conversions is dangerous. When you know exactly which type you want to get, it's better to convert the value **explicitly**. For this, PHP has a special syntax: the desired type is specified in parentheses before the value. This operation is called type casting. Explicit code is clearer and more predictable.
 
 ## Converting a string to a number

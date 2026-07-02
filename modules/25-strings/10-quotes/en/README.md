@@ -1,7 +1,5 @@
 Strings are used very often in programming and in a wide variety of situations. We use them to work with text, display messages on the screen, process user input, and interact with external systems.
 
-![Strings](./assets/strings.png)
-
 From PHP's perspective, a string is simply a set of characters enclosed in quotes. Let's look at some examples:
 
 ```php

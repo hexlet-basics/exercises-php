@@ -1,7 +1,5 @@
 El cuerpo del bucle, al igual que el cuerpo de una función, es el lugar donde se ejecutan las instrucciones. Esto significa que podemos utilizar dentro de él todo lo aprendido anteriormente, por ejemplo, las estructuras condicionales. Así, el programa repite una misma acción varias veces, pero en cada repetición toma una decisión.
 
-![Condiciones dentro de un bucle](./assets/conditions-inside-loops.png)
-
 Supongamos que necesitamos recorrer los números del `1` al `10` e imprimir solo los pares. El bucle recorre todos los números uno tras otro, y la condición dentro del bucle decide cuáles de ellos llegan a la pantalla.
 
 Para recorrerlos necesitamos un contador. Este guarda el número actual y se incrementa después de cada repetición. Debemos imprimir un número solo cuando pasa la comprobación:

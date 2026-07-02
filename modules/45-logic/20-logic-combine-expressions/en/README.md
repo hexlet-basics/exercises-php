@@ -1,7 +1,5 @@
 **Logical operations** are expressions, so they can be combined with other expressions. For example, let's say we want to check whether a number is even, that is, whether it's a multiple of two. In programming, to do this we check the remainder of the division by two. If the remainder is `0`, the number is even. If the remainder is not `0`, the number is odd.
 
-![even-or-odd](./assets/even-or-odd.jpg)
-
 The remainder of a division is a simple but important concept in arithmetic, algebra, number theory, and cryptography. You divide a number into several equal groups, and if anything is left at the end, that is the remainder of the division.
 
 Splitting candies equally among people:

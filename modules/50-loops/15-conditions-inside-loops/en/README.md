@@ -1,7 +1,5 @@
 The loop body, just like the function body, is a place where statements are executed. This means we can use everything we've learned earlier inside it, for example, conditional constructs. This way the program repeats one action several times, but makes a decision on each repetition.
 
-![Conditions inside a loop](./assets/conditions-inside-loops.png)
-
 Suppose we need to go through the numbers from `1` to `10` and print only the even ones. The loop iterates over all the numbers in turn, and the condition inside the loop decides which of them make it to the screen.
 
 We need a counter to iterate. It stores the current number and increases after each repetition. We should print a number only when it passes the check:

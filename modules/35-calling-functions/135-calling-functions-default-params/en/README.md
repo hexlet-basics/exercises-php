@@ -1,7 +1,5 @@
 Some functions in PHP have **optional parameters**. This means that a default value is set for them in advance, and you can omit such a parameter when calling the function.
 
-![Car service](./assets/default-parameters.png)
-
 Let's look at the built-in `round()` function, which rounds a number:
 
 ```php

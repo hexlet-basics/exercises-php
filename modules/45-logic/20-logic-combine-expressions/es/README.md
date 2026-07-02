@@ -1,7 +1,5 @@
 **Las operaciones lógicas** son expresiones, por lo tanto, se pueden combinar con otras expresiones. Por ejemplo, queremos verificar si un número es par, es decir, si es múltiplo de dos. En programación, para ello se verifica el residuo de la división por dos. Si el residuo es `0`, el número es par. Si el residuo no es `0`, el número es impar.
 
-![even-or-odd](./assets/even-or-odd.jpg)
-
 El residuo de la división es un concepto simple pero importante en aritmética, álgebra, teoría de números y criptografía. Hay que dividir un número en varios grupos iguales, y si algo queda al final, eso es el residuo de la división.
 
 Dividimos caramelos en partes iguales entre personas:

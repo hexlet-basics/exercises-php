@@ -1,7 +1,5 @@
 Functions in any programming language have fundamental properties. These properties help you understand how a function will behave in different situations, how to test it, and where to use it. One of these properties is **determinism**.
 
-![Two people sitting and talking about a deterministic function](./assets/deterministic.png)
-
 A **deterministic function** always returns the same result for the same input data. For example, a function that counts the number of characters can be called deterministic:
 
 ```php

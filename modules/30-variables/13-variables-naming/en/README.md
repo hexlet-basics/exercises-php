@@ -19,8 +19,6 @@ $ddr = "New York";
 
 What are these variables? What is stored in them? To figure this out, you have to read all the rest of the code and guess from context.
 
-![Naming](./assets/naming.png)
-
 The computer doesn't care what a variable is called. To it, `$x`, `$abc`, `$message`, or `$elephantInTheRoom` are just labels for storing data. People care about something else. Programmers read code far more often than they write it. That is why variable names are an important part of communication through code.
 
 ## Good examples
