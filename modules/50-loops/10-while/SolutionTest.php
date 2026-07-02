@@ -9,7 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = "4\n3\n2\n1\nGo!";
-        $this->expectOutputString($expected);
-        printCountdown(4);
+        $this->assertOutputOf(fn () => printCountdown(4), $expected);
     }
 }

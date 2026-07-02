@@ -9,6 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = '36 °C';
-        $this->expectOutputString($expected);
+        $this->assertOutput($expected);
     }
 }

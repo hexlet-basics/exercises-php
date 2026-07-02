@@ -9,6 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = 'King in the North!';
-        $this->expectOutputString($expected);
+        $this->assertOutput($expected);
     }
 }

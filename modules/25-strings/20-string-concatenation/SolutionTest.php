@@ -9,6 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = 'https://github.com/hexlet/exercises-php';
-        $this->expectOutputString($expected);
+        $this->assertOutput($expected);
     }
 }

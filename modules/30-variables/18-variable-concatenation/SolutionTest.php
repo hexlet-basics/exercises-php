@@ -14,6 +14,6 @@ class SolutionTest extends TestCase
 Ожидаемая дата доставки — 3 рабочих дня.
 HERE;
 
-        $this->expectOutputString($expected);
+        $this->assertOutput($expected);
     }
 }

@@ -9,7 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = 'Hello, World!';
-        $this->expectOutputString($expected);
-        sayHello();
+        $this->assertOutputOf(fn () => sayHello(), $expected);
     }
 }
