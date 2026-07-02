@@ -9,6 +9,6 @@ class SolutionTest extends TestCase
     public function test()
     {
         $expected = 'The file "user\'s_config.json" was not found.';
-        $this->expectOutputString($expected);
+        $this->assertOutput($expected);
     }
 }

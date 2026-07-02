@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $randomRoll = $this->getActualOutputForAssertion();
+        $randomRoll = $this->solutionOutput;
         $this->assertThat(
             $randomRoll,
             $this->logicalAnd(

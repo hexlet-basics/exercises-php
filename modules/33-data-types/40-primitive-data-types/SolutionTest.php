@@ -15,6 +15,6 @@ Age: 32
 Rating: 4.7
 HERE;
 
-        $this->expectOutputString($expected);
+        $this->assertOutput($expected);
     }
 }
