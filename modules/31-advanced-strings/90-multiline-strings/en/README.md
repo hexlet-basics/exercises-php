@@ -67,20 +67,20 @@ Heredoc works like a double-quoted string: inside it you can substitute variable
 ```php
 <?php
 
-$a = 'А';
+$a = 'A';
 $b = 'B';
 
 $text = <<<EOT
-{$a} и {$b}
-сидели на трубе
+{$a} and {$b}
+on separate lines
 EOT;
 ```
 
 Output:
 
 ```text
-А и B
-сидели на трубе
+A and B
+on separate lines
 ```
 
 This is especially convenient for templates, letters, error messages, and multiline descriptions.

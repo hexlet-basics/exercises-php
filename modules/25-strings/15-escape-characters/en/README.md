@@ -36,9 +36,9 @@ The result will be:
 In text editors, pressing Enter adds the invisible LF (Line Feed) character. That's exactly what `\n` means. Sometimes you can see such characters if you enable the display of special characters:
 
 ```text
-- Привет!¶
-- О, привет!¶
-- Как дела?
+- Hi!¶
+- Oh, hi!¶
+- How are you?
 ```
 
 Printers, editors, and the PHP interpreter understand `\n` as a command to start the text on a new line.

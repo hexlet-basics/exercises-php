@@ -67,20 +67,20 @@ Heredoc funciona como una cadena entre comillas dobles: dentro se pueden sustitu
 ```php
 <?php
 
-$a = 'А';
+$a = 'A';
 $b = 'B';
 
 $text = <<<EOT
-{$a} и {$b}
-сидели на трубе
+{$a} y {$b}
+en líneas distintas
 EOT;
 ```
 
 Salida:
 
 ```text
-А и B
-сидели на трубе
+A y B
+en líneas distintas
 ```
 
 Esto es especialmente cómodo para plantillas, correos, mensajes de error y descripciones multilínea.

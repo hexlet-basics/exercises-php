@@ -29,8 +29,8 @@ Pregunta de control. ¿Son estas cadenas iguales o no?
 ```php
 <?php
 
-'хекслет'
-' хекслет'
+'hexlet'
+' hexlet'
 ```
 
 ## Terminología. ¿Cadena o línea?

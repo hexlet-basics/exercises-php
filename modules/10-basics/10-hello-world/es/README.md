@@ -21,7 +21,7 @@ El comando `print_r()` muestra en la pantalla el texto indicado entre paréntesi
 ```php
 <?php
 
-print_r('Хекслет - школа программирования');
+print_r('Hexlet - escuela de programación');
 ```
 
 El comando sigue siendo el mismo, solo cambia el contenido de los paréntesis. Para que el programa entienda que se trata de texto, este se encierra entre comillas. Puedes usar comillas simples `'...'` o dobles `"..."`, pero las comillas de apertura y de cierre deben coincidir.
@@ -29,7 +29,7 @@ El comando sigue siendo el mismo, solo cambia el contenido de los paréntesis. P
 ```php
 <?php
 
-print_r("Хекслет - школа программирования");
+print_r("Hexlet - escuela de programación");
 ```
 
 En PHP se acostumbra a usar comillas simples para las cadenas. Si dentro de la cadena hay un apóstrofo, las comillas simples romperán la sintaxis, por lo que en esos casos se usan comillas dobles.

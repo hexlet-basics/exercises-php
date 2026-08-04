@@ -36,9 +36,9 @@ El resultado será así:
 En los editores de texto, al presionar Enter se añade el carácter invisible LF (Line Feed). Eso es justamente lo que significa `\n`. A veces se pueden ver estos caracteres si se activa la visualización de caracteres especiales:
 
 ```text
-- Привет!¶
-- О, привет!¶
-- Как дела?
+- ¡Hola!¶
+- ¡Ah, hola!¶
+- ¿Cómo estás?
 ```
 
 Las impresoras, los editores y el intérprete de PHP entienden `\n` como una orden de empezar el texto en una nueva línea.

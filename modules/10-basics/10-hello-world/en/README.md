@@ -21,7 +21,7 @@ The `print_r()` command prints the text specified in the parentheses on the scre
 ```php
 <?php
 
-print_r('Хекслет - школа программирования');
+print_r('Hexlet - programming school');
 ```
 
 The command stays the same, only the content of the parentheses changes. So that the program understands that this is text, it is enclosed in quotes. You can use single `'...'` or double `"..."` quotes, but the opening and closing quotes must match.
@@ -29,7 +29,7 @@ The command stays the same, only the content of the parentheses changes. So that
 ```php
 <?php
 
-print_r("Хекслет - школа программирования");
+print_r("Hexlet - programming school");
 ```
 
 In PHP, it is customary to use single quotes for strings. If there is an apostrophe inside the string, single quotes will break the syntax, so in such cases double quotes are used.

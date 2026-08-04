@@ -27,8 +27,8 @@ A check question. Are these the same strings or not?
 ```php
 <?php
 
-'хекслет'
-' хекслет'
+'hexlet'
+' hexlet'
 ```
 
 ## Terminology. String or line?
