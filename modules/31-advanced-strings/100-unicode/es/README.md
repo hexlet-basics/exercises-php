@@ -45,7 +45,6 @@ Después de muchos años de popularización de Unicode, ocurrió un milagro y ah
 echo strlen('Hello!'); // => 6
 ```
 
-
 Los lenguajes se dividieron en dos campos. Algunos lenguajes incorporaron soporte para codificaciones multibyte en las funciones existentes, por lo que el cambio a UTF-8 no afectó el proceso de programación. Entre estos lenguajes se encuentran Java, Ruby, JavaScript.
 
 Sin embargo, PHP siguió su propio camino. Para trabajar con codificaciones multibyte, se agregó una [extensión separada para trabajar con cadenas multibyte](https://php.net/manual/es/book.mbstring.php) al lenguaje. En su mayoría, esta extensión agrega muchas funciones para trabajar con cadenas, con la única diferencia de que cada función tiene el prefijo `mb_` (_multibyte_):
@@ -55,7 +54,6 @@ Sin embargo, PHP siguió su propio camino. Para trabajar con codificaciones mult
 
 echo mb_strlen('Hello!'); // => 6
 ```
-
 
 Sin embargo, no existe una alternativa adecuada para obtener un carácter específico en una cadena por su índice. Esta tarea se debe realizar utilizando la función `mb_substr()`:
 
