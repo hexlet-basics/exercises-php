@@ -3,7 +3,7 @@ The warehouse received a delivery. You've come across this code, which counts th
 ```php
 <?php
 
-$label = 'Ящиков на складе:';
+$label = 'Boxes in stock:';
 print_r($label);
 print_r("\n");
 print_r(6 * 17);
@@ -14,7 +14,7 @@ The numbers 6 and 17 here are magic: it's unclear what they mean. Get rid of the
 You'll get this:
 
 ```text
-Ящиков на складе:
+Boxes in stock:
 102
 ```
 

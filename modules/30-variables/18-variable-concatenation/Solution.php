@@ -1,9 +1,9 @@
 <?php
 
-$firstName = 'Анна';
-$greeting = 'Здравствуйте';
-$intro = 'Спасибо за ваш заказ.';
-$info = 'Ожидаемая дата доставки — 3 рабочих дня.';
+$firstName = 'Anna';
+$greeting = 'Hello';
+$intro = 'Thank you for your order.';
+$info = 'Estimated delivery date — 3 business days.';
 
 // BEGIN
 print_r($greeting . ', ' . $firstName . "!\n");

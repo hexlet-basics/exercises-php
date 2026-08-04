@@ -1,7 +1,7 @@
 El programa se ejecuta e informa del resultado. Escribe un programa que muestre:
 
 ```text
-Programa iniciado correctamente
+Program started successfully
 ```
 
 Una vez que el programa funcione, rómpelo a propósito: comete uno de los errores de sintaxis:

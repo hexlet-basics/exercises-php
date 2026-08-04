@@ -1,5 +1,5 @@
 <?php
 
 // BEGIN
-print_r("Для разделения строк используйте \"\\n\"\nПример: print_r(\"строка1\\nстрока2\")");
+print_r("Use \"\\n\" to separate lines\nExample: print_r(\"line1\\nline2\")");
 // END

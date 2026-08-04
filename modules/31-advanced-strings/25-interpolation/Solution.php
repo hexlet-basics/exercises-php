@@ -1,8 +1,8 @@
 <?php
 
-$username = 'Анна';
+$username = 'Anna';
 $orderNumber = 1337;
 
 // BEGIN
-print_r("Здравствуйте, {$username}! Ваш заказ #{$orderNumber} принят.");
+print_r("Hello, {$username}! Your order #{$orderNumber} has been accepted.");
 // END

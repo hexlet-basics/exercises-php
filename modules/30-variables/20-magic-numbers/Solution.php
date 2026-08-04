@@ -1,6 +1,6 @@
 <?php
 
-$label = 'Ящиков на складе:';
+$label = 'Boxes in stock:';
 
 // BEGIN
 $palletsCount = 6;

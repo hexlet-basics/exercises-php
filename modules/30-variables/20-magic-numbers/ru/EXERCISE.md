@@ -3,7 +3,7 @@
 ```php
 <?php
 
-$label = 'Ящиков на складе:';
+$label = 'Boxes in stock:';
 print_r($label);
 print_r("\n");
 print_r(6 * 17);
@@ -14,7 +14,7 @@ print_r(6 * 17);
 Получится так:
 
 ```text
-Ящиков на складе:
+Boxes in stock:
 102
 ```
 

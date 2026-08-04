@@ -8,7 +8,7 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
-        $expected = 'доставлен';
+        $expected = 'delivered';
         $this->assertOutput($expected);
     }
 }

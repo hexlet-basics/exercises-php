@@ -10,6 +10,6 @@ class SolutionTest extends TestCase
     {
         $this->assertOutput('');
         $content = file_get_contents('Solution.php');
-        $this->assertStringContainsString('// TODO: добавить функцию приветствия', $content);
+        $this->assertStringContainsString('// TODO: add a greeting function', $content);
     }
 }

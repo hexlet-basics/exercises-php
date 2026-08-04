@@ -3,7 +3,7 @@ El almacén recibió una entrega. Te has encontrado con un código que cuenta la
 ```php
 <?php
 
-$label = 'Ящиков на складе:';
+$label = 'Boxes in stock:';
 print_r($label);
 print_r("\n");
 print_r(6 * 17);
@@ -14,7 +14,7 @@ Los números 6 y 17 aquí son mágicos: no está claro qué significan. Elimína
 El resultado debería ser:
 
 ```text
-Ящиков на складе:
+Boxes in stock:
 102
 ```
 

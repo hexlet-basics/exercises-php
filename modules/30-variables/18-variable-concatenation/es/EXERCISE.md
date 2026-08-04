@@ -7,9 +7,9 @@ Para el saludo, utiliza las variables `$firstName` y `$greeting`, una coma y un 
 El resultado en la pantalla:
 
 ```text
-Здравствуйте, Анна!
-Спасибо за ваш заказ.
-Ожидаемая дата доставки — 3 рабочих дня.
+Hello, Anna!
+Thank you for your order.
+Estimated delivery date — 3 business days.
 ```
 
 Completa la tarea utilizando solamente dos `print_r()`. No olvides que `print_r()` no agrega un salto de línea por sí mismo — el salto `\n` debes añadirlo en los lugares correctos por tu cuenta.

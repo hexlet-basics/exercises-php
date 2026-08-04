@@ -1,9 +1,9 @@
 <?php
 
-$deliveryStatus = 'в пути';
+$deliveryStatus = 'in transit';
 
 // BEGIN
-$deliveryStatus = 'доставлен';
+$deliveryStatus = 'delivered';
 // END
 
 print_r($deliveryStatus);

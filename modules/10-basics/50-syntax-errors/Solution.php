@@ -1,3 +1,3 @@
 <?php
 
-print_r('Программа успешно запущена');
+print_r('Program started successfully');

@@ -3,7 +3,7 @@ Estás escribiendo un programa y te das cuenta de que una parte hay que terminar
 Agrega al archivo el siguiente comentario:
 
 ```php
-// TODO: agregar una función de saludo
+// TODO: add a greeting function
 ```
 
 Cuando vuelvas a este lugar más tarde, el comentario te recordará que aquí todavía hay trabajo sin terminar.

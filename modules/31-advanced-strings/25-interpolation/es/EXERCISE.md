@@ -3,5 +3,5 @@ Una tienda en línea envía al cliente una confirmación del pedido. El nombre d
 Usa las variables `$username` y `$orderNumber` para mostrar en pantalla:
 
 ```text
-Здравствуйте, Анна! Ваш заказ #1337 принят.
+Hello, Anna! Your order #1337 has been accepted.
 ```

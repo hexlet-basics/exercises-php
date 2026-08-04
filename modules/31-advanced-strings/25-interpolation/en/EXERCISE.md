@@ -3,5 +3,5 @@ An online store sends the customer an order confirmation. The customer's name an
 Use the variables `$username` and `$orderNumber` to print:
 
 ```text
-Здравствуйте, Анна! Ваш заказ #1337 принят.
+Hello, Anna! Your order #1337 has been accepted.
 ```

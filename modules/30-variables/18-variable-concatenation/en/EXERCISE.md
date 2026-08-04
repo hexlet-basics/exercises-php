@@ -7,9 +7,9 @@ For the greeting, use the variables `$firstName` and `$greeting`, a comma, and a
 The result on the screen:
 
 ```text
-Здравствуйте, Анна!
-Спасибо за ваш заказ.
-Ожидаемая дата доставки — 3 рабочих дня.
+Hello, Anna!
+Thank you for your order.
+Estimated delivery date — 3 business days.
 ```
 
 Complete the task using only two `print_r()` calls. Don't forget that `print_r()` doesn't add a line break by itself — you need to add the `\n` break in the right places yourself.
