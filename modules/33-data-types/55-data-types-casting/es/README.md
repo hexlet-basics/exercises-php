@@ -1,7 +1,5 @@
 En los programas reales surge a menudo la situación de que hay que convertir datos de un tipo en otro. Esto es especialmente relevante, por ejemplo, al procesar la entrada del usuario o los datos de los formularios web. Allí todo llega en forma de cadenas, aunque hayas introducido un número.
 
-![Conversión de tipos en PHP](./assets/number-as-string.png)
-
 PHP sabe convertir tipos automáticamente: lo vimos en la lección sobre el tipado débil. Pero confiar en las conversiones implícitas es peligroso. Cuando sabes exactamente qué tipo quieres obtener, es mejor convertir el valor de forma **explícita**. Para ello, PHP tiene una sintaxis especial: antes del valor, entre paréntesis, se indica el tipo deseado. Esta operación se llama conversión de tipos (type casting). El código explícito es más comprensible y predecible.
 
 ## Conversión de una cadena en número

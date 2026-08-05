@@ -19,8 +19,6 @@ $ddr = "New York";
 
 ¿Qué son estas variables? ¿Qué se almacena en ellas? Para entenderlo, hay que leer todo el resto del código y adivinar por el contexto.
 
-![Nomenclatura](./assets/naming.png)
-
 Al ordenador no le importa cómo se llama una variable. Para él, `$x`, `$abc`, `$message` o `$elephantInTheRoom` son simplemente etiquetas para almacenar datos. A las personas les importa otra cosa. Los programadores leen código mucho más a menudo de lo que lo escriben. Por eso los nombres de las variables son una parte importante de la comunicación a través del código.
 
 ## Buenos ejemplos
