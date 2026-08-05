@@ -1,7 +1,5 @@
 Las cadenas de texto se usan con mucha frecuencia en programación y en las situaciones más diversas. Con ellas trabajamos con texto, mostramos mensajes en la pantalla, procesamos la entrada del usuario e interactuamos con sistemas externos.
 
-![Cadenas de texto](./assets/strings.png)
-
 Desde el punto de vista de PHP, una cadena de texto es simplemente un conjunto de caracteres encerrado entre comillas. Veamos algunos ejemplos:
 
 ```php
