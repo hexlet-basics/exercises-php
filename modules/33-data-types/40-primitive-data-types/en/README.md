@@ -99,7 +99,3 @@ PHP primitive types
 Besides strings and numbers, PHP has the boolean type `bool` with the values `true` and `false`, as well as the special value `null`. We'll encounter them in more detail in the future.
 
 There are also composite types: arrays, objects, and others. We'll get to know them later. Moreover, in PHP you can create your own types (for example, classes), but first it's important to get a good grasp of the primitives.
-
-## Strings and lines
-
-In English, strings in programming are called **strings**, while lines of text files are called **lines**. In Russian there can be confusion, so throughout the lessons we'll say "строка" for the "string" data type and "строчка" for lines in files.

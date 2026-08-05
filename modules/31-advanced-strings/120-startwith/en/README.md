@@ -3,15 +3,15 @@ When working with strings, you often need to determine whether one string — a 
 ```php
 <?php
 
-print_r(mb_strpos('Валар Моргулис', 'Моргулис')); // => 6
+print_r(mb_strpos('Naïve Bayes', 'Bayes')); // => 6
 ```
 
-The function returned `6` — the index of the letter `М`, where the substring begins. Indexes, as usual, are counted from zero:
+The function returned `6` — the index of the letter `B`, where the substring begins. Indexes, as usual, are counted from zero:
 
 ```php
 <?php
 
-print_r(mb_strpos('Валар Моргулис', 'Валар')); // => 0
+print_r(mb_strpos('Naïve Bayes', 'Naïve')); // => 0
 ```
 
 Here it returned `0`: the substring was found at the very beginning of the string.
@@ -21,7 +21,7 @@ If the substring isn't found, `mb_strpos()` returns the special value `false` ("
 ```php
 <?php
 
-print_r(mb_strpos('Валар Моргулис', 'Дракарис')); // =>
+print_r(mb_strpos('Naïve Bayes', 'Fisher')); // =>
 ```
 
 There's a hidden trap here that beginners often fall into: the result `0` ("found at the beginning of the string") is easy to confuse with `false` ("not found at all"). To tell them apart, you need a strict comparison — we'll cover it in the lessons about logic. For now, just remember: `mb_strpos()` answers the question "where?", not "is there?".

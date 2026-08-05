@@ -3,15 +3,15 @@ A menudo, al trabajar con cadenas de texto, es necesario determinar si una caden
 ```php
 <?php
 
-print_r(mb_strpos('Валар Моргулис', 'Моргулис')); // => 6
+print_r(mb_strpos('Feliz cumpleaños', 'cumpleaños')); // => 6
 ```
 
-La función devolvió `6`: el índice de la letra `М`, donde comienza la subcadena. Los índices, como de costumbre, se cuentan desde cero:
+La función devolvió `6`: el índice de la letra `c`, donde comienza la subcadena. Los índices, como de costumbre, se cuentan desde cero:
 
 ```php
 <?php
 
-print_r(mb_strpos('Валар Моргулис', 'Валар')); // => 0
+print_r(mb_strpos('Feliz cumpleaños', 'Feliz')); // => 0
 ```
 
 Aquí se devolvió `0`: la subcadena se encontró justo al inicio de la cadena.
@@ -21,7 +21,7 @@ Si la subcadena no se encuentra, `mb_strpos()` devuelve el valor especial `false
 ```php
 <?php
 
-print_r(mb_strpos('Валар Моргулис', 'Дракарис')); // =>
+print_r(mb_strpos('Feliz cumpleaños', 'Navidad')); // =>
 ```
 
 Aquí se esconde una trampa en la que suelen caer los principiantes: el resultado `0` («encontrado al inicio de la cadena») es fácil de confundir con `false` («no encontrado en absoluto»). Para distinguirlos, se necesita una comparación estricta, que veremos en las lecciones sobre lógica. Por ahora, recuerda: `mb_strpos()` responde a la pregunta «¿dónde?», no «¿existe?».
