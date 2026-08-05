@@ -99,7 +99,3 @@ Tipos primitivos de PHP
 Además de las cadenas y los números, PHP tiene el tipo booleano `bool` con los valores `true` y `false`, así como el valor especial `null`. Nos encontraremos con ellos con más detalle en el futuro.
 
 También existen tipos compuestos: arrays, objetos y otros. Los conoceremos más adelante. Es más, en PHP se pueden crear tus propios tipos (por ejemplo, clases), pero primero es importante entender bien los primitivos.
-
-## Strings y lines
-
-En inglés, las cadenas de texto en programación se llaman **strings**, y las líneas de los archivos de texto se llaman **lines**. En ruso puede haber confusión, por eso en todas las lecciones diremos «строка» para referirnos al tipo de dato «cadena de texto», y «строчка» para las lines en los archivos.
