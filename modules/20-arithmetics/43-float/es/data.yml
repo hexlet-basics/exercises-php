@@ -5,6 +5,7 @@ tips:
     [Lo que todo informático debe saber sobre la aritmética de punto
     flotante](https://www.validlab.com/goldberg/paper.pdf)
 definitions:
-  - name: Número racional
+  - name: Número de punto flotante
     description: |
-      un número que se puede representar como una fracción común.
+      representación aproximada de un número fraccionario en la memoria de la
+      computadora, definida por el estándar IEEE 754.

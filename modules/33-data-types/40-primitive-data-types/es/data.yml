@@ -10,8 +10,8 @@ definitions:
     description: >-
       conjunto de datos en el código (tipo de información). El tipo determina
       qué se puede hacer con los elementos de un conjunto específico. Por
-      ejemplo, los números enteros, los números racionales, las cadenas de texto
-      son diferentes tipos de datos.
+      ejemplo, los números enteros, los números fraccionarios, las cadenas de
+      texto son diferentes tipos de datos.
   - name: Tipos de datos primitivos
     description: tipos simples incorporados en el propio lenguaje de programación.
   - name: Cadena de texto (string)

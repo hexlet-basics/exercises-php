@@ -1,7 +1,7 @@
 In mathematics there are different types of numbers. For example:
 
 - Natural numbers: positive integers: 1, 2, 3, and so on.
-- Rational numbers: fractional numbers that can be represented as a division, for example: 0.5, 1.75, 3.14.
+- Fractional numbers: numbers with a fractional part, for example: 0.5, 1.75, 3.14.
 
 From the point of view of mathematics, everything is simple. But from the computer's point of view, there is a real chasm between these types of numbers. Try to solve mentally: what is `0.2` + `0.1`? Obviously, `0.3`. PHP will show the same when printing:
 
@@ -32,7 +32,7 @@ Check:       0.1 + 0.2 - 0.3  →  5.5511151231258E-17 (not 0)
 
 This behavior is typical for Python, JavaScript, and most other programming languages.
 
-The reason lies in how computers work. A computer operates with limited memory, while rational numbers are infinitely precise. Infinitely many other numbers can fit between 0.1 and 0.2. But a computer cannot store infinity. It approximates the number, trying to fit it into the available number of bits.
+The reason lies in how computers work. A computer operates with limited memory, while there are infinitely many fractional numbers: as many as you like fit between 0.1 and 0.2. A computer cannot store infinity, so it approximates the number, trying to fit it into the available number of bits.
 
 Such approximate values are called floating point numbers. Their storage and calculations follow strict rules described in a special standard, IEEE 754, which most programming languages rely on.
 

@@ -4,7 +4,7 @@ Por ejemplo:
 
 - "Hello, World!" es una cadena de texto (`string`)
 - 7, -198, 0 son números enteros (`int`)
-- 3.14, -0.01, 1.0 son números racionales (`float`)
+- 3.14, -0.01, 1.0 son números de punto flotante (`float`)
 
 ## ¿Qué es un tipo de dato?
 
@@ -50,12 +50,12 @@ En la pantalla el resultado se ve igual, pero dentro del programa son cosas comp
 
 El número `5` y la cadena `'5'` son valores diferentes, y las operaciones con ellos funcionan de forma distinta. Eso sí, cuando los tipos no coinciden, PHP a menudo intenta convertir un tipo en otro por sí mismo. Qué tan cómodo es esto y por qué es peligroso lo veremos un poco más adelante en este módulo.
 
-## Números enteros y racionales
+## Números enteros y fraccionarios
 
 PHP distingue dos clases de números:
 
 - `int` designa los números enteros: -3, 0, 7, 100000
-- `float` designa los números reales (racionales): 1.0, -3.14, 2.718
+- `float` designa los números fraccionarios, también llamados números de punto flotante: 1.0, -3.14, 2.718
 
 Esta separación está relacionada con las particularidades de cómo están construidos los ordenadores — hablamos de ello en la lección sobre los números de punto flotante.
 
@@ -84,7 +84,7 @@ Los tipos como:
 
 - string (cadena de texto),
 - int (número entero),
-- float (número racional)
+- float (número de punto flotante)
 
 se llaman primitivos: están incorporados directamente en el propio lenguaje PHP.
 
