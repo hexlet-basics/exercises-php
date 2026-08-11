@@ -5,6 +5,7 @@ tips:
     [What every computer scientist should know about floating-point
     arithmetic](https://www.validlab.com/goldberg/paper.pdf)
 definitions:
-  - name: Rational number
+  - name: Floating point number
     description: |
-      a number that can be represented as a common fraction.
+      an approximate representation of a fractional number in computer memory,
+      defined by the IEEE 754 standard.

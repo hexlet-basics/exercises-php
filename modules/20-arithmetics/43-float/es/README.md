@@ -1,7 +1,7 @@
 En matemáticas hay diferentes tipos de números. Por ejemplo:
 
 - Naturales: números enteros positivos: 1, 2, 3, etc.
-- Racionales: números fraccionarios que se pueden representar como una división, por ejemplo: 0.5, 1.75, 3.14.
+- Fraccionarios: números con parte decimal, por ejemplo: 0.5, 1.75, 3.14.
 
 Desde el punto de vista de las matemáticas, todo es simple. Pero desde el punto de vista de la computadora, entre estos tipos de números hay un verdadero abismo. Intenta resolver mentalmente: ¿cuánto es `0.2` + `0.1`? Obviamente, `0.3`. PHP mostrará lo mismo al imprimir:
 
@@ -32,7 +32,7 @@ Comprobación: 0.1 + 0.2 - 0.3 →  5.5511151231258E-17 (y no 0)
 
 Este comportamiento es típico de Python, JavaScript y la mayoría de los demás lenguajes de programación.
 
-La razón está en el funcionamiento de la computadora. Una computadora trabaja con memoria limitada, mientras que los números racionales son infinitamente precisos. Entre 0.1 y 0.2 se pueden colocar infinitos números. Pero la computadora no puede almacenar el infinito. Aproxima el número, tratando de ajustarlo a la cantidad de bits disponible.
+La razón está en el funcionamiento de la computadora. Una computadora trabaja con memoria limitada, mientras que los números fraccionarios son infinitos: entre 0.1 y 0.2 se pueden colocar cuantos se quiera. La computadora no puede almacenar el infinito, así que aproxima el número, tratando de ajustarlo a la cantidad de bits disponible.
 
 Estos valores aproximados se llaman números de punto flotante (floating point numbers). Su almacenamiento y los cálculos con ellos siguen reglas estrictas descritas en un estándar especial, IEEE 754, en el que se basan la mayoría de los lenguajes de programación.
 

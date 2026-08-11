@@ -4,7 +4,7 @@ For example:
 
 - "Hello, World!" is a string (`string`)
 - 7, -198, 0 are integers (`int`)
-- 3.14, -0.01, 1.0 are rational numbers (`float`)
+- 3.14, -0.01, 1.0 are floating point numbers (`float`)
 
 ## What is a data type?
 
@@ -50,12 +50,12 @@ On the screen the result looks the same, but inside the program these are comple
 
 The number `5` and the string `'5'` are different values, and operations with them work differently. That said, when types don't match, PHP often tries to convert one type into another on its own. How convenient this is and what makes it dangerous we'll look at a bit later in this module.
 
-## Integers and rational numbers
+## Integers and fractional numbers
 
 PHP distinguishes between two kinds of numbers:
 
 - `int` denotes integers: -3, 0, 7, 100000
-- `float` denotes real (rational) numbers: 1.0, -3.14, 2.718
+- `float` denotes fractional numbers, also called floating point numbers: 1.0, -3.14, 2.718
 
 This division is due to the peculiarities of how computers are built — we talked about this in the lesson about floating-point numbers.
 
@@ -84,7 +84,7 @@ Types such as:
 
 - string,
 - int (integer),
-- float (rational number)
+- float (floating point number)
 
 are called primitive: they are built right into the PHP language itself.
 
