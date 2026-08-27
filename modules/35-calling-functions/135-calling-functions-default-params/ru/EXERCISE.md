@@ -9,11 +9,11 @@
 Каждое значение выводится на отдельной строке.
 
 ```text
-distance ──────┐
-               ├──→ fuel ──────┐
-fuelConsumption ───┘           ├──→ tripCost ──────┐
-                               │                   ├──→ perPerson
-fuelPrice ─────────────────────┘                   │
-                                                   │
-passengers ────────────────────────────────────────┘
+distance ───────┐
+                ├──→ fuel ──┐
+fuelConsumption ┘           │
+                            ├──→ tripCost ──┐
+fuelPrice ──────────────────┘               │
+                                            ├──→ perPerson
+passengers ─────────────────────────────────┘
 ```
