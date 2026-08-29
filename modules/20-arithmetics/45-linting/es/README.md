@@ -31,7 +31,7 @@ Veamos un ejemplo:
 ```php
 <?php
 
-print_r(1+ 3);
+print_r(1 + 3);
 ```
 
 Este código se ve descuidado, y el linter señalará con razón el error. Así es como se ve el proceso de verificación:
@@ -60,9 +60,7 @@ Cada mensaje del linter está relacionado con una regla concreta. Supongamos que
 <?php
 
 // La siguiente línea tiene una sangría de una tabulación
-	print_r (((8 / 2) + 5) - (-3 / 2));
-
-?>
+print_r(((8 / 2) + 5) - (-3 / 2));
 ```
 
 Al verificar el archivo, el linter encontrará los siguientes errores:

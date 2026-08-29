@@ -29,7 +29,7 @@ The command stays the same, only the content of the parentheses changes. So that
 ```php
 <?php
 
-print_r("Hexlet - programming school");
+print_r('Hexlet - programming school');
 ```
 
 In PHP, it is customary to use single quotes for strings. If there is an apostrophe inside the string, single quotes will break the syntax, so in such cases double quotes are used.

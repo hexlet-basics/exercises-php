@@ -53,7 +53,7 @@ print_r((string) 3.5); // => '3.5'
 <?php
 
 $age = 42;
-print_r('Age: ' . (string) $age); // => Age: 42
+print_r('Age: '.(string) $age); // => Age: 42
 ```
 
 ## Преобразование в число с плавающей точкой с помощью (float)

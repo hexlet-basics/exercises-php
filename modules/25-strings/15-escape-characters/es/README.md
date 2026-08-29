@@ -10,7 +10,7 @@ Si simplemente le pasamos este texto a `print_r()`, PHP imprimirá todo en una s
 ```php
 <?php
 
-print_r("- Are you hungry?- Aaaarrrgh!");
+print_r('- Are you hungry?- Aaaarrrgh!');
 // => - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -99,7 +99,7 @@ También puedes insertar `\n` en cualquier parte de la cadena — antes, despué
 
 print_r("First line\n");
 print_r("\n"); // Simplemente una línea vacía
-print_r("Second line");
+print_r('Second line');
 ```
 
 El resultado será así:
@@ -117,7 +117,7 @@ Second line
 ```php
 <?php
 
-print_r("Hello\\nWorld");
+print_r('Hello\\nWorld');
 // => Hello\nWorld
 
 // Si olvidas indicar la segunda barra

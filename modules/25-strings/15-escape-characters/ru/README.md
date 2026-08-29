@@ -10,7 +10,7 @@
 ```php
 <?php
 
-print_r("- Are you hungry?- Aaaarrrgh!");
+print_r('- Are you hungry?- Aaaarrrgh!');
 // => - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -99,7 +99,7 @@ print_r("Hello\n\nWorld");
 
 print_r("First line\n");
 print_r("\n"); // Просто пустая строчка
-print_r("Second line");
+print_r('Second line');
 ```
 
 Результат будет таким:
@@ -117,7 +117,7 @@ Second line
 ```php
 <?php
 
-print_r("Hello\\nWorld");
+print_r('Hello\\nWorld');
 // => Hello\nWorld
 
 // Если забыть указать второй слеш

@@ -46,6 +46,7 @@ var_dump(isEven(3));  // => bool(false)
 function isFirstLetterAnA(string $text): bool
 {
     $firstLetter = $text[0];
+
     return $firstLetter === 'a';
 }
 

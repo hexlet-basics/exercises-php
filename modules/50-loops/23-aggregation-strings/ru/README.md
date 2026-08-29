@@ -61,8 +61,8 @@ i=3: result = 'hexlethexlet' . 'hexlet' = 'hexlethexlethexlet'
 ```php
 <?php
 
-print_r('' . 'abc');  // => abc
-print_r('abc' . '');  // => abc
+print_r(''.'abc');  // => abc
+print_r('abc'.'');  // => abc
 ```
 
 Поэтому именно пустая строка всегда используется как начальное значение при агрегации строк.

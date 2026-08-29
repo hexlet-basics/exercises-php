@@ -3,8 +3,8 @@
 ```php
 <?php
 
-!true;  // false
-!false; // true
+! true;  // false
+! false; // true
 ```
 
 Например, если есть функция, которая проверяет четность числа, то с помощью отрицания можно выполнить проверку нечетности:
@@ -18,7 +18,7 @@ function isEven(int $number): bool
 }
 
 var_dump(isEven(10));  // => bool(true)
-var_dump(!isEven(10)); // => bool(false)
+var_dump(! isEven(10)); // => bool(false)
 ```
 
 В примере выше мы добавили `!` слева от вызова функции и получили обратное действие.
@@ -28,7 +28,7 @@ var_dump(!isEven(10)); // => bool(false)
 ```php
 <?php
 
-var_dump(!!isEven(10)); // => bool(true)
+var_dump((bool) isEven(10)); // => bool(true)
 ```
 
 В логике двойное отрицание равносильно отсутствию отрицания:
@@ -36,11 +36,11 @@ var_dump(!!isEven(10)); // => bool(true)
 ```php
 <?php
 
-!!true;  // true
-!!false; // false
+(bool) true;  // true
+(bool) false; // false
 
-var_dump(!!isEven(10)); // => bool(true)
-var_dump(!!isEven(11)); // => bool(false)
+var_dump((bool) isEven(10)); // => bool(true)
+var_dump((bool) isEven(11)); // => bool(false)
 ```
 
 `!` можно комбинировать с `&&` и `||`. Среди логических операторов у него наивысший приоритет, поэтому он применяется первым:
@@ -48,8 +48,8 @@ var_dump(!!isEven(11)); // => bool(false)
 ```php
 <?php
 
-!true || true;  // (!true) || true   => false || true  => true
-!true && false; // (!true) && false  => false && false => false
+! true || true;  // (!true) || true   => false || true  => true
+! true && false; // (!true) && false  => false && false => false
 ```
 
 Скобки меняют порядок вычисления:
@@ -57,8 +57,8 @@ var_dump(!!isEven(11)); // => bool(false)
 ```php
 <?php
 
-!(true || true);  // !true  => false
-!(true && false); // !false => true
+! (true || true);  // !true  => false
+! (true && false); // !false => true
 ```
 
 Практический пример — функция проверяет, может ли водитель сесть за руль: нужны права и трезвость:
@@ -68,7 +68,7 @@ var_dump(!!isEven(11)); // => bool(false)
 
 function canDrive(bool $hasLicense, bool $isDrunk): bool
 {
-    return $hasLicense && !$isDrunk;
+    return $hasLicense && ! $isDrunk;
 }
 
 var_dump(canDrive(true, false));  // => bool(true)  (есть права, трезвый)
@@ -92,8 +92,8 @@ var_dump(canDrive(false, false)); // => bool(false) (нет прав)
 ```php
 <?php
 
-!(true && false); // !false => true
-!true || !false;  // false || true => true
+! (true && false); // !false => true
+! true || ! false;  // false || true => true
 ```
 
 Второй закон: отрицание дизъюнкции равно конъюнкции отрицаний:
@@ -101,8 +101,8 @@ var_dump(canDrive(false, false)); // => bool(false) (нет прав)
 ```php
 <?php
 
-!(true || false); // !true => false
-!true && !false;  // false && true => false
+! (true || false); // !true => false
+! true && ! false;  // false && true => false
 ```
 
 На практике законы де Моргана помогают упрощать условия. Например, вместо `!($isAdmin || $isModerator)` можно написать `!$isAdmin && !$isModerator` — читается как «не администратор и не модератор».

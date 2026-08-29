@@ -55,7 +55,7 @@ By default the words are joined with a space, but you can specify a different ch
 
 function joinWords($word1, $word2, $sep = ' ')
 {
-    return $word1 . $sep . $word2;
+    return $word1.$sep.$word2;
 }
 
 print_r(joinWords('King', 'Road'));         // => King Road

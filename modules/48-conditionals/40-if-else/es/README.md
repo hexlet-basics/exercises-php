@@ -16,8 +16,8 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Hodor') . "\n");  // => Sentence is normal
-print_r(getTypeOfSentence('Hodor?') . "\n"); // => Sentence is question
+print_r(getTypeOfSentence('Hodor')."\n");  // => Sentence is normal
+print_r(getTypeOfSentence('Hodor?')."\n"); // => Sentence is question
 ```
 
 Agregamos `else` y un nuevo bloque entre llaves. Se ejecuta si la condición en `if` resulta falsa. Además, dentro del bloque `else` se pueden anidar otras condiciones `if`. Else se traduce como «de lo contrario», «en el otro caso».

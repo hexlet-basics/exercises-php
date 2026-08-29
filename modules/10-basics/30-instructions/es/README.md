@@ -49,7 +49,8 @@ Normalmente las instrucciones se escriben en líneas separadas, pero como las in
 ```php
 <?php
 
-print_r('Mother of Dragons. '); print_r('Dracarys!');
+print_r('Mother of Dragons. ');
+print_r('Dracarys!');
 ```
 
 Ambas versiones funcionan de la misma manera, pero la segunda es más difícil de leer. Por eso las instrucciones casi siempre se escriben una por línea.

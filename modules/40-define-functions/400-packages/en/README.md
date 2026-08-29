@@ -8,11 +8,11 @@ Packages are managed by **Composer** — the PHP package manager. A project desc
 
 ```json
 {
-    "name": "hexlet-basics/exercises-php",
-    "require": {
-        "php": "^8.4",
-        "nesbot/carbon": "^3.0"
-    }
+  "name": "hexlet-basics/exercises-php",
+  "require": {
+    "php": "^8.4",
+    "nesbot/carbon": "^3.0"
+  }
 }
 ```
 
@@ -33,7 +33,7 @@ Installed packages end up in the `vendor/` directory, but you don't need to incl
 ```php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 // After that you can use functions and classes
 // from any installed package

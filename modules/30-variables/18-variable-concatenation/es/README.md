@@ -5,7 +5,7 @@ Anteriormente ya unimos cadenas directamente usando la concatenación. Ahora har
 ```php
 <?php
 
-$what = 'Kings' . 'road';
+$what = 'Kings'.'road';
 print_r($what); // => Kingsroad
 ```
 
@@ -19,7 +19,7 @@ Si en la variable `$first` está la cadena "Kings", podemos unirla tranquilament
 <?php
 
 $first = 'Kings';
-$what = $first . 'road';
+$what = $first.'road';
 print_r($what); // => Kingsroad
 ```
 
@@ -34,7 +34,7 @@ De la misma manera, se pueden combinar los valores de dos variables si ambas con
 
 $first = 'Kings';
 $last = 'road';
-$what = $first . $last;
+$what = $first.$last;
 print_r($what); // => Kingsroad
 ```
 
@@ -64,7 +64,7 @@ Probemos así:
 <?php
 
 $age = 42;
-print_r('Age: ' . $age); // => Age: 42
+print_r('Age: '.$age); // => Age: 42
 ```
 
 En PHP este código funciona: el operador `.` siempre une cadenas, por lo que el número se convierte automáticamente en una cadena. No todos los lenguajes funcionan así — por ejemplo, en Python unir una cadena y un número provoca un error, y el número hay que convertirlo explícitamente.
@@ -75,7 +75,7 @@ Lo mismo ocurre con las variables que contienen resultados de cálculos:
 <?php
 
 $price = 50 * 1.25 * 6.91; // => 431.875
-print_r('Price in yuans: ' . $price); // => Price in yuans: 431.875
+print_r('Price in yuans: '.$price); // => Price in yuans: 431.875
 ```
 
 La conversión automática es cómoda, pero requiere atención: a veces se convierte en cadena algo distinto de lo que esperabas. Hablaremos más sobre este comportamiento en las lecciones sobre tipos de datos.

@@ -17,6 +17,7 @@ function hasCapitalLetter(string $text): bool
 function isCorrectPassword(string $password): bool
 {
     $length = strlen($password);
+
     return $length > 8 && hasCapitalLetter($password);
 }
 
@@ -61,6 +62,7 @@ function hasSpecialChars(string $text): bool
 function isStrongPassword(string $password): bool
 {
     $length = strlen($password);
+
     // Los paréntesis establecen la prioridad. Queda claro qué se refiere a qué.
     return ($length > 8 && hasCapitalLetter($password)) && hasSpecialChars($password);
 }

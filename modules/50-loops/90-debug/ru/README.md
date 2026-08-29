@@ -35,7 +35,7 @@ Stack trace:
 Посмотрим на пример. Здесь синтаксическая ошибка из-за того, что открывающая кавычка `"` не совпадает с закрывающей `'`:
 
 ```bash
-PHP Parse error:  Unclosed '(' on line 3 in /code/users.php on line 4
+PHP Parse error: Unclosed '(' on line 3 in /code/users.php on line 4
 ```
 
 Интерпретатор даже не начинает выполнять такую программу — он не может ее разобрать.

@@ -12,9 +12,9 @@ From a technical point of view, everything works. We have already seen similar e
 ```php
 <?php
 
-$a = "John";
+$a = 'John';
 $n = 42;
-$ddr = "New York";
+$ddr = 'New York';
 ```
 
 What are these variables? What is stored in them? To figure this out, you have to read all the rest of the code and guess from context.
@@ -26,7 +26,7 @@ The computer doesn't care what a variable is called. To it, `$x`, `$abc`, `$mess
 ```php
 <?php
 
-$userName = "Arya Stark";
+$userName = 'Arya Stark';
 $unpaidOrdersCount = 3;
 $maxAttempts = 5;
 ```

@@ -82,7 +82,6 @@ The `$sum` variable has an initial value equal to 0. Why set a value at all? Any
 
 // the initial value is not set
 // PHP automatically makes it equal to NULL
-$sum;
 
 // the first iteration of the loop
 $sum = $sum + 2; // ?

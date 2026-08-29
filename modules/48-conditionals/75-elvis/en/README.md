@@ -42,6 +42,7 @@ In PHP, there's a special operator for such cases:
 function generateGreeting(string $name, string $nickname): string
 {
     $user = $name ?: $nickname;
+
     return "Hello, {$user}!";
 }
 ```

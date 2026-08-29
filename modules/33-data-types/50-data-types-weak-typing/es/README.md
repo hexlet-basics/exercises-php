@@ -18,7 +18,7 @@ Fíjate: el operador `+` en PHP siempre significa aritmética, mientras que para
 <?php
 
 print_r(1 + '7'); // => 8
-print_r(1 . '7'); // => 17
+print_r(1 .'7'); // => 17
 ```
 
 ```text

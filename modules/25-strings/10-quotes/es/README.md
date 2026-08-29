@@ -59,7 +59,7 @@ En PHP las cadenas se pueden escribir tanto con comillas simples como con comill
 <?php
 
 print_r('Hello');
-print_r("Hello");
+print_r('Hello');
 ```
 
 Por defecto, se acostumbra usar comillas simples `'`, si dentro de la cadena no se necesitan las capacidades de las comillas dobles. Muchos estándares de estilo de código PHP siguen esta convención.
@@ -128,6 +128,6 @@ Para imprimir la propia barra invertida, también hay que escaparla:
 ```php
 <?php
 
-print_r("\\");
+print_r('\\');
 // => \
 ```

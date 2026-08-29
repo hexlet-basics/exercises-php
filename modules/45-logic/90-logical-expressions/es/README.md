@@ -11,11 +11,11 @@ Se puede comprobar con la doble negación `!!`, que convierte cualquier valor a 
 ```php
 <?php
 
-var_dump(!!'hello'); // => bool(true)  — una cadena no vacía es truthy
-var_dump(!!'');      // => bool(false) — una cadena vacía es falsy
-var_dump(!!0);       // => bool(false) — cero es falsy
-var_dump(!!-3.5);    // => bool(true)  — un número distinto de cero es truthy
-var_dump(!!'0');     // => bool(false) — la cadena '0' es falsy, una particularidad de PHP
+var_dump((bool) 'hello'); // => bool(true)  — una cadena no vacía es truthy
+var_dump((bool) '');      // => bool(false) — una cadena vacía es falsy
+var_dump((bool) 0);       // => bool(false) — cero es falsy
+var_dump((bool) -3.5);    // => bool(true)  — un número distinto de cero es truthy
+var_dump((bool) '0');     // => bool(false) — la cadena '0' es falsy, una particularidad de PHP
 ```
 
 Este truco se usa para cambiar explícitamente el tipo de dato: el resultado de la doble negación siempre será un valor de tipo `bool`.

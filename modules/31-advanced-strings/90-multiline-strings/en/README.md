@@ -25,7 +25,7 @@ PHP has a more convenient way to write text across several lines: the heredoc sy
 ```php
 <?php
 
-$text = <<<EOT
+$text = <<<'EOT'
 Example of text,
 consisting of
 several lines
@@ -55,7 +55,7 @@ The line break before the closing identifier isn't included in the result. That'
 ```php
 <?php
 
-$quote = <<<EOT
+$quote = <<<'EOT'
 Here you don't need to escape either 'single' or "double" quotes
 EOT;
 ```

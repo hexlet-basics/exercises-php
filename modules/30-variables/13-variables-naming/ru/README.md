@@ -12,9 +12,9 @@ print_r($x);
 ```php
 <?php
 
-$a = "John";
+$a = 'John';
 $n = 42;
-$ddr = "New York";
+$ddr = 'New York';
 ```
 
 Что это за переменные? Что в них хранится? Чтобы это понять, нужно читать весь остальной код и догадываться по контексту.
@@ -28,7 +28,7 @@ $ddr = "New York";
 ```php
 <?php
 
-$userName = "Arya Stark";
+$userName = 'Arya Stark';
 $unpaidOrdersCount = 3;
 $maxAttempts = 5;
 ```

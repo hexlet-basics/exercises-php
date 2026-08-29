@@ -8,6 +8,7 @@
 
 ```php
 <?php
+
 // helpers.php
 
 function sayHi(): void
@@ -18,6 +19,7 @@ function sayHi(): void
 
 ```php
 <?php
+
 // Solution.php
 
 require 'helpers.php';

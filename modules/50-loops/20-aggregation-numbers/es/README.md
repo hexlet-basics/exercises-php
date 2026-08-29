@@ -82,7 +82,6 @@ La variable `$sum` tiene un valor inicial igual a 0. ¿Por qué especificar un v
 
 // el valor inicial no está especificado
 // PHP lo establece automáticamente en NULL
-$sum;
 
 // primera iteración del bucle
 $sum = $sum + 2; // ?

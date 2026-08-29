@@ -12,8 +12,8 @@ function abs(int $number): int
     return -$number;
 }
 
-print_r(abs(10) . "\n");  // => 10
-print_r(abs(-10) . "\n"); // => 10
+print_r(abs(10)."\n");  // => 10
+print_r(abs(-10)."\n"); // => 10
 ```
 
 Но можно записать более лаконично. В PHP есть конструкция, которая работает как *if-else*, но при этом является выражением — ее результат можно сразу вернуть из функции. Она называется **тернарный оператор** и является единственным оператором в PHP, который требует три операнда:
@@ -64,8 +64,8 @@ function getTypeOfSentence(string $sentence): string
     return $lastChar === '?' ? 'question' : 'normal';
 }
 
-print_r(getTypeOfSentence('Hodor') . "\n");  // => normal
-print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
+print_r(getTypeOfSentence('Hodor')."\n");  // => normal
+print_r(getTypeOfSentence('Hodor?')."\n"); // => question
 ```
 
 Вы уже могли догадаться, что тернарный оператор можно вкладывать в тернарный оператор. Это возможно, но лучше так не делать. Такой код тяжело читать и отлаживать, поэтому вложенные тернарные операторы считаются очень плохой практикой.

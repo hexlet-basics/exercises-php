@@ -31,7 +31,7 @@ Let's look at an example:
 ```php
 <?php
 
-print_r(1+ 3);
+print_r(1 + 3);
 ```
 
 Such code looks sloppy, and the linter will rightly point out the error. Here's what the checking process looks like:
@@ -60,9 +60,7 @@ Each linter message is associated with a specific rule. Suppose we have a file w
 <?php
 
 // On the next line, the indentation is one tab
-	print_r (((8 / 2) + 5) - (-3 / 2));
-
-?>
+print_r(((8 / 2) + 5) - (-3 / 2));
 ```
 
 When checking the file, the linter will find the following errors:

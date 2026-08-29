@@ -31,7 +31,7 @@ In this code, the semicolon `;` is forgotten at the end of the statement, which 
 
 ```bash
 php index.php
-PHP Parse error:  syntax error, unexpected end of file, expecting "," or ";" in /tmp/index.php on line 4
+PHP Parse error: syntax error, unexpected end of file, expecting "," or ";" in /tmp/index.php on line 4
 ```
 
 The text may be unclear at first, but that's normal — the more often you encounter such errors, the faster you will learn to understand what happened. Note: at the end of the message there is a path to the file and the number of the line where, in the interpreter's opinion, the error occurred.

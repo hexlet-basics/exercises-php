@@ -51,7 +51,7 @@ Esto es útil, por ejemplo, al formar textos, mensajes y salidas:
 <?php
 
 $age = 42;
-print_r('Age: ' . (string) $age); // => Age: 42
+print_r('Age: '.(string) $age); // => Age: 42
 ```
 
 ## Conversión en número de punto flotante con (float)

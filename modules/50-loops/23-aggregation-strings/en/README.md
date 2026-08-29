@@ -61,8 +61,8 @@ It is called the neutral element because it changes nothing during concatenation
 ```php
 <?php
 
-print_r('' . 'abc');  // => abc
-print_r('abc' . '');  // => abc
+print_r(''.'abc');  // => abc
+print_r('abc'.'');  // => abc
 ```
 
 That is why the empty string is always used as the initial value when aggregating strings.

@@ -8,6 +8,7 @@ The `require` statement includes the specified file and makes its contents avail
 
 ```php
 <?php
+
 // helpers.php
 
 function sayHi(): void
@@ -18,6 +19,7 @@ function sayHi(): void
 
 ```php
 <?php
+
 // Solution.php
 
 require 'helpers.php';

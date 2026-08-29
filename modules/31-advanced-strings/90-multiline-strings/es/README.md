@@ -25,7 +25,7 @@ En PHP hay una forma más cómoda de escribir texto en varias líneas: la sintax
 ```php
 <?php
 
-$text = <<<EOT
+$text = <<<'EOT'
 Ejemplo de texto,
 que consta de
 varias líneas
@@ -55,7 +55,7 @@ El salto de línea antes del identificador de cierre no se incluye en el resulta
 ```php
 <?php
 
-$quote = <<<EOT
+$quote = <<<'EOT'
 Aquí no hay que escapar ni las comillas 'simples' ni las "dobles"
 EOT;
 ```

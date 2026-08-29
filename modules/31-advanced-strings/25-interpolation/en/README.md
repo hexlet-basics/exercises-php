@@ -6,7 +6,7 @@ Let's recall how concatenation works. To do it, we join the strings we need (or 
 $firstName = 'Joffrey';
 $greeting = 'Hello';
 
-print_r($greeting . ", " . $firstName . "!");
+print_r($greeting.', '.$firstName.'!');
 // => Hello, Joffrey!
 ```
 
@@ -42,7 +42,7 @@ Compare these two examples side by side:
 ```php
 <?php
 
-print_r($greeting . ", " . $firstName . "!");
+print_r($greeting.', '.$firstName.'!');
 print_r("{$greeting}, {$firstName}!");
 ```
 

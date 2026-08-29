@@ -22,11 +22,11 @@ Al utilizar la forma prefija, todo ocurre al revés. Primero se produce el cambi
 <?php
 
 $i = 0;
-++$i; // 1
-++$i; // 2
+$i++; // 1
+$i++; // 2
 
---$i; // 1
---$i; // 0
+$i--; // 1
+$i--; // 0
 ```
 
 Parece que no hay ninguna diferencia entre las formas posfija y prefija. Pero aquí es donde comienzan las dificultades. Todas las demás operaciones no tienen efectos secundarios y simplemente devuelven un nuevo valor. A diferencia de ellas, el incremento y el decremento no solo devuelven un valor, sino que también **modifican** el valor de la variable.

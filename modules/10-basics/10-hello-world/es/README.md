@@ -29,7 +29,7 @@ El comando sigue siendo el mismo, solo cambia el contenido de los paréntesis. P
 ```php
 <?php
 
-print_r("Hexlet - escuela de programación");
+print_r('Hexlet - escuela de programación');
 ```
 
 En PHP se acostumbra a usar comillas simples para las cadenas. Si dentro de la cadena hay un apóstrofo, las comillas simples romperán la sintaxis, por lo que en esos casos se usan comillas dobles.

@@ -28,7 +28,7 @@ Estos son tres enfoques populares para escribir nombres compuestos:
 ```php
 <?php
 
-$userName = "Daenerys";
+$userName = 'Daenerys';
 $maxLength = 280;
 $totalOrdersCount = 17;
 ```

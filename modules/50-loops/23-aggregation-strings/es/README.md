@@ -61,8 +61,8 @@ Se llama elemento neutro porque no cambia nada durante la concatenación:
 ```php
 <?php
 
-print_r('' . 'abc');  // => abc
-print_r('abc' . '');  // => abc
+print_r(''.'abc');  // => abc
+print_r('abc'.'');  // => abc
 ```
 
 Por eso la cadena vacía siempre se usa como valor inicial al agregar cadenas.

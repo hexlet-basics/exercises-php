@@ -49,7 +49,8 @@ Dracarys!Mother of Dragons.
 ```php
 <?php
 
-print_r('Mother of Dragons. '); print_r('Dracarys!');
+print_r('Mother of Dragons. ');
+print_r('Dracarys!');
 ```
 
 Обе версии работают одинаково, но второй вариант читать сложнее. Поэтому инструкции почти всегда пишут по одной на строку.

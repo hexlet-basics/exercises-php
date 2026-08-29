@@ -5,7 +5,7 @@
 ```php
 <?php
 
-$what = 'Kings' . 'road';
+$what = 'Kings'.'road';
 print_r($what); // => Kingsroad
 ```
 
@@ -19,7 +19,7 @@ print_r($what); // => Kingsroad
 <?php
 
 $first = 'Kings';
-$what = $first . 'road';
+$what = $first.'road';
 print_r($what); // => Kingsroad
 ```
 
@@ -34,7 +34,7 @@ PHP подставит значение переменной, выполнит �
 
 $first = 'Kings';
 $last = 'road';
-$what = $first . $last;
+$what = $first.$last;
 print_r($what); // => Kingsroad
 ```
 
@@ -64,7 +64,7 @@ $first  .  ' '  .  $last
 <?php
 
 $age = 42;
-print_r('Age: ' . $age); // => Age: 42
+print_r('Age: '.$age); // => Age: 42
 ```
 
 В PHP такой код работает: оператор `.` всегда склеивает строки, поэтому число автоматически преобразуется в строку. Не во всех языках так — например, в Python склеивание строки и числа приводит к ошибке, и число приходится преобразовывать явно.
@@ -75,7 +75,7 @@ print_r('Age: ' . $age); // => Age: 42
 <?php
 
 $price = 50 * 1.25 * 6.91; // => 431.875
-print_r('Price in yuans: ' . $price); // => Price in yuans: 431.875
+print_r('Price in yuans: '.$price); // => Price in yuans: 431.875
 ```
 
 Автоматическое преобразование удобно, но требует внимательности: иногда в строку превращается не то, что вы ожидали. Подробнее о таком поведении мы поговорим в уроках про типы данных.

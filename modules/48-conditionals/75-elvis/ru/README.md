@@ -42,6 +42,7 @@ function generateGreeting(string $name, string $nickname): string
 function generateGreeting(string $name, string $nickname): string
 {
     $user = $name ?: $nickname;
+
     return "Hello, {$user}!";
 }
 ```

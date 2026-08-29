@@ -151,9 +151,9 @@ La variante sin espacios también funciona:
 ```php
 <?php
 
-3+4;
-8/2;
-7%3;
+3 + 4;
+8 / 2;
+7 % 3;
 ```
 
 Pero ese código se ve menos prolijo y es más difícil de percibir rápidamente. Por eso es mejor acostumbrarse desde el principio a escribir con espacios alrededor de los operadores.

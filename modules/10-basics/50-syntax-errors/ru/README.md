@@ -31,7 +31,7 @@ print_r('Hodor')
 
 ```bash
 php index.php
-PHP Parse error:  syntax error, unexpected end of file, expecting "," or ";" in /tmp/index.php on line 4
+PHP Parse error: syntax error, unexpected end of file, expecting "," or ";" in /tmp/index.php on line 4
 ```
 
 Текст с непривычки может быть непонятен, но это нормально — чем больше вы будете сталкиваться с такими ошибками, тем быстрее научитесь понимать, что произошло. Обратите внимание: в конце сообщения приводится путь до файла и номер строки, где по мнению интерпретатора произошла ошибка.

@@ -35,7 +35,7 @@ The most understandable errors in PHP are called **syntax errors**. They occur w
 Let's look at an example. Here there is a syntax error because the opening quote `"` does not match the closing one `'`:
 
 ```bash
-PHP Parse error:  Unclosed '(' on line 3 in /code/users.php on line 4
+PHP Parse error: Unclosed '(' on line 3 in /code/users.php on line 4
 ```
 
 The interpreter does not even start executing such a program — it cannot parse it.

@@ -42,6 +42,7 @@ En PHP, para estos casos, existe un operador especial:
 function generateGreeting(string $name, string $nickname): string
 {
     $user = $name ?: $nickname;
+
     return "¡Hola, {$user}!";
 }
 ```

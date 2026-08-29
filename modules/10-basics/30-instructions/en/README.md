@@ -49,7 +49,8 @@ Usually instructions are written on separate lines, but since instructions in PH
 ```php
 <?php
 
-print_r('Mother of Dragons. '); print_r('Dracarys!');
+print_r('Mother of Dragons. ');
+print_r('Dracarys!');
 ```
 
 Both versions work the same way, but the second one is harder to read. That is why instructions are almost always written one per line.

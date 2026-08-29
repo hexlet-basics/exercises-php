@@ -5,7 +5,7 @@ Earlier we already glued strings together directly using concatenation. Now let'
 ```php
 <?php
 
-$what = 'Kings' . 'road';
+$what = 'Kings'.'road';
 print_r($what); // => Kingsroad
 ```
 
@@ -19,7 +19,7 @@ If the variable `$first` holds the string "Kings", we can safely glue it togethe
 <?php
 
 $first = 'Kings';
-$what = $first . 'road';
+$what = $first.'road';
 print_r($what); // => Kingsroad
 ```
 
@@ -34,7 +34,7 @@ In exactly the same way, you can combine the values of two variables if both con
 
 $first = 'Kings';
 $last = 'road';
-$what = $first . $last;
+$what = $first.$last;
 print_r($what); // => Kingsroad
 ```
 
@@ -64,7 +64,7 @@ Let's try this:
 <?php
 
 $age = 42;
-print_r('Age: ' . $age); // => Age: 42
+print_r('Age: '.$age); // => Age: 42
 ```
 
 In PHP this code works: the `.` operator always glues strings, so the number is automatically converted to a string. Not all languages behave this way — for example, in Python gluing a string and a number leads to an error, and the number has to be converted explicitly.
@@ -75,7 +75,7 @@ The same applies to variables with the results of calculations:
 <?php
 
 $price = 50 * 1.25 * 6.91; // => 431.875
-print_r('Price in yuans: ' . $price); // => Price in yuans: 431.875
+print_r('Price in yuans: '.$price); // => Price in yuans: 431.875
 ```
 
 Automatic conversion is convenient, but it requires attention: sometimes it's not what you expect that gets turned into a string. We'll talk more about this behavior in the lessons about data types.

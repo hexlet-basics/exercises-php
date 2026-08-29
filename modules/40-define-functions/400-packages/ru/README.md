@@ -8,11 +8,11 @@
 
 ```json
 {
-    "name": "hexlet-basics/exercises-php",
-    "require": {
-        "php": "^8.4",
-        "nesbot/carbon": "^3.0"
-    }
+  "name": "hexlet-basics/exercises-php",
+  "require": {
+    "php": "^8.4",
+    "nesbot/carbon": "^3.0"
+  }
 }
 ```
 
@@ -33,7 +33,7 @@ composer require nesbot/carbon
 ```php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 // Дальше можно использовать функции и классы
 // из любого установленного пакета

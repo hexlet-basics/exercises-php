@@ -57,7 +57,7 @@ Las funciones no están obligadas a simplemente devolver un parámetro. Normalme
 
 function fullName($first, $last)
 {
-    return ucfirst($first) . ' ' . ucfirst($last);
+    return ucfirst($first).' '.ucfirst($last);
 }
 ```
 
@@ -78,6 +78,7 @@ También se puede devolver el valor de una variable. Aquí hay que guiarse por l
 function greeting()
 {
     $message = 'Hello, Hexlet!';
+
     return $message;
 }
 ```
@@ -97,6 +98,7 @@ function formatName($name)
 {
     $clean = trim($name);
     $uppercased = strtoupper($clean);
+
     return $uppercased;
 }
 ```
@@ -135,6 +137,7 @@ Incluso si una función devuelve datos, esto no la limita en lo que imprime. Ade
 function greeting()
 {
     print_r('Apareceré en la consola');
+
     return 'Hello, Hexlet!';
 }
 
@@ -152,6 +155,7 @@ function run()
 {
     // Retorno
     return 5;
+
     return 10;
 }
 

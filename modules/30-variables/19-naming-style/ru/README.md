@@ -28,7 +28,7 @@
 ```php
 <?php
 
-$userName = "Daenerys";
+$userName = 'Daenerys';
 $maxLength = 280;
 $totalOrdersCount = 17;
 ```

@@ -44,6 +44,7 @@ Algoritmo:
 function isFirstLetterAnA(string $text): bool
 {
     $firstLetter = $text[0];
+
     return $firstLetter === 'a';
 }
 

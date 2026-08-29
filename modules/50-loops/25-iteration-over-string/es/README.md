@@ -54,15 +54,15 @@ function reverseString(string $text): string
     $i = strlen($text) - 1;
 
     while ($i >= 0) {
-        $result = $result . $text[$i];
+        $result = $result.$text[$i];
         $i = $i - 1;
     }
 
     return $result;
 }
 
-print_r(reverseString('Arya') . "\n");   // => ayrA
-print_r(reverseString('hexlet') . "\n"); // => telxeh
+print_r(reverseString('Arya')."\n");   // => ayrA
+print_r(reverseString('hexlet')."\n"); // => telxeh
 ```
 
 La variable `$result` se inicializa con una cadena vacía como elemento neutro para la concatenación. El bucle comienza en el último índice (`strlen($text) - 1`), avanza hacia cero y termina cuando el índice se vuelve menor que cero. En cada paso se añade el carácter actual al resultado. Como resultado, la cadena se construye en orden inverso.

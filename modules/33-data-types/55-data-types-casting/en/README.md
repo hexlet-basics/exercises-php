@@ -51,7 +51,7 @@ This is useful, for example, when building texts, messages, and output:
 <?php
 
 $age = 42;
-print_r('Age: ' . (string) $age); // => Age: 42
+print_r('Age: '.(string) $age); // => Age: 42
 ```
 
 ## Converting to a floating-point number with (float)

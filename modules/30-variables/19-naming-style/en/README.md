@@ -28,7 +28,7 @@ Here are three popular approaches to writing compound names:
 ```php
 <?php
 
-$userName = "Daenerys";
+$userName = 'Daenerys';
 $maxLength = 280;
 $totalOrdersCount = 17;
 ```

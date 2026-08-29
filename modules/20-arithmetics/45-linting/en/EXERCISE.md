@@ -3,7 +3,7 @@ You received some code from a colleague — it works correctly, but it violates 
 ```php
 <?php
 
-print_r(    (5  **2)-(3*  7));
+print_r((5 ** 2) - (3 * 7));
 ```
 
 The result should remain `4`.

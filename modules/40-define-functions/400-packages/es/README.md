@@ -8,11 +8,11 @@ Los paquetes se gestionan con **Composer**, el gestor de paquetes de PHP. Un pro
 
 ```json
 {
-    "name": "hexlet-basics/exercises-php",
-    "require": {
-        "php": "^8.4",
-        "nesbot/carbon": "^3.0"
-    }
+  "name": "hexlet-basics/exercises-php",
+  "require": {
+    "php": "^8.4",
+    "nesbot/carbon": "^3.0"
+  }
 }
 ```
 
@@ -33,7 +33,7 @@ Los paquetes instalados van a parar al directorio `vendor/`, pero no hace falta 
 ```php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 // Después puedes usar las funciones y clases
 // de cualquier paquete instalado

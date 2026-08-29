@@ -7,7 +7,7 @@ En PHP las cadenas se unen mediante el operador `.` (punto). Para sumar números
 ```php
 <?php
 
-print_r('Dragon' . 'stone');
+print_r('Dragon'.'stone');
 // => Dragonstone
 ```
 
@@ -18,7 +18,7 @@ Así funciona la unión de varias cadenas. El código:
 ```php
 <?php
 
-print_r('Hello' . ', ' . 'World!');
+print_r('Hello'.', '.'World!');
 ```
 
 Ejecución:
@@ -37,10 +37,10 @@ Ejemplos:
 ```php
 <?php
 
-print_r('Kings' . 'wood');     // => Kingswood
-print_r('Kings' . 'road');     // => Kingsroad
+print_r('Kings'.'wood');     // => Kingswood
+print_r('Kings'.'road');     // => Kingsroad
 // Aquí las comillas exteriores son dobles, porque dentro hay una simple
-print_r("King's" . 'Landing'); // => King'sLanding
+print_r("King's".'Landing'); // => King'sLanding
 ```
 
 PHP permite unir cadenas incluso si están escritas con distintos tipos de comillas. Lo principal es que ambas partes sean cadenas.
@@ -53,10 +53,10 @@ Al unir, PHP no inserta espacios automáticamente. Si entre las partes debe habe
 <?php
 
 // Espacio al final de la primera cadena
-print_r("King's " . 'Landing'); // => King's Landing
+print_r("King's ".'Landing'); // => King's Landing
 
 // Espacio al inicio de la segunda cadena
-print_r("King's" . ' Landing'); // => King's Landing
+print_r("King's".' Landing'); // => King's Landing
 ```
 
 El resultado será el mismo. Pero si no se añade el espacio, las palabras se pegarán.
@@ -68,12 +68,12 @@ En las cadenas se pueden usar secuencias de escape, por ejemplo `\n` para el sal
 ```php
 <?php
 
-print_r('Hello,' . "\n" . 'World!');
+print_r('Hello,'."\n".'World!');
 // =>
 // Hello,
 // World!
 
-print_r('A' . "\t" . 'B');
+print_r('A'."\t".'B');
 // => A	B
 ```
 

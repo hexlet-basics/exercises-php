@@ -35,7 +35,7 @@ Los errores más comprensibles en PHP se llaman **errores de sintaxis**. Surgen 
 Veamos un ejemplo. Aquí hay un error de sintaxis porque la comilla de apertura `"` no coincide con la de cierre `'`:
 
 ```bash
-PHP Parse error:  Unclosed '(' on line 3 in /code/users.php on line 4
+PHP Parse error: Unclosed '(' on line 3 in /code/users.php on line 4
 ```
 
 El intérprete ni siquiera empieza a ejecutar un programa así: no puede analizarlo.

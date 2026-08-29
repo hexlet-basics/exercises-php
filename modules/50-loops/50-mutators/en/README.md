@@ -22,11 +22,11 @@ When using the prefix form, it's the other way around. First the variable is cha
 <?php
 
 $i = 0;
-++$i; // 1
-++$i; // 2
+$i++; // 1
+$i++; // 2
 
---$i; // 1
---$i; // 0
+$i--; // 1
+$i--; // 0
 ```
 
 It seems there's no difference between postfix and prefix forms. But this is where it gets complicated. All other operations have no side effects and simply return a new value. Unlike them, increment and decrement not only return a value but also **change** the value of the variable.

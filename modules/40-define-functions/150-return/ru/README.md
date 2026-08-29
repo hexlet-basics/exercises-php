@@ -59,7 +59,7 @@ var_dump($message); // => NULL
 
 function fullName($first, $last)
 {
-    return ucfirst($first) . ' ' . ucfirst($last);
+    return ucfirst($first).' '.ucfirst($last);
 }
 ```
 
@@ -80,6 +80,7 @@ print_r($name); // => Aria Stark
 function greeting()
 {
     $message = 'Hello, Hexlet!';
+
     return $message;
 }
 ```
@@ -99,6 +100,7 @@ function formatName($name)
 {
     $clean = trim($name);
     $uppercased = strtoupper($clean);
+
     return $uppercased;
 }
 ```
@@ -137,6 +139,7 @@ function greeting()
 function greeting()
 {
     print_r('Я появлюсь в консоли');
+
     return 'Hello, Hexlet!';
 }
 
@@ -154,6 +157,7 @@ function run()
 {
     // Возврат
     return 5;
+
     return 10;
 }
 

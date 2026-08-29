@@ -57,7 +57,7 @@ Functions are not required to just return a parameter. Usually, `return` is give
 
 function fullName($first, $last)
 {
-    return ucfirst($first) . ' ' . ucfirst($last);
+    return ucfirst($first).' '.ucfirst($last);
 }
 ```
 
@@ -78,6 +78,7 @@ You can also return the value of a variable. Here you should be guided by the pr
 function greeting()
 {
     $message = 'Hello, Hexlet!';
+
     return $message;
 }
 ```
@@ -97,6 +98,7 @@ function formatName($name)
 {
     $clean = trim($name);
     $uppercased = strtoupper($clean);
+
     return $uppercased;
 }
 ```
@@ -135,6 +137,7 @@ Even if a function returns data, this does not limit it in what it prints. In ad
 function greeting()
 {
     print_r('I will appear in the console');
+
     return 'Hello, Hexlet!';
 }
 
@@ -152,6 +155,7 @@ function run()
 {
     // Return
     return 5;
+
     return 10;
 }
 

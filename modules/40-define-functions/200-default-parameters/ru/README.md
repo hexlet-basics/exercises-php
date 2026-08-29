@@ -55,7 +55,7 @@ myPrint('Hexlet'); // => "Hexlet"
 
 function joinWords($word1, $word2, $sep = ' ')
 {
-    return $word1 . $sep . $word2;
+    return $word1.$sep.$word2;
 }
 
 print_r(joinWords('King', 'Road'));         // => King Road

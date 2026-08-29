@@ -10,7 +10,7 @@ If we simply pass this text to `print_r()`, PHP will print everything on a singl
 ```php
 <?php
 
-print_r("- Are you hungry?- Aaaarrrgh!");
+print_r('- Are you hungry?- Aaaarrrgh!');
 // => - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -99,7 +99,7 @@ You can also insert `\n` into any part of a string — before, after, or even us
 
 print_r("First line\n");
 print_r("\n"); // Just an empty line
-print_r("Second line");
+print_r('Second line');
 ```
 
 The result will be:
@@ -117,7 +117,7 @@ Second line
 ```php
 <?php
 
-print_r("Hello\\nWorld");
+print_r('Hello\\nWorld');
 // => Hello\nWorld
 
 // If you forget to add the second slash

@@ -11,11 +11,11 @@ You can verify this with the double negation `!!`, which converts any value to `
 ```php
 <?php
 
-var_dump(!!'hello'); // => bool(true)  — a non-empty string is truthy
-var_dump(!!'');      // => bool(false) — an empty string is falsy
-var_dump(!!0);       // => bool(false) — zero is falsy
-var_dump(!!-3.5);    // => bool(true)  — a non-zero number is truthy
-var_dump(!!'0');     // => bool(false) — the string '0' is falsy, a PHP peculiarity
+var_dump((bool) 'hello'); // => bool(true)  — a non-empty string is truthy
+var_dump((bool) '');      // => bool(false) — an empty string is falsy
+var_dump((bool) 0);       // => bool(false) — zero is falsy
+var_dump((bool) -3.5);    // => bool(true)  — a non-zero number is truthy
+var_dump((bool) '0');     // => bool(false) — the string '0' is falsy, a PHP peculiarity
 ```
 
 This trick is used to explicitly change the data type: the result of double negation is always a value of type `bool`.

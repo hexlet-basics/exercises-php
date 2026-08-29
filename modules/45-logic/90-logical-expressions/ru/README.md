@@ -11,11 +11,11 @@
 ```php
 <?php
 
-var_dump(!!'hello'); // => bool(true)  — непустая строка — truthy
-var_dump(!!'');      // => bool(false) — пустая строка — falsy
-var_dump(!!0);       // => bool(false) — ноль — falsy
-var_dump(!!-3.5);    // => bool(true)  — ненулевое число — truthy
-var_dump(!!'0');     // => bool(false) — строка '0' — falsy, особенность PHP
+var_dump((bool) 'hello'); // => bool(true)  — непустая строка — truthy
+var_dump((bool) '');      // => bool(false) — пустая строка — falsy
+var_dump((bool) 0);       // => bool(false) — ноль — falsy
+var_dump((bool) -3.5);    // => bool(true)  — ненулевое число — truthy
+var_dump((bool) '0');     // => bool(false) — строка '0' — falsy, особенность PHP
 ```
 
 Этим приемом пользуются, чтобы явно поменять тип данных: результатом двойного отрицания всегда будет значение типа `bool`.

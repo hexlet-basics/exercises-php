@@ -31,7 +31,7 @@ En este código se ha olvidado el punto y coma `;` al final de la instrucción, 
 
 ```bash
 php index.php
-PHP Parse error:  syntax error, unexpected end of file, expecting "," or ";" in /tmp/index.php on line 4
+PHP Parse error: syntax error, unexpected end of file, expecting "," or ";" in /tmp/index.php on line 4
 ```
 
 El texto puede resultar incomprensible al principio, pero eso es normal: cuanto más te enfrentes a este tipo de errores, más rápido aprenderás a entender qué ha ocurrido. Fíjate: al final del mensaje se indica la ruta del archivo y el número de la línea donde, según el intérprete, se produjo el error.

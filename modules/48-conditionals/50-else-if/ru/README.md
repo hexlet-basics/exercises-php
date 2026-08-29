@@ -20,9 +20,9 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is normal
-print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
-print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
+print_r(getTypeOfSentence('Who?')."\n"); // => Sentence is normal
+print_r(getTypeOfSentence('No')."\n");   // => Sentence is normal
+print_r(getTypeOfSentence('No!')."\n");  // => Sentence is exclamation
 ```
 
 Мы добавили проверку восклицательных предложений (_exclamation_ переводится «восклицание»). Технически эта функция работает, но вопросительные предложения трактует неверно. Еще в ней есть проблемы с точки зрения семантики. Наличие восклицательного знака проверяется в любом случае, даже если уже обнаружился вопросительный знак. Ветка `else` описана для второго условия, но не для первого. Поэтому вопросительное предложение становится `normal`.
@@ -47,9 +47,9 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is question
-print_r(getTypeOfSentence('No') . "\n");   // => Sentence is normal
-print_r(getTypeOfSentence('No!') . "\n");  // => Sentence is exclamation
+print_r(getTypeOfSentence('Who?')."\n"); // => Sentence is question
+print_r(getTypeOfSentence('No')."\n");   // => Sentence is normal
+print_r(getTypeOfSentence('No!')."\n");  // => Sentence is exclamation
 ```
 
 Теперь все условия выстроились в единую конструкцию. Ключевое слово `elseif` означает «если не выполнено предыдущее условие, но выполнено текущее».

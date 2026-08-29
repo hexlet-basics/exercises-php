@@ -151,9 +151,9 @@ The variant without spaces also works:
 ```php
 <?php
 
-3+4;
-8/2;
-7%3;
+3 + 4;
+8 / 2;
+7 % 3;
 ```
 
 But such code looks less tidy and is harder to perceive quickly. So it's better to get used to writing with spaces around operators right away.
