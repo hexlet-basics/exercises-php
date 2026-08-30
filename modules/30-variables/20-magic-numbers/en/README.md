@@ -32,6 +32,6 @@ print_r($rublesCount);
 
 Note the following details:
 
-* lowerCamelCase naming
-* The two new variables are separated from the following computations by an empty string. These variables are meaningful even without any computation involved, which is why separating them here is good, it makes it easier to read.
-* The code is well named and structured, but it's longer than the previous version. This is often the case, but it's fine, because the code needs to be readable.
+- lowerCamelCase naming
+- The two new variables are separated from the following computations by an empty string. These variables are meaningful even without any computation involved, which is why separating them here is good, it makes it easier to read.
+- The code is well named and structured, but it's longer than the previous version. This is often the case, but it's fine, because the code needs to be readable.

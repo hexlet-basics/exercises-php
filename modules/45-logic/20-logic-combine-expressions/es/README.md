@@ -4,15 +4,15 @@ El residuo de la división es un concepto simple pero importante en aritmética,
 
 Dividimos caramelos en partes iguales entre personas:
 
-* 7 caramelos, 2 personas: 2 x 3 + residuo 1 (7 no es múltiplo de 2)
-* 21 caramelos, 3 personas: 3 x 7 + residuo 0 (21 es múltiplo de 3)
-* 19 caramelos, 5 personas: 5 x 3 + residuo 4 (19 no es múltiplo de 5)
+- 7 caramelos, 2 personas: 2 x 3 + residuo 1 (7 no es múltiplo de 2)
+- 21 caramelos, 3 personas: 3 x 7 + residuo 0 (21 es múltiplo de 3)
+- 19 caramelos, 5 personas: 5 x 3 + residuo 4 (19 no es múltiplo de 5)
 
 El operador `%` calcula el residuo de la división:
 
-* `7 % 2` → `1`
-* `21 % 3` → `0`
-* `19 % 5` → `4`
+- `7 % 2` → `1`
+- `21 % 3` → `0`
+- `19 % 5` → `4`
 
 Combinemos en una sola expresión el operador lógico de «verificación de igualdad» `===` y el operador aritmético `%`, y escribamos una función que verifique si un número es par:
 

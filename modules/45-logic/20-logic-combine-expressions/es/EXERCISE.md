@@ -1,5 +1,5 @@
 
-Implementa la función `isInternationalPhone()`, que verifica el formato de un número de teléfono especificado. Si el teléfono comienza con un *+*, significa que está en formato internacional.
+Implementa la función `isInternationalPhone()`, que verifica el formato de un número de teléfono especificado. Si el teléfono comienza con un _+_, significa que está en formato internacional.
 
 ```php
 <?php

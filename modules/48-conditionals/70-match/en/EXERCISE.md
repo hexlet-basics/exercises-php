@@ -3,9 +3,9 @@ Implement a function `calculateDeliveryCost()` that takes a delivery country and
 
 Each country has two rates: one for parcels weighing up to and including 1 kg, and another for heavier parcels:
 
-* `'canada'`: 600 for parcels up to 1 kg, 900 for the rest
-* `'usa'`: 800 for parcels up to 1 kg, 1200 for the rest
-* `'germany'`: 700 for parcels up to 1 kg, 1000 for the rest
+- `'canada'`: 600 for parcels up to 1 kg, 900 for the rest
+- `'usa'`: 800 for parcels up to 1 kg, 1200 for the rest
+- `'germany'`: 700 for parcels up to 1 kg, 1000 for the rest
 
 If the country is unknown, the function should return `null`.
 

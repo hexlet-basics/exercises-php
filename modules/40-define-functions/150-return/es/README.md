@@ -111,7 +111,7 @@ Primero quitamos los espacios con la ayuda de la función `trim()`, luego conver
 print_r(formatName('  hexlet  ')); // => HEXLET
 ```
 
-Código como este se encuentra en los programas reales constantemente. Por ejemplo, cuando un usuario se registra en un sitio, puede ingresar un correo con espacios de más o letras en distintos casos: `  SuppORT@hexlet.IO`. Antes de escribir tal correo en la base de datos, se prepara exactamente de la misma manera: se recortan los caracteres de espacio y se convierte a minúsculas.
+Código como este se encuentra en los programas reales constantemente. Por ejemplo, cuando un usuario se registra en un sitio, puede ingresar un correo con espacios de más o letras en distintos casos: `SuppORT@hexlet.IO`. Antes de escribir tal correo en la base de datos, se prepara exactamente de la misma manera: se recortan los caracteres de espacio y se convierte a minúsculas.
 
 ## Código después de `return`
 

@@ -4,15 +4,15 @@ The remainder of a division is a simple but important concept in arithmetic, alg
 
 Splitting candies equally among people:
 
-* 7 candies, 2 people: 2 x 3 + remainder 1 (7 is not a multiple of 2)
-* 21 candies, 3 people: 3 x 7 + remainder 0 (21 is a multiple of 3)
-* 19 candies, 5 people: 5 x 3 + remainder 4 (19 is not a multiple of 5)
+- 7 candies, 2 people: 2 x 3 + remainder 1 (7 is not a multiple of 2)
+- 21 candies, 3 people: 3 x 7 + remainder 0 (21 is a multiple of 3)
+- 19 candies, 5 people: 5 x 3 + remainder 4 (19 is not a multiple of 5)
 
 The `%` operator calculates the remainder of a division:
 
-* `7 % 2` → `1`
-* `21 % 3` → `0`
-* `19 % 5` → `4`
+- `7 % 2` → `1`
+- `21 % 3` → `0`
+- `19 % 5` → `4`
 
 Let's combine the logical operator "equality check" `===` and the arithmetic operator `%` in a single expression and write a function that checks whether a number is even:
 

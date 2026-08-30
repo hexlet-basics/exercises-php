@@ -66,7 +66,7 @@ While working, you will come across this kind of code in our editor:
 // END
 ```
 
-*BEGIN* and *END* here are ordinary comments that do not affect the program's behavior in any way. They show where to write the task's code.
+_BEGIN_ and _END_ here are ordinary comments that do not affect the program's behavior in any way. They show where to write the task's code.
 
 ```php
 // BEGIN
@@ -74,4 +74,4 @@ While working, you will come across this kind of code in our editor:
 // END
 ```
 
-When you see *BEGIN* and *END*, write your code between them and leave the rest unchanged.
+When you see _BEGIN_ and _END_, write your code between them and leave the rest unchanged.

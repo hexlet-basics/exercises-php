@@ -12,6 +12,6 @@ sanitizePhoneNumber('(123) 456-7890');     // '1234567890'
 
 ### Pistas
 
-* El resultado final es una cadena.
-* Usa una cadena vacía como valor inicial.
-* La función `str_contains()` te ayudará a comprobar si un carácter está en el conjunto `' ()-'`.
+- El resultado final es una cadena.
+- Usa una cadena vacía como valor inicial.
+- La función `str_contains()` te ayudará a comprobar si un carácter está en el conjunto `' ()-'`.

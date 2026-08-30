@@ -44,7 +44,7 @@ var_dump(isPrime(3)); // => bool(true)
 var_dump(isPrime(4)); // => bool(false)
 ```
 
-*To be completely honest, checking numbers up to the square root of `$number` is enough to solve the task, but in our case it's important to focus on understanding how to work with conditions inside a loop.*
+_To be completely honest, checking numbers up to the square root of `$number` is enough to solve the task, but in our case it's important to focus on understanding how to work with conditions inside a loop._
 
 ```text
 while (...) {

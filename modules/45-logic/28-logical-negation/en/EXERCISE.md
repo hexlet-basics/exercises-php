@@ -15,7 +15,7 @@ In a word game, players check whether a word is a palindrome. Implement two func
     isPalindrome('Wow'); // true
     ```
 
-    To reverse a word, use the `strrev()` function.
+   To reverse a word, use the `strrev()` function.
 
 2. The `isNotPalindrome()` function checks that a word is NOT a palindrome:
 
@@ -27,4 +27,4 @@ In a word game, players check whether a word is a palindrome. Implement two func
     isNotPalindrome('hexlet'); // true
     ```
 
-    To do this, call the `isPalindrome()` function inside `isNotPalindrome()` and apply negation.
+   To do this, call the `isPalindrome()` function inside `isNotPalindrome()` and apply negation.

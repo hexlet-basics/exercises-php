@@ -55,9 +55,9 @@ $type = match ($size) {
 
 La principal diferencia con `switch` es que `match` es una **expresión**. Toda la construcción se evalúa a un valor, por lo que el resultado se puede asignar a una variable o devolver desde una función de inmediato. `switch` no puede hacer esto; necesita una variable aparte o un `return` dentro de un `case`. Hay otras diferencias:
 
-* `match` compara los valores de forma estricta, como el operador `===`, sin conversión automática de tipos. `switch` compara de forma no estricta, con `==`.
-* `match` ejecuta exactamente una rama, por lo que no se necesita `break`. En `switch`, sin `break`, el control cae en cascada al siguiente `case`.
-* Si nada coincide en `match` y no hay `default`, el programa termina con un error `UnhandledMatchError`. En el mismo caso, `switch` no hace nada.
+- `match` compara los valores de forma estricta, como el operador `===`, sin conversión automática de tipos. `switch` compara de forma no estricta, con `==`.
+- `match` ejecuta exactamente una rama, por lo que no se necesita `break`. En `switch`, sin `break`, el control cae en cascada al siguiente `case`.
+- Si nada coincide en `match` y no hay `default`, el programa termina con un error `UnhandledMatchError`. En el mismo caso, `switch` no hace nada.
 
 Como `match` devuelve un valor, su resultado a menudo se devuelve directamente desde la función con `return`:
 

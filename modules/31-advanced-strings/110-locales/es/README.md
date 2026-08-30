@@ -18,12 +18,12 @@ setlocale(int $category, string $locales, string ...$rest): string|false
 
 El primer parámetro de esta función es el nombre de la categoría (como una constante) a la que se debe aplicar la localización, que se pasa como argumento en los parámetros siguientes:
 
-* LC_ALL — todo lo siguiente
-* LC_COLLATE — funciones de comparación de cadenas `strcoll()`
-* LC_CTYPE — funciones de conversión y clasificación de cadenas, como `strtoupper()`
-* LC_MONETARY — para la función `localeconv()`
-* LC_NUMERIC — establece el símbolo de separación decimal `localeconv()`
-* LC_TIME — formato de fecha y hora con la función `strftime()`
+- LC_ALL — todo lo siguiente
+- LC_COLLATE — funciones de comparación de cadenas `strcoll()`
+- LC_CTYPE — funciones de conversión y clasificación de cadenas, como `strtoupper()`
+- LC_MONETARY — para la función `localeconv()`
+- LC_NUMERIC — establece el símbolo de separación decimal `localeconv()`
+- LC_TIME — formato de fecha y hora con la función `strftime()`
 
 Veamos un ejemplo de cómo la localización establecida afecta la visualización de los datos:
 

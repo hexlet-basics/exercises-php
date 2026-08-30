@@ -8,5 +8,6 @@ Ejemplo de salida para 100 euros:
 ```
 
 Suponemos que:
+
 - 1 euro = 1.25 dólares
 - 1 dólar = 6.91 yuanes

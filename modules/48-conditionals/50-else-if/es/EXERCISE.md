@@ -3,10 +3,10 @@ Implementa la función `getTrafficLightAction()`, que recibe el color de un sem�
 
 Reglas:
 
-* `'green'` → `'go'`
-* `'yellow'` → `'slow down'`
-* `'red'` → `'stop'`
-* Cualquier otro color → `'unknown'`
+- `'green'` → `'go'`
+- `'yellow'` → `'slow down'`
+- `'red'` → `'stop'`
+- Cualquier otro color → `'unknown'`
 
 Ejemplos de llamada:
 

@@ -9,8 +9,8 @@ In PHP, the most common standards are the **PSR** standards — PHP Standards Re
 Currently there are several approved recommendations, each labeled with a number: PSR-1, PSR-2, PSR-3 and [others](https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). You'll become familiar with all the recommendations as you learn and work.
 In this lesson, we'll take a closer look at the following:
 
-* PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — the basic standard for writing code. This is a set of rules that define how program code should be formatted: how to write PHP tags, and what rules to use for naming classes, methods and class constants. It also touches on encoding, autoloading, namespaces, and sharing responsibility between files
-* PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — the extended coding style standard that replaces and supplements the obsolete PSR-2. This standard requires compliance with PSR-1 rules. It also adds many new requirements: for indentation, files, strings, keywords, classes, control structures, scope and other elements
+- PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — the basic standard for writing code. This is a set of rules that define how program code should be formatted: how to write PHP tags, and what rules to use for naming classes, methods and class constants. It also touches on encoding, autoloading, namespaces, and sharing responsibility between files
+- PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — the extended coding style standard that replaces and supplements the obsolete PSR-2. This standard requires compliance with PSR-1 rules. It also adds many new requirements: for indentation, files, strings, keywords, classes, control structures, scope and other elements
 
 All PHP developers know and use these standards. It's useful for beginners to look into them from time to time and develop good habits from the very start. However, there's no need to memorize everything at once.
 
@@ -65,9 +65,9 @@ print_r(((8 / 2) + 5) - (-3 / 2));
 
 When checking the file, the linter will find the following errors:
 
-* `Spaces must be used to indent lines; tabs are not allowed` — PSR-12 recommends indenting with four spaces, while the example above uses a tab
-* `A closing tag is not permitted at the end of a PHP file` — the standard contains a requirement to omit the closing tag `?>`
-* `Space before opening parenthesis of function call prohibited` — when calling a function, there should be no whitespace between the function name and the parentheses, while in the code being checked there is one space after the `print_r` name
+- `Spaces must be used to indent lines; tabs are not allowed` — PSR-12 recommends indenting with four spaces, while the example above uses a tab
+- `A closing tag is not permitted at the end of a PHP file` — the standard contains a requirement to omit the closing tag `?>`
+- `Space before opening parenthesis of function call prohibited` — when calling a function, there should be no whitespace between the function name and the parentheses, while in the code being checked there is one space after the `print_r` name
 
 Let's fix the code — remove the closing tag, the indentation, and the space after the function name:
 

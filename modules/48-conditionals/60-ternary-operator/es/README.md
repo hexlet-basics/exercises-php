@@ -16,7 +16,7 @@ print_r(abs(10)."\n");  // => 10
 print_r(abs(-10)."\n"); // => 10
 ```
 
-Pero se puede escribir de forma más concisa. En PHP existe una construcción que funciona como *if-else*, pero que a la vez es una expresión: su resultado se puede devolver directamente desde una función. Se llama **operador ternario** y es el único operador de PHP que requiere tres operandos:
+Pero se puede escribir de forma más concisa. En PHP existe una construcción que funciona como _if-else_, pero que a la vez es una expresión: su resultado se puede devolver directamente desde una función. Se llama **operador ternario** y es el único operador de PHP que requiere tres operandos:
 
 ```php
 <?php

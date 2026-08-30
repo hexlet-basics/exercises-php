@@ -15,7 +15,7 @@ En un juego de palabras, los participantes verifican si una palabra es un palín
     isPalindrome('Wow'); // true
     ```
 
-    Para invertir una palabra, utiliza la función `strrev()`.
+   Para invertir una palabra, utiliza la función `strrev()`.
 
 2. La función `isNotPalindrome()` verifica que una palabra NO sea un palíndromo:
 
@@ -27,4 +27,4 @@ En un juego de palabras, los participantes verifican si una palabra es un palín
     isNotPalindrome('hexlet'); // true
     ```
 
-    Para hacer esto, llama a la función `isPalindrome()` dentro de `isNotPalindrome()` y aplica la negación.
+   Para hacer esto, llama a la función `isPalindrome()` dentro de `isNotPalindrome()` y aplica la negación.

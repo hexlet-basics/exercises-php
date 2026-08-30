@@ -1,6 +1,6 @@
-In many languages, besides the conditional *if* construct, there's also a **switch**. This construct appears in a huge amount of existing PHP code, so it's important to be able to read it.
+In many languages, besides the conditional _if_ construct, there's also a **switch**. This construct appears in a huge amount of existing PHP code, so it's important to be able to read it.
 
-It's a specialized version of *if*, created for certain special situations. For example, it makes sense to use it where there's an *if else* chain with equality checks. For example:
+It's a specialized version of _if_, created for certain special situations. For example, it makes sense to use it where there's an _if else_ chain with equality checks. For example:
 
 ```php
 <?php
@@ -38,11 +38,11 @@ switch ($status) {
 
 A switch is a rather complicated construction in terms of the number of elements it consists of:
 
-* An external definition containing the keyword `switch`. A variable whose values *switch* use to select a behavior. And curly brackets for behavior branches.
-* The `case` and `default` constructions, where the behavior for different values of the variable is described. Each case corresponds to an `if` in the example above. `default` is a special situation, corresponding to the `else` branch in conditional constructions. Like with `else`, there's no need to specify `default`.
-* `break` is needed to prevent it from not working properly. If it's not specified, then after the desired `case` is executed, the execution will go to the next `case` and so on either until it reaches the nearest `break`, or until the end of the *switch*.
+- An external definition containing the keyword `switch`. A variable whose values _switch_ use to select a behavior. And curly brackets for behavior branches.
+- The `case` and `default` constructions, where the behavior for different values of the variable is described. Each case corresponds to an `if` in the example above. `default` is a special situation, corresponding to the `else` branch in conditional constructions. Like with `else`, there's no need to specify `default`.
+- `break` is needed to prevent it from not working properly. If it's not specified, then after the desired `case` is executed, the execution will go to the next `case` and so on either until it reaches the nearest `break`, or until the end of the _switch_.
 
-The curly brackets in the *switch* don't define a block of code like they did elsewhere. Only the syntax shown above is acceptable. In other words, you can use `case` or `default` there. But inside each `case` (and `default`) the situation is different. You can execute any code you like here:
+The curly brackets in the _switch_ don't define a block of code like they did elsewhere. Only the syntax shown above is acceptable. In other words, you can use `case` or `default` there. But inside each `case` (and `default`) the situation is different. You can execute any code you like here:
 
 ```php
 <?php
@@ -59,9 +59,9 @@ switch ($count) {
 }
 ```
 
-Sometimes, the result inside `case` means ending the function containing the *switch*. If this happens, you need to return it outside somehow. There are two ways to do this.
+Sometimes, the result inside `case` means ending the function containing the _switch_. If this happens, you need to return it outside somehow. There are two ways to do this.
 
-The first way. Create a variable before *switch*, fill it with something in *case* and then return the value of that variable outward at the end.
+The first way. Create a variable before _switch_, fill it with something in _case_ and then return the value of that variable outward at the end.
 
 ```php
 <?php
@@ -85,7 +85,7 @@ function doSomethingGood(int $count): ?string
 }
 ```
 
-The second way is easier and shorter. Instead of creating a variable, *case* allows you to internally do a normal return from a function. And since no code is executed after `return` we can get rid of `break`:
+The second way is easier and shorter. Instead of creating a variable, _case_ allows you to internally do a normal return from a function. And since no code is executed after `return` we can get rid of `break`:
 
 ```php
 <?php
@@ -103,4 +103,4 @@ function doSomethingGood(int $count): ?string
 }
 ```
 
-Though switch is present in the code, you can always find a way to avoid it.  The key benefit of using it is that it better expresses the programmer's intention when checking the values of a particular variable. Although there's now physically more code, it's easier to read than loads of *elseif* blocks.
+Though switch is present in the code, you can always find a way to avoid it. The key benefit of using it is that it better expresses the programmer's intention when checking the values of a particular variable. Although there's now physically more code, it's easier to read than loads of _elseif_ blocks.

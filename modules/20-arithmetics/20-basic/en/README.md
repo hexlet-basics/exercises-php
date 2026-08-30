@@ -58,15 +58,15 @@ print_r(3 + 4);   // outputs: 7
 
 PHP supports all the usual operations + a few specific ones, related to how numbers are stored and processed on a computer:
 
-| Operation              | Symbol | Example      | Result    |
-|------------------------|--------|--------------|-----------|
-| Addition               | `+`    | `2 + 3`      | `5`       |
-| Subtraction            | `-`    | `7 - 2`      | `5`       |
-| Multiplication         | `*`    | `4 * 3`      | `12`      |
-| Division               | `/`    | `8 / 2`      | `4`       |
-| Exponentiation         | `**`   | `3 ** 2`     | `9`       |
-| Integer division       | `intdiv()` | `intdiv(7, 3)` | `2`   |
-| Remainder              | `%`    | `7 % 3`      | `1`       |
+| Operation        | Symbol     | Example        | Result |
+| ---------------- | ---------- | -------------- | ------ |
+| Addition         | `+`        | `2 + 3`        | `5`    |
+| Subtraction      | `-`        | `7 - 2`        | `5`    |
+| Multiplication   | `*`        | `4 * 3`        | `12`   |
+| Division         | `/`        | `8 / 2`        | `4`    |
+| Exponentiation   | `**`       | `3 ** 2`       | `9`    |
+| Integer division | `intdiv()` | `intdiv(7, 3)` | `2`    |
+| Remainder        | `%`        | `7 % 3`        | `1`    |
 
 These operation signs are called operators. Here's how you can output the result of division and exponentiation:
 
@@ -105,7 +105,7 @@ At a basic level, it's enough to remember: integers are needed when there are no
 
 ## What is the remainder (`%`)
 
-This operation is called **taking the remainder of division**. It shows **what "remains"** when one number is divided by another *not completely*. Example:
+This operation is called **taking the remainder of division**. It shows **what "remains"** when one number is divided by another _not completely_. Example:
 
 ```php
 <?php

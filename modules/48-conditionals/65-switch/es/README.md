@@ -1,6 +1,6 @@
-En muchos lenguajes, además de la construcción condicional *if*, existe el **switch**. Esta construcción aparece en una enorme cantidad de código PHP existente, por lo que es importante saber leerla.
+En muchos lenguajes, además de la construcción condicional _if_, existe el **switch**. Esta construcción aparece en una enorme cantidad de código PHP existente, por lo que es importante saber leerla.
 
-Es una versión especializada del *if*, creada para algunas situaciones particulares. Por ejemplo, tiene sentido usarlo cuando hay una cadena de *if else* con comprobaciones de igualdad. Por ejemplo:
+Es una versión especializada del _if_, creada para algunas situaciones particulares. Por ejemplo, tiene sentido usarlo cuando hay una cadena de _if else_ con comprobaciones de igualdad. Por ejemplo:
 
 ```php
 <?php
@@ -38,11 +38,11 @@ switch ($status) {
 
 El switch es una construcción bastante compleja en términos de la cantidad de elementos que la componen:
 
-* Una descripción externa que incluye la palabra clave `switch`. La variable cuyos valores seleccionará el *switch* para determinar el comportamiento. Y llaves para las opciones de selección.
-* Las construcciones `case` y `default`, dentro de las cuales se describe el comportamiento para diferentes valores de la variable considerada. Cada `case` corresponde a un `if` en el ejemplo anterior. `default` es una situación especial que corresponde a la rama `else` en las construcciones condicionales. No es obligatorio especificar `default`, al igual que `else`.
-* `break` se utiliza para evitar la "caída". Si no se especifica, después de ejecutar el `case` correspondiente, la ejecución pasará al siguiente `case` y así sucesivamente hasta el `break` más cercano o hasta el final del *switch*.
+- Una descripción externa que incluye la palabra clave `switch`. La variable cuyos valores seleccionará el _switch_ para determinar el comportamiento. Y llaves para las opciones de selección.
+- Las construcciones `case` y `default`, dentro de las cuales se describe el comportamiento para diferentes valores de la variable considerada. Cada `case` corresponde a un `if` en el ejemplo anterior. `default` es una situación especial que corresponde a la rama `else` en las construcciones condicionales. No es obligatorio especificar `default`, al igual que `else`.
+- `break` se utiliza para evitar la "caída". Si no se especifica, después de ejecutar el `case` correspondiente, la ejecución pasará al siguiente `case` y así sucesivamente hasta el `break` más cercano o hasta el final del _switch_.
 
-Las llaves en el *switch* no definen un bloque de código como en otros lugares. Dentro de él solo se permite la sintaxis que se muestra arriba. Es decir, se pueden usar `case` o `default`. Pero dentro de cada `case` (y `default`) la situación es diferente. Aquí se puede ejecutar cualquier código arbitrario:
+Las llaves en el _switch_ no definen un bloque de código como en otros lugares. Dentro de él solo se permite la sintaxis que se muestra arriba. Es decir, se pueden usar `case` o `default`. Pero dentro de cada `case` (y `default`) la situación es diferente. Aquí se puede ejecutar cualquier código arbitrario:
 
 ```php
 <?php
@@ -59,9 +59,9 @@ switch ($count) {
 }
 ```
 
-A veces, el resultado obtenido dentro de un `case` es el final de la ejecución de la función que contiene el *switch*. En este caso, es necesario devolverlo de alguna manera al exterior. Para resolver esta tarea, hay dos formas.
+A veces, el resultado obtenido dentro de un `case` es el final de la ejecución de la función que contiene el _switch_. En este caso, es necesario devolverlo de alguna manera al exterior. Para resolver esta tarea, hay dos formas.
 
-**La primera forma** es crear una variable antes del *switch*, llenarla en los *case* y luego, al final, devolver el valor de esta variable al exterior:
+**La primera forma** es crear una variable antes del _switch_, llenarla en los _case_ y luego, al final, devolver el valor de esta variable al exterior:
 
 ```php
 <?php
@@ -85,7 +85,7 @@ function doSomethingGood(int $count): ?string
 }
 ```
 
-**La segunda forma** es más simple y corta. En lugar de crear una variable, el *case* permite hacer un retorno normal de la función dentro de sí mismo. Después de `return`, no se ejecuta ningún código, por lo que podemos eliminar el `break`:
+**La segunda forma** es más simple y corta. En lugar de crear una variable, el _case_ permite hacer un retorno normal de la función dentro de sí mismo. Después de `return`, no se ejecuta ningún código, por lo que podemos eliminar el `break`:
 
 ```php
 <?php
@@ -103,4 +103,4 @@ function doSomethingGood(int $count): ?string
 }
 ```
 
-Aunque el switch se encuentra en el código, técnicamente siempre se puede prescindir de él. El beneficio clave de su uso es que expresa mejor la intención del programador cuando se necesitan comprobar valores específicos de una variable. Aunque el código se haya vuelto físicamente más largo, es más fácil de leer que los bloques con *elseif*.
+Aunque el switch se encuentra en el código, técnicamente siempre se puede prescindir de él. El beneficio clave de su uso es que expresa mejor la intención del programador cuando se necesitan comprobar valores específicos de una variable. Aunque el código se haya vuelto físicamente más largo, es más fácil de leer que los bloques con _elseif_.

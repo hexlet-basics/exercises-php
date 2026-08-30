@@ -43,10 +43,10 @@ print_r('-5'); // => -5
 
 On the screen the result looks the same, but inside the program these are completely different things:
 
-| Value    | Data type           |
-|----------|---------------------|
-| `5`      | `int` (integer)     |
-| `'5'`    | `string` (string)   |
+| Value | Data type         |
+| ----- | ----------------- |
+| `5`   | `int` (integer)   |
+| `'5'` | `string` (string) |
 
 The number `5` and the string `'5'` are different values, and operations with them work differently. That said, when types don't match, PHP often tries to convert one type into another on its own. How convenient this is and what makes it dangerous we'll look at a bit later in this module.
 

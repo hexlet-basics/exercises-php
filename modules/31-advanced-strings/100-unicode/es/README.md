@@ -6,20 +6,20 @@ Al principio, solo existía el [ASCII](https://es.wikipedia.org/wiki/ASCII) - un
 
 En este conjunto de caracteres, cada símbolo se representa con 7 bits, lo que da un total de 128 caracteres:
 
-* 95 caracteres imprimibles, incluyendo letras mayúsculas y minúsculas, números y signos de puntuación.
-* 33 caracteres no imprimibles (códigos de control).
+- 95 caracteres imprimibles, incluyendo letras mayúsculas y minúsculas, números y signos de puntuación.
+- 33 caracteres no imprimibles (códigos de control).
 
 La mayoría de los caracteres no imprimibles ya no son relevantes, pero algunos todavía se utilizan, como el salto de línea `\n`.
 
 Los caracteres en ASCII se pueden codificar. Por ejemplo, el carácter `i` en minúscula corresponde a:
 
-* El número `1101001` en sistema binario.
-* El número `105` en sistema decimal.
+- El número `1101001` en sistema binario.
+- El número `105` en sistema decimal.
 
 Al principio todo estaba bien, pero con la proliferación de las computadoras surgió la necesidad de otros alfabetos. Cada país resolvió este problema creando su propio conjunto de caracteres, la mayoría de los cuales eran compatibles con ASCII:
 
-* Los primeros 128 caracteres eran idénticos a ASCII.
-* Los otros 128 caracteres se llenaban con el alfabeto local.
+- Los primeros 128 caracteres eran idénticos a ASCII.
+- Los otros 128 caracteres se llenaban con el alfabeto local.
 
 Como resultado, estos conjuntos de caracteres tenían 256 caracteres, lo que equivale a 2 a la 8va potencia.
 

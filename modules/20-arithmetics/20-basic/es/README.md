@@ -58,15 +58,15 @@ print_r(3 + 4);   // muestra: 7
 
 PHP admite todas las operaciones habituales + algunas específicas, relacionadas con la forma en que se almacenan y procesan los números en la computadora:
 
-| Operación              | Símbolo | Ejemplo      | Resultado |
-|------------------------|---------|--------------|-----------|
-| Suma                   | `+`     | `2 + 3`      | `5`       |
-| Resta                  | `-`     | `7 - 2`      | `5`       |
-| Multiplicación         | `*`     | `4 * 3`      | `12`      |
-| División               | `/`     | `8 / 2`      | `4`       |
-| Exponenciación         | `**`    | `3 ** 2`     | `9`       |
-| División entera        | `intdiv()` | `intdiv(7, 3)` | `2`   |
-| Resto de la división   | `%`     | `7 % 3`      | `1`       |
+| Operación            | Símbolo    | Ejemplo        | Resultado |
+| -------------------- | ---------- | -------------- | --------- |
+| Suma                 | `+`        | `2 + 3`        | `5`       |
+| Resta                | `-`        | `7 - 2`        | `5`       |
+| Multiplicación       | `*`        | `4 * 3`        | `12`      |
+| División             | `/`        | `8 / 2`        | `4`       |
+| Exponenciación       | `**`       | `3 ** 2`       | `9`       |
+| División entera      | `intdiv()` | `intdiv(7, 3)` | `2`       |
+| Resto de la división | `%`        | `7 % 3`        | `1`       |
 
 Estos signos de operación se llaman operadores. Así se puede mostrar el resultado de la división y de la exponenciación:
 
@@ -105,7 +105,7 @@ A nivel básico basta con recordar: los números enteros se necesitan cuando no 
 
 ## Qué es el resto de la división (`%`)
 
-Esta operación se llama **tomar el resto de la división**. Muestra **lo que «queda»** cuando un número se divide entre otro *de forma incompleta*. Ejemplo:
+Esta operación se llama **tomar el resto de la división**. Muestra **lo que «queda»** cuando un número se divide entre otro _de forma incompleta_. Ejemplo:
 
 ```php
 <?php

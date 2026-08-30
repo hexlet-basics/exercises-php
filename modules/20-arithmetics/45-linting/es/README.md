@@ -9,8 +9,8 @@ En PHP, los estándares más comunes son los **PSR** — PHP Standards Recommend
 Actualmente existen varias recomendaciones aprobadas, cada una de ellas identificada con un número: PSR-1, PSR-2, PSR-3 y [otros](https://es.wikipedia.org/wiki/PHP_Standard_Recommendation). Conocerás todas las recomendaciones durante el aprendizaje y el trabajo.
 En esta lección vamos a analizar en detalle las siguientes:
 
-* PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — estándar básico de escritura de código. Es un conjunto de reglas que definen cómo se debe formatear el código del programa: cómo escribir etiquetas PHP, qué reglas usar para nombrar clases, métodos y constantes de clases. También aborda cuestiones de codificación, autoloading, namespaces y separación de responsabilidades entre archivos
-* PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — estándar de estilo de codificación extendido, reemplaza y amplía el obsoleto PSR-2. Este estándar requiere el cumplimiento de las reglas de PSR-1. También agrega muchas nuevas reglas: sangrías, archivos, líneas, palabras clave, clases, estructuras de control, ámbito de visibilidad y otros elementos
+- PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — estándar básico de escritura de código. Es un conjunto de reglas que definen cómo se debe formatear el código del programa: cómo escribir etiquetas PHP, qué reglas usar para nombrar clases, métodos y constantes de clases. También aborda cuestiones de codificación, autoloading, namespaces y separación de responsabilidades entre archivos
+- PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — estándar de estilo de codificación extendido, reemplaza y amplía el obsoleto PSR-2. Este estándar requiere el cumplimiento de las reglas de PSR-1. También agrega muchas nuevas reglas: sangrías, archivos, líneas, palabras clave, clases, estructuras de control, ámbito de visibilidad y otros elementos
 
 Todos los desarrolladores PHP conocen y usan estos estándares. A los principiantes les resulta útil consultarlos de vez en cuando y desarrollar buenos hábitos desde el principio. Sin embargo, no es necesario memorizarlo todo de golpe.
 
@@ -65,9 +65,9 @@ print_r(((8 / 2) + 5) - (-3 / 2));
 
 Al verificar el archivo, el linter encontrará los siguientes errores:
 
-* `Spaces must be used to indent lines; tabs are not allowed` — PSR-12 recomienda usar una sangría de cuatro espacios, mientras que en el ejemplo anterior se utiliza una tabulación
-* `A closing tag is not permitted at the end of a PHP file` — el estándar contiene el requisito de omitir la etiqueta de cierre `?>`
-* `Space before opening parenthesis of function call prohibited` — al llamar a una función, no debe haber espacios entre el nombre de la función y los paréntesis, mientras que en el código verificado hay un espacio después del nombre `print_r`
+- `Spaces must be used to indent lines; tabs are not allowed` — PSR-12 recomienda usar una sangría de cuatro espacios, mientras que en el ejemplo anterior se utiliza una tabulación
+- `A closing tag is not permitted at the end of a PHP file` — el estándar contiene el requisito de omitir la etiqueta de cierre `?>`
+- `Space before opening parenthesis of function call prohibited` — al llamar a una función, no debe haber espacios entre el nombre de la función y los paréntesis, mientras que en el código verificado hay un espacio después del nombre `print_r`
 
 Vamos a corregir el código: eliminaremos la etiqueta de cierre, las sangrías y el espacio después del nombre de la función:
 

@@ -32,6 +32,6 @@ print_r($rublesCount);
 
 Presta atención a los siguientes detalles:
 
-* Nomenclatura lowerCamelCase.
-* Las dos nuevas variables están separadas de los cálculos posteriores por una línea en blanco. Estas variables tienen sentido incluso sin los cálculos, por lo que esta separación es apropiada y mejora la legibilidad.
-* El código resultante es más largo que la versión anterior, pero está bien nombrado y estructurado. Esto ocurre a menudo y es normal, porque el código debe ser legible.
+- Nomenclatura lowerCamelCase.
+- Las dos nuevas variables están separadas de los cálculos posteriores por una línea en blanco. Estas variables tienen sentido incluso sin los cálculos, por lo que esta separación es apropiada y mejora la legibilidad.
+- El código resultante es más largo que la versión anterior, pero está bien nombrado y estructurado. Esto ocurre a menudo y es normal, porque el código debe ser legible.

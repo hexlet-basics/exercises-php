@@ -44,7 +44,7 @@ var_dump(isPrime(3)); // => bool(true)
 var_dump(isPrime(4)); // => bool(false)
 ```
 
-*Para ser completamente honestos, para resolver la tarea basta con verificar los números hasta el valor de la raíz cuadrada de `$number`, pero en nuestro caso es importante centrarse en comprender el trabajo con condiciones dentro del bucle.*
+_Para ser completamente honestos, para resolver la tarea basta con verificar los números hasta el valor de la raíz cuadrada de `$number`, pero en nuestro caso es importante centrarse en comprender el trabajo con condiciones dentro del bucle._
 
 ```text
 while (...) {

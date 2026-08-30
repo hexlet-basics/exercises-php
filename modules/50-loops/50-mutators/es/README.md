@@ -1,7 +1,7 @@
 Del lenguaje C a PHP se han trasladado dos operaciones:
 
-* Incremento `++`
-* Decremento `--`
+- Incremento `++`
+- Decremento `--`
 
 A menudo se encuentran junto con bucles. Estas operaciones unarias aumentan y disminuyen en uno el número almacenado en una variable:
 
@@ -60,5 +60,5 @@ Es imposible entender un código así, por lo que es mejor no utilizar tales con
 
 Recomendamos utilizar estas construcciones de la siguiente manera:
 
-* Dentro de una expresión, nunca mezcle funciones sin efectos secundarios con funciones con efectos secundarios (lo mismo se aplica a las operaciones).
-* Utilice el incremento y el decremento solo donde no haya diferencia entre la forma prefija y la forma posfija: por separado de todo, en su propia línea de código.
+- Dentro de una expresión, nunca mezcle funciones sin efectos secundarios con funciones con efectos secundarios (lo mismo se aplica a las operaciones).
+- Utilice el incremento y el decremento solo donde no haya diferencia entre la forma prefija y la forma posfija: por separado de todo, en su propia línea de código.

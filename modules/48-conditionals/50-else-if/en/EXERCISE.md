@@ -3,10 +3,10 @@ Implement the `getTrafficLightAction()` function, which takes a traffic light co
 
 Rules:
 
-* `'green'` → `'go'`
-* `'yellow'` → `'slow down'`
-* `'red'` → `'stop'`
-* Any other color → `'unknown'`
+- `'green'` → `'go'`
+- `'yellow'` → `'slow down'`
+- `'red'` → `'stop'`
+- Any other color → `'unknown'`
 
 Call examples:
 

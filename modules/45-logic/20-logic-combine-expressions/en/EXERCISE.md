@@ -1,5 +1,5 @@
 
-Implement the `isInternationalPhone()`, function, which checks the format of the passed phone number. If the number starts with *+*, then it's in the international format.
+Implement the `isInternationalPhone()`, function, which checks the format of the passed phone number. If the number starts with _+_, then it's in the international format.
 
 ```php
 <?php

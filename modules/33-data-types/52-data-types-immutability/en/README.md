@@ -51,7 +51,7 @@ $firstName = strtoupper($firstName)
    the variable now holds a new string
 ```
 
-It's important to distinguish two things: *changing the value of a variable* and *changing the value itself*. The value of a variable can be replaced without any problem, but the value itself — a string, a number — cannot be changed.
+It's important to distinguish two things: _changing the value of a variable_ and _changing the value itself_. The value of a variable can be replaced without any problem, but the value itself — a string, a number — cannot be changed.
 
 ## A new variable or the same one?
 

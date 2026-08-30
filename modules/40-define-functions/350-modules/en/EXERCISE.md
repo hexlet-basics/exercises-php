@@ -14,5 +14,5 @@ print_r(amountPerPerson(350, 3, 10)); // => 129
 
 ## Hint
 
-* First calculate the total with the tip, then divide it by the number of people and round up
-* `ceil()` returns a `float`, while the function must return an `int` — type casting will help
+- First calculate the total with the tip, then divide it by the number of people and round up
+- `ceil()` returns a `float`, while the function must return an `int` — type casting will help

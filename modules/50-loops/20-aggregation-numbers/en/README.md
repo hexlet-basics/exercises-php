@@ -41,9 +41,9 @@ function sumNumbersFromRange(int $start, int $finish): int
 
 The general structure of the loop here is standard. It has three components:
 
-* A counter, which is initialized with the initial value of the range
-* The loop itself, with a stop condition when the end of the range is reached
-* Changing the counter at the end of the loop body
+- A counter, which is initialized with the initial value of the range
+- The loop itself, with a stop condition when the end of the range is reached
+- Changing the counter at the end of the loop body
 
 The number of iterations in such a loop equals `$finish - $start + 1`. So for the range from 5 to 7, it's 7 - 5 + 1, that is, three iterations.
 
@@ -91,8 +91,8 @@ As a result of such a call, `$sum` will hold the correct result, but the interpr
 
 In mathematics, every operation has a **neutral element of that operation**. An operation with this element doesn't change the value on which the operation is performed:
 
-* Zero for addition: any number + zero = the number itself
-* Zero for subtraction: any number - zero = the number itself
-* The empty string for concatenation: `'' . 'string'` will be `'string'`
+- Zero for addition: any number + zero = the number itself
+- Zero for subtraction: any number - zero = the number itself
+- The empty string for concatenation: `'' . 'string'` will be `'string'`
 
 Therefore, if we were multiplying, instead of `0` we would use `1`.

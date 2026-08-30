@@ -66,7 +66,7 @@ Mientras trabajas, te encontrarás con este tipo de código en nuestro editor:
 // END
 ```
 
-*BEGIN* y *END* aquí son comentarios ordinarios que no afectan de ninguna manera el funcionamiento del programa. Muestran dónde escribir el código de la tarea.
+_BEGIN_ y _END_ aquí son comentarios ordinarios que no afectan de ninguna manera el funcionamiento del programa. Muestran dónde escribir el código de la tarea.
 
 ```php
 // BEGIN
@@ -74,4 +74,4 @@ Mientras trabajas, te encontrarás con este tipo de código en nuestro editor:
 // END
 ```
 
-Cuando veas *BEGIN* y *END*, escribe tu código entre ellos y deja lo demás sin cambios.
+Cuando veas _BEGIN_ y _END_, escribe tu código entre ellos y deja lo demás sin cambios.

@@ -1,5 +1,5 @@
 
-Implement the `isLeapYear()` function, which determines whether the year is leap year or not. A leap year is a multiple of 400 (i.e. divisible without a remainder), or is both a multiple of 4 and not a multiple of 100.  As you can see, the definition already contains all the required logic, all we need to do is to put it into code:
+Implement the `isLeapYear()` function, which determines whether the year is leap year or not. A leap year is a multiple of 400 (i.e. divisible without a remainder), or is both a multiple of 4 and not a multiple of 100. As you can see, the definition already contains all the required logic, all we need to do is to put it into code:
 
 ```php
 <?php

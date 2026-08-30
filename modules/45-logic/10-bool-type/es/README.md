@@ -22,14 +22,14 @@ var_dump(false); // => bool(false)
 
 Fíjate en la nueva función `var_dump()`. La conocida `print_r()` no es adecuada para mostrar valores lógicos: imprime `true` como `1` y `false` como una cadena vacía. La función `var_dump()` muestra tanto el tipo como el valor, por eso se usa para los valores de tipo `bool`.
 
-En la práctica, los valores `true` y `false` rara vez se usan directamente, pero sobre ellos se construye la lógica del comportamiento del programa. Nos encontramos con esto literalmente todos los días, cuando introducimos códigos PIN y contraseñas, cuando realizamos acciones cuyos resultados pueden ser distintos. Todos esos resultados están descritos dentro del programa en forma de expresiones condicionales. El programa razona más o menos así: *si es de una manera, haz una cosa; si es de otra manera, haz otra*.
+En la práctica, los valores `true` y `false` rara vez se usan directamente, pero sobre ellos se construye la lógica del comportamiento del programa. Nos encontramos con esto literalmente todos los días, cuando introducimos códigos PIN y contraseñas, cuando realizamos acciones cuyos resultados pueden ser distintos. Todos esos resultados están descritos dentro del programa en forma de expresiones condicionales. El programa razona más o menos así: _si es de una manera, haz una cosa; si es de otra manera, haz otra_.
 
 En PHP están disponibles las siguientes operaciones de comparación:
 
-* `<` y `<=` significan «menor que» y «menor o igual que»
-* `>` y `>=` significan «mayor que» y «mayor o igual que»
-* `==` y `!=` significan «igual que» y «distinto que»
-* `===` y `!==` significan «estrictamente igual que» y «estrictamente distinto que»
+- `<` y `<=` significan «menor que» y «menor o igual que»
+- `>` y `>=` significan «mayor que» y «mayor o igual que»
+- `==` y `!=` significan «igual que» y «distinto que»
+- `===` y `!==` significan «estrictamente igual que» y «estrictamente distinto que»
 
 Los lenguajes de programación adoptaron todas las operaciones de comparación matemáticas sin cambios, excepto los operadores de igualdad y desigualdad. En matemáticas se usa el signo igual `=` para esto, pero en programación el símbolo `=` se usa, la mayoría de las veces, para asignar valores a las variables. Por eso, en PHP se compara con `==` y `===`.
 
@@ -66,10 +66,10 @@ var_dump(isInfant(0)); // => bool(true)
 
 Cuando las funciones devuelven el resultado de una comparación, normalmente responden a la pregunta «sí» o «no». Estas funciones se llaman **predicados**. Es fácil reconocerlas porque devuelven un valor lógico `true` o `false`. A menudo su nombre contiene una pregunta o una afirmación que se puede verificar. En PHP, los predicados suelen empezar con el prefijo `is`, `has` o `can`, pero no se limitan a estas palabras. Ejemplos:
 
-* `isInfant()` — «¿es un bebé?»
-* `hasChildren()` — «¿tiene hijos?»
-* `isEmpty()` — «¿está vacío?»
-* `hasErrors()` — «¿hay errores?»
+- `isInfant()` — «¿es un bebé?»
+- `hasChildren()` — «¿tiene hijos?»
+- `isEmpty()` — «¿está vacío?»
+- `hasErrors()` — «¿hay errores?»
 
 Aquí tienes una función que comprueba si un número es negativo:
 

@@ -1,4 +1,4 @@
-Implementa la función `getHiddenCard()`, que recibe como argumento el número de una tarjeta de crédito (compuesto por 16 dígitos) como una cadena de texto y devuelve su versión oculta, que se puede utilizar en el sitio web para mostrarla. Si la tarjeta original tenía el número *2034399002125581*, entonces la versión oculta se verá así *\*\*\*\*5581*. En otras palabras, la función reemplaza los primeros 12 caracteres por asteriscos. La cantidad de asteriscos se controla mediante un segundo parámetro opcional. El valor predeterminado es 4.
+Implementa la función `getHiddenCard()`, que recibe como argumento el número de una tarjeta de crédito (compuesto por 16 dígitos) como una cadena de texto y devuelve su versión oculta, que se puede utilizar en el sitio web para mostrarla. Si la tarjeta original tenía el número _2034399002125581_, entonces la versión oculta se verá así *\*\*\*\*5581*. En otras palabras, la función reemplaza los primeros 12 caracteres por asteriscos. La cantidad de asteriscos se controla mediante un segundo parámetro opcional. El valor predeterminado es 4.
 
 ```php
 <?php

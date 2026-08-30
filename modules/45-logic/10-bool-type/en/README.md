@@ -22,14 +22,14 @@ var_dump(false); // => bool(false)
 
 Note the new function `var_dump()`. The familiar `print_r()` isn't well suited for printing boolean values: it prints `true` as `1` and `false` as an empty string. The `var_dump()` function outputs both the type and the value, so it's used for values of type `bool`.
 
-In practice, the values `true` and `false` are rarely used directly, but the logic of a program's behavior is built on them. We encounter this literally every day when we enter PIN codes and passwords, when we perform actions that can have different outcomes. All of these outcomes are described inside the program as conditional expressions. The program reasons roughly like this: *if it's this way, do one thing; if it's another way, do something else*.
+In practice, the values `true` and `false` are rarely used directly, but the logic of a program's behavior is built on them. We encounter this literally every day when we enter PIN codes and passwords, when we perform actions that can have different outcomes. All of these outcomes are described inside the program as conditional expressions. The program reasons roughly like this: _if it's this way, do one thing; if it's another way, do something else_.
 
 The following comparison operations are available in PHP:
 
-* `<` and `<=` mean "less than" and "less than or equal to"
-* `>` and `>=` mean "greater than" and "greater than or equal to"
-* `==` and `!=` mean "equal to" and "not equal to"
-* `===` and `!==` mean "strictly equal to" and "strictly not equal to"
+- `<` and `<=` mean "less than" and "less than or equal to"
+- `>` and `>=` mean "greater than" and "greater than or equal to"
+- `==` and `!=` mean "equal to" and "not equal to"
+- `===` and `!==` mean "strictly equal to" and "strictly not equal to"
 
 Programming languages adopted all the math comparison operations unchanged, except for the equality and inequality operators. In math, the regular equals sign `=` is used for this, but in programming the symbol `=` is most often used to assign values to variables. That's why in PHP comparisons are made using `==` and `===`.
 
@@ -66,10 +66,10 @@ var_dump(isInfant(0)); // => bool(true)
 
 When functions return the result of a comparison, they usually answer the question "yes" or "no". Such functions are called **predicates**. They're easy to recognize because they return a boolean value `true` or `false`. Their names often contain a question or a statement that can be checked. In PHP, predicates usually start with the prefix `is`, `has`, or `can`, but aren't limited to these words. Examples:
 
-* `isInfant()` — "is it an infant?"
-* `hasChildren()` — "does it have children?"
-* `isEmpty()` — "is it empty?"
-* `hasErrors()` — "are there errors?"
+- `isInfant()` — "is it an infant?"
+- `hasChildren()` — "does it have children?"
+- `isEmpty()` — "is it empty?"
+- `hasErrors()` — "are there errors?"
 
 Here's a function that checks whether a number is negative:
 

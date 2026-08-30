@@ -41,9 +41,9 @@ function sumNumbersFromRange(int $start, int $finish): int
 
 La estructura general del bucle es estándar. Tiene tres componentes:
 
-* Un contador que se inicializa con el valor inicial del rango
-* El bucle en sí con una condición de finalización cuando se alcanza el final del rango
-* La modificación del contador al final del cuerpo del bucle
+- Un contador que se inicializa con el valor inicial del rango
+- El bucle en sí con una condición de finalización cuando se alcanza el final del rango
+- La modificación del contador al final del cuerpo del bucle
 
 El número de iteraciones en este bucle es igual a `$finish - $start + 1`. Es decir, para un rango de 5 a 7, esto es 7 - 5 + 1, lo que da tres iteraciones.
 
@@ -91,8 +91,8 @@ Como resultado de esta llamada, `$sum` contendrá el resultado correcto, pero el
 
 En matemáticas, cada operación tiene un **elemento neutro de esa operación**. Una operación con este elemento no cambia el valor sobre el que se realiza la operación:
 
-* Cero para la suma: cualquier número + cero = el número mismo
-* Cero para la resta: cualquier número - cero = el número mismo
-* Cadena vacía para la concatenación: `'' . 'string'` será `'string'`
+- Cero para la suma: cualquier número + cero = el número mismo
+- Cero para la resta: cualquier número - cero = el número mismo
+- Cadena vacía para la concatenación: `'' . 'string'` será `'string'`
 
 Por lo tanto, si estuviéramos multiplicando, en lugar de `0` usaríamos `1`.

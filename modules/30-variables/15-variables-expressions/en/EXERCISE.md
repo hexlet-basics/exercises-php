@@ -8,5 +8,6 @@ Example output for 100 euros:
 ```
 
 We assume that:
+
 - 1 euro = 1.25 dollars
 - 1 dollar = 6.91 yuans

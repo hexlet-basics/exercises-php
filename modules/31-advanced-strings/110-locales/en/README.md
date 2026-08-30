@@ -5,7 +5,7 @@ Despite this unification, each country has its own peculiarities in its way of r
 
 Localization is important in software. The user will always expect software (including websites) to work predictably. This includes localization. It's clear that solving this problem by yourself is no mean feat. Fortunately, you don't have to do that. Localization is usually embedded either in the language itself or in special libraries.
 
-PHP uses the  [setlocale()](https://www.php.net/manual/en/function.setlocale.php) function to control the locale. This function configures the locale globally. I.e., calling it affects all subsequent functions that rely on localization.
+PHP uses the [setlocale()](https://www.php.net/manual/en/function.setlocale.php) function to control the locale. This function configures the locale globally. I.e., calling it affects all subsequent functions that rely on localization.
 
 ```php
 <?php
@@ -15,12 +15,12 @@ string setlocale ( int $category , string $locale [, string $... ] )
 
 The first parameter of this function takes the name of the category (like a constant) that you want to apply the locale to, which is then passed in further parameters.
 
-* LC_ALL — all of the following
-* LC_COLLATE — string comparison functions (see `strcoll()`)
-* LC_CTYPE — string conversion and classification functions, for example `strtoupper()`
-* LC_MONETARY — for the `localeconv()` function
-* LC_NUMERIC — specifies the decimal separator character (see also `localeconv()`)
-* LC_TIME — date/time formatting with `strftime()`
+- LC_ALL — all of the following
+- LC_COLLATE — string comparison functions (see `strcoll()`)
+- LC_CTYPE — string conversion and classification functions, for example `strtoupper()`
+- LC_MONETARY — for the `localeconv()` function
+- LC_NUMERIC — specifies the decimal separator character (see also `localeconv()`)
+- LC_TIME — date/time formatting with `strftime()`
 
 An example of how the set locale affects how data is displayed.
 

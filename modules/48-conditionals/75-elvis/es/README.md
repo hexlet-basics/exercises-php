@@ -31,8 +31,8 @@ function generateGreeting(string $name, string $nickname): string
 
 Este es un caso común: operamos con valores `bool` y obtenemos:
 
-* El primer valor si es `true`
-* El segundo valor en caso contrario
+- El primer valor si es `true`
+- El segundo valor en caso contrario
 
 En PHP, para estos casos, existe un operador especial:
 

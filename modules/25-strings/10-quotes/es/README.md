@@ -66,7 +66,7 @@ Por defecto, se acostumbra usar comillas simples `'`, si dentro de la cadena no 
 
 ## El problema con las comillas dentro de una cadena
 
-Imagina que quieres imprimir la cadena *Dragon's mother*. En ella hay un apóstrofe (*'s*), que coincide con el carácter de comilla simple. Intentemos así:
+Imagina que quieres imprimir la cadena _Dragon's mother_. En ella hay un apóstrofe (_'s_), que coincide con el carácter de comilla simple. Intentemos así:
 
 ```php
 <?php

@@ -51,7 +51,7 @@ $firstName = strtoupper($firstName)
    la variable ahora contiene una nueva cadena
 ```
 
-Es importante distinguir dos cosas: *cambiar el valor de una variable* y *cambiar el valor en sí*. El valor de una variable se puede reemplazar sin problemas, pero el valor en sí —una cadena, un número— no se puede cambiar.
+Es importante distinguir dos cosas: _cambiar el valor de una variable_ y _cambiar el valor en sí_. El valor de una variable se puede reemplazar sin problemas, pero el valor en sí —una cadena, un número— no se puede cambiar.
 
 ## ¿Una variable nueva o la misma?
 

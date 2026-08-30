@@ -1,8 +1,8 @@
 Implement the `getNumberExplanation()` function, which takes a number as input and returns an explanation of that number. If there's no explanation for the number, then `just a number` is returned. Explanations exist only for the following numbers:
 
-* 666 - devil number
-* 42 - answer for everything
-* 7 - prime number
+- 666 - devil number
+- 42 - answer for everything
+- 7 - prime number
 
 Function call examples:
 

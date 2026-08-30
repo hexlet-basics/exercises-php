@@ -43,10 +43,10 @@ print_r('-5'); // => -5
 
 En la pantalla el resultado se ve igual, pero dentro del programa son cosas completamente diferentes:
 
-| Valor    | Tipo de dato          |
-|----------|-----------------------|
-| `5`      | `int` (número entero) |
-| `'5'`    | `string` (cadena)     |
+| Valor | Tipo de dato          |
+| ----- | --------------------- |
+| `5`   | `int` (número entero) |
+| `'5'` | `string` (cadena)     |
 
 El número `5` y la cadena `'5'` son valores diferentes, y las operaciones con ellos funcionan de forma distinta. Eso sí, cuando los tipos no coinciden, PHP a menudo intenta convertir un tipo en otro por sí mismo. Qué tan cómodo es esto y por qué es peligroso lo veremos un poco más adelante en este módulo.
 

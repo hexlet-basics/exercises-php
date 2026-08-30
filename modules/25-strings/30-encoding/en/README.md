@@ -24,7 +24,7 @@ h e l l o
 8 5 12 12 15
 ```
 
-And *good* turns into this sequence.
+And _good_ turns into this sequence.
 
 ```text
 g o o d

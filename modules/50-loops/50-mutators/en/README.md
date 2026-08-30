@@ -1,7 +1,7 @@
 Two operations are carried over from C to PHP:
 
-* Increment `++`
-* Decrement `--`
+- Increment `++`
+- Decrement `--`
 
 They are very common with loops. These unary operations increment and decrement by one the number written in a variable:
 
@@ -60,5 +60,5 @@ It's impossible to understand such code, so it's better not to use such construc
 
 We advise using these constructions as follows:
 
-* Within a single expression, never mix functions without side effects with functions with side effects (the same applies to operations)
-* Use increment and decrement only where there's no difference between the prefix and postfix variant: separately from everything, on its own line of code
+- Within a single expression, never mix functions without side effects with functions with side effects (the same applies to operations)
+- Use increment and decrement only where there's no difference between the prefix and postfix variant: separately from everything, on its own line of code

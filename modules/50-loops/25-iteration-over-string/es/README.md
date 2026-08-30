@@ -36,8 +36,8 @@ cada carácter se procesa por turno
 
 Lo más importante en este código es establecer la condición correcta en el `while`. Esto se puede hacer de dos formas a la vez:
 
-* `$i < strlen($name)`
-* `$i <= strlen($name) - 1`
+- `$i < strlen($name)`
+- `$i <= strlen($name) - 1`
 
 Ambas formas conducen al mismo resultado.
 

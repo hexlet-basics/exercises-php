@@ -14,5 +14,5 @@ print_r(amountPerPerson(350, 3, 10)); // => 129
 
 ## Pista
 
-* Primero calcula el total con la propina, luego divídelo entre el número de personas y redondea hacia arriba
-* `ceil()` devuelve un `float`, mientras que la función debe devolver un `int` — la conversión de tipos te ayudará
+- Primero calcula el total con la propina, luego divídelo entre el número de personas y redondea hacia arriba
+- `ceil()` devuelve un `float`, mientras que la función debe devolver un `int` — la conversión de tipos te ayudará

@@ -12,6 +12,6 @@ sanitizePhoneNumber('(123) 456-7890');     // '1234567890'
 
 ### Hints
 
-* The final result is a string.
-* Use an empty string as the initial value.
-* The `str_contains()` function will help you check whether a character is in the set `' ()-'`.
+- The final result is a string.
+- Use an empty string as the initial value.
+- The `str_contains()` function will help you check whether a character is in the set `' ()-'`.

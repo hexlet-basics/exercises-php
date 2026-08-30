@@ -36,8 +36,8 @@ each character is processed in turn
 
 The most important thing in this code is to set the right condition in `while`. This can be done in two ways at once:
 
-* `$i < strlen($name)`
-* `$i <= strlen($name) - 1`
+- `$i < strlen($name)`
+- `$i <= strlen($name) - 1`
 
 Both ways lead to the same result.
 
