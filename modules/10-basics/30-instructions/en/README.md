@@ -46,11 +46,12 @@ Dracarys!Mother of Dragons.
 
 Usually instructions are written on separate lines, but since instructions in PHP are separated by the `;` symbol, a line break is not required. Several instructions can be written on a single line:
 
-```php
+<!-- NOTE: форма записи и есть предмет урока. text чтобы форматтер не разбил строку -->
+
+```text
 <?php
 
-print_r('Mother of Dragons. ');
-print_r('Dracarys!');
+print_r('Mother of Dragons. '); print_r('Dracarys!');
 ```
 
 Both versions work the same way, but the second one is harder to read. That is why instructions are almost always written one per line.
