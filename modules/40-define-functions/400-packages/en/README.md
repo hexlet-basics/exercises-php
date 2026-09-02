@@ -33,7 +33,7 @@ Installed packages end up in the `vendor/` directory, but you don't need to incl
 ```php
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 // After that you can use functions and classes
 // from any installed package

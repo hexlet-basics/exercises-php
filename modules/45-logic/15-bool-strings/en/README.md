@@ -3,9 +3,9 @@ Comparison operations work with numbers and with strings. In PHP, strings are co
 ```php
 <?php
 
-var_dump('apple' < 'banana');  // => bool(true)
-var_dump('cat' > 'dog');       // => bool(false)
-var_dump('abc' === 'abc');     // => bool(true)
+var_dump('apple' < 'banana'); // => bool(true)
+var_dump('cat' > 'dog'); // => bool(false)
+var_dump('abc' === 'abc'); // => bool(true)
 var_dump('hello' !== 'world'); // => bool(true)
 ```
 
@@ -23,9 +23,9 @@ The comparison is case-sensitive: the code of `'Z'` (90) is less than the code o
 ```php
 <?php
 
-var_dump('Zebra' < 'apple');  // => bool(true)  — 'Z'(90) < 'a'(97)
+var_dump('Zebra' < 'apple'); // => bool(true)  — 'Z'(90) < 'a'(97)
 var_dump('apple' < 'Banana'); // => bool(false) — 'a'(97) > 'B'(66)
-var_dump('Apple' < 'apple');  // => bool(true)  — 'A'(65) < 'a'(97)
+var_dump('Apple' < 'apple'); // => bool(true)  — 'A'(65) < 'a'(97)
 ```
 
 Let's write a function that checks whether a word starts with a given letter. To do this, we take the first character of the string and compare it with the desired letter:
@@ -38,7 +38,7 @@ function startsWithLetter(string $word, string $letter): bool
     return $word[0] === $letter;
 }
 
-var_dump(startsWithLetter('apple', 'a'));  // => bool(true)
+var_dump(startsWithLetter('apple', 'a')); // => bool(true)
 var_dump(startsWithLetter('banana', 'a')); // => bool(false)
 ```
 
@@ -48,7 +48,7 @@ Comparison operations are the same kind of expressions as arithmetic ones. You c
 <?php
 
 var_dump(strlen('apple') > 3); // => bool(true), because strlen('apple') is 5
-var_dump(strlen('hi') > 3);    // => bool(false), because strlen('hi') is 2
+var_dump(strlen('hi') > 3); // => bool(false), because strlen('hi') is 2
 ```
 
 In the example above, the function `strlen('apple')` runs first, and its result is the number `5`. Then this number is compared with `3`. In other words, first the arguments of the expression are computed (for example, the length of the string), and then the comparison operation is performed.
@@ -63,8 +63,8 @@ PHP has many built-in predicate functions for working with strings. They return 
 <?php
 
 var_dump(str_starts_with('hello', 'he')); // => bool(true) — the string starts with 'he'
-var_dump(str_ends_with('hello', 'lo'));   // => bool(true) — the string ends with 'lo'
-var_dump(str_contains('hello', 'ell'));   // => bool(true) — the string contains 'ell'
+var_dump(str_ends_with('hello', 'lo')); // => bool(true) — the string ends with 'lo'
+var_dump(str_contains('hello', 'ell')); // => bool(true) — the string contains 'ell'
 ```
 
 Such functions let you check strings against the required conditions right in the code, without writing additional functions.

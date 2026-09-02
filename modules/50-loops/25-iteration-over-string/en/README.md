@@ -18,6 +18,7 @@ function printNameBySymbol(string $name): void
 
 $name = 'Arya';
 printNameBySymbol($name);
+
 // => 'A'
 // => 'r'
 // => 'y'
@@ -54,15 +55,15 @@ function reverseString(string $text): string
     $i = strlen($text) - 1;
 
     while ($i >= 0) {
-        $result = $result.$text[$i];
+        $result = $result . $text[$i];
         $i = $i - 1;
     }
 
     return $result;
 }
 
-print_r(reverseString('Arya')."\n");   // => ayrA
-print_r(reverseString('hexlet')."\n"); // => telxeh
+print_r(reverseString('Arya') . "\n"); // => ayrA
+print_r(reverseString('hexlet') . "\n"); // => telxeh
 ```
 
 The `$result` variable is initialized with an empty string as the neutral element for concatenation. The loop starts at the last index (`strlen($text) - 1`), moves toward zero, and ends when the index becomes less than zero. At each step, the current character is added to the result. As a result, the string is built in reverse order.

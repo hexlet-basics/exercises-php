@@ -12,6 +12,7 @@ Such values are called constants, and it's customary to distinguish them from re
 <?php
 
 const PI = 3.14;
+
 print_r(PI); // => 3.14
 ```
 
@@ -25,6 +26,7 @@ The concept of constants is common in most programming languages. In PHP, a cons
 <?php
 
 const PI = 3.14;
+
 const PI = 3.14159; // Error: a constant cannot be defined again
 ```
 
@@ -40,7 +42,9 @@ At the same time, a constant, like a variable, can be used in any expression.
 <?php
 
 const PI = 3.14;
+
 const MAX_USERS = 100;
+
 const DEFAULT_TIMEOUT = 30;
 ```
 

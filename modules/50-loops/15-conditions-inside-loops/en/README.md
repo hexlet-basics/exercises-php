@@ -9,7 +9,7 @@ We need a counter to iterate. It stores the current number and increases after e
 
 $number = 1;
 while ($number <= 10) {
-    if ($number % 2 === 0) {
+    if (($number % 2) === 0) {
         print_r("{$number}\n");
     }
     $number = $number + 1;

@@ -43,6 +43,7 @@ Y si te sales de los límites de la cadena, PHP informará del problema:
 <?php
 
 print_r($firstName[9]);
+
 // Warning: Uninitialized string offset 9
 ```
 

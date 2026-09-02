@@ -9,9 +9,9 @@
 <?php
 
 compress('aaabcccc'); // 'a3bc4'
-compress('abcd');     // 'abcd'
-compress('aabbaa');   // 'a2b2a2'
-compress('');         // ''
+compress('abcd'); // 'abcd'
+compress('aabbaa'); // 'a2b2a2'
+compress(''); // ''
 ```
 
 Этот алгоритм используется в реальных форматах сжатия данных — например, в старых факс-протоколах и BMP-файлах.

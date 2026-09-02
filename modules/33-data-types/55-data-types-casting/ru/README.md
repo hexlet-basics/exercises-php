@@ -25,7 +25,7 @@ $convertedValue = (int) $value;
 print_r($convertedValue); // => 0
 
 print_r((int) '10'); // => 10
-print_r((int) 3.5);  // => 3 (дробная часть отбрасывается)
+print_r((int) 3.5); // => 3 (дробная часть отбрасывается)
 ```
 
 ```text
@@ -43,7 +43,7 @@ print_r((int) 3.5);  // => 3 (дробная часть отбрасываетс
 ```php
 <?php
 
-print_r((string) 10);  // => '10'
+print_r((string) 10); // => '10'
 print_r((string) 3.5); // => '3.5'
 ```
 
@@ -53,7 +53,7 @@ print_r((string) 3.5); // => '3.5'
 <?php
 
 $age = 42;
-print_r('Age: '.(string) $age); // => Age: 42
+print_r('Age: ' . (string) $age); // => Age: 42
 ```
 
 ## Преобразование в число с плавающей точкой с помощью (float)
@@ -75,8 +75,8 @@ print_r((float) '2.7'); // => 2.7
 ```php
 <?php
 
-(int) '4';  // 4
-5 + 4;      // 9
+(int) '4'; // 4
+5 + 4; // 9
 (string) 9; // '9'
 ```
 

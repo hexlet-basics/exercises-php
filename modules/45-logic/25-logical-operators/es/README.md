@@ -21,7 +21,7 @@ function isCorrectPassword(string $password): bool
     return $length > 8 && hasCapitalLetter($password);
 }
 
-var_dump(isCorrectPassword('Qwerty'));     // => bool(false)
+var_dump(isCorrectPassword('Qwerty')); // => bool(false)
 var_dump(isCorrectPassword('Qwerty1234')); // => bool(true)
 var_dump(isCorrectPassword('qwerty1234')); // => bool(false)
 ```
@@ -39,8 +39,8 @@ function hasDiscount(int $age, bool $isStudent): bool
 }
 
 var_dump(hasDiscount(15, false)); // => bool(true)  (menor de 18)
-var_dump(hasDiscount(25, true));  // => bool(true)  (estudiante)
-var_dump(hasDiscount(15, true));  // => bool(true)  (ambas condiciones)
+var_dump(hasDiscount(25, true)); // => bool(true)  (estudiante)
+var_dump(hasDiscount(15, true)); // => bool(true)  (ambas condiciones)
 var_dump(hasDiscount(25, false)); // => bool(false)
 ```
 
@@ -64,7 +64,7 @@ function isStrongPassword(string $password): bool
     $length = strlen($password);
 
     // Los paréntesis establecen la prioridad. Queda claro qué se refiere a qué.
-    return ($length > 8 && hasCapitalLetter($password)) && hasSpecialChars($password);
+    return $length > 8 && hasCapitalLetter($password) && hasSpecialChars($password);
 }
 ```
 
@@ -77,16 +77,16 @@ Escribamos una función que verifique el apartamento. Recibe dos argumentos: el 
 
 function isGoodApartment(int $area, string $street): bool
 {
-    return $area >= 100 || ($area >= 80 && $street === 'Main Street');
+    return $area >= 100 || $area >= 80 && $street === 'Main Street';
 }
 
-var_dump(isGoodApartment(91, 'Queens Street'));  // => bool(false)
-var_dump(isGoodApartment(78, 'Queens Street'));  // => bool(false)
-var_dump(isGoodApartment(70, 'Main Street'));    // => bool(false)
+var_dump(isGoodApartment(91, 'Queens Street')); // => bool(false)
+var_dump(isGoodApartment(78, 'Queens Street')); // => bool(false)
+var_dump(isGoodApartment(70, 'Main Street')); // => bool(false)
 
 var_dump(isGoodApartment(120, 'Queens Street')); // => bool(true)
-var_dump(isGoodApartment(120, 'Main Street'));   // => bool(true)
-var_dump(isGoodApartment(80, 'Main Street'));    // => bool(true)
+var_dump(isGoodApartment(120, 'Main Street')); // => bool(true)
+var_dump(isGoodApartment(80, 'Main Street')); // => bool(true)
 ```
 
 El área de las matemáticas que estudia los operadores lógicos se llama álgebra booleana. Las **tablas de verdad** muestran cuál será el resultado al aplicar cada operador.

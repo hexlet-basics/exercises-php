@@ -60,7 +60,7 @@ Each linter message is associated with a specific rule. Suppose we have a file w
 <?php
 
 // On the next line, the indentation is one tab
-print_r(((8 / 2) + 5) - (-3 / 2));
+print_r((8 / 2) + 5 - (-3 / 2));
 ```
 
 When checking the file, the linter will find the following errors:
@@ -74,7 +74,7 @@ Let's fix the code — remove the closing tag, the indentation, and the space af
 ```php
 <?php
 
-print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
+print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
 ```
 
 This version no longer violates the rules, and the linter will "stay silent". When you're just starting out, such little things may seem unimportant. But over time it becomes clear that it's precisely these things that form a single, readable style.

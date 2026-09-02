@@ -21,11 +21,11 @@ Combinemos en una sola expresión el operador lógico de «verificación de igua
 
 function isEven(int $number): bool
 {
-    return $number % 2 === 0;
+    return ($number % 2) === 0;
 }
 
 var_dump(isEven(10)); // => bool(true)
-var_dump(isEven(3));  // => bool(false)
+var_dump(isEven(3)); // => bool(false)
 ```
 
 Las operaciones aritméticas tienen mayor prioridad que las lógicas. Esto significa que primero se calcula la expresión aritmética `$number % 2`, y luego el resultado se compara con cero y se devuelve el resultado de la verificación de igualdad.
@@ -49,7 +49,7 @@ function isFirstLetterAnA(string $text): bool
 }
 
 var_dump(isFirstLetterAnA('orange')); // => bool(false)
-var_dump(isFirstLetterAnA('apple'));  // => bool(true)
+var_dump(isFirstLetterAnA('apple')); // => bool(true)
 ```
 
 Para que quede claro qué ocurre aquí, intenta expresar en voz alta lo que sucede, de manera similar a como desciframos el proceso en el ejemplo con `isEven()`.

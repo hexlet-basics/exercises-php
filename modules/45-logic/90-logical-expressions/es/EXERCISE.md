@@ -3,8 +3,8 @@ Escribe una función `isFalsy()` que compruebe si el valor dado se trata como fa
 ```php
 <?php
 
-isFalsy(false);  // true
-isFalsy(0);      // true
+isFalsy(false); // true
+isFalsy(0); // true
 isFalsy('help'); // false
-isFalsy(10);     // false
+isFalsy(10); // false
 ```

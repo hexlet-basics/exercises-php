@@ -33,7 +33,7 @@ Los paquetes instalados van a parar al directorio `vendor/`, pero no hace falta 
 ```php
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 // Después puedes usar las funciones y clases
 // de cualquier paquete instalado

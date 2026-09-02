@@ -29,8 +29,8 @@ Ahora podemos llamarla con distintos argumentos:
 <?php
 
 sayHello('Hexlet'); // => Hello, Hexlet!
-sayHello('world');  // => Hello, world!
-sayHello('PHP');    // => Hello, PHP!
+sayHello('world'); // => Hello, world!
+sayHello('PHP'); // => Hello, PHP!
 ```
 
 Parece que la cantidad de código no se redujo, pero apareció otra cosa. Si esta función se usa en distintos lugares, cuando necesitemos cambiar el texto bastará con corregir solo la definición de la función. Y cuanto más compleja sea la tarea y más a menudo se use en distintos lugares, más importante es extraer la lógica en funciones propias.
@@ -95,6 +95,7 @@ El cuerpo se ejecuta en el momento en que se inicia la función. Además, cada l
 function noop() {}
 
 noop(); // Hay una llamada, pero no tiene sentido
+
 // Esta función también puede ser útil,
 // pero esto se refiere a temas avanzados
 ```

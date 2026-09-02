@@ -11,6 +11,7 @@
 <?php
 
 print_r('- Are you hungry?- Aaaarrrgh!');
+
 // => - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -53,6 +54,7 @@ print_r("Hello\nWorld");
 // World
 
 print_r('Hello\nWorld');
+
 // => Hello\nWorld
 ```
 
@@ -85,6 +87,7 @@ print_r("Hello\n World");
 //  World  (во второй строке в начале пробел)
 
 print_r("Hello\n\nWorld");
+
 // Hello
 //
 // World  (пустая строка между ними)
@@ -122,6 +125,7 @@ print_r('Hello\\nWorld');
 
 // Если забыть указать второй слеш
 print_r("Hello\nWorld");
+
 // Hello
 // World
 ```

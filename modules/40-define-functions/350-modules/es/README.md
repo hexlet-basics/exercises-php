@@ -45,8 +45,8 @@ La biblioteca estándar de PHP está organizada de forma más simple que en much
 <?php
 
 print_r(floor(7.9)); // => 7
-print_r(ceil(7.1));  // => 8
-print_r(ceil(7.0));  // => 7
+print_r(ceil(7.1)); // => 8
+print_r(ceil(7.0)); // => 7
 ```
 
 La diferencia se nota cuando el número no es entero. `floor(7.9)` da 7, no 8, porque 7 es el entero más cercano por debajo.
@@ -83,7 +83,7 @@ function floor(float $number): string
     return 'custom floor';
 }
 
-print_r(floor(3.7));  // => custom floor
+print_r(floor(3.7)); // => custom floor
 print_r(\floor(3.7)); // => 3
 ```
 

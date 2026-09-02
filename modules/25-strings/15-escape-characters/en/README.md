@@ -11,6 +11,7 @@ If we simply pass this text to `print_r()`, PHP will print everything on a singl
 <?php
 
 print_r('- Are you hungry?- Aaaarrrgh!');
+
 // => - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -53,6 +54,7 @@ print_r("Hello\nWorld");
 // World
 
 print_r('Hello\nWorld');
+
 // => Hello\nWorld
 ```
 
@@ -85,6 +87,7 @@ print_r("Hello\n World");
 //  World  (there is a space at the start of the second line)
 
 print_r("Hello\n\nWorld");
+
 // Hello
 //
 // World  (an empty line between them)
@@ -122,6 +125,7 @@ print_r('Hello\\nWorld');
 
 // If you forget to add the second slash
 print_r("Hello\nWorld");
+
 // Hello
 // World
 ```

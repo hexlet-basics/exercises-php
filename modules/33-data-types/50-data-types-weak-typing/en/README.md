@@ -18,7 +18,7 @@ Note that the `+` operator in PHP always means arithmetic, while joining strings
 <?php
 
 print_r(1 + '7'); // => 8
-print_r(1 .'7'); // => 17
+print_r(1 . '7'); // => 17
 ```
 
 ```text
@@ -33,6 +33,7 @@ PHP does have a limit to what it allows, though. If a string can't be understood
 <?php
 
 print_r(1 + 'seven');
+
 // TypeError: Unsupported operand types: int + string
 ```
 

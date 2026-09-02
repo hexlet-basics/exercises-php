@@ -75,7 +75,7 @@ Sometimes you need to take part of a string up to the end or from the start. Suc
 
 $value = 'Hexlet';
 
-print_r(substr($value, 3));    // => let (from index 3 to the end)
+print_r(substr($value, 3)); // => let (from index 3 to the end)
 print_r(substr($value, 0, 3)); // => Hex (from the start, three characters)
 ```
 
@@ -90,8 +90,8 @@ PHP lets you count not only from left to right, but also from the end of the str
 
 $value = 'Hexlet';
 
-print_r(substr($value, -1));    // => t (the last character)
-print_r(substr($value, -3));    // => let (the last three characters)
+print_r(substr($value, -1)); // => t (the last character)
+print_r(substr($value, -3)); // => let (the last three characters)
 print_r(substr($value, 1, -1)); // => exle (from index 1 to the second-to-last character)
 ```
 
@@ -138,13 +138,13 @@ The `substr()` function works with bytes, not characters. For Latin letters thes
 
 $value = 'Hexlet';
 
-substr($value, 0);     // Hexlet — the whole string
-substr($value, 5);     // t
-substr($value, 0, 5);  // Hexle
-substr($value, -1);    // t — the last character
-substr($value, -3);    // let — the last three characters
+substr($value, 0); // Hexlet — the whole string
+substr($value, 5); // t
+substr($value, 0, 5); // Hexle
+substr($value, -1); // t — the last character
+substr($value, -3); // let — the last three characters
 substr($value, 2, -1); // xle — from the third character to the second-to-last
-strrev($value);        // telxeH — the string in reverse order
+strrev($value); // telxeH — the string in reverse order
 ```
 
 Don't worry if you don't remember all the combinations right now: you'll quickly start using them in practice. The main thing is to understand how the basic structure `substr(string, start, length)` works.

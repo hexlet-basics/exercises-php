@@ -71,8 +71,8 @@ function isPrime(int $number): bool
 
     $divider = 2;
 
-    while ($divider <= $number / 2) {
-        if ($number % $divider == 0) {
+    while ($divider <= ($number / 2)) {
+        if (($number % $divider) == 0) {
             return false;
         }
 

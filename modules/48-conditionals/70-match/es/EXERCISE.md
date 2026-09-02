@@ -15,9 +15,9 @@ Ejemplos de llamada de la función:
 <?php
 
 calculateDeliveryCost('canada', 0.5); // 600
-calculateDeliveryCost('canada', 2);   // 900
-calculateDeliveryCost('usa', 1);      // 800
-calculateDeliveryCost('france', 1);   // null
+calculateDeliveryCost('canada', 2); // 900
+calculateDeliveryCost('usa', 1); // 800
+calculateDeliveryCost('france', 1); // null
 ```
 
 Pista: a la derecha de la flecha `=>` puede ir cualquier expresión, incluido el operador ternario.

@@ -6,7 +6,8 @@ Let's recall how concatenation works. To do it, we join the strings we need (or 
 $firstName = 'Joffrey';
 $greeting = 'Hello';
 
-print_r($greeting.', '.$firstName.'!');
+print_r($greeting . ', ' . $firstName . '!');
+
 // => Hello, Joffrey!
 ```
 
@@ -21,6 +22,7 @@ $firstName = 'Joffrey';
 $greeting = 'Hello';
 
 print_r("{$greeting}, {$firstName}!");
+
 // => Hello, Joffrey!
 ```
 
@@ -42,7 +44,7 @@ Compare these two examples side by side:
 ```php
 <?php
 
-print_r($greeting.', '.$firstName.'!');
+print_r($greeting . ', ' . $firstName . '!');
 print_r("{$greeting}, {$firstName}!");
 ```
 
@@ -56,6 +58,7 @@ You can have as many blocks with curly brackets as you want in one string. It's 
 $firstName = 'Joffrey';
 
 print_r('Hello, {$firstName}!');
+
 // => Hello, {$firstName}!
 ```
 

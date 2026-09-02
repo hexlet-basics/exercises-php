@@ -7,7 +7,7 @@
 ```php
 <?php
 
-calculateElectricityBill(80);  // 400
+calculateElectricityBill(80); // 400
 calculateElectricityBill(150); // 850
 calculateElectricityBill(250); // 1700
 ```

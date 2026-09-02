@@ -5,6 +5,6 @@
 ```php
 <?php
 
-var_dump(isLongWord('apple'));  // => bool(false)
+var_dump(isLongWord('apple')); // => bool(false)
 var_dump(isLongWord('banana')); // => bool(true)
 ```

@@ -73,7 +73,7 @@ print_r('Father!')
 <?php
 
 $greeting = 'Mother!';
-print_r($greeting);  // => Mother!
+print_r($greeting); // => Mother!
 print_r('greeting'); // => greeting
 ```
 

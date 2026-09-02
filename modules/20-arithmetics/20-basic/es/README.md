@@ -51,7 +51,7 @@ Si escribimos esta misma expresión en forma de cadena, obtendremos un resultado
 <?php
 
 print_r('3 + 4'); // muestra: 3 + 4
-print_r(3 + 4);   // muestra: 7
+print_r(3 + 4); // muestra: 7
 ```
 
 ## Otras operaciones aritméticas
@@ -73,7 +73,7 @@ Estos signos de operación se llaman operadores. Así se puede mostrar el result
 ```php
 <?php
 
-print_r(8 / 2);  // => 4
+print_r(8 / 2); // => 4
 print_r(3 ** 2); // => 9
 ```
 
@@ -85,7 +85,7 @@ Además de los números enteros, en PHP existen los números de punto flotante, 
 <?php
 
 print_r(3.5 + 1.2); // => 4.7
-print_r(10 / 4);    // => 2.5
+print_r(10 / 4); // => 2.5
 ```
 
 A veces los usamos nosotros mismos, cuando necesitamos trabajar precisamente con valores fraccionarios, por ejemplo al calcular un promedio o al trabajar con dinero y mediciones. Pero los números de punto flotante también pueden aparecer por sí solos, por ejemplo, como resultado de la operación de división `/`:

@@ -6,8 +6,8 @@ Users enter numbers in different ways, but before saving they are often normaliz
 <?php
 
 sanitizePhoneNumber('+7 (999) 123-45-67'); // '+79991234567'
-sanitizePhoneNumber('8 800 555 35 35');    // '88005553535'
-sanitizePhoneNumber('(123) 456-7890');     // '1234567890'
+sanitizePhoneNumber('8 800 555 35 35'); // '88005553535'
+sanitizePhoneNumber('(123) 456-7890'); // '1234567890'
 ```
 
 ### Hints

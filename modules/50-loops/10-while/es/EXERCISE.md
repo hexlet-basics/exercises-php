@@ -6,6 +6,7 @@ Después de finalizar la cuenta regresiva, la función debe imprimir en la panta
 <?php
 
 printCountdown(4);
+
 // => 4
 // => 3
 // => 2

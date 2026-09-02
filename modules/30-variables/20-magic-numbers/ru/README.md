@@ -6,7 +6,7 @@
 
 $eurosCount = 1000;
 $dollarsCount = $eurosCount * 1.25; // 1250
-$rublesCount = $dollarsCount * 60;  // 75000
+$rublesCount = $dollarsCount * 60; // 75000
 
 print_r($rublesCount);
 ```
@@ -24,7 +24,7 @@ $dollarsPerEuro = 1.25;
 $rublesPerDollar = 60;
 
 $eurosCount = 1000;
-$dollarsCount = $eurosCount * $dollarsPerEuro;   // 1250
+$dollarsCount = $eurosCount * $dollarsPerEuro; // 1250
 $rublesCount = $dollarsCount * $rublesPerDollar; // 75000
 
 print_r($rublesCount);

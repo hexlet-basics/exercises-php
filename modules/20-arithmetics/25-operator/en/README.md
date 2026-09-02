@@ -43,7 +43,7 @@ The `-` operator can be used in different ways. When it stands **between two num
 ```php
 <?php
 
-print_r(5 - 2);  // => 3
+print_r(5 - 2); // => 3
 print_r(10 - 7); // => 3
 ```
 
@@ -67,7 +67,7 @@ The same applies to the plus:
 ```php
 <?php
 
-print_r(+3);     // => 3
+print_r(+3); // => 3
 print_r(1 + +3); // => 4
 ```
 

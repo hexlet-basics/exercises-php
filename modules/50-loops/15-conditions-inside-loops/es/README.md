@@ -9,7 +9,7 @@ Para recorrerlos necesitamos un contador. Este guarda el número actual y se inc
 
 $number = 1;
 while ($number <= 10) {
-    if ($number % 2 === 0) {
+    if (($number % 2) === 0) {
         print_r("{$number}\n");
     }
     $number = $number + 1;

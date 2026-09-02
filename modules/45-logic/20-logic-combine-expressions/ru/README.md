@@ -23,11 +23,11 @@
 
 function isEven(int $number): bool
 {
-    return $number % 2 === 0;
+    return ($number % 2) === 0;
 }
 
 var_dump(isEven(10)); // => bool(true)
-var_dump(isEven(3));  // => bool(false)
+var_dump(isEven(3)); // => bool(false)
 ```
 
 Приоритет арифметических операций выше логических. Значит, сначала вычисляется арифметическое выражение `$number % 2`, а затем результат сравнивается с нулем и возвращается результат проверки равенства.
@@ -51,7 +51,7 @@ function isFirstLetterAnA(string $text): bool
 }
 
 var_dump(isFirstLetterAnA('orange')); // => bool(false)
-var_dump(isFirstLetterAnA('apple'));  // => bool(true)
+var_dump(isFirstLetterAnA('apple')); // => bool(true)
 ```
 
 Чтобы было понятно, что тут происходит, попробуйте проговорить происходящее аналогично тому, как мы расшифровывали процесс в примере с `isEven()`.

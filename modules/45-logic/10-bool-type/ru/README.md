@@ -16,7 +16,7 @@ var_dump(4 > 4); // => bool(false)
 ```php
 <?php
 
-var_dump(true);  // => bool(true)
+var_dump(true); // => bool(true)
 var_dump(false); // => bool(false)
 ```
 
@@ -40,10 +40,10 @@ var_dump(false); // => bool(false)
 ```php
 <?php
 
-var_dump(5 >= 3);  // => bool(true)
-var_dump(7 < 0);   // => bool(false)
-var_dump(5 > 5);   // => bool(false)
-var_dump(5 >= 5);  // => bool(true)
+var_dump(5 >= 3); // => bool(true)
+var_dump(7 < 0); // => bool(false)
+var_dump(5 > 5); // => bool(false)
+var_dump(5 >= 5); // => bool(true)
 var_dump(2 === 5); // => bool(false)
 var_dump(2 !== 5); // => bool(true)
 ```
@@ -83,5 +83,5 @@ function isNegative(int $number): bool
 }
 
 var_dump(isNegative(-5)); // => bool(true)
-var_dump(isNegative(7));  // => bool(false)
+var_dump(isNegative(7)); // => bool(false)
 ```

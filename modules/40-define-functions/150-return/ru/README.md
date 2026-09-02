@@ -59,7 +59,7 @@ var_dump($message); // => NULL
 
 function fullName($first, $last)
 {
-    return ucfirst($first).' '.ucfirst($last);
+    return ucfirst($first) . ' ' . ucfirst($last);
 }
 ```
 

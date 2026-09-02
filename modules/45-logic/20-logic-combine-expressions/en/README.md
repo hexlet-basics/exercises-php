@@ -21,11 +21,11 @@ Let's combine the logical operator "equality check" `===` and the arithmetic ope
 
 function isEven(int $number): bool
 {
-    return $number % 2 === 0;
+    return ($number % 2) === 0;
 }
 
 var_dump(isEven(10)); // => bool(true)
-var_dump(isEven(3));  // => bool(false)
+var_dump(isEven(3)); // => bool(false)
 ```
 
 Arithmetic operations have a higher priority than logical ones. That means the arithmetic expression `$number % 2` is calculated first, and then the result is compared with zero, and the result of the equality check is returned.
@@ -49,7 +49,7 @@ function isFirstLetterAnA(string $text): bool
 }
 
 var_dump(isFirstLetterAnA('orange')); // => bool(false)
-var_dump(isFirstLetterAnA('apple'));  // => bool(true)
+var_dump(isFirstLetterAnA('apple')); // => bool(true)
 ```
 
 To make it clear what's happening here, try to say out loud what's going on, just like we decoded the process in the `isEven()` example.

@@ -3,7 +3,7 @@ Recibiste código de un colega — funciona correctamente, pero infringe el est�
 ```php
 <?php
 
-print_r((5 ** 2) - (3 * 7));
+print_r(5 ** 2 - (3 * 7));
 ```
 
 El resultado debe seguir siendo `4`.

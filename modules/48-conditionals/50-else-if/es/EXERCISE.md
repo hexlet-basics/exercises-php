@@ -13,7 +13,7 @@ Ejemplos de llamada:
 ```php
 <?php
 
-getTrafficLightAction('green');  // 'go'
-getTrafficLightAction('red');    // 'stop'
+getTrafficLightAction('green'); // 'go'
+getTrafficLightAction('red'); // 'stop'
 getTrafficLightAction('purple'); // 'unknown'
 ```

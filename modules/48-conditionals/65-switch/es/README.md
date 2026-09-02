@@ -32,7 +32,8 @@ switch ($status) {
         // Hacer algo más
         break;
     default: // else
-        // Hacer algo más
+
+    // Hacer algo más
 }
 ```
 
@@ -55,7 +56,8 @@ switch ($count) {
         // Hacer algo útil
         break;
     default:
-        // Hacer algo
+
+    // Hacer algo
 }
 ```
 

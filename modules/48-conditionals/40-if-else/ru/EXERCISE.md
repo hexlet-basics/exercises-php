@@ -9,8 +9,8 @@
 <?php
 
 normalizeUrl('https://ya.ru'); // 'https://ya.ru'
-normalizeUrl('google.com');    // 'https://google.com'
-normalizeUrl('http://ai.fi');  // 'https://ai.fi'
+normalizeUrl('google.com'); // 'https://google.com'
+normalizeUrl('http://ai.fi'); // 'https://ai.fi'
 ```
 
 Есть несколько способов решить задачу. Один из них — проверить с помощью функции `str_starts_with()`, начинается ли строка-аргумент со строки `http://`, а потом на основе этого добавлять или не добавлять к ней `https://`.

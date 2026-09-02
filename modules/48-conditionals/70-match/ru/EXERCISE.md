@@ -15,9 +15,9 @@
 <?php
 
 calculateDeliveryCost('canada', 0.5); // 600
-calculateDeliveryCost('canada', 2);   // 900
-calculateDeliveryCost('usa', 1);      // 800
-calculateDeliveryCost('france', 1);   // null
+calculateDeliveryCost('canada', 2); // 900
+calculateDeliveryCost('usa', 1); // 800
+calculateDeliveryCost('france', 1); // null
 ```
 
 Подсказка: справа от стрелки `=>` может стоять любое выражение, в том числе тернарный оператор.

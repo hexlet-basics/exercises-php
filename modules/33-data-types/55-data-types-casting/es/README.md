@@ -23,7 +23,7 @@ $convertedValue = (int) $value;
 print_r($convertedValue); // => 0
 
 print_r((int) '10'); // => 10
-print_r((int) 3.5);  // => 3 (la parte fraccionaria se descarta)
+print_r((int) 3.5); // => 3 (la parte fraccionaria se descarta)
 ```
 
 ```text
@@ -41,7 +41,7 @@ Si necesitas convertir un número en cadena, usa el operador `(string)`:
 ```php
 <?php
 
-print_r((string) 10);  // => '10'
+print_r((string) 10); // => '10'
 print_r((string) 3.5); // => '3.5'
 ```
 
@@ -51,7 +51,7 @@ Esto es útil, por ejemplo, al formar textos, mensajes y salidas:
 <?php
 
 $age = 42;
-print_r('Age: '.(string) $age); // => Age: 42
+print_r('Age: ' . (string) $age); // => Age: 42
 ```
 
 ## Conversión en número de punto flotante con (float)
@@ -73,8 +73,8 @@ La conversión de tipos también se puede usar dentro de expresiones compuestas.
 ```php
 <?php
 
-(int) '4';  // 4
-5 + 4;      // 9
+(int) '4'; // 4
+5 + 4; // 9
 (string) 9; // '9'
 ```
 

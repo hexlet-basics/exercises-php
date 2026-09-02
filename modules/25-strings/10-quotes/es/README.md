@@ -105,6 +105,7 @@ En este caso, para que PHP no confunda las comillas de dentro de la cadena con l
 <?php
 
 print_r("Dragon's mother said \"No\"");
+
 // => Dragon's mother said "No"
 ```
 
@@ -118,6 +119,7 @@ Lo mismo funciona en el caso inverso:
 <?php
 
 print_r('Dragon\'s mother said "No"');
+
 // => Dragon's mother said "No"
 ```
 
@@ -129,5 +131,6 @@ Para imprimir la propia barra invertida, también hay que escaparla:
 <?php
 
 print_r('\\');
+
 // => \
 ```

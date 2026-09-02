@@ -9,8 +9,8 @@ Ejemplos de llamada:
 <?php
 
 normalizeUrl('https://ya.ru'); // 'https://ya.ru'
-normalizeUrl('google.com');    // 'https://google.com'
-normalizeUrl('http://ai.fi');  // 'https://ai.fi'
+normalizeUrl('google.com'); // 'https://google.com'
+normalizeUrl('http://ai.fi'); // 'https://ai.fi'
 ```
 
 Hay varias formas de resolver la tarea. Una de ellas es comprobar con la función `str_starts_with()` si la cadena-argumento empieza con la cadena `http://` y, en base a eso, agregar o no agregar `https://`.

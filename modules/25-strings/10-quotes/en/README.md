@@ -105,6 +105,7 @@ In this case, to keep PHP from confusing the quotes inside the string with the o
 <?php
 
 print_r("Dragon's mother said \"No\"");
+
 // => Dragon's mother said "No"
 ```
 
@@ -118,6 +119,7 @@ The same works the other way around:
 <?php
 
 print_r('Dragon\'s mother said "No"');
+
 // => Dragon's mother said "No"
 ```
 
@@ -129,5 +131,6 @@ To print the backslash itself, it also needs to be escaped:
 <?php
 
 print_r('\\');
+
 // => \
 ```

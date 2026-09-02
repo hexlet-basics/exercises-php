@@ -57,8 +57,8 @@ function getTypeOfSentence(string $sentence): string
     return 'normal';
 }
 
-print_r(getTypeOfSentence('Hodor')."\n");  // => normal
-print_r(getTypeOfSentence('Hodor?')."\n"); // => question
+print_r(getTypeOfSentence('Hodor') . "\n"); // => normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
 ```
 
 Here two `return` statements are used at once. If the condition inside `if` is satisfied, `return 'question';` fires and the function ends. If the condition isn't satisfied, control passes to the next line with `return 'normal';`.
@@ -80,7 +80,7 @@ function hasEnoughMoney(int $balance, int $price): bool
 }
 
 var_dump(hasEnoughMoney(100, 50)); // => bool(true)
-var_dump(hasEnoughMoney(30, 50));  // => bool(false)
+var_dump(hasEnoughMoney(30, 50)); // => bool(false)
 ```
 
 ## if and logical expressions

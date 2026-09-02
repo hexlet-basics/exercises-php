@@ -6,6 +6,7 @@ After the countdown finishes, the function should print the string `Go!` to the 
 <?php
 
 printCountdown(4);
+
 // => 4
 // => 3
 // => 2

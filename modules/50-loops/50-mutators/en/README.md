@@ -41,10 +41,10 @@ The rule works exactly the same for both increment and decrement. For simplicity
 $x = 5;
 
 echo ++$x; // => 6
-echo $x;   // => 6
+echo $x; // => 6
 
 echo $x++; // => 6
-echo $x;   // => 7
+echo $x; // => 7
 ```
 
 Let's discuss what happens step by step in the code:

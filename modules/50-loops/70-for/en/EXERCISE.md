@@ -6,7 +6,7 @@ Example call:
 ```php
 <?php
 
-normalizeFilename('my photo.png');      // 'my_photo.png'
-normalizeFilename('final report.pdf');  // 'final_report.pdf'
+normalizeFilename('my photo.png'); // 'my_photo.png'
+normalizeFilename('final report.pdf'); // 'final_report.pdf'
 normalizeFilename('already_ready.txt'); // 'already_ready.txt'
 ```

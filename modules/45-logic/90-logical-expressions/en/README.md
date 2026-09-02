@@ -12,10 +12,10 @@ You can verify this with the double negation `!!`, which converts any value to `
 <?php
 
 var_dump((bool) 'hello'); // => bool(true)  — a non-empty string is truthy
-var_dump((bool) '');      // => bool(false) — an empty string is falsy
-var_dump((bool) 0);       // => bool(false) — zero is falsy
-var_dump((bool) -3.5);    // => bool(true)  — a non-zero number is truthy
-var_dump((bool) '0');     // => bool(false) — the string '0' is falsy, a PHP peculiarity
+var_dump((bool) ''); // => bool(false) — an empty string is falsy
+var_dump((bool) 0); // => bool(false) — zero is falsy
+var_dump((bool) -3.5); // => bool(true)  — a non-zero number is truthy
+var_dump((bool) '0'); // => bool(false) — the string '0' is falsy, a PHP peculiarity
 ```
 
 This trick is used to explicitly change the data type: the result of double negation is always a value of type `bool`.
@@ -28,9 +28,9 @@ In some languages, the "AND" and "OR" operators return one of their operands, so
 <?php
 
 var_dump('hello' && 'world'); // => bool(true)  — both operands are truthy
-var_dump('' && 'world');      // => bool(false) — the first operand is falsy
-var_dump(0 || 1);             // => bool(true)  — the second operand is truthy
-var_dump('' || 0);            // => bool(false) — both operands are falsy
+var_dump('' && 'world'); // => bool(false) — the first operand is falsy
+var_dump(0 || 1); // => bool(true)  — the second operand is truthy
+var_dump('' || 0); // => bool(false) — both operands are falsy
 ```
 
 The order of evaluation depends on the operator precedence:
@@ -55,7 +55,7 @@ Type conversion also happens with loose comparison. Recall the operators `==` an
 <?php
 
 var_dump('' === false); // => bool(false)
-var_dump('' == false);  // => bool(true)
+var_dump('' == false); // => bool(true)
 ```
 
 An empty string and `false` are different values, so the strict operator `===` says "False! They are not equal!". But the `==` operator converts the operands and considers them equal. This conversion is implicit, so avoid the operators `==` and `!=` whenever possible.

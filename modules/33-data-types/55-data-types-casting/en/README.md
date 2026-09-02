@@ -23,7 +23,7 @@ $convertedValue = (int) $value;
 print_r($convertedValue); // => 0
 
 print_r((int) '10'); // => 10
-print_r((int) 3.5);  // => 3 (the fractional part is dropped)
+print_r((int) 3.5); // => 3 (the fractional part is dropped)
 ```
 
 ```text
@@ -41,7 +41,7 @@ If you need to turn a number into a string, use the `(string)` operator:
 ```php
 <?php
 
-print_r((string) 10);  // => '10'
+print_r((string) 10); // => '10'
 print_r((string) 3.5); // => '3.5'
 ```
 
@@ -51,7 +51,7 @@ This is useful, for example, when building texts, messages, and output:
 <?php
 
 $age = 42;
-print_r('Age: '.(string) $age); // => Age: 42
+print_r('Age: ' . (string) $age); // => Age: 42
 ```
 
 ## Converting to a floating-point number with (float)
@@ -73,8 +73,8 @@ Type casting can also be used inside compound expressions. In more complex situa
 ```php
 <?php
 
-(int) '4';  // 4
-5 + 4;      // 9
+(int) '4'; // 4
+5 + 4; // 9
 (string) 9; // '9'
 ```
 

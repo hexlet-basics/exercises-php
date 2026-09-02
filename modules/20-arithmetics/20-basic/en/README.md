@@ -51,7 +51,7 @@ If you write this same expression as a string, you'll get a completely different
 <?php
 
 print_r('3 + 4'); // outputs: 3 + 4
-print_r(3 + 4);   // outputs: 7
+print_r(3 + 4); // outputs: 7
 ```
 
 ## Other arithmetic operations
@@ -73,7 +73,7 @@ These operation signs are called operators. Here's how you can output the result
 ```php
 <?php
 
-print_r(8 / 2);  // => 4
+print_r(8 / 2); // => 4
 print_r(3 ** 2); // => 9
 ```
 
@@ -85,7 +85,7 @@ In addition to integers, PHP has floating-point numbers, which are used for work
 <?php
 
 print_r(3.5 + 1.2); // => 4.7
-print_r(10 / 4);    // => 2.5
+print_r(10 / 4); // => 2.5
 ```
 
 Sometimes we use them ourselves, when we need to work specifically with fractional values, for example when calculating an average or when working with money and measurements. But floating-point numbers can also appear on their own, for example, as a result of the division operation `/`:

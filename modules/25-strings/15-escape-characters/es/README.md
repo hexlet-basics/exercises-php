@@ -11,6 +11,7 @@ Si simplemente le pasamos este texto a `print_r()`, PHP imprimirá todo en una s
 <?php
 
 print_r('- Are you hungry?- Aaaarrrgh!');
+
 // => - Are you hungry?- Aaaarrrgh!
 ```
 
@@ -53,6 +54,7 @@ print_r("Hello\nWorld");
 // World
 
 print_r('Hello\nWorld');
+
 // => Hello\nWorld
 ```
 
@@ -85,6 +87,7 @@ print_r("Hello\n World");
 //  World  (en la segunda línea hay un espacio al inicio)
 
 print_r("Hello\n\nWorld");
+
 // Hello
 //
 // World  (una línea vacía entre ellas)
@@ -122,6 +125,7 @@ print_r('Hello\\nWorld');
 
 // Si olvidas indicar la segunda barra
 print_r("Hello\nWorld");
+
 // Hello
 // World
 ```

@@ -32,7 +32,8 @@ switch ($status) {
         // Doing it three times
         break;
     default: // else
-        // Doing it four times
+
+    // Doing it four times
 }
 ```
 
@@ -55,7 +56,8 @@ switch ($count) {
         // Doing something useful
         break;
     default:
-        // Doing something
+
+    // Doing something
 }
 ```
 

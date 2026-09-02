@@ -51,7 +51,7 @@ Examples in code:
 <?php
 
 // Division
-print_r(8 / 2);  // 8 divided by 2 = 4
+print_r(8 / 2); // 8 divided by 2 = 4
 
 // Exponentiation
 print_r(3 ** 2); // 3 squared = 9

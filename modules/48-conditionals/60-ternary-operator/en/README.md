@@ -12,8 +12,8 @@ function abs(int $number): int
     return -$number;
 }
 
-print_r(abs(10)."\n");  // => 10
-print_r(abs(-10)."\n"); // => 10
+print_r(abs(10) . "\n"); // => 10
+print_r(abs(-10) . "\n"); // => 10
 ```
 
 But it can be written more concisely. PHP has a construct that works like _if-else_, but is at the same time an expression — its result can be returned from a function right away. It's called the **ternary operator** and is the only operator in PHP that requires three operands:
@@ -64,8 +64,8 @@ function getTypeOfSentence(string $sentence): string
     return $lastChar === '?' ? 'question' : 'normal';
 }
 
-print_r(getTypeOfSentence('Hodor')."\n");  // => normal
-print_r(getTypeOfSentence('Hodor?')."\n"); // => question
+print_r(getTypeOfSentence('Hodor') . "\n"); // => normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => question
 ```
 
 You may already have guessed that a ternary operator can be nested inside a ternary operator. This is possible, but it's better not to do so. Such code is hard to read and debug, so nested ternary operators are considered very bad practice.

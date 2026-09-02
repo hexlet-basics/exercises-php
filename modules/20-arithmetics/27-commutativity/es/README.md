@@ -51,7 +51,7 @@ Ejemplos en código:
 <?php
 
 // División
-print_r(8 / 2);  // 8 dividido entre 2 = 4
+print_r(8 / 2); // 8 dividido entre 2 = 4
 
 // Potenciación
 print_r(3 ** 2); // 3 al cuadrado = 9

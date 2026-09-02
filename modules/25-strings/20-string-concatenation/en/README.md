@@ -7,7 +7,8 @@ In PHP, strings are joined using the `.` (dot) operator. The `+` operator is use
 ```php
 <?php
 
-print_r('Dragon'.'stone');
+print_r('Dragon' . 'stone');
+
 // => Dragonstone
 ```
 
@@ -18,7 +19,7 @@ Here's how joining several strings works. The code:
 ```php
 <?php
 
-print_r('Hello'.', '.'World!');
+print_r('Hello' . ', ' . 'World!');
 ```
 
 Execution:
@@ -37,10 +38,10 @@ Examples:
 ```php
 <?php
 
-print_r('Kings'.'wood');     // => Kingswood
-print_r('Kings'.'road');     // => Kingsroad
+print_r('Kings' . 'wood'); // => Kingswood
+print_r('Kings' . 'road'); // => Kingsroad
 // Here the outer quotes are double, because there is a single one inside
-print_r("King's".'Landing'); // => King'sLanding
+print_r("King's" . 'Landing'); // => King'sLanding
 ```
 
 PHP lets you join strings even if they're written in different quotes. The main thing is that both parts are strings.
@@ -53,10 +54,10 @@ When joining, PHP doesn't insert spaces automatically. If there should be a spac
 <?php
 
 // A space at the end of the first string
-print_r("King's ".'Landing'); // => King's Landing
+print_r("King's " . 'Landing'); // => King's Landing
 
 // A space at the start of the second string
-print_r("King's".' Landing'); // => King's Landing
+print_r("King's" . ' Landing'); // => King's Landing
 ```
 
 The result will be the same. But if you don't add a space, the words will be glued together.
@@ -68,12 +69,13 @@ In strings, you can use escape sequences, for example `\n` for a line break or `
 ```php
 <?php
 
-print_r('Hello,'."\n".'World!');
+print_r('Hello,' . "\n" . 'World!');
 // =>
 // Hello,
 // World!
 
-print_r('A'."\t".'B');
+print_r('A' . "\t" . 'B');
+
 // => A	B
 ```
 

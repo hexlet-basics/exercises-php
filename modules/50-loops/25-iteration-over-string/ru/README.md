@@ -18,6 +18,7 @@ function printNameBySymbol(string $name): void
 
 $name = 'Arya';
 printNameBySymbol($name);
+
 // => 'A'
 // => 'r'
 // => 'y'
@@ -54,15 +55,15 @@ function reverseString(string $text): string
     $i = strlen($text) - 1;
 
     while ($i >= 0) {
-        $result = $result.$text[$i];
+        $result = $result . $text[$i];
         $i = $i - 1;
     }
 
     return $result;
 }
 
-print_r(reverseString('Arya')."\n");   // => ayrA
-print_r(reverseString('hexlet')."\n"); // => telxeh
+print_r(reverseString('Arya') . "\n"); // => ayrA
+print_r(reverseString('hexlet') . "\n"); // => telxeh
 ```
 
 Переменная `$result` инициализируется пустой строкой как нейтральным элементом для конкатенации. Цикл начинается с последнего индекса (`strlen($text) - 1`), двигается к нулю и завершается, когда индекс становится меньше нуля. На каждом шаге к результату добавляется текущий символ. В итоге строка строится в обратном порядке.

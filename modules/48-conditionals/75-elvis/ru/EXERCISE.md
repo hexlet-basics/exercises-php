@@ -6,8 +6,8 @@
 ```php
 <?php
 
-generateAmount(0, 2);   // 6
-generateAmount(0, 5);   // 15
-generateAmount(1, 2);   // 1
+generateAmount(0, 2); // 6
+generateAmount(0, 5); // 15
+generateAmount(1, 2); // 1
 generateAmount(12, 49); // 12
 ```

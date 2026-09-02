@@ -13,7 +13,7 @@ function generateGreeting(string $name, string $nickname): string
 }
 
 generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
-generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
+generateGreeting('', 'CoolBob86'); // 'Hello, CoolBob86!'
 ```
 
 Мы воспользовались тем фактом, что PHP преобразовывает типы. В коде `if ($name)` PHP превратит `$name` в тип `bool`. Если была пустая строка, то получится `false`. В ином случае получится `true`.

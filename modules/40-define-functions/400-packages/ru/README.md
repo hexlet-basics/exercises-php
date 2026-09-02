@@ -33,7 +33,7 @@ composer require nesbot/carbon
 ```php
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 // Дальше можно использовать функции и классы
 // из любого установленного пакета

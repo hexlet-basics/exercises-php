@@ -16,8 +16,8 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Hodor')."\n");  // => Sentence is normal
-print_r(getTypeOfSentence('Hodor?')."\n"); // => Sentence is question
+print_r(getTypeOfSentence('Hodor') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => Sentence is question
 ```
 
 Мы добавили `else` и новый блок в фигурных скобках. Он выполнится, если условие в `if` окажется ложным. Еще в блок `else` можно вкладывать другие условия `if`. Else переводится «иначе», «в ином случае».
@@ -92,6 +92,7 @@ function checkNumber(int $number): void
 }
 
 checkNumber(3);
+
 // => Число положительное
 // => Число не положительное
 ```
@@ -116,6 +117,7 @@ function checkNumber(int $number): void
 }
 
 checkNumber(3);
+
 // => Число положительное
 ```
 

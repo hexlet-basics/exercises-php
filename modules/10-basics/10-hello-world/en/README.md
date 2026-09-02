@@ -48,6 +48,7 @@ Besides `print_r()`, PHP has one more print command — `echo`:
 <?php
 
 echo 'Hello, World!';
+
 // => Hello, World!
 ```
 

@@ -16,8 +16,8 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Hodor')."\n");  // => Sentence is normal
-print_r(getTypeOfSentence('Hodor?')."\n"); // => Sentence is question
+print_r(getTypeOfSentence('Hodor') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('Hodor?') . "\n"); // => Sentence is question
 ```
 
 We added `else` and a new block in curly brackets. It is executed if the condition in `if` turns out to be false. You can also nest other `if` conditions inside the `else` block. Else means "otherwise", "in the other case".
@@ -92,6 +92,7 @@ function checkNumber(int $number): void
 }
 
 checkNumber(3);
+
 // => Number is positive
 // => Number is not positive
 ```
@@ -116,6 +117,7 @@ function checkNumber(int $number): void
 }
 
 checkNumber(3);
+
 // => Number is positive
 ```
 

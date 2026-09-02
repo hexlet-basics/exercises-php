@@ -5,7 +5,7 @@
 
 $rate = 10;
 $hours = 5;
-$salary = $rate * $hours + 100;
+$salary = ($rate * $hours) + 100;
 print_r($salary); // => 150
 ```
 
@@ -18,7 +18,7 @@ print_r($salary); // => 150
 
 $bonus = 50;
 // Выражение из множества операций
-$salary = ($rate * $hours + $bonus) * 12 - 500;
+$salary = ((($rate * $hours) + $bonus) * 12) - 500;
 print_r($salary);
 ```
 
@@ -41,7 +41,7 @@ print_r(10 * 15); // => 150
 $rate = 10;
 $hours = 15;
 $bonus = 50;
-print_r($rate * $hours + $bonus); // => 200
+print_r(($rate * $hours) + $bonus); // => 200
 ```
 
 Функция `print_r()` просто получает готовое значение и выводит его на экран. Способ получения этого значения функции безразличен. Именно поэтому вызовы функций отлично сочетаются с любыми выражениями.

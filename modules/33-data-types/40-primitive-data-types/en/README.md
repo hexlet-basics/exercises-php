@@ -28,7 +28,7 @@ Unlike strings, numbers don't need to be wrapped in quotes. Here's an example of
 ```php
 <?php
 
-print_r(5);  // => 5
+print_r(5); // => 5
 print_r(-5); // => -5
 ```
 
@@ -37,7 +37,7 @@ Here's an example of printing a string:
 ```php
 <?php
 
-print_r('5');  // => 5
+print_r('5'); // => 5
 print_r('-5'); // => -5
 ```
 
@@ -65,7 +65,7 @@ Example:
 <?php
 
 print_r(10.234); // => 10.234
-print_r(-0.4);   // => -0.4
+print_r(-0.4); // => -0.4
 ```
 
 They can hold fractional values and be used in calculations:
@@ -73,8 +73,8 @@ They can hold fractional values and be used in calculations:
 ```php
 <?php
 
-print_r(3.5 + 1.2);  // => 4.7
-print_r(5.0 / 2.0);  // => 2.5
+print_r(3.5 + 1.2); // => 4.7
+print_r(5.0 / 2.0); // => 2.5
 print_r(2.75 - 0.5); // => 2.25
 ```
 

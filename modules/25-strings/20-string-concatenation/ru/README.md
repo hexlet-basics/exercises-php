@@ -7,7 +7,8 @@
 ```php
 <?php
 
-print_r('Dragon'.'stone');
+print_r('Dragon' . 'stone');
+
 // => Dragonstone
 ```
 
@@ -18,7 +19,7 @@ print_r('Dragon'.'stone');
 ```php
 <?php
 
-print_r('Hello'.', '.'World!');
+print_r('Hello' . ', ' . 'World!');
 ```
 
 Выполнение:
@@ -37,10 +38,10 @@ print_r('Hello'.', '.'World!');
 ```php
 <?php
 
-print_r('Kings'.'wood');     // => Kingswood
-print_r('Kings'.'road');     // => Kingsroad
+print_r('Kings' . 'wood'); // => Kingswood
+print_r('Kings' . 'road'); // => Kingsroad
 // Здесь снаружи двойные кавычки, потому что внутри есть одиночная
-print_r("King's".'Landing'); // => King'sLanding
+print_r("King's" . 'Landing'); // => King'sLanding
 ```
 
 PHP позволяет объединять строки, даже если они записаны в разных кавычках. Главное, чтобы обе части были строками.
@@ -53,10 +54,10 @@ PHP позволяет объединять строки, даже если он
 <?php
 
 // Пробел в конце первой строки
-print_r("King's ".'Landing'); // => King's Landing
+print_r("King's " . 'Landing'); // => King's Landing
 
 // Пробел в начале второй строки
-print_r("King's".' Landing'); // => King's Landing
+print_r("King's" . ' Landing'); // => King's Landing
 ```
 
 Результат будет одинаковый. Но если пробел не добавить, то слова склеятся.
@@ -68,12 +69,13 @@ print_r("King's".' Landing'); // => King's Landing
 ```php
 <?php
 
-print_r('Hello,'."\n".'World!');
+print_r('Hello,' . "\n" . 'World!');
 // =>
 // Hello,
 // World!
 
-print_r('A'."\t".'B');
+print_r('A' . "\t" . 'B');
+
 // => A	B
 ```
 

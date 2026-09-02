@@ -107,6 +107,7 @@ Dragon's mother said "No"
 <?php
 
 print_r("Dragon's mother said \"No\"");
+
 // => Dragon's mother said "No"
 ```
 
@@ -120,6 +121,7 @@ print_r("Dragon's mother said \"No\"");
 <?php
 
 print_r('Dragon\'s mother said "No"');
+
 // => Dragon's mother said "No"
 ```
 
@@ -131,5 +133,6 @@ print_r('Dragon\'s mother said "No"');
 <?php
 
 print_r('\\');
+
 // => \
 ```

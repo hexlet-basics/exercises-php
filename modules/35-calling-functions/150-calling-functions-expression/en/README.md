@@ -5,7 +5,7 @@ When we write programs, we need to connect actions with one another. Adding numb
 
 $rate = 10;
 $hours = 5;
-$salary = $rate * $hours + 100;
+$salary = ($rate * $hours) + 100;
 print_r($salary); // => 150
 ```
 
@@ -18,7 +18,7 @@ What does this knowledge give us? We understand that expressions can be combined
 
 $bonus = 50;
 // An expression made of many operations
-$salary = ($rate * $hours + $bonus) * 12 - 500;
+$salary = ((($rate * $hours) + $bonus) * 12) - 500;
 print_r($salary);
 ```
 
@@ -41,7 +41,7 @@ print_r(10 * 15); // => 150
 $rate = 10;
 $hours = 15;
 $bonus = 50;
-print_r($rate * $hours + $bonus); // => 200
+print_r(($rate * $hours) + $bonus); // => 200
 ```
 
 The `print_r()` function simply receives a ready value and prints it to the screen. The function doesn't care how this value was obtained. That is exactly why function calls combine perfectly with any expressions.

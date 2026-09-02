@@ -75,7 +75,7 @@ print_r(substr($part, 0, 2)); // => 12
 
 $value = 'Hexlet';
 
-print_r(substr($value, 3));    // => let (с индекса 3 до конца)
+print_r(substr($value, 3)); // => let (с индекса 3 до конца)
 print_r(substr($value, 0, 3)); // => Hex (от начала, три символа)
 ```
 
@@ -90,8 +90,8 @@ PHP позволяет считать не только слева направ�
 
 $value = 'Hexlet';
 
-print_r(substr($value, -1));    // => t (последний символ)
-print_r(substr($value, -3));    // => let (последние три символа)
+print_r(substr($value, -1)); // => t (последний символ)
+print_r(substr($value, -3)); // => let (последние три символа)
 print_r(substr($value, 1, -1)); // => exle (с индекса 1 до предпоследнего символа)
 ```
 
@@ -138,13 +138,13 @@ print_r(substr($value, $start, $length)); // => exle
 
 $value = 'Hexlet';
 
-substr($value, 0);     // Hexlet — вся строка
-substr($value, 5);     // t
-substr($value, 0, 5);  // Hexle
-substr($value, -1);    // t — последний символ
-substr($value, -3);    // let — последние три символа
+substr($value, 0); // Hexlet — вся строка
+substr($value, 5); // t
+substr($value, 0, 5); // Hexle
+substr($value, -1); // t — последний символ
+substr($value, -3); // let — последние три символа
 substr($value, 2, -1); // xle — с третьего символа до предпоследнего
-strrev($value);        // telxeH — строка в обратном порядке
+strrev($value); // telxeH — строка в обратном порядке
 ```
 
 Не переживайте, если сейчас не запомните все комбинации: вы быстро начнете использовать их на практике. Главное понимать, как работает базовая структура `substr(строка, начало, длина)`.

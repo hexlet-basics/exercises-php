@@ -21,7 +21,7 @@ function isCorrectPassword(string $password): bool
     return $length > 8 && hasCapitalLetter($password);
 }
 
-var_dump(isCorrectPassword('Qwerty'));     // => bool(false)
+var_dump(isCorrectPassword('Qwerty')); // => bool(false)
 var_dump(isCorrectPassword('Qwerty1234')); // => bool(true)
 var_dump(isCorrectPassword('qwerty1234')); // => bool(false)
 ```
@@ -39,8 +39,8 @@ function hasDiscount(int $age, bool $isStudent): bool
 }
 
 var_dump(hasDiscount(15, false)); // => bool(true)  (младше 18)
-var_dump(hasDiscount(25, true));  // => bool(true)  (студент)
-var_dump(hasDiscount(15, true));  // => bool(true)  (оба условия)
+var_dump(hasDiscount(25, true)); // => bool(true)  (студент)
+var_dump(hasDiscount(15, true)); // => bool(true)  (оба условия)
 var_dump(hasDiscount(25, false)); // => bool(false)
 ```
 
@@ -64,7 +64,7 @@ function isStrongPassword(string $password): bool
     $length = strlen($password);
 
     // Скобки задают приоритет. Понятно, что к чему относится.
-    return ($length > 8 && hasCapitalLetter($password)) && hasSpecialChars($password);
+    return $length > 8 && hasCapitalLetter($password) && hasSpecialChars($password);
 }
 ```
 
@@ -77,16 +77,16 @@ function isStrongPassword(string $password): bool
 
 function isGoodApartment(int $area, string $street): bool
 {
-    return $area >= 100 || ($area >= 80 && $street === 'Main Street');
+    return $area >= 100 || $area >= 80 && $street === 'Main Street';
 }
 
-var_dump(isGoodApartment(91, 'Queens Street'));  // => bool(false)
-var_dump(isGoodApartment(78, 'Queens Street'));  // => bool(false)
-var_dump(isGoodApartment(70, 'Main Street'));    // => bool(false)
+var_dump(isGoodApartment(91, 'Queens Street')); // => bool(false)
+var_dump(isGoodApartment(78, 'Queens Street')); // => bool(false)
+var_dump(isGoodApartment(70, 'Main Street')); // => bool(false)
 
 var_dump(isGoodApartment(120, 'Queens Street')); // => bool(true)
-var_dump(isGoodApartment(120, 'Main Street'));   // => bool(true)
-var_dump(isGoodApartment(80, 'Main Street'));    // => bool(true)
+var_dump(isGoodApartment(120, 'Main Street')); // => bool(true)
+var_dump(isGoodApartment(80, 'Main Street')); // => bool(true)
 ```
 
 Область математики, в которой изучаются логические операторы, называется булевой алгеброй. **Таблицы истинности** показывают, каким будет результат при применении каждого оператора.

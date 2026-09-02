@@ -75,7 +75,7 @@ A veces hay que tomar parte de una cadena hasta el final o desde el inicio. Esta
 
 $value = 'Hexlet';
 
-print_r(substr($value, 3));    // => let (desde el índice 3 hasta el final)
+print_r(substr($value, 3)); // => let (desde el índice 3 hasta el final)
 print_r(substr($value, 0, 3)); // => Hex (desde el inicio, tres caracteres)
 ```
 
@@ -90,8 +90,8 @@ PHP permite contar no solo de izquierda a derecha, sino también desde el final 
 
 $value = 'Hexlet';
 
-print_r(substr($value, -1));    // => t (el último carácter)
-print_r(substr($value, -3));    // => let (los últimos tres caracteres)
+print_r(substr($value, -1)); // => t (el último carácter)
+print_r(substr($value, -3)); // => let (los últimos tres caracteres)
 print_r(substr($value, 1, -1)); // => exle (desde el índice 1 hasta el penúltimo carácter)
 ```
 
@@ -138,13 +138,13 @@ La función `substr()` trabaja con bytes, no con caracteres. Para el alfabeto la
 
 $value = 'Hexlet';
 
-substr($value, 0);     // Hexlet — toda la cadena
-substr($value, 5);     // t
-substr($value, 0, 5);  // Hexle
-substr($value, -1);    // t — el último carácter
-substr($value, -3);    // let — los últimos tres caracteres
+substr($value, 0); // Hexlet — toda la cadena
+substr($value, 5); // t
+substr($value, 0, 5); // Hexle
+substr($value, -1); // t — el último carácter
+substr($value, -3); // let — los últimos tres caracteres
 substr($value, 2, -1); // xle — desde el tercer carácter hasta el penúltimo
-strrev($value);        // telxeH — la cadena en orden inverso
+strrev($value); // telxeH — la cadena en orden inverso
 ```
 
 No te preocupes si ahora no recuerdas todas las combinaciones: pronto empezarás a usarlas en la práctica. Lo principal es entender cómo funciona la estructura básica `substr(cadena, inicio, longitud)`.

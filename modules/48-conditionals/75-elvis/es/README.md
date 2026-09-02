@@ -13,7 +13,7 @@ function generateGreeting(string $name, string $nickname): string
 }
 
 generateGreeting('Bob', 'CoolBob86'); // '¡Hola, Bob!'
-generateGreeting('', 'CoolBob86');    // '¡Hola, CoolBob86!'
+generateGreeting('', 'CoolBob86'); // '¡Hola, CoolBob86!'
 ```
 
 Hemos aprovechado el hecho de que PHP realiza conversiones de tipos. En el código `if ($name)`, PHP convertirá `$name` a un tipo `bool`. Si la cadena está vacía, se convertirá en `false`. De lo contrario, se convertirá en `true`.

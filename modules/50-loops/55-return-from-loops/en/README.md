@@ -27,8 +27,8 @@ function isPrime(int $number): bool
 
     $divisor = 2;
 
-    while ($divisor <= $number / 2) {
-        if ($number % $divisor === 0) {
+    while ($divisor <= ($number / 2)) {
+        if (($number % $divisor) === 0) {
             return false;
         }
 

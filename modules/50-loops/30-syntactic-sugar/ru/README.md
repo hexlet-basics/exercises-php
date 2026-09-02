@@ -35,8 +35,8 @@ $sum = 0;
 $index = 1;
 
 while ($index <= 5) {
-    $sum += $index;   // то же самое, что $sum = $sum + $index
-    $index += 1;      // то же самое, что $index = $index + 1
+    $sum += $index; // то же самое, что $sum = $sum + $index
+    $index += 1; // то же самое, что $index = $index + 1
 }
 
 print_r($sum); // => 15

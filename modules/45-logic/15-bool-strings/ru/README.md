@@ -3,9 +3,9 @@
 ```php
 <?php
 
-var_dump('apple' < 'banana');  // => bool(true)
-var_dump('cat' > 'dog');       // => bool(false)
-var_dump('abc' === 'abc');     // => bool(true)
+var_dump('apple' < 'banana'); // => bool(true)
+var_dump('cat' > 'dog'); // => bool(false)
+var_dump('abc' === 'abc'); // => bool(true)
 var_dump('hello' !== 'world'); // => bool(true)
 ```
 
@@ -23,9 +23,9 @@ print_r(ord('b')); // => 98
 ```php
 <?php
 
-var_dump('Zebra' < 'apple');  // => bool(true)  — 'Z'(90) < 'a'(97)
+var_dump('Zebra' < 'apple'); // => bool(true)  — 'Z'(90) < 'a'(97)
 var_dump('apple' < 'Banana'); // => bool(false) — 'a'(97) > 'B'(66)
-var_dump('Apple' < 'apple');  // => bool(true)  — 'A'(65) < 'a'(97)
+var_dump('Apple' < 'apple'); // => bool(true)  — 'A'(65) < 'a'(97)
 ```
 
 Напишем функцию, которая проверяет, начинается ли слово с заданной буквы. Для этого возьмем первый символ строки и сравним его с нужной буквой:
@@ -38,7 +38,7 @@ function startsWithLetter(string $word, string $letter): bool
     return $word[0] === $letter;
 }
 
-var_dump(startsWithLetter('apple', 'a'));  // => bool(true)
+var_dump(startsWithLetter('apple', 'a')); // => bool(true)
 var_dump(startsWithLetter('banana', 'a')); // => bool(false)
 ```
 
@@ -48,7 +48,7 @@ var_dump(startsWithLetter('banana', 'a')); // => bool(false)
 <?php
 
 var_dump(strlen('apple') > 3); // => bool(true), потому что strlen('apple') — это 5
-var_dump(strlen('hi') > 3);    // => bool(false), потому что strlen('hi') — это 2
+var_dump(strlen('hi') > 3); // => bool(false), потому что strlen('hi') — это 2
 ```
 
 В примере выше сначала выполняется функция `strlen('apple')`, результатом будет число `5`. Потом это число сравнивается с `3`. Другими словами, сначала считаются аргументы выражения (например, длина строки), а потом выполняется операция сравнения.
@@ -63,8 +63,8 @@ var_dump(strlen('hi') > 3);    // => bool(false), потому что strlen('hi
 <?php
 
 var_dump(str_starts_with('hello', 'he')); // => bool(true) — строка начинается с 'he'
-var_dump(str_ends_with('hello', 'lo'));   // => bool(true) — строка заканчивается на 'lo'
-var_dump(str_contains('hello', 'ell'));   // => bool(true) — строка содержит 'ell'
+var_dump(str_ends_with('hello', 'lo')); // => bool(true) — строка заканчивается на 'lo'
+var_dump(str_contains('hello', 'ell')); // => bool(true) — строка содержит 'ell'
 ```
 
 Такие функции позволяют проверять строки на нужные условия прямо в коде, без написания дополнительных функций.

@@ -7,6 +7,6 @@
 <?php
 
 hasAtSymbol('support@example.com'); // true
-hasAtSymbol('wrong-email');         // false
-hasAtSymbol('@admin');              // true
+hasAtSymbol('wrong-email'); // false
+hasAtSymbol('@admin'); // true
 ```

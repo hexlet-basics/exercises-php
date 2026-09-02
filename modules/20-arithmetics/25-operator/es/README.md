@@ -43,7 +43,7 @@ El operador `-` puede usarse de diferentes maneras. Cuando se encuentra **entre 
 ```php
 <?php
 
-print_r(5 - 2);  // => 3
+print_r(5 - 2); // => 3
 print_r(10 - 7); // => 3
 ```
 
@@ -67,7 +67,7 @@ Lo mismo ocurre con el más:
 ```php
 <?php
 
-print_r(+3);     // => 3
+print_r(+3); // => 3
 print_r(1 + +3); // => 4
 ```
 

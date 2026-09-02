@@ -28,7 +28,7 @@ A diferencia de las cadenas de texto, los números no necesitan estar entre comi
 ```php
 <?php
 
-print_r(5);  // => 5
+print_r(5); // => 5
 print_r(-5); // => -5
 ```
 
@@ -37,7 +37,7 @@ Ejemplo de impresión de una cadena:
 ```php
 <?php
 
-print_r('5');  // => 5
+print_r('5'); // => 5
 print_r('-5'); // => -5
 ```
 
@@ -65,7 +65,7 @@ Ejemplo:
 <?php
 
 print_r(10.234); // => 10.234
-print_r(-0.4);   // => -0.4
+print_r(-0.4); // => -0.4
 ```
 
 En ellos se pueden guardar valores fraccionarios y usarlos en cálculos:
@@ -73,8 +73,8 @@ En ellos se pueden guardar valores fraccionarios y usarlos en cálculos:
 ```php
 <?php
 
-print_r(3.5 + 1.2);  // => 4.7
-print_r(5.0 / 2.0);  // => 2.5
+print_r(3.5 + 1.2); // => 4.7
+print_r(5.0 / 2.0); // => 2.5
 print_r(2.75 - 0.5); // => 2.25
 ```
 

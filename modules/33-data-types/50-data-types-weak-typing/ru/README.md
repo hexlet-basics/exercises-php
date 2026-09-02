@@ -18,7 +18,7 @@ print_r(1 + '7'); // => 8
 <?php
 
 print_r(1 + '7'); // => 8
-print_r(1 .'7'); // => 17
+print_r(1 . '7'); // => 17
 ```
 
 ```text
@@ -33,6 +33,7 @@ print_r(1 .'7'); // => 17
 <?php
 
 print_r(1 + 'seven');
+
 // TypeError: Unsupported operand types: int + string
 ```
 

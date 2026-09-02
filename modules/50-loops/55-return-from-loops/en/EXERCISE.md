@@ -7,6 +7,6 @@ The function should return `true` as soon as it finds `@`. If the loop reached t
 <?php
 
 hasAtSymbol('support@example.com'); // true
-hasAtSymbol('wrong-email');         // false
-hasAtSymbol('@admin');              // true
+hasAtSymbol('wrong-email'); // false
+hasAtSymbol('@admin'); // true
 ```

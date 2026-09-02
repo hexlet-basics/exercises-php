@@ -6,5 +6,5 @@ Example of how it works:
 <?php
 
 maskCardNumber('1234567812345678'); // '************5678'
-maskCardNumber('12345678');         // '****5678'
+maskCardNumber('12345678'); // '****5678'
 ```

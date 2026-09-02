@@ -16,7 +16,7 @@ El resultado de una comparación es un valor de tipo `bool`. Este tipo tiene sol
 ```php
 <?php
 
-var_dump(true);  // => bool(true)
+var_dump(true); // => bool(true)
 var_dump(false); // => bool(false)
 ```
 
@@ -40,10 +40,10 @@ Algunos ejemplos:
 ```php
 <?php
 
-var_dump(5 >= 3);  // => bool(true)
-var_dump(7 < 0);   // => bool(false)
-var_dump(5 > 5);   // => bool(false)
-var_dump(5 >= 5);  // => bool(true)
+var_dump(5 >= 3); // => bool(true)
+var_dump(7 < 0); // => bool(false)
+var_dump(5 > 5); // => bool(false)
+var_dump(5 >= 5); // => bool(true)
 var_dump(2 === 5); // => bool(false)
 var_dump(2 !== 5); // => bool(true)
 ```
@@ -83,5 +83,5 @@ function isNegative(int $number): bool
 }
 
 var_dump(isNegative(-5)); // => bool(true)
-var_dump(isNegative(7));  // => bool(false)
+var_dump(isNegative(7)); // => bool(false)
 ```

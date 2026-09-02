@@ -12,10 +12,10 @@
 <?php
 
 var_dump((bool) 'hello'); // => bool(true)  — непустая строка — truthy
-var_dump((bool) '');      // => bool(false) — пустая строка — falsy
-var_dump((bool) 0);       // => bool(false) — ноль — falsy
-var_dump((bool) -3.5);    // => bool(true)  — ненулевое число — truthy
-var_dump((bool) '0');     // => bool(false) — строка '0' — falsy, особенность PHP
+var_dump((bool) ''); // => bool(false) — пустая строка — falsy
+var_dump((bool) 0); // => bool(false) — ноль — falsy
+var_dump((bool) -3.5); // => bool(true)  — ненулевое число — truthy
+var_dump((bool) '0'); // => bool(false) — строка '0' — falsy, особенность PHP
 ```
 
 Этим приемом пользуются, чтобы явно поменять тип данных: результатом двойного отрицания всегда будет значение типа `bool`.
@@ -28,9 +28,9 @@ var_dump((bool) '0');     // => bool(false) — строка '0' — falsy, ос
 <?php
 
 var_dump('hello' && 'world'); // => bool(true)  — оба операнда truthy
-var_dump('' && 'world');      // => bool(false) — первый операнд falsy
-var_dump(0 || 1);             // => bool(true)  — второй операнд truthy
-var_dump('' || 0);            // => bool(false) — оба операнда falsy
+var_dump('' && 'world'); // => bool(false) — первый операнд falsy
+var_dump(0 || 1); // => bool(true)  — второй операнд truthy
+var_dump('' || 0); // => bool(false) — оба операнда falsy
 ```
 
 Порядок вычисления зависит от приоритета операторов:
@@ -55,7 +55,7 @@ var_dump('' || 0);            // => bool(false) — оба операнда fals
 <?php
 
 var_dump('' === false); // => bool(false)
-var_dump('' == false);  // => bool(true)
+var_dump('' == false); // => bool(true)
 ```
 
 Пустая строка и `false` — это разные значения, поэтому строгий оператор `===` говорит «Ложь! Они не равны!». Но оператор `==` преобразует операнды и считает их равными. Это преобразование неявное, поэтому по возможности избегайте операторов `==` и `!=`.

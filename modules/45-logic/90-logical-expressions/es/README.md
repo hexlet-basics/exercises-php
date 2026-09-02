@@ -12,10 +12,10 @@ Se puede comprobar con la doble negación `!!`, que convierte cualquier valor a 
 <?php
 
 var_dump((bool) 'hello'); // => bool(true)  — una cadena no vacía es truthy
-var_dump((bool) '');      // => bool(false) — una cadena vacía es falsy
-var_dump((bool) 0);       // => bool(false) — cero es falsy
-var_dump((bool) -3.5);    // => bool(true)  — un número distinto de cero es truthy
-var_dump((bool) '0');     // => bool(false) — la cadena '0' es falsy, una particularidad de PHP
+var_dump((bool) ''); // => bool(false) — una cadena vacía es falsy
+var_dump((bool) 0); // => bool(false) — cero es falsy
+var_dump((bool) -3.5); // => bool(true)  — un número distinto de cero es truthy
+var_dump((bool) '0'); // => bool(false) — la cadena '0' es falsy, una particularidad de PHP
 ```
 
 Este truco se usa para cambiar explícitamente el tipo de dato: el resultado de la doble negación siempre será un valor de tipo `bool`.
@@ -28,9 +28,9 @@ En algunos lenguajes, los operadores «Y» y «O» devuelven uno de sus operando
 <?php
 
 var_dump('hello' && 'world'); // => bool(true)  — ambos operandos son truthy
-var_dump('' && 'world');      // => bool(false) — el primer operando es falsy
-var_dump(0 || 1);             // => bool(true)  — el segundo operando es truthy
-var_dump('' || 0);            // => bool(false) — ambos operandos son falsy
+var_dump('' && 'world'); // => bool(false) — el primer operando es falsy
+var_dump(0 || 1); // => bool(true)  — el segundo operando es truthy
+var_dump('' || 0); // => bool(false) — ambos operandos son falsy
 ```
 
 El orden de evaluación depende de la precedencia de los operadores:
@@ -55,7 +55,7 @@ La conversión de tipos también ocurre con la comparación no estricta. Recuerd
 <?php
 
 var_dump('' === false); // => bool(false)
-var_dump('' == false);  // => bool(true)
+var_dump('' == false); // => bool(true)
 ```
 
 Una cadena vacía y `false` son valores diferentes, por lo que el operador estricto `===` dice «¡Falso! ¡No son iguales!». Pero el operador `==` convierte los operandos y los considera iguales. Esta conversión es implícita, así que evita los operadores `==` y `!=` siempre que sea posible.

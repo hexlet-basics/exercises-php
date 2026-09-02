@@ -14,7 +14,7 @@ function repeat($text, $times = 1)
     return str_repeat($text, $times);
 }
 
-print_r(repeat('Hi'));    // => Hi
+print_r(repeat('Hi')); // => Hi
 print_r(repeat('Hi', 3)); // => HiHiHi
 ```
 
@@ -42,7 +42,7 @@ function myPrint($text = 'nothing')
     print_r($text);
 }
 
-myPrint();         // => "nothing"
+myPrint(); // => "nothing"
 myPrint('Hexlet'); // => "Hexlet"
 ```
 
@@ -55,10 +55,10 @@ Por defecto las palabras se unen con un espacio, pero se puede indicar otro carÃ
 
 function joinWords($word1, $word2, $sep = ' ')
 {
-    return $word1.$sep.$word2;
+    return $word1 . $sep . $word2;
 }
 
-print_r(joinWords('King', 'Road'));         // => King Road
+print_r(joinWords('King', 'Road')); // => King Road
 print_r(joinWords('Dragon', 'stone', '-')); // => Dragon-stone
 ```
 
@@ -74,8 +74,8 @@ function makeLine($symbol = '-', $length = 10)
     return str_repeat($symbol, $length);
 }
 
-print_r(makeLine());       // => ----------
-print_r(makeLine('*'));    // => **********
+print_r(makeLine()); // => ----------
+print_r(makeLine('*')); // => **********
 print_r(makeLine('*', 5)); // => *****
 print_r(makeLine('#', 3)); // => ###
 ```

@@ -57,7 +57,7 @@ Las funciones no están obligadas a simplemente devolver un parámetro. Normalme
 
 function fullName($first, $last)
 {
-    return ucfirst($first).' '.ucfirst($last);
+    return ucfirst($first) . ' ' . ucfirst($last);
 }
 ```
 

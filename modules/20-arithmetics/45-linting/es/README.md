@@ -60,7 +60,7 @@ Cada mensaje del linter está relacionado con una regla concreta. Supongamos que
 <?php
 
 // La siguiente línea tiene una sangría de una tabulación
-print_r(((8 / 2) + 5) - (-3 / 2));
+print_r((8 / 2) + 5 - (-3 / 2));
 ```
 
 Al verificar el archivo, el linter encontrará los siguientes errores:
@@ -74,7 +74,7 @@ Vamos a corregir el código: eliminaremos la etiqueta de cierre, las sangrías y
 ```php
 <?php
 
-print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
+print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
 ```
 
 Esta versión ya no infringe las reglas y el linter «guardará silencio». Cuando recién empiezas, estos detalles pueden parecer poco importantes. Pero con el tiempo queda claro que son precisamente ellos los que forman un estilo único y legible.

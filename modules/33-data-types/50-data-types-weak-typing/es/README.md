@@ -18,7 +18,7 @@ Fíjate: el operador `+` en PHP siempre significa aritmética, mientras que para
 <?php
 
 print_r(1 + '7'); // => 8
-print_r(1 .'7'); // => 17
+print_r(1 . '7'); // => 17
 ```
 
 ```text
@@ -33,6 +33,7 @@ Aun así, PHP tiene un límite de lo permitido. Si una cadena no se puede entend
 <?php
 
 print_r(1 + 'seven');
+
 // TypeError: Unsupported operand types: int + string
 ```
 

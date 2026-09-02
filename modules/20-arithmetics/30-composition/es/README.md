@@ -23,7 +23,7 @@ Todo es sencillo mientras se usan los mismos operadores. Pero ¿qué ocurre si c
 ```php
 <?php
 
-print_r(2 + 3 * 4);
+print_r(2 + (3 * 4));
 ```
 
 ```text
@@ -45,7 +45,7 @@ La misma regla funciona para la resta:
 ```php
 <?php
 
-print_r(10 - 2 * 3); // => 4
+print_r(10 - (2 * 3)); // => 4
 ```
 
 Primero se realiza la multiplicación: `10 - 6 = 4`.
@@ -56,9 +56,9 @@ Si en la expresión hay números negativos, el menos unario se aplica después d
 <?php
 
 print_r(-2 ** 2); // => -4, dos elevado a dos, luego se aplica el menos
-print_r(-2 * 5);  // => -10, menos dos multiplicado por cinco
-print_r(4 + -2);  // => 2
-print_r(6 - -2);  // => 8
+print_r(-2 * 5); // => -10, menos dos multiplicado por cinco
+print_r(4 + -2); // => 2
+print_r(6 - -2); // => 8
 ```
 
 En todos los ejemplos, excepto el primero, primero se calcula el menos unario (`-2`) y luego se realizan las demás operaciones.

@@ -43,6 +43,7 @@ print_r($firstName[8]); // => r
 <?php
 
 print_r($firstName[9]);
+
 // Warning: Uninitialized string offset 9
 ```
 

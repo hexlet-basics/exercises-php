@@ -5,7 +5,7 @@ Cuando escribimos programas, necesitamos conectar acciones entre sí. La suma de
 
 $rate = 10;
 $hours = 5;
-$salary = $rate * $hours + 100;
+$salary = ($rate * $hours) + 100;
 print_r($salary); // => 150
 ```
 
@@ -18,7 +18,7 @@ En programación, para esto se usa el concepto de **expresión**. Designa una co
 
 $bonus = 50;
 // Una expresión compuesta de muchas operaciones
-$salary = ($rate * $hours + $bonus) * 12 - 500;
+$salary = ((($rate * $hours) + $bonus) * 12) - 500;
 print_r($salary);
 ```
 
@@ -41,7 +41,7 @@ print_r(10 * 15); // => 150
 $rate = 10;
 $hours = 15;
 $bonus = 50;
-print_r($rate * $hours + $bonus); // => 200
+print_r(($rate * $hours) + $bonus); // => 200
 ```
 
 La función `print_r()` simplemente recibe un valor ya listo y lo muestra en la pantalla. A la función le da igual cómo se obtuvo ese valor. Precisamente por eso las llamadas a funciones combinan perfectamente con cualquier expresión.

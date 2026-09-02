@@ -3,9 +3,9 @@ Las operaciones de comparación funcionan con números y con cadenas. En PHP las
 ```php
 <?php
 
-var_dump('apple' < 'banana');  // => bool(true)
-var_dump('cat' > 'dog');       // => bool(false)
-var_dump('abc' === 'abc');     // => bool(true)
+var_dump('apple' < 'banana'); // => bool(true)
+var_dump('cat' > 'dog'); // => bool(false)
+var_dump('abc' === 'abc'); // => bool(true)
 var_dump('hello' !== 'world'); // => bool(true)
 ```
 
@@ -23,9 +23,9 @@ La comparación distingue entre mayúsculas y minúsculas: el código de `'Z'` (
 ```php
 <?php
 
-var_dump('Zebra' < 'apple');  // => bool(true)  — 'Z'(90) < 'a'(97)
+var_dump('Zebra' < 'apple'); // => bool(true)  — 'Z'(90) < 'a'(97)
 var_dump('apple' < 'Banana'); // => bool(false) — 'a'(97) > 'B'(66)
-var_dump('Apple' < 'apple');  // => bool(true)  — 'A'(65) < 'a'(97)
+var_dump('Apple' < 'apple'); // => bool(true)  — 'A'(65) < 'a'(97)
 ```
 
 Escribamos una función que compruebe si una palabra empieza con una letra dada. Para ello, tomamos el primer carácter de la cadena y lo comparamos con la letra deseada:
@@ -38,7 +38,7 @@ function startsWithLetter(string $word, string $letter): bool
     return $word[0] === $letter;
 }
 
-var_dump(startsWithLetter('apple', 'a'));  // => bool(true)
+var_dump(startsWithLetter('apple', 'a')); // => bool(true)
 var_dump(startsWithLetter('banana', 'a')); // => bool(false)
 ```
 
@@ -48,7 +48,7 @@ Las operaciones de comparación son el mismo tipo de expresiones que las aritmé
 <?php
 
 var_dump(strlen('apple') > 3); // => bool(true), porque strlen('apple') es 5
-var_dump(strlen('hi') > 3);    // => bool(false), porque strlen('hi') es 2
+var_dump(strlen('hi') > 3); // => bool(false), porque strlen('hi') es 2
 ```
 
 En el ejemplo anterior primero se ejecuta la función `strlen('apple')`, cuyo resultado es el número `5`. Luego ese número se compara con `3`. Dicho de otro modo, primero se calculan los argumentos de la expresión (por ejemplo, la longitud de la cadena) y luego se realiza la operación de comparación.
@@ -63,8 +63,8 @@ PHP tiene muchas funciones predicado integradas para trabajar con cadenas. Devue
 <?php
 
 var_dump(str_starts_with('hello', 'he')); // => bool(true) — la cadena empieza con 'he'
-var_dump(str_ends_with('hello', 'lo'));   // => bool(true) — la cadena termina en 'lo'
-var_dump(str_contains('hello', 'ell'));   // => bool(true) — la cadena contiene 'ell'
+var_dump(str_ends_with('hello', 'lo')); // => bool(true) — la cadena termina en 'lo'
+var_dump(str_contains('hello', 'ell')); // => bool(true) — la cadena contiene 'ell'
 ```
 
 Estas funciones permiten comprobar las cadenas según las condiciones necesarias directamente en el código, sin escribir funciones adicionales.

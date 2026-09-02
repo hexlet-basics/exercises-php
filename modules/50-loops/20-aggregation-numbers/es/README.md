@@ -60,6 +60,7 @@ $sum = $sum + 2; // 2
 $sum = $sum + 3; // 5
 $sum = $sum + 4; // 9
 $sum = $sum + 5; // 14
+
 // 14 es el resultado de sumar los números en el rango [2, 5]
 ```
 

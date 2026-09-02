@@ -8,7 +8,7 @@ function repeat($text, $times)
     return str_repeat($text, $times);
 }
 
-repeat('Hi', 3);              // positional call
+repeat('Hi', 3); // positional call
 repeat(text: 'Hi', times: 3); // named call
 ```
 
@@ -53,7 +53,7 @@ You already know that the built-in function `round()` has an optional second par
 ```php
 <?php
 
-round(10.252, 1);                 // 10.3
+round(10.252, 1); // 10.3
 round(num: 10.252, precision: 1); // 10.3 — the same thing, but clearer
 ```
 
@@ -75,7 +75,7 @@ Suppose we want to change only the thousands separator, while leaving the precis
 
 // Without named arguments you have to explicitly repeat
 // the values of all the parameters that come before it
-number_format(1234.567, 0, '.', ' ');              // => 1 235
+number_format(1234.567, 0, '.', ' '); // => 1 235
 
 // With named ones — we specify only the one we need
 number_format(1234.567, thousands_separator: ' '); // => 1 235

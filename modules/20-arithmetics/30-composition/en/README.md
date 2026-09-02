@@ -23,7 +23,7 @@ It's all simple as long as you use the same operators. But what happens if you c
 ```php
 <?php
 
-print_r(2 + 3 * 4);
+print_r(2 + (3 * 4));
 ```
 
 ```text
@@ -45,7 +45,7 @@ The same rule applies to subtraction:
 ```php
 <?php
 
-print_r(10 - 2 * 3); // => 4
+print_r(10 - (2 * 3)); // => 4
 ```
 
 First, the multiplication is performed: `10 - 6 = 4`.
@@ -56,9 +56,9 @@ If an expression contains negative numbers, the unary minus is applied after exp
 <?php
 
 print_r(-2 ** 2); // => -4, two to the power of two, then the minus is applied
-print_r(-2 * 5);  // => -10, minus two multiplied by five
-print_r(4 + -2);  // => 2
-print_r(6 - -2);  // => 8
+print_r(-2 * 5); // => -10, minus two multiplied by five
+print_r(4 + -2); // => 2
+print_r(6 - -2); // => 8
 ```
 
 In all examples except the first one, the unary minus (`-2`) is calculated first, and then the remaining operations are performed.

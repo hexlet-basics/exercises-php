@@ -41,10 +41,10 @@ La regla funciona de la misma manera para el incremento y el decremento. Para si
 $x = 5;
 
 echo ++$x; // => 6
-echo $x;   // => 6
+echo $x; // => 6
 
 echo $x++; // => 6
-echo $x;   // => 7
+echo $x; // => 7
 ```
 
 Discutamos qué sucede paso a paso en el código:

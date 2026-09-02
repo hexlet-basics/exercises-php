@@ -6,7 +6,8 @@ Recordemos cómo funciona la concatenación. Para ello, unimos las cadenas que n
 $firstName = 'Joffrey';
 $greeting = 'Hola';
 
-print_r($greeting.', '.$firstName.'!');
+print_r($greeting . ', ' . $firstName . '!');
+
 // => Hola, Joffrey!
 ```
 
@@ -21,6 +22,7 @@ $firstName = 'Joffrey';
 $greeting = 'Hola';
 
 print_r("{$greeting}, {$firstName}!");
+
 // => Hola, Joffrey!
 ```
 
@@ -42,7 +44,7 @@ Compara estos dos ejemplos uno al lado del otro:
 ```php
 <?php
 
-print_r($greeting.', '.$firstName.'!');
+print_r($greeting . ', ' . $firstName . '!');
 print_r("{$greeting}, {$firstName}!");
 ```
 
@@ -56,6 +58,7 @@ En una sola cadena se pueden hacer tantos bloques con llaves como se desee. Es i
 $firstName = 'Joffrey';
 
 print_r('Hola, {$firstName}!');
+
 // => Hola, {$firstName}!
 ```
 

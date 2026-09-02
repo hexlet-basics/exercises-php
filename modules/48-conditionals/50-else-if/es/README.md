@@ -20,9 +20,9 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Who?')."\n"); // => Sentence is normal
-print_r(getTypeOfSentence('No')."\n");   // => Sentence is normal
-print_r(getTypeOfSentence('No!')."\n");  // => Sentence is exclamation
+print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('No') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('No!') . "\n"); // => Sentence is exclamation
 ```
 
 Agregamos una comprobación de oraciones exclamativas (_exclamation_ se traduce como «exclamación»). Técnicamente esta función funciona, pero trata las oraciones interrogativas de forma incorrecta. Además, tiene problemas desde el punto de vista de la semántica. El signo de exclamación se comprueba en cualquier caso, incluso si ya se encontró un signo de interrogación. La rama `else` está descrita para la segunda condición, pero no para la primera. Por eso una oración interrogativa se vuelve `normal`.
@@ -47,9 +47,9 @@ function getTypeOfSentence(string $sentence): string
     return "Sentence is {$sentenceType}";
 }
 
-print_r(getTypeOfSentence('Who?')."\n"); // => Sentence is question
-print_r(getTypeOfSentence('No')."\n");   // => Sentence is normal
-print_r(getTypeOfSentence('No!')."\n");  // => Sentence is exclamation
+print_r(getTypeOfSentence('Who?') . "\n"); // => Sentence is question
+print_r(getTypeOfSentence('No') . "\n"); // => Sentence is normal
+print_r(getTypeOfSentence('No!') . "\n"); // => Sentence is exclamation
 ```
 
 Ahora todas las condiciones se han alineado en una sola construcción. La palabra clave `elseif` significa «si la condición anterior no se cumple, pero la actual sí».

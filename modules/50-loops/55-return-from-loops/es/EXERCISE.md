@@ -7,6 +7,6 @@ La función debe devolver `true` en cuanto encuentre `@`. Si el bucle llega al f
 <?php
 
 hasAtSymbol('support@example.com'); // true
-hasAtSymbol('wrong-email');         // false
-hasAtSymbol('@admin');              // true
+hasAtSymbol('wrong-email'); // false
+hasAtSymbol('@admin'); // true
 ```

@@ -41,6 +41,7 @@ Unlike many languages, PHP not only suggests types to the editor but also checks
 <?php
 
 add('abc', 3);
+
 // TypeError: add(): Argument #1 ($a) must be of type int, string given
 ```
 
@@ -71,6 +72,7 @@ function describe(string $name, int $age, float $height): string
 }
 
 print_r(describe('Anna', 25, 1.70));
+
 // => Anna, 25 years old, height 1.7
 ```
 
@@ -85,6 +87,7 @@ function printGreeting(string $name): void
 }
 
 printGreeting('Anna');
+
 // => Hello, Anna!
 ```
 
@@ -100,7 +103,7 @@ function greet(string $name, string $greeting = 'Hello'): string
     return "{$greeting}, {$name}";
 }
 
-print_r(greet('Anna'));         // => Hello, Anna
+print_r(greet('Anna')); // => Hello, Anna
 print_r(greet('Kirill', 'Hi')); // => Hi, Kirill
 ```
 

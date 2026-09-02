@@ -3,8 +3,8 @@ Alongside the logical operators **AND** and **OR**, the "**negation**" operation
 ```php
 <?php
 
-! true;  // false
-! false; // true
+!true; // false
+!false; // true
 ```
 
 For example, if there's a function that checks whether a number is even, then with negation you can perform a check for oddness:
@@ -14,11 +14,11 @@ For example, if there's a function that checks whether a number is even, then wi
 
 function isEven(int $number): bool
 {
-    return $number % 2 === 0;
+    return ($number % 2) === 0;
 }
 
-var_dump(isEven(10));  // => bool(true)
-var_dump(! isEven(10)); // => bool(false)
+var_dump(isEven(10)); // => bool(true)
+var_dump(!isEven(10)); // => bool(false)
 ```
 
 In the example above, we added `!` to the left of the function call and got the opposite action.
@@ -36,7 +36,7 @@ In logic, double negation is equivalent to no negation:
 ```php
 <?php
 
-(bool) true;  // true
+(bool) true; // true
 (bool) false; // false
 
 var_dump((bool) isEven(10)); // => bool(true)
@@ -48,8 +48,8 @@ var_dump((bool) isEven(11)); // => bool(false)
 ```php
 <?php
 
-! true || true;  // (!true) || true   => false || true  => true
-! true && false; // (!true) && false  => false && false => false
+!true || true; // (!true) || true   => false || true  => true
+!true && false; // (!true) && false  => false && false => false
 ```
 
 Parentheses change the order of evaluation:
@@ -57,8 +57,8 @@ Parentheses change the order of evaluation:
 ```php
 <?php
 
-! (true || true);  // !true  => false
-! (true && false); // !false => true
+!(true || true); // !true  => false
+!(true && false); // !false => true
 ```
 
 A practical example — a function checks whether a driver can get behind the wheel: a license and sobriety are required:
@@ -68,11 +68,11 @@ A practical example — a function checks whether a driver can get behind the wh
 
 function canDrive(bool $hasLicense, bool $isDrunk): bool
 {
-    return $hasLicense && ! $isDrunk;
+    return $hasLicense && !$isDrunk;
 }
 
-var_dump(canDrive(true, false));  // => bool(true)  (has a license, sober)
-var_dump(canDrive(true, true));   // => bool(false) (has a license, but drunk)
+var_dump(canDrive(true, false)); // => bool(true)  (has a license, sober)
+var_dump(canDrive(true, true)); // => bool(false) (has a license, but drunk)
 var_dump(canDrive(false, false)); // => bool(false) (no license)
 ```
 
@@ -92,8 +92,8 @@ The first law: the negation of a conjunction equals the disjunction of the negat
 ```php
 <?php
 
-! (true && false); // !false => true
-! true || ! false;  // false || true => true
+!(true && false); // !false => true
+!true || !false; // false || true => true
 ```
 
 The second law: the negation of a disjunction equals the conjunction of the negations:
@@ -101,8 +101,8 @@ The second law: the negation of a disjunction equals the conjunction of the nega
 ```php
 <?php
 
-! (true || false); // !true => false
-! true && ! false;  // false && true => false
+!(true || false); // !true => false
+!true && !false; // false && true => false
 ```
 
 In practice, De Morgan's laws help simplify conditions. For example, instead of `!($isAdmin || $isModerator)` you can write `!$isAdmin && !$isModerator` — it reads as "not an administrator and not a moderator".

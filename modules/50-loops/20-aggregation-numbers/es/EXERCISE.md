@@ -7,7 +7,7 @@ Recorre el consumo con un bucle y acumula gradualmente el importe total.
 ```php
 <?php
 
-calculateElectricityBill(80);  // 400
+calculateElectricityBill(80); // 400
 calculateElectricityBill(150); // 850
 calculateElectricityBill(250); // 1700
 ```

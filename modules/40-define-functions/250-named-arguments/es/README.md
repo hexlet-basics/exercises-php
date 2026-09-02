@@ -8,7 +8,7 @@ function repeat($text, $times)
     return str_repeat($text, $times);
 }
 
-repeat('Hi', 3);              // llamada posicional
+repeat('Hi', 3); // llamada posicional
 repeat(text: 'Hi', times: 3); // llamada con nombre
 ```
 
@@ -53,7 +53,7 @@ Ya sabes que la función incorporada `round()` tiene el segundo parámetro opcio
 ```php
 <?php
 
-round(10.252, 1);                 // 10.3
+round(10.252, 1); // 10.3
 round(num: 10.252, precision: 1); // 10.3 — lo mismo, pero más claro
 ```
 
@@ -75,7 +75,7 @@ Supongamos que queremos cambiar solo el separador de miles, dejando la precisió
 
 // Sin argumentos con nombre hay que repetir explícitamente
 // los valores de todos los parámetros que van antes
-number_format(1234.567, 0, '.', ' ');              // => 1 235
+number_format(1234.567, 0, '.', ' '); // => 1 235
 
 // Con argumentos con nombre — indicamos solo el que necesitamos
 number_format(1234.567, thousands_separator: ' '); // => 1 235

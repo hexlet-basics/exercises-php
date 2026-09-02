@@ -88,13 +88,14 @@ function printNumbers(int $n): void
 {
     $i = 1;
     while ($i <= $n) {
-        print_r($i."\n");
+        print_r($i . "\n");
         $i = $i + 1;
     }
     print_r("Finished!\n");
 }
 
 printNumbers(3);
+
 // => 1
 // => 2
 // => 3

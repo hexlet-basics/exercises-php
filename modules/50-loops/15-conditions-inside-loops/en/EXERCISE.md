@@ -4,6 +4,6 @@ Implement the function `countHashtags()`, which takes the text of a post and cou
 <?php
 
 countHashtags('New post #php #code'); // 2
-countHashtags('No tags here');        // 0
-countHashtags('#start and #finish');  // 2
+countHashtags('No tags here'); // 0
+countHashtags('#start and #finish'); // 2
 ```

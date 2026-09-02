@@ -57,7 +57,7 @@ Functions are not required to just return a parameter. Usually, `return` is give
 
 function fullName($first, $last)
 {
-    return ucfirst($first).' '.ucfirst($last);
+    return ucfirst($first) . ' ' . ucfirst($last);
 }
 ```
 

@@ -45,8 +45,8 @@ PHP's standard library is arranged more simply than in many other languages: bui
 <?php
 
 print_r(floor(7.9)); // => 7
-print_r(ceil(7.1));  // => 8
-print_r(ceil(7.0));  // => 7
+print_r(ceil(7.1)); // => 8
+print_r(ceil(7.0)); // => 7
 ```
 
 The difference is noticeable when the number is not an integer. `floor(7.9)` gives 7, not 8, because 7 is the nearest integer below.
@@ -83,7 +83,7 @@ function floor(float $number): string
     return 'custom floor';
 }
 
-print_r(floor(3.7));  // => custom floor
+print_r(floor(3.7)); // => custom floor
 print_r(\floor(3.7)); // => 3
 ```
 

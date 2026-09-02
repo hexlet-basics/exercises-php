@@ -73,7 +73,7 @@ In code, it's important to distinguish where we use a variable and where we writ
 <?php
 
 $greeting = 'Mother!';
-print_r($greeting);  // => Mother!
+print_r($greeting); // => Mother!
 print_r('greeting'); // => greeting
 ```
 

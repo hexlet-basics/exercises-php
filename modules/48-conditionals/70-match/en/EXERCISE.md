@@ -15,9 +15,9 @@ Function call examples:
 <?php
 
 calculateDeliveryCost('canada', 0.5); // 600
-calculateDeliveryCost('canada', 2);   // 900
-calculateDeliveryCost('usa', 1);      // 800
-calculateDeliveryCost('france', 1);   // null
+calculateDeliveryCost('canada', 2); // 900
+calculateDeliveryCost('usa', 1); // 800
+calculateDeliveryCost('france', 1); // null
 ```
 
 Hint: any expression can appear to the right of the `=>` arrow, including the ternary operator.

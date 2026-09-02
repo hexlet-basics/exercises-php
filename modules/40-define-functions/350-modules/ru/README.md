@@ -45,8 +45,8 @@ sayHi(); // => Hi!
 <?php
 
 print_r(floor(7.9)); // => 7
-print_r(ceil(7.1));  // => 8
-print_r(ceil(7.0));  // => 7
+print_r(ceil(7.1)); // => 8
+print_r(ceil(7.0)); // => 7
 ```
 
 Разница заметна, когда число не целое. `floor(7.9)` дает 7, а не 8, потому что 7 — ближайшее целое снизу.
@@ -83,7 +83,7 @@ function floor(float $number): string
     return 'custom floor';
 }
 
-print_r(floor(3.7));  // => custom floor
+print_r(floor(3.7)); // => custom floor
 print_r(\floor(3.7)); // => 3
 ```
 

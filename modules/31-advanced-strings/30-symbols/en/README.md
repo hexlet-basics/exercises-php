@@ -43,6 +43,7 @@ And if you go beyond the bounds of the string, PHP will report a problem:
 <?php
 
 print_r($firstName[9]);
+
 // Warning: Uninitialized string offset 9
 ```
 

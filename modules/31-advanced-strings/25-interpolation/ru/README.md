@@ -6,7 +6,8 @@
 $firstName = 'Joffrey';
 $greeting = 'Hello';
 
-print_r($greeting.', '.$firstName.'!');
+print_r($greeting . ', ' . $firstName . '!');
+
 // => Hello, Joffrey!
 ```
 
@@ -21,6 +22,7 @@ $firstName = 'Joffrey';
 $greeting = 'Hello';
 
 print_r("{$greeting}, {$firstName}!");
+
 // => Hello, Joffrey!
 ```
 
@@ -42,7 +44,7 @@ $greeting  = 'Hello'
 ```php
 <?php
 
-print_r($greeting.', '.$firstName.'!');
+print_r($greeting . ', ' . $firstName . '!');
 print_r("{$greeting}, {$firstName}!");
 ```
 
@@ -56,6 +58,7 @@ print_r("{$greeting}, {$firstName}!");
 $firstName = 'Joffrey';
 
 print_r('Hello, {$firstName}!');
+
 // => Hello, {$firstName}!
 ```
 

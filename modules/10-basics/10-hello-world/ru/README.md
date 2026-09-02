@@ -48,6 +48,7 @@ print_r("it's PHP"); // апостроф внутри, поэтому двойн
 <?php
 
 echo 'Hello, World!';
+
 // => Hello, World!
 ```
 

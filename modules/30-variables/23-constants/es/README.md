@@ -12,6 +12,7 @@ Tales valores se llaman constantes y es habitual distinguirlas de las variables 
 <?php
 
 const PI = 3.14;
+
 print_r(PI); // => 3.14
 ```
 
@@ -25,6 +26,7 @@ El concepto de constantes es común en la mayoría de los lenguajes de programac
 <?php
 
 const PI = 3.14;
+
 const PI = 3.14159; // Error: una constante no se puede definir de nuevo
 ```
 
@@ -40,7 +42,9 @@ Al mismo tiempo, una constante, igual que una variable, puede usarse en cualquie
 <?php
 
 const PI = 3.14;
+
 const MAX_USERS = 100;
+
 const DEFAULT_TIMEOUT = 30;
 ```
 

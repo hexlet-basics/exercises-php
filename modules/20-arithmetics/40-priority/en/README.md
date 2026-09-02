@@ -3,7 +3,7 @@ Consider a simple expression:
 ```php
 <?php
 
-print_r(2 + 2 * 2); // => 6
+print_r(2 + (2 * 2)); // => 6
 ```
 
 The result is 6, not 8. This is explained by the concept of operator precedence in math and programming. It defines the order in which operations are performed:
@@ -26,7 +26,7 @@ For example:
 ```php
 <?php
 
-print_r(2 * 2 ** 3); // => 16, because first 2 ** 3 = 8, then 8 * 2 = 16
+print_r(2 * (2 ** 3)); // => 16, because first 2 ** 3 = 8, then 8 * 2 = 16
 ```
 
 If operations with the same precedence are next to each other, they are performed from left to right:
@@ -34,7 +34,7 @@ If operations with the same precedence are next to each other, they are performe
 ```php
 <?php
 
-print_r(8 / 2 * 3); // => 12, because first 8 / 2 = 4, then 4 * 3 = 12
+print_r((8 / 2) * 3); // => 12, because first 8 / 2 = 4, then 4 * 3 = 12
 ```
 
 ## Controlling the order of operations
@@ -52,8 +52,8 @@ Parentheses can be placed around any part of an expression and nested into each 
 ```php
 <?php
 
-print_r(3 ** (4 - 2));                   // => 9
-print_r(7 * 3 + (4 / 2) - (8 + (2 - 1))); // => 14
+print_r(3 ** (4 - 2)); // => 9
+print_r((7 * 3) + (4 / 2) - (8 + (2 - 1))); // => 14
 ```
 
 The main rule: always close your parentheses. Unmatched parentheses cause errors: both beginners and experienced programmers sometimes forget about the closing parenthesis.
@@ -68,10 +68,10 @@ Sometimes an expression works correctly but looks confusing. In such cases, pare
 <?php
 
 // Before
-print_r(8 / 2 + 5 - -3 / 2);       // => 10.5
+print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
 
 // After
-print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
+print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
 ```
 
 Programs are written by people, and they are read by people too. The computer doesn't care how clearly the code is written: it just needs to be syntactically correct. For a human, clear and tidy code is the key to convenience, especially when working in a team or debugging errors.
