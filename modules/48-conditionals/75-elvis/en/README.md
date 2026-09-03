@@ -47,7 +47,6 @@ function generateGreeting(string $name, string $nickname): string
 }
 ```
 
-The `?:` operator is a binary operator that returns the first operand if it's true, and the second otherwise. It's also called Elvis, because this word
-sounds like _else if_. And also because of its visual resemblance to Elvis Presley:
+The `?:` operator is a binary operator that returns the first operand if it's true, and the second otherwise. It's also called Elvis, because this word sounds like _else if_. And also because of its visual resemblance to Elvis Presley:
 
 ![Elvis operator](../assets/elvis.png)

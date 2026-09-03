@@ -6,8 +6,7 @@ A single style means code that is equally understandable to all team members, re
 
 In PHP, the most common standards are the **PSR** standards — PHP Standards Recommendations from [PHP-FIG](https://www.php-fig.org/psr/). This is a set of rules that facilitate development and solve a particular problem.
 
-Currently there are several approved recommendations, each labeled with a number: PSR-1, PSR-2, PSR-3 and [others](https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). You'll become familiar with all the recommendations as you learn and work.
-In this lesson, we'll take a closer look at the following:
+Currently there are several approved recommendations, each labeled with a number: PSR-1, PSR-2, PSR-3 and [others](https://en.wikipedia.org/wiki/PHP_Standard_Recommendation). You'll become familiar with all the recommendations as you learn and work. In this lesson, we'll take a closer look at the following:
 
 - PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — the basic standard for writing code. This is a set of rules that define how program code should be formatted: how to write PHP tags, and what rules to use for naming classes, methods and class constants. It also touches on encoding, autoloading, namespaces, and sharing responsibility between files
 - PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — the extended coding style standard that replaces and supplements the obsolete PSR-2. This standard requires compliance with PSR-1 rules. It also adds many new requirements: for indentation, files, strings, keywords, classes, control structures, scope and other elements

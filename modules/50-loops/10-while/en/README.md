@@ -34,11 +34,9 @@ Without changing the counter, the condition will never become false, and the loo
 
 Before the first repetition, `$counter` equals `0`.
 
-**Step 1.** The interpreter checks `$counter < 5`. The value `0` is less than `5`, so the loop body runs.
-`Hello!` is printed to the screen, and `$counter` increases to `1`.
+**Step 1.** The interpreter checks `$counter < 5`. The value `0` is less than `5`, so the loop body runs. `Hello!` is printed to the screen, and `$counter` increases to `1`.
 
-**Step 2.** The interpreter checks the condition again. The value `1` is still less than `5`, so the loop body runs once more.
-`Hello!` is printed to the screen again, and `$counter` increases to `2`.
+**Step 2.** The interpreter checks the condition again. The value `1` is still less than `5`, so the loop body runs once more. `Hello!` is printed to the screen again, and `$counter` increases to `2`.
 
 This continues until `$counter` becomes equal to `5`. On the next check, the condition `$counter < 5` will be false, so the loop will finish. Then the program runs the code after the loop.
 

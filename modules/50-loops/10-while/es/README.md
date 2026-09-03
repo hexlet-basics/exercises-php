@@ -34,11 +34,9 @@ Sin cambiar el contador, la condición nunca se volverá falsa y el ciclo se con
 
 Antes de la primera repetición, `$counter` es igual a `0`.
 
-**Paso 1.** El intérprete comprueba `$counter < 5`. El valor `0` es menor que `5`, por lo que se ejecuta el cuerpo del ciclo.
-En la pantalla se imprime `Hello!`, y `$counter` aumenta a `1`.
+**Paso 1.** El intérprete comprueba `$counter < 5`. El valor `0` es menor que `5`, por lo que se ejecuta el cuerpo del ciclo. En la pantalla se imprime `Hello!`, y `$counter` aumenta a `1`.
 
-**Paso 2.** El intérprete comprueba la condición de nuevo. El valor `1` sigue siendo menor que `5`, por lo que el cuerpo del ciclo se ejecuta una vez más.
-En la pantalla se imprime de nuevo `Hello!`, y `$counter` aumenta a `2`.
+**Paso 2.** El intérprete comprueba la condición de nuevo. El valor `1` sigue siendo menor que `5`, por lo que el cuerpo del ciclo se ejecuta una vez más. En la pantalla se imprime de nuevo `Hello!`, y `$counter` aumenta a `2`.
 
 Esto continúa hasta que `$counter` se vuelve igual a `5`. En la siguiente comprobación, la condición `$counter < 5` será falsa, por lo que el ciclo finalizará. Después, el programa ejecutará el código posterior al ciclo.
 

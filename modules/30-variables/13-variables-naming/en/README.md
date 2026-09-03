@@ -31,8 +31,7 @@ $unpaidOrdersCount = 3;
 $maxAttempts = 5;
 ```
 
-A good variable name helps you understand what the program does without reading into every single line.
-It's especially important to give names whose meaning is clear without context, without the need to read all the code around them.
+A good variable name helps you understand what the program does without reading into every single line. It's especially important to give names whose meaning is clear without context, without the need to read all the code around them.
 
 Here are a few tips:
 

@@ -6,8 +6,7 @@ Un estilo único significa código igualmente comprensible para todos los miembr
 
 En PHP, los estándares más comunes son los **PSR** — PHP Standards Recommendations o Recomendaciones de Estándares PHP de [PHP-FIG](https://www.php-fig.org/psr/). Son un conjunto de reglas que facilitan el desarrollo y resuelven un problema específico.
 
-Actualmente existen varias recomendaciones aprobadas, cada una de ellas identificada con un número: PSR-1, PSR-2, PSR-3 y [otros](https://es.wikipedia.org/wiki/PHP_Standard_Recommendation). Conocerás todas las recomendaciones durante el aprendizaje y el trabajo.
-En esta lección vamos a analizar en detalle las siguientes:
+Actualmente existen varias recomendaciones aprobadas, cada una de ellas identificada con un número: PSR-1, PSR-2, PSR-3 y [otros](https://es.wikipedia.org/wiki/PHP_Standard_Recommendation). Conocerás todas las recomendaciones durante el aprendizaje y el trabajo. En esta lección vamos a analizar en detalle las siguientes:
 
 - PSR-1. [Basic Coding Standard](https://www.php-fig.org/psr/psr-1/) — estándar básico de escritura de código. Es un conjunto de reglas que definen cómo se debe formatear el código del programa: cómo escribir etiquetas PHP, qué reglas usar para nombrar clases, métodos y constantes de clases. También aborda cuestiones de codificación, autoloading, namespaces y separación de responsabilidades entre archivos
 - PSR-12. [Extended Coding Style](https://www.php-fig.org/psr/psr-12/) — estándar de estilo de codificación extendido, reemplaza y amplía el obsoleto PSR-2. Este estándar requiere el cumplimiento de las reglas de PSR-1. También agrega muchas nuevas reglas: sangrías, archivos, líneas, palabras clave, clases, estructuras de control, ámbito de visibilidad y otros elementos
