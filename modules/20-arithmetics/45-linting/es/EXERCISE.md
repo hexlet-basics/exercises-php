@@ -1,9 +1,11 @@
 Recibiste código de un colega — funciona correctamente, pero infringe el estándar de formato PSR-12. Corrige los espacios alrededor de los operadores sin cambiar la lógica:
 
-```php
+<!-- lint-code-blocks: skip — неаккуратный код это предмет урока, форматтер привёл бы его к стилю -->
+
+```text
 <?php
 
-print_r(5 ** 2 - (3 * 7));
+print_r(    (5  **2)-(3*  7));
 ```
 
 El resultado debe seguir siendo `4`.

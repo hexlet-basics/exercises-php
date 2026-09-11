@@ -27,10 +27,12 @@ In the PHP world, two tools are widely used: [PHP_CodeSniffer](https://github.co
 
 Let's look at an example:
 
-```php
+<!-- lint-code-blocks: skip — неаккуратный код это предмет урока, форматтер привёл бы его к стилю -->
+
+```text
 <?php
 
-print_r(1 + 3);
+print_r(1+ 3);
 ```
 
 Such code looks sloppy, and the linter will rightly point out the error. Here's what the checking process looks like:
@@ -55,11 +57,15 @@ print_r(1 + 3);
 
 Each linter message is associated with a specific rule. Suppose we have a file with the following PHP code:
 
-```php
+<!-- lint-code-blocks: skip — неаккуратный код это предмет урока, форматтер привёл бы его к стилю -->
+
+```text
 <?php
 
 // On the next line, the indentation is one tab
-print_r((8 / 2) + 5 - (-3 / 2));
+	print_r (((8 / 2) + 5) - (-3 / 2));
+
+?>
 ```
 
 When checking the file, the linter will find the following errors:

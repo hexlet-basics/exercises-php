@@ -26,10 +26,12 @@ print_r('Hexlet - escuela de programación');
 
 El comando sigue siendo el mismo, solo cambia el contenido de los paréntesis. Para que el programa entienda que se trata de texto, este se encierra entre comillas. Puedes usar comillas simples `'...'` o dobles `"..."`, pero las comillas de apertura y de cierre deben coincidir.
 
-```php
+<!-- lint-code-blocks: skip — две формы записи кавычек это предмет урока, форматтер свёл бы их к одной -->
+
+```text
 <?php
 
-print_r('Hexlet - escuela de programación');
+print_r("Hexlet - escuela de programación");
 ```
 
 En PHP se acostumbra a usar comillas simples para las cadenas. Si dentro de la cadena hay un apóstrofo, las comillas simples romperán la sintaxis, por lo que en esos casos se usan comillas dobles.

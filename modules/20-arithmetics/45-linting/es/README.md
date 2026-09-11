@@ -27,10 +27,12 @@ En el mundo de PHP se utilizan ampliamente dos herramientas: [PHP_CodeSniffer](h
 
 Veamos un ejemplo:
 
-```php
+<!-- lint-code-blocks: skip — неаккуратный код это предмет урока, форматтер привёл бы его к стилю -->
+
+```text
 <?php
 
-print_r(1 + 3);
+print_r(1+ 3);
 ```
 
 Este código se ve descuidado, y el linter señalará con razón el error. Así es como se ve el proceso de verificación:
@@ -55,11 +57,15 @@ print_r(1 + 3);
 
 Cada mensaje del linter está relacionado con una regla concreta. Supongamos que tenemos un archivo con el siguiente código PHP:
 
-```php
+<!-- lint-code-blocks: skip — неаккуратный код это предмет урока, форматтер привёл бы его к стилю -->
+
+```text
 <?php
 
 // La siguiente línea tiene una sangría de una tabulación
-print_r((8 / 2) + 5 - (-3 / 2));
+	print_r (((8 / 2) + 5) - (-3 / 2));
+
+?>
 ```
 
 Al verificar el archivo, el linter encontrará los siguientes errores:
