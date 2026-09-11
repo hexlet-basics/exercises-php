@@ -148,12 +148,14 @@ From PHP's point of view, there's no difference between `3+4` and `3 + 4`. The i
 
 The variant without spaces also works:
 
-```php
+<!-- lint-code-blocks: skip — неаккуратный код это предмет урока, форматтер привёл бы его к стилю -->
+
+```text
 <?php
 
-3 + 4;
-8 / 2;
-7 % 3;
+3+4;
+8/2;
+7%3;
 ```
 
 But such code looks less tidy and is harder to perceive quickly. So it's better to get used to writing with spaces around operators right away.
