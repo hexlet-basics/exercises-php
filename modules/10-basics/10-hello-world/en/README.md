@@ -26,10 +26,12 @@ print_r('Hexlet - programming school');
 
 The command stays the same, only the content of the parentheses changes. So that the program understands that this is text, it is enclosed in quotes. You can use single `'...'` or double `"..."` quotes, but the opening and closing quotes must match.
 
-```php
+<!-- lint-code-blocks: skip — две формы записи кавычек это предмет урока, форматтер свёл бы их к одной -->
+
+```text
 <?php
 
-print_r('Hexlet - programming school');
+print_r("Hexlet - programming school");
 ```
 
 In PHP, it is customary to use single quotes for strings. If there is an apostrophe inside the string, single quotes will break the syntax, so in such cases double quotes are used.
