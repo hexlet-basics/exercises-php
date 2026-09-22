@@ -103,7 +103,7 @@ La razón de separar esto en un tipo aparte: la computadora necesita almacenar l
 
 A nivel básico basta con recordar: los números enteros se necesitan cuando no hay fracciones, y los números de punto flotante se necesitan cuando hay fracciones. Los analizaremos con más detalle más adelante en el curso.
 
-## Qué es el resto de la división (`%`)
+## Qué es el resto de la división (%)
 
 Esta operación se llama **tomar el resto de la división**. Muestra **lo que «queda»** cuando un número se divide entre otro _de forma incompleta_. Ejemplo:
 

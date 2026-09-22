@@ -103,7 +103,7 @@ The reason for separating this into a distinct type: the computer needs to store
 
 At a basic level, it's enough to remember: integers are needed when there are no fractions, and floating-point numbers are needed when there are fractions. We'll explore them in more detail later in the course.
 
-## What is the remainder (`%`)
+## What is the remainder (%)
 
 This operation is called **taking the remainder of division**. It shows **what "remains"** when one number is divided by another _not completely_. Example:
 

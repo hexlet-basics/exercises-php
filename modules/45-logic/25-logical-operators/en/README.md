@@ -91,7 +91,7 @@ var_dump(isGoodApartment(80, 'Main Street')); // => bool(true)
 
 The area of mathematics that studies logical operators is called Boolean algebra. **Truth tables** show what the result will be when each operator is applied.
 
-#### AND `&&`
+#### AND &&
 
 | A     | B     | A `&&` B |
 | ----- | ----- | -------- |
@@ -100,7 +100,7 @@ The area of mathematics that studies logical operators is called Boolean algebra
 | false | true  | false    |
 | false | false | false    |
 
-#### OR `||`
+#### OR ||
 
 | A     | B     | A `‖` B  |
 | ----- | ----- | -------- |

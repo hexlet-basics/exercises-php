@@ -30,7 +30,7 @@ El resultado será así:
 - Aaaarrrgh!
 ```
 
-## ¿Qué es `\n`?
+## ¿Qué es \n?
 
 `\n` es una secuencia de escape (en inglés escape sequence, a veces se dice "secuencia escapada"). Denota un salto de línea, pero no se muestra directamente. No verás `\n` en la salida del programa, ya que solo influye en la disposición del texto.
 
@@ -58,7 +58,7 @@ print_r('Hello\nWorld');
 // => Hello\nWorld
 ```
 
-## Ejemplos de uso de `\n`
+## Ejemplos de uso de \n
 
 Así es como PHP procesa la secuencia de escape `\n`:
 
@@ -113,7 +113,7 @@ First line
 Second line
 ```
 
-## Cómo imprimir el propio carácter `\n`
+## Cómo imprimir el propio carácter \n
 
 `\n` en PHP es una secuencia de escape. Controla la disposición del texto y no se muestra en la pantalla como caracteres ordinarios. Si necesitas mostrar precisamente los caracteres `\` y `n`, y no un salto de línea, hay que escaparlos. Para esto, se añade otra barra antes de la barra invertida:
 
