@@ -113,7 +113,7 @@ print_r(formatName('  hexlet  ')); // => HEXLET
 
 Código como este se encuentra en los programas reales constantemente. Por ejemplo, cuando un usuario se registra en un sitio, puede ingresar un correo con espacios de más o letras en distintos casos: `SuppORT@hexlet.IO`. Antes de escribir tal correo en la base de datos, se prepara exactamente de la misma manera: se recortan los caracteres de espacio y se convierte a minúsculas.
 
-## Código después de `return`
+## Código después de return
 
 Cuando PHP llega a la instrucción `return`, la ejecución de la función se detiene. Todo lo que está escrito después de ella dentro de la función **no se ejecutará**:
 

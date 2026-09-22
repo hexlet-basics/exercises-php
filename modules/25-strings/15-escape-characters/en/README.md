@@ -30,7 +30,7 @@ The result will be:
 - Aaaarrrgh!
 ```
 
-## What is `\n`?
+## What is \n?
 
 `\n` is an escape sequence (sometimes called an "escaped sequence"). It denotes a line break, but isn't displayed directly. You won't see `\n` in the program's output, since it only affects the placement of the text.
 
@@ -58,7 +58,7 @@ print_r('Hello\nWorld');
 // => Hello\nWorld
 ```
 
-## Examples of using `\n`
+## Examples of using \n
 
 Here's how PHP handles the escape sequence `\n`:
 
@@ -113,7 +113,7 @@ First line
 Second line
 ```
 
-## How to print the `\n` character itself
+## How to print the \n character itself
 
 `\n` in PHP is an escape sequence. It controls the placement of text and isn't displayed on the screen as ordinary characters. If you need to print exactly the characters `\` and `n`, rather than a line break, they need to be escaped. To do this, you add another slash before the backslash:
 

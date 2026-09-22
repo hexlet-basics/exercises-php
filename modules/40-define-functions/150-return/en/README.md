@@ -113,7 +113,7 @@ print_r(formatName('  hexlet  ')); // => HEXLET
 
 Code like this is encountered in real programs all the time. For example, when a user registers on a site, they may enter an email with extra spaces or letters in different cases: `SuppORT@hexlet.IO`. Before writing such an email to the database, it is prepared in exactly the same way: whitespace characters are trimmed and it is converted to lowercase.
 
-## Code After `return`
+## Code After return
 
 When PHP reaches the `return` statement, the function's execution stops. Everything written after it inside the function **will not be executed**:
 
