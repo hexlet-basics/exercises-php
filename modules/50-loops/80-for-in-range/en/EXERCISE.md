@@ -7,7 +7,7 @@ The rules:
 - if a number is divisible by 5 — with the word `Buzz`,
 - if it is divisible by both 3 and 5 — with the word `FizzBuzz`.
 
-All elements must be joined with a space.
+All elements must be joined with a space. If `$n` is zero or negative, return an empty string.
 
 This task often comes up in programming interviews, so it is useful to know how to solve it.
 
@@ -19,11 +19,14 @@ Function call example:
 fizzbuzz(15);
 
 // '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz'
+fizzbuzz(0);  // ''
+fizzbuzz(-1); // ''
 ```
 
 ### Algorithm
 
-1. Declare the neutral element of aggregation (an empty string)
-2. Use a loop with the numbers from 1 to `$n`
-3. Check each number against the division conditions
-4. Add the result of each iteration to the final result using a space
+1. If `$n` is zero or negative, return an empty string
+2. Declare the neutral element of aggregation (an empty string)
+3. Use a loop with the numbers from 1 to `$n`
+4. Check each number against the division conditions
+5. Add the result of each iteration to the final result using a space

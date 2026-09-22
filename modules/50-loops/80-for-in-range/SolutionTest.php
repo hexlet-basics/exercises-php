@@ -8,6 +8,9 @@ class SolutionTest extends TestCase
 {
     public function test()
     {
+        $this->assertSame('', fizzbuzz(0));
+        $this->assertSame('', fizzbuzz(-1));
+        $this->assertSame('', fizzbuzz(-10));
         $this->assertEquals('1', fizzbuzz(1));
         $this->assertEquals('1 2 Fizz', fizzbuzz(3));
         $this->assertEquals('1 2 Fizz 4 Buzz', fizzbuzz(5));

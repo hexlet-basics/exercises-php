@@ -5,6 +5,10 @@ namespace HexletBasics\Loops\ForInRange;
 // BEGIN
 function fizzbuzz(int $n): string
 {
+    if ($n <= 0) {
+        return '';
+    }
+
     $result = '';
 
     foreach (range(1, $n) as $i) {
