@@ -1,7 +1,7 @@
 <?php
 
 // BEGIN
-$myBrothersCount = 2;
+$maxLoginAttempts = 2;
 
-print_r($myBrothersCount);
+print_r($maxLoginAttempts);
 // END
