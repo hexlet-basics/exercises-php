@@ -6,5 +6,6 @@
 <?php
 
 isPensioner(75); // true
+isPensioner(60); // true
 isPensioner(18); // false
 ```
