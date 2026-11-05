@@ -43,7 +43,7 @@ La conmutatividad en programación funciona exactamente igual que en aritmética
 Otras operaciones no conmutativas:
 
 - División: _8 / 2 ≠ 2 / 8_
-- Potenciación: _2 **3 ≠ 3** 2_
+- Potenciación: `2 ** 3 ≠ 3 ** 2`
 
 Ejemplos en código:
 

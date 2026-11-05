@@ -64,14 +64,16 @@ The main rule: always close your parentheses. Unmatched parentheses cause errors
 
 Sometimes an expression works correctly but looks confusing. In such cases, parentheses can be added simply for clarity: they won't change the result, but they will improve readability.
 
-```php
+<!-- lint-code-blocks: skip — расстановка скобок это предмет примера, форматтер свёл бы два варианта к одному виду -->
+
+```text
 <?php
 
 // Before
-print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
+print_r(8 / 2 + 5 - -3 / 2); // => 10.5
 
 // After
-print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
+print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
 ```
 
 Programs are written by people, and they are read by people too. The computer doesn't care how clearly the code is written: it just needs to be syntactically correct. For a human, clear and tidy code is the key to convenience, especially when working in a team or debugging errors.

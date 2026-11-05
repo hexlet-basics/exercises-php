@@ -55,11 +55,13 @@ To avoid confusion, in this course we will use the following wording.
 
 In PHP, strings can be written in both single and double quotes:
 
-```php
+<!-- lint-code-blocks: skip — две формы записи кавычек это предмет урока, форматтер свёл бы их к одной -->
+
+```text
 <?php
 
 print_r('Hello');
-print_r('Hello');
+print_r("Hello");
 ```
 
 By default, it is customary to use single quotes `'`, unless you need the capabilities of double quotes inside the string. Many PHP code style standards follow this convention.

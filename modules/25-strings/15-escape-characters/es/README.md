@@ -117,10 +117,12 @@ Second line
 
 `\n` en PHP es una secuencia de escape. Controla la disposición del texto y no se muestra en la pantalla como caracteres ordinarios. Si necesitas mostrar precisamente los caracteres `\` y `n`, y no un salto de línea, hay que escaparlos. Para esto, se añade otra barra antes de la barra invertida:
 
-```php
+<!-- lint-code-blocks: skip — двойные кавычки это предмет примера, форматтер заменил бы их на одинарные -->
+
+```text
 <?php
 
-print_r('Hello\\nWorld');
+print_r("Hello\\nWorld");
 // => Hello\nWorld
 
 // Si olvidas indicar la segunda barra

@@ -117,10 +117,12 @@ Second line
 
 `\n` in PHP is an escape sequence. It controls the placement of text and isn't displayed on the screen as ordinary characters. If you need to print exactly the characters `\` and `n`, rather than a line break, they need to be escaped. To do this, you add another slash before the backslash:
 
-```php
+<!-- lint-code-blocks: skip — двойные кавычки это предмет примера, форматтер заменил бы их на одинарные -->
+
+```text
 <?php
 
-print_r('Hello\\nWorld');
+print_r("Hello\\nWorld");
 // => Hello\nWorld
 
 // If you forget to add the second slash

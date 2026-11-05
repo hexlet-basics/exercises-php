@@ -64,14 +64,16 @@ La regla principal: cierra siempre los paréntesis. Los paréntesis sin pareja p
 
 A veces una expresión funciona correctamente pero parece confusa. En esos casos, los paréntesis se pueden añadir simplemente para mayor claridad: no cambiarán el resultado, pero mejorarán la comprensión.
 
-```php
+<!-- lint-code-blocks: skip — расстановка скобок это предмет примера, форматтер свёл бы два варианта к одному виду -->
+
+```text
 <?php
 
 // Antes
-print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
+print_r(8 / 2 + 5 - -3 / 2); // => 10.5
 
 // Después
-print_r((8 / 2) + 5 - (-3 / 2)); // => 10.5
+print_r(((8 / 2) + 5) - (-3 / 2)); // => 10.5
 ```
 
 Los programas los escriben personas, y también los leen personas. A la computadora no le importa lo claro que esté escrito el código: basta con que sea sintácticamente correcto. Para una persona, un código claro y ordenado es la clave de la comodidad, especialmente al trabajar en equipo o al analizar errores.

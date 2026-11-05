@@ -55,11 +55,13 @@ Para evitar confusiones, en este curso usaremos las siguientes formulaciones.
 
 En PHP las cadenas se pueden escribir tanto con comillas simples como con comillas dobles:
 
-```php
+<!-- lint-code-blocks: skip — две формы записи кавычек это предмет урока, форматтер свёл бы их к одной -->
+
+```text
 <?php
 
 print_r('Hello');
-print_r('Hello');
+print_r("Hello");
 ```
 
 Por defecto, se acostumbra usar comillas simples `'`, si dentro de la cadena no se necesitan las capacidades de las comillas dobles. Muchos estándares de estilo de código PHP siguen esta convención.

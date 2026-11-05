@@ -43,7 +43,7 @@ Commutativity in programming works exactly the same way as in arithmetic. PHP st
 Other non-commutative operations:
 
 - Division: _8 / 2 ≠ 2 / 8_
-- Exponentiation: _2 **3 ≠ 3** 2_
+- Exponentiation: `2 ** 3 ≠ 3 ** 2`
 
 Examples in code:
 
