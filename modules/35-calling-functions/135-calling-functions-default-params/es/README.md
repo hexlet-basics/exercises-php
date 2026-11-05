@@ -65,16 +65,16 @@ La sección «Valores devueltos» precisa el resultado. La referencia de `round(
 
 En la firma completa de la documentación hay un parámetro opcional más, `$mode`, que controla el modo de redondeo. Se necesita pocas veces, por lo que de momento no lo analizamos.
 
-Comprobemos los dos casos en la consola interactiva de PHP, que se inicia con el comando `php -a`. La línea `php >` es el indicador de la consola. La consola no imprime el resultado por sí sola, así que lo mostramos con la función `var_dump()`, que enseña el tipo y el valor.
+Comprobemos los dos casos en la [consola interactiva de PHP](https://psysh.org/). En la consola no se escribe la línea `<?php`, la llamada se teclea directamente. El signo `>` marca la línea de entrada, y debajo de cada llamada, después del signo `=`, la consola imprime el resultado.
 
 ```console
-php > var_dump(round(10.25, 1));
-float(10.3)
-php > var_dump(round(10.25));
-float(10)
+> round(10.25, 1)
+= 10.3
+> round(10.25)
+= 10.0
 ```
 
-La primera llamada pasa la precisión `1` y obtiene el número `10.3`. La segunda deja `$precision` con su valor por defecto y obtiene `10` de tipo `float`, tal como indica la sección «Valores devueltos». Así relacionamos la firma, la explicación de la documentación y el resultado de la ejecución.
+La primera llamada pasa la precisión `1` y obtiene el número `10.3`. La segunda deja `$precision` con su valor por defecto y obtiene `10.0`. La consola muestra la parte decimal porque el resultado es de tipo `float`, tal como indica la sección «Valores devueltos». Así relacionamos la firma, la explicación de la documentación y el resultado de la ejecución.
 
 ## Notación en la referencia
 
@@ -84,10 +84,9 @@ En la firma aparecen marcas auxiliares. Ayudan a leer la firma y no se pasan a l
 | --- | --- |
 | `int $precision = 0` | `$precision` tiene valor por defecto, el argumento se puede omitir |
 | `int\|float $num` | El parámetro acepta un valor de cualquiera de los tipos indicados |
-| `?string $decimal_separator` | El signo `?` permite pasar el valor `null` en lugar de una cadena |
-| `round(float $val [, int $precision = 0])` | Así se marcaban los argumentos opcionales en versiones antiguas del manual. Los corchetes no forman parte de la llamada |
+| `round(float $val [, int $precision = 0])` | Así marcan los argumentos opcionales algunas referencias y artículos de terceros. Los corchetes no forman parte de la llamada |
 
-Por ejemplo, la notación `int|float $num` describe un solo parámetro. La llamada `round(-5.5)` le pasa el número `-5.5` y devuelve el número `-6`. Ni el tipo, ni el nombre `$num`, ni el signo `|` se copian en esa llamada.
+Por ejemplo, la notación `int|float $num` describe un solo parámetro. La llamada `round(7)` le pasa el número entero `7` y devuelve `7.0`. Ni el tipo, ni el nombre `$num`, ni el signo `|` se copian en esa llamada.
 
 Si el navegador traduce la página, hay que comparar los nombres de funciones y parámetros y los símbolos de la firma con el original. En la versión en español del manual las descripciones están traducidas, pero la firma sigue en inglés. En el código se usan los nombres originales de la documentación.
 

@@ -65,16 +65,16 @@ The Return Values section specifies the result. The `round()` reference says the
 
 The full signature in the documentation has one more optional parameter, `$mode`, which controls the rounding mode. It is rarely needed, so we won't consider it for now.
 
-Let's check both cases in the interactive PHP shell, which starts with the `php -a` command. The `php >` line is the shell prompt. The shell doesn't print results by itself, so we print them with the `var_dump()` function, which shows the type and the value.
+Let's check both cases in the [interactive PHP console](https://psysh.org/). You don't type the `<?php` line in the console, you type the call right away. The `>` sign marks the input line, and the console prints the result under each call after the `=` sign.
 
 ```console
-php > var_dump(round(10.25, 1));
-float(10.3)
-php > var_dump(round(10.25));
-float(10)
+> round(10.25, 1)
+= 10.3
+> round(10.25)
+= 10.0
 ```
 
-The first call passes the precision `1` and gets the number `10.3`. The second leaves `$precision` at its default and gets `10` of type `float`, as the Return Values section promises. This is how we match the signature, the explanation in the documentation, and the actual result.
+The first call passes the precision `1` and gets the number `10.3`. The second leaves `$precision` at its default and gets `10.0`. The console shows the decimal part because the result has the `float` type, as the Return Values section promises. This is how we match the signature, the explanation in the documentation, and the actual result.
 
 ## Notation in references
 
@@ -84,10 +84,9 @@ A signature contains auxiliary marks. They help you read the signature and are n
 | --- | --- |
 | `int $precision = 0` | `$precision` has a default value, the argument can be omitted |
 | `int\|float $num` | The parameter accepts a value of any of the listed types |
-| `?string $decimal_separator` | The `?` sign allows passing `null` instead of a string |
-| `round(float $val [, int $precision = 0])` | This is how older versions of the manual marked optional arguments. The square brackets are not part of the call |
+| `round(float $val [, int $precision = 0])` | This is how some third-party references and articles mark optional arguments. The square brackets are not part of the call |
 
-For example, the notation `int|float $num` describes a single parameter. The call `round(-5.5)` passes it the number `-5.5` and returns the number `-6`. Neither the type, nor the name `$num`, nor the `|` sign go into the call.
+For example, the notation `int|float $num` describes a single parameter. The call `round(7)` passes it the integer `7` and returns `7.0`. Neither the type, nor the name `$num`, nor the `|` sign go into the call.
 
 If your browser translates the page, check function names, parameter names, and symbols in the signature against the original. Code uses the original names from the documentation.
 
