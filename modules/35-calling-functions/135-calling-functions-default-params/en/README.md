@@ -40,9 +40,40 @@ In the signature of `round()`, the required parameter `$num` comes before the op
 
 ## How to read a function's documentation
 
-Documentation describes what data a function accepts and what result it returns. A function's page in the [PHP manual](https://www.php.net/manual/en/) is split into sections. The Description section contains the signature, that is, the function's name, its parameters, and their order. The Parameters section explains what each parameter is for, and the Return Values section describes the result. You need all three sections to write a call.
+Documentation describes what data a function accepts and what result it returns. Each function has its own page in the [PHP manual](https://www.php.net/manual/en/). Below is a fragment of the [reference for `round()`](https://www.php.net/manual/en/function.round.php), with part of the text omitted.
 
-Let's look at the [reference for `round()`](https://www.php.net/manual/en/function.round.php). If we simplify it a little, the signature looks like this.
+```text
+Description
+
+round(int|float $num, int $precision = 0, int|RoundingMode $mode = RoundingMode::HalfAwayFromZero): float
+
+Returns the rounded value of num to specified precision
+(number of digits after the decimal point).
+...
+
+Parameters
+
+num
+    The value to round.
+precision
+    The optional number of decimal digits to round to.
+    ...
+mode
+    ...
+
+Return Values
+
+The value rounded to the given precision as a float.
+```
+
+Read the page from top to bottom, step by step.
+
+1. The Description section starts with the signature, which shows the function name, the parameters in order, and the result type.
+2. The first sentence briefly says what the function does.
+3. The Parameters section explains each parameter by its name from the signature. You can skip long explanations and tables of modes on a first read.
+4. The Return Values section describes the result. Here the function returns a `float` even when it rounds to an integer.
+
+The last parameter, `$mode`, controls the rounding mode. It is rarely needed, so we won't consider it for now. Without it, the signature looks like this.
 
 ```php
 round(int|float $num, int $precision = 0): float
@@ -60,10 +91,6 @@ The table matches the parts of the signature to the arguments of this call.
 | `: float` | Result type | We get a fractional number |
 
 The `=` sign in `$precision = 0` marks the default value. This notation tells you the second argument can be omitted. The Parameters section explains how the function uses that `0`. For `round()`, precision `0` means rounding to an integer.
-
-The Return Values section specifies the result. The `round()` reference says the function returns a floating-point number (`float`) rounded to the given precision. That's why the result stays a fractional number even when you round to an integer.
-
-The full signature in the documentation has one more optional parameter, `$mode`, which controls the rounding mode. It is rarely needed, so we won't consider it for now.
 
 Let's check both cases in the [interactive PHP console](https://psysh.org/). You don't type the `<?php` line in the console, you type the call right away. The `>` sign marks the input line, and the console prints the result under each call after the `=` sign.
 

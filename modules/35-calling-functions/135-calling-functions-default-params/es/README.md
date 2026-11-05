@@ -40,9 +40,40 @@ En la firma de `round()` el parámetro obligatorio `$num` va antes del opcional 
 
 ## Cómo leer la documentación de una función
 
-La documentación describe qué datos recibe una función y qué resultado devuelve. La página de una función en el [manual de PHP](https://www.php.net/manual/es/) se divide en secciones. La sección «Descripción» contiene la firma, es decir, el nombre de la función, sus parámetros y su orden. La sección «Parámetros» explica para qué sirve cada parámetro, y la sección «Valores devueltos» describe el resultado. Para escribir una llamada hacen falta las tres secciones.
+La documentación describe qué datos recibe una función y qué resultado devuelve. Cada función tiene su propia página en el [manual de PHP](https://www.php.net/manual/es/). A continuación se muestra un fragmento de la [referencia de `round()`](https://www.php.net/manual/es/function.round.php), con parte del texto omitida.
 
-Veamos la [referencia de `round()`](https://www.php.net/manual/es/function.round.php). Si la simplificamos un poco, la firma se ve así.
+```text
+Descripción
+
+round(int|float $num, int $precision = 0, int|RoundingMode $mode = RoundingMode::HalfAwayFromZero): float
+
+Devuelve el valor redondeado de num a la precisión precision (número de
+dígitos después del punto decimal).
+...
+
+Parámetros
+
+num
+    El valor a redondear.
+precision
+    El número opcional de decimales a redondear.
+    ...
+mode
+    ...
+
+Valores devueltos
+
+El valor redondeado a la precision dada como float.
+```
+
+La página se lee de arriba abajo, paso a paso.
+
+1. La sección «Descripción» empieza con la firma, que indica el nombre de la función, los parámetros en orden y el tipo del resultado.
+2. La primera frase dice brevemente qué hace la función.
+3. La sección «Parámetros» explica cada parámetro por su nombre en la firma. Las explicaciones largas y las tablas de modos se pueden saltar en la primera lectura.
+4. La sección «Valores devueltos» describe el resultado. Aquí la función devuelve un número de tipo `float`, incluso cuando redondea a entero.
+
+El último parámetro, `$mode`, controla el modo de redondeo. Se necesita pocas veces, por lo que de momento no lo analizamos. Sin él, la firma se ve así.
 
 ```php
 round(int|float $num, int $precision = 0): float
@@ -60,10 +91,6 @@ La tabla relaciona las partes de la firma con los argumentos de esa llamada.
 | `: float` | Tipo del resultado | Obtenemos un número fraccionario |
 
 El signo `=` en `$precision = 0` indica el valor por defecto. Esta notación muestra que el segundo argumento se puede omitir. Cómo usa la función ese `0` lo explica la sección «Parámetros». En `round()`, la precisión `0` significa redondear a un número entero.
-
-La sección «Valores devueltos» precisa el resultado. La referencia de `round()` dice que la función devuelve un número de punto flotante (`float`) redondeado a la precisión indicada. Por eso, incluso al redondear a entero, el resultado sigue siendo un número fraccionario.
-
-En la firma completa de la documentación hay un parámetro opcional más, `$mode`, que controla el modo de redondeo. Se necesita pocas veces, por lo que de momento no lo analizamos.
 
 Comprobemos los dos casos en la [consola interactiva de PHP](https://psysh.org/). En la consola no se escribe la línea `<?php`, la llamada se teclea directamente. El signo `>` marca la línea de entrada, y debajo de cada llamada, después del signo `=`, la consola imprime el resultado.
 
