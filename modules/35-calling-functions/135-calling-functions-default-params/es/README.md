@@ -36,28 +36,89 @@ round(10.25)     →  argumentos: 10.25, (0)  →  10
                                        └── valor por defecto
 ```
 
-La cantidad de parámetros opcionales depende de la función concreta, pero los obligatorios siempre van antes de los opcionales.
+En la firma de `round()` el parámetro obligatorio `$num` va antes del opcional `$precision`. Otra función puede tener otra cantidad de parámetros y otros valores por defecto.
 
-## La firma de una función
+## Cómo leer la documentación de una función
 
-Cada función tiene una **firma**, que contiene la descripción de su nombre, sus parámetros y el orden en que se usan. La firma ayuda a entender qué datos espera la función y qué ocurrirá si los parámetros no se indican.
+La documentación describe qué datos recibe una función y qué resultado devuelve. Cada función tiene su propia página en el [manual de PHP](https://www.php.net/manual/es/). A continuación se muestra un fragmento de la [referencia de `round()`](https://www.php.net/manual/es/function.round.php), con parte del texto omitida.
 
-Veamos la [documentación](https://www.php.net/manual/es/function.round.php) de la función `round()`. Si la simplificamos un poco, la firma se ve así:
+```text
+Descripción
+
+round(int|float $num, int $precision = 0, int|RoundingMode $mode = RoundingMode::HalfAwayFromZero): float
+
+Devuelve el valor redondeado de num a la precisión precision (número de
+dígitos después del punto decimal).
+...
+
+Parámetros
+
+num
+    El valor a redondear.
+precision
+    El número opcional de decimales a redondear.
+    ...
+mode
+    ...
+
+Valores devueltos
+
+El valor redondeado a la precision dada como float.
+```
+
+La página se lee de arriba abajo, paso a paso.
+
+1. La sección «Descripción» empieza con la firma, que indica el nombre de la función, los parámetros en orden y el tipo del resultado.
+2. La primera frase dice brevemente qué hace la función.
+3. La sección «Parámetros» explica cada parámetro por su nombre en la firma. Las explicaciones largas y las tablas de modos se pueden saltar en la primera lectura.
+4. La sección «Valores devueltos» describe el resultado. Aquí la función devuelve un número de tipo `float`, incluso cuando redondea a entero.
+
+El último parámetro, `$mode`, controla el modo de redondeo. Se necesita pocas veces, por lo que de momento no lo analizamos. Sin él, la firma se ve así.
 
 ```php
 round(int|float $num, int $precision = 0): float
 ```
 
-La función se llama `round`. El parámetro `$num` es obligatorio: recibe el número que se va a redondear (entero o fraccionario). El parámetro `$precision` tiene el valor por defecto `0`, es decir, es opcional; si no se indica, el redondeo se hará al número entero. Después de los dos puntos se indica el tipo del resultado: la función devuelve un número fraccionario (`float`).
+Los nombres `$num` y `$precision` designan parámetros. En la llamada se sustituyen por valores concretos, por ejemplo `round(10.25, 1)`. Delante de cada nombre se indica el tipo del valor que espera la función.
 
-En la firma completa de la documentación hay un parámetro opcional más, que controla el modo de redondeo. Se necesita pocas veces, por lo que de momento no lo analizamos.
+La tabla relaciona las partes de la firma con los argumentos de esa llamada.
 
-## Cómo trabajar con funciones nuevas
+| Parte de la firma | Qué significa | En la llamada `round(10.25, 1)` |
+| --- | --- | --- |
+| `round` | Nombre de la función | Llamamos a `round()` |
+| `int\|float $num` | Parámetro obligatorio, número entero o fraccionario que se redondea | Pasamos `10.25` |
+| `int $precision = 0` | Parámetro opcional, número entero con valor por defecto `0` | Pasamos `1` en lugar del valor por defecto |
+| `: float` | Tipo del resultado | Obtenemos un número fraccionario |
 
-Cuando te encuentras con una función nueva, puedes usar un patrón sencillo:
+El signo `=` en `$precision = 0` indica el valor por defecto. Esta notación muestra que el segundo argumento se puede omitir. Cómo usa la función ese `0` lo explica la sección «Parámetros». En `round()`, la precisión `0` significa redondear a un número entero.
 
-1. Abrir la documentación y encontrar la firma de la función.
-2. Mirar ejemplos de uso.
-3. Pasar a la consola interactiva de PHP (se inicia con el comando `php -a`) y probar a llamar a la función con diferentes argumentos.
+Comprobemos los dos casos en la [consola interactiva de PHP](https://psysh.org/). En la consola no se escribe la línea `<?php`, la llamada se teclea directamente. El signo `>` marca la línea de entrada, y debajo de cada llamada, después del signo `=`, la consola imprime el resultado.
 
-Este enfoque ayuda a entender rápidamente cómo funciona exactamente la función, cuáles son sus parámetros obligatorios y opcionales, y qué resultados devuelve.
+```console
+> round(10.25, 1)
+= 10.3
+> round(10.25)
+= 10.0
+```
+
+La primera llamada pasa la precisión `1` y obtiene el número `10.3`. La segunda deja `$precision` con su valor por defecto y obtiene `10.0`. La consola muestra la parte decimal porque el resultado es de tipo `float`, tal como indica la sección «Valores devueltos». Así relacionamos la firma, la explicación de la documentación y el resultado de la ejecución.
+
+## Notación en la referencia
+
+En la firma aparecen marcas auxiliares. Ayudan a leer la firma y no se pasan a la función en la llamada.
+
+| Notación en la referencia | Cómo leerla |
+| --- | --- |
+| `int $precision = 0` | `$precision` tiene valor por defecto, el argumento se puede omitir |
+| `int\|float $num` | El parámetro acepta un valor de cualquiera de los tipos indicados |
+| `round(float $val [, int $precision = 0])` | Así marcan los argumentos opcionales algunas referencias y artículos de terceros. Los corchetes no forman parte de la llamada |
+
+Por ejemplo, la notación `int|float $num` describe un solo parámetro. La llamada `round(7)` le pasa el número entero `7` y devuelve `7.0`. Ni el tipo, ni el nombre `$num`, ni el signo `|` se copian en esa llamada.
+
+Si el navegador traduce la página, hay que comparar los nombres de funciones y parámetros y los símbolos de la firma con el original. En la versión en español del manual las descripciones están traducidas, pero la firma sigue en inglés. En el código se usan los nombres originales de la documentación.
+
+## Trabajar con una función desconocida
+
+La lectura de la referencia empieza por la tarea. Por ejemplo, para redondear un precio a un decimal, en la firma de `round()` buscamos el número y la precisión, en la lista de parámetros comprobamos qué significa la precisión y después probamos la llamada `round(10.25, 1)`. Si el resultado coincide con la descripción, la llamada se puede usar en el programa.
+
+Otra función tendrá sus propios parámetros y reglas. Con su firma decidimos qué argumentos pasar, con la descripción conocemos el resultado y las limitaciones, y con un ejemplo pequeño comprobamos lo que hemos entendido.
